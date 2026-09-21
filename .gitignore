@@ -1,0 +1,8 @@
+/build/
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.dll
+*.asi

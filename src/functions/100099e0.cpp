@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" __declspec(naked) void __cdecl FUN_100099e0(`n    void*, void*, std::uint32_t)`n{`n    __asm`n    {`n        mov eax, dword ptr [esp + 8]`n        mov ecx, dword ptr [eax]`n        mov edx, dword ptr [esp + 4]`n        call edx`n        ret`n    }`n}`n

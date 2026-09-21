@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl __unlock_fhandle(int _FileHandle);`n`nextern "C" void __stdcall FUN_10013d30()`n{`n    int _FileHandle;`n`n    __asm`n    {`n        mov _FileHandle, ebx`n    }`n`n    __unlock_fhandle(_FileHandle);`n}`n

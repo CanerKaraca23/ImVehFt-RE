@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void* DAT_1003a318;`n`nextern "C" void* __stdcall EncodePointer(void* Ptr);`n[[noreturn]] void __cdecl terminate(void);`n`nextern "C" void __cdecl FUN_10017e62(void)`n{`n    DAT_1003a318 = EncodePointer(`n        reinterpret_cast<void*>(terminate));`n}`n

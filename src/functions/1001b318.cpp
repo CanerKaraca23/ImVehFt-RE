@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __stdcall __cfltcvt_init();`nextern "C" void __stdcall __setdefaultprecision();`n`nextern "C" void __cdecl __fpmath(int param_1)`n{`n    __cfltcvt_init();`n`n    if (param_1 != 0)`n    {`n        __setdefaultprecision();`n    }`n`n    __asm`n    {`n        fnclex`n    }`n}`n

@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl __FF_MSGBANNER(void);`nextern "C" void __cdecl __NMSG_WRITE(int message);`nextern "C" __declspec(noreturn) void __cdecl __exit(int code);`n`nextern "C" void __cdecl __amsg_exit(int param_1)`n{`n    __FF_MSGBANNER();`n    __NMSG_WRITE(param_1);`n    __exit(0xff);`n}`n

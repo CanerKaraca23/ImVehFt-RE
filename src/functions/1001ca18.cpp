@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t __cdecl FUN_1001ca18(`n    std::uint32_t ,`n    std::uint32_t param_2)`n{`n    if ((param_2 & 0x7FF00000U) != 0x7FF00000U)`n    {`n        return param_2 & 0x7FF00000U;`n    }`n`n    return param_2;`n}`n

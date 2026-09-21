@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" int __cdecl _ValidateRead(`n    void* param_1,`n    std::uint32_t )`n{`n    return static_cast<std::uint32_t>(param_1 != nullptr);`n}`n

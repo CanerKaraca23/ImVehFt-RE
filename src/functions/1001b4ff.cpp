@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t __fastcall __fload_withFB(void* this_ptr, int* value);`n`nextern "C" __declspec(naked) std::uint32_t FUN_1001b4ff(void)`n{`n    __asm {`n        lea edx, [esp + 4]`n        call __fload_withFB`n    }`n}`n

@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" int DAT_1003d550;`nextern "C" int __cdecl __setmbcp(int code_page);`n`nextern "C" std::uint32_t __stdcall ___initmbctable(void)`n{`n    if (DAT_1003d550 == 0)`n    {`n        __setmbcp(-3);`n        DAT_1003d550 = 1;`n    }`n`n    return 0;`n}`n

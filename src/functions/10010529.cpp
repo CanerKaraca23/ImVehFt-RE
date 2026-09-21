@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nusing _onexit_t = int (__cdecl*)(void);`n`nextern _onexit_t __cdecl __onexit(_onexit_t);`n`nextern "C" int __cdecl _atexit(_onexit_t param_1)`n{`n    _onexit_t p_Var1 = __onexit(param_1);`n    return (p_Var1 != nullptr) - 1;`n}`n

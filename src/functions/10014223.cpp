@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int __cdecl CPtoLCID(int param_1)`n{`n    if (param_1 == 0x3A4)`n        return 0x411;`n`n    if (param_1 == 0x3A8)`n        return 0x804;`n`n    if (param_1 == 0x3B5)`n        return 0x412;`n`n    if (param_1 != 0x3B6)`n        return 0;`n`n    return 0x404;`n}`n

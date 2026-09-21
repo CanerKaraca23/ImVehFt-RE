@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __stdcall FUN_10010180(void)`n{`n    __asm {`n        push 0ffh`n        push 0ffh`n        push 0ffh`n        push 0ffh`n        mov eax, 07170c0h`n        mov ecx, esi`n        call eax`n        mov eax, esi`n        ret`n    }`n}`n

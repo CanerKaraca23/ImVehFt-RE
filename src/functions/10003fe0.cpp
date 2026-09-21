@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nvoid __cdecl FUN_10003fe0(int param_1, int param_2)`n{`n    *reinterpret_cast<unsigned char*>(param_1 + 2) =`n        static_cast<unsigned char>(-(param_2 != 0) & 4);`n}`n

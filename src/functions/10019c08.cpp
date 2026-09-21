@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl __unlock_fhandle(int _FileHandle);`n`nextern "C" __declspec(naked) void __stdcall FUN_10019c08(void)`n{`n    __asm`n    {`n        push ebx`n        call __unlock_fhandle`n        add  esp, 4`n        ret`n    }`n}`n

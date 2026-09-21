@@ -1,0 +1,21 @@
+{
+  "as_of": "2026-09-22",
+  "candidate_translation_units": 705,
+  "msvc_2022_x86_o2": { "passed": 705, "failed": 0, "scope": "independent translation-unit compilation; not full plugin linking" },
+  "msvc_2022_x86_w4_wx": { "passed": 700, "failed": 5, "warning_addresses": ["10003810", "100076d0", "10012e65", "1001b65a", "1001e03d"] },
+  "clang_x86_o2": { "passed": 701, "failed": 4 },
+  "reagent_objective": { "passed": 705, "manual_scope_limited_adjudications": 11 },
+  "reagent_parity": { "green": 705, "manual_scope_limited_adjudications": 11 },
+  "coff_link_inventory": { "objects": 705, "unresolved_unique_symbols": 1012, "unresolved_object_symbol_pairs": 1552 },
+  "full_plugin_link": "not performed; original project source and compatible plugin-sdk build inputs are unavailable",
+  "in_game_validation": "not performed",
+  "reference_binary_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "source_manifest": "audit/source-sha256.csv",
+  "audit_report_ids": [
+    "post-sscanf-input-pointer-msvc-o2-20260921",
+    "post-sscanf-input-pointer-msvc-w4wx-20260921",
+    "post-sscanf-input-pointer-clang-o2-20260921",
+    "fresh-705-rescore-20260920-post-sscanf-input-pointer-20260921",
+    "post-sscanf-input-pointer-full-coff-20260921"
+  ]
+}

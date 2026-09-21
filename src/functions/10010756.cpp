@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl _free(void*);`n`nextern "C" void __cdecl FUN_10010756(void* param_1)`n{`n    _free(param_1);`n}`n

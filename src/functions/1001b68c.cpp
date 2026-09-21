@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" __declspec(naked) void __stdcall FID_conflict__CallMemberFunction1(`n    std::uint32_t,`n    void*)`n{`n    __asm {`n        pop eax`n        pop ecx`n        xchg dword ptr [esp], eax`n        jmp eax`n    }`n}`n

@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" unsigned int DAT_1003c410;`n`nextern "C" void __stdcall FUN_100172cd(void)`n{`n    DAT_1003c410 = 0;`n}`n

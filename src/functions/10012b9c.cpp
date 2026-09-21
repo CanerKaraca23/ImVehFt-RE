@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __lock(int lock_id);`n`nextern "C" void __stdcall FUN_10012b9c(void)`n{`n    __lock(8);`n}`n

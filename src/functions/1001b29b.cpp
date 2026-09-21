@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" HANDLE DAT_10029f10;`n`nextern "C" void __stdcall FUN_1001b29b()`n{`n    if ((DAT_10029f10 != (HANDLE)0xffffffff) &&`n        (DAT_10029f10 != (HANDLE)0xfffffffe))`n    {`n        CloseHandle(DAT_10029f10);`n    }`n}`n

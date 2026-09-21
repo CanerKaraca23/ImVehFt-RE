@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl __unlock_file(FILE*);`nvoid __stdcall FUN_10010a11(void)`n{`n    FILE* unaff_EDI;`n    __asm mov unaff_EDI, edi`n    __unlock_file(unaff_EDI);`n}`n

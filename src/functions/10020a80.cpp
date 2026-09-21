@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern void __stdcall FUN_10009580(void);`n`nextern "C" __declspec(naked) void __stdcall thunk_FUN_10009580(void)`n{`n    __asm {`n        jmp FUN_10009580`n    }`n}`n

@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void* __cdecl __getptd_noexit(void);`nextern "C" void __cdecl __amsg_exit(int);`n`nextern "C" void* __cdecl __getptd(void)`n{`n    void* p_Var1 = __getptd_noexit();`n`n    if (p_Var1 == nullptr)`n    {`n        __amsg_exit(0x10);`n    }`n`n    return p_Var1;`n}`n

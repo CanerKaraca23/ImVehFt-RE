@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <windows.h>`n`nvoid __stdcall FUN_100095f0()`n{`n    MessageBoxA(`n        static_cast<HWND>(nullptr),`n        "Fatal error on ControllerBlockManager",`n        "Plugin SDK",`n        0x10);`n`n    ExitProcess(0xDE);`n}`n

@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cmath>`n`nextern "C" int __cdecl __positive(double* arg)`n{`n    double dVar1 = *arg;`n`n    if (!std::isnan(dVar1) &&`n        (0.0 < dVar1 != (dVar1 == 0.0)))`n    {`n        return 1;`n    }`n`n    return 0;`n}`n

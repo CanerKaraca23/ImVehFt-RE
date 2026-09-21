@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int __cdecl flsall(int param_1);`n`nextern "C" int __cdecl __flushall(void)`n{`n    int iVar1 = flsall(1);`n    return iVar1;`n}`n

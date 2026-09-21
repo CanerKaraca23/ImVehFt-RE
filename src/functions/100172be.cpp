@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" unsigned int DAT_1003a1c0;`n`nextern "C" void __cdecl FUN_100172be(unsigned int param_1)`n{`n    DAT_1003a1c0 = param_1;`n}`n

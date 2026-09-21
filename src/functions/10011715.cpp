@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_10039a04;`n`nextern "C" void __cdecl FUN_10011715(std::uint32_t param_1)`n{`n    DAT_10039a04 = param_1;`n}`n

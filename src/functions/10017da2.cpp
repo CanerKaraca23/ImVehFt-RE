@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl FUN_10017cd2(int param_1);`n`nextern "C" void __stdcall FUN_10017da2(void)`n{`n    FUN_10017cd2(10);`n}`n

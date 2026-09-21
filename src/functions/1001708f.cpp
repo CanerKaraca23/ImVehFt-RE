@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" unsigned int DAT_10029d30;`n`nextern "C" unsigned int __cdecl __set_abort_behavior(`n    unsigned int _Flags,`n    unsigned int _Mask)`n{`n    unsigned int uVar1 = DAT_10029d30;`n`n    DAT_10029d30 =`n        (~_Mask & DAT_10029d30) |`n        (_Flags & _Mask);`n`n    return uVar1;`n}`n

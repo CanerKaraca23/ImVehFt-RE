@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t DAT_1003a324;`n`nextern "C" void* __stdcall DecodePointer(void* Ptr);`n`nextern "C" void* __stdcall FUN_10017ec8(void)`n{`n    return DecodePointer(`n        reinterpret_cast<void*>(`n            static_cast<std::uintptr_t>(DAT_1003a324)));`n}`n

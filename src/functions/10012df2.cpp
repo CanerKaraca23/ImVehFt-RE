@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl doexit(int code, int quick, int return_status);`n`nextern "C" void __cdecl __cexit(void)`n{`n    doexit(0, 0, 1);`n}`n

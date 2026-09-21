@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdio>`n`nextern FILE* __cdecl __fsopen(char* _Filename, char* _Mode, int _ShFlag);`n`nextern "C" FILE* __cdecl _fopen(char* _Filename, char* _Mode)`n{`n    FILE* pFVar1 = __fsopen(_Filename, _Mode, 0x40);`n    return pFVar1;`n}`n

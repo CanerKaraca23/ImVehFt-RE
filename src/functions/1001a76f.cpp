@@ -1,0 +1,1 @@
+#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t DAT_1003a37c;`nextern "C" std::uint32_t DAT_10029490;`n`nextern "C" int __cdecl __get_printf_count_output(void)`n{`n    return static_cast<unsigned int>(`n        DAT_1003a37c == (DAT_10029490 | 1u));`n}`n
