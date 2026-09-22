@@ -1,1 +1,46 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <cstddef>`n#include <windows.h>`n`nextern "C" void __stdcall FUN_100172cd(void);`nextern "C" void* __cdecl _memset(void*, int, std::size_t);`n`nextern "C" void __cdecl __call_reportfault(`n    int nDbgHookCode,`n    DWORD dwExceptionCode,`n    DWORD dwExceptionFlags)`n{`n    BOOL debuggerPresent;`n    LONG filterResult;`n    EXCEPTION_POINTERS exceptionPointers;`n    EXCEPTION_RECORD exceptionRecord;`n    DWORD contextMarker;`n`n    if (nDbgHookCode != -1)`n    {`n        FUN_100172cd();`n    }`n`n    exceptionRecord.ExceptionCode = 0;`n    _memset(&exceptionRecord.ExceptionFlags, 0, 0x4c);`n`n    exceptionPointers.ExceptionRecord = &exceptionRecord;`n    exceptionPointers.ContextRecord =`n        reinterpret_cast<PCONTEXT>(&contextMarker);`n`n    contextMarker = 0x10001;`n    exceptionRecord.ExceptionCode = dwExceptionCode;`n    exceptionRecord.ExceptionFlags = dwExceptionFlags;`n`n    debuggerPresent = IsDebuggerPresent();`n    SetUnhandledExceptionFilter(nullptr);`n    filterResult = UnhandledExceptionFilter(&exceptionPointers);`n`n    if (((filterResult == 0) && (debuggerPresent == 0)) &&`n        (nDbgHookCode != -1))`n    {`n        FUN_100172cd();`n    }`n`n    // Compiler-injected __security_check_cookie call is emitted by MSVC`n    // for the stack-protected function and is not represented as source logic.`n}`n
+#include <cstddef>
+#include <windows.h>
+
+extern "C" void __stdcall FUN_100172cd();
+extern "C" void* __cdecl _memset(void*, int, std::size_t);
+
+extern "C" void __cdecl __call_reportfault(
+    int nDbgHookCode,
+    DWORD dwExceptionCode,
+    DWORD dwExceptionFlags)
+{
+    BOOL debuggerPresent;
+    LONG filterResult;
+    EXCEPTION_POINTERS exceptionPointers;
+    EXCEPTION_RECORD exceptionRecord;
+    DWORD contextMarker;
+
+    if (nDbgHookCode != -1)
+    {
+        FUN_100172cd();
+    }
+
+    exceptionRecord.ExceptionCode = 0;
+    _memset(&exceptionRecord.ExceptionFlags, 0, 0x4c);
+
+    exceptionPointers.ExceptionRecord = &exceptionRecord;
+    exceptionPointers.ContextRecord =
+        reinterpret_cast<PCONTEXT>(&contextMarker);
+
+    contextMarker = 0x10001;
+    exceptionRecord.ExceptionCode = dwExceptionCode;
+    exceptionRecord.ExceptionFlags = dwExceptionFlags;
+
+    debuggerPresent = IsDebuggerPresent();
+    SetUnhandledExceptionFilter(nullptr);
+    filterResult = UnhandledExceptionFilter(&exceptionPointers);
+
+    if (((filterResult == 0) && (debuggerPresent == 0)) &&
+        (nDbgHookCode != -1))
+    {
+        FUN_100172cd();
+    }
+
+    // Compiler-injected __security_check_cookie call is emitted by MSVC
+    // for the stack-protected function and is not represented as source logic.
+}

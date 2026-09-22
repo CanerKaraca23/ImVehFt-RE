@@ -1,1 +1,51 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" void* __cdecl __recalloc(`n    void* _Ptr,`n    std::size_t _Count,`n    std::size_t _Size);`n`nextern "C" void __stdcall Sleep(std::uint32_t dwMilliseconds);`n`nextern "C" std::uint32_t DAT_10039a08;`n`nextern "C" void* __cdecl __recalloc_crt(`n    void* _Ptr,`n    std::size_t _Count,`n    std::size_t _Size)`n{`n    std::uint32_t dwMilliseconds = 0;`n`n    do`n    {`n        void* pvVar1 = __recalloc(_Ptr, _Count, _Size);`n`n        if (pvVar1 != nullptr)`n        {`n            return pvVar1;`n        }`n`n        if (_Size == 0)`n        {`n            return nullptr;`n        }`n`n        if (DAT_10039a08 == 0)`n        {`n            return nullptr;`n        }`n`n        Sleep(dwMilliseconds);`n`n        dwMilliseconds = dwMilliseconds + 1000;`n`n        if (DAT_10039a08 < dwMilliseconds)`n        {`n            dwMilliseconds = 0xffffffffu;`n        }`n    }`n    while (dwMilliseconds != 0xffffffffu);`n`n    return nullptr;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" void* __cdecl __recalloc(
+    void* _Ptr,
+    std::size_t _Count,
+    std::size_t _Size);
+
+extern "C" void __stdcall Sleep(std::uint32_t dwMilliseconds);
+
+extern "C" std::uint32_t DAT_10039a08;
+
+extern "C" void* __cdecl __recalloc_crt(
+    void* _Ptr,
+    std::size_t _Count,
+    std::size_t _Size)
+{
+    std::uint32_t dwMilliseconds = 0;
+
+    do
+    {
+        void* pvVar1 = __recalloc(_Ptr, _Count, _Size);
+
+        if (pvVar1 != nullptr)
+        {
+            return pvVar1;
+        }
+
+        if (_Size == 0)
+        {
+            return nullptr;
+        }
+
+        if (DAT_10039a08 == 0)
+        {
+            return nullptr;
+        }
+
+        Sleep(dwMilliseconds);
+
+        dwMilliseconds = dwMilliseconds + 1000;
+
+        if (DAT_10039a08 < dwMilliseconds)
+        {
+            dwMilliseconds = 0xffffffffu;
+        }
+    }
+    while (dwMilliseconds != 0xffffffffu);
+
+    return nullptr;
+}

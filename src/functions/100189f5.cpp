@@ -1,1 +1,74 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nusing errno_t = int;`n`nextern "C" unsigned char DAT_10028500;`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`n`nextern "C" errno_t __cdecl FUN_100182c1(`n    std::uint32_t* param_1,`n    char* param_2,`n    std::uint32_t param_3,`n    int param_4,`n    std::uint8_t param_5);`n`nextern "C" void __stdcall FUN_10018a8b(void);`n`nextern "C" errno_t __cdecl FID_conflict___sopen_helper(`n    char* _Filename,`n    int _OFlag,`n    int _ShFlag,`n    int _PMode,`n    int* _PFileHandle,`n    int _BSecure)`n{`n    __SEH_prolog4(0x10028500u, 0x14u);`n    std::uint32_t local_20[5];`n    std::uint32_t uStack_c;`n    void* local_8;`n`n    local_8 = &DAT_10028500;`n    uStack_c = 0x10018a01u;`n    local_20[0] = 0;`n`n    errno_t eVar2;`n`n    if (((_PFileHandle == nullptr) ||`n         (*_PFileHandle = -1, _Filename == nullptr)) ||`n        ((_BSecure != 0) && ((_PMode & 0xFFFFFE7F) != 0)))`n    {`n        int* piVar1 = __errno();`n        eVar2 = 0x16;`n        *piVar1 = 0x16;`n        FUN_1001189f();`n    }`n    else`n    {`n        local_8 = nullptr;`n`n        eVar2 = FUN_100182c1(`n            local_20,`n            _Filename,`n            static_cast<std::uint32_t>(_OFlag),`n            _ShFlag,`n            static_cast<std::uint8_t>(_PMode));`n`n        local_8 = reinterpret_cast<void*>(`n            static_cast<std::uintptr_t>(0xFFFFFFFEu));`n`n        FUN_10018a8b();`n`n        if (eVar2 != 0)`n        {`n            *_PFileHandle = -1;`n        }`n    }`n`n    __SEH_epilog4();`n    return eVar2;`n}`n
+#include <cstdint>
+
+using errno_t = int;
+
+extern "C" unsigned char DAT_10028500;
+
+extern "C" void __cdecl __SEH_prolog4();
+extern "C" void __cdecl __SEH_epilog4();
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+
+extern "C" errno_t __cdecl FUN_100182c1(
+    std::uint32_t* param_1,
+    char* param_2,
+    std::uint32_t param_3,
+    int param_4,
+    std::uint8_t param_5);
+
+extern "C" void __stdcall FUN_10018a8b();
+
+extern "C" errno_t __cdecl FID_conflict___sopen_helper(
+    char* _Filename,
+    int _OFlag,
+    int _ShFlag,
+    int _PMode,
+    int* _PFileHandle,
+    int _BSecure)
+{
+    __SEH_prolog4();
+
+    std::uint32_t local_20[5];
+    std::uint32_t uStack_c;
+    void* local_8;
+
+    local_8 = &DAT_10028500;
+    uStack_c = 0x10018a01u;
+    local_20[0] = 0;
+
+    errno_t eVar2;
+
+    if (((_PFileHandle == nullptr) ||
+         (*_PFileHandle = -1, _Filename == nullptr)) ||
+        ((_BSecure != 0) && ((_PMode & 0xFFFFFE7F) != 0)))
+    {
+        int* piVar1 = __errno();
+        eVar2 = 0x16;
+        *piVar1 = 0x16;
+        FUN_1001189f();
+    }
+    else
+    {
+        local_8 = nullptr;
+
+        eVar2 = FUN_100182c1(
+            local_20,
+            _Filename,
+            static_cast<std::uint32_t>(_OFlag),
+            _ShFlag,
+            static_cast<std::uint8_t>(_PMode));
+
+        local_8 = reinterpret_cast<void*>(
+            static_cast<std::uintptr_t>(0xFFFFFFFEu));
+
+        FUN_10018a8b();
+
+        if (eVar2 != 0)
+        {
+            *_PFileHandle = -1;
+        }
+    }
+
+    __SEH_epilog4();
+    return eVar2;
+}

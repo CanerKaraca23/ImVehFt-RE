@@ -1,1 +1,62 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nstatic_assert(sizeof(void*) == 4, "Requires 32-bit pointers.");`n`nextern "C" void* __cdecl __getptd();`nextern "C" void __cdecl _inconsistency();`n`nextern "C" void __cdecl __FindAndUnlinkFrame(void* param_1)`n{`n    struct FrameInfoNode`n    {`n        std::uint32_t reserved_0;`n        std::uint32_t next;`n    };`n`n    struct _tiddata`n    {`n        FrameInfoNode* _pFrameInfoChain;`n    };`n`n    void* pvVar1;`n    _tiddata* p_Var2;`n    void* pvVar3;`n`n    p_Var2 = static_cast<_tiddata*>(__getptd());`n`n    if (param_1 == p_Var2->_pFrameInfoChain)`n    {`n        p_Var2 = static_cast<_tiddata*>(__getptd());`n        p_Var2->_pFrameInfoChain =`n            reinterpret_cast<FrameInfoNode*>(`n                static_cast<std::uintptr_t>(`n                    reinterpret_cast<FrameInfoNode*>(param_1)->next));`n    }`n    else`n    {`n        p_Var2 = static_cast<_tiddata*>(__getptd());`n        pvVar1 = p_Var2->_pFrameInfoChain;`n`n        do`n        {`n            pvVar3 = pvVar1;`n`n            if (reinterpret_cast<FrameInfoNode*>(pvVar3)->next == 0)`n            {`n                _inconsistency();`n                return;`n            }`n`n            pvVar1 = reinterpret_cast<void*>(`n                static_cast<std::uintptr_t>(`n                    reinterpret_cast<FrameInfoNode*>(pvVar3)->next));`n        }`n        while (`n            param_1 != reinterpret_cast<void*>(`n                static_cast<std::uintptr_t>(`n                    reinterpret_cast<FrameInfoNode*>(pvVar3)->next)));`n`n        reinterpret_cast<FrameInfoNode*>(pvVar3)->next =`n            reinterpret_cast<FrameInfoNode*>(param_1)->next;`n    }`n}`n
+#include <cstdint>
+
+static_assert(sizeof(void*) == 4, "Requires 32-bit pointers.");
+
+extern "C" void* __cdecl __getptd();
+extern "C" void __cdecl _inconsistency();
+
+extern "C" void __cdecl __FindAndUnlinkFrame(void* param_1)
+{
+    struct FrameInfoNode
+    {
+        std::uint32_t reserved_0;
+        std::uint32_t next;
+    };
+
+    struct _tiddata
+    {
+        FrameInfoNode* _pFrameInfoChain;
+    };
+
+    void* pvVar1;
+    _tiddata* p_Var2;
+    void* pvVar3;
+
+    p_Var2 = static_cast<_tiddata*>(__getptd());
+
+    if (param_1 == p_Var2->_pFrameInfoChain)
+    {
+        p_Var2 = static_cast<_tiddata*>(__getptd());
+        p_Var2->_pFrameInfoChain =
+            reinterpret_cast<FrameInfoNode*>(
+                static_cast<std::uintptr_t>(
+                    reinterpret_cast<FrameInfoNode*>(param_1)->next));
+    }
+    else
+    {
+        p_Var2 = static_cast<_tiddata*>(__getptd());
+        pvVar1 = p_Var2->_pFrameInfoChain;
+
+        do
+        {
+            pvVar3 = pvVar1;
+
+            if (reinterpret_cast<FrameInfoNode*>(pvVar3)->next == 0)
+            {
+                _inconsistency();
+                return;
+            }
+
+            pvVar1 = reinterpret_cast<void*>(
+                static_cast<std::uintptr_t>(
+                    reinterpret_cast<FrameInfoNode*>(pvVar3)->next));
+        }
+        while (
+            param_1 != reinterpret_cast<void*>(
+                static_cast<std::uintptr_t>(
+                    reinterpret_cast<FrameInfoNode*>(pvVar3)->next)));
+
+        reinterpret_cast<FrameInfoNode*>(pvVar3)->next =
+            reinterpret_cast<FrameInfoNode*>(param_1)->next;
+    }
+}

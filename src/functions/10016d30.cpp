@@ -1,1 +1,12 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" HANDLE DAT_10039b90;`n`nextern "C" void __cdecl __heap_term(void)`n{`n    HeapDestroy(DAT_10039b90);`n    DAT_10039b90 = static_cast<HANDLE>(0x0);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <windows.h>
+#include <stdio.h>
+extern "C" HANDLE DAT_10039b90;
+
+extern "C" void __cdecl __heap_term(void)
+{
+    HeapDestroy(DAT_10039b90);
+    DAT_10039b90 = static_cast<HANDLE>(0x0);
+}

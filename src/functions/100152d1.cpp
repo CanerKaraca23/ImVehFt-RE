@@ -1,1 +1,145 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nstruct _iobuf { char* _ptr; int _cnt; char* _base; int _flag; int _file; int _charbuf; int _bufsiz; char* _tmpfname; };`nusing FILE = _iobuf;`nstatic_assert(offsetof(_iobuf, _ptr) == 0x00);`nstatic_assert(offsetof(_iobuf, _cnt) == 0x04);`nstatic_assert(offsetof(_iobuf, _base) == 0x08);`nstatic_assert(offsetof(_iobuf, _flag) == 0x0c);`nstatic_assert(sizeof(_iobuf) == 0x20);`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`nusing undefined = unsigned char;`n`nextern "C" int __cdecl __fileno(FILE* _File);`nextern "C" int* __cdecl __errno();`nextern "C" undefined** __cdecl FUN_1001301f();`nextern "C" int __cdecl __isatty(int _FileHandle);`nextern "C" void __cdecl __getbuf(FILE* _File);`nextern "C" unsigned int __cdecl __write(`n    int _FileHandle,`n    const void* _Buffer,`n    unsigned int _Count);`nextern "C" long long __cdecl __lseeki64(`n    int _FileHandle,`n    long long _Offset,`n    int _Origin);`n`nextern "C" undefined DAT_10029450;`nextern "C" undefined* DAT_1003c420[];`n`nextern "C" int __cdecl __flsbuf(int _Ch, FILE* _File)`n{`n    int unaff_EDI;`n    __asm mov unaff_EDI, edi`n`n    FILE* _File_00 = _File;`n    _File = reinterpret_cast<FILE*>(__fileno(_File));`n`n    unsigned int uVar6 = _File_00->_flag;`n`n    if ((uVar6 & 0x82U) == 0) {`n        *__errno() = 9;`n        _File_00->_flag = _File_00->_flag | 0x20;`n        return -1;`n    }`n`n    if ((uVar6 & 0x40U) != 0) {`n        *__errno() = 0x22;`n        _File_00->_flag = _File_00->_flag | 0x20;`n        return -1;`n    }`n`n    if ((uVar6 & 1U) != 0) {`n        _File_00->_cnt = 0;`n`n        if ((uVar6 & 0x10U) == 0) {`n            _File_00->_flag = uVar6 | 0x20;`n            return -1;`n        }`n`n        _File_00->_ptr = _File_00->_base;`n        _File_00->_flag = uVar6 & 0xfffffffeU;`n    }`n`n    uVar6 = _File_00->_flag;`n    _File_00->_flag = (uVar6 & 0xffffffefU) | 2U;`n    _File_00->_cnt = 0;`n`n    unsigned int local_8 = 0;`n    undefined** ppuVar3;`n`n    if ((uVar6 & 0x10cU) == 0) {`n        ppuVar3 = FUN_1001301f();`n`n        if ((_File_00 != reinterpret_cast<FILE*>(ppuVar3 + 8) &&`n             (ppuVar3 = FUN_1001301f(),`n              _File_00 != reinterpret_cast<FILE*>(ppuVar3 + 0x10))) ||`n            __isatty(reinterpret_cast<int>(_File)) == 0) {`n            __getbuf(_File_00);`n        }`n    }`n`n    if ((_File_00->_flag & 0x108U) == 0) {`n        uVar6 = 1;`n        local_8 = __write(reinterpret_cast<int>(_File), &_Ch, 1);`n    } else {`n        char* _Buf = _File_00->_base;`n        char* pcVar1 = _File_00->_ptr;`n`n        _File_00->_ptr = _Buf + 1;`n        uVar6 = static_cast<unsigned int>(`n            reinterpret_cast<int>(pcVar1) -`n            reinterpret_cast<int>(_Buf));`n        _File_00->_cnt = _File_00->_bufsiz + -1;`n`n        if (static_cast<int>(uVar6) < 1) {`n            undefined* puVar5;`n`n            if (_File == reinterpret_cast<FILE*>(0xffffffff) ||`n                _File == reinterpret_cast<FILE*>(0xfffffffe)) {`n                puVar5 = &DAT_10029450;`n            } else {`n                puVar5 = reinterpret_cast<undefined*>(`n                    reinterpret_cast<std::uintptr_t>(`n                        DAT_1003c420[reinterpret_cast<int>(_File) >> 5]) +`n                    ((reinterpret_cast<unsigned int>(_File) & 0x1fU) * 0x40U));`n            }`n`n            if ((puVar5[4] & 0x20U) != 0 &&`n                __lseeki64(`n                    reinterpret_cast<int>(_File),`n                    0x200000000LL,`n                    unaff_EDI) == -1) {`n                _File_00->_flag = _File_00->_flag | 0x20;`n                return -1;`n            }`n        } else {`n            local_8 = __write(reinterpret_cast<int>(_File), _Buf, uVar6);`n        }`n`n        *_File_00->_base = static_cast<char>(_Ch);`n    }`n`n    if (local_8 == uVar6) {`n        return _Ch & 0xff;`n    }`n`n    _File_00->_flag = _File_00->_flag | 0x20;`n    return -1;`n}`n
+#include <cstdint>
+
+#include <cstddef>
+#include <corecrt.h>
+using longlong = std::int64_t;
+using ulonglong = std::uint64_t;
+using undefined1 = std::uint8_t;
+using undefined2 = std::uint16_t;
+using undefined4 = std::uint32_t;
+using undefined8 = std::uint64_t;
+struct _iobuf {
+    char* _ptr;
+    int _cnt;
+    char* _base;
+    int _flag;
+    int _file;
+    int _charbuf;
+    int _bufsiz;
+    char* _tmpfname;
+};
+using FILE = _iobuf;
+static_assert(offsetof(_iobuf, _ptr) == 0x00);
+static_assert(offsetof(_iobuf, _cnt) == 0x04);
+static_assert(offsetof(_iobuf, _base) == 0x08);
+static_assert(offsetof(_iobuf, _flag) == 0x0c);
+static_assert(sizeof(_iobuf) == 0x20);
+using undefined = unsigned char;
+
+extern "C" int __cdecl __fileno(FILE* _File);
+extern "C" int* __cdecl __errno();
+extern "C" undefined** __stdcall FUN_1001301f();
+extern "C" int __cdecl __isatty(int _FileHandle);
+extern "C" void __cdecl __getbuf(FILE* _File);
+extern "C" unsigned int __cdecl __write(
+    int _FileHandle,
+    const void* _Buffer,
+    unsigned int _Count);
+extern "C" long long __cdecl __lseeki64(
+    int _FileHandle,
+    long long _Offset,
+    int _Origin);
+
+extern "C" undefined DAT_10029450;
+extern "C" undefined* DAT_1003c420[];
+
+extern "C" int __cdecl __flsbuf(int _Ch, FILE* _File)
+{
+    int unaff_EDI;
+    __asm mov unaff_EDI, edi
+
+    FILE* _File_00 = _File;
+    _File = reinterpret_cast<FILE*>(__fileno(_File));
+
+    unsigned int uVar6 = _File_00->_flag;
+
+    if ((uVar6 & 0x82U) == 0) {
+        *__errno() = 9;
+        _File_00->_flag = _File_00->_flag | 0x20;
+        return -1;
+    }
+
+    if ((uVar6 & 0x40U) != 0) {
+        *__errno() = 0x22;
+        _File_00->_flag = _File_00->_flag | 0x20;
+        return -1;
+    }
+
+    if ((uVar6 & 1U) != 0) {
+        _File_00->_cnt = 0;
+
+        if ((uVar6 & 0x10U) == 0) {
+            _File_00->_flag = uVar6 | 0x20;
+            return -1;
+        }
+
+        _File_00->_ptr = _File_00->_base;
+        _File_00->_flag = uVar6 & 0xfffffffeU;
+    }
+
+    uVar6 = _File_00->_flag;
+    _File_00->_flag = (uVar6 & 0xffffffefU) | 2U;
+    _File_00->_cnt = 0;
+
+    unsigned int local_8 = 0;
+    undefined** ppuVar3;
+
+    if ((uVar6 & 0x10cU) == 0) {
+        ppuVar3 = FUN_1001301f();
+
+        if ((_File_00 != reinterpret_cast<FILE*>(ppuVar3 + 8) &&
+             (ppuVar3 = FUN_1001301f(),
+              _File_00 != reinterpret_cast<FILE*>(ppuVar3 + 0x10))) ||
+            __isatty(reinterpret_cast<int>(_File)) == 0) {
+            __getbuf(_File_00);
+        }
+    }
+
+    if ((_File_00->_flag & 0x108U) == 0) {
+        uVar6 = 1;
+        local_8 = __write(reinterpret_cast<int>(_File), &_Ch, 1);
+    } else {
+        char* _Buf = _File_00->_base;
+        char* pcVar1 = _File_00->_ptr;
+
+        _File_00->_ptr = _Buf + 1;
+        uVar6 = static_cast<unsigned int>(
+            reinterpret_cast<int>(pcVar1) -
+            reinterpret_cast<int>(_Buf));
+        _File_00->_cnt = _File_00->_bufsiz + -1;
+
+        if (static_cast<int>(uVar6) < 1) {
+            undefined* puVar5;
+
+            if (_File == reinterpret_cast<FILE*>(0xffffffff) ||
+                _File == reinterpret_cast<FILE*>(0xfffffffe)) {
+                puVar5 = &DAT_10029450;
+            } else {
+                puVar5 = reinterpret_cast<undefined*>(
+                    reinterpret_cast<std::uintptr_t>(
+                        DAT_1003c420[reinterpret_cast<int>(_File) >> 5]) +
+                    ((reinterpret_cast<unsigned int>(_File) & 0x1fU) * 0x40U));
+            }
+
+            if ((puVar5[4] & 0x20U) != 0 &&
+                __lseeki64(
+                    reinterpret_cast<int>(_File),
+                    0x200000000LL,
+                    unaff_EDI) == -1) {
+                _File_00->_flag = _File_00->_flag | 0x20;
+                return -1;
+            }
+        } else {
+            local_8 = __write(reinterpret_cast<int>(_File), _Buf, uVar6);
+        }
+
+        *_File_00->_base = static_cast<char>(_Ch);
+    }
+
+    if (local_8 == uVar6) {
+        return _Ch & 0xff;
+    }
+
+    _File_00->_flag = _File_00->_flag | 0x20;
+    return -1;
+}

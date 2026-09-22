@@ -1,1 +1,101 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nusing errno_t = int;`nusing rsize_t = std::uint32_t;`n`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`n`nerrno_t __cdecl _strncpy_s(`n    char* _Dst,`n    rsize_t _SizeInBytes,`n    char* _Src,`n    rsize_t _MaxCount)`n{`n    char cVar1;`n    int* piVar2;`n    char* pcVar3;`n    int iVar4;`n    rsize_t rVar5;`n    errno_t eStack_14;`n`n    if (_MaxCount == 0) {`n        if (_Dst == nullptr) {`n            if (_SizeInBytes == 0) {`n                return 0;`n            }`n        } else {`n        LAB_10010cfc:`n            if (_SizeInBytes != 0) {`n                if (_MaxCount == 0) {`n                    *_Dst = '\0';`n                    return 0;`n                }`n`n                if (_Src != nullptr) {`n                    rVar5 = _SizeInBytes;`n`n                    if (_MaxCount == 0xffffffffu) {`n                        iVar4 = static_cast<int>(`n                            reinterpret_cast<std::intptr_t>(_Dst) -`n                            reinterpret_cast<std::intptr_t>(_Src));`n`n                        do {`n                            cVar1 = *_Src;`n                            _Src[iVar4] = cVar1;`n                            _Src = _Src + 1;`n                            if (cVar1 == '\0') {`n                                break;`n                            }`n                            rVar5 = rVar5 - 1;`n                        } while (rVar5 != 0);`n                    } else {`n                        pcVar3 = _Dst;`n                        do {`n                            cVar1 = pcVar3[static_cast<int>(`n                                reinterpret_cast<std::intptr_t>(_Src) -`n                                reinterpret_cast<std::intptr_t>(_Dst))];`n                            *pcVar3 = cVar1;`n                            pcVar3 = pcVar3 + 1;`n                            if ((cVar1 == '\0') ||`n                                ((rVar5 = rVar5 - 1), rVar5 == 0)) {`n                                break;`n                            }`n                            _MaxCount = _MaxCount - 1;`n                        } while (_MaxCount != 0);`n`n                        if (_MaxCount == 0) {`n                            *pcVar3 = '\0';`n                        }`n                    }`n`n                    if (rVar5 != 0) {`n                        return 0;`n                    }`n                    if (_MaxCount == 0xffffffffu) {`n                        _Dst[_SizeInBytes - 1] = '\0';`n                        return 0x50;`n                    }`n`n                    *_Dst = '\0';`n                    piVar2 = __errno();`n                    eStack_14 = 0x22;`n                    *piVar2 = 0x22;`n                    goto LAB_10010d0d;`n                }`n`n                *_Dst = '\0';`n            }`n        }`n    } else if (_Dst != nullptr) {`n        goto LAB_10010cfc;`n    }`n`n    piVar2 = __errno();`n    eStack_14 = 0x16;`n    *piVar2 = 0x16;`n`nLAB_10010d0d:`n    FUN_1001189f();`n    return eStack_14;`n}`n
+#include <cstdint>
+
+using errno_t = int;
+using rsize_t = std::uint32_t;
+
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+
+errno_t __cdecl strncpy_s(
+    char* _Dst,
+    rsize_t _SizeInBytes,
+    char* _Src,
+    rsize_t _MaxCount)
+{
+    char cVar1;
+    int* piVar2;
+    char* pcVar3;
+    int iVar4;
+    rsize_t rVar5;
+    errno_t eStack_14;
+
+    if (_MaxCount == 0) {
+        if (_Dst == nullptr) {
+            if (_SizeInBytes == 0) {
+                return 0;
+            }
+        } else {
+        LAB_10010cfc:
+            if (_SizeInBytes != 0) {
+                if (_MaxCount == 0) {
+                    *_Dst = '\0';
+                    return 0;
+                }
+
+                if (_Src != nullptr) {
+                    rVar5 = _SizeInBytes;
+
+                    if (_MaxCount == 0xffffffffu) {
+                        iVar4 = static_cast<int>(
+                            reinterpret_cast<std::intptr_t>(_Dst) -
+                            reinterpret_cast<std::intptr_t>(_Src));
+
+                        do {
+                            cVar1 = *_Src;
+                            _Src[iVar4] = cVar1;
+                            _Src = _Src + 1;
+                            if (cVar1 == '\0') {
+                                break;
+                            }
+                            rVar5 = rVar5 - 1;
+                        } while (rVar5 != 0);
+                    } else {
+                        pcVar3 = _Dst;
+                        do {
+                            cVar1 = pcVar3[static_cast<int>(
+                                reinterpret_cast<std::intptr_t>(_Src) -
+                                reinterpret_cast<std::intptr_t>(_Dst))];
+                            *pcVar3 = cVar1;
+                            pcVar3 = pcVar3 + 1;
+                            if ((cVar1 == '\0') ||
+                                ((rVar5 = rVar5 - 1), rVar5 == 0)) {
+                                break;
+                            }
+                            _MaxCount = _MaxCount - 1;
+                        } while (_MaxCount != 0);
+
+                        if (_MaxCount == 0) {
+                            *pcVar3 = '\0';
+                        }
+                    }
+
+                    if (rVar5 != 0) {
+                        return 0;
+                    }
+                    if (_MaxCount == 0xffffffffu) {
+                        _Dst[_SizeInBytes - 1] = '\0';
+                        return 0x50;
+                    }
+
+                    *_Dst = '\0';
+                    piVar2 = __errno();
+                    eStack_14 = 0x22;
+                    *piVar2 = 0x22;
+                    goto LAB_10010d0d;
+                }
+
+                *_Dst = '\0';
+            }
+        }
+    } else if (_Dst != nullptr) {
+        goto LAB_10010cfc;
+    }
+
+    piVar2 = __errno();
+    eStack_14 = 0x16;
+    *piVar2 = 0x16;
+
+LAB_10010d0d:
+    FUN_1001189f();
+    return eStack_14;
+}

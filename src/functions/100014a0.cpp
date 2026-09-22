@@ -1,1 +1,20 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n#include <exception>`n`nstruct ExceptionStorage`n{`n    ExceptionStorage* __thiscall assign(ExceptionStorage* other);`n    ExceptionStorage* __thiscall copy_construct(ExceptionStorage* other);`n    void** vtable;`n    char* what;`n    std::uint8_t do_free;`n};`nextern void* PTR_std_bad_alloc_vftable;`n`nstruct FUN_100014a0_this`n{`n    void* __thiscall FUN_100014a0(std::exception* source);`n};`n`nvoid* FUN_100014a0_this::FUN_100014a0(std::exception* source)`n{`n    reinterpret_cast<ExceptionStorage*>(this)->copy_construct(`n        reinterpret_cast<ExceptionStorage*>(source));`n    *reinterpret_cast<void***>(this) =`n        reinterpret_cast<void**>(PTR_std_bad_alloc_vftable);`n    return this;`n}`n
+#include <exception>
+
+struct ExceptionCopyThis
+{
+    void __thiscall FUN_10010351(std::exception* source);
+};
+extern void* PTR_std_bad_alloc_vftable;
+
+struct FUN_100014a0_this
+{
+    void* __thiscall FUN_100014a0(std::exception* source);
+};
+
+void* FUN_100014a0_this::FUN_100014a0(std::exception* source)
+{
+    reinterpret_cast<ExceptionCopyThis*>(this)->FUN_10010351(source);
+    *reinterpret_cast<void***>(this) =
+        reinterpret_cast<void**>(PTR_std_bad_alloc_vftable);
+    return this;
+}

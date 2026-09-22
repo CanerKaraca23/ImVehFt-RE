@@ -1,1 +1,80 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <windows.h>`n#include <cstdlib>`n`nextern int _DAT_1003c3fc;`nextern HANDLE DAT_1003c3e8;`nextern int* DAT_1003c3ec;`n`nextern "C" void __stdcall thunk_FUN_10009580();`nextern __declspec(noreturn) void __stdcall FUN_100095f0();`nextern void __stdcall FUN_100094d0();`n`n`nint __stdcall FUN_10009360()`n{`n    HANDLE mappingHandle;`n    int* mappingView;`n`n    if ((_DAT_1003c3fc & 1) == 0)`n    {`n        _DAT_1003c3fc |= 1;`n        DAT_1003c3e8 = nullptr;`n        DAT_1003c3ec = nullptr;`n        std::atexit(reinterpret_cast<void (__cdecl*)()>(thunk_FUN_10009580));`n    }`n`n    if (DAT_1003c3ec == nullptr)`n    {`n        if (DAT_1003c3e8 == nullptr)`n            goto LAB_100093aa;`n`n    LAB_100093cb:`n        if (DAT_1003c3ec != nullptr ||`n            (DAT_1003c3ec = static_cast<int*>(`n                 MapViewOfFile(DAT_1003c3e8, 0xF001F, 0, 0, 0)),`n             DAT_1003c3ec != nullptr))`n        {`n            mappingHandle = DAT_1003c3e8;`n            mappingView = DAT_1003c3ec;`n`n            if (DAT_1003c3e8 != nullptr && *DAT_1003c3ec == 0)`n            {`n                FUN_100095f0();`n            }`n`n            goto LAB_100093fd;`n        }`n    }`n    else`n    {`n        mappingHandle = DAT_1003c3e8;`n        mappingView = DAT_1003c3ec;`n`n        if (DAT_1003c3e8 != nullptr)`n            goto LAB_1000941c;`n`n    LAB_100093aa:`n        DAT_1003c3e8 = OpenFileMappingA(0xF001F, FALSE, "GTA_PLUGIN_SDK");`n        mappingHandle = DAT_1003c3e8;`n        mappingView = DAT_1003c3ec;`n`n        if (DAT_1003c3e8 != nullptr)`n            goto LAB_100093cb;`n`n    LAB_100093fd:`n        if (mappingView != nullptr && mappingHandle != nullptr)`n            goto LAB_1000941c;`n    }`n`n    FUN_100094d0();`n    mappingHandle = DAT_1003c3e8;`n    mappingView = DAT_1003c3ec;`n`nLAB_1000941c:`n    if (mappingView == nullptr || mappingHandle == nullptr)`n    {`n        FUN_100095f0();`n    }`n`n    return mappingView[3];`n}`n
+#include <windows.h>
+#include <cstdlib>
+
+extern int _DAT_1003c3fc;
+extern HANDLE DAT_1003c3e8;
+extern int* DAT_1003c3ec;
+
+extern "C" void __stdcall thunk_FUN_10009580();
+extern "C" __declspec(noreturn) void __stdcall FUN_100095f0();
+extern "C" void __stdcall FUN_100094d0();
+
+
+extern "C" int __stdcall FUN_10009360()
+{
+    HANDLE mappingHandle;
+    int* mappingView;
+
+    if ((_DAT_1003c3fc & 1) == 0)
+    {
+        _DAT_1003c3fc |= 1;
+        DAT_1003c3e8 = nullptr;
+        DAT_1003c3ec = nullptr;
+        std::atexit(reinterpret_cast<void (__cdecl*)()>(thunk_FUN_10009580));
+    }
+
+    if (DAT_1003c3ec == nullptr)
+    {
+        if (DAT_1003c3e8 == nullptr)
+            goto LAB_100093aa;
+
+    LAB_100093cb:
+        if (DAT_1003c3ec != nullptr ||
+            (DAT_1003c3ec = static_cast<int*>(
+                 MapViewOfFile(DAT_1003c3e8, 0xF001F, 0, 0, 0)),
+             DAT_1003c3ec != nullptr))
+        {
+            mappingHandle = DAT_1003c3e8;
+            mappingView = DAT_1003c3ec;
+
+            if (DAT_1003c3e8 != nullptr && *DAT_1003c3ec == 0)
+            {
+                FUN_100095f0();
+            }
+
+            goto LAB_100093fd;
+        }
+    }
+    else
+    {
+        mappingHandle = DAT_1003c3e8;
+        mappingView = DAT_1003c3ec;
+
+        if (DAT_1003c3e8 != nullptr)
+            goto LAB_1000941c;
+
+    LAB_100093aa:
+        DAT_1003c3e8 = OpenFileMappingA(0xF001F, FALSE, "GTA_PLUGIN_SDK");
+        mappingHandle = DAT_1003c3e8;
+        mappingView = DAT_1003c3ec;
+
+        if (DAT_1003c3e8 != nullptr)
+            goto LAB_100093cb;
+
+    LAB_100093fd:
+        if (mappingView != nullptr && mappingHandle != nullptr)
+            goto LAB_1000941c;
+    }
+
+    FUN_100094d0();
+    mappingHandle = DAT_1003c3e8;
+    mappingView = DAT_1003c3ec;
+
+LAB_1000941c:
+    if (mappingView == nullptr || mappingHandle == nullptr)
+    {
+        FUN_100095f0();
+    }
+
+    return mappingView[3];
+}

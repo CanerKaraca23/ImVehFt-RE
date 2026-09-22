@@ -1,1 +1,73 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern void* DAT_1003c3ac;`nextern void* PTR_vftable_100376b8;`n`nextern std::uint32_t* DAT_100376e0;`nextern std::uint32_t* DAT_100376e4;`nextern std::uint32_t* DAT_100376e8;`n`nstruct __single_inheritance FUN_1000afe0_this {`n    void __thiscall FUN_1000afe0(std::uint32_t param_1, int param_2, int param_3, int param_4, int param_5);`n};`n`nextern void __stdcall FUN_1000cfe0();`n`nvoid __stdcall FUN_1000b060(std::uint32_t param_1)`n{`n    if (DAT_1003c3ac == nullptr)`n    {`n        DAT_1003c3ac = &PTR_vftable_100376b8;`n`n        using Initializer = decltype(&FUN_1000afe0_this::FUN_1000afe0);`nstatic_assert(sizeof(Initializer) == sizeof(void*));`nconst Initializer initializer = *reinterpret_cast<Initializer*>(`n    reinterpret_cast<std::uintptr_t>(PTR_vftable_100376b8) + 4u);`n(reinterpret_cast<FUN_1000afe0_this*>(DAT_1003c3ac)->*initializer)(`n`n            0x748e09u,`n            0x748e48,`n            0,`n            0,`n            0);`n    }`n`n    const std::uintptr_t parameter_address =`n        reinterpret_cast<std::uintptr_t>(&param_1);`n`n    if ((parameter_address <`n         reinterpret_cast<std::uintptr_t>(DAT_100376e4)) &&`n        (reinterpret_cast<std::uintptr_t>(DAT_100376e0) <=`n         parameter_address))`n    {`n        const std::int32_t index =`n            static_cast<std::int32_t>(parameter_address) -`n            static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(DAT_100376e0));`n`n        if (DAT_100376e4 == DAT_100376e8)`n        {`n            FUN_1000cfe0();`n        }`n`n        if (DAT_100376e4 != nullptr)`n        {`n            *DAT_100376e4 = DAT_100376e0[index >> 2];`n        }`n`n        DAT_100376e4 = DAT_100376e4 + 1;`n        return;`n    }`n`n    if (DAT_100376e4 == DAT_100376e8)`n    {`n        FUN_1000cfe0();`n    }`n`n    if (DAT_100376e4 != nullptr)`n    {`n        *DAT_100376e4 = param_1;`n    }`n`n    DAT_100376e4 = DAT_100376e4 + 1;`n}`n
+#include <cstdint>
+
+extern void* DAT_1003c3ac;
+extern std::uint8_t PTR_vftable_100376b8[];
+
+extern std::uint32_t* DAT_100376e0;
+extern std::uint32_t* DAT_100376e4;
+extern std::uint32_t* DAT_100376e8;
+
+struct __single_inheritance FUN_1000afe0_this {
+    void __thiscall FUN_1000afe0(std::uint32_t param_1, int param_2, int param_3, int param_4, int param_5);
+};
+
+extern "C" void __stdcall FUN_1000cfe0();
+
+void __stdcall FUN_1000b060(std::uint32_t param_1)
+{
+    if (DAT_1003c3ac == nullptr)
+    {
+        DAT_1003c3ac = &PTR_vftable_100376b8;
+
+        using Initializer = decltype(&FUN_1000afe0_this::FUN_1000afe0);
+static_assert(sizeof(Initializer) == sizeof(void*));
+const Initializer initializer = *reinterpret_cast<Initializer*>(
+    reinterpret_cast<std::uintptr_t>(PTR_vftable_100376b8) + 4u);
+(reinterpret_cast<FUN_1000afe0_this*>(DAT_1003c3ac)->*initializer)(
+
+            0x748e09u,
+            0x748e48,
+            0,
+            0,
+            0);
+    }
+
+    const std::uintptr_t parameter_address =
+        reinterpret_cast<std::uintptr_t>(&param_1);
+
+    if ((parameter_address <
+         reinterpret_cast<std::uintptr_t>(DAT_100376e4)) &&
+        (reinterpret_cast<std::uintptr_t>(DAT_100376e0) <=
+         parameter_address))
+    {
+        const std::int32_t index =
+            static_cast<std::int32_t>(parameter_address) -
+            static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(DAT_100376e0));
+
+        if (DAT_100376e4 == DAT_100376e8)
+        {
+            FUN_1000cfe0();
+        }
+
+        if (DAT_100376e4 != nullptr)
+        {
+            *DAT_100376e4 = DAT_100376e0[index >> 2];
+        }
+
+        DAT_100376e4 = DAT_100376e4 + 1;
+        return;
+    }
+
+    if (DAT_100376e4 == DAT_100376e8)
+    {
+        FUN_1000cfe0();
+    }
+
+    if (DAT_100376e4 != nullptr)
+    {
+        *DAT_100376e4 = param_1;
+    }
+
+    DAT_100376e4 = DAT_100376e4 + 1;
+}

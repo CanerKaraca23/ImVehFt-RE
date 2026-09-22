@@ -1,1 +1,41 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void* __cdecl __getptd();`n`nextern "C" std::uint32_t __cdecl __IsExceptionObjectToBeDestroyed(int param_1)`n{`n    struct FrameInfoNode`n    {`n        int exception_object;`n        std::uint32_t next;`n    };`n`n    struct PtidData`n    {`n        std::uint32_t frame_info_chain;`n    };`n`n    PtidData* p_Var1 = static_cast<PtidData*>(__getptd());`n    std::uint32_t frame_info_address = p_Var1->frame_info_chain;`n`n    while (true)`n    {`n        if (frame_info_address == 0u)`n        {`n            return 1u;`n        }`n`n        FrameInfoNode* piVar2 =`n            reinterpret_cast<FrameInfoNode*>(`n                static_cast<std::uintptr_t>(frame_info_address));`n`n        if (piVar2->exception_object == param_1)`n        {`n            break;`n        }`n`n        frame_info_address = piVar2->next;`n    }`n`n    return 0u;`n}`n
+#include <cstdint>
+
+extern "C" void* __cdecl __getptd();
+
+extern "C" std::uint32_t __cdecl __IsExceptionObjectToBeDestroyed(int param_1)
+{
+    struct FrameInfoNode
+    {
+        int exception_object;
+        std::uint32_t next;
+    };
+
+    struct PtidData
+    {
+        std::uint32_t frame_info_chain;
+    };
+
+    PtidData* p_Var1 = static_cast<PtidData*>(__getptd());
+    std::uint32_t frame_info_address = p_Var1->frame_info_chain;
+
+    while (true)
+    {
+        if (frame_info_address == 0u)
+        {
+            return 1u;
+        }
+
+        FrameInfoNode* piVar2 =
+            reinterpret_cast<FrameInfoNode*>(
+                static_cast<std::uintptr_t>(frame_info_address));
+
+        if (piVar2->exception_object == param_1)
+        {
+            break;
+        }
+
+        frame_info_address = piVar2->next;
+    }
+
+    return 0u;
+}

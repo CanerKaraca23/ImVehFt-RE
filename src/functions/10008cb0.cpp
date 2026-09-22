@@ -1,1 +1,34 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nusing Callback = std::uint32_t(__cdecl*)(std::uint32_t, std::uint32_t);`n`nint __cdecl _strncmp(char*, char*, std::size_t);`n`nstd::uint32_t __cdecl FUN_10008cb0(`n    std::uint32_t param_1,`n    std::uint32_t param_2`n)`n{`n    const auto PTR_0072FB30 =`n        reinterpret_cast<char* (__cdecl*)(std::uint32_t)>(`n            static_cast<std::uintptr_t>(0x72fb30u));`n    const auto PTR_007F0DC0 =`n        reinterpret_cast<void (__cdecl*)(std::uint32_t, Callback, std::uint32_t)>(`n            static_cast<std::uintptr_t>(0x7f0dc0u));`n    const auto PTR_007F1200 =`n        reinterpret_cast<void (__cdecl*)(std::uint32_t, std::uintptr_t, std::uint32_t)>(`n            static_cast<std::uintptr_t>(0x7f1200u));`n`n    if (_strncmp(PTR_0072FB30(param_1), const_cast<char*>("extra"), 5) != 0)`n    {`n        if (_strncmp(PTR_0072FB30(param_1), const_cast<char*>("movspoiler"), 10) != 0)`n        {`n            PTR_007F0DC0(param_1, FUN_10008cb0, param_2);`n            PTR_007F1200(param_1, 0x4C7700, param_2);`n        }`n    }`n`n    return param_1;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+using Callback = std::uint32_t(__cdecl*)(std::uint32_t, std::uint32_t);
+
+extern char* (__cdecl* PTR_0072FB30)(std::uint32_t);
+extern void (__cdecl* PTR_007F0DC0)(
+    std::uint32_t,
+    Callback,
+    std::uint32_t
+);
+extern void (__cdecl* PTR_007F1200)(
+    std::uint32_t,
+    std::uintptr_t,
+    std::uint32_t
+);
+extern int __cdecl strncmp(const char*, const char*, std::size_t);
+
+extern "C" std::uint32_t __cdecl FUN_10008cb0(
+    std::uint32_t param_1,
+    std::uint32_t param_2
+)
+{
+    if (strncmp(PTR_0072FB30(param_1), "extra", 5) != 0)
+    {
+        if (strncmp(PTR_0072FB30(param_1), "movspoiler", 10) != 0)
+        {
+            PTR_007F0DC0(param_1, FUN_10008cb0, param_2);
+            PTR_007F1200(param_1, 0x4C7700, param_2);
+        }
+    }
+
+    return param_1;
+}

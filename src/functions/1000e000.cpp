@@ -1,1 +1,71 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nstd::uint32_t __stdcall FUN_1000e000()`n{`n    using VoidCallback = void (__stdcall*)();`n    using ReturnCallback = std::uint32_t (__stdcall*)();`n`n    struct State`n    {`n        std::uint8_t padding_00[0x04];`n        ReturnCallback field_04;`n        std::uint8_t padding_08[0x10];`n        VoidCallback* field_18;`n        VoidCallback* field_1C;`n        std::uint8_t padding_20[0x08];`n        VoidCallback* field_28;`n        VoidCallback* field_2C;`n    };`n`n    static_assert(sizeof(void*) == 4);`n    static_assert(offsetof(State, field_04) == 0x04);`n    static_assert(offsetof(State, field_18) == 0x18);`n    static_assert(offsetof(State, field_1C) == 0x1C);`n    static_assert(offsetof(State, field_28) == 0x28);`n    static_assert(offsetof(State, field_2C) == 0x2C);`n    static_assert(sizeof(State) == 0x30);`n`n    extern std::uint32_t DAT_1003c3a4;`n`n    const auto state =`n        reinterpret_cast<State*>(`n            static_cast<std::uintptr_t>(DAT_1003c3a4));`n`n    VoidCallback* end_1C = state->field_1C;`n`n    for (VoidCallback* callback = state->field_18;`n         callback != end_1C;`n         ++callback)`n    {`n        if (*callback != nullptr)`n        {`n            (*callback)();`n        }`n    }`n`n    std::uint32_t result;`n`n    if (state->field_04 == nullptr)`n    {`n        result = 0;`n    }`n    else`n    {`n        result = state->field_04();`n    }`n`n    VoidCallback* end_2C = state->field_2C;`n`n    for (VoidCallback* callback = state->field_28;`n         callback != end_2C;`n         ++callback)`n    {`n        if (*callback != nullptr)`n        {`n            (*callback)();`n        }`n    }`n`n    return result;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+std::uint32_t __stdcall FUN_1000e000()
+{
+    using VoidCallback = void (__stdcall*)();
+    using ReturnCallback = std::uint32_t (__stdcall*)();
+
+    struct State
+    {
+        std::uint8_t padding_00[0x04];
+        ReturnCallback field_04;
+        std::uint8_t padding_08[0x10];
+        VoidCallback* field_18;
+        VoidCallback* field_1C;
+        std::uint8_t padding_20[0x08];
+        VoidCallback* field_28;
+        VoidCallback* field_2C;
+    };
+
+    static_assert(sizeof(void*) == 4);
+    static_assert(offsetof(State, field_04) == 0x04);
+    static_assert(offsetof(State, field_18) == 0x18);
+    static_assert(offsetof(State, field_1C) == 0x1C);
+    static_assert(offsetof(State, field_28) == 0x28);
+    static_assert(offsetof(State, field_2C) == 0x2C);
+    static_assert(sizeof(State) == 0x30);
+
+    extern std::uint32_t DAT_1003c3a4;
+
+    const auto state =
+        reinterpret_cast<State*>(
+            static_cast<std::uintptr_t>(DAT_1003c3a4));
+
+    VoidCallback* end_1C = state->field_1C;
+
+    for (VoidCallback* callback = state->field_18;
+         callback != end_1C;
+         ++callback)
+    {
+        if (*callback != nullptr)
+        {
+            (*callback)();
+        }
+    }
+
+    std::uint32_t result;
+
+    if (state->field_04 == nullptr)
+    {
+        result = 0;
+    }
+    else
+    {
+        result = state->field_04();
+    }
+
+    VoidCallback* end_2C = state->field_2C;
+
+    for (VoidCallback* callback = state->field_28;
+         callback != end_2C;
+         ++callback)
+    {
+        if (*callback != nullptr)
+        {
+            (*callback)();
+        }
+    }
+
+    return result;
+}

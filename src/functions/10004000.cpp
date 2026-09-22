@@ -1,1 +1,500 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nint __cdecl _strncmp(char*, char*, std::size_t);`n`nusing GetNameFn = const char* (__cdecl*)(std::uint32_t);`n`nvoid __stdcall FUN_10004000()`n{`n    std::int32_t* unaff_EDI;`n`n    __asm`n    {`n        mov unaff_EDI, edi`n    }`n`n    const GetNameFn getName =`n        reinterpret_cast<GetNameFn>(static_cast<std::uintptr_t>(0x72FB30));`n`n    const std::uint32_t first =`n        *reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(*unaff_EDI) + 4u);`n`n    const char* str1 = getName(first);`n`n    std::int32_t cmp = _strncmp(const_cast<char*>(str1), const_cast<char*>("dummy"), 5);`n`n    if (cmp == 0)`n    {`n        const std::uint32_t second =`n            *reinterpret_cast<std::uint32_t*>(`n                static_cast<std::uintptr_t>(`n                    *reinterpret_cast<std::int32_t*>(`n                        static_cast<std::uintptr_t>(*unaff_EDI) + 4u)) + 4u);`n`n        str1 = getName(second);`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "door_rf_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto door_rf_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto door_rf_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto door_rf_done;`n`n    door_rf_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    door_rf_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0302;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "door_lf_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto door_lf_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto door_lf_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto door_lf_done;`n`n    door_lf_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    door_lf_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0202;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "door_rr_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto door_rr_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto door_rr_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto door_rr_done;`n`n    door_rr_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    door_rr_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0502;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "door_lr_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto door_lr_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto door_lr_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto door_lr_done;`n`n    door_lr_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    door_lr_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0402;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "bonnet_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto bonnet_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto bonnet_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto bonnet_done;`n`n    bonnet_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    bonnet_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 3;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "boot_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto boot_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto boot_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto boot_done;`n`n    boot_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    boot_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0104;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "bump_front_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto bump_front_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto bump_front_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto bump_front_done;`n`n    bump_front_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    bump_front_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0500;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "bump_rear_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto bump_rear_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto bump_rear_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto bump_rear_done;`n`n    bump_rear_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    bump_rear_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0600;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "wing_rf_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto wing_rf_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto wing_rf_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto wing_rf_done;`n`n    wing_rf_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    wing_rf_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0100;`n        return;`n    }`n`n    {`n        const unsigned char* pbVar3 =`n            reinterpret_cast<const unsigned char*>(str1);`n        const char* pcVar4 = "wing_lf_dummy";`n        unsigned char bVar1;`n        bool bVar5;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);`n`n            if (bVar1 != static_cast<unsigned char>(*pcVar4))`n                goto wing_lf_mismatch;`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);`n`n            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))`n                goto wing_lf_mismatch;`n`n            pbVar3 += 2;`n            pcVar4 += 2;`n        } while (bVar1 != 0);`n`n        cmp = 0;`n        goto wing_lf_done;`n`n    wing_lf_mismatch:`n        cmp = static_cast<std::int32_t>(`n            (1u - static_cast<unsigned>(bVar5)) -`n            static_cast<unsigned>(bVar5 != false));`n`n    wing_lf_done:`n        ;`n    }`n`n    if (cmp == 0)`n    {`n        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0;`n        return;`n    }`n`n    *reinterpret_cast<std::uint8_t*>(unaff_EDI + 1) = 6;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" int __cdecl strncmp(const char*, const char*, std::size_t);
+
+using GetNameFn = const char* (__cdecl*)(std::uint32_t);
+
+extern "C" void __stdcall FUN_10004000()
+{
+    std::int32_t* unaff_EDI;
+
+    __asm
+    {
+        mov unaff_EDI, edi
+    }
+
+    const GetNameFn getName =
+        reinterpret_cast<GetNameFn>(static_cast<std::uintptr_t>(0x72FB30));
+
+    const std::uint32_t first =
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(*unaff_EDI) + 4u);
+
+    const char* str1 = getName(first);
+
+    std::int32_t cmp = strncmp(str1, "dummy", 5);
+
+    if (cmp == 0)
+    {
+        const std::uint32_t second =
+            *reinterpret_cast<std::uint32_t*>(
+                static_cast<std::uintptr_t>(
+                    *reinterpret_cast<std::int32_t*>(
+                        static_cast<std::uintptr_t>(*unaff_EDI) + 4u)) + 4u);
+
+        str1 = getName(second);
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "door_rf_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto door_rf_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto door_rf_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto door_rf_done;
+
+    door_rf_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    door_rf_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0302;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "door_lf_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto door_lf_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto door_lf_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto door_lf_done;
+
+    door_lf_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    door_lf_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0202;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "door_rr_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto door_rr_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto door_rr_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto door_rr_done;
+
+    door_rr_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    door_rr_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0502;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "door_lr_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto door_lr_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto door_lr_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto door_lr_done;
+
+    door_lr_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    door_lr_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0402;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "bonnet_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto bonnet_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto bonnet_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto bonnet_done;
+
+    bonnet_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    bonnet_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 3;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "boot_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto boot_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto boot_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto boot_done;
+
+    boot_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    boot_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0104;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "bump_front_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto bump_front_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto bump_front_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto bump_front_done;
+
+    bump_front_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    bump_front_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0500;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "bump_rear_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto bump_rear_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto bump_rear_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto bump_rear_done;
+
+    bump_rear_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    bump_rear_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0600;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "wing_rf_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto wing_rf_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto wing_rf_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto wing_rf_done;
+
+    wing_rf_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    wing_rf_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0x0100;
+        return;
+    }
+
+    {
+        const unsigned char* pbVar3 =
+            reinterpret_cast<const unsigned char*>(str1);
+        const char* pcVar4 = "wing_lf_dummy";
+        unsigned char bVar1;
+        bool bVar5;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar5 = bVar1 < static_cast<unsigned char>(*pcVar4);
+
+            if (bVar1 != static_cast<unsigned char>(*pcVar4))
+                goto wing_lf_mismatch;
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar5 = bVar1 < static_cast<unsigned char>(pcVar4[1]);
+
+            if (bVar1 != static_cast<unsigned char>(pcVar4[1]))
+                goto wing_lf_mismatch;
+
+            pbVar3 += 2;
+            pcVar4 += 2;
+        } while (bVar1 != 0);
+
+        cmp = 0;
+        goto wing_lf_done;
+
+    wing_lf_mismatch:
+        cmp = static_cast<std::int32_t>(
+            (1u - static_cast<unsigned>(bVar5)) -
+            static_cast<unsigned>(bVar5 != false));
+
+    wing_lf_done:
+        ;
+    }
+
+    if (cmp == 0)
+    {
+        *reinterpret_cast<std::uint16_t*>(unaff_EDI + 1) = 0;
+        return;
+    }
+
+    *reinterpret_cast<std::uint8_t*>(unaff_EDI + 1) = 6;
+}

@@ -1,1 +1,35 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nextern "C" int* __cdecl __errno(void);`nextern "C" void __stdcall FUN_1001189f(void);`n`nextern std::uint32_t DAT_1003c418;`nextern char* DAT_1003c420[];`n`nextern "C" int __cdecl __isatty(int _FileHandle)`n{`n    if (_FileHandle == -2)`n    {`n        int* piVar1 = __errno();`n        *piVar1 = 9;`n    }`n    else`n    {`n        if ((_FileHandle >= 0) &&`n            (static_cast<std::uint32_t>(_FileHandle) < DAT_1003c418))`n        {`n            return static_cast<int>(`n                       *reinterpret_cast<char*>(`n                           DAT_1003c420[_FileHandle >> 5] +`n                           4 +`n                           (_FileHandle & 0x1fU) * 0x40)) &`n                   0x40;`n        }`n`n        int* piVar1 = __errno();`n        *piVar1 = 9;`n        FUN_1001189f();`n    }`n`n    return 0;`n}`n
+#include <cstdint>
+
+extern "C" int* __cdecl __errno(void);
+extern "C" void __stdcall FUN_1001189f(void);
+
+extern std::uint32_t DAT_1003c418;
+extern char* DAT_1003c420[];
+
+extern "C" int __cdecl __isatty(int _FileHandle)
+{
+    if (_FileHandle == -2)
+    {
+        int* piVar1 = __errno();
+        *piVar1 = 9;
+    }
+    else
+    {
+        if ((_FileHandle >= 0) &&
+            (static_cast<std::uint32_t>(_FileHandle) < DAT_1003c418))
+        {
+            return static_cast<int>(
+                       *reinterpret_cast<char*>(
+                           DAT_1003c420[_FileHandle >> 5] +
+                           4 +
+                           (_FileHandle & 0x1fU) * 0x40)) &
+                   0x40;
+        }
+
+        int* piVar1 = __errno();
+        *piVar1 = 9;
+        FUN_1001189f();
+    }
+
+    return 0;
+}

@@ -1,1 +1,21 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`n`nextern "C" std::uint32_t DAT_1003a6bc;`n`nextern "C" std::uint32_t __cdecl FUN_1001b1a5(std::uint32_t* param_1)`n{`n    int* piVar1;`n`n    if (param_1 == nullptr) {`n        piVar1 = __errno();`n        *piVar1 = 0x16;`n        FUN_1001189f();`n        return 0x16;`n    }`n`n    *param_1 = DAT_1003a6bc;`n    return 0;`n}`n
+#include <cstdint>
+
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+
+extern "C" std::uint32_t DAT_1003a6bc;
+
+extern "C" std::uint32_t __cdecl FUN_1001b1a5(std::uint32_t* param_1)
+{
+    int* piVar1;
+
+    if (param_1 == nullptr) {
+        piVar1 = __errno();
+        *piVar1 = 0x16;
+        FUN_1001189f();
+        return 0x16;
+    }
+
+    *param_1 = DAT_1003a6bc;
+    return 0;
+}

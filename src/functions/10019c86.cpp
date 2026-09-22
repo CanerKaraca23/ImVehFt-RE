@@ -1,1 +1,251 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void* __cdecl _malloc(std::size_t);`n#include <cstddef>`n#include <cstdint>`n#include <malloc.h>`n`nusing LPCWSTR = const wchar_t*;`nusing LPWSTR = wchar_t*;`nextern "C" int __stdcall MultiByteToWideChar(unsigned int, unsigned long, const char*, int, LPWSTR, int);`nextern "C" int __stdcall LCMapStringW(unsigned long, unsigned long, LPCWSTR, int, LPWSTR, int);`nextern "C" int __stdcall WideCharToMultiByte(unsigned int, unsigned long, LPCWSTR, int, char*, int, const char*, int*);`n`nstruct pthreadlocinfo`n{`n    std::uint32_t reserved_00;`n    std::uint32_t lc_codepage;`n};`nstruct pthreadmbcinfo;`nstruct localeinfo_struct`n{`n    pthreadlocinfo* locinfo;`n    pthreadmbcinfo* mbcinfo;`n};`nstatic_assert(offsetof(pthreadlocinfo, lc_codepage) == 0x04);`nstatic_assert(offsetof(localeinfo_struct, mbcinfo) == 0x04);`nextern "C" void __cdecl __freea(void*);`n`nextern "C" int __cdecl __crtLCMapStringA_stat(`n    localeinfo_struct* param_1,`n    unsigned long param_2,`n    unsigned long param_3,`n    char* param_4,`n    int param_5,`n    char* param_6,`n    int param_7,`n    int param_8,`n    int param_9)`n{`n    unsigned int uVar1;`n    bool bVar2;`n    char* pcVar3;`n    int iVar4;`n    unsigned int cchWideChar;`n    unsigned int* puVar5;`n    LPCWSTR lpDestStr;`n    int iVar6;`n    LPCWSTR local_10;`n    unsigned int local_c;`n`n    pcVar3 = param_4;`n    iVar6 = param_5;`n`n    if (0 < param_5)`n    {`n        do`n        {`n            iVar6 = iVar6 + -1;`n`n            if (*pcVar3 == '\0')`n                goto LAB_10019cb6;`n`n            pcVar3 = pcVar3 + 1;`n        }`n        while (iVar6 != 0);`n`n        iVar6 = -1;`n`n    LAB_10019cb6:`n        iVar6 = param_5 - iVar6;`n        iVar4 = iVar6 + -1;`n        bVar2 = iVar4 < param_5;`n        param_5 = iVar4;`n`n        if (bVar2)`n            param_5 = iVar6;`n    }`n`n    local_c = 0;`n`n    if (param_8 == 0)`n        param_8 = param_1->locinfo->lc_codepage;`n`n    cchWideChar = MultiByteToWideChar(`n        param_8,`n        (unsigned int)(param_9 != 0) * 8 + 1,`n        param_4,`n        param_5,`n        nullptr,`n        0);`n`n    if (cchWideChar == 0)`n        return 0;`n`n    if ((static_cast<int>(cchWideChar) < 1) ||`n        (0xffffffe0u / cchWideChar < 2))`n    {`n        local_10 = nullptr;`n    }`n    else`n    {`n        uVar1 = cchWideChar * 2 + 8;`n`n        if (uVar1 < 0x401)`n        {`n            unsigned char* stack0xffffffe0 =`n                static_cast<unsigned char*>(_alloca(uVar1));`n`n            puVar5 = reinterpret_cast<unsigned int*>(stack0xffffffe0);`n            local_10 = reinterpret_cast<LPCWSTR>(stack0xffffffe0);`n`n            unsigned char* stack0x00000000 =`n                stack0xffffffe0 + 0x20;`n`n            if (stack0x00000000 !=`n                reinterpret_cast<unsigned char*>(0x20))`n            {`n                local_10 = reinterpret_cast<LPCWSTR>(puVar5 + 2);`n            }`n        }`n        else`n        {`n            puVar5 = static_cast<unsigned int*>(_malloc(uVar1));`n            local_10 = nullptr;`n`n            if (puVar5 != nullptr)`n            {`n                *puVar5 = 0xdddd;`n                local_10 = reinterpret_cast<LPCWSTR>(puVar5 + 2);`n            }`n        }`n    }`n`n    if (local_10 == nullptr)`n        return 0;`n`n    iVar6 = MultiByteToWideChar(`n        param_8,`n        1,`n        param_4,`n        param_5,`n        const_cast<LPWSTR>(local_10),`n        cchWideChar);`n`n    if ((iVar6 != 0) &&`n        (local_c = LCMapStringW(`n             param_2,`n             param_3,`n             local_10,`n             cchWideChar,`n             nullptr,`n             0),`n         local_c != 0))`n    {`n        if ((param_3 & 0x400) == 0)`n        {`n            if ((static_cast<int>(local_c) < 1) ||`n                (0xffffffe0u / local_c < 2))`n            {`n                lpDestStr = nullptr;`n            }`n            else`n            {`n                uVar1 = local_c * 2 + 8;`n`n                if (uVar1 < 0x401)`n                {`n                    unsigned char* stack0xffffffe8 =`n                        static_cast<unsigned char*>(_alloca(uVar1));`n`n                    unsigned char* stack0x00000000 =`n                        stack0xffffffe8 - 0x18;`n`n                    if (stack0x00000000 ==`n                        reinterpret_cast<unsigned char*>(0x20))`n                    {`n                        goto LAB_10019e4f;`n                    }`n`n                    lpDestStr =`n                        reinterpret_cast<LPCWSTR>(stack0xffffffe8);`n                }`n                else`n                {`n                    lpDestStr =`n                        static_cast<LPCWSTR>(_malloc(uVar1));`n`n                    if (lpDestStr != nullptr)`n                    {`n                        const_cast<LPWSTR>(lpDestStr)[0] = L'\xdddd';`n                        const_cast<LPWSTR>(lpDestStr)[1] = L'\0';`n                        lpDestStr = lpDestStr + 4;`n                    }`n                }`n            }`n`n            if (lpDestStr != nullptr)`n            {`n                iVar6 = LCMapStringW(`n                    param_2,`n                    param_3,`n                    local_10,`n                    cchWideChar,`n                    const_cast<LPWSTR>(lpDestStr),`n                    local_c);`n`n                if (iVar6 != 0)`n                {`n                    if (param_7 == 0)`n                    {`n                        param_7 = 0;`n                        param_6 = nullptr;`n                    }`n`n                    local_c = WideCharToMultiByte(`n                        param_8,`n                        0,`n                        lpDestStr,`n                        local_c,`n                        param_6,`n                        param_7,`n                        nullptr,`n                        nullptr);`n                }`n`n                __freea(const_cast<LPWSTR>(lpDestStr));`n            }`n        }`n        else if ((param_7 != 0) &&`n                 (static_cast<int>(local_c) <= param_7))`n        {`n            LCMapStringW(`n                param_2,`n                param_3,`n                local_10,`n                cchWideChar,`n                reinterpret_cast<LPWSTR>(param_6),`n                param_7);`n        }`n    }`n`nLAB_10019e4f:`n    __freea(const_cast<LPWSTR>(local_10));`n    return local_c;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <malloc.h>
+
+#include <corecrt.h>
+using longlong = std::int64_t;
+using ulonglong = std::uint64_t;
+using undefined = unsigned char;
+using undefined1 = std::uint8_t;
+using undefined2 = std::uint16_t;
+using undefined4 = std::uint32_t;
+using undefined8 = std::uint64_t;
+extern "C" void* __cdecl _malloc(std::size_t);
+using LPCWSTR = const wchar_t*;
+using LPWSTR = wchar_t*;
+extern "C" int __stdcall MultiByteToWideChar(unsigned int, unsigned long, const char*, int, LPWSTR, int);
+extern "C" int __stdcall LCMapStringW(unsigned long, unsigned long, LPCWSTR, int, LPWSTR, int);
+extern "C" int __stdcall WideCharToMultiByte(unsigned int, unsigned long, LPCWSTR, int, char*, int, const char*, int*);
+
+struct pthreadlocinfo
+{
+    std::uint32_t reserved_00;
+    std::uint32_t lc_codepage;
+};
+struct pthreadmbcinfo;
+struct localeinfo_struct
+{
+    pthreadlocinfo* locinfo;
+    pthreadmbcinfo* mbcinfo;
+};
+static_assert(offsetof(pthreadlocinfo, lc_codepage) == 0x04);
+static_assert(offsetof(localeinfo_struct, mbcinfo) == 0x04);
+extern "C" void __cdecl __freea(void*);
+
+int __cdecl __crtLCMapStringA_stat(
+    localeinfo_struct* param_1,
+    unsigned long param_2,
+    unsigned long param_3,
+    char* param_4,
+    int param_5,
+    char* param_6,
+    int param_7,
+    int param_8,
+    int param_9)
+{
+    unsigned int uVar1;
+    bool bVar2;
+    char* pcVar3;
+    int iVar4;
+    unsigned int cchWideChar;
+    unsigned int* puVar5;
+    LPCWSTR lpDestStr;
+    int iVar6;
+    LPCWSTR local_10;
+    unsigned int local_c;
+
+    pcVar3 = param_4;
+    iVar6 = param_5;
+
+    if (0 < param_5)
+    {
+        do
+        {
+            iVar6 = iVar6 + -1;
+
+            if (*pcVar3 == '\0')
+                goto LAB_10019cb6;
+
+            pcVar3 = pcVar3 + 1;
+        }
+        while (iVar6 != 0);
+
+        iVar6 = -1;
+
+    LAB_10019cb6:
+        iVar6 = param_5 - iVar6;
+        iVar4 = iVar6 + -1;
+        bVar2 = iVar4 < param_5;
+        param_5 = iVar4;
+
+        if (bVar2)
+            param_5 = iVar6;
+    }
+
+    local_c = 0;
+
+    if (param_8 == 0)
+        param_8 = param_1->locinfo->lc_codepage;
+
+    cchWideChar = MultiByteToWideChar(
+        param_8,
+        (unsigned int)(param_9 != 0) * 8 + 1,
+        param_4,
+        param_5,
+        nullptr,
+        0);
+
+    if (cchWideChar == 0)
+        return 0;
+
+    if ((static_cast<int>(cchWideChar) < 1) ||
+        (0xffffffe0u / cchWideChar < 2))
+    {
+        local_10 = nullptr;
+    }
+    else
+    {
+        uVar1 = cchWideChar * 2 + 8;
+
+        if (uVar1 < 0x401)
+        {
+            unsigned char* stack0xffffffe0 =
+                static_cast<unsigned char*>(_alloca(uVar1));
+
+            puVar5 = reinterpret_cast<unsigned int*>(stack0xffffffe0);
+            local_10 = reinterpret_cast<LPCWSTR>(stack0xffffffe0);
+
+            unsigned char* stack0x00000000 =
+                stack0xffffffe0 + 0x20;
+
+            if (stack0x00000000 !=
+                reinterpret_cast<unsigned char*>(0x20))
+            {
+                local_10 = reinterpret_cast<LPCWSTR>(puVar5 + 2);
+            }
+        }
+        else
+        {
+            puVar5 = static_cast<unsigned int*>(_malloc(uVar1));
+            local_10 = nullptr;
+
+            if (puVar5 != nullptr)
+            {
+                *puVar5 = 0xdddd;
+                local_10 = reinterpret_cast<LPCWSTR>(puVar5 + 2);
+            }
+        }
+    }
+
+    if (local_10 == nullptr)
+        return 0;
+
+    iVar6 = MultiByteToWideChar(
+        param_8,
+        1,
+        param_4,
+        param_5,
+        const_cast<LPWSTR>(local_10),
+        cchWideChar);
+
+    if ((iVar6 != 0) &&
+        (local_c = LCMapStringW(
+             param_2,
+             param_3,
+             local_10,
+             cchWideChar,
+             nullptr,
+             0),
+         local_c != 0))
+    {
+        if ((param_3 & 0x400) == 0)
+        {
+            if ((static_cast<int>(local_c) < 1) ||
+                (0xffffffe0u / local_c < 2))
+            {
+                lpDestStr = nullptr;
+            }
+            else
+            {
+                uVar1 = local_c * 2 + 8;
+
+                if (uVar1 < 0x401)
+                {
+                    unsigned char* stack0xffffffe8 =
+                        static_cast<unsigned char*>(_alloca(uVar1));
+
+                    unsigned char* stack0x00000000 =
+                        stack0xffffffe8 - 0x18;
+
+                    if (stack0x00000000 ==
+                        reinterpret_cast<unsigned char*>(0x20))
+                    {
+                        goto LAB_10019e4f;
+                    }
+
+                    lpDestStr =
+                        reinterpret_cast<LPCWSTR>(stack0xffffffe8);
+                }
+                else
+                {
+                    lpDestStr =
+                        static_cast<LPCWSTR>(_malloc(uVar1));
+
+                    if (lpDestStr != nullptr)
+                    {
+                        const_cast<LPWSTR>(lpDestStr)[0] = L'\xdddd';
+                        const_cast<LPWSTR>(lpDestStr)[1] = L'\0';
+                        lpDestStr = lpDestStr + 4;
+                    }
+                }
+            }
+
+            if (lpDestStr != nullptr)
+            {
+                iVar6 = LCMapStringW(
+                    param_2,
+                    param_3,
+                    local_10,
+                    cchWideChar,
+                    const_cast<LPWSTR>(lpDestStr),
+                    local_c);
+
+                if (iVar6 != 0)
+                {
+                    if (param_7 == 0)
+                    {
+                        param_7 = 0;
+                        param_6 = nullptr;
+                    }
+
+                    local_c = WideCharToMultiByte(
+                        param_8,
+                        0,
+                        lpDestStr,
+                        local_c,
+                        param_6,
+                        param_7,
+                        nullptr,
+                        nullptr);
+                }
+
+                __freea(const_cast<LPWSTR>(lpDestStr));
+            }
+        }
+        else if ((param_7 != 0) &&
+                 (static_cast<int>(local_c) <= param_7))
+        {
+            LCMapStringW(
+                param_2,
+                param_3,
+                local_10,
+                cchWideChar,
+                reinterpret_cast<LPWSTR>(param_6),
+                param_7);
+        }
+    }
+
+LAB_10019e4f:
+    __freea(const_cast<LPWSTR>(local_10));
+    return local_c;
+}

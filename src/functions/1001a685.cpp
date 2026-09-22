@@ -1,1 +1,71 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`n`nextern "C" std::uint32_t* __cdecl ___doserrno();`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`nextern "C" void __cdecl ___lock_fhandle(int _FileHandle);`nextern "C" std::int64_t __cdecl __lseeki64_nolock(`n    int _FileHandle,`n    std::int64_t _Offset,`n    int _Origin);`nextern "C" void __stdcall FUN_1001a765(void);`n`nextern "C" std::uint32_t DAT_1003c418;`nextern "C" std::uint8_t* DAT_1003c420[];`n`nextern "C" std::int64_t __cdecl __lseeki64(`n    int _FileHandle,`n    std::int64_t _Offset,`n    int _Origin)`n{`n    __SEH_prolog4(0x100285a8u, 0x14u);`n    std::int64_t local_28;`n`n    if (_FileHandle == -2)`n    {`n        *___doserrno() = 0;`n        *__errno() = 9;`n        local_28 = -1;`n    }`n    else`n    {`n        if ((_FileHandle >= 0) &&`n            (static_cast<std::uint32_t>(_FileHandle) < DAT_1003c418))`n        {`n            const int iVar3 = (_FileHandle & 0x1fU) * 0x40;`n`n            if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + iVar3) & 1) != 0)`n            {`n                ___lock_fhandle(_FileHandle);`n`n                if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + iVar3) & 1) == 0)`n                {`n                    *__errno() = 9;`n                    *___doserrno() = 0;`n                    local_28 = -1;`n                }`n                else`n                {`n                    local_28 =`n                        __lseeki64_nolock(_FileHandle, _Offset, _Origin);`n                }`n`n                FUN_1001a765();`n                __SEH_epilog4();`n                return local_28;`n            }`n        }`n`n        *___doserrno() = 0;`n        *__errno() = 9;`n        FUN_1001189f();`n        local_28 = -1;`n    }`n`n    __SEH_epilog4();`n    return local_28;`n}`n
+#include <cstdint>
+
+extern "C" void __cdecl __SEH_prolog4();
+extern "C" void __cdecl __SEH_epilog4();
+
+extern "C" std::uint32_t* __cdecl ___doserrno();
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" void __cdecl ___lock_fhandle(int _FileHandle);
+extern "C" std::int64_t __cdecl __lseeki64_nolock(
+    int _FileHandle,
+    std::int64_t _Offset,
+    int _Origin);
+extern "C" void __stdcall FUN_1001a765();
+
+extern "C" std::uint32_t DAT_1003c418;
+extern "C" std::uint8_t* DAT_1003c420[];
+
+extern "C" std::int64_t __cdecl __lseeki64(
+    int _FileHandle,
+    std::int64_t _Offset,
+    int _Origin)
+{
+    __SEH_prolog4();
+
+    std::int64_t local_28;
+
+    if (_FileHandle == -2)
+    {
+        *___doserrno() = 0;
+        *__errno() = 9;
+        local_28 = -1;
+    }
+    else
+    {
+        if ((_FileHandle >= 0) &&
+            (static_cast<std::uint32_t>(_FileHandle) < DAT_1003c418))
+        {
+            const int iVar3 = (_FileHandle & 0x1fU) * 0x40;
+
+            if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + iVar3) & 1) != 0)
+            {
+                ___lock_fhandle(_FileHandle);
+
+                if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + iVar3) & 1) == 0)
+                {
+                    *__errno() = 9;
+                    *___doserrno() = 0;
+                    local_28 = -1;
+                }
+                else
+                {
+                    local_28 =
+                        __lseeki64_nolock(_FileHandle, _Offset, _Origin);
+                }
+
+                FUN_1001a765();
+                __SEH_epilog4();
+                return local_28;
+            }
+        }
+
+        *___doserrno() = 0;
+        *__errno() = 9;
+        FUN_1001189f();
+        local_28 = -1;
+    }
+
+    __SEH_epilog4();
+    return local_28;
+}

@@ -1,1 +1,142 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <Windows.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" std::uint8_t* DAT_1003c420[0x40];`nextern "C" int DAT_1003c418;`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`n`nextern "C" int __cdecl __mtinitlocknum(int);`nextern "C" void __cdecl __lock(int);`nextern "C" void* __cdecl __calloc_crt(std::size_t, std::size_t);`nextern "C" int __cdecl ___lock_fhandle(int);`nextern "C" void __stdcall FUN_1001929f();`nextern "C" void __stdcall FUN_1001935d();`n`nextern "C" int __cdecl __alloc_osfhnd()`n{`n    __SEH_prolog4(0x10028540u, 0x18u);`n    bool initialization_failed = false;`n    int result = -1;`n    int block_index = 0;`n`n    int lock_result = __mtinitlocknum(0x0b);`n    if (lock_result == 0)`n    {`n        result = -1;`n    }`n    else`n    {`n        __lock(0x0b);`n`n        for (; block_index < 0x40; block_index = block_index + 1)`n        {`n            std::uint8_t* block = DAT_1003c420[block_index];`n`n            if (block == nullptr)`n            {`n                block = static_cast<std::uint8_t*>(`n                    __calloc_crt(0x20, 0x40));`n`n                if (block != nullptr)`n                {`n                    DAT_1003c420[block_index] = block;`n                    DAT_1003c418 = DAT_1003c418 + 0x20;`n`n                    for (std::uint8_t* entry = block;`n                         entry < DAT_1003c420[block_index] + 0x800;`n                         entry = entry + 0x40)`n                    {`n                        *reinterpret_cast<std::uint8_t*>(entry + 4) = 0;`n                        *reinterpret_cast<std::int32_t*>(entry) = -1;`n                        *reinterpret_cast<std::uint8_t*>(entry + 5) = 10;`n                        *reinterpret_cast<std::int32_t*>(entry + 8) = 0;`n                    }`n`n                    result = block_index << 5;`n                    DAT_1003c420[result >> 5][4] = 1;`n`n                    lock_result = ___lock_fhandle(result);`n                    if (lock_result == 0)`n                    {`n                        result = -1;`n                    }`n                }`n`n                break;`n            }`n`n            for (std::uint8_t* entry = block;`n                 entry < DAT_1003c420[block_index] + 0x800;`n                 entry = entry + 0x40)`n            {`n                if ((*reinterpret_cast<std::uint8_t*>(entry + 4) & 1) == 0)`n                {`n                    if (*reinterpret_cast<std::int32_t*>(entry + 8) == 0)`n                    {`n                        __lock(10);`n`n                        if (*reinterpret_cast<std::int32_t*>(entry + 8) == 0)`n                        {`n                            BOOL initialized =`n                                InitializeCriticalSectionAndSpinCount(`n                                    reinterpret_cast<LPCRITICAL_SECTION>(`n                                        entry + 0x0c),`n                                    4000);`n`n                            if (initialized == 0)`n                            {`n                                initialization_failed = true;`n                            }`n                            else`n                            {`n                                *reinterpret_cast<std::int32_t*>(entry + 8) =`n                                    *reinterpret_cast<std::int32_t*>(entry + 8) + 1;`n                            }`n                        }`n`n                        FUN_1001929f();`n                    }`n`n                    if (!initialization_failed)`n                    {`n                        EnterCriticalSection(`n                            reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0c));`n`n                        if ((*reinterpret_cast<std::uint8_t*>(entry + 4) & 1) == 0)`n                        {`n                            *reinterpret_cast<std::uint8_t*>(entry + 4) = 1;`n                            *reinterpret_cast<std::int32_t*>(entry) = -1;`n`n                            result =`n                                (static_cast<std::int32_t>(`n                                     reinterpret_cast<std::uintptr_t>(entry) -`n                                     reinterpret_cast<std::uintptr_t>(`n                                         DAT_1003c420[block_index])) >>`n                                 6) +`n                                block_index * 0x20;`n`n                            break;`n                        }`n`n                        LeaveCriticalSection(`n                            reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0c));`n                    }`n                }`n            }`n`n            if (result != -1)`n            {`n                break;`n            }`n        }`n`n        FUN_1001935d();`n    }`n`n    __SEH_epilog4();`n    return result;`n}`n
+#include <Windows.h>
+#include <cstddef>
+#include <cstdint>
+
+extern "C" std::uint8_t* DAT_1003c420[0x40];
+extern "C" int DAT_1003c418;
+
+extern "C" void __cdecl __SEH_prolog4(std::uint32_t, std::int32_t);
+extern "C" void __stdcall __SEH_epilog4();
+
+extern "C" int __cdecl __mtinitlocknum(int);
+extern "C" void __cdecl __lock(int);
+extern "C" void* __cdecl __calloc_crt(std::size_t, std::size_t);
+extern "C" int __cdecl ___lock_fhandle(int);
+extern "C" void __stdcall FUN_1001929f();
+extern "C" void __stdcall FUN_1001935d();
+
+extern "C" int __cdecl __alloc_osfhnd()
+{
+    __SEH_prolog4(0, 0);
+
+    bool initialization_failed = false;
+    int result = -1;
+    int block_index = 0;
+
+    int lock_result = __mtinitlocknum(0x0b);
+    if (lock_result == 0)
+    {
+        result = -1;
+    }
+    else
+    {
+        __lock(0x0b);
+
+        for (; block_index < 0x40; block_index = block_index + 1)
+        {
+            std::uint8_t* block = DAT_1003c420[block_index];
+
+            if (block == nullptr)
+            {
+                block = static_cast<std::uint8_t*>(
+                    __calloc_crt(0x20, 0x40));
+
+                if (block != nullptr)
+                {
+                    DAT_1003c420[block_index] = block;
+                    DAT_1003c418 = DAT_1003c418 + 0x20;
+
+                    for (std::uint8_t* entry = block;
+                         entry < DAT_1003c420[block_index] + 0x800;
+                         entry = entry + 0x40)
+                    {
+                        *reinterpret_cast<std::uint8_t*>(entry + 4) = 0;
+                        *reinterpret_cast<std::int32_t*>(entry) = -1;
+                        *reinterpret_cast<std::uint8_t*>(entry + 5) = 10;
+                        *reinterpret_cast<std::int32_t*>(entry + 8) = 0;
+                    }
+
+                    result = block_index << 5;
+                    DAT_1003c420[result >> 5][4] = 1;
+
+                    lock_result = ___lock_fhandle(result);
+                    if (lock_result == 0)
+                    {
+                        result = -1;
+                    }
+                }
+
+                break;
+            }
+
+            for (std::uint8_t* entry = block;
+                 entry < DAT_1003c420[block_index] + 0x800;
+                 entry = entry + 0x40)
+            {
+                if ((*reinterpret_cast<std::uint8_t*>(entry + 4) & 1) == 0)
+                {
+                    if (*reinterpret_cast<std::int32_t*>(entry + 8) == 0)
+                    {
+                        __lock(10);
+
+                        if (*reinterpret_cast<std::int32_t*>(entry + 8) == 0)
+                        {
+                            BOOL initialized =
+                                InitializeCriticalSectionAndSpinCount(
+                                    reinterpret_cast<LPCRITICAL_SECTION>(
+                                        entry + 0x0c),
+                                    4000);
+
+                            if (initialized == 0)
+                            {
+                                initialization_failed = true;
+                            }
+                            else
+                            {
+                                *reinterpret_cast<std::int32_t*>(entry + 8) =
+                                    *reinterpret_cast<std::int32_t*>(entry + 8) + 1;
+                            }
+                        }
+
+                        FUN_1001929f();
+                    }
+
+                    if (!initialization_failed)
+                    {
+                        EnterCriticalSection(
+                            reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0c));
+
+                        if ((*reinterpret_cast<std::uint8_t*>(entry + 4) & 1) == 0)
+                        {
+                            *reinterpret_cast<std::uint8_t*>(entry + 4) = 1;
+                            *reinterpret_cast<std::int32_t*>(entry) = -1;
+
+                            result =
+                                (static_cast<std::int32_t>(
+                                     reinterpret_cast<std::uintptr_t>(entry) -
+                                     reinterpret_cast<std::uintptr_t>(
+                                         DAT_1003c420[block_index])) >>
+                                 6) +
+                                block_index * 0x20;
+
+                            break;
+                        }
+
+                        LeaveCriticalSection(
+                            reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0c));
+                    }
+                }
+            }
+
+            if (result != -1)
+            {
+                break;
+            }
+        }
+
+        FUN_1001935d();
+    }
+
+    __SEH_epilog4();
+    return result;
+}

@@ -1,1 +1,41 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`nstruct _s_TryBlockMapEntry { int tryLow; int tryHigh; int catchHigh; int nCatches; void* pHandlerArray; };`nstruct _s_FuncInfo { unsigned int magicNumber; int maxState; void* pUnwindMap; unsigned int nTryBlocks; _s_TryBlockMapEntry* pTryBlockMap; };`nstatic_assert(sizeof(_s_TryBlockMapEntry) == 0x14);`nstatic_assert(offsetof(_s_TryBlockMapEntry, tryHigh) == 0x04);`nstatic_assert(offsetof(_s_TryBlockMapEntry, catchHigh) == 0x08);`nstatic_assert(offsetof(_s_FuncInfo, nTryBlocks) == 0x0c);`nstatic_assert(offsetof(_s_FuncInfo, pTryBlockMap) == 0x10);`nextern "C" void __cdecl _inconsistency(void);`nextern "C" _s_TryBlockMapEntry* __cdecl`n_GetRangeOfTrysToCheck(`n    _s_FuncInfo* param_1,`n    int param_2,`n    int param_3,`n    unsigned int* param_4,`n    unsigned int* param_5)`n{`n    _s_TryBlockMapEntry* pTVar1;`n    unsigned int uVar2;`n    unsigned int uVar3;`n    unsigned int uVar4;`n    unsigned int uVar5;`n    pTVar1 = param_1->pTryBlockMap;`n    uVar5 = param_1->nTryBlocks;`n    uVar2 = uVar5;`n    uVar3 = uVar5;`n    while (uVar4 = uVar2, -1 < param_2) {`n        if (uVar5 == 0xffffffffu) _inconsistency();`n        uVar5 = uVar5 - 1;`n        if (((pTVar1[uVar5].tryHigh < param_3) && (param_3 <= pTVar1[uVar5].catchHigh)) || (uVar2 = uVar4, uVar5 == 0xffffffffu)) {`n            param_2 = param_2 + -1;`n            uVar2 = uVar5;`n            uVar3 = uVar4;`n        }`n    }`n    uVar5 = uVar5 + 1;`n    *param_4 = uVar5;`n    *param_5 = uVar3;`n    if ((param_1->nTryBlocks < uVar3) || (uVar3 < uVar5)) _inconsistency();`n    return pTVar1 + uVar5;`n}`n
+#include <cstddef>
+struct _s_TryBlockMapEntry { int tryLow; int tryHigh; int catchHigh; int nCatches; void* pHandlerArray; };
+struct _s_FuncInfo { unsigned int magicNumber; int maxState; void* pUnwindMap; unsigned int nTryBlocks; _s_TryBlockMapEntry* pTryBlockMap; };
+static_assert(sizeof(_s_TryBlockMapEntry) == 0x14);
+static_assert(offsetof(_s_TryBlockMapEntry, tryHigh) == 0x04);
+static_assert(offsetof(_s_TryBlockMapEntry, catchHigh) == 0x08);
+static_assert(offsetof(_s_FuncInfo, nTryBlocks) == 0x0c);
+static_assert(offsetof(_s_FuncInfo, pTryBlockMap) == 0x10);
+extern "C" void __cdecl _inconsistency(void);
+_s_TryBlockMapEntry* __cdecl
+_GetRangeOfTrysToCheck(
+    _s_FuncInfo* param_1,
+    int param_2,
+    int param_3,
+    unsigned int* param_4,
+    unsigned int* param_5)
+{
+    _s_TryBlockMapEntry* pTVar1;
+    unsigned int uVar2;
+    unsigned int uVar3;
+    unsigned int uVar4;
+    unsigned int uVar5;
+    pTVar1 = param_1->pTryBlockMap;
+    uVar5 = param_1->nTryBlocks;
+    uVar2 = uVar5;
+    uVar3 = uVar5;
+    while (uVar4 = uVar2, -1 < param_2) {
+        if (uVar5 == 0xffffffffu) _inconsistency();
+        uVar5 = uVar5 - 1;
+        if (((pTVar1[uVar5].tryHigh < param_3) && (param_3 <= pTVar1[uVar5].catchHigh)) || (uVar2 = uVar4, uVar5 == 0xffffffffu)) {
+            param_2 = param_2 + -1;
+            uVar2 = uVar5;
+            uVar3 = uVar4;
+        }
+    }
+    uVar5 = uVar5 + 1;
+    *param_4 = uVar5;
+    *param_5 = uVar3;
+    if ((param_1->nTryBlocks < uVar3) || (uVar3 < uVar5)) _inconsistency();
+    return pTVar1 + uVar5;
+}

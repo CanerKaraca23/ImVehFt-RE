@@ -1,1 +1,33 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uintptr_t DAT_1003c420[];`nextern "C" void __cdecl __unlock_fhandle(int fileHandle);`n`nextern "C" void __stdcall FUN_10018a8b()`n{`n    std::int32_t ebpValue;`n    std::uint32_t* esiValue;`n    std::int32_t ediValue;`n`n    __asm {`n        mov ebpValue, ebp`n        mov esiValue, esi`n        mov ediValue, edi`n    }`n`n    if (*reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(ebpValue) - 0x1c) != ediValue) {`n        if (*reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(ebpValue) - 0x20) != ediValue) {`n            auto* flag = reinterpret_cast<std::uint8_t*>(`n                DAT_1003c420[`n                    static_cast<std::int32_t>(*esiValue) >> 5] +`n                4 +`n                (*esiValue & 0x1f) * 0x40);`n`n            *flag = static_cast<std::uint8_t>(*flag & 0xfe);`n        }`n`n        __unlock_fhandle(static_cast<int>(*esiValue));`n    }`n}`n
+#include <cstdint>
+
+extern "C" std::uintptr_t DAT_1003c420[];
+extern "C" void __cdecl __unlock_fhandle(int fileHandle);
+
+extern "C" void __stdcall FUN_10018a8b()
+{
+    std::int32_t ebpValue;
+    std::uint32_t* esiValue;
+    std::int32_t ediValue;
+
+    __asm {
+        mov ebpValue, ebp
+        mov esiValue, esi
+        mov ediValue, edi
+    }
+
+    if (*reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(ebpValue) - 0x1c) != ediValue) {
+        if (*reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(ebpValue) - 0x20) != ediValue) {
+            auto* flag = reinterpret_cast<std::uint8_t*>(
+                DAT_1003c420[
+                    static_cast<std::int32_t>(*esiValue) >> 5] +
+                4 +
+                (*esiValue & 0x1f) * 0x40);
+
+            *flag = static_cast<std::uint8_t>(*flag & 0xfe);
+        }
+
+        __unlock_fhandle(static_cast<int>(*esiValue));
+    }
+}

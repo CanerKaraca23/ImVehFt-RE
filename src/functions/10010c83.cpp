@@ -1,1 +1,41 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`nextern "C" void __stdcall FUN_1001189f(void);`nextern int DAT_10039a84;`nextern "C" int __cdecl __strnicmp_l(char*, char*, std::size_t, _locale_t);`nextern "C" int __cdecl ___ascii_strnicmp(char*, char*, std::size_t);`n`nextern "C" int __cdecl __strnicmp(char* _Str1, char* _Str2, std::size_t _MaxCount)`n{`n    int* piVar1;`n    int iVar2;`n`n    if (DAT_10039a84 != 0)`n    {`n        iVar2 = __strnicmp_l(_Str1, _Str2, _MaxCount, (_locale_t)0x0);`n        return iVar2;`n    }`n`n    if (((_Str1 != (char*)0x0) && (_Str2 != (char*)0x0)) &&`n        (_MaxCount < 0x80000000))`n    {`n        iVar2 = ___ascii_strnicmp(_Str1, _Str2, _MaxCount);`n        return iVar2;`n    }`n`n    piVar1 = __errno();`n    *piVar1 = 0x16;`n    FUN_1001189f();`n    return 0x7fffffff;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+using longlong = std::int64_t;
+using uint = std::uint32_t;
+using ulonglong = std::uint64_t;
+using undefined = unsigned char;
+using undefined1 = std::uint8_t;
+using undefined2 = std::uint16_t;
+using undefined4 = std::uint32_t;
+using undefined8 = std::uint64_t;
+extern "C" int* __cdecl __errno(void);
+extern "C" void __stdcall FUN_1001189f(void);
+extern int DAT_10039a84;
+extern "C" int __cdecl _strnicmp_l(char*, char*, std::size_t, _locale_t);
+extern "C" int __cdecl ___ascii_strnicmp(char*, char*, std::size_t);
+
+int __cdecl _strnicmp(char* _Str1, char* _Str2, std::size_t _MaxCount)
+{
+    int* piVar1;
+    int iVar2;
+
+    if (DAT_10039a84 != 0)
+    {
+        iVar2 = _strnicmp_l(_Str1, _Str2, _MaxCount, (_locale_t)0x0);
+        return iVar2;
+    }
+
+    if (((_Str1 != (char*)0x0) && (_Str2 != (char*)0x0)) &&
+        (_MaxCount < 0x80000000))
+    {
+        iVar2 = ___ascii_strnicmp(_Str1, _Str2, _MaxCount);
+        return iVar2;
+    }
+
+    piVar1 = __errno();
+    *piVar1 = 0x16;
+    FUN_1001189f();
+    return 0x7fffffff;
+}

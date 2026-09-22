@@ -1,1 +1,65 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <cstdint>`n#include <windows.h>`n`nextern "C" intptr_t __cdecl __get_osfhandle(int file_handle);`nextern "C" void __cdecl __free_osfhnd(int file_handle);`nextern "C" void __cdecl __dosmaperr(unsigned long error_code);`n`nextern std::uint8_t* DAT_1003c420;`n`nextern "C" int __cdecl __close_nolock(int _FileHandle)`n{`n    intptr_t iVar1;`n    intptr_t iVar2;`n    HANDLE hObject;`n    BOOL BVar3;`n    DWORD DVar4 = 0;`n    int iVar5;`n`n    iVar1 = __get_osfhandle(_FileHandle);`n`n    if (iVar1 != -1)`n    {`n        if (((_FileHandle == 1) &&`n             ((*(std::uint8_t*)(DAT_1003c420 + 0x84) & 1U) != 0)) ||`n            ((_FileHandle == 2) &&`n             ((*(std::uint8_t*)(DAT_1003c420 + 0x44) & 1U) != 0)))`n        {`n            iVar1 = __get_osfhandle(2);`n            iVar2 = __get_osfhandle(1);`n`n            if (iVar2 == iVar1)`n                goto close_complete;`n        }`n`n        hObject = reinterpret_cast<HANDLE>(__get_osfhandle(_FileHandle));`n        BVar3 = CloseHandle(hObject);`n`n        if (BVar3 == 0)`n        {`n            DVar4 = GetLastError();`n            goto release_handle;`n        }`n    }`n`nclose_complete:`n    DVar4 = 0;`n`nrelease_handle:`n    __free_osfhnd(_FileHandle);`n`n    reinterpret_cast<std::uint8_t**>(&DAT_1003c420)[_FileHandle >> 5]`n        [4 + (_FileHandle & 0x1fU) * 0x40] = 0;`n`n    if (DVar4 == 0)`n    {`n        iVar5 = 0;`n    }`n    else`n    {`n        __dosmaperr(DVar4);`n        iVar5 = -1;`n    }`n`n    return iVar5;`n}`n
+#include <cstdint>
+#include <windows.h>
+
+extern "C" intptr_t __cdecl __get_osfhandle(int file_handle);
+extern "C" void __cdecl __free_osfhnd(int file_handle);
+extern "C" void __cdecl __dosmaperr(unsigned long error_code);
+
+extern std::uint8_t* DAT_1003c420;
+
+extern "C" int __cdecl __close_nolock(int _FileHandle)
+{
+    intptr_t iVar1;
+    intptr_t iVar2;
+    HANDLE hObject;
+    BOOL BVar3;
+    DWORD DVar4 = 0;
+    int iVar5;
+
+    iVar1 = __get_osfhandle(_FileHandle);
+
+    if (iVar1 != -1)
+    {
+        if (((_FileHandle == 1) &&
+             ((*(std::uint8_t*)(DAT_1003c420 + 0x84) & 1U) != 0)) ||
+            ((_FileHandle == 2) &&
+             ((*(std::uint8_t*)(DAT_1003c420 + 0x44) & 1U) != 0)))
+        {
+            iVar1 = __get_osfhandle(2);
+            iVar2 = __get_osfhandle(1);
+
+            if (iVar2 == iVar1)
+                goto close_complete;
+        }
+
+        hObject = reinterpret_cast<HANDLE>(__get_osfhandle(_FileHandle));
+        BVar3 = CloseHandle(hObject);
+
+        if (BVar3 == 0)
+        {
+            DVar4 = GetLastError();
+            goto release_handle;
+        }
+    }
+
+close_complete:
+    DVar4 = 0;
+
+release_handle:
+    __free_osfhnd(_FileHandle);
+
+    reinterpret_cast<std::uint8_t**>(&DAT_1003c420)[_FileHandle >> 5]
+        [4 + (_FileHandle & 0x1fU) * 0x40] = 0;
+
+    if (DVar4 == 0)
+    {
+        iVar5 = 0;
+    }
+    else
+    {
+        __dosmaperr(DVar4);
+        iVar5 = -1;
+    }
+
+    return iVar5;
+}

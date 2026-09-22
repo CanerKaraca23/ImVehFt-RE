@@ -1,1 +1,35 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_10039a04;`n`nextern "C" void* __stdcall DecodePointer(void* pointer);`n`nextern "C" [[noreturn]] void __cdecl __invoke_watson(`n    wchar_t* param_1,`n    wchar_t* param_2,`n    wchar_t* param_3,`n    std::uint32_t param_4,`n    std::uintptr_t param_5);`n`nextern "C" void __stdcall FUN_10011872(`n    wchar_t* param_1,`n    wchar_t* param_2,`n    wchar_t* param_3,`n    std::uint32_t param_4,`n    std::uintptr_t param_5)`n{`n    using UnrecoveredJumpTable = void (*)();`n`n    const auto unrecovered_jumptable =`n        reinterpret_cast<UnrecoveredJumpTable>(`n            DecodePointer(reinterpret_cast<void*>(`n                static_cast<std::uintptr_t>(DAT_10039a04))));`n`n    if (unrecovered_jumptable != nullptr)`n    {`n        unrecovered_jumptable();`n        return;`n    }`n`n    __invoke_watson(param_1, param_2, param_3, param_4, param_5);`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_10039a04;
+
+extern "C" void* __stdcall DecodePointer(void* pointer);
+
+extern "C" [[noreturn]] void __cdecl __invoke_watson(
+    wchar_t* param_1,
+    wchar_t* param_2,
+    wchar_t* param_3,
+    std::uint32_t param_4,
+    std::uintptr_t param_5);
+
+extern "C" void __stdcall FUN_10011872(
+    wchar_t* param_1,
+    wchar_t* param_2,
+    wchar_t* param_3,
+    std::uint32_t param_4,
+    std::uintptr_t param_5)
+{
+    using UnrecoveredJumpTable = void (*)();
+
+    const auto unrecovered_jumptable =
+        reinterpret_cast<UnrecoveredJumpTable>(
+            DecodePointer(reinterpret_cast<void*>(
+                static_cast<std::uintptr_t>(DAT_10039a04))));
+
+    if (unrecovered_jumptable != nullptr)
+    {
+        unrecovered_jumptable();
+        return;
+    }
+
+    __invoke_watson(param_1, param_2, param_3, param_4, param_5);
+}

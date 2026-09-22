@@ -1,1 +1,157 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <intrin.h>`n#include <stdio.h>`n#include <Windows.h>`n#include <cstdint>`n#include <intrin.h>`n`nextern "C" void __stdcall FUN_100172cd();`n`nextern "C" [[noreturn]] void __cdecl ___report_gsfailure()`n{`n    extern volatile std::uint32_t _DAT_1003a4b0;`n    extern volatile void* _DAT_1003a4b4;`n    extern volatile std::uint32_t _DAT_1003a3f0;`n    extern volatile std::uint32_t _DAT_1003a398;`n    extern volatile std::uint32_t _DAT_1003a39c;`n    extern volatile std::uint32_t _DAT_1003a3a4;`n    extern volatile std::uint16_t _DAT_1003a47c;`n    extern volatile std::uint16_t _DAT_1003a480;`n    extern volatile std::uint16_t _DAT_1003a484;`n    extern volatile std::uint16_t _DAT_1003a488;`n    extern volatile std::uint32_t _DAT_1003a48c;`n    extern volatile std::uint32_t _DAT_1003a490;`n    extern volatile std::uint32_t _DAT_1003a494;`n    extern volatile std::uint32_t _DAT_1003a498;`n    extern volatile std::uint32_t _DAT_1003a49c;`n    extern volatile std::uint32_t _DAT_1003a4a0;`n    extern volatile std::uint32_t _DAT_1003a4a4;`n    extern volatile std::uint32_t DAT_1003a4a8;`n    extern volatile std::uint16_t _DAT_1003a4ac;`n    extern volatile std::uint16_t _DAT_1003a4b8;`n    extern volatile std::uint32_t DAT_1003a3e8;`n    extern volatile std::uint32_t DAT_10029490;`n    extern volatile std::uint32_t DAT_10029494;`n    extern volatile void* PTR_DAT_10024208;`n`n    std::uint32_t in_EAX;`n    std::uint32_t in_ECX;`n    std::uint32_t in_EDX;`n    std::uint32_t unaff_EBX;`n    std::uint32_t unaff_EBP;`n    std::uint32_t unaff_ESI;`n    std::uint32_t unaff_EDI;`n    std::uint32_t eflags;`n`n    std::uint16_t in_ES;`n    std::uint16_t in_CS;`n    std::uint16_t in_SS;`n    std::uint16_t in_DS;`n    std::uint16_t in_FS;`n    std::uint16_t in_GS;`n`n    std::uint32_t local_32c;`n    std::uint32_t local_328;`n`n    __asm`n    {`n        mov in_EAX, eax`n        mov in_ECX, ecx`n        mov in_EDX, edx`n        mov unaff_EBX, ebx`n        mov unaff_EBP, ebp`n        mov unaff_ESI, esi`n        mov unaff_EDI, edi`n`n        pushfd`n        popfd`n`n        mov ax, es`n        mov in_ES, ax`n        mov ax, cs`n        mov in_CS, ax`n        mov ax, ss`n        mov in_SS, ax`n        mov ax, ds`n        mov in_DS, ax`n        mov ax, fs`n        mov in_FS, ax`n        mov ax, gs`n        mov in_GS, ax`n    }`n`n    const std::uint32_t return_address =`n        *reinterpret_cast<const std::uint32_t*>(_AddressOfReturnAddress());`n`n    const std::uint32_t stack0 =`n        static_cast<std::uint32_t>(`n            reinterpret_cast<std::uintptr_t>(&local_32c));`n`n    const std::uint32_t stack0xfffffffc = stack0 - 4u;`n    const std::uint32_t stack0x00000004 = stack0 + 4u;`n`n    std::uint32_t parity_value = stack0 & 0xffu;`n    parity_value ^= parity_value >> 4;`n    parity_value ^= parity_value >> 2;`n    parity_value ^= parity_value >> 1;`n`n    _DAT_1003a4b0 =`n        static_cast<std::uint32_t>((eflags >> 14) & 1u) * 0x4000u |`n        static_cast<std::uint32_t>(`n            ((stack0xfffffffc ^ 0x328u) &`n             (stack0xfffffffc ^`n              (stack0xfffffffc - 0x328u)) &`n             0x80000000u) != 0u) * 0x800u |`n        static_cast<std::uint32_t>((eflags >> 9) & 1u) * 0x200u |`n        static_cast<std::uint32_t>((eflags >> 8) & 1u) * 0x100u |`n        static_cast<std::uint32_t>(`n            static_cast<std::int32_t>(stack0) < 0) * 0x80u |`n        static_cast<std::uint32_t>(stack0 == 0x32cu) * 0x40u |`n        static_cast<std::uint32_t>((eflags >> 4) & 1u) * 0x10u |`n        static_cast<std::uint32_t>((parity_value & 1u) == 0u) * 4u |`n        static_cast<std::uint32_t>(stack0xfffffffc < 0x328u) |`n        static_cast<std::uint32_t>((eflags >> 21) & 1u) * 0x200000u |`n        static_cast<std::uint32_t>((eflags >> 20) & 1u) * 0x100000u |`n        static_cast<std::uint32_t>((eflags >> 19) & 1u) * 0x80000u |`n        static_cast<std::uint32_t>((eflags >> 18) & 1u) * 0x40000u;`n`n    _DAT_1003a4b4 =`n        reinterpret_cast<void*>(`n            static_cast<std::uintptr_t>(stack0x00000004));`n`n    _DAT_1003a3f0 = 0x10001u;`n    _DAT_1003a398 = 0xc0000409u;`n    _DAT_1003a39c = 1u;`n`n    local_32c = DAT_10029490;`n    local_328 = DAT_10029494;`n`n    _DAT_1003a3a4 = return_address;`n`n    _DAT_1003a47c = in_GS;`n    _DAT_1003a480 = in_FS;`n    _DAT_1003a484 = in_ES;`n    _DAT_1003a488 = in_DS;`n    _DAT_1003a48c = unaff_EDI;`n    _DAT_1003a490 = unaff_ESI;`n    _DAT_1003a494 = unaff_EBX;`n    _DAT_1003a498 = in_EDX;`n    _DAT_1003a49c = in_ECX;`n    _DAT_1003a4a0 = in_EAX;`n    _DAT_1003a4a4 = unaff_EBP;`n    DAT_1003a4a8 = return_address;`n    _DAT_1003a4ac = in_CS;`n    _DAT_1003a4b8 = in_SS;`n`n    DAT_1003a3e8 = IsDebuggerPresent();`n`n    FUN_100172cd();`n`n    SetUnhandledExceptionFilter(nullptr);`n`n    UnhandledExceptionFilter(`n        reinterpret_cast<_EXCEPTION_POINTERS*>(&PTR_DAT_10024208));`n`n    if (DAT_1003a3e8 == 0u)`n        FUN_100172cd();`n`n    TerminateProcess(GetCurrentProcess(), 0xc0000409u);`n    __assume(0);`n}`n
+#include <Windows.h>
+#include <cstdint>
+#include <intrin.h>
+
+extern "C" void __stdcall FUN_100172cd();
+
+extern "C" [[noreturn]] void __cdecl ___report_gsfailure()
+{
+    extern volatile std::uint32_t _DAT_1003a4b0;
+    extern volatile void* _DAT_1003a4b4;
+    extern volatile std::uint32_t _DAT_1003a3f0;
+    extern volatile std::uint32_t _DAT_1003a398;
+    extern volatile std::uint32_t _DAT_1003a39c;
+    extern volatile std::uint32_t _DAT_1003a3a4;
+    extern volatile std::uint16_t _DAT_1003a47c;
+    extern volatile std::uint16_t _DAT_1003a480;
+    extern volatile std::uint16_t _DAT_1003a484;
+    extern volatile std::uint16_t _DAT_1003a488;
+    extern volatile std::uint32_t _DAT_1003a48c;
+    extern volatile std::uint32_t _DAT_1003a490;
+    extern volatile std::uint32_t _DAT_1003a494;
+    extern volatile std::uint32_t _DAT_1003a498;
+    extern volatile std::uint32_t _DAT_1003a49c;
+    extern volatile std::uint32_t _DAT_1003a4a0;
+    extern volatile std::uint32_t _DAT_1003a4a4;
+    extern volatile std::uint32_t DAT_1003a4a8;
+    extern volatile std::uint16_t _DAT_1003a4ac;
+    extern volatile std::uint16_t _DAT_1003a4b8;
+    extern volatile std::uint32_t DAT_1003a3e8;
+    extern volatile std::uint32_t DAT_10029490;
+    extern volatile std::uint32_t DAT_10029494;
+    extern volatile void* PTR_DAT_10024208;
+
+    std::uint32_t in_EAX;
+    std::uint32_t in_ECX;
+    std::uint32_t in_EDX;
+    std::uint32_t unaff_EBX;
+    std::uint32_t unaff_EBP;
+    std::uint32_t unaff_ESI;
+    std::uint32_t unaff_EDI;
+    std::uint32_t eflags;
+
+    std::uint16_t in_ES;
+    std::uint16_t in_CS;
+    std::uint16_t in_SS;
+    std::uint16_t in_DS;
+    std::uint16_t in_FS;
+    std::uint16_t in_GS;
+
+    std::uint32_t local_32c;
+    std::uint32_t local_328;
+
+    __asm
+    {
+        mov in_EAX, eax
+        mov in_ECX, ecx
+        mov in_EDX, edx
+        mov unaff_EBX, ebx
+        mov unaff_EBP, ebp
+        mov unaff_ESI, esi
+        mov unaff_EDI, edi
+
+        pushfd
+        popfd
+
+        mov ax, es
+        mov in_ES, ax
+        mov ax, cs
+        mov in_CS, ax
+        mov ax, ss
+        mov in_SS, ax
+        mov ax, ds
+        mov in_DS, ax
+        mov ax, fs
+        mov in_FS, ax
+        mov ax, gs
+        mov in_GS, ax
+    }
+
+    const std::uint32_t return_address =
+        *reinterpret_cast<const std::uint32_t*>(_AddressOfReturnAddress());
+
+    const std::uint32_t stack0 =
+        static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(&local_32c));
+
+    const std::uint32_t stack0xfffffffc = stack0 - 4u;
+    const std::uint32_t stack0x00000004 = stack0 + 4u;
+
+    std::uint32_t parity_value = stack0 & 0xffu;
+    parity_value ^= parity_value >> 4;
+    parity_value ^= parity_value >> 2;
+    parity_value ^= parity_value >> 1;
+
+    _DAT_1003a4b0 =
+        static_cast<std::uint32_t>((eflags >> 14) & 1u) * 0x4000u |
+        static_cast<std::uint32_t>(
+            ((stack0xfffffffc ^ 0x328u) &
+             (stack0xfffffffc ^
+              (stack0xfffffffc - 0x328u)) &
+             0x80000000u) != 0u) * 0x800u |
+        static_cast<std::uint32_t>((eflags >> 9) & 1u) * 0x200u |
+        static_cast<std::uint32_t>((eflags >> 8) & 1u) * 0x100u |
+        static_cast<std::uint32_t>(
+            static_cast<std::int32_t>(stack0) < 0) * 0x80u |
+        static_cast<std::uint32_t>(stack0 == 0x32cu) * 0x40u |
+        static_cast<std::uint32_t>((eflags >> 4) & 1u) * 0x10u |
+        static_cast<std::uint32_t>((parity_value & 1u) == 0u) * 4u |
+        static_cast<std::uint32_t>(stack0xfffffffc < 0x328u) |
+        static_cast<std::uint32_t>((eflags >> 21) & 1u) * 0x200000u |
+        static_cast<std::uint32_t>((eflags >> 20) & 1u) * 0x100000u |
+        static_cast<std::uint32_t>((eflags >> 19) & 1u) * 0x80000u |
+        static_cast<std::uint32_t>((eflags >> 18) & 1u) * 0x40000u;
+
+    _DAT_1003a4b4 =
+        reinterpret_cast<void*>(
+            static_cast<std::uintptr_t>(stack0x00000004));
+
+    _DAT_1003a3f0 = 0x10001u;
+    _DAT_1003a398 = 0xc0000409u;
+    _DAT_1003a39c = 1u;
+
+    local_32c = DAT_10029490;
+    local_328 = DAT_10029494;
+
+    _DAT_1003a3a4 = return_address;
+
+    _DAT_1003a47c = in_GS;
+    _DAT_1003a480 = in_FS;
+    _DAT_1003a484 = in_ES;
+    _DAT_1003a488 = in_DS;
+    _DAT_1003a48c = unaff_EDI;
+    _DAT_1003a490 = unaff_ESI;
+    _DAT_1003a494 = unaff_EBX;
+    _DAT_1003a498 = in_EDX;
+    _DAT_1003a49c = in_ECX;
+    _DAT_1003a4a0 = in_EAX;
+    _DAT_1003a4a4 = unaff_EBP;
+    DAT_1003a4a8 = return_address;
+    _DAT_1003a4ac = in_CS;
+    _DAT_1003a4b8 = in_SS;
+
+    DAT_1003a3e8 = IsDebuggerPresent();
+
+    FUN_100172cd();
+
+    SetUnhandledExceptionFilter(nullptr);
+
+    UnhandledExceptionFilter(
+        reinterpret_cast<_EXCEPTION_POINTERS*>(&PTR_DAT_10024208));
+
+    if (DAT_1003a3e8 == 0u)
+        FUN_100172cd();
+
+    TerminateProcess(GetCurrentProcess(), 0xc0000409u);
+    __assume(0);
+}

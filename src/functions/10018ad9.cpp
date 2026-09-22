@@ -1,1 +1,283 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n`nusing uchar = unsigned char;`n`nstruct _LocaleUpdate`n{`n    std::uint32_t unknown_00; // offset 0x00`n    std::int32_t  local_18;   // offset 0x04`n    std::int32_t  local_14;   // offset 0x08`n    char          local_10;   // offset 0x0c`n    std::uint8_t  padding_0d[3];`n`n    explicit _LocaleUpdate(_locale_t locale);`n};`n`nstatic_assert(sizeof(_LocaleUpdate) == 0x10);`nstatic_assert(offsetof(_LocaleUpdate, local_18) == 0x04);`nstatic_assert(offsetof(_LocaleUpdate, local_14) == 0x08);`nstatic_assert(offsetof(_LocaleUpdate, local_10) == 0x0c);`n`nextern "C" int __cdecl __strnicmp(`n    char* str1,`n    char* str2,`n    std::size_t max_count);`n`nextern "C" int* __cdecl __errno();`n`nextern "C" void __stdcall FUN_1001189f();`n`nextern "C" int __cdecl __mbsnbicmp_l(`n    uchar* _Str1,`n    uchar* _Str2,`n    std::size_t _MaxCount,`n    _locale_t _Locale)`n{`n    std::size_t sVar1;`n    uchar* puVar2;`n    int iVar3;`n    int* piVar4;`n    std::uint32_t uVar5;`n    uchar* pbVar6;`n    std::uint16_t local_c;`n    std::uint16_t local_8;`n`n    _LocaleUpdate local_1c(_Locale);`n`n    auto* local_18 = reinterpret_cast<std::uint8_t*>(`n        static_cast<std::uintptr_t>(local_1c.local_18));`n`n    auto* local_14 = reinterpret_cast<std::uint8_t*>(`n        static_cast<std::uintptr_t>(local_1c.local_14));`n`n    if (_MaxCount == 0)`n    {`n        if (local_1c.local_10 != '\0')`n        {`n            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=`n                0xfffffffdU;`n        }`n`n        iVar3 = 0;`n    }`n    else if (*reinterpret_cast<std::int32_t*>(local_18 + 8) == 0)`n    {`n        iVar3 = __strnicmp(`n            reinterpret_cast<char*>(_Str1),`n            reinterpret_cast<char*>(_Str2),`n            _MaxCount);`n`n        if (local_1c.local_10 != '\0')`n        {`n            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=`n                0xfffffffdU;`n        }`n    }`n    else if (_Str1 == nullptr)`n    {`n        piVar4 = __errno();`n        *piVar4 = 0x16;`n        FUN_1001189f();`n`n        if (local_1c.local_10 != '\0')`n        {`n            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=`n                0xfffffffdU;`n        }`n`n        iVar3 = 0x7fffffff;`n    }`n    else`n    {`n        if (_Str2 != nullptr)`n        {`n            do`n            {`n                uVar5 = static_cast<std::uint32_t>(*_Str1);`n                sVar1 = _MaxCount - 1;`n                puVar2 = _Str1 + 1;`n`n                if ((local_18[uVar5 + 0x1d] & 4) == 0)`n                {`n                    if ((local_18[uVar5 + 0x1d] & 0x10) != 0)`n                    {`n                        uVar5 = static_cast<std::uint32_t>(`n                            local_18[uVar5 + 0x11d]);`n                    }`n`n                    local_c = static_cast<std::uint16_t>(uVar5);`n                    _Str1 = puVar2;`n`n                LAB_10018c2c:`n                    uVar5 = static_cast<std::uint32_t>(*_Str2);`n                    pbVar6 = _Str2 + 1;`n`n                    if ((local_18[uVar5 + 0x1d] & 4) == 0)`n                    {`n                        if ((local_18[uVar5 + 0x1d] & 0x10) != 0)`n                        {`n                            uVar5 = static_cast<std::uint32_t>(`n                                local_18[uVar5 + 0x11d]);`n                        }`n`n                        goto LAB_10018c9c;`n                    }`n`n                    if (sVar1 == 0)`n                    {`n                    LAB_10018c42:`n                        _MaxCount = sVar1;`n                        local_8 = 0;`n                    }`n                    else`n                    {`n                        sVar1 = _MaxCount - 2;`n`n                        if (*pbVar6 == 0)`n                        {`n                            goto LAB_10018c42;`n                        }`n`n                        local_8 = static_cast<std::uint16_t>(`n                            (static_cast<std::uint16_t>(*_Str2) << 8) |`n                            static_cast<std::uint16_t>(*pbVar6));`n`n                        pbVar6 = _Str2 + 2;`n                        _MaxCount = sVar1;`n`n                        if ((local_8 < *reinterpret_cast<std::uint16_t*>(`n                                           local_18 + 0x10)) ||`n                            (*reinterpret_cast<std::uint16_t*>(`n                                 local_18 + 0x12) < local_8))`n                        {`n                            if ((*reinterpret_cast<std::uint16_t*>(`n                                     local_18 + 0x16) <= local_8) &&`n                                (local_8 <= *reinterpret_cast<std::uint16_t*>(`n                                               local_18 + 0x18)))`n                            {`n                                local_8 = static_cast<std::uint16_t>(`n                                    local_8 +`n                                    *reinterpret_cast<std::int16_t*>(`n                                        local_18 + 0x1a));`n                            }`n                        }`n                        else`n                        {`n                            local_8 = static_cast<std::uint16_t>(`n                                local_8 +`n                                *reinterpret_cast<std::int16_t*>(`n                                    local_18 + 0x14));`n                        }`n                    }`n                }`n                else`n                {`n                    if (sVar1 != 0)`n                    {`n                        if (*puVar2 == 0)`n                        {`n                            local_c = 0;`n                            _Str1 = puVar2;`n                        }`n                        else`n                        {`n                            local_c = static_cast<std::uint16_t>(`n                                (static_cast<std::uint16_t>(*_Str1) << 8) |`n                                static_cast<std::uint16_t>(*puVar2));`n`n                            _Str1 = _Str1 + 2;`n`n                            if ((local_c < *reinterpret_cast<std::uint16_t*>(`n                                               local_18 + 0x10)) ||`n                                (*reinterpret_cast<std::uint16_t*>(`n                                     local_18 + 0x12) < local_c))`n                            {`n                                if ((*reinterpret_cast<std::uint16_t*>(`n                                         local_18 + 0x16) <= local_c) &&`n                                    (local_c <=`n                                     *reinterpret_cast<std::uint16_t*>(`n                                         local_18 + 0x18)))`n                                {`n                                    local_c = static_cast<std::uint16_t>(`n                                        local_c +`n                                        *reinterpret_cast<std::int16_t*>(`n                                            local_18 + 0x1a));`n                                }`n                            }`n                            else`n                            {`n                                local_c = static_cast<std::uint16_t>(`n                                    local_c +`n                                    *reinterpret_cast<std::int16_t*>(`n                                        local_18 + 0x14));`n                            }`n                        }`n`n                        goto LAB_10018c2c;`n                    }`n`n                    uVar5 = static_cast<std::uint32_t>(*_Str2);`n`n                    if ((local_18[uVar5 + 0x1d] & 4) != 0)`n                    {`n                    LAB_10018cb6:`n                        if (local_1c.local_10 != '\0')`n                        {`n                            *reinterpret_cast<std::uint32_t*>(`n                                local_14 + 0x70) &= 0xfffffffdU;`n                        }`n`n                        return 0;`n                    }`n`n                    local_c = 0;`n                    pbVar6 = _Str2;`n                    _Str1 = puVar2;`n`n                LAB_10018c9c:`n                    local_8 = static_cast<std::uint16_t>(uVar5);`n                    _MaxCount = sVar1;`n                }`n`n                if (local_8 != local_c)`n                {`n                    iVar3 =`n                        ((0U - static_cast<std::uint32_t>(local_8 < local_c)) &`n                         2U) -`n                        1U;`n`n                    if (local_1c.local_10 == '\0')`n                    {`n                        return iVar3;`n                    }`n`n                    *reinterpret_cast<std::uint32_t*>(`n                        local_14 + 0x70) &= 0xfffffffdU;`n`n                    return iVar3;`n                }`n`n                if ((local_c == 0) || (_MaxCount == 0))`n                {`n                    goto LAB_10018cb6;`n                }`n            }`n            while (true);`n        }`n`n        piVar4 = __errno();`n        *piVar4 = 0x16;`n        FUN_1001189f();`n`n        if (local_1c.local_10 != '\0')`n        {`n            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=`n                0xfffffffdU;`n        }`n`n        iVar3 = 0x7fffffff;`n    }`n`n    return iVar3;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+using uchar = unsigned char;
+
+struct _LocaleUpdate
+{
+    std::uint32_t unknown_00; // offset 0x00
+    std::int32_t  local_18;   // offset 0x04
+    std::int32_t  local_14;   // offset 0x08
+    char          local_10;   // offset 0x0c
+    std::uint8_t  padding_0d[3];
+
+    explicit _LocaleUpdate(_locale_t locale);
+};
+
+static_assert(sizeof(_LocaleUpdate) == 0x10);
+static_assert(offsetof(_LocaleUpdate, local_18) == 0x04);
+static_assert(offsetof(_LocaleUpdate, local_14) == 0x08);
+static_assert(offsetof(_LocaleUpdate, local_10) == 0x0c);
+
+extern "C" int __cdecl _strnicmp(
+    char* str1,
+    char* str2,
+    std::size_t max_count);
+
+extern "C" int* __cdecl __errno();
+
+extern "C" void __stdcall FUN_1001189f();
+
+int __cdecl __mbsnbicmp_l(
+    uchar* _Str1,
+    uchar* _Str2,
+    std::size_t _MaxCount,
+    _locale_t _Locale)
+{
+    std::size_t sVar1;
+    uchar* puVar2;
+    int iVar3;
+    int* piVar4;
+    std::uint32_t uVar5;
+    uchar* pbVar6;
+    std::uint16_t local_c;
+    std::uint16_t local_8;
+
+    _LocaleUpdate local_1c(_Locale);
+
+    auto* local_18 = reinterpret_cast<std::uint8_t*>(
+        static_cast<std::uintptr_t>(local_1c.local_18));
+
+    auto* local_14 = reinterpret_cast<std::uint8_t*>(
+        static_cast<std::uintptr_t>(local_1c.local_14));
+
+    if (_MaxCount == 0)
+    {
+        if (local_1c.local_10 != '\0')
+        {
+            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=
+                0xfffffffdU;
+        }
+
+        iVar3 = 0;
+    }
+    else if (*reinterpret_cast<std::int32_t*>(local_18 + 8) == 0)
+    {
+        iVar3 = _strnicmp(
+            reinterpret_cast<char*>(_Str1),
+            reinterpret_cast<char*>(_Str2),
+            _MaxCount);
+
+        if (local_1c.local_10 != '\0')
+        {
+            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=
+                0xfffffffdU;
+        }
+    }
+    else if (_Str1 == nullptr)
+    {
+        piVar4 = __errno();
+        *piVar4 = 0x16;
+        FUN_1001189f();
+
+        if (local_1c.local_10 != '\0')
+        {
+            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=
+                0xfffffffdU;
+        }
+
+        iVar3 = 0x7fffffff;
+    }
+    else
+    {
+        if (_Str2 != nullptr)
+        {
+            do
+            {
+                uVar5 = static_cast<std::uint32_t>(*_Str1);
+                sVar1 = _MaxCount - 1;
+                puVar2 = _Str1 + 1;
+
+                if ((local_18[uVar5 + 0x1d] & 4) == 0)
+                {
+                    if ((local_18[uVar5 + 0x1d] & 0x10) != 0)
+                    {
+                        uVar5 = static_cast<std::uint32_t>(
+                            local_18[uVar5 + 0x11d]);
+                    }
+
+                    local_c = static_cast<std::uint16_t>(uVar5);
+                    _Str1 = puVar2;
+
+                LAB_10018c2c:
+                    uVar5 = static_cast<std::uint32_t>(*_Str2);
+                    pbVar6 = _Str2 + 1;
+
+                    if ((local_18[uVar5 + 0x1d] & 4) == 0)
+                    {
+                        if ((local_18[uVar5 + 0x1d] & 0x10) != 0)
+                        {
+                            uVar5 = static_cast<std::uint32_t>(
+                                local_18[uVar5 + 0x11d]);
+                        }
+
+                        goto LAB_10018c9c;
+                    }
+
+                    if (sVar1 == 0)
+                    {
+                    LAB_10018c42:
+                        _MaxCount = sVar1;
+                        local_8 = 0;
+                    }
+                    else
+                    {
+                        sVar1 = _MaxCount - 2;
+
+                        if (*pbVar6 == 0)
+                        {
+                            goto LAB_10018c42;
+                        }
+
+                        local_8 = static_cast<std::uint16_t>(
+                            (static_cast<std::uint16_t>(*_Str2) << 8) |
+                            static_cast<std::uint16_t>(*pbVar6));
+
+                        pbVar6 = _Str2 + 2;
+                        _MaxCount = sVar1;
+
+                        if ((local_8 < *reinterpret_cast<std::uint16_t*>(
+                                           local_18 + 0x10)) ||
+                            (*reinterpret_cast<std::uint16_t*>(
+                                 local_18 + 0x12) < local_8))
+                        {
+                            if ((*reinterpret_cast<std::uint16_t*>(
+                                     local_18 + 0x16) <= local_8) &&
+                                (local_8 <= *reinterpret_cast<std::uint16_t*>(
+                                               local_18 + 0x18)))
+                            {
+                                local_8 = static_cast<std::uint16_t>(
+                                    local_8 +
+                                    *reinterpret_cast<std::int16_t*>(
+                                        local_18 + 0x1a));
+                            }
+                        }
+                        else
+                        {
+                            local_8 = static_cast<std::uint16_t>(
+                                local_8 +
+                                *reinterpret_cast<std::int16_t*>(
+                                    local_18 + 0x14));
+                        }
+                    }
+                }
+                else
+                {
+                    if (sVar1 != 0)
+                    {
+                        if (*puVar2 == 0)
+                        {
+                            local_c = 0;
+                            _Str1 = puVar2;
+                        }
+                        else
+                        {
+                            local_c = static_cast<std::uint16_t>(
+                                (static_cast<std::uint16_t>(*_Str1) << 8) |
+                                static_cast<std::uint16_t>(*puVar2));
+
+                            _Str1 = _Str1 + 2;
+
+                            if ((local_c < *reinterpret_cast<std::uint16_t*>(
+                                               local_18 + 0x10)) ||
+                                (*reinterpret_cast<std::uint16_t*>(
+                                     local_18 + 0x12) < local_c))
+                            {
+                                if ((*reinterpret_cast<std::uint16_t*>(
+                                         local_18 + 0x16) <= local_c) &&
+                                    (local_c <=
+                                     *reinterpret_cast<std::uint16_t*>(
+                                         local_18 + 0x18)))
+                                {
+                                    local_c = static_cast<std::uint16_t>(
+                                        local_c +
+                                        *reinterpret_cast<std::int16_t*>(
+                                            local_18 + 0x1a));
+                                }
+                            }
+                            else
+                            {
+                                local_c = static_cast<std::uint16_t>(
+                                    local_c +
+                                    *reinterpret_cast<std::int16_t*>(
+                                        local_18 + 0x14));
+                            }
+                        }
+
+                        goto LAB_10018c2c;
+                    }
+
+                    uVar5 = static_cast<std::uint32_t>(*_Str2);
+
+                    if ((local_18[uVar5 + 0x1d] & 4) != 0)
+                    {
+                    LAB_10018cb6:
+                        if (local_1c.local_10 != '\0')
+                        {
+                            *reinterpret_cast<std::uint32_t*>(
+                                local_14 + 0x70) &= 0xfffffffdU;
+                        }
+
+                        return 0;
+                    }
+
+                    local_c = 0;
+                    pbVar6 = _Str2;
+                    _Str1 = puVar2;
+
+                LAB_10018c9c:
+                    local_8 = static_cast<std::uint16_t>(uVar5);
+                    _MaxCount = sVar1;
+                }
+
+                if (local_8 != local_c)
+                {
+                    iVar3 =
+                        ((0U - static_cast<std::uint32_t>(local_8 < local_c)) &
+                         2U) -
+                        1U;
+
+                    if (local_1c.local_10 == '\0')
+                    {
+                        return iVar3;
+                    }
+
+                    *reinterpret_cast<std::uint32_t*>(
+                        local_14 + 0x70) &= 0xfffffffdU;
+
+                    return iVar3;
+                }
+
+                if ((local_c == 0) || (_MaxCount == 0))
+                {
+                    goto LAB_10018cb6;
+                }
+            }
+            while (true);
+        }
+
+        piVar4 = __errno();
+        *piVar4 = 0x16;
+        FUN_1001189f();
+
+        if (local_1c.local_10 != '\0')
+        {
+            *reinterpret_cast<std::uint32_t*>(local_14 + 0x70) &=
+                0xfffffffdU;
+        }
+
+        iVar3 = 0x7fffffff;
+    }
+
+    return iVar3;
+}

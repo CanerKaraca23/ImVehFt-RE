@@ -1,1 +1,44 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nstruct TidDataProcessingThrowView`n{`n    std::uint8_t reserved_00[0x90];`n    int ProcessingThrow;`n};`n`nusing _ptiddata = TidDataProcessingThrowView*;`n`nstatic_assert(offsetof(TidDataProcessingThrowView, ProcessingThrow) == 0x90);`n`nextern "C" TidDataProcessingThrowView* __cdecl __getptd(void);`n`nunsigned int __cdecl ___FrameUnwindFilter(unsigned int* param_1)`n{`n    extern void __cdecl terminate();`n`n    const int exception_code =`n        *reinterpret_cast<const int*>(`n            static_cast<unsigned long>(*param_1));`n`n    if ((exception_code == -0x1fbcbcae) ||`n        (exception_code == -0x1fbcb0b3))`n    {`n        _ptiddata p_Var2 = __getptd();`n`n        if (0 < p_Var2->ProcessingThrow)`n        {`n            p_Var2 = __getptd();`n            p_Var2->ProcessingThrow =`n                p_Var2->ProcessingThrow + -1;`n        }`n    }`n    else if (exception_code == -0x1f928c9d)`n    {`n        _ptiddata p_Var2 = __getptd();`n        p_Var2->ProcessingThrow = 0;`n        terminate();`n    }`n`n    return 0;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+struct TidDataProcessingThrowView
+{
+    std::uint8_t reserved_00[0x90];
+    int ProcessingThrow;
+};
+
+using _ptiddata = TidDataProcessingThrowView*;
+
+static_assert(offsetof(TidDataProcessingThrowView, ProcessingThrow) == 0x90);
+
+extern "C" TidDataProcessingThrowView* __cdecl __getptd(void);
+
+unsigned int __cdecl ___FrameUnwindFilter(unsigned int* param_1)
+{
+    extern void __cdecl terminate();
+
+    const int exception_code =
+        *reinterpret_cast<const int*>(
+            static_cast<unsigned long>(*param_1));
+
+    if ((exception_code == -0x1fbcbcae) ||
+        (exception_code == -0x1fbcb0b3))
+    {
+        _ptiddata p_Var2 = __getptd();
+
+        if (0 < p_Var2->ProcessingThrow)
+        {
+            p_Var2 = __getptd();
+            p_Var2->ProcessingThrow =
+                p_Var2->ProcessingThrow + -1;
+        }
+    }
+    else if (exception_code == -0x1f928c9d)
+    {
+        _ptiddata p_Var2 = __getptd();
+        p_Var2->ProcessingThrow = 0;
+        terminate();
+    }
+
+    return 0;
+}

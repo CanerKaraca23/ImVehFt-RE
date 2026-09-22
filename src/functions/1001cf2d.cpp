@@ -1,1 +1,29 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void __stdcall FID_conflict__CallMemberFunction1(`n    std::uint32_t param_1,`n    void* member_function);`n`nextern "C" void __cdecl ___DestructExceptionObject(int* param_1)`n{`n    if (param_1 != nullptr)`n    {`n        if (*param_1 == -0x1f928c9d)`n        {`n            if (param_1[7] != 0)`n            {`n                void* member_function =`n                    *reinterpret_cast<void**>(`n                        static_cast<std::uintptr_t>(`n                            static_cast<std::uint32_t>(param_1[7])) + 4U);`n`n                if (member_function != nullptr)`n                {`n                    FID_conflict__CallMemberFunction1(`n                        static_cast<std::uint32_t>(param_1[6]),`n                        member_function);`n                }`n            }`n        }`n    }`n}`n
+#include <cstdint>
+
+extern "C" void __stdcall FID_conflict__CallMemberFunction1(
+    std::uint32_t param_1,
+    void* member_function);
+
+void __cdecl ___DestructExceptionObject(int* param_1)
+{
+    if (param_1 != nullptr)
+    {
+        if (*param_1 == -0x1f928c9d)
+        {
+            if (param_1[7] != 0)
+            {
+                void* member_function =
+                    *reinterpret_cast<void**>(
+                        static_cast<std::uintptr_t>(
+                            static_cast<std::uint32_t>(param_1[7])) + 4U);
+
+                if (member_function != nullptr)
+                {
+                    FID_conflict__CallMemberFunction1(
+                        static_cast<std::uint32_t>(param_1[6]),
+                        member_function);
+                }
+            }
+        }
+    }
+}

@@ -1,1 +1,29 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" errno_t __cdecl FID_conflict___sopen_helper(`n    char* _Filename,`n    int _OpenFlag,`n    int _ShareFlag,`n    int _PermissionMode,`n    int* _FileHandle,`n    int _BSecure);`n`nextern "C" errno_t __cdecl __sopen_s(`n    int* _FileHandle,`n    char* _Filename,`n    int _OpenFlag,`n    int _ShareFlag,`n    int _PermissionMode)`n{`n    errno_t eVar1 = FID_conflict___sopen_helper(`n        _Filename,`n        _OpenFlag,`n        _ShareFlag,`n        _PermissionMode,`n        _FileHandle,`n        1);`n`n    return eVar1;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" errno_t __cdecl FID_conflict___sopen_helper(
+    char* _Filename,
+    int _OpenFlag,
+    int _ShareFlag,
+    int _PermissionMode,
+    int* _FileHandle,
+    int _BSecure);
+
+extern "C" errno_t __cdecl __sopen_s(
+    int* _FileHandle,
+    char* _Filename,
+    int _OpenFlag,
+    int _ShareFlag,
+    int _PermissionMode)
+{
+    errno_t eVar1 = FID_conflict___sopen_helper(
+        _Filename,
+        _OpenFlag,
+        _ShareFlag,
+        _PermissionMode,
+        _FileHandle,
+        1);
+
+    return eVar1;
+}

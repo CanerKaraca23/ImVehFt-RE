@@ -1,1 +1,59 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`n`nint __cdecl FID_conflict__sscanf(`n    char* source,`n    char* format,`n    ...);`n`nextern void __stdcall FUN_10004000();`n`nextern "C" void __cdecl FUN_10004ab0_impl(void* this_, std::uint32_t param_1)`n{`n    std::int32_t unaff_ESI;`n    __asm mov unaff_ESI, esi`n    if (*reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(unaff_ESI) + 0x350) != 0)`n    {`n        std::int32_t local_8 =`n            static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(this_));`n`n        FID_conflict__sscanf(`n            reinterpret_cast<char*>(`n                reinterpret_cast<std::uintptr_t>(this_) + 8),`n            const_cast<char*>("%d"),`n            &local_8);`n`n        auto* puVar1 = reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(unaff_ESI) +`n            0x340 +`n            local_8 * 0x14);`n`n        puVar1[3] =`n            *reinterpret_cast<std::int32_t*>(`n                *reinterpret_cast<std::int32_t*>(`n                    static_cast<std::uintptr_t>(unaff_ESI) + 0x350) + 8)`n            + -0x18`n            + local_8 * 0x18;`n`n        *puVar1 = param_1;`n        puVar1[4] = 0;`n        *reinterpret_cast<std::uint16_t*>(puVar1 + 2) = 0;`n`n        FUN_10004000();`n    }`n}`n`nextern "C" void __cdecl FUN_10004ab0_impl(void* this_, std::uint32_t param_1);`n`nextern "C" __declspec(naked) void FUN_10004ab0()`n{`n    __asm {`n        push dword ptr [esp + 4]`n        push ecx`n        call FUN_10004ab0_impl`n        add esp, 8`n        ret`n    }`n}`n
+#include <cstdint>
+
+
+extern "C" int __cdecl FID_conflict__sscanf(
+    char* source,
+    char* format,
+    ...);
+
+extern "C" void __stdcall FUN_10004000();
+
+extern "C" void __cdecl FUN_10004ab0_impl(void* this_, std::uint32_t param_1)
+{
+    std::int32_t unaff_ESI;
+    __asm mov unaff_ESI, esi
+    if (*reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(unaff_ESI) + 0x350) != 0)
+    {
+        std::int32_t local_8 =
+            static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(this_));
+
+        FID_conflict__sscanf(
+            reinterpret_cast<char*>(
+                reinterpret_cast<std::uintptr_t>(this_) + 8),
+            const_cast<char*>("%d"),
+            &local_8);
+
+        auto* puVar1 = reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(unaff_ESI) +
+            0x340 +
+            local_8 * 0x14);
+
+        puVar1[3] =
+            *reinterpret_cast<std::int32_t*>(
+                *reinterpret_cast<std::int32_t*>(
+                    static_cast<std::uintptr_t>(unaff_ESI) + 0x350) + 8)
+            + -0x18
+            + local_8 * 0x18;
+
+        *puVar1 = param_1;
+        puVar1[4] = 0;
+        *reinterpret_cast<std::uint16_t*>(puVar1 + 2) = 0;
+
+        FUN_10004000();
+    }
+}
+
+extern "C" void __cdecl FUN_10004ab0_impl(void* this_, std::uint32_t param_1);
+
+extern "C" __declspec(naked) void FUN_10004ab0()
+{
+    __asm {
+        push dword ptr [esp + 4]
+        push ecx
+        call FUN_10004ab0_impl
+        add esp, 8
+        ret
+    }
+}

@@ -1,1 +1,64 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing FunctionPointer = void(__cdecl*)(std::uint32_t, int, int, int, int);`n`nextern void** DAT_1003c3b4;`nextern std::uint32_t* DAT_10037740;`nextern std::uint32_t* DAT_10037744;`nextern std::uint32_t* DAT_10037748;`nextern std::uint32_t PTR_vftable_10037728;`n`nextern void __stdcall FUN_1000cfe0();`n`nvoid __stdcall FUN_1000b2e0(std::uint32_t param_1)`n{`n    if (DAT_1003c3b4 == nullptr) {`n        DAT_1003c3b4 =`n            reinterpret_cast<void**>(&PTR_vftable_10037728);`n`n        auto function = *reinterpret_cast<void(__thiscall**)(`n            void*,`n            std::uint32_t,`n            std::uint32_t,`n            std::uint32_t,`n            std::uint32_t`n        )>(PTR_vftable_10037728 + 4u);`n`n        function(reinterpret_cast<void*>(0x58aa2d), 0, 0, 0, 0);`n    }`n`n    const auto parameter_address =`n        reinterpret_cast<std::uintptr_t>(&param_1);`n    const auto begin_address =`n        reinterpret_cast<std::uintptr_t>(DAT_10037740);`n    const auto end_address =`n        reinterpret_cast<std::uintptr_t>(DAT_10037744);`n`n    if ((parameter_address < end_address) &&`n        (begin_address <= parameter_address)) {`n        const std::int32_t index =`n            static_cast<std::int32_t>(`n                parameter_address - begin_address);`n`n        if (DAT_10037744 == DAT_10037748) {`n            FUN_1000cfe0();`n        }`n`n        if (DAT_10037744 != nullptr) {`n            *DAT_10037744 = DAT_10037740[index >> 2];`n        }`n`n        DAT_10037744 = DAT_10037744 + 1;`n        return;`n    }`n`n    if (DAT_10037744 == DAT_10037748) {`n        FUN_1000cfe0();`n    }`n`n    if (DAT_10037744 != nullptr) {`n        *DAT_10037744 = param_1;`n    }`n`n    DAT_10037744 = DAT_10037744 + 1;`n}`n
+#include <cstdint>
+
+using FunctionPointer = void(__cdecl*)(std::uint32_t, int, int, int, int);
+
+extern void** DAT_1003c3b4;
+extern std::uint32_t* DAT_10037740;
+extern std::uint32_t* DAT_10037744;
+extern std::uint32_t* DAT_10037748;
+extern std::uint32_t PTR_vftable_10037728;
+
+extern "C" void __stdcall FUN_1000cfe0();
+
+void __stdcall FUN_1000b2e0(std::uint32_t param_1)
+{
+    if (DAT_1003c3b4 == nullptr) {
+        DAT_1003c3b4 =
+            reinterpret_cast<void**>(&PTR_vftable_10037728);
+
+        auto function = *reinterpret_cast<void(__thiscall**)(
+            void*,
+            std::uint32_t,
+            std::uint32_t,
+            std::uint32_t,
+            std::uint32_t
+        )>(PTR_vftable_10037728 + 4u);
+
+        function(reinterpret_cast<void*>(0x58aa2d), 0, 0, 0, 0);
+    }
+
+    const auto parameter_address =
+        reinterpret_cast<std::uintptr_t>(&param_1);
+    const auto begin_address =
+        reinterpret_cast<std::uintptr_t>(DAT_10037740);
+    const auto end_address =
+        reinterpret_cast<std::uintptr_t>(DAT_10037744);
+
+    if ((parameter_address < end_address) &&
+        (begin_address <= parameter_address)) {
+        const std::int32_t index =
+            static_cast<std::int32_t>(
+                parameter_address - begin_address);
+
+        if (DAT_10037744 == DAT_10037748) {
+            FUN_1000cfe0();
+        }
+
+        if (DAT_10037744 != nullptr) {
+            *DAT_10037744 = DAT_10037740[index >> 2];
+        }
+
+        DAT_10037744 = DAT_10037744 + 1;
+        return;
+    }
+
+    if (DAT_10037744 == DAT_10037748) {
+        FUN_1000cfe0();
+    }
+
+    if (DAT_10037744 != nullptr) {
+        *DAT_10037744 = param_1;
+    }
+
+    DAT_10037744 = DAT_10037744 + 1;
+}

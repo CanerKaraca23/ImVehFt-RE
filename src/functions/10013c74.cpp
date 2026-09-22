@@ -1,1 +1,67 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c418;`nextern std::uint8_t* DAT_1003c420;`n`nextern "C" unsigned long* __cdecl ___doserrno();`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`nextern "C" void __cdecl ___lock_fhandle(int _FileHandle);`nextern "C" int __cdecl __close_nolock(int _FileHandle);`nextern "C" void __stdcall FUN_10013d30();`n`nextern "C" int __cdecl __close(int _FileHandle)`n{`n    unsigned long* puVar1;`n    int* piVar2;`n    int iVar3;`n    int local_20;`n`n    if (_FileHandle == -2)`n    {`n        puVar1 = ___doserrno();`n        *puVar1 = 0;`n`n        piVar2 = __errno();`n        *piVar2 = 9;`n    }`n    else`n    {`n        if ((-1 < _FileHandle) &&`n            (static_cast<std::uint32_t>(_FileHandle) < DAT_1003c418))`n        {`n            iVar3 = (_FileHandle & 0x1fU) * 0x40;`n`n            if ((*(reinterpret_cast<std::uint8_t**>(&DAT_1003c420)[_FileHandle >> 5]`n                    + 4 + iVar3) & 1U) != 0)`n            {`n                ___lock_fhandle(_FileHandle);`n`n                if ((*(reinterpret_cast<std::uint8_t**>(&DAT_1003c420)[_FileHandle >> 5]`n                        + 4 + iVar3) & 1U) == 0)`n                {`n                    piVar2 = __errno();`n                    *piVar2 = 9;`n                    local_20 = -1;`n                }`n                else`n                {`n                    local_20 = __close_nolock(_FileHandle);`n                }`n`n                FUN_10013d30();`n                return local_20;`n            }`n        }`n`n        puVar1 = ___doserrno();`n        *puVar1 = 0;`n`n        piVar2 = __errno();`n        *piVar2 = 9;`n`n        FUN_1001189f();`n    }`n`n    return -1;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c418;
+extern std::uint8_t* DAT_1003c420;
+
+extern "C" unsigned long* __cdecl ___doserrno();
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" void __cdecl ___lock_fhandle(int _FileHandle);
+extern "C" int __cdecl __close_nolock(int _FileHandle);
+extern "C" void __stdcall FUN_10013d30();
+
+extern "C" int __cdecl __close(int _FileHandle)
+{
+    unsigned long* puVar1;
+    int* piVar2;
+    int iVar3;
+    int local_20;
+
+    if (_FileHandle == -2)
+    {
+        puVar1 = ___doserrno();
+        *puVar1 = 0;
+
+        piVar2 = __errno();
+        *piVar2 = 9;
+    }
+    else
+    {
+        if ((-1 < _FileHandle) &&
+            (static_cast<std::uint32_t>(_FileHandle) < DAT_1003c418))
+        {
+            iVar3 = (_FileHandle & 0x1fU) * 0x40;
+
+            if ((*(reinterpret_cast<std::uint8_t**>(&DAT_1003c420)[_FileHandle >> 5]
+                    + 4 + iVar3) & 1U) != 0)
+            {
+                ___lock_fhandle(_FileHandle);
+
+                if ((*(reinterpret_cast<std::uint8_t**>(&DAT_1003c420)[_FileHandle >> 5]
+                        + 4 + iVar3) & 1U) == 0)
+                {
+                    piVar2 = __errno();
+                    *piVar2 = 9;
+                    local_20 = -1;
+                }
+                else
+                {
+                    local_20 = __close_nolock(_FileHandle);
+                }
+
+                FUN_10013d30();
+                return local_20;
+            }
+        }
+
+        puVar1 = ___doserrno();
+        *puVar1 = 0;
+
+        piVar2 = __errno();
+        *piVar2 = 9;
+
+        FUN_1001189f();
+    }
+
+    return -1;
+}

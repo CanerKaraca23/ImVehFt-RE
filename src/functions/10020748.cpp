@@ -1,1 +1,16 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" __declspec(naked) long double __cdecl __set_exp(`n    std::uint64_t,`n    short)`n{`n    __asm`n    {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        push ecx`n        push ecx`n        mov eax, dword ptr [ebp + 10h]`n        fld qword ptr [ebp + 8]`n        movzx ecx, word ptr [ebp + 0eh]`n        fstp qword ptr [ebp - 8]`n        add eax, 3feh`n        shl eax, 4`n        and ecx, 800fh`n        or eax, ecx`n        mov word ptr [ebp - 2], ax`n        fld qword ptr [ebp - 8]`n        leave`n        ret`n    }`n}`n
+#include <bit>
+#include <cstdint>
+
+extern "C" long double __cdecl __set_exp(std::uint64_t param_1, short param_2)
+{
+    const std::uint16_t high_word = static_cast<std::uint16_t>(
+        (param_2 + 0x3FE) * 0x10 |
+        (static_cast<std::uint16_t>(param_1 >> 48) & 0x800FU));
+
+    const std::uint64_t bits =
+        (static_cast<std::uint64_t>(high_word) << 48) |
+        (param_1 & 0x0000FFFFFFFFFFFFULL);
+
+    const double local_c = std::bit_cast<double>(bits);
+    return static_cast<long double>(local_c);
+}

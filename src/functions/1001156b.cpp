@@ -1,1 +1,39 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern unsigned long DAT_1002226c[8];`n`nextern "C" __declspec(noreturn) void __stdcall RaiseException(`n    unsigned long,`n    unsigned long,`n    unsigned long,`n    unsigned long*);`n`nextern "C" __declspec(noreturn) void __stdcall __CxxThrowException_8(`n    unsigned long param_1,`n    unsigned char* param_2)`n{`n    unsigned long frame[8];`n`n    unsigned long* source = DAT_1002226c;`n    unsigned long* destination = frame;`n`n    for (int i = 8; i != 0; i = i - 1)`n    {`n        *destination = *source;`n        source = source + 1;`n        destination = destination + 1;`n    }`n`n    frame[6] = param_1;`n    frame[7] = static_cast<unsigned long>(`n        reinterpret_cast<unsigned long>(param_2));`n`n    if ((param_2 != 0) && ((*param_2 & 8u) != 0))`n    {`n        frame[5] = 0x1994000u;`n    }`n`n    RaiseException(frame[0], frame[1], frame[4], &frame[5]);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern unsigned long DAT_1002226c[8];
+
+extern "C" __declspec(noreturn) void __stdcall RaiseException(
+    unsigned long,
+    unsigned long,
+    unsigned long,
+    unsigned long*);
+
+extern "C" __declspec(noreturn) void __stdcall __CxxThrowException_8(
+    unsigned long param_1,
+    unsigned char* param_2)
+{
+    unsigned long frame[8];
+
+    unsigned long* source = DAT_1002226c;
+    unsigned long* destination = frame;
+
+    for (int i = 8; i != 0; i = i - 1)
+    {
+        *destination = *source;
+        source = source + 1;
+        destination = destination + 1;
+    }
+
+    frame[6] = param_1;
+    frame[7] = static_cast<unsigned long>(
+        reinterpret_cast<unsigned long>(param_2));
+
+    if ((param_2 != 0) && ((*param_2 & 8u) != 0))
+    {
+        frame[5] = 0x1994000u;
+    }
+
+    RaiseException(frame[0], frame[1], frame[4], &frame[5]);
+}

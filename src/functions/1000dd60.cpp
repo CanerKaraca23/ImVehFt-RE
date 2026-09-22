@@ -1,1 +1,58 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing VoidCallback = void (__cdecl*)();`nusing ResultCallback = std::uint32_t (__cdecl*)();`n`nextern "C" std::int32_t DAT_1003c39c;`n`nstd::uint32_t __stdcall FUN_1000dd60()`n{`n    const std::int32_t iVar2 = DAT_1003c39c;`n    auto* base = reinterpret_cast<std::uint8_t*>(`n        static_cast<std::uintptr_t>(iVar2));`n`n    auto* puVar1 = *reinterpret_cast<std::uint32_t**>(base + 0x1c);`n`n    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(base + 0x18);`n         puVar3 != puVar1;`n         puVar3 = puVar3 + 1)`n    {`n        if (*puVar3 != 0U)`n        {`n            VoidCallback callback = reinterpret_cast<VoidCallback>(`n                static_cast<std::uintptr_t>(*puVar3));`n            callback();`n        }`n    }`n`n    std::uint32_t local_8;`n    const std::uint32_t callbackAddress =`n        *reinterpret_cast<std::uint32_t*>(base + 0x10);`n`n    if (callbackAddress == 0U)`n    {`n        local_8 = 0U;`n    }`n    else`n    {`n        ResultCallback callback = reinterpret_cast<ResultCallback>(`n            static_cast<std::uintptr_t>(callbackAddress));`n        local_8 = callback();`n    }`n`n    puVar1 = *reinterpret_cast<std::uint32_t**>(base + 0x2c);`n`n    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(base + 0x28);`n         puVar3 != puVar1;`n         puVar3 = puVar3 + 1)`n    {`n        if (*puVar3 != 0U)`n        {`n            VoidCallback callback = reinterpret_cast<VoidCallback>(`n                static_cast<std::uintptr_t>(*puVar3));`n            callback();`n        }`n    }`n`n    return local_8;`n}`n
+#include <cstdint>
+
+using VoidCallback = void (__cdecl*)();
+using ResultCallback = std::uint32_t (__cdecl*)();
+
+extern "C" std::int32_t DAT_1003c39c;
+
+std::uint32_t __stdcall FUN_1000dd60()
+{
+    const std::int32_t iVar2 = DAT_1003c39c;
+    auto* base = reinterpret_cast<std::uint8_t*>(
+        static_cast<std::uintptr_t>(iVar2));
+
+    auto* puVar1 = *reinterpret_cast<std::uint32_t**>(base + 0x1c);
+
+    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(base + 0x18);
+         puVar3 != puVar1;
+         puVar3 = puVar3 + 1)
+    {
+        if (*puVar3 != 0U)
+        {
+            VoidCallback callback = reinterpret_cast<VoidCallback>(
+                static_cast<std::uintptr_t>(*puVar3));
+            callback();
+        }
+    }
+
+    std::uint32_t local_8;
+    const std::uint32_t callbackAddress =
+        *reinterpret_cast<std::uint32_t*>(base + 0x10);
+
+    if (callbackAddress == 0U)
+    {
+        local_8 = 0U;
+    }
+    else
+    {
+        ResultCallback callback = reinterpret_cast<ResultCallback>(
+            static_cast<std::uintptr_t>(callbackAddress));
+        local_8 = callback();
+    }
+
+    puVar1 = *reinterpret_cast<std::uint32_t**>(base + 0x2c);
+
+    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(base + 0x28);
+         puVar3 != puVar1;
+         puVar3 = puVar3 + 1)
+    {
+        if (*puVar3 != 0U)
+        {
+            VoidCallback callback = reinterpret_cast<VoidCallback>(
+                static_cast<std::uintptr_t>(*puVar3));
+            callback();
+        }
+    }
+
+    return local_8;
+}

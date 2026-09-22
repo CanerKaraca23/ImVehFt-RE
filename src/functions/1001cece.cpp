@@ -1,1 +1,21 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n#include <cstddef>`nstruct _ptiddata { std::uint8_t _reserved_00[0x90]; int _ProcessingThrow; };`nstatic_assert(offsetof(_ptiddata, _ProcessingThrow) == 0x90);`nextern "C" _ptiddata* __cdecl __getptd(void);`nextern "C" void __cdecl _inconsistency(void);`nextern "C" void __stdcall __CallSettingFrame_12(std::uint32_t, std::uint32_t, int);`nextern "C" void __stdcall FUN_1001cece(void);`n`nvoid __stdcall FUN_1001cece(void)`n{`n    _ptiddata* p_Var1 = __getptd();`n`n    if (0 < p_Var1->_ProcessingThrow)`n    {`n        p_Var1 = __getptd();`n        p_Var1->_ProcessingThrow = p_Var1->_ProcessingThrow + -1;`n    }`n`n    return;`n}`n
+#include <cstdint>
+#include <cstddef>
+struct _ptiddata { std::uint8_t _reserved_00[0x90]; int _ProcessingThrow; };
+static_assert(offsetof(_ptiddata, _ProcessingThrow) == 0x90);
+extern "C" _ptiddata* __cdecl __getptd(void);
+extern "C" void __cdecl _inconsistency(void);
+extern "C" void __stdcall __CallSettingFrame_12(std::uint32_t, std::uint32_t, int);
+extern "C" void __stdcall FUN_1001cece(void);
+
+void __stdcall FUN_1001cece(void)
+{
+    _ptiddata* p_Var1 = __getptd();
+
+    if (0 < p_Var1->_ProcessingThrow)
+    {
+        p_Var1 = __getptd();
+        p_Var1->_ProcessingThrow = p_Var1->_ProcessingThrow + -1;
+    }
+
+    return;
+}

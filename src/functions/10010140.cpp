@@ -1,1 +1,30 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __stdcall FUN_10010140(`n    unsigned int,`n    unsigned int,`n    unsigned int,`n    unsigned int)`n{`n    __asm {`n        push ebp`n        mov ebp, esp`n        fld dword ptr [ebp + 14h]`n        sub esp, 10h`n        fstp dword ptr [esp + 0ch]`n        mov eax, 04041c0h`n        fld dword ptr [ebp + 10h]`n        mov ecx, esi`n        fstp dword ptr [esp + 8]`n        fld dword ptr [ebp + 0ch]`n        fstp dword ptr [esp + 4]`n        fld dword ptr [ebp + 8]`n        fstp dword ptr [esp]`n        call eax`n        mov eax, esi`n        pop ebp`n        ret 10h`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __stdcall FUN_10010140(
+    unsigned int,
+    unsigned int,
+    unsigned int,
+    unsigned int)
+{
+    __asm {
+        push ebp
+        mov ebp, esp
+        fld dword ptr [ebp + 14h]
+        sub esp, 10h
+        fstp dword ptr [esp + 0ch]
+        mov eax, 04041c0h
+        fld dword ptr [ebp + 10h]
+        mov ecx, esi
+        fstp dword ptr [esp + 8]
+        fld dword ptr [ebp + 0ch]
+        fstp dword ptr [esp + 4]
+        fld dword ptr [ebp + 8]
+        fstp dword ptr [esp]
+        call eax
+        mov eax, esi
+        pop ebp
+        ret 10h
+    }
+}

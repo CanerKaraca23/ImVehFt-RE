@@ -1,1 +1,22 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void* DAT_1003a318;`n`nextern "C" void* __stdcall DecodePointer(void* Ptr);`n[[noreturn]] void __cdecl terminate(void);`n`nextern "C" void __cdecl _inconsistency(void)`n{`n    using Handler = void (__cdecl*)();`n`n    Handler handler = reinterpret_cast<Handler>(`n        DecodePointer(DAT_1003a318));`n`n    if (handler != nullptr) {`n        (*handler)();`n    }`n`n    terminate();`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void* DAT_1003a318;
+
+extern "C" void* __stdcall DecodePointer(void* Ptr);
+extern "C" [[noreturn]] void __cdecl terminate(void);
+
+extern "C" void __cdecl _inconsistency(void)
+{
+    using Handler = void (__cdecl*)();
+
+    Handler handler = reinterpret_cast<Handler>(
+        DecodePointer(DAT_1003a318));
+
+    if (handler != nullptr) {
+        (*handler)();
+    }
+
+    terminate();
+}

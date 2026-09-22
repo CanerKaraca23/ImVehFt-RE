@@ -1,1 +1,89 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing RawDllMain = std::int32_t(__stdcall*)(`n    std::uint32_t,`n    std::int32_t,`n    std::int32_t);`n`nextern std::int32_t DAT_100399f0;`nextern RawDllMain DAT_10022268;`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`n`nextern "C" std::int32_t __stdcall __CRT_INIT_12(`n    std::uint32_t,`n    std::int32_t,`n    std::int32_t);`n`nextern "C" std::int32_t __stdcall FUN_10001db0(`n    std::uint32_t,`n    std::int32_t);`n`nextern "C" std::int32_t __fastcall ___DllMainCRTStartup(`n    std::int32_t param_1,`n    std::int32_t param_2,`n    std::uint32_t param_3)`n{`n    __SEH_prolog4(0x100282a8u, 0xcu);`n    std::int32_t local_20 = 1;`n`n    if ((param_2 == 0) && (DAT_100399f0 == 0))`n    {`n        local_20 = 0;`n    }`n    else`n    {`n        if ((param_2 == 1) || (param_2 == 2))`n        {`n            if (DAT_10022268 != nullptr)`n            {`n                local_20 = DAT_10022268(`n                    param_3,`n                    param_2,`n                    param_1);`n            }`n`n            if ((local_20 == 0) ||`n                (__CRT_INIT_12(param_3, param_2, param_1) == 0))`n            {`n                local_20 = 0;`n                goto cleanup;`n            }`n        }`n`n        local_20 = FUN_10001db0(param_3, param_2);`n`n        if ((param_2 == 1) && (local_20 == 0))`n        {`n            FUN_10001db0(param_3, 0);`n            __CRT_INIT_12(param_3, 0, param_1);`n`n            if (DAT_10022268 != nullptr)`n            {`n                DAT_10022268(param_3, 0, param_1);`n            }`n        }`n`n        if ((param_2 == 0) || (param_2 == 3))`n        {`n            if (__CRT_INIT_12(param_3, param_2, param_1) == 0)`n            {`n                local_20 = 0;`n            }`n`n            if ((local_20 != 0) && (DAT_10022268 != nullptr))`n            {`n                local_20 = DAT_10022268(`n                    param_3,`n                    param_2,`n                    param_1);`n            }`n        }`n    }`n`ncleanup:`n    __SEH_epilog4();`n    return local_20;`n}`n
+#include <cstdint>
+
+using RawDllMain = std::int32_t(__stdcall*)(
+    std::uint32_t,
+    std::int32_t,
+    std::int32_t);
+
+extern std::int32_t DAT_100399f0;
+extern RawDllMain DAT_10022268;
+
+extern "C" void __cdecl __SEH_prolog4();
+extern "C" void __stdcall __SEH_epilog4();
+
+extern "C" std::int32_t __stdcall __CRT_INIT_12(
+    std::uint32_t,
+    std::int32_t,
+    std::int32_t);
+
+extern "C" std::int32_t __stdcall FUN_10001db0(
+    std::uint32_t,
+    std::int32_t);
+
+extern "C" std::int32_t __fastcall ___DllMainCRTStartup(
+    std::int32_t param_1,
+    std::int32_t param_2,
+    std::uint32_t param_3)
+{
+    __SEH_prolog4();
+
+    std::int32_t local_20 = 1;
+
+    if ((param_2 == 0) && (DAT_100399f0 == 0))
+    {
+        local_20 = 0;
+    }
+    else
+    {
+        if ((param_2 == 1) || (param_2 == 2))
+        {
+            if (DAT_10022268 != nullptr)
+            {
+                local_20 = DAT_10022268(
+                    param_3,
+                    param_2,
+                    param_1);
+            }
+
+            if ((local_20 == 0) ||
+                (__CRT_INIT_12(param_3, param_2, param_1) == 0))
+            {
+                local_20 = 0;
+                goto cleanup;
+            }
+        }
+
+        local_20 = FUN_10001db0(param_3, param_2);
+
+        if ((param_2 == 1) && (local_20 == 0))
+        {
+            FUN_10001db0(param_3, 0);
+            __CRT_INIT_12(param_3, 0, param_1);
+
+            if (DAT_10022268 != nullptr)
+            {
+                DAT_10022268(param_3, 0, param_1);
+            }
+        }
+
+        if ((param_2 == 0) || (param_2 == 3))
+        {
+            if (__CRT_INIT_12(param_3, param_2, param_1) == 0)
+            {
+                local_20 = 0;
+            }
+
+            if ((local_20 != 0) && (DAT_10022268 != nullptr))
+            {
+                local_20 = DAT_10022268(
+                    param_3,
+                    param_2,
+                    param_1);
+            }
+        }
+    }
+
+cleanup:
+    __SEH_epilog4();
+    return local_20;
+}

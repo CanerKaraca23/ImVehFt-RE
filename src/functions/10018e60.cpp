@@ -1,1 +1,8 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <Windows.h>`n`n`n`nextern "C" void __cdecl __global_unwind2(PVOID param_1)`n{`n    RtlUnwind(param_1, (PVOID)0x10018e78, (PEXCEPTION_RECORD)0x0, (PVOID)0x0);`n}`n
+#include <Windows.h>
+
+
+
+extern "C" void __cdecl __global_unwind2(PVOID param_1)
+{
+    RtlUnwind(param_1, (PVOID)0x10018e78, (PEXCEPTION_RECORD)0x0, (PVOID)0x0);
+}

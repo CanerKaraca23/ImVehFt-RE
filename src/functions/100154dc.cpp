@@ -1,1 +1,917 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n#include <cstdio>`n#include <cwchar>`n`nusing errno_t = int;`nusing PVOID = void*;`n`nstruct localeinfo_struct {`n    std::uint8_t opaque[0x100];`n};`n`nstruct crt_file {`n    std::uint8_t opaque_00[0x0c];`n    std::uint32_t flag;`n};`n`nstruct stream_state {`n    std::uint8_t opaque_00[0x24];`n    std::uint8_t flags;`n};`n`nextern "C" void __cdecl FUN_10010b1a(void* self, void* locale);`nextern "C" int __cdecl __fileno(FILE*);`nextern "C" int __cdecl __isleadbyte_l(std::uint32_t, localeinfo_struct*);`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`nextern "C" errno_t __cdecl _wctomb_s(int*, char*, std::size_t, wchar_t);`nextern "C" std::size_t __cdecl _strlen(char*);`nextern "C" int __cdecl __get_printf_count_output();`nextern "C" void* __cdecl __malloc_crt(std::size_t);`nextern "C" void __cdecl _free(void*);`nextern "C" std::uint64_t __stdcall __aulldvrm(`n    std::uint32_t, std::uint32_t, std::uint32_t, std::uint32_t);`nextern "C" PVOID __stdcall DecodePointer(PVOID);`nextern "C" void __fastcall __security_check_cookie(std::uintptr_t);`nextern "C" void __cdecl write_char();`nextern "C" void __cdecl write_string();`n`nextern std::uint8_t DAT_100226f0[];`nextern std::uint8_t DAT_10022710[];`nextern std::uint8_t DAT_10029450;`nextern std::uint8_t* DAT_1003c420[];`n`nextern PVOID PTR_LAB_10029d58;`nextern PVOID PTR_LAB_10029d60;`nextern PVOID PTR_LAB_10029d64;`nextern const wchar_t* PTR_s__null__10029c24;`nextern const wchar_t* PTR_u__null__10029c28;`nextern std::uint32_t extraout_ECX;`n`nextern "C" int __cdecl __output_l(`n    FILE* _File,`n    char* _Format,`n    _locale_t _Locale,`n    char* _ArgList)`n{`n    std::uint8_t local_215 = 0;`n    std::uint32_t local_214 = 0;`n    int local_21c = 0;`n    std::size_t local_224 = 0;`n    int local_228 = 0;`n    std::uint8_t local_230 = 0;`n    int local_234 = 0;`n    int local_238 = 0;`n    int local_23c = 0;`n    std::uint8_t* local_240 = nullptr;`n    FILE* local_244 = _File;`n    int local_248 = 0;`n    int local_24c = 0;`n    wchar_t* local_250 = nullptr;`n    char local_254 = 0;`n    int local_258 = 0;`n    localeinfo_struct local_260;`n    int local_264 = 0;`n    std::uint32_t local_268 = 0;`n    int local_270 = 0;`n    int local_274 = 0;`n    std::uint32_t local_278 = 0;`n    std::uint32_t local_27c = 0;`n    wchar_t local_210[255];`n    std::uint16_t local_11 = 0;`n    char local_22f = 0;`n    wchar_t* local_220 = nullptr;`n    wchar_t* local_22c =`n        reinterpret_cast<wchar_t*>(_ArgList);`n    int function_result = 0;`n`n    const std::uint32_t local_8 =`n        *reinterpret_cast<std::uint32_t*>(0x10029490) ^`n        static_cast<std::uint32_t>(`n            reinterpret_cast<std::uintptr_t>(&local_8));`n`n    FUN_10010b1a(&local_260, _Locale);`n`n    if (local_244 == nullptr)`n        goto failure;`n`n    if ((reinterpret_cast<crt_file*>(local_244)->flag & 0x40u) == 0) {`n        const std::uint32_t file_number =`n            static_cast<std::uint32_t>(__fileno(local_244));`n`n        stream_state* state =`n            (file_number == 0xffffffffu ||`n             file_number == 0xfffffffeu)`n                ? reinterpret_cast<stream_state*>(&DAT_10029450)`n                : reinterpret_cast<stream_state*>(`n                      DAT_1003c420[`n                          static_cast<std::int32_t>(file_number) >> 5] +`n                      static_cast<std::uintptr_t>(`n                          file_number & 0x1f) *`n                          0x40u);`n`n        if ((state->flags & 0x7f) != 0)`n            goto failure;`n`n        state =`n            (file_number == 0xffffffffu ||`n             file_number == 0xfffffffeu)`n                ? reinterpret_cast<stream_state*>(&DAT_10029450)`n                : reinterpret_cast<stream_state*>(`n                      DAT_1003c420[`n                          static_cast<std::int32_t>(file_number) >> 5] +`n                      static_cast<std::uintptr_t>(`n                          file_number & 0x1f) *`n                          0x40u);`n`n        if ((state->flags & 0x80) != 0)`n            goto failure;`n    }`n`n    if (_Format == nullptr)`n        goto failure;`n`n    local_215 = static_cast<std::uint8_t>(*_Format);`n    local_264 = 0;`n    local_228 = 0;`n    local_224 = 0;`n    local_250 = nullptr;`n`nnext_format:`n    if (local_215 == 0 || local_228 < 0) {`n        if (local_254 == '\0') {`n            function_result = local_228;`n            goto function_exit;`n        }`n`n        *reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(local_258) + 0x70) &=`n            0xfffffffdu;`n`n        function_result = local_228;`n        goto function_exit;`n    }`n`n    {`n        std::uint8_t* next =`n            reinterpret_cast<std::uint8_t*>(_Format + 1);`n        std::uint32_t table_index = 0;`n`n        if (static_cast<std::uint8_t>(local_215 - 0x20) < 0x59) {`n            table_index =`n                static_cast<std::uint32_t>(`n                    static_cast<std::int8_t>(`n                        DAT_100226f0[`n                            static_cast<std::int8_t>(local_215)])) &`n                0x0f;`n        }`n`n        local_264 =`n            static_cast<std::int8_t>(`n                DAT_10022710[`n                    table_index * 8u +`n                    static_cast<std::uint32_t>(local_264)]) >>`n            4;`n`n        local_240 = next;`n`n        switch (local_264) {`n        case 0:`nliteral:`n            local_23c = 0;`n`n            if (__isleadbyte_l(local_215, &local_260) != 0) {`n                write_char();`n                local_240 =`n                    reinterpret_cast<std::uint8_t*>(_Format + 2);`n`n                if (*next == 0)`n                    goto failure;`n            }`n`n            write_char();`n            break;`n`n        case 1:`n            local_21c = -1;`n            local_270 = 0;`n            local_248 = 0;`n            local_238 = 0;`n            local_234 = 0;`n            local_214 = 0;`n            local_23c = 0;`n            break;`n`n        case 2:`n            if (local_215 == 0x20)`n                local_214 |= 2;`n            else if (local_215 == 0x23)`n                local_214 |= 0x80;`n            else if (local_215 == 0x2b)`n                local_214 |= 1;`n            else if (local_215 == 0x2d)`n                local_214 |= 4;`n            else if (local_215 == 0x30)`n                local_214 |= 8;`n            break;`n`n        case 3:`n            if (local_215 == 0x2a) {`n                local_22c =`n                    reinterpret_cast<wchar_t*>(_ArgList + 4);`n                local_238 =`n                    *reinterpret_cast<int*>(_ArgList);`n`n                if (local_238 < 0) {`n                    local_214 |= 4;`n                    local_238 = -local_238;`n                }`n            } else {`n                local_238 =`n                    local_238 * 10 - 0x30 +`n                    static_cast<int>(`n                        static_cast<char>(local_215));`n            }`n            break;`n`n        case 4:`n            local_21c = 0;`n            break;`n`n        case 5:`n            if (local_215 == 0x2a) {`n                local_22c =`n                    reinterpret_cast<wchar_t*>(_ArgList + 4);`n                local_21c =`n                    *reinterpret_cast<int*>(_ArgList);`n`n                if (local_21c < 0)`n                    local_21c = -1;`n            } else {`n                local_21c =`n                    local_21c * 10 - 0x30 +`n                    static_cast<int>(`n                        static_cast<char>(local_215));`n            }`n            break;`n`n        case 6:`n            if (local_215 == 'I') {`n                const std::uint8_t c = *next;`n`n                if (c == '6' && _Format[2] == '4') {`n                    local_214 |= 0x8000;`n                    local_240 =`n                        reinterpret_cast<std::uint8_t*>(_Format + 3);`n                } else if (c == '3' && _Format[2] == '2') {`n                    local_214 &= 0xffff7fffu;`n                    local_240 =`n                        reinterpret_cast<std::uint8_t*>(_Format + 3);`n                } else if (c != 'd' && c != 'i' &&`n                           c != 'o' && c != 'u' &&`n                           c != 'x' && c != 'X') {`n                    local_264 = 0;`n                    goto literal;`n                }`n            } else if (local_215 == 'h') {`n                local_214 |= 0x20;`n            } else if (local_215 == 'l') {`n                if (*next == 'l') {`n                    local_214 |= 0x1000;`n                    local_240 =`n                        reinterpret_cast<std::uint8_t*>(_Format + 2);`n                } else {`n                    local_214 |= 0x10;`n                }`n            } else if (local_215 == 'w') {`n                local_214 |= 0x800;`n            }`n            break;`n`n        case 7:`n            if (local_215 == 'd' || local_215 == 'i') {`n                local_214 |= 0x40;`n                local_224 = 10;`n                goto integer_conversion;`n            }`n`n            if (local_215 == 'u') {`n                local_224 = 10;`n                goto integer_conversion;`n            }`n`n            if (local_215 == 'x') {`n                local_24c = 0x27;`n                local_224 = 0x10;`n                goto integer_conversion;`n            }`n`n            if (local_215 == 'X') {`n                local_24c = 7;`n                local_224 = 0x10;`n                goto integer_conversion;`n            }`n`n            if (local_215 == 'p') {`n                local_21c = 8;`n                local_24c = 7;`n                local_224 = 0x10;`n`n                if ((local_214 & 0x80) != 0) {`n                    local_22f =`n                        static_cast<char>(local_24c) + 'Q';`n                    local_230 = 0x30;`n                    local_234 = 2;`n                }`n`n                goto integer_conversion;`n            }`n`n            if (local_215 == 'o') {`n                local_224 = 8;`n`n                if ((local_214 & 0x80) != 0)`n                    local_214 |= 0x200;`n`n                goto integer_conversion;`n            }`n`n            if (local_215 == 'n') {`n                int* output =`n                    *reinterpret_cast<int**>(_ArgList);`n`n                local_22c =`n                    reinterpret_cast<wchar_t*>(_ArgList + 4);`n`n                if (__get_printf_count_output() == 0)`n                    goto failure;`n`n                if ((local_214 & 0x20) == 0)`n                    *output = local_228;`n                else`n                    *reinterpret_cast<std::uint16_t*>(output) =`n                        static_cast<std::uint16_t>(local_228);`n`n                local_248 = 1;`n                break;`n            }`n`n            if (local_215 == 'S') {`n                if ((local_214 & 0x830) == 0)`n                    local_214 |= 0x800;`n                goto string_conversion;`n            }`n`n            if (local_215 == 'A') {`n                local_215 =`n                    static_cast<std::uint8_t>(local_215 + 0x20);`n                local_270 = 1;`n                goto floating_conversion;`n            }`n`n            if (local_215 == 'C') {`n                if ((local_214 & 0x830) == 0)`n                    local_214 |= 0x800;`n                goto character_conversion;`n            }`n`n            if (local_215 == 'E' || local_215 == 'G') {`n                local_215 =`n                    static_cast<std::uint8_t>(local_215 + 0x20);`n                local_270 = 1;`n                goto floating_conversion;`n            }`n`n            if (local_215 == 'Z')`n                goto z_conversion;`n`n            if (local_215 == 'a' ||`n                local_215 == 'e' ||`n                local_215 == 'g')`n                goto floating_conversion;`n`n            if (local_215 == 'c')`n                goto character_conversion;`n`n            if (local_215 == 's')`n                goto string_conversion;`n`n            break;`n`n        default:`n            break;`n        }`n`n        if (local_264 == 7 &&`n            (local_215 == 's' || local_215 == 'S'))`n            goto string_conversion;`n`n        if (local_264 == 7 &&`n            (local_215 == 'c' || local_215 == 'C'))`n            goto character_conversion;`n`n        if (local_264 == 7 &&`n            local_215 == 'Z')`n            goto z_conversion;`n`n        if (local_264 == 7 &&`n            (local_215 == 'a' || local_215 == 'A' ||`n             local_215 == 'e' || local_215 == 'E' ||`n             local_215 == 'g' || local_215 == 'G'))`n            goto floating_conversion;`n`n        goto emit;`n`ncharacter_conversion:`n        if ((local_214 & 0x830) == 0)`n            local_214 |= 0x800;`n`n        local_22c =`n            reinterpret_cast<wchar_t*>(_ArgList + 4);`n`n        if ((local_214 & 0x810) == 0) {`n            reinterpret_cast<char*>(local_210)[0] =`n                static_cast<char>(`n                    *reinterpret_cast<wchar_t*>(_ArgList));`n            local_224 = 1;`n        } else {`n            const errno_t error =`n                _wctomb_s(`n                    reinterpret_cast<int*>(&local_224),`n                    reinterpret_cast<char*>(local_210),`n                    0x200,`n                    *reinterpret_cast<wchar_t*>(_ArgList));`n`n            if (error != 0)`n                local_248 = 1;`n        }`n`n        local_220 = local_210;`n        goto emit;`n`nstring_conversion:`n        if ((local_214 & 0x830) == 0)`n            local_214 |= 0x800;`n`n        {`n            int remaining = local_21c;`n`n            if (remaining == -1)`n                remaining = 0x7fffffff;`n`n            local_22c =`n                reinterpret_cast<wchar_t*>(_ArgList + 4);`n            local_220 =`n                *reinterpret_cast<wchar_t**>(_ArgList);`n`n            if ((local_214 & 0x810) == 0) {`n                if (local_220 == nullptr)`n                    local_220 =`n                        const_cast<wchar_t*>(`n                            PTR_s__null__10029c24);`n`n                wchar_t* cursor = local_220;`n`n                for (; remaining != 0;`n                     --remaining,`n                     cursor = reinterpret_cast<wchar_t*>(`n                         reinterpret_cast<char*>(cursor) + 1)) {`n                    if (*reinterpret_cast<char*>(cursor) == '\0')`n                        break;`n                }`n`n                local_224 =`n                    reinterpret_cast<char*>(cursor) -`n                    reinterpret_cast<char*>(local_220);`n            } else {`n                if (local_220 == nullptr)`n                    local_220 =`n                        const_cast<wchar_t*>(`n                            PTR_u__null__10029c28);`n`n                local_23c = 1;`n                wchar_t* cursor = local_220;`n`n                for (; remaining != 0; --remaining, ++cursor) {`n                    if (*cursor == L'\0')`n                        break;`n                }`n`n                local_224 =`n                    (reinterpret_cast<char*>(cursor) -`n                     reinterpret_cast<char*>(local_220)) >>`n                    1;`n            }`n        }`n`n        goto emit;`n`nz_conversion:`n        {`n            std::int16_t* descriptor =`n                *reinterpret_cast<std::int16_t**>(_ArgList);`n`n            local_22c =`n                reinterpret_cast<wchar_t*>(_ArgList + 4);`n            local_220 =`n                const_cast<wchar_t*>(`n                    PTR_s__null__10029c24);`n`n            if (descriptor == nullptr ||`n                *reinterpret_cast<wchar_t**>(`n                    descriptor + 2) == nullptr) {`n                local_224 =`n                    _strlen(`n                        reinterpret_cast<char*>(local_220));`n                goto emit;`n            }`n`n            local_224 =`n                static_cast<std::size_t>(*descriptor);`n            local_220 =`n                *reinterpret_cast<wchar_t**>(`n                    descriptor + 2);`n`n            if ((local_214 & 0x800) == 0) {`n                local_23c = 0;`n            } else {`n                local_224 =`n                    static_cast<int>(local_224) / 2;`n                local_23c = 1;`n            }`n        }`n`n        goto emit;`n`nfloating_conversion:`n        local_214 |= 0x40;`n        local_268 = 0x200;`n`n        {`n            wchar_t* output = local_210;`n            std::uint32_t capacity = local_268;`n`n            if (local_21c < 0) {`n                local_21c = 6;`n            } else if (local_21c == 0) {`n                if (local_215 == 'g')`n                    local_21c = 1;`n            } else {`n                if (local_21c > 0x200)`n                    local_21c = 0x200;`n`n                if (local_21c > 0xa3) {`n                    capacity =`n                        static_cast<std::uint32_t>(`n                            local_21c + 0x15d);`n                    local_220 = local_210;`n                    local_250 =`n                        static_cast<wchar_t*>(`n                            __malloc_crt(capacity));`n                    output = local_250;`n`n                    if (local_250 == nullptr) {`n                        local_21c = 0xa3;`n                        output = local_210;`n                        capacity = local_268;`n                    }`n                }`n            }`n`n            using formatter_type = void(__cdecl*)(`n                void*, wchar_t*, std::uint32_t, int, int, int,`n                localeinfo_struct*);`n`n            auto formatter =`n                reinterpret_cast<formatter_type>(`n                    DecodePointer(PTR_LAB_10029d58));`n`n            local_27c =`n                *reinterpret_cast<std::uint32_t*>(_ArgList);`n            local_278 =`n                *reinterpret_cast<std::uint32_t*>(_ArgList + 4);`n            local_22c =`n                reinterpret_cast<wchar_t*>(_ArgList + 8);`n`n            formatter(`n                &local_27c,`n                output,`n                capacity,`n                static_cast<int>(`n                    static_cast<char>(local_215)),`n                local_21c,`n                local_270,`n                &local_260);`n`n            if ((local_214 & 0x80) != 0 &&`n                local_21c == 0) {`n                using trim_type =`n                    void(__cdecl*)(wchar_t*, localeinfo_struct*);`n`n                auto trim =`n                    reinterpret_cast<trim_type>(`n                        DecodePointer(PTR_LAB_10029d64));`n`n                trim(output, &local_260);`n            }`n`n            if (local_215 == 'g' &&`n                (local_214 & 0x80) == 0) {`n                using trim_type =`n                    void(__cdecl*)(wchar_t*, localeinfo_struct*);`n`n                auto trim =`n                    reinterpret_cast<trim_type>(`n                        DecodePointer(PTR_LAB_10029d60));`n`n                trim(output, &local_260);`n            }`n`n            local_220 = output;`n`n            if (*output == L'-') {`n                local_214 |= 0x100;`n                local_220 = output + 1;`n            }`n`n            local_224 =`n                _strlen(reinterpret_cast<char*>(local_220));`n        }`n`n        goto emit;`n`ninteger_conversion:`n        {`n            std::uint32_t low;`n            std::uint32_t high;`n`n            if ((local_214 & 0x8000) == 0 &&`n                (local_214 & 0x1000) == 0) {`n                local_22c =`n                    reinterpret_cast<wchar_t*>(_ArgList + 4);`n`n                if ((local_214 & 0x20) == 0) {`n                    low =`n                        *reinterpret_cast<std::uint32_t*>(`n                            _ArgList);`n`n                    if ((local_214 & 0x40) == 0)`n                        high = 0;`n                    else`n                        high =`n                            static_cast<std::uint32_t>(`n                                *reinterpret_cast<std::int32_t*>(`n                                    _ArgList) >>`n                                0x1f);`n                } else {`n                    if ((local_214 & 0x40) == 0)`n                        low =`n                            static_cast<std::uint32_t>(`n                                *reinterpret_cast<std::uint16_t*>(`n                                    _ArgList));`n                    else`n                        low =`n                            static_cast<std::uint32_t>(`n                                *reinterpret_cast<std::int16_t*>(`n                                    _ArgList));`n`n                    high =`n                        static_cast<std::uint32_t>(`n                            static_cast<std::int32_t>(low) >>`n                            0x1f);`n                }`n            } else {`n                low =`n                    *reinterpret_cast<std::uint32_t*>(`n                        _ArgList);`n                high =`n                    *reinterpret_cast<std::uint32_t*>(`n                        _ArgList + 4);`n                local_22c =`n                    reinterpret_cast<wchar_t*>(_ArgList + 8);`n            }`n`n            if ((local_214 & 0x40) != 0 &&`n                static_cast<std::int32_t>(high) < 1 &&`n                static_cast<std::int32_t>(high) < 0) {`n                const bool borrow = low != 0;`n                low = 0U - low;`n                high =`n                    0U - (high +`n                          static_cast<std::uint32_t>(borrow));`n                local_214 |= 0x100;`n            }`n`n            const std::uint64_t value =`n                (static_cast<std::uint64_t>(high) << 32) |`n                low;`n`n            if ((local_214 & 0x9000) == 0)`n                high = 0;`n`n            if (local_21c < 0) {`n                local_21c = 1;`n            } else {`n                local_214 &= 0xfffffff7u;`n`n                if (local_21c > 0x200)`n                    local_21c = 0x200;`n            }`n`n            if (low == 0 && high == 0)`n                local_234 = 0;`n`n            char* digit =`n                reinterpret_cast<char*>(&local_11);`n`n            std::uint64_t current_value = value;`n            std::uint32_t divisor_high = high;`n            int iVar9 = 0;`n`n            for (;;) {`n                const std::uint32_t quotient_high =`n                    divisor_high;`n`n                iVar9 = local_21c - 1;`n`n                if (local_21c < 1 &&`n                    static_cast<std::uint32_t>(`n                        current_value) == 0 &&`n                    quotient_high == 0)`n                    break;`n`n                local_21c = iVar9;`n`n                current_value =`n                    __aulldvrm(`n                        static_cast<std::uint32_t>(`n                            current_value),`n                        quotient_high,`n                        static_cast<std::uint32_t>(`n                            local_224),`n                        static_cast<std::uint32_t>(`n                            static_cast<std::int32_t>(`n                                local_224) >>`n                            0x1f));`n`n                iVar9 =`n                    static_cast<int>(extraout_ECX) + 0x30;`n`n                int output_digit = iVar9;`n`n                if (0x39 < output_digit)`n                    output_digit += local_24c;`n`n                *digit =`n                    static_cast<char>(output_digit);`n                --digit;`n`n                divisor_high =`n                    static_cast<std::uint32_t>(`n                        current_value >> 32);`n                local_268 = quotient_high;`n            }`n`n            local_224 =`n                reinterpret_cast<char*>(&local_11) - digit;`n            local_220 =`n                reinterpret_cast<wchar_t*>(digit + 1);`n            local_21c = iVar9;`n`n            if ((local_214 & 0x200) != 0 &&`n                (local_224 == 0 ||`n                 *reinterpret_cast<char*>(local_220) != '0')) {`n                *digit = '0';`n                local_224 =`n                    reinterpret_cast<char*>(&local_11) -`n                    digit + 1;`n                local_220 =`n                    reinterpret_cast<wchar_t*>(digit);`n            }`n        }`n`nemit:`n        if (local_248 == 0) {`n            if ((local_214 & 0x40) != 0) {`n                if ((local_214 & 0x100) == 0) {`n                    if ((local_214 & 1) == 0) {`n                        if ((local_214 & 2) == 0)`n                            goto no_sign;`n`n                        local_230 = 0x20;`n                    } else {`n                        local_230 = 0x2b;`n                    }`n                } else {`n                    local_230 = 0x2d;`n                }`n`n                local_234 = 1;`n            }`n`nno_sign:`n            {`n                std::uint32_t padding =`n                    (local_238 -`n                     static_cast<int>(local_224)) -`n                    local_234;`n`n                local_268 = padding;`n`n                if ((local_214 & 0x0c) == 0) {`n                    do {`n                        if (static_cast<int>(padding) < 1)`n                            break;`n`n                        padding--;`n                        write_char();`n                    } while (local_228 != -1);`n                }`n`n                write_string();`n`n                if ((local_214 & 8) != 0 &&`n                    (local_214 & 4) == 0) {`n                    do {`n                        if (static_cast<int>(local_268) < 1)`n                            break;`n`n                        local_268--;`n                        write_char();`n                    } while (local_228 != -1);`n                }`n`n                if (local_23c == 0 ||`n                    static_cast<int>(local_224) < 1) {`n                    write_string();`n                } else {`n                    std::size_t count = local_224;`n                    wchar_t* cursor = local_220;`n`n                    do {`n                        count--;`n`n                        const errno_t error =`n                            _wctomb_s(`n                                &local_274,`n                                reinterpret_cast<char*>(`n                                    reinterpret_cast<std::uint8_t*>(`n                                        &local_11) + 1),`n                                6,`n                                *cursor);`n`n                        if (error != 0 ||`n                            local_274 == 0) {`n                            local_228 = -1;`n                            break;`n                        }`n`n                        write_string();`n                        cursor++;`n                    } while (count != 0);`n                }`n`n                if (local_228 >= 0 &&`n                    (local_214 & 4) != 0) {`n                    do {`n                        if (static_cast<int>(local_268) < 1)`n                            break;`n`n                        write_char();`n                        local_268--;`n                    } while (local_228 != -1);`n                }`n            }`n        }`n    }`n`n    if (local_250 != nullptr) {`n        _free(local_250);`n        local_250 = nullptr;`n    }`n`n    local_215 = *local_240;`n    _Format =`n        reinterpret_cast<char*>(local_240);`n    _ArgList =`n        reinterpret_cast<char*>(local_22c);`n`n    goto next_format;`n`nfailure:`n    *__errno() = 0x16;`n    FUN_1001189f();`n`n    if (local_254 != '\0') {`n        *reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(local_258) + 0x70) &=`n            0xfffffffdu;`n    }`n`n    function_result = -1;`n`nfunction_exit:`n    __security_check_cookie(local_8);`n    return function_result;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <cstdio>
+#include <cwchar>
+
+using errno_t = int;
+using PVOID = void*;
+
+struct localeinfo_struct {
+    std::uint8_t opaque[0x100];
+};
+
+struct crt_file {
+    std::uint8_t opaque_00[0x0c];
+    std::uint32_t flag;
+};
+
+struct stream_state {
+    std::uint8_t opaque_00[0x24];
+    std::uint8_t flags;
+};
+
+extern "C" void __cdecl _LocaleUpdate(void*, _locale_t);
+extern "C" int __cdecl __fileno(FILE*);
+extern "C" int __cdecl __isleadbyte_l(std::uint32_t, localeinfo_struct*);
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" errno_t __cdecl _wctomb_s(int*, char*, std::size_t, wchar_t);
+extern "C" std::size_t __cdecl _strlen(char*);
+extern "C" int __cdecl __get_printf_count_output();
+extern "C" void* __cdecl __malloc_crt(std::size_t);
+extern "C" void __cdecl _free(void*);
+extern "C" std::uint64_t __cdecl __aulldvrm(
+    std::uint32_t, std::uint32_t, std::uint32_t, std::uint32_t);
+extern "C" PVOID __stdcall DecodePointer(PVOID);
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
+extern "C" void __cdecl write_char();
+extern "C" void __cdecl write_string();
+
+extern std::uint8_t DAT_100226f0[];
+extern std::uint8_t DAT_10022710[];
+extern std::uint8_t DAT_10029450;
+extern std::uint8_t* DAT_1003c420[];
+
+extern PVOID PTR_LAB_10029d58;
+extern PVOID PTR_LAB_10029d60;
+extern PVOID PTR_LAB_10029d64;
+extern const wchar_t* PTR_s__null__10029c24;
+extern const wchar_t* PTR_u__null__10029c28;
+extern std::uint32_t extraout_ECX;
+
+int __cdecl __output_l(
+    FILE* _File,
+    char* _Format,
+    _locale_t _Locale,
+    char* _ArgList)
+{
+    std::uint8_t local_215 = 0;
+    std::uint32_t local_214 = 0;
+    int local_21c = 0;
+    std::size_t local_224 = 0;
+    int local_228 = 0;
+    std::uint8_t local_230 = 0;
+    int local_234 = 0;
+    int local_238 = 0;
+    int local_23c = 0;
+    std::uint8_t* local_240 = nullptr;
+    FILE* local_244 = _File;
+    int local_248 = 0;
+    int local_24c = 0;
+    wchar_t* local_250 = nullptr;
+    char local_254 = 0;
+    int local_258 = 0;
+    localeinfo_struct local_260{};
+    int local_264 = 0;
+    std::uint32_t local_268 = 0;
+    int local_270 = 0;
+    int local_274 = 0;
+    std::uint32_t local_278 = 0;
+    std::uint32_t local_27c = 0;
+    wchar_t local_210[255]{};
+    std::uint16_t local_11 = 0;
+    char local_22f = 0;
+    wchar_t* local_220 = nullptr;
+    wchar_t* local_22c =
+        reinterpret_cast<wchar_t*>(_ArgList);
+    int function_result = 0;
+
+    const std::uint32_t local_8 =
+        *reinterpret_cast<std::uint32_t*>(0x10029490) ^
+        static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(&local_8));
+
+    _LocaleUpdate(&local_260, _Locale);
+
+    if (local_244 == nullptr)
+        goto failure;
+
+    if ((reinterpret_cast<crt_file*>(local_244)->flag & 0x40u) == 0) {
+        const std::uint32_t file_number =
+            static_cast<std::uint32_t>(__fileno(local_244));
+
+        stream_state* state =
+            (file_number == 0xffffffffu ||
+             file_number == 0xfffffffeu)
+                ? reinterpret_cast<stream_state*>(&DAT_10029450)
+                : reinterpret_cast<stream_state*>(
+                      DAT_1003c420[
+                          static_cast<std::int32_t>(file_number) >> 5] +
+                      static_cast<std::uintptr_t>(
+                          file_number & 0x1f) *
+                          0x40u);
+
+        if ((state->flags & 0x7f) != 0)
+            goto failure;
+
+        state =
+            (file_number == 0xffffffffu ||
+             file_number == 0xfffffffeu)
+                ? reinterpret_cast<stream_state*>(&DAT_10029450)
+                : reinterpret_cast<stream_state*>(
+                      DAT_1003c420[
+                          static_cast<std::int32_t>(file_number) >> 5] +
+                      static_cast<std::uintptr_t>(
+                          file_number & 0x1f) *
+                          0x40u);
+
+        if ((state->flags & 0x80) != 0)
+            goto failure;
+    }
+
+    if (_Format == nullptr)
+        goto failure;
+
+    local_215 = static_cast<std::uint8_t>(*_Format);
+    local_264 = 0;
+    local_228 = 0;
+    local_224 = 0;
+    local_250 = nullptr;
+
+next_format:
+    if (local_215 == 0 || local_228 < 0) {
+        if (local_254 == '\0') {
+            function_result = local_228;
+            goto function_exit;
+        }
+
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(local_258) + 0x70) &=
+            0xfffffffdu;
+
+        function_result = local_228;
+        goto function_exit;
+    }
+
+    {
+        std::uint8_t* next =
+            reinterpret_cast<std::uint8_t*>(_Format + 1);
+        std::uint32_t table_index = 0;
+
+        if (static_cast<std::uint8_t>(local_215 - 0x20) < 0x59) {
+            table_index =
+                static_cast<std::uint32_t>(
+                    static_cast<std::int8_t>(
+                        DAT_100226f0[
+                            static_cast<std::int8_t>(local_215)])) &
+                0x0f;
+        }
+
+        local_264 =
+            static_cast<std::int8_t>(
+                DAT_10022710[
+                    table_index * 8u +
+                    static_cast<std::uint32_t>(local_264)]) >>
+            4;
+
+        local_240 = next;
+
+        switch (local_264) {
+        case 0:
+literal:
+            local_23c = 0;
+
+            if (__isleadbyte_l(local_215, &local_260) != 0) {
+                write_char();
+                local_240 =
+                    reinterpret_cast<std::uint8_t*>(_Format + 2);
+
+                if (*next == 0)
+                    goto failure;
+            }
+
+            write_char();
+            break;
+
+        case 1:
+            local_21c = -1;
+            local_270 = 0;
+            local_248 = 0;
+            local_238 = 0;
+            local_234 = 0;
+            local_214 = 0;
+            local_23c = 0;
+            break;
+
+        case 2:
+            if (local_215 == 0x20)
+                local_214 |= 2;
+            else if (local_215 == 0x23)
+                local_214 |= 0x80;
+            else if (local_215 == 0x2b)
+                local_214 |= 1;
+            else if (local_215 == 0x2d)
+                local_214 |= 4;
+            else if (local_215 == 0x30)
+                local_214 |= 8;
+            break;
+
+        case 3:
+            if (local_215 == 0x2a) {
+                local_22c =
+                    reinterpret_cast<wchar_t*>(_ArgList + 4);
+                local_238 =
+                    *reinterpret_cast<int*>(_ArgList);
+
+                if (local_238 < 0) {
+                    local_214 |= 4;
+                    local_238 = -local_238;
+                }
+            } else {
+                local_238 =
+                    local_238 * 10 - 0x30 +
+                    static_cast<int>(
+                        static_cast<char>(local_215));
+            }
+            break;
+
+        case 4:
+            local_21c = 0;
+            break;
+
+        case 5:
+            if (local_215 == 0x2a) {
+                local_22c =
+                    reinterpret_cast<wchar_t*>(_ArgList + 4);
+                local_21c =
+                    *reinterpret_cast<int*>(_ArgList);
+
+                if (local_21c < 0)
+                    local_21c = -1;
+            } else {
+                local_21c =
+                    local_21c * 10 - 0x30 +
+                    static_cast<int>(
+                        static_cast<char>(local_215));
+            }
+            break;
+
+        case 6:
+            if (local_215 == 'I') {
+                const std::uint8_t c = *next;
+
+                if (c == '6' && _Format[2] == '4') {
+                    local_214 |= 0x8000;
+                    local_240 =
+                        reinterpret_cast<std::uint8_t*>(_Format + 3);
+                } else if (c == '3' && _Format[2] == '2') {
+                    local_214 &= 0xffff7fffu;
+                    local_240 =
+                        reinterpret_cast<std::uint8_t*>(_Format + 3);
+                } else if (c != 'd' && c != 'i' &&
+                           c != 'o' && c != 'u' &&
+                           c != 'x' && c != 'X') {
+                    local_264 = 0;
+                    goto literal;
+                }
+            } else if (local_215 == 'h') {
+                local_214 |= 0x20;
+            } else if (local_215 == 'l') {
+                if (*next == 'l') {
+                    local_214 |= 0x1000;
+                    local_240 =
+                        reinterpret_cast<std::uint8_t*>(_Format + 2);
+                } else {
+                    local_214 |= 0x10;
+                }
+            } else if (local_215 == 'w') {
+                local_214 |= 0x800;
+            }
+            break;
+
+        case 7:
+            if (local_215 == 'd' || local_215 == 'i') {
+                local_214 |= 0x40;
+                local_224 = 10;
+                goto integer_conversion;
+            }
+
+            if (local_215 == 'u') {
+                local_224 = 10;
+                goto integer_conversion;
+            }
+
+            if (local_215 == 'x') {
+                local_24c = 0x27;
+                local_224 = 0x10;
+                goto integer_conversion;
+            }
+
+            if (local_215 == 'X') {
+                local_24c = 7;
+                local_224 = 0x10;
+                goto integer_conversion;
+            }
+
+            if (local_215 == 'p') {
+                local_21c = 8;
+                local_24c = 7;
+                local_224 = 0x10;
+
+                if ((local_214 & 0x80) != 0) {
+                    local_22f =
+                        static_cast<char>(local_24c) + 'Q';
+                    local_230 = 0x30;
+                    local_234 = 2;
+                }
+
+                goto integer_conversion;
+            }
+
+            if (local_215 == 'o') {
+                local_224 = 8;
+
+                if ((local_214 & 0x80) != 0)
+                    local_214 |= 0x200;
+
+                goto integer_conversion;
+            }
+
+            if (local_215 == 'n') {
+                int* output =
+                    *reinterpret_cast<int**>(_ArgList);
+
+                local_22c =
+                    reinterpret_cast<wchar_t*>(_ArgList + 4);
+
+                if (__get_printf_count_output() == 0)
+                    goto failure;
+
+                if ((local_214 & 0x20) == 0)
+                    *output = local_228;
+                else
+                    *reinterpret_cast<std::uint16_t*>(output) =
+                        static_cast<std::uint16_t>(local_228);
+
+                local_248 = 1;
+                break;
+            }
+
+            if (local_215 == 'S') {
+                if ((local_214 & 0x830) == 0)
+                    local_214 |= 0x800;
+                goto string_conversion;
+            }
+
+            if (local_215 == 'A') {
+                local_215 =
+                    static_cast<std::uint8_t>(local_215 + 0x20);
+                local_270 = 1;
+                goto floating_conversion;
+            }
+
+            if (local_215 == 'C') {
+                if ((local_214 & 0x830) == 0)
+                    local_214 |= 0x800;
+                goto character_conversion;
+            }
+
+            if (local_215 == 'E' || local_215 == 'G') {
+                local_215 =
+                    static_cast<std::uint8_t>(local_215 + 0x20);
+                local_270 = 1;
+                goto floating_conversion;
+            }
+
+            if (local_215 == 'Z')
+                goto z_conversion;
+
+            if (local_215 == 'a' ||
+                local_215 == 'e' ||
+                local_215 == 'g')
+                goto floating_conversion;
+
+            if (local_215 == 'c')
+                goto character_conversion;
+
+            if (local_215 == 's')
+                goto string_conversion;
+
+            break;
+
+        default:
+            break;
+        }
+
+        if (local_264 == 7 &&
+            (local_215 == 's' || local_215 == 'S'))
+            goto string_conversion;
+
+        if (local_264 == 7 &&
+            (local_215 == 'c' || local_215 == 'C'))
+            goto character_conversion;
+
+        if (local_264 == 7 &&
+            local_215 == 'Z')
+            goto z_conversion;
+
+        if (local_264 == 7 &&
+            (local_215 == 'a' || local_215 == 'A' ||
+             local_215 == 'e' || local_215 == 'E' ||
+             local_215 == 'g' || local_215 == 'G'))
+            goto floating_conversion;
+
+        goto emit;
+
+character_conversion:
+        if ((local_214 & 0x830) == 0)
+            local_214 |= 0x800;
+
+        local_22c =
+            reinterpret_cast<wchar_t*>(_ArgList + 4);
+
+        if ((local_214 & 0x810) == 0) {
+            reinterpret_cast<char*>(local_210)[0] =
+                static_cast<char>(
+                    *reinterpret_cast<wchar_t*>(_ArgList));
+            local_224 = 1;
+        } else {
+            const errno_t error =
+                _wctomb_s(
+                    reinterpret_cast<int*>(&local_224),
+                    reinterpret_cast<char*>(local_210),
+                    0x200,
+                    *reinterpret_cast<wchar_t*>(_ArgList));
+
+            if (error != 0)
+                local_248 = 1;
+        }
+
+        local_220 = local_210;
+        goto emit;
+
+string_conversion:
+        if ((local_214 & 0x830) == 0)
+            local_214 |= 0x800;
+
+        {
+            int remaining = local_21c;
+
+            if (remaining == -1)
+                remaining = 0x7fffffff;
+
+            local_22c =
+                reinterpret_cast<wchar_t*>(_ArgList + 4);
+            local_220 =
+                *reinterpret_cast<wchar_t**>(_ArgList);
+
+            if ((local_214 & 0x810) == 0) {
+                if (local_220 == nullptr)
+                    local_220 =
+                        const_cast<wchar_t*>(
+                            PTR_s__null__10029c24);
+
+                wchar_t* cursor = local_220;
+
+                for (; remaining != 0;
+                     --remaining,
+                     cursor = reinterpret_cast<wchar_t*>(
+                         reinterpret_cast<char*>(cursor) + 1)) {
+                    if (*reinterpret_cast<char*>(cursor) == '\0')
+                        break;
+                }
+
+                local_224 =
+                    reinterpret_cast<char*>(cursor) -
+                    reinterpret_cast<char*>(local_220);
+            } else {
+                if (local_220 == nullptr)
+                    local_220 =
+                        const_cast<wchar_t*>(
+                            PTR_u__null__10029c28);
+
+                local_23c = 1;
+                wchar_t* cursor = local_220;
+
+                for (; remaining != 0; --remaining, ++cursor) {
+                    if (*cursor == L'\0')
+                        break;
+                }
+
+                local_224 =
+                    (reinterpret_cast<char*>(cursor) -
+                     reinterpret_cast<char*>(local_220)) >>
+                    1;
+            }
+        }
+
+        goto emit;
+
+z_conversion:
+        {
+            std::int16_t* descriptor =
+                *reinterpret_cast<std::int16_t**>(_ArgList);
+
+            local_22c =
+                reinterpret_cast<wchar_t*>(_ArgList + 4);
+            local_220 =
+                const_cast<wchar_t*>(
+                    PTR_s__null__10029c24);
+
+            if (descriptor == nullptr ||
+                *reinterpret_cast<wchar_t**>(
+                    descriptor + 2) == nullptr) {
+                local_224 =
+                    _strlen(
+                        reinterpret_cast<char*>(local_220));
+                goto emit;
+            }
+
+            local_224 =
+                static_cast<std::size_t>(*descriptor);
+            local_220 =
+                *reinterpret_cast<wchar_t**>(
+                    descriptor + 2);
+
+            if ((local_214 & 0x800) == 0) {
+                local_23c = 0;
+            } else {
+                local_224 =
+                    static_cast<int>(local_224) / 2;
+                local_23c = 1;
+            }
+        }
+
+        goto emit;
+
+floating_conversion:
+        local_214 |= 0x40;
+        local_268 = 0x200;
+
+        {
+            wchar_t* output = local_210;
+            std::uint32_t capacity = local_268;
+
+            if (local_21c < 0) {
+                local_21c = 6;
+            } else if (local_21c == 0) {
+                if (local_215 == 'g')
+                    local_21c = 1;
+            } else {
+                if (local_21c > 0x200)
+                    local_21c = 0x200;
+
+                if (local_21c > 0xa3) {
+                    capacity =
+                        static_cast<std::uint32_t>(
+                            local_21c + 0x15d);
+                    local_220 = local_210;
+                    local_250 =
+                        static_cast<wchar_t*>(
+                            __malloc_crt(capacity));
+                    output = local_250;
+
+                    if (local_250 == nullptr) {
+                        local_21c = 0xa3;
+                        output = local_210;
+                        capacity = local_268;
+                    }
+                }
+            }
+
+            using formatter_type = void(__cdecl*)(
+                void*, wchar_t*, std::uint32_t, int, int, int,
+                localeinfo_struct*);
+
+            auto formatter =
+                reinterpret_cast<formatter_type>(
+                    DecodePointer(PTR_LAB_10029d58));
+
+            local_27c =
+                *reinterpret_cast<std::uint32_t*>(_ArgList);
+            local_278 =
+                *reinterpret_cast<std::uint32_t*>(_ArgList + 4);
+            local_22c =
+                reinterpret_cast<wchar_t*>(_ArgList + 8);
+
+            formatter(
+                &local_27c,
+                output,
+                capacity,
+                static_cast<int>(
+                    static_cast<char>(local_215)),
+                local_21c,
+                local_270,
+                &local_260);
+
+            if ((local_214 & 0x80) != 0 &&
+                local_21c == 0) {
+                using trim_type =
+                    void(__cdecl*)(wchar_t*, localeinfo_struct*);
+
+                auto trim =
+                    reinterpret_cast<trim_type>(
+                        DecodePointer(PTR_LAB_10029d64));
+
+                trim(output, &local_260);
+            }
+
+            if (local_215 == 'g' &&
+                (local_214 & 0x80) == 0) {
+                using trim_type =
+                    void(__cdecl*)(wchar_t*, localeinfo_struct*);
+
+                auto trim =
+                    reinterpret_cast<trim_type>(
+                        DecodePointer(PTR_LAB_10029d60));
+
+                trim(output, &local_260);
+            }
+
+            local_220 = output;
+
+            if (*output == L'-') {
+                local_214 |= 0x100;
+                local_220 = output + 1;
+            }
+
+            local_224 =
+                _strlen(reinterpret_cast<char*>(local_220));
+        }
+
+        goto emit;
+
+integer_conversion:
+        {
+            std::uint32_t low;
+            std::uint32_t high;
+
+            if ((local_214 & 0x8000) == 0 &&
+                (local_214 & 0x1000) == 0) {
+                local_22c =
+                    reinterpret_cast<wchar_t*>(_ArgList + 4);
+
+                if ((local_214 & 0x20) == 0) {
+                    low =
+                        *reinterpret_cast<std::uint32_t*>(
+                            _ArgList);
+
+                    if ((local_214 & 0x40) == 0)
+                        high = 0;
+                    else
+                        high =
+                            static_cast<std::uint32_t>(
+                                *reinterpret_cast<std::int32_t*>(
+                                    _ArgList) >>
+                                0x1f);
+                } else {
+                    if ((local_214 & 0x40) == 0)
+                        low =
+                            static_cast<std::uint32_t>(
+                                *reinterpret_cast<std::uint16_t*>(
+                                    _ArgList));
+                    else
+                        low =
+                            static_cast<std::uint32_t>(
+                                *reinterpret_cast<std::int16_t*>(
+                                    _ArgList));
+
+                    high =
+                        static_cast<std::uint32_t>(
+                            static_cast<std::int32_t>(low) >>
+                            0x1f);
+                }
+            } else {
+                low =
+                    *reinterpret_cast<std::uint32_t*>(
+                        _ArgList);
+                high =
+                    *reinterpret_cast<std::uint32_t*>(
+                        _ArgList + 4);
+                local_22c =
+                    reinterpret_cast<wchar_t*>(_ArgList + 8);
+            }
+
+            if ((local_214 & 0x40) != 0 &&
+                static_cast<std::int32_t>(high) < 1 &&
+                static_cast<std::int32_t>(high) < 0) {
+                const bool borrow = low != 0;
+                low = 0U - low;
+                high =
+                    0U - (high +
+                          static_cast<std::uint32_t>(borrow));
+                local_214 |= 0x100;
+            }
+
+            const std::uint64_t value =
+                (static_cast<std::uint64_t>(high) << 32) |
+                low;
+
+            if ((local_214 & 0x9000) == 0)
+                high = 0;
+
+            if (local_21c < 0) {
+                local_21c = 1;
+            } else {
+                local_214 &= 0xfffffff7u;
+
+                if (local_21c > 0x200)
+                    local_21c = 0x200;
+            }
+
+            if (low == 0 && high == 0)
+                local_234 = 0;
+
+            char* digit =
+                reinterpret_cast<char*>(&local_11);
+
+            std::uint64_t current_value = value;
+            std::uint32_t divisor_high = high;
+            int iVar9 = 0;
+
+            for (;;) {
+                const std::uint32_t quotient_high =
+                    divisor_high;
+
+                iVar9 = local_21c - 1;
+
+                if (local_21c < 1 &&
+                    static_cast<std::uint32_t>(
+                        current_value) == 0 &&
+                    quotient_high == 0)
+                    break;
+
+                local_21c = iVar9;
+
+                current_value =
+                    __aulldvrm(
+                        static_cast<std::uint32_t>(
+                            current_value),
+                        quotient_high,
+                        static_cast<std::uint32_t>(
+                            local_224),
+                        static_cast<std::uint32_t>(
+                            static_cast<std::int32_t>(
+                                local_224) >>
+                            0x1f));
+
+                iVar9 =
+                    static_cast<int>(extraout_ECX) + 0x30;
+
+                int output_digit = iVar9;
+
+                if (0x39 < output_digit)
+                    output_digit += local_24c;
+
+                *digit =
+                    static_cast<char>(output_digit);
+                --digit;
+
+                divisor_high =
+                    static_cast<std::uint32_t>(
+                        current_value >> 32);
+                local_268 = quotient_high;
+            }
+
+            local_224 =
+                reinterpret_cast<char*>(&local_11) - digit;
+            local_220 =
+                reinterpret_cast<wchar_t*>(digit + 1);
+            local_21c = iVar9;
+
+            if ((local_214 & 0x200) != 0 &&
+                (local_224 == 0 ||
+                 *reinterpret_cast<char*>(local_220) != '0')) {
+                *digit = '0';
+                local_224 =
+                    reinterpret_cast<char*>(&local_11) -
+                    digit + 1;
+                local_220 =
+                    reinterpret_cast<wchar_t*>(digit);
+            }
+        }
+
+emit:
+        if (local_248 == 0) {
+            if ((local_214 & 0x40) != 0) {
+                if ((local_214 & 0x100) == 0) {
+                    if ((local_214 & 1) == 0) {
+                        if ((local_214 & 2) == 0)
+                            goto no_sign;
+
+                        local_230 = 0x20;
+                    } else {
+                        local_230 = 0x2b;
+                    }
+                } else {
+                    local_230 = 0x2d;
+                }
+
+                local_234 = 1;
+            }
+
+no_sign:
+            {
+                std::uint32_t padding =
+                    (local_238 -
+                     static_cast<int>(local_224)) -
+                    local_234;
+
+                local_268 = padding;
+
+                if ((local_214 & 0x0c) == 0) {
+                    do {
+                        if (static_cast<int>(padding) < 1)
+                            break;
+
+                        padding--;
+                        write_char();
+                    } while (local_228 != -1);
+                }
+
+                write_string();
+
+                if ((local_214 & 8) != 0 &&
+                    (local_214 & 4) == 0) {
+                    do {
+                        if (static_cast<int>(local_268) < 1)
+                            break;
+
+                        local_268--;
+                        write_char();
+                    } while (local_228 != -1);
+                }
+
+                if (local_23c == 0 ||
+                    static_cast<int>(local_224) < 1) {
+                    write_string();
+                } else {
+                    std::size_t count = local_224;
+                    wchar_t* cursor = local_220;
+
+                    do {
+                        count--;
+
+                        const errno_t error =
+                            _wctomb_s(
+                                &local_274,
+                                reinterpret_cast<char*>(
+                                    reinterpret_cast<std::uint8_t*>(
+                                        &local_11) + 1),
+                                6,
+                                *cursor);
+
+                        if (error != 0 ||
+                            local_274 == 0) {
+                            local_228 = -1;
+                            break;
+                        }
+
+                        write_string();
+                        cursor++;
+                    } while (count != 0);
+                }
+
+                if (local_228 >= 0 &&
+                    (local_214 & 4) != 0) {
+                    do {
+                        if (static_cast<int>(local_268) < 1)
+                            break;
+
+                        write_char();
+                        local_268--;
+                    } while (local_228 != -1);
+                }
+            }
+        }
+    }
+
+    if (local_250 != nullptr) {
+        _free(local_250);
+        local_250 = nullptr;
+    }
+
+    local_215 = *local_240;
+    _Format =
+        reinterpret_cast<char*>(local_240);
+    _ArgList =
+        reinterpret_cast<char*>(local_22c);
+
+    goto next_format;
+
+failure:
+    *__errno() = 0x16;
+    FUN_1001189f();
+
+    if (local_254 != '\0') {
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(local_258) + 0x70) &=
+            0xfffffffdu;
+    }
+
+    function_result = -1;
+
+function_exit:
+    __security_check_cookie(local_8);
+    return function_result;
+}

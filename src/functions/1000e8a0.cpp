@@ -1,1 +1,53 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nunsigned int __stdcall FUN_1000e8a0()`n{`n    extern unsigned int DAT_1003c3b4;`n`n    using Callback = void (*)();`n    using ReturnCallback = unsigned int (*)();`n`n    const unsigned int state = DAT_1003c3b4;`n`n    Callback* end_18 = *reinterpret_cast<Callback**>(state + 0x1c);`n`n    for (Callback* callback_entry = *reinterpret_cast<Callback**>(state + 0x18);`n         callback_entry != end_18;`n         ++callback_entry)`n    {`n        if (*callback_entry != nullptr)`n        {`n            (*callback_entry)();`n        }`n    }`n`n    unsigned int result;`n`n    const ReturnCallback return_callback =`n        *reinterpret_cast<ReturnCallback*>(state + 0x10);`n`n    if (return_callback == nullptr)`n    {`n        result = 0U;`n    }`n    else`n    {`n        result = return_callback();`n    }`n`n    Callback* end_28 = *reinterpret_cast<Callback**>(state + 0x2c);`n`n    for (Callback* callback_entry = *reinterpret_cast<Callback**>(state + 0x28);`n         callback_entry != end_28;`n         ++callback_entry)`n    {`n        if (*callback_entry != nullptr)`n        {`n            (*callback_entry)();`n        }`n    }`n`n    return result;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+unsigned int __stdcall FUN_1000e8a0()
+{
+    extern unsigned int DAT_1003c3b4;
+
+    using Callback = void (*)();
+    using ReturnCallback = unsigned int (*)();
+
+    const unsigned int state = DAT_1003c3b4;
+
+    Callback* end_18 = *reinterpret_cast<Callback**>(state + 0x1c);
+
+    for (Callback* callback_entry = *reinterpret_cast<Callback**>(state + 0x18);
+         callback_entry != end_18;
+         ++callback_entry)
+    {
+        if (*callback_entry != nullptr)
+        {
+            (*callback_entry)();
+        }
+    }
+
+    unsigned int result;
+
+    const ReturnCallback return_callback =
+        *reinterpret_cast<ReturnCallback*>(state + 0x10);
+
+    if (return_callback == nullptr)
+    {
+        result = 0U;
+    }
+    else
+    {
+        result = return_callback();
+    }
+
+    Callback* end_28 = *reinterpret_cast<Callback**>(state + 0x2c);
+
+    for (Callback* callback_entry = *reinterpret_cast<Callback**>(state + 0x28);
+         callback_entry != end_28;
+         ++callback_entry)
+    {
+        if (*callback_entry != nullptr)
+        {
+            (*callback_entry)();
+        }
+    }
+
+    return result;
+}

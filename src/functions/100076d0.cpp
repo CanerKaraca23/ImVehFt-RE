@@ -1,1 +1,864 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern std::int32_t DAT_1003c248;`nextern std::int32_t DAT_1003c1fc;`nextern float _DAT_1003c1ec;`nextern std::int32_t DAT_1003aef4;`nextern std::uintptr_t DAT_1003759c;`nextern std::uintptr_t DAT_1003aacc;`nextern std::int32_t _DAT_10024f08;`nextern std::int32_t DAT_1003bd9c;`nextern std::int32_t DAT_10024a14;`nextern std::int32_t DAT_10024f90;`nextern std::int32_t _DAT_10024f90;`nextern std::int32_t _DAT_10024f94;`nextern float _DAT_10024e90;`nextern std::int32_t DAT_1003c250;`nextern std::int32_t DAT_1003c254;`nextern std::int32_t _DAT_1003bc00;`n`nextern std::int32_t* _DAT_00b74494;`nextern std::int32_t* _DAT_00c8800c;`nextern std::int32_t _DAT_00b4e68c;`nextern std::int32_t _DAT_00b4e690;`nextern std::uint32_t* _DAT_00b4e47c;`n`nextern std::int32_t DAT_1003bc78;`nextern char DAT_1003aef0;`nextern char DAT_1003aeec;`nextern char DAT_1003aef1;`nextern std::uint8_t DAT_1003aedc[0x12];`nextern std::uint32_t DAT_100374c0[0x12];`n`nextern std::int32_t* DAT_10037594;`nextern std::int32_t* _DAT_1003c1a8;`nextern std::int32_t* _DAT_1003bbc0;`nextern std::int32_t* _DAT_1003bc30;`nextern std::int32_t* _DAT_1003c208;`n`nextern std::int32_t __stdcall FUN_10009360();`nextern "C" std::int32_t __stdcall FUN_10008e00();`nextern "C" std::uint32_t* __cdecl FUN_10001fb0(std::uint32_t*);`nint __cdecl _strncmp(char*, char*, std::size_t);`n`nusing TextureCallback = void(__cdecl*)(int*, std::int32_t);`nusing TextureLookup = std::int32_t(__cdecl*)(std::int32_t, const char*);`nusing PaletteLookup = std::uint8_t*(__cdecl*)(std::int32_t);`n`nint* __cdecl FUN_100076d0(int* param_1, int* param_2)`n{`n    char local_34[32];`n    std::int32_t local_14;`n    float local_10;`n    std::int32_t local_c;`n    std::int32_t local_8;`n`n    std::uint32_t* puVar1;`n    int* piVar2;`n    int* piVar3;`n    int* piVar4;`n    float* pfVar5;`n    float* pfVar6;`n    std::uint8_t bVar7;`n    char cVar8;`n    float fVar9;`n    std::int32_t iVar10;`n    std::uint32_t uVar11;`n    std::int32_t iVar12;`n    std::uint32_t* puVar13;`n    char* pcVar14;`n    std::uint32_t uVar15;`n    std::int32_t iVar16;`n    std::int32_t iVar18;`n    std::uint8_t* puVar17;`n    std::uint8_t* pbVar19;`n    bool bVar20;`n`n    const auto texture_callback =`n        reinterpret_cast<TextureCallback>(0x74dbc0);`n    const auto texture_lookup =`n        reinterpret_cast<TextureLookup>(0x7f39f0);`n    const auto palette_lookup =`n        reinterpret_cast<PaletteLookup>(0x447090);`n`n#define WRITE_SLOT(address)                                                   \`n    do                                                                        \`n    {                                                                         \`n        *reinterpret_cast<void**>(*param_2) = (address);                      \`n        *reinterpret_cast<std::uint32_t*>(*param_2 + 4) =                    \`n            *reinterpret_cast<std::uint32_t*>(address);                      \`n        *param_2 = *param_2 + 8;                                               \`n    } while (false)`n`n    iVar16 = DAT_1003c248;`n    iVar12 = DAT_1003c1fc;`n`n    if (DAT_1003c1fc != 0)`n    {`n        iVar10 = FUN_10009360();`n        local_c =`n            *reinterpret_cast<std::int32_t*>(`n                *reinterpret_cast<std::int32_t*>(`n                    static_cast<std::uintptr_t>(iVar10) + 0x48) +`n                ((iVar12 - *_DAT_00b74494) / 0xa18) * 4) +`n            iVar16;`n    }`n`n    local_14 = *param_1;`n    puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);`n    uVar11 = param_1[1] & 0xffffff;`n    iVar12 = 0;`n`n    local_8 =`n        *reinterpret_cast<std::int32_t*>(`n            *_DAT_00c8800c +`n            *reinterpret_cast<std::int16_t*>(`n                *reinterpret_cast<std::int32_t*>(`n                    DAT_1003759c + DAT_1003aef4 * 4) + 10) *`n            0xc);`n`n    if (local_14 != 0)`n    {`n        iVar12 =`n            *reinterpret_cast<std::int32_t*>(`n                DAT_1003aacc + 8 + local_14);`n    }`n`n    if (_DAT_00b4e47c != nullptr &&`n        local_14 != 0 &&`n        *reinterpret_cast<char*>(`n            static_cast<std::uintptr_t>(local_14) + 0x10) == '#')`n    {`n        WRITE_SLOT(param_1);`n`n        if (iVar12 == 0)`n        {`n            *param_1 = static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(_DAT_00b4e47c));`n        }`n        else`n        {`n            puVar13 = FUN_10001fb0(_DAT_00b4e47c);`n            *param_1 = static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(puVar13));`n        }`n`n        WRITE_SLOT(puVar1);`n        *puVar1 = *puVar1 | 0xffffff;`n        return param_1;`n    }`n`n    _DAT_1003bc00 = 0;`n`n    if (local_14 != 0)`n    {`n        if (iVar12 == 0)`n        {`n            pbVar19 = reinterpret_cast<std::uint8_t*>(`n                static_cast<std::uintptr_t>(local_14) + 0x10);`n            pcVar14 = const_cast<char*>("vehiclegrunge256");`n`n            do`n            {`n                bVar7 = *pbVar19;`n                bVar20 = bVar7 < static_cast<std::uint8_t>(*pcVar14);`n`n                if (bVar7 != static_cast<std::uint8_t>(*pcVar14))`n                {`n                    iVar12 =`n                        (1 - static_cast<std::uint32_t>(bVar20)) -`n                        static_cast<std::uint32_t>(bVar20 != 0);`n                    goto CHECK_GRUNGE_256;`n                }`n`n                if (bVar7 == 0)`n                    break;`n`n                bVar7 = pbVar19[1];`n                bVar20 = bVar7 <`n                    static_cast<std::uint8_t>(pcVar14[1]);`n`n                if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))`n                {`n                    iVar12 =`n                        (1 - static_cast<std::uint32_t>(bVar20)) -`n                        static_cast<std::uint32_t>(bVar20 != 0);`n                    goto CHECK_GRUNGE_256;`n                }`n`n                pbVar19 += 2;`n                pcVar14 += 2;`n            }`n            while (bVar7 != 0);`n`n            iVar12 = 0;`n`n        CHECK_GRUNGE_256:`n            if (iVar12 == 0)`n            {`n                texture_callback(`n                    param_1,`n                    _DAT_1003c1a8[DAT_1003bc78]);`n            }`n`n            pbVar19 = reinterpret_cast<std::uint8_t*>(`n                static_cast<std::uintptr_t>(*param_1) + 0x10);`n            pcVar14 = const_cast<char*>("vehiclegrunge512");`n`n            do`n            {`n                bVar7 = *pbVar19;`n                bVar20 = bVar7 < static_cast<std::uint8_t>(*pcVar14);`n`n                if (bVar7 != static_cast<std::uint8_t>(*pcVar14))`n                {`n                    iVar12 =`n                        (1 - static_cast<std::uint32_t>(bVar20)) -`n                        static_cast<std::uint32_t>(bVar20 != 0);`n                    goto CHECK_GRUNGE_512;`n                }`n`n                if (bVar7 == 0)`n                    break;`n`n                bVar7 = pbVar19[1];`n                bVar20 = bVar7 <`n                    static_cast<std::uint8_t>(pcVar14[1]);`n`n                if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))`n                {`n                    iVar12 =`n                        (1 - static_cast<std::uint32_t>(bVar20)) -`n                        static_cast<std::uint32_t>(bVar20 != 0);`n                    goto CHECK_GRUNGE_512;`n                }`n`n                pbVar19 += 2;`n                pcVar14 += 2;`n            }`n            while (bVar7 != 0);`n`n            iVar12 = 0;`n`n        CHECK_GRUNGE_512:`n            if (iVar12 == 0)`n            {`n                texture_callback(`n                    param_1,`n                    _DAT_1003bbc0[DAT_1003bc78]);`n            }`n            else`n            {`n                pcVar14 = const_cast<char*>("vehiclegrunge_iv");`n                pbVar19 = reinterpret_cast<std::uint8_t*>(`n                    static_cast<std::uintptr_t>(*param_1) + 0x10);`n`n                do`n                {`n                    bVar7 = *pbVar19;`n                    bVar20 =`n                        bVar7 < static_cast<std::uint8_t>(*pcVar14);`n`n                    if (bVar7 != static_cast<std::uint8_t>(*pcVar14))`n                    {`n                        iVar12 =`n                            (1 - static_cast<std::uint32_t>(bVar20)) -`n                            static_cast<std::uint32_t>(bVar20 != 0);`n                        goto CHECK_GRUNGE_IV;`n                    }`n`n                    if (bVar7 == 0)`n                        break;`n`n                    bVar7 = pbVar19[1];`n                    bVar20 =`n                        bVar7 < static_cast<std::uint8_t>(pcVar14[1]);`n`n                    if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))`n                    {`n                        iVar12 =`n                            (1 - static_cast<std::uint32_t>(bVar20)) -`n                            static_cast<std::uint32_t>(bVar20 != 0);`n                        goto CHECK_GRUNGE_IV;`n                    }`n`n                    pbVar19 += 2;`n                    pcVar14 += 2;`n                }`n                while (bVar7 != 0);`n`n                iVar12 = 0;`n`n            CHECK_GRUNGE_IV:`n                if (iVar12 == 0)`n                {`n                    texture_callback(`n                        param_1,`n                        _DAT_1003bc30[DAT_1003bc78]);`n                }`n                else`n                {`n                    pcVar14 = const_cast<char*>("tyrewall_dirt_1");`n                    pbVar19 = reinterpret_cast<std::uint8_t*>(`n                        static_cast<std::uintptr_t>(*param_1) + 0x10);`n`n                    do`n                    {`n                        bVar7 = *pbVar19;`n                        bVar20 =`n                            bVar7 < static_cast<std::uint8_t>(*pcVar14);`n`n                        if (bVar7 != static_cast<std::uint8_t>(*pcVar14))`n                        {`n                            iVar12 =`n                                (1 - static_cast<std::uint32_t>(bVar20)) -`n                                static_cast<std::uint32_t>(bVar20 != 0);`n                            goto CHECK_TYREWALL;`n                        }`n`n                        if (bVar7 == 0)`n                            break;`n`n                        bVar7 = pbVar19[1];`n                        bVar20 =`n                            bVar7 < static_cast<std::uint8_t>(pcVar14[1]);`n`n                        if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))`n                        {`n                            iVar12 =`n                                (1 - static_cast<std::uint32_t>(bVar20)) -`n                                static_cast<std::uint32_t>(bVar20 != 0);`n                            goto CHECK_TYREWALL;`n                        }`n`n                        pbVar19 += 2;`n                        pcVar14 += 2;`n                    }`n                    while (bVar7 != 0);`n`n                    iVar12 = 0;`n`n                CHECK_TYREWALL:`n                    if (iVar12 == 0)`n                    {`n                        texture_callback(`n                            param_1,`n                            _DAT_1003c208[DAT_1003bc78]);`n                    }`n                    else if (DAT_1003aef1 == '\0' &&`n                             DAT_1003c1fc != 0 &&`n                             *reinterpret_cast<char*>(`n                                 static_cast<std::uintptr_t>(local_c) +`n                                 0x20) != '\0')`n                    {`n                        iVar12 = _strncmp(`n                            reinterpret_cast<char*>(`n                                static_cast<std::uintptr_t>(*param_1) +`n                                0x10),`n                            const_cast<char*>("plateback1"),`n                            10);`n`n                        if (iVar12 == 0)`n                        {`n                            WRITE_SLOT(param_1);`n                            *param_1 = DAT_1003bd9c;`n`n                            piVar2 = param_1 + 3;`n                            WRITE_SLOT(piVar2);`n                            *piVar2 = _DAT_10024f94;`n                        }`n                        else`n                        {`n                            iVar12 = _strncmp(`n                                reinterpret_cast<char*>(`n                                    static_cast<std::uintptr_t>(*param_1) +`n                                    0x10),`n                                const_cast<char*>("plateback2"),`n                                10);`n`n                            if (iVar12 != 0)`n                            {`n                                iVar12 = _strncmp(`n                                    reinterpret_cast<char*>(`n                                        static_cast<std::uintptr_t>(`n                                            *param_1) + 0x10),`n                                    const_cast<char*>("plateback3"),`n                                    10);`n                            }`n`n                            if (iVar12 == 0)`n                            {`n                                WRITE_SLOT(param_1);`n                                *param_1 = DAT_1003bd9c;`n`n                                piVar2 = param_1 + 3;`n                                WRITE_SLOT(piVar2);`n                                *piVar2 = _DAT_10024f94;`n                            }`n                        }`n                    }`n                }`n            }`n        }`n        else`n        {`n            local_10 =`n                _DAT_1003c1ec /`n                static_cast<float>(_DAT_10024f08);`n`n            WRITE_SLOT(param_1);`n`n            puVar13 = FUN_10001fb0(`n                reinterpret_cast<std::uint32_t*>(`n                    static_cast<std::uintptr_t>(*param_1)));`n`n            *param_1 = static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(puVar13));`n        }`n    }`n`n    if (local_8 == 0 ||`n        texture_lookup(local_8, "vehiclelights") == 0)`n    {`n        iVar12 = _DAT_00b4e68c;`n    }`n`n    if (local_14 == iVar12 ||`n        local_14 == _DAT_00b4e68c)`n    {`n        iVar12 = 0;`n`n        do`n        {`n            iVar16 = iVar12;`n`n            if (uVar11 == DAT_100374c0[iVar12])`n                break;`n`n            iVar12 = iVar12 + 1;`n            iVar16 = -1;`n        }`n        while (iVar12 < 0x12);`n`n        puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);`n        WRITE_SLOT(puVar1);`n        *puVar1 = *puVar1 | 0xffffff;`n`n        iVar12 = DAT_1003c1fc;`n`n        if (iVar16 != -1)`n        {`n            if (DAT_1003aedc[iVar16] == '\0')`n                return param_1;`n`n            if (DAT_1003aedc[iVar16] != '\x02')`n            {`n                WRITE_SLOT(param_1);`n`n                piVar2 = param_1 + 3;`n                WRITE_SLOT(piVar2);`n                WRITE_SLOT(param_1 + 5);`n                WRITE_SLOT(param_1 + 4);`n`n                if (local_8 == 0 ||`n                    texture_lookup(`n                        local_8,`n                        "vehiclelights_on") == 0)`n                {`n                    iVar12 = _DAT_00b4e690;`n                }`n`n                *param_1 = iVar12;`n                *piVar2 = _DAT_10024f94;`n                param_1[4] = 0;`n                param_1[5] = 0;`n                return param_1;`n            }`n`n            if (local_8 == 0)`n                return param_1;`n`n            iVar12 =`n                texture_lookup(local_8, "vehiclelights_dam");`n`n            if (iVar12 != 0)`n            {`n                WRITE_SLOT(param_1);`n                *param_1 = iVar12;`n            }`n`n            return param_1;`n        }`n`n        local_14 = DAT_1003c248;`n        iVar18 = FUN_10009360();`n        iVar10 = DAT_1003c248;`n        iVar16 = DAT_1003c1fc;`n`n        if (*reinterpret_cast<std::int32_t*>(`n                *reinterpret_cast<std::int32_t*>(`n                    *reinterpret_cast<std::int32_t*>(`n                        *reinterpret_cast<std::int32_t*>(`n                            static_cast<std::uintptr_t>(iVar18) + 0x48) +`n                        ((iVar12 - *_DAT_00b74494) / 0xa18) * 4) +`n                    0x28 + local_14) +`n                0x350) == 0)`n        {`n            return param_1;`n        }`n`n        local_c = 0;`n        uVar15 = 0xff;`n`n        while (uVar11 != uVar15)`n        {`n            uVar15 = uVar15 - 1;`n            local_c = local_c + 1;`n`n            if (static_cast<std::int32_t>(uVar15) < 0xf0)`n                return param_1;`n        }`n`n        iVar12 = FUN_10009360();`n`n        iVar12 =`n            *reinterpret_cast<std::int32_t*>(`n                *reinterpret_cast<std::int32_t*>(`n                    static_cast<std::uintptr_t>(iVar12) + 0x48) +`n                ((iVar16 - *_DAT_00b74494) / 0xa18) * 4) +`n            0x28 + iVar10;`n`n        piVar2 = param_1 + 1;`n        WRITE_SLOT(piVar2);`n`n        iVar16 =`n            *reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(iVar12) + 0xc);`n`n        *reinterpret_cast<std::uint16_t*>(piVar2) =`n            *reinterpret_cast<std::uint16_t*>(`n                static_cast<std::uintptr_t>(iVar16) + 8);`n`n        *reinterpret_cast<std::uint8_t*>(`n            reinterpret_cast<std::uint8_t*>(param_1) + 6) =`n            *reinterpret_cast<std::uint8_t*>(`n                static_cast<std::uintptr_t>(iVar16) + 10);`n`n        if (*reinterpret_cast<char*>(`n                static_cast<std::uintptr_t>(iVar12) + 9) == '\0')`n        {`n            return param_1;`n        }`n`n        piVar2 = param_1 + 3;`n        WRITE_SLOT(piVar2);`n`n        pfVar5 = reinterpret_cast<float*>(param_1 + 5);`n        WRITE_SLOT(pfVar5);`n`n        pfVar6 = reinterpret_cast<float*>(param_1 + 4);`n        WRITE_SLOT(pfVar6);`n`n        *piVar2 = _DAT_10024f90;`n`n        fVar9 = static_cast<float>(DAT_1003c250);`n        if (DAT_1003c250 < 0)`n            fVar9 = fVar9 + _DAT_10024e90;`n        *pfVar6 = fVar9;`n`n        fVar9 = static_cast<float>(DAT_1003c254);`n        if (DAT_1003c254 < 0)`n            fVar9 = fVar9 + _DAT_10024e90;`n        *pfVar5 = fVar9;`n`n        pcVar14 = reinterpret_cast<char*>(`n            static_cast<std::uintptr_t>(*param_1) + 0x10);`n`n        iVar12 = -static_cast<std::int32_t>(`n            reinterpret_cast<std::uintptr_t>(pcVar14));`n`n        do`n        {`n            cVar8 = *pcVar14;`n            pcVar14[`n                reinterpret_cast<std::uintptr_t>(local_34) + iVar12] =`n                cVar8;`n            pcVar14 = pcVar14 + 1;`n        }`n        while (cVar8 != '\0');`n`n        puVar13 = reinterpret_cast<std::uint32_t*>(local_34 - 1);`n`n        do`n        {`n            pcVar14 = reinterpret_cast<char*>(`n                reinterpret_cast<std::uintptr_t>(puVar13) + 1);`n            puVar13 = reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(puVar13) + 1);`n        }`n        while (*pcVar14 != '\0');`n`n        *puVar13 = DAT_10024a14;`n        iVar12 = texture_lookup(local_8, local_34);`n`n        if (iVar12 != 0)`n        {`n            WRITE_SLOT(param_1);`n            *param_1 = iVar12;`n        }`n`n        return param_1;`n    }`n`n    if (uVar11 == 0xff3c)`n    {`n        iVar12 = DAT_10037594[0];`n        goto WRITE_PALETTE;`n    }`n`n    if (uVar11 == 0xaf00ff)`n    {`n        iVar12 = DAT_10037594[1];`n        goto WRITE_PALETTE;`n    }`n`n    if (uVar11 == 0xffff00)`n    {`n        iVar12 = DAT_10037594[2];`n        goto WRITE_PALETTE;`n    }`n`n    if (uVar11 == 0xff00ff)`n    {`n        iVar12 = DAT_10037594[3];`n        goto WRITE_PALETTE;`n    }`n`n    if (uVar11 == 0xff1200)`n    {`n        puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);`n        WRITE_SLOT(puVar1);`n`n        if (DAT_1003aef0 == '\0')`n        {`n            *reinterpret_cast<std::uint8_t*>(`n                reinterpret_cast<std::uint8_t*>(param_1) + 7) = 0;`n            return param_1;`n        }`n`n        *puVar1 = *puVar1 | 0xffffff;`n        return param_1;`n    }`n`n    if (uVar11 == 0xff1000)`n    {`n        puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);`n        WRITE_SLOT(puVar1);`n        *puVar1 = *puVar1 | 0xffffff;`n`n        if (DAT_1003aeec == '\0')`n            return param_1;`n`n        piVar2 = param_1 + 3;`n        WRITE_SLOT(piVar2);`n`n        piVar3 = param_1 + 5;`n        WRITE_SLOT(piVar3);`n`n        *piVar2 = _DAT_10024f94;`n        *piVar3 = 0;`n`n        pcVar14 = reinterpret_cast<char*>(`n            static_cast<std::uintptr_t>(*param_1) + 0x10);`n`n        iVar12 = -static_cast<std::int32_t>(`n            reinterpret_cast<std::uintptr_t>(pcVar14));`n`n        do`n        {`n            cVar8 = *pcVar14;`n            pcVar14[`n                reinterpret_cast<std::uintptr_t>(local_34) + iVar12] =`n                cVar8;`n            pcVar14 = pcVar14 + 1;`n        }`n        while (cVar8 != '\0');`n`n        puVar13 = reinterpret_cast<std::uint32_t*>(local_34 - 1);`n`n        do`n        {`n            pcVar14 = reinterpret_cast<char*>(`n                reinterpret_cast<std::uintptr_t>(puVar13) + 1);`n            puVar13 = reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(puVar13) + 1);`n        }`n        while (*pcVar14 != '\0');`n`n        *puVar13 = DAT_10024a14;`n        goto LOOKUP_TEXTURE;`n    }`n`n    iVar12 = FUN_10008e00();`n`n    if (*reinterpret_cast<std::int32_t*>(`n            *reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(iVar12) + 0x28) +`n            0x350) == 0)`n    {`n        return param_1;`n    }`n`n    uVar15 = 0xff;`n    iVar12 = 0;`n`n    while (uVar11 != uVar15)`n    {`n        uVar15 = uVar15 - 1;`n        iVar12 = iVar12 + 1;`n`n        if (static_cast<std::int32_t>(uVar15) < 0xf0)`n            return param_1;`n    }`n`n    iVar16 = FUN_10008e00();`n`n    iVar12 =`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(iVar16) + 0x28) +`n        0x354 + iVar12 * 0x14;`n`n    piVar2 = param_1 + 1;`n    WRITE_SLOT(piVar2);`n`n    iVar16 =`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(iVar12) + 0xc);`n`n    *reinterpret_cast<std::uint16_t*>(piVar2) =`n        *reinterpret_cast<std::uint16_t*>(`n            static_cast<std::uintptr_t>(iVar16) + 8);`n`n    *reinterpret_cast<std::uint8_t*>(`n        reinterpret_cast<std::uint8_t*>(param_1) + 6) =`n        *reinterpret_cast<std::uint8_t*>(`n            static_cast<std::uintptr_t>(iVar16) + 10);`n`n    if (*reinterpret_cast<char*>(`n            static_cast<std::uintptr_t>(iVar12) + 9) == '\0')`n    {`n        return param_1;`n    }`n`n    piVar2 = param_1 + 3;`n    WRITE_SLOT(piVar2);`n`n    piVar3 = param_1 + 5;`n    WRITE_SLOT(piVar3);`n`n    piVar4 = param_1 + 4;`n    WRITE_SLOT(piVar4);`n`n    *piVar2 = _DAT_10024f94;`n    *piVar4 = 0;`n    *piVar3 = 0;`n`n    pcVar14 = reinterpret_cast<char*>(`n        static_cast<std::uintptr_t>(*param_1) + 0x10);`n`n    iVar12 = -static_cast<std::int32_t>(`n        reinterpret_cast<std::uintptr_t>(pcVar14));`n`n    do`n    {`n        cVar8 = *pcVar14;`n        pcVar14[`n            reinterpret_cast<std::uintptr_t>(local_34) + iVar12] =`n            cVar8;`n        pcVar14 = pcVar14 + 1;`n    }`n    while (cVar8 != '\0');`n`n    puVar13 = reinterpret_cast<std::uint32_t*>(local_34 - 1);`n`n    do`n    {`n        pcVar14 = reinterpret_cast<char*>(`n            reinterpret_cast<std::uintptr_t>(puVar13) + 1);`n        puVar13 = reinterpret_cast<std::uint32_t*>(`n            reinterpret_cast<std::uintptr_t>(puVar13) + 1);`n    }`n    while (*pcVar14 != '\0');`n`n    *puVar13 = DAT_10024a14;`n`nLOOKUP_TEXTURE:`n    iVar12 = texture_lookup(local_8, local_34);`n`n    if (iVar12 != 0)`n    {`n        WRITE_SLOT(param_1);`n        *param_1 = iVar12;`n    }`n`n    return param_1;`n`nWRITE_PALETTE:`n    puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);`n    WRITE_SLOT(puVar1);`n`n    if (DAT_1003c1fc != 0 &&`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(local_c) + 0x30) != 0 &&`n        iVar12 < static_cast<std::int32_t>(`n            *reinterpret_cast<std::uint8_t*>(`n                static_cast<std::uintptr_t>(local_c) + 0x2c)))`n    {`n        iVar16 =`n            *reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(local_c) + 0x30) +`n            iVar12 * 4;`n`n        *reinterpret_cast<std::uint8_t*>(puVar1) =`n            *reinterpret_cast<std::uint8_t*>(`n                static_cast<std::uintptr_t>(iVar16));`n`n        *reinterpret_cast<std::uint8_t*>(`n            reinterpret_cast<std::uint8_t*>(param_1) + 5) =`n            *reinterpret_cast<std::uint8_t*>(`n                static_cast<std::uintptr_t>(iVar16) + 1);`n`n        *reinterpret_cast<std::uint8_t*>(`n            reinterpret_cast<std::uint8_t*>(param_1) + 6) =`n            *reinterpret_cast<std::uint8_t*>(`n                static_cast<std::uintptr_t>(iVar16) + 2);`n`n        return param_1;`n    }`n`n    puVar17 = palette_lookup(iVar12);`n    *reinterpret_cast<std::uint8_t*>(param_1 + 1) = *puVar17;`n`n    iVar16 = static_cast<std::int32_t>(`n        reinterpret_cast<std::uintptr_t>(`n            palette_lookup(iVar12)));`n`n    *reinterpret_cast<std::uint8_t*>(`n        reinterpret_cast<std::uint8_t*>(param_1) + 5) =`n        *reinterpret_cast<std::uint8_t*>(`n            static_cast<std::uintptr_t>(iVar16) + 1);`n`n    iVar12 = static_cast<std::int32_t>(`n        reinterpret_cast<std::uintptr_t>(`n            palette_lookup(iVar12)));`n`n    *reinterpret_cast<std::uint8_t*>(`n        reinterpret_cast<std::uint8_t*>(param_1) + 6) =`n        *reinterpret_cast<std::uint8_t*>(`n            static_cast<std::uintptr_t>(iVar12) + 2);`n`n    return param_1;`n`n#undef WRITE_SLOT`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern std::int32_t DAT_1003c248;
+extern std::int32_t DAT_1003c1fc;
+extern float _DAT_1003c1ec;
+extern std::int32_t DAT_1003aef4;
+extern std::uintptr_t DAT_1003759c;
+extern std::uintptr_t DAT_1003aacc;
+extern std::int32_t _DAT_10024f08;
+extern std::int32_t DAT_1003bd9c;
+extern std::int32_t DAT_10024a14;
+extern std::int32_t DAT_10024f90;
+extern std::int32_t _DAT_10024f90;
+extern std::int32_t _DAT_10024f94;
+extern float _DAT_10024e90;
+extern std::int32_t DAT_1003c250;
+extern std::int32_t DAT_1003c254;
+extern std::int32_t _DAT_1003bc00;
+
+extern std::int32_t* _DAT_00b74494;
+extern std::int32_t* _DAT_00c8800c;
+extern std::int32_t _DAT_00b4e68c;
+extern std::int32_t _DAT_00b4e690;
+extern std::uint32_t* _DAT_00b4e47c;
+
+extern std::int32_t DAT_1003bc78;
+extern char DAT_1003aef0;
+extern char DAT_1003aeec;
+extern char DAT_1003aef1;
+extern std::uint8_t DAT_1003aedc[0x12];
+extern std::uint32_t DAT_100374c0[0x12];
+
+extern std::int32_t* DAT_10037594;
+extern std::int32_t* _DAT_1003c1a8;
+extern std::int32_t* _DAT_1003bbc0;
+extern std::int32_t* _DAT_1003bc30;
+extern std::int32_t* _DAT_1003c208;
+
+extern "C" std::int32_t __stdcall FUN_10009360();
+extern "C" std::int32_t __stdcall FUN_10008e00();
+extern "C" std::uint32_t* __cdecl FUN_10001fb0(std::uint32_t*);
+extern "C" int __cdecl strncmp(const char*, const char*, std::size_t);
+
+using TextureCallback = void(__cdecl*)(int*, std::int32_t);
+using TextureLookup = std::int32_t(__cdecl*)(std::int32_t, const char*);
+using PaletteLookup = std::uint8_t*(__cdecl*)(std::int32_t);
+
+extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
+{
+    char local_34[32];
+    std::int32_t local_14;
+    float local_10;
+    std::int32_t local_c = 0;
+    std::int32_t local_8;
+
+    std::uint32_t* puVar1;
+    int* piVar2;
+    int* piVar3;
+    int* piVar4;
+    float* pfVar5;
+    float* pfVar6;
+    std::uint8_t bVar7;
+    char cVar8;
+    float fVar9;
+    std::int32_t iVar10;
+    std::uint32_t uVar11;
+    std::int32_t iVar12;
+    std::uint32_t* puVar13;
+    char* pcVar14;
+    std::uint32_t uVar15;
+    std::int32_t iVar16;
+    std::int32_t iVar18;
+    std::uint8_t* puVar17;
+    std::uint8_t* pbVar19;
+    bool bVar20;
+
+    const auto texture_callback =
+        reinterpret_cast<TextureCallback>(0x74dbc0);
+    const auto texture_lookup =
+        reinterpret_cast<TextureLookup>(0x7f39f0);
+    const auto palette_lookup =
+        reinterpret_cast<PaletteLookup>(0x447090);
+
+#define WRITE_SLOT(address)                                                   \
+    do                                                                        \
+    {                                                                         \
+        *reinterpret_cast<void**>(*param_2) = (address);                      \
+        *reinterpret_cast<std::uint32_t*>(*param_2 + 4) =                    \
+            *reinterpret_cast<std::uint32_t*>(address);                      \
+        *param_2 = *param_2 + 8;                                               \
+    } while (false)
+
+    iVar16 = DAT_1003c248;
+    iVar12 = DAT_1003c1fc;
+
+    if (DAT_1003c1fc != 0)
+    {
+        iVar10 = FUN_10009360();
+        local_c =
+            *reinterpret_cast<std::int32_t*>(
+                *reinterpret_cast<std::int32_t*>(
+                    static_cast<std::uintptr_t>(iVar10) + 0x48) +
+                ((iVar12 - *_DAT_00b74494) / 0xa18) * 4) +
+            iVar16;
+    }
+
+    local_14 = *param_1;
+    puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);
+    uVar11 = param_1[1] & 0xffffff;
+    iVar12 = 0;
+
+    local_8 =
+        *reinterpret_cast<std::int32_t*>(
+            *_DAT_00c8800c +
+            *reinterpret_cast<std::int16_t*>(
+                *reinterpret_cast<std::int32_t*>(
+                    DAT_1003759c + DAT_1003aef4 * 4) + 10) *
+            0xc);
+
+    if (local_14 != 0)
+    {
+        iVar12 =
+            *reinterpret_cast<std::int32_t*>(
+                DAT_1003aacc + 8 + local_14);
+    }
+
+    if (_DAT_00b4e47c != nullptr &&
+        local_14 != 0 &&
+        *reinterpret_cast<char*>(
+            static_cast<std::uintptr_t>(local_14) + 0x10) == '#')
+    {
+        WRITE_SLOT(param_1);
+
+        if (iVar12 == 0)
+        {
+            *param_1 = static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(_DAT_00b4e47c));
+        }
+        else
+        {
+            puVar13 = FUN_10001fb0(_DAT_00b4e47c);
+            *param_1 = static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(puVar13));
+        }
+
+        WRITE_SLOT(puVar1);
+        *puVar1 = *puVar1 | 0xffffff;
+        return param_1;
+    }
+
+    _DAT_1003bc00 = 0;
+
+    if (local_14 != 0)
+    {
+        if (iVar12 == 0)
+        {
+            pbVar19 = reinterpret_cast<std::uint8_t*>(
+                static_cast<std::uintptr_t>(local_14) + 0x10);
+            pcVar14 = const_cast<char*>("vehiclegrunge256");
+
+            do
+            {
+                bVar7 = *pbVar19;
+                bVar20 = bVar7 < static_cast<std::uint8_t>(*pcVar14);
+
+                if (bVar7 != static_cast<std::uint8_t>(*pcVar14))
+                {
+                    iVar12 =
+                        (1 - static_cast<std::uint32_t>(bVar20)) -
+                        static_cast<std::uint32_t>(bVar20 != 0);
+                    goto CHECK_GRUNGE_256;
+                }
+
+                if (bVar7 == 0)
+                    break;
+
+                bVar7 = pbVar19[1];
+                bVar20 = bVar7 <
+                    static_cast<std::uint8_t>(pcVar14[1]);
+
+                if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))
+                {
+                    iVar12 =
+                        (1 - static_cast<std::uint32_t>(bVar20)) -
+                        static_cast<std::uint32_t>(bVar20 != 0);
+                    goto CHECK_GRUNGE_256;
+                }
+
+                pbVar19 += 2;
+                pcVar14 += 2;
+            }
+            while (bVar7 != 0);
+
+            iVar12 = 0;
+
+        CHECK_GRUNGE_256:
+            if (iVar12 == 0)
+            {
+                texture_callback(
+                    param_1,
+                    _DAT_1003c1a8[DAT_1003bc78]);
+            }
+
+            pbVar19 = reinterpret_cast<std::uint8_t*>(
+                static_cast<std::uintptr_t>(*param_1) + 0x10);
+            pcVar14 = const_cast<char*>("vehiclegrunge512");
+
+            do
+            {
+                bVar7 = *pbVar19;
+                bVar20 = bVar7 < static_cast<std::uint8_t>(*pcVar14);
+
+                if (bVar7 != static_cast<std::uint8_t>(*pcVar14))
+                {
+                    iVar12 =
+                        (1 - static_cast<std::uint32_t>(bVar20)) -
+                        static_cast<std::uint32_t>(bVar20 != 0);
+                    goto CHECK_GRUNGE_512;
+                }
+
+                if (bVar7 == 0)
+                    break;
+
+                bVar7 = pbVar19[1];
+                bVar20 = bVar7 <
+                    static_cast<std::uint8_t>(pcVar14[1]);
+
+                if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))
+                {
+                    iVar12 =
+                        (1 - static_cast<std::uint32_t>(bVar20)) -
+                        static_cast<std::uint32_t>(bVar20 != 0);
+                    goto CHECK_GRUNGE_512;
+                }
+
+                pbVar19 += 2;
+                pcVar14 += 2;
+            }
+            while (bVar7 != 0);
+
+            iVar12 = 0;
+
+        CHECK_GRUNGE_512:
+            if (iVar12 == 0)
+            {
+                texture_callback(
+                    param_1,
+                    _DAT_1003bbc0[DAT_1003bc78]);
+            }
+            else
+            {
+                pcVar14 = const_cast<char*>("vehiclegrunge_iv");
+                pbVar19 = reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(*param_1) + 0x10);
+
+                do
+                {
+                    bVar7 = *pbVar19;
+                    bVar20 =
+                        bVar7 < static_cast<std::uint8_t>(*pcVar14);
+
+                    if (bVar7 != static_cast<std::uint8_t>(*pcVar14))
+                    {
+                        iVar12 =
+                            (1 - static_cast<std::uint32_t>(bVar20)) -
+                            static_cast<std::uint32_t>(bVar20 != 0);
+                        goto CHECK_GRUNGE_IV;
+                    }
+
+                    if (bVar7 == 0)
+                        break;
+
+                    bVar7 = pbVar19[1];
+                    bVar20 =
+                        bVar7 < static_cast<std::uint8_t>(pcVar14[1]);
+
+                    if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))
+                    {
+                        iVar12 =
+                            (1 - static_cast<std::uint32_t>(bVar20)) -
+                            static_cast<std::uint32_t>(bVar20 != 0);
+                        goto CHECK_GRUNGE_IV;
+                    }
+
+                    pbVar19 += 2;
+                    pcVar14 += 2;
+                }
+                while (bVar7 != 0);
+
+                iVar12 = 0;
+
+            CHECK_GRUNGE_IV:
+                if (iVar12 == 0)
+                {
+                    texture_callback(
+                        param_1,
+                        _DAT_1003bc30[DAT_1003bc78]);
+                }
+                else
+                {
+                    pcVar14 = const_cast<char*>("tyrewall_dirt_1");
+                    pbVar19 = reinterpret_cast<std::uint8_t*>(
+                        static_cast<std::uintptr_t>(*param_1) + 0x10);
+
+                    do
+                    {
+                        bVar7 = *pbVar19;
+                        bVar20 =
+                            bVar7 < static_cast<std::uint8_t>(*pcVar14);
+
+                        if (bVar7 != static_cast<std::uint8_t>(*pcVar14))
+                        {
+                            iVar12 =
+                                (1 - static_cast<std::uint32_t>(bVar20)) -
+                                static_cast<std::uint32_t>(bVar20 != 0);
+                            goto CHECK_TYREWALL;
+                        }
+
+                        if (bVar7 == 0)
+                            break;
+
+                        bVar7 = pbVar19[1];
+                        bVar20 =
+                            bVar7 < static_cast<std::uint8_t>(pcVar14[1]);
+
+                        if (bVar7 != static_cast<std::uint8_t>(pcVar14[1]))
+                        {
+                            iVar12 =
+                                (1 - static_cast<std::uint32_t>(bVar20)) -
+                                static_cast<std::uint32_t>(bVar20 != 0);
+                            goto CHECK_TYREWALL;
+                        }
+
+                        pbVar19 += 2;
+                        pcVar14 += 2;
+                    }
+                    while (bVar7 != 0);
+
+                    iVar12 = 0;
+
+                CHECK_TYREWALL:
+                    if (iVar12 == 0)
+                    {
+                        texture_callback(
+                            param_1,
+                            _DAT_1003c208[DAT_1003bc78]);
+                    }
+                    else if (DAT_1003aef1 == '\0' &&
+                             DAT_1003c1fc != 0 &&
+                             *reinterpret_cast<char*>(
+                                 static_cast<std::uintptr_t>(local_c) +
+                                 0x20) != '\0')
+                    {
+                        iVar12 = strncmp(
+                            reinterpret_cast<const char*>(
+                                static_cast<std::uintptr_t>(*param_1) +
+                                0x10),
+                            "plateback1",
+                            10);
+
+                        if (iVar12 == 0)
+                        {
+                            WRITE_SLOT(param_1);
+                            *param_1 = DAT_1003bd9c;
+
+                            piVar2 = param_1 + 3;
+                            WRITE_SLOT(piVar2);
+                            *piVar2 = _DAT_10024f94;
+                        }
+                        else
+                        {
+                            iVar12 = strncmp(
+                                reinterpret_cast<const char*>(
+                                    static_cast<std::uintptr_t>(*param_1) +
+                                    0x10),
+                                "plateback2",
+                                10);
+
+                            if (iVar12 != 0)
+                            {
+                                iVar12 = strncmp(
+                                    reinterpret_cast<const char*>(
+                                        static_cast<std::uintptr_t>(
+                                            *param_1) + 0x10),
+                                    "plateback3",
+                                    10);
+                            }
+
+                            if (iVar12 == 0)
+                            {
+                                WRITE_SLOT(param_1);
+                                *param_1 = DAT_1003bd9c;
+
+                                piVar2 = param_1 + 3;
+                                WRITE_SLOT(piVar2);
+                                *piVar2 = _DAT_10024f94;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            local_10 =
+                _DAT_1003c1ec /
+                static_cast<float>(_DAT_10024f08);
+
+            WRITE_SLOT(param_1);
+
+            puVar13 = FUN_10001fb0(
+                reinterpret_cast<std::uint32_t*>(
+                    static_cast<std::uintptr_t>(*param_1)));
+
+            *param_1 = static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(puVar13));
+        }
+    }
+
+    if (local_8 == 0 ||
+        texture_lookup(local_8, "vehiclelights") == 0)
+    {
+        iVar12 = _DAT_00b4e68c;
+    }
+
+    if (local_14 == iVar12 ||
+        local_14 == _DAT_00b4e68c)
+    {
+        iVar12 = 0;
+
+        do
+        {
+            iVar16 = iVar12;
+
+            if (uVar11 == DAT_100374c0[iVar12])
+                break;
+
+            iVar12 = iVar12 + 1;
+            iVar16 = -1;
+        }
+        while (iVar12 < 0x12);
+
+        puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);
+        WRITE_SLOT(puVar1);
+        *puVar1 = *puVar1 | 0xffffff;
+
+        iVar12 = DAT_1003c1fc;
+
+        if (iVar16 != -1)
+        {
+            if (DAT_1003aedc[iVar16] == '\0')
+                return param_1;
+
+            if (DAT_1003aedc[iVar16] != '\x02')
+            {
+                WRITE_SLOT(param_1);
+
+                piVar2 = param_1 + 3;
+                WRITE_SLOT(piVar2);
+                WRITE_SLOT(param_1 + 5);
+                WRITE_SLOT(param_1 + 4);
+
+                if (local_8 == 0 ||
+                    texture_lookup(
+                        local_8,
+                        "vehiclelights_on") == 0)
+                {
+                    iVar12 = _DAT_00b4e690;
+                }
+
+                *param_1 = iVar12;
+                *piVar2 = _DAT_10024f94;
+                param_1[4] = 0;
+                param_1[5] = 0;
+                return param_1;
+            }
+
+            if (local_8 == 0)
+                return param_1;
+
+            iVar12 =
+                texture_lookup(local_8, "vehiclelights_dam");
+
+            if (iVar12 != 0)
+            {
+                WRITE_SLOT(param_1);
+                *param_1 = iVar12;
+            }
+
+            return param_1;
+        }
+
+        local_14 = DAT_1003c248;
+        iVar18 = FUN_10009360();
+        iVar10 = DAT_1003c248;
+        iVar16 = DAT_1003c1fc;
+
+        if (*reinterpret_cast<std::int32_t*>(
+                *reinterpret_cast<std::int32_t*>(
+                    *reinterpret_cast<std::int32_t*>(
+                        *reinterpret_cast<std::int32_t*>(
+                            static_cast<std::uintptr_t>(iVar18) + 0x48) +
+                        ((iVar12 - *_DAT_00b74494) / 0xa18) * 4) +
+                    0x28 + local_14) +
+                0x350) == 0)
+        {
+            return param_1;
+        }
+
+        local_c = 0;
+        uVar15 = 0xff;
+
+        while (uVar11 != uVar15)
+        {
+            uVar15 = uVar15 - 1;
+            local_c = local_c + 1;
+
+            if (static_cast<std::int32_t>(uVar15) < 0xf0)
+                return param_1;
+        }
+
+        iVar12 = FUN_10009360();
+
+        iVar12 =
+            *reinterpret_cast<std::int32_t*>(
+                *reinterpret_cast<std::int32_t*>(
+                    static_cast<std::uintptr_t>(iVar12) + 0x48) +
+                ((iVar16 - *_DAT_00b74494) / 0xa18) * 4) +
+            0x28 + iVar10;
+
+        piVar2 = param_1 + 1;
+        WRITE_SLOT(piVar2);
+
+        iVar16 =
+            *reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(iVar12) + 0xc);
+
+        *reinterpret_cast<std::uint16_t*>(piVar2) =
+            *reinterpret_cast<std::uint16_t*>(
+                static_cast<std::uintptr_t>(iVar16) + 8);
+
+        *reinterpret_cast<std::uint8_t*>(
+            reinterpret_cast<std::uint8_t*>(param_1) + 6) =
+            *reinterpret_cast<std::uint8_t*>(
+                static_cast<std::uintptr_t>(iVar16) + 10);
+
+        if (*reinterpret_cast<char*>(
+                static_cast<std::uintptr_t>(iVar12) + 9) == '\0')
+        {
+            return param_1;
+        }
+
+        piVar2 = param_1 + 3;
+        WRITE_SLOT(piVar2);
+
+        pfVar5 = reinterpret_cast<float*>(param_1 + 5);
+        WRITE_SLOT(pfVar5);
+
+        pfVar6 = reinterpret_cast<float*>(param_1 + 4);
+        WRITE_SLOT(pfVar6);
+
+        *piVar2 = _DAT_10024f90;
+
+        fVar9 = static_cast<float>(DAT_1003c250);
+        if (DAT_1003c250 < 0)
+            fVar9 = fVar9 + _DAT_10024e90;
+        *pfVar6 = fVar9;
+
+        fVar9 = static_cast<float>(DAT_1003c254);
+        if (DAT_1003c254 < 0)
+            fVar9 = fVar9 + _DAT_10024e90;
+        *pfVar5 = fVar9;
+
+        pcVar14 = reinterpret_cast<char*>(
+            static_cast<std::uintptr_t>(*param_1) + 0x10);
+
+        iVar12 = -static_cast<std::int32_t>(
+            reinterpret_cast<std::uintptr_t>(pcVar14));
+
+        do
+        {
+            cVar8 = *pcVar14;
+            pcVar14[
+                reinterpret_cast<std::uintptr_t>(local_34) + iVar12] =
+                cVar8;
+            pcVar14 = pcVar14 + 1;
+        }
+        while (cVar8 != '\0');
+
+        puVar13 = reinterpret_cast<std::uint32_t*>(local_34 - 1);
+
+        do
+        {
+            pcVar14 = reinterpret_cast<char*>(
+                reinterpret_cast<std::uintptr_t>(puVar13) + 1);
+            puVar13 = reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(puVar13) + 1);
+        }
+        while (*pcVar14 != '\0');
+
+        *puVar13 = DAT_10024a14;
+        iVar12 = texture_lookup(local_8, local_34);
+
+        if (iVar12 != 0)
+        {
+            WRITE_SLOT(param_1);
+            *param_1 = iVar12;
+        }
+
+        return param_1;
+    }
+
+    if (uVar11 == 0xff3c)
+    {
+        iVar12 = DAT_10037594[0];
+        goto WRITE_PALETTE;
+    }
+
+    if (uVar11 == 0xaf00ff)
+    {
+        iVar12 = DAT_10037594[1];
+        goto WRITE_PALETTE;
+    }
+
+    if (uVar11 == 0xffff00)
+    {
+        iVar12 = DAT_10037594[2];
+        goto WRITE_PALETTE;
+    }
+
+    if (uVar11 == 0xff00ff)
+    {
+        iVar12 = DAT_10037594[3];
+        goto WRITE_PALETTE;
+    }
+
+    if (uVar11 == 0xff1200)
+    {
+        puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);
+        WRITE_SLOT(puVar1);
+
+        if (DAT_1003aef0 == '\0')
+        {
+            *reinterpret_cast<std::uint8_t*>(
+                reinterpret_cast<std::uint8_t*>(param_1) + 7) = 0;
+            return param_1;
+        }
+
+        *puVar1 = *puVar1 | 0xffffff;
+        return param_1;
+    }
+
+    if (uVar11 == 0xff1000)
+    {
+        puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);
+        WRITE_SLOT(puVar1);
+        *puVar1 = *puVar1 | 0xffffff;
+
+        if (DAT_1003aeec == '\0')
+            return param_1;
+
+        piVar2 = param_1 + 3;
+        WRITE_SLOT(piVar2);
+
+        piVar3 = param_1 + 5;
+        WRITE_SLOT(piVar3);
+
+        *piVar2 = _DAT_10024f94;
+        *piVar3 = 0;
+
+        pcVar14 = reinterpret_cast<char*>(
+            static_cast<std::uintptr_t>(*param_1) + 0x10);
+
+        iVar12 = -static_cast<std::int32_t>(
+            reinterpret_cast<std::uintptr_t>(pcVar14));
+
+        do
+        {
+            cVar8 = *pcVar14;
+            pcVar14[
+                reinterpret_cast<std::uintptr_t>(local_34) + iVar12] =
+                cVar8;
+            pcVar14 = pcVar14 + 1;
+        }
+        while (cVar8 != '\0');
+
+        puVar13 = reinterpret_cast<std::uint32_t*>(local_34 - 1);
+
+        do
+        {
+            pcVar14 = reinterpret_cast<char*>(
+                reinterpret_cast<std::uintptr_t>(puVar13) + 1);
+            puVar13 = reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(puVar13) + 1);
+        }
+        while (*pcVar14 != '\0');
+
+        *puVar13 = DAT_10024a14;
+        goto LOOKUP_TEXTURE;
+    }
+
+    iVar12 = FUN_10008e00();
+
+    if (*reinterpret_cast<std::int32_t*>(
+            *reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(iVar12) + 0x28) +
+            0x350) == 0)
+    {
+        return param_1;
+    }
+
+    uVar15 = 0xff;
+    iVar12 = 0;
+
+    while (uVar11 != uVar15)
+    {
+        uVar15 = uVar15 - 1;
+        iVar12 = iVar12 + 1;
+
+        if (static_cast<std::int32_t>(uVar15) < 0xf0)
+            return param_1;
+    }
+
+    iVar16 = FUN_10008e00();
+
+    iVar12 =
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(iVar16) + 0x28) +
+        0x354 + iVar12 * 0x14;
+
+    piVar2 = param_1 + 1;
+    WRITE_SLOT(piVar2);
+
+    iVar16 =
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(iVar12) + 0xc);
+
+    *reinterpret_cast<std::uint16_t*>(piVar2) =
+        *reinterpret_cast<std::uint16_t*>(
+            static_cast<std::uintptr_t>(iVar16) + 8);
+
+    *reinterpret_cast<std::uint8_t*>(
+        reinterpret_cast<std::uint8_t*>(param_1) + 6) =
+        *reinterpret_cast<std::uint8_t*>(
+            static_cast<std::uintptr_t>(iVar16) + 10);
+
+    if (*reinterpret_cast<char*>(
+            static_cast<std::uintptr_t>(iVar12) + 9) == '\0')
+    {
+        return param_1;
+    }
+
+    piVar2 = param_1 + 3;
+    WRITE_SLOT(piVar2);
+
+    piVar3 = param_1 + 5;
+    WRITE_SLOT(piVar3);
+
+    piVar4 = param_1 + 4;
+    WRITE_SLOT(piVar4);
+
+    *piVar2 = _DAT_10024f94;
+    *piVar4 = 0;
+    *piVar3 = 0;
+
+    pcVar14 = reinterpret_cast<char*>(
+        static_cast<std::uintptr_t>(*param_1) + 0x10);
+
+    iVar12 = -static_cast<std::int32_t>(
+        reinterpret_cast<std::uintptr_t>(pcVar14));
+
+    do
+    {
+        cVar8 = *pcVar14;
+        pcVar14[
+            reinterpret_cast<std::uintptr_t>(local_34) + iVar12] =
+            cVar8;
+        pcVar14 = pcVar14 + 1;
+    }
+    while (cVar8 != '\0');
+
+    puVar13 = reinterpret_cast<std::uint32_t*>(local_34 - 1);
+
+    do
+    {
+        pcVar14 = reinterpret_cast<char*>(
+            reinterpret_cast<std::uintptr_t>(puVar13) + 1);
+        puVar13 = reinterpret_cast<std::uint32_t*>(
+            reinterpret_cast<std::uintptr_t>(puVar13) + 1);
+    }
+    while (*pcVar14 != '\0');
+
+    *puVar13 = DAT_10024a14;
+
+LOOKUP_TEXTURE:
+    iVar12 = texture_lookup(local_8, local_34);
+
+    if (iVar12 != 0)
+    {
+        WRITE_SLOT(param_1);
+        *param_1 = iVar12;
+    }
+
+    return param_1;
+
+WRITE_PALETTE:
+    puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);
+    WRITE_SLOT(puVar1);
+
+    if (DAT_1003c1fc != 0 &&
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(local_c) + 0x30) != 0 &&
+        iVar12 < static_cast<std::int32_t>(
+            *reinterpret_cast<std::uint8_t*>(
+                static_cast<std::uintptr_t>(local_c) + 0x2c)))
+    {
+        iVar16 =
+            *reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(local_c) + 0x30) +
+            iVar12 * 4;
+
+        *reinterpret_cast<std::uint8_t*>(puVar1) =
+            *reinterpret_cast<std::uint8_t*>(
+                static_cast<std::uintptr_t>(iVar16));
+
+        *reinterpret_cast<std::uint8_t*>(
+            reinterpret_cast<std::uint8_t*>(param_1) + 5) =
+            *reinterpret_cast<std::uint8_t*>(
+                static_cast<std::uintptr_t>(iVar16) + 1);
+
+        *reinterpret_cast<std::uint8_t*>(
+            reinterpret_cast<std::uint8_t*>(param_1) + 6) =
+            *reinterpret_cast<std::uint8_t*>(
+                static_cast<std::uintptr_t>(iVar16) + 2);
+
+        return param_1;
+    }
+
+    puVar17 = palette_lookup(iVar12);
+    *reinterpret_cast<std::uint8_t*>(param_1 + 1) = *puVar17;
+
+    iVar16 = static_cast<std::int32_t>(
+        reinterpret_cast<std::uintptr_t>(
+            palette_lookup(iVar12)));
+
+    *reinterpret_cast<std::uint8_t*>(
+        reinterpret_cast<std::uint8_t*>(param_1) + 5) =
+        *reinterpret_cast<std::uint8_t*>(
+            static_cast<std::uintptr_t>(iVar16) + 1);
+
+    iVar12 = static_cast<std::int32_t>(
+        reinterpret_cast<std::uintptr_t>(
+            palette_lookup(iVar12)));
+
+    *reinterpret_cast<std::uint8_t*>(
+        reinterpret_cast<std::uint8_t*>(param_1) + 6) =
+        *reinterpret_cast<std::uint8_t*>(
+            static_cast<std::uintptr_t>(iVar12) + 2);
+
+    return param_1;
+
+#undef WRITE_SLOT
+}

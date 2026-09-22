@@ -1,1 +1,28 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __stdcall _JumpToContinuation(`n    void*,`n    void*)`n{`n    __asm {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        push ecx`n        push ebx`n        mov eax, dword ptr [ebp + 0ch]`n        add eax, 0ch`n        mov dword ptr [ebp - 4], eax`n        mov ebx, dword ptr fs:[0]`n        mov eax, dword ptr [ebx]`n        mov dword ptr fs:[0], eax`n        mov eax, dword ptr [ebp + 8]`n        mov ebx, dword ptr [ebp + 0ch]`n        mov ebp, dword ptr [ebp - 4]`n        mov esp, dword ptr [ebx - 4]`n        jmp eax`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+#pragma warning(disable:4733)
+extern "C" __declspec(naked) void __stdcall _JumpToContinuation(
+    void*,
+    void*)
+{
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        push ecx
+        push ebx
+        mov eax, dword ptr [ebp + 0ch]
+        add eax, 0ch
+        mov dword ptr [ebp - 4], eax
+        mov ebx, dword ptr fs:[0]
+        mov eax, dword ptr [ebx]
+        mov dword ptr fs:[0], eax
+        mov eax, dword ptr [ebp + 8]
+        mov ebx, dword ptr [ebp + 0ch]
+        mov ebp, dword ptr [ebp - 4]
+        mov esp, dword ptr [ebx - 4]
+        jmp eax
+    }
+}

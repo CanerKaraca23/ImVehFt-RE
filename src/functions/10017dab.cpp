@@ -1,1 +1,23 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void* DAT_10029d70;`n`nextern "C" int __cdecl __mtinitlocknum(int _File);`nextern "C" [[noreturn]] void __cdecl __amsg_exit(int _Message);`nextern "C" void __stdcall EnterCriticalSection(void* lpCriticalSection);`n`nextern "C" void __cdecl __lock(int _File)`n{`n    void** lockTable = reinterpret_cast<void**>(&DAT_10029d70);`n`n    if (lockTable[_File * 2] == nullptr) {`n        int result = __mtinitlocknum(_File);`n        if (result == 0) {`n            __amsg_exit(0x11);`n        }`n    }`n`n    EnterCriticalSection(lockTable[_File * 2]);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void* DAT_10029d70;
+
+extern "C" int __cdecl __mtinitlocknum(int _File);
+extern "C" [[noreturn]] void __cdecl __amsg_exit(int _Message);
+extern "C" void __stdcall EnterCriticalSection(void* lpCriticalSection);
+
+extern "C" void __cdecl __lock(int _File)
+{
+    void** lockTable = reinterpret_cast<void**>(&DAT_10029d70);
+
+    if (lockTable[_File * 2] == nullptr) {
+        int result = __mtinitlocknum(_File);
+        if (result == 0) {
+            __amsg_exit(0x11);
+        }
+    }
+
+    EnterCriticalSection(lockTable[_File * 2]);
+}

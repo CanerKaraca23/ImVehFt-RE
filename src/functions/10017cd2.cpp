@@ -1,1 +1,11 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void* DAT_10029d70;`n`nextern "C" void __stdcall LeaveCriticalSection(void* lpCriticalSection);`n`nextern "C" void __cdecl FUN_10017cd2(int param_1)`n{`n    LeaveCriticalSection(`n        reinterpret_cast<void**>(&DAT_10029d70)[param_1 * 2]);`n}`n
+#include <cstdint>
+
+extern "C" void* DAT_10029d70;
+
+extern "C" void __stdcall LeaveCriticalSection(void* lpCriticalSection);
+
+extern "C" void __cdecl FUN_10017cd2(int param_1)
+{
+    LeaveCriticalSection(
+        reinterpret_cast<void**>(&DAT_10029d70)[param_1 * 2]);
+}

@@ -1,1 +1,124 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <intrin.h>`n#include <stdio.h>`n#include <cstdint>`n#include <intrin.h>`n`nextern "C" bool __cdecl __handle_exc(`n    std::uint32_t,`n    double*,`n    std::uint32_t);`n`nextern "C" void __cdecl __raise_exc(`n    std::uint32_t*,`n    std::uint32_t*,`n    std::uint32_t,`n    int,`n    std::uint32_t*,`n    std::uint32_t*);`n`nextern "C" int __cdecl __ctrlfp(unsigned int new_control, unsigned int control_mask);`nextern "C" std::uint32_t __stdcall FUN_1002044b(void);`nextern "C" void __cdecl __set_errno_from_matherr(int);`nextern "C" void __fastcall __security_check_cookie(std::uintptr_t);`n`nextern "C" std::uint32_t DAT_10029490;`nextern "C" std::uint32_t DAT_100396d8;`n`nextern "C" void __cdecl __87except(`n    int param_1,`n    int* param_2,`n    std::uint16_t* param_3)`n{`n    const std::uint32_t local_14 =`n        DAT_10029490 ^`n        static_cast<std::uint32_t>(`n            reinterpret_cast<std::uintptr_t>(_AddressOfReturnAddress()) &`n            ~static_cast<std::uintptr_t>(0x0f));`n`n    const std::uint32_t local_98 = static_cast<std::uint32_t>(*param_3);`n`n    std::uint32_t local_94;`n    std::uint32_t local_90[12];`n    std::uint64_t local_60;`n    std::uint32_t local_50;`n`n    const int iVar2 = *param_2;`n`n    if (iVar2 == 1)`n    {`n        local_94 = 8;`n    }`n    else if (iVar2 == 2)`n    {`n        local_94 = 4;`n    }`n    else if (iVar2 == 3)`n    {`n        local_94 = 0x11;`n    }`n    else if (iVar2 == 4)`n    {`n        local_94 = 0x12;`n    }`n    else`n    {`n        if (iVar2 == 5)`n        {`n            local_94 = 8;`n        }`n        else if (iVar2 == 7)`n        {`n            *param_2 = 1;`n            goto finish;`n        }`n        else`n        {`n            if (iVar2 != 8)`n            {`n                goto finish;`n            }`n`n            local_94 = 0x10;`n        }`n    }`n`n    if (!__handle_exc(`n            local_94,`n            reinterpret_cast<double*>(param_2 + 6),`n            local_98))`n    {`n        if ((param_1 == 0x10) ||`n            (param_1 == 0x16) ||`n            (param_1 == 0x1d))`n        {`n            local_60 = *reinterpret_cast<std::uint64_t*>(param_2 + 4);`n            local_50 = (local_50 & 0xffffffe3U) | 3U;`n        }`n        else`n        {`n            local_50 = local_50 & 0xfffffffeU;`n        }`n`n        __raise_exc(`n            local_90,`n            const_cast<std::uint32_t*>(&local_98),`n            local_94,`n            param_1,`n            reinterpret_cast<std::uint32_t*>(param_2 + 2),`n            reinterpret_cast<std::uint32_t*>(param_2 + 6));`n    }`n`nfinish:`n    __ctrlfp(local_98, 0xffffU);`n`n    if ((*param_2 != 8) &&`n        (DAT_100396d8 == 0) &&`n        (FUN_1002044b() != 0))`n    {`n        __security_check_cookie(local_14);`n        return;`n    }`n`n    __set_errno_from_matherr(*param_2);`n`n    __security_check_cookie(local_14);`n    return;`n}`n
+#include <cstdint>
+#include <intrin.h>
+
+extern "C" bool __cdecl __handle_exc(
+    std::uint32_t,
+    double*,
+    std::uint32_t);
+
+extern "C" void __cdecl __raise_exc(
+    std::uint32_t*,
+    std::uint32_t*,
+    std::uint32_t,
+    int,
+    std::uint32_t*,
+    std::uint32_t*);
+
+extern "C" int __stdcall __ctrlfp(void);
+extern "C" std::uint32_t __stdcall FUN_1002044b(void);
+extern "C" void __cdecl __set_errno_from_matherr(int);
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
+
+extern "C" std::uint32_t DAT_10029490;
+extern "C" std::uint32_t DAT_100396d8;
+
+void __cdecl __87except(
+    int param_1,
+    int* param_2,
+    std::uint16_t* param_3)
+{
+    const std::uint32_t local_14 =
+        DAT_10029490 ^
+        static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(_AddressOfReturnAddress()) &
+            ~static_cast<std::uintptr_t>(0x0f));
+
+    const std::uint32_t local_98 = static_cast<std::uint32_t>(*param_3);
+
+    std::uint32_t local_94;
+    std::uint32_t local_90[12];
+    std::uint64_t local_60;
+    std::uint32_t local_50;
+
+    const int iVar2 = *param_2;
+
+    if (iVar2 == 1)
+    {
+        local_94 = 8;
+    }
+    else if (iVar2 == 2)
+    {
+        local_94 = 4;
+    }
+    else if (iVar2 == 3)
+    {
+        local_94 = 0x11;
+    }
+    else if (iVar2 == 4)
+    {
+        local_94 = 0x12;
+    }
+    else
+    {
+        if (iVar2 == 5)
+        {
+            local_94 = 8;
+        }
+        else if (iVar2 == 7)
+        {
+            *param_2 = 1;
+            goto finish;
+        }
+        else
+        {
+            if (iVar2 != 8)
+            {
+                goto finish;
+            }
+
+            local_94 = 0x10;
+        }
+    }
+
+    if (!__handle_exc(
+            local_94,
+            reinterpret_cast<double*>(param_2 + 6),
+            local_98))
+    {
+        if ((param_1 == 0x10) ||
+            (param_1 == 0x16) ||
+            (param_1 == 0x1d))
+        {
+            local_60 = *reinterpret_cast<std::uint64_t*>(param_2 + 4);
+            local_50 = (local_50 & 0xffffffe3U) | 3U;
+        }
+        else
+        {
+            local_50 = local_50 & 0xfffffffeU;
+        }
+
+        __raise_exc(
+            local_90,
+            const_cast<std::uint32_t*>(&local_98),
+            local_94,
+            param_1,
+            reinterpret_cast<std::uint32_t*>(param_2 + 2),
+            reinterpret_cast<std::uint32_t*>(param_2 + 6));
+    }
+
+finish:
+    __ctrlfp();
+
+    if ((*param_2 != 8) &&
+        (DAT_100396d8 == 0) &&
+        (FUN_1002044b() != 0))
+    {
+        __security_check_cookie(local_14);
+        return;
+    }
+
+    __set_errno_from_matherr(*param_2);
+
+    __security_check_cookie(local_14);
+    return;
+}

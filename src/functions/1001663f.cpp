@@ -1,1 +1,80 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`n`nextern "C" unsigned long* __cdecl ___doserrno();`nextern "C" int* __cdecl __errno();`nextern "C" void __cdecl ___lock_fhandle(int _FileHandle);`nextern "C" int __cdecl __read_nolock(`n    int _FileHandle,`n    void* _DstBuf,`n    unsigned int _MaxCharCount);`nextern "C" void __stdcall FUN_1001189f();`nextern "C" void __stdcall FUN_1001672d(void);`n`nextern "C" unsigned int DAT_1003c418;`nextern "C" unsigned char* DAT_1003c420[];`n`nextern "C" int __cdecl __read(`n    int _FileHandle,`n    void* _DstBuf,`n    unsigned int _MaxCharCount)`n{`n    __SEH_prolog4(0x10028420u, 0x10u);`n    if (_FileHandle == -2)`n    {`n        *___doserrno() = 0;`n        *__errno() = 9;`n`n        __SEH_epilog4();`n        return -1;`n    }`n`n    if ((-1 < _FileHandle) &&`n        (static_cast<unsigned int>(_FileHandle) < DAT_1003c418))`n    {`n        const int offset = (_FileHandle & 0x1fU) * 0x40;`n`n        if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + offset) & 1) != 0)`n        {`n            if (_MaxCharCount < 0x80000000U)`n            {`n                ___lock_fhandle(_FileHandle);`n`n                int result;`n                if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + offset) & 1) == 0)`n                {`n                    *__errno() = 9;`n                    *___doserrno() = 0;`n                    result = -1;`n                }`n                else`n                {`n                    result = __read_nolock(`n                        _FileHandle,`n                        _DstBuf,`n                        _MaxCharCount);`n                }`n`n                FUN_1001672d();`n                __SEH_epilog4();`n                return result;`n            }`n`n            *___doserrno() = 0;`n            *__errno() = 0x16;`n            goto LAB_1001668d;`n        }`n    }`n`n    *___doserrno() = 0;`n    *__errno() = 9;`n`nLAB_1001668d:`n    FUN_1001189f();`n`n    __SEH_epilog4();`n    return -1;`n}`n
+#include <cstdint>
+
+extern "C" void __cdecl __SEH_prolog4();
+extern "C" void __cdecl __SEH_epilog4();
+
+extern "C" unsigned long* __cdecl ___doserrno();
+extern "C" int* __cdecl __errno();
+extern "C" void __cdecl ___lock_fhandle(int _FileHandle);
+extern "C" int __cdecl __read_nolock(
+    int _FileHandle,
+    void* _DstBuf,
+    unsigned int _MaxCharCount);
+extern "C" void __stdcall FUN_1001189f();
+extern "C" void __stdcall FUN_1001672d();
+
+extern "C" unsigned int DAT_1003c418;
+extern "C" unsigned char* DAT_1003c420[];
+
+extern "C" int __cdecl __read(
+    int _FileHandle,
+    void* _DstBuf,
+    unsigned int _MaxCharCount)
+{
+    __SEH_prolog4();
+
+    if (_FileHandle == -2)
+    {
+        *___doserrno() = 0;
+        *__errno() = 9;
+
+        __SEH_epilog4();
+        return -1;
+    }
+
+    if ((-1 < _FileHandle) &&
+        (static_cast<unsigned int>(_FileHandle) < DAT_1003c418))
+    {
+        const int offset = (_FileHandle & 0x1fU) * 0x40;
+
+        if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + offset) & 1) != 0)
+        {
+            if (_MaxCharCount < 0x80000000U)
+            {
+                ___lock_fhandle(_FileHandle);
+
+                int result;
+                if ((*(DAT_1003c420[_FileHandle >> 5] + 4 + offset) & 1) == 0)
+                {
+                    *__errno() = 9;
+                    *___doserrno() = 0;
+                    result = -1;
+                }
+                else
+                {
+                    result = __read_nolock(
+                        _FileHandle,
+                        _DstBuf,
+                        _MaxCharCount);
+                }
+
+                FUN_1001672d();
+                __SEH_epilog4();
+                return result;
+            }
+
+            *___doserrno() = 0;
+            *__errno() = 0x16;
+            goto LAB_1001668d;
+        }
+    }
+
+    *___doserrno() = 0;
+    *__errno() = 9;
+
+LAB_1001668d:
+    FUN_1001189f();
+
+    __SEH_epilog4();
+    return -1;
+}

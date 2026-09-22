@@ -1,1 +1,6 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t __stdcall FUN_1002044b()`n{`n    return 0;`n}`n
+#include <cstdint>
+
+extern "C" std::uint32_t __stdcall FUN_1002044b()
+{
+    return 0;
+}

@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __cdecl FUN_10011032(void)`n{`n    __asm {`n        cmp dword ptr [ebp + 10h], edi`n        jne done`n        mov eax, 10029c0ch`n        cmp dword ptr [eax], -1`n        je done`n        mov eax, 10014c86h`n        call eax`n    done:`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __stdcall FUN_10011032(void)
+{
+    __asm {
+        cmp dword ptr [ebp + 10h], edi
+        jne done
+        mov eax, 10029c0ch
+        cmp dword ptr [eax], -1
+        je done
+        mov eax, 10014c86h
+        call eax
+    done:
+        ret
+    }
+}

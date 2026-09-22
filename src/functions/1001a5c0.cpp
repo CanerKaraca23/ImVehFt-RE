@@ -1,1 +1,44 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" char* __cdecl _strpbrk(char* _Str, char* _Control)`n{`n    std::uint8_t abStack_28[32]{};`n`n    while (true)`n    {`n        const std::uint8_t bVar1 =`n            *reinterpret_cast<std::uint8_t*>(_Control);`n`n        if (bVar1 == 0)`n        {`n            break;`n        }`n`n        _Control = _Control + 1;`n        abStack_28[static_cast<unsigned int>(bVar1) >> 3] =`n            static_cast<std::uint8_t>(`n                abStack_28[static_cast<unsigned int>(bVar1) >> 3] |`n                (1 << (bVar1 & 7)));`n    }`n`n    std::uint8_t* pbVar2;`n    std::uint8_t bVar1;`n`n    do`n    {`n        pbVar2 = reinterpret_cast<std::uint8_t*>(_Str);`n        bVar1 = *pbVar2;`n`n        if (bVar1 == 0)`n        {`n            return nullptr;`n        }`n`n        _Str = reinterpret_cast<char*>(pbVar2 + 1);`n    }`n    while ((abStack_28[static_cast<unsigned int>(bVar1) >> 3] >>`n            (bVar1 & 7) &`n            1) == 0);`n`n    return reinterpret_cast<char*>(pbVar2);`n}`n
+#include <cstdint>
+
+extern "C" char* __cdecl _strpbrk(char* _Str, char* _Control)
+{
+    std::uint8_t abStack_28[32]{};
+
+    while (true)
+    {
+        const std::uint8_t bVar1 =
+            *reinterpret_cast<std::uint8_t*>(_Control);
+
+        if (bVar1 == 0)
+        {
+            break;
+        }
+
+        _Control = _Control + 1;
+        abStack_28[static_cast<unsigned int>(bVar1) >> 3] =
+            static_cast<std::uint8_t>(
+                abStack_28[static_cast<unsigned int>(bVar1) >> 3] |
+                (1 << (bVar1 & 7)));
+    }
+
+    std::uint8_t* pbVar2;
+    std::uint8_t bVar1;
+
+    do
+    {
+        pbVar2 = reinterpret_cast<std::uint8_t*>(_Str);
+        bVar1 = *pbVar2;
+
+        if (bVar1 == 0)
+        {
+            return nullptr;
+        }
+
+        _Str = reinterpret_cast<char*>(pbVar2 + 1);
+    }
+    while ((abStack_28[static_cast<unsigned int>(bVar1) >> 3] >>
+            (bVar1 & 7) &
+            1) == 0);
+
+    return reinterpret_cast<char*>(pbVar2);
+}

@@ -1,1 +1,110 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <cstdint>`n#include <cstdlib>`n#include <windows.h>`n`nextern std::uint32_t _DAT_1003c3fc;`nextern std::uint8_t* _DAT_00b74494;`nextern HANDLE DAT_1003c3e8;`nextern int* DAT_1003c3ec;`n`nextern int __stdcall FUN_10009360();`nextern __declspec(noreturn) void __stdcall FUN_100095f0();`nextern void __stdcall FUN_100094d0();`nextern "C" void __stdcall thunk_FUN_10009580();`n`n`n`nvoid __stdcall FUN_1000d030()`n{`n    int iVar1;`n    int iVar2;`n    int* piVar3;`n    LPVOID pvVar4;`n    HANDLE pvVar5;`n    int iVar6;`n`n    iVar2 = FUN_10009360();`n`n    if (*reinterpret_cast<int*>(iVar2 + 0x40) != 0)`n        return;`n`n    iVar1 = *reinterpret_cast<int*>(_DAT_00b74494 + 8);`n    iVar6 = *reinterpret_cast<int*>(iVar2 + 0x44) * iVar1;`n`n    if ((_DAT_1003c3fc & 1u) == 0)`n    {`n        _DAT_1003c3fc |= 1u;`n        DAT_1003c3e8 = nullptr;`n        DAT_1003c3ec = nullptr;`n        std::atexit(reinterpret_cast<void (__cdecl*)()>(thunk_FUN_10009580));`n    }`n`n    if (DAT_1003c3ec == nullptr)`n    {`n        if (DAT_1003c3e8 == nullptr)`n            goto LAB_1000d09b;`n`nLAB_1000d0be:`n        if (DAT_1003c3ec != nullptr ||`n            ((DAT_1003c3ec = static_cast<int*>(`n                  MapViewOfFile(DAT_1003c3e8, 0xF001Fu, 0, 0, 0))),`n             DAT_1003c3ec != nullptr))`n        {`n            piVar3 = DAT_1003c3ec;`n            pvVar5 = DAT_1003c3e8;`n`n            if (DAT_1003c3e8 != nullptr && *DAT_1003c3ec == 0)`n            {`n                FUN_100095f0();`n            }`n`n            goto LAB_1000d0ee;`n        }`n    }`n    else`n    {`n        piVar3 = DAT_1003c3ec;`n        pvVar5 = DAT_1003c3e8;`n`n        if (DAT_1003c3e8 != nullptr)`n            goto LAB_1000d10e;`n`nLAB_1000d09b:`n        DAT_1003c3e8 =`n            OpenFileMappingA(0xF001Fu, FALSE, "GTA_PLUGIN_SDK");`n`n        piVar3 = DAT_1003c3ec;`n        pvVar5 = DAT_1003c3e8;`n`n        if (DAT_1003c3e8 != nullptr)`n            goto LAB_1000d0be;`n`nLAB_1000d0ee:`n        if (piVar3 != nullptr && pvVar5 != nullptr)`n            goto LAB_1000d10e;`n    }`n`n    FUN_100094d0();`n    piVar3 = DAT_1003c3ec;`n    pvVar5 = DAT_1003c3e8;`n`nLAB_1000d10e:`n    if (piVar3 == nullptr || pvVar5 == nullptr)`n        FUN_100095f0();`n`n    pvVar4 = HeapAlloc(`n        reinterpret_cast<HANDLE>(piVar3[1]),`n        0,`n        static_cast<SIZE_T>(iVar6 + iVar1 * 4));`n`n    *reinterpret_cast<LPVOID*>(iVar2 + 0x40) = pvVar4;`n`n    const std::uint32_t address =`n        static_cast<std::uint32_t>(`n            reinterpret_cast<std::uintptr_t>(pvVar4));`n`n    *reinterpret_cast<LPVOID*>(iVar2 + 0x48) =`n        reinterpret_cast<LPVOID>(`n            static_cast<std::uintptr_t>(`n                address + static_cast<std::uint32_t>(iVar6)));`n}`n
+#include <cstdint>
+#include <cstdlib>
+#include <windows.h>
+
+extern std::uint32_t _DAT_1003c3fc;
+extern std::uint8_t* _DAT_00b74494;
+extern HANDLE DAT_1003c3e8;
+extern int* DAT_1003c3ec;
+
+extern "C" int __stdcall FUN_10009360();
+extern "C" __declspec(noreturn) void __stdcall FUN_100095f0();
+extern "C" void __stdcall FUN_100094d0();
+extern "C" void __stdcall thunk_FUN_10009580();
+
+
+
+void __stdcall FUN_1000d030()
+{
+    int iVar1;
+    int iVar2;
+    int* piVar3;
+    LPVOID pvVar4;
+    HANDLE pvVar5;
+    int iVar6;
+
+    iVar2 = FUN_10009360();
+
+    if (*reinterpret_cast<int*>(iVar2 + 0x40) != 0)
+        return;
+
+    iVar1 = *reinterpret_cast<int*>(_DAT_00b74494 + 8);
+    iVar6 = *reinterpret_cast<int*>(iVar2 + 0x44) * iVar1;
+
+    if ((_DAT_1003c3fc & 1u) == 0)
+    {
+        _DAT_1003c3fc |= 1u;
+        DAT_1003c3e8 = nullptr;
+        DAT_1003c3ec = nullptr;
+        std::atexit(reinterpret_cast<void (__cdecl*)()>(thunk_FUN_10009580));
+    }
+
+    if (DAT_1003c3ec == nullptr)
+    {
+        if (DAT_1003c3e8 == nullptr)
+            goto LAB_1000d09b;
+
+LAB_1000d0be:
+        if (DAT_1003c3ec != nullptr ||
+            ((DAT_1003c3ec = static_cast<int*>(
+                  MapViewOfFile(DAT_1003c3e8, 0xF001Fu, 0, 0, 0))),
+             DAT_1003c3ec != nullptr))
+        {
+            piVar3 = DAT_1003c3ec;
+            pvVar5 = DAT_1003c3e8;
+
+            if (DAT_1003c3e8 != nullptr && *DAT_1003c3ec == 0)
+            {
+                FUN_100095f0();
+            }
+
+            goto LAB_1000d0ee;
+        }
+    }
+    else
+    {
+        piVar3 = DAT_1003c3ec;
+        pvVar5 = DAT_1003c3e8;
+
+        if (DAT_1003c3e8 != nullptr)
+            goto LAB_1000d10e;
+
+LAB_1000d09b:
+        DAT_1003c3e8 =
+            OpenFileMappingA(0xF001Fu, FALSE, "GTA_PLUGIN_SDK");
+
+        piVar3 = DAT_1003c3ec;
+        pvVar5 = DAT_1003c3e8;
+
+        if (DAT_1003c3e8 != nullptr)
+            goto LAB_1000d0be;
+
+LAB_1000d0ee:
+        if (piVar3 != nullptr && pvVar5 != nullptr)
+            goto LAB_1000d10e;
+    }
+
+    FUN_100094d0();
+    piVar3 = DAT_1003c3ec;
+    pvVar5 = DAT_1003c3e8;
+
+LAB_1000d10e:
+    if (piVar3 == nullptr || pvVar5 == nullptr)
+        FUN_100095f0();
+
+    pvVar4 = HeapAlloc(
+        reinterpret_cast<HANDLE>(piVar3[1]),
+        0,
+        static_cast<SIZE_T>(iVar6 + iVar1 * 4));
+
+    *reinterpret_cast<LPVOID*>(iVar2 + 0x40) = pvVar4;
+
+    const std::uint32_t address =
+        static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(pvVar4));
+
+    *reinterpret_cast<LPVOID*>(iVar2 + 0x48) =
+        reinterpret_cast<LPVOID>(
+            static_cast<std::uintptr_t>(
+                address + static_cast<std::uint32_t>(iVar6)));
+}

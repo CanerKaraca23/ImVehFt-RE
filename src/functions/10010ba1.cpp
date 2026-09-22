@@ -1,1 +1,136 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n#include <new>`n`nstruct pthreadmbcinfo;`nstruct pthreadlocinfo`n{`n    std::uint8_t _reserved_00[0x14];`n    struct LocaleCategory0`n    {`n        wchar_t* wlocale;`n    } lc_category[1];`n};`n`nstruct localeinfo_struct`n{`n    pthreadlocinfo* locinfo;`n    pthreadmbcinfo* mbcinfo;`n};`n`nstruct _ptiddata`n{`n    std::uint8_t _reserved_00[0x68];`n    pthreadmbcinfo* ptmbcinfo;`n    pthreadlocinfo* ptlocinfo;`n    std::uint32_t _ownlocale;`n};`n`nstruct _LocaleUpdate`n{`n    pthreadlocinfo* locinfo;`n    pthreadmbcinfo* mbcinfo;`n    _ptiddata* ptd;`n    std::uint8_t updated;`n    _LocaleUpdate(localeinfo_struct* locale);`n};`n`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`nextern "C" int __cdecl ___ascii_strnicmp(char*, char*, std::size_t);`nextern "C" int __cdecl __tolower_l(int, _LocaleUpdate*);`n`nextern "C" int __cdecl __strnicmp_l(`n    char* _Str1,`n    char* _Str2,`n    std::size_t _MaxCount,`n    _locale_t _Locale)`n{`n    int* piVar1;`n    int iVar2;`n    int iVar3;`n    int iVar4;`n    alignas(_LocaleUpdate) std::uint8_t local_storage[sizeof(_LocaleUpdate)];`n    _LocaleUpdate* local_14 = reinterpret_cast<_LocaleUpdate*>(local_storage);`n`n    if (_MaxCount == 0)`n    {`n        iVar2 = 0;`n    }`n    else`n    {`n        ::new (static_cast<void*>(local_14)) _LocaleUpdate(reinterpret_cast<localeinfo_struct*>(_Locale));`n`n        if ((_Str1 == nullptr) || (_Str2 == nullptr))`n        {`n            piVar1 = __errno();`n            *piVar1 = 0x16;`n            FUN_1001189f();`n`n            if (local_14->updated != 0)`n            {`n                local_14->ptd->_ownlocale &= ~2U;`n            }`n`n            iVar2 = 0x7fffffff;`n        }`n        else if (_MaxCount < 0x80000000U)`n        {`n            if (local_14->locinfo->lc_category[0].wlocale == nullptr)`n            {`n                iVar2 = ___ascii_strnicmp(_Str1, _Str2, _MaxCount);`n            }`n            else`n            {`n                iVar4 = static_cast<int>(`n                    reinterpret_cast<std::uintptr_t>(_Str1)) -`n                    static_cast<int>(`n                        reinterpret_cast<std::uintptr_t>(_Str2));`n`n                do`n                {`n                    iVar2 = __tolower_l(`n                        static_cast<unsigned int>(`n                            static_cast<unsigned char>(_Str2[iVar4])),`n                        local_14);`n`n                    iVar3 = __tolower_l(`n                        static_cast<unsigned int>(`n                            static_cast<unsigned char>(*_Str2)),`n                        local_14);`n`n                    _Str2 = _Str2 + 1;`n                    _MaxCount = _MaxCount - 1;`n`n                    if ((_MaxCount == 0) || (iVar2 == 0))`n                    {`n                        break;`n                    }`n                }`n                while (iVar2 == iVar3);`n`n                iVar2 = iVar2 - iVar3;`n            }`n`n            if (local_14->updated != 0)`n            {`n                local_14->ptd->_ownlocale &= ~2U;`n            }`n        }`n        else`n        {`n            piVar1 = __errno();`n            *piVar1 = 0x16;`n            FUN_1001189f();`n`n            if (local_14->updated != 0)`n            {`n                local_14->ptd->_ownlocale &= ~2U;`n            }`n`n            iVar2 = 0x7fffffff;`n        }`n    }`n`n    return iVar2;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <new>
+
+struct pthreadmbcinfo;
+struct pthreadlocinfo
+{
+    std::uint8_t _reserved_00[0x14];
+    struct LocaleCategory0
+    {
+        wchar_t* wlocale;
+    } lc_category[1];
+};
+
+struct localeinfo_struct
+{
+    pthreadlocinfo* locinfo;
+    pthreadmbcinfo* mbcinfo;
+};
+
+struct _ptiddata
+{
+    std::uint8_t _reserved_00[0x68];
+    pthreadmbcinfo* ptmbcinfo;
+    pthreadlocinfo* ptlocinfo;
+    std::uint32_t _ownlocale;
+};
+
+struct _LocaleUpdate
+{
+    pthreadlocinfo* locinfo;
+    pthreadmbcinfo* mbcinfo;
+    _ptiddata* ptd;
+    std::uint8_t updated;
+    _LocaleUpdate(localeinfo_struct* locale);
+};
+
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" int __cdecl ___ascii_strnicmp(char*, char*, std::size_t);
+extern "C" int __cdecl __tolower_l(int, _LocaleUpdate*);
+
+int __cdecl _strnicmp_l(
+    char* _Str1,
+    char* _Str2,
+    std::size_t _MaxCount,
+    _locale_t _Locale)
+{
+    int* piVar1;
+    int iVar2;
+    int iVar3;
+    int iVar4;
+    alignas(_LocaleUpdate) std::uint8_t local_storage[sizeof(_LocaleUpdate)];
+    _LocaleUpdate* local_14 = reinterpret_cast<_LocaleUpdate*>(local_storage);
+
+    if (_MaxCount == 0)
+    {
+        iVar2 = 0;
+    }
+    else
+    {
+        ::new (static_cast<void*>(local_14)) _LocaleUpdate(reinterpret_cast<localeinfo_struct*>(_Locale));
+
+        if ((_Str1 == nullptr) || (_Str2 == nullptr))
+        {
+            piVar1 = __errno();
+            *piVar1 = 0x16;
+            FUN_1001189f();
+
+            if (local_14->updated != 0)
+            {
+                local_14->ptd->_ownlocale &= ~2U;
+            }
+
+            iVar2 = 0x7fffffff;
+        }
+        else if (_MaxCount < 0x80000000U)
+        {
+            if (local_14->locinfo->lc_category[0].wlocale == nullptr)
+            {
+                iVar2 = ___ascii_strnicmp(_Str1, _Str2, _MaxCount);
+            }
+            else
+            {
+                iVar4 = static_cast<int>(
+                    reinterpret_cast<std::uintptr_t>(_Str1)) -
+                    static_cast<int>(
+                        reinterpret_cast<std::uintptr_t>(_Str2));
+
+                do
+                {
+                    iVar2 = __tolower_l(
+                        static_cast<unsigned int>(
+                            static_cast<unsigned char>(_Str2[iVar4])),
+                        local_14);
+
+                    iVar3 = __tolower_l(
+                        static_cast<unsigned int>(
+                            static_cast<unsigned char>(*_Str2)),
+                        local_14);
+
+                    _Str2 = _Str2 + 1;
+                    _MaxCount = _MaxCount - 1;
+
+                    if ((_MaxCount == 0) || (iVar2 == 0))
+                    {
+                        break;
+                    }
+                }
+                while (iVar2 == iVar3);
+
+                iVar2 = iVar2 - iVar3;
+            }
+
+            if (local_14->updated != 0)
+            {
+                local_14->ptd->_ownlocale &= ~2U;
+            }
+        }
+        else
+        {
+            piVar1 = __errno();
+            *piVar1 = 0x16;
+            FUN_1001189f();
+
+            if (local_14->updated != 0)
+            {
+                local_14->ptd->_ownlocale &= ~2U;
+            }
+
+            iVar2 = 0x7fffffff;
+        }
+    }
+
+    return iVar2;
+}

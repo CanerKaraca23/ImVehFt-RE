@@ -1,1 +1,17 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern int DAT_1003aacc;`n`nextern "C" int __cdecl FUN_10001b00(int param_1)`n{`n    int iVar1;`n`n    if ((param_1 != 0) &&`n        (iVar1 = *reinterpret_cast<int*>(DAT_1003aacc + 0xc + param_1), iVar1 != 0))`n    {`n        reinterpret_cast<void (__cdecl *)(int)>(`n            static_cast<std::uintptr_t>(0x7f3820))(iVar1);`n    }`n`n    return param_1;`n}`n
+#include <cstdint>
+
+extern int DAT_1003aacc;
+
+extern "C" int __cdecl FUN_10001b00(int param_1)
+{
+    int iVar1;
+
+    if ((param_1 != 0) &&
+        (iVar1 = *reinterpret_cast<int*>(DAT_1003aacc + 0xc + param_1), iVar1 != 0))
+    {
+        reinterpret_cast<void (__cdecl *)(int)>(
+            static_cast<std::uintptr_t>(0x7f3820))(iVar1);
+    }
+
+    return param_1;
+}

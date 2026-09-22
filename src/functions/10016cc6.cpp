@@ -1,1 +1,13 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __stdcall __RTC_Initialize(void)`n{`n    __asm`n    {`n        mov eax, 10028180h`n        cmp eax, 10028180h`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __stdcall __RTC_Initialize(void)
+{
+    __asm
+    {
+        mov eax, 10028180h
+        cmp eax, 10028180h
+        ret
+    }
+}

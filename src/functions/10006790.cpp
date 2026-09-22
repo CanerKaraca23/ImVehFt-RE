@@ -1,1 +1,171 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`n`nextern std::uint32_t DAT_00b7cb84;`nextern float DAT_10024e80;`nextern float DAT_10024e90;`nextern float DAT_10024e98;`nextern float DAT_10024ea0;`n`nextern "C" std::uint32_t __cdecl FUN_10003f80();`n`nextern "C" void __cdecl FUN_10006790(std::uint32_t param_1)`n{`n    std::uint32_t* unaff_EBX;`n    __asm mov unaff_EBX, ebx`n    std::uint32_t uVar1;`n    std::uint32_t uVar2;`n    float fVar3;`n    char cVar4;`n    long double fVar5;`n`n    auto* bytes = reinterpret_cast<std::uint8_t*>(unaff_EBX);`n`n    if (bytes[4] == 0)`n    {`n        cVar4 = reinterpret_cast<char(__thiscall*)(void*, std::uint8_t)>(0x6c2180)(`n            reinterpret_cast<void*>(param_1 + 0x5a0), bytes[5]);`n`n        if (cVar4 == 0)`n        {`n            if (bytes[0x15] == 2)`n            {`n                uVar1 = *unaff_EBX;`n`n                reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(`n                    0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 1);`n`n                reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(`n                    0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 1);`n`n                bytes[0x14] = 0;`n            }`n        }`n        else if (bytes[0x15] == 0)`n        {`n            uVar1 = *unaff_EBX;`n`n            reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(`n                0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 0);`n`n            reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(`n                0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 0);`n`n        LAB_10006881:`n            bytes[0x14] = 2;`n        }`n    }`n    else if (static_cast<std::uint8_t>(bytes[4] - 2u) < 3u)`n    {`n        cVar4 = reinterpret_cast<char(__thiscall*)(void*, std::uint8_t)>(0x6c2230)(`n            reinterpret_cast<void*>(param_1 + 0x5a0), bytes[0x14]);`n`n        if ((cVar4 == 0) ||`n            (cVar4 = reinterpret_cast<char(__thiscall*)(void*, std::uint8_t)>(`n                 0x6c2230)(reinterpret_cast<void*>(param_1 + 0x5a0),`n                           bytes[0x14]),`n             cVar4 == 1))`n        {`n            if (bytes[0x15] == 2)`n            {`n                __asm {`n                    push esi`n                    push edi`n                    mov esi, unaff_EBX`n                    mov esi, dword ptr [esi]`n                    mov edi, 1`n                    call FUN_10003f80`n                    pop edi`n                    pop esi`n                }`n                bytes[0x14] = 0;`n            }`n        }`n        else if (bytes[0x15] == 0)`n        {`n            __asm {`n                    push esi`n                    push edi`n                    mov esi, unaff_EBX`n                    mov esi, dword ptr [esi]`n                    mov edi, 0`n                    call FUN_10003f80`n                    pop edi`n                    pop esi`n                }`n            goto LAB_10006881;`n        }`n    }`n`n    if (bytes[0x15] != 0)`n    {`n        return;`n    }`n`n    switch (bytes[0x14])`n    {`n    case 0:`n        fVar5 = static_cast<long double>(`n            reinterpret_cast<float(__thiscall*)(void*)>(0x4082c0)(`n                reinterpret_cast<void*>(param_1 + 0x44)));`n`n        if (static_cast<long double>(DAT_10024e98) <=`n            fVar5 * static_cast<long double>(DAT_10024ea0))`n        {`n            bytes[0x14] = 3;`n            unaff_EBX[4] = DAT_00b7cb84;`n            return;`n        }`n        break;`n`n    case 1:`n        fVar5 = static_cast<long double>(`n            reinterpret_cast<float(__thiscall*)(void*)>(0x4082c0)(`n                reinterpret_cast<void*>(param_1 + 0x44)));`n`n        if (fVar5 * static_cast<long double>(DAT_10024ea0) <`n            static_cast<long double>(DAT_10024e98))`n        {`n            bytes[0x14] = 2;`n            unaff_EBX[4] = DAT_00b7cb84;`n            return;`n        }`n        break;`n`n    case 2:`n        uVar2 = unaff_EBX[3];`n`n        if (uVar2 < static_cast<std::uint32_t>(`n                       DAT_00b7cb84 - unaff_EBX[4]))`n        {`n            fVar3 = 0.0f;`n            bytes[0x14] = 0;`n        }`n        else`n        {`n            fVar3 = static_cast<float>(static_cast<std::int32_t>(uVar2));`n`n            if (static_cast<std::int32_t>(uVar2) < 0)`n            {`n                fVar3 = fVar3 + DAT_10024e90;`n            }`n`n            fVar3 =`n                (1.0f -`n                 static_cast<float>(DAT_00b7cb84 - unaff_EBX[4]) / fVar3) *`n                static_cast<float>(unaff_EBX[2]) *`n                static_cast<float>(DAT_10024e80);`n        }`n`n        goto LAB_100069ab;`n`n    case 3:`n        uVar2 = unaff_EBX[3];`n`n        if (uVar2 < static_cast<std::uint32_t>(`n                       DAT_00b7cb84 - unaff_EBX[4]))`n        {`n            bytes[0x14] = 1;`n            fVar3 = static_cast<float>(unaff_EBX[2]) *`n                    static_cast<float>(DAT_10024e80);`n        }`n        else`n        {`n            fVar3 = static_cast<float>(static_cast<std::int32_t>(uVar2));`n`n            if (static_cast<std::int32_t>(uVar2) < 0)`n            {`n                fVar3 = fVar3 + DAT_10024e90;`n            }`n`n            fVar3 =`n                static_cast<float>(DAT_00b7cb84 - unaff_EBX[4]) / fVar3 *`n                static_cast<float>(unaff_EBX[2]) *`n                static_cast<float>(DAT_10024e80);`n        }`n`n        LAB_100069ab:`n        reinterpret_cast<void(__thiscall*)(void*, float)>(0x59afa0)(`n            reinterpret_cast<void*>(*unaff_EBX + 0x10), fVar3);`n        break;`n    }`n}`n
+#include <cstdint>
+
+
+extern std::uint32_t DAT_00b7cb84;
+extern float DAT_10024e80;
+extern float DAT_10024e90;
+extern float DAT_10024e98;
+extern float DAT_10024ea0;
+
+extern "C" void __stdcall FUN_10003f80();
+
+extern "C" void __fastcall FUN_10006790(std::uint32_t param_1)
+{
+    std::uint32_t* unaff_EBX;
+    __asm mov unaff_EBX, ebx
+    std::uint32_t uVar1;
+    std::uint32_t uVar2;
+    float fVar3;
+    char cVar4;
+    long double fVar5;
+
+    auto* bytes = reinterpret_cast<std::uint8_t*>(unaff_EBX);
+
+    if (bytes[4] == 0)
+    {
+        cVar4 = reinterpret_cast<char(__cdecl*)(std::uint8_t)>(0x6c2180)(
+            bytes[5]);
+
+        if (cVar4 == 0)
+        {
+            if (bytes[0x15] == 2)
+            {
+                uVar1 = *unaff_EBX;
+
+                reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(
+                    0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 1);
+
+                reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(
+                    0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 1);
+
+                bytes[0x14] = 0;
+            }
+        }
+        else if (bytes[0x15] == 0)
+        {
+            uVar1 = *unaff_EBX;
+
+            reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(
+                0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 0);
+
+            reinterpret_cast<void(__cdecl*)(std::uint32_t, void*, int)>(
+                0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 0);
+
+        LAB_10006881:
+            bytes[0x14] = 2;
+        }
+    }
+    else if (static_cast<std::uint8_t>(bytes[4] - 2u) < 3u)
+    {
+        cVar4 = reinterpret_cast<char(__cdecl*)(std::uint8_t)>(0x6c2230)(
+            bytes[0x14]);
+
+        if ((cVar4 == 0) ||
+            (cVar4 = reinterpret_cast<char(__cdecl*)(std::uint8_t)>(
+                 0x6c2230)(bytes[0x14]),
+             cVar4 == 1))
+        {
+            if (bytes[0x15] == 2)
+            {
+                FUN_10003f80();
+                bytes[0x14] = 0;
+            }
+        }
+        else if (bytes[0x15] == 0)
+        {
+            FUN_10003f80();
+            goto LAB_10006881;
+        }
+    }
+
+    if (bytes[0x15] != 0)
+    {
+        return;
+    }
+
+    switch (bytes[0x14])
+    {
+    case 0:
+        fVar5 = static_cast<long double>(
+            reinterpret_cast<float(__cdecl*)()>(0x4082c0)());
+
+        if (static_cast<long double>(DAT_10024e98) <=
+            fVar5 * static_cast<long double>(DAT_10024ea0))
+        {
+            bytes[0x14] = 3;
+            unaff_EBX[4] = DAT_00b7cb84;
+            return;
+        }
+        break;
+
+    case 1:
+        fVar5 = static_cast<long double>(
+            reinterpret_cast<float(__cdecl*)(std::uint32_t)>(0x4082c0)(
+                param_1));
+
+        if (fVar5 * static_cast<long double>(DAT_10024ea0) <
+            static_cast<long double>(DAT_10024e98))
+        {
+            bytes[0x14] = 2;
+            unaff_EBX[4] = DAT_00b7cb84;
+            return;
+        }
+        break;
+
+    case 2:
+        uVar2 = unaff_EBX[3];
+
+        if (uVar2 < static_cast<std::uint32_t>(
+                       DAT_00b7cb84 - unaff_EBX[4]))
+        {
+            fVar3 = 0.0f;
+            bytes[0x14] = 0;
+        }
+        else
+        {
+            fVar3 = static_cast<float>(static_cast<std::int32_t>(uVar2));
+
+            if (static_cast<std::int32_t>(uVar2) < 0)
+            {
+                fVar3 = fVar3 + DAT_10024e90;
+            }
+
+            fVar3 =
+                (1.0f -
+                 static_cast<float>(DAT_00b7cb84 - unaff_EBX[4]) / fVar3) *
+                static_cast<float>(unaff_EBX[2]) *
+                static_cast<float>(DAT_10024e80);
+        }
+
+        reinterpret_cast<void(__cdecl*)(float)>(0x59afa0)(fVar3);
+        break;
+
+    case 3:
+        uVar2 = unaff_EBX[3];
+
+        if (uVar2 < static_cast<std::uint32_t>(
+                       DAT_00b7cb84 - unaff_EBX[4]))
+        {
+            bytes[0x14] = 1;
+            fVar3 = static_cast<float>(unaff_EBX[2]) *
+                    static_cast<float>(DAT_10024e80);
+        }
+        else
+        {
+            fVar3 = static_cast<float>(static_cast<std::int32_t>(uVar2));
+
+            if (static_cast<std::int32_t>(uVar2) < 0)
+            {
+                fVar3 = fVar3 + DAT_10024e90;
+            }
+
+            fVar3 =
+                static_cast<float>(DAT_00b7cb84 - unaff_EBX[4]) / fVar3 *
+                static_cast<float>(unaff_EBX[2]) *
+                static_cast<float>(DAT_10024e80);
+        }
+
+        reinterpret_cast<void(__cdecl*)(float)>(0x59afa0)(fVar3);
+        break;
+    }
+}

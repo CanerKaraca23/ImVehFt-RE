@@ -1,1 +1,23 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nstruct _ptiddata`n{`n    std::uint8_t reserved_0000_007b[0x7c];`n    void (__cdecl* _unexpected)(void);`n};`nstatic_assert(offsetof(_ptiddata, _unexpected) == 0x7c);`n`nextern "C" _ptiddata* __cdecl __getptd(void);`n[[noreturn]] void __cdecl terminate(void);`n`nextern "C" void __stdcall FUN_10017e17(void)`n{`n    _ptiddata* threadData = __getptd();`n`n    if (threadData->_unexpected != nullptr) {`n        (*threadData->_unexpected)();`n    }`n`n    terminate();`n}`n
+#include <cstddef>
+#include <cstdint>
+
+struct _ptiddata
+{
+    std::uint8_t reserved_0000_007b[0x7c];
+    void (__cdecl* _unexpected)(void);
+};
+static_assert(offsetof(_ptiddata, _unexpected) == 0x7c);
+
+extern "C" _ptiddata* __cdecl __getptd(void);
+extern "C" [[noreturn]] void __cdecl terminate(void);
+
+extern "C" void __stdcall FUN_10017e17(void)
+{
+    _ptiddata* threadData = __getptd();
+
+    if (threadData->_unexpected != nullptr) {
+        (*threadData->_unexpected)();
+    }
+
+    terminate();
+}

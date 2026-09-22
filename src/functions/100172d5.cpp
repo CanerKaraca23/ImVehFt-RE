@@ -1,1 +1,15 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uintptr_t DAT_10029490;`n`nextern "C" [[noreturn]] void __cdecl ___report_gsfailure();`n`nextern "C" void __fastcall __security_check_cookie(`n    std::uintptr_t _StackCookie)`n{`n    if (_StackCookie == DAT_10029490) {`n        return;`n    }`n`n    ___report_gsfailure();`n}`n
+#include <cstdint>
+
+extern "C" std::uintptr_t DAT_10029490;
+
+extern "C" [[noreturn]] void __cdecl ___report_gsfailure();
+
+extern "C" void __fastcall __security_check_cookie(
+    std::uintptr_t _StackCookie)
+{
+    if (_StackCookie == DAT_10029490) {
+        return;
+    }
+
+    ___report_gsfailure();
+}

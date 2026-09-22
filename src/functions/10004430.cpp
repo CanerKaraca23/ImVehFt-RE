@@ -1,1 +1,446 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nusing undefined4 = std::uint32_t;`n`nstruct ExtraEntry`n{`n    undefined4 handle;`n    undefined4 reserved;`n};`n`nstruct SpoilerEntry`n{`n    undefined4 handle;`n    std::uint8_t reserved[0x14];`n};`n`nstruct Context`n{`n    std::uint8_t reserved_000[0x328];`n    ExtraEntry extra[5];                 // 0x328`n    std::uint8_t reserved_350[0x144];`n    undefined4 movsteer;                 // 0x494`n    std::uint8_t reserved_498[4];`n    float movsteer_scale;                // 0x49c`n    SpoilerEntry movspoiler[3];          // 0x4a0`n    undefined4 reserved_4e8;             // 0x4e8`n    std::uint32_t padding_4ec;`n    undefined4 reserved_4f0;             // 0x4f0`n    std::uint32_t padding_4f4;`n    undefined4 reserved_4f8;             // 0x4f8`n    std::uint32_t padding_4fc;`n    undefined4 reserved_500;             // 0x500`n    std::uint32_t padding_504;`n    undefined4 reserved_508;             // 0x508`n    std::uint32_t padding_50c;`n    undefined4 reserved_510;             // 0x510`n};`n`nstatic_assert(offsetof(Context, extra) == 0x328);`nstatic_assert(offsetof(Context, movsteer) == 0x494);`nstatic_assert(offsetof(Context, movsteer_scale) == 0x49c);`nstatic_assert(offsetof(Context, movspoiler) == 0x4a0);`nstatic_assert(offsetof(Context, reserved_4e8) == 0x4e8);`nstatic_assert(offsetof(Context, reserved_4f0) == 0x4f0);`nstatic_assert(offsetof(Context, reserved_4f8) == 0x4f8);`nstatic_assert(offsetof(Context, reserved_500) == 0x500);`nstatic_assert(offsetof(Context, reserved_508) == 0x508);`nstatic_assert(offsetof(Context, reserved_510) == 0x510);`n`nundefined4 __cdecl FUN_100046f0(undefined4 param_1, int param_2);`nint __cdecl _strncmp(char*, char*, std::size_t);`nvoid __fastcall FUN_10004a00(undefined4* param_1);`nextern void __stdcall FUN_10004000();`nint __cdecl FID_conflict__sscanf(char*, char*, ...);`nextern "C" void FUN_10004ab0();`n`nusing GetStringFn = std::uint8_t* (__cdecl*)(undefined4);`nusing RegisterFn =`n    void (__cdecl*)(undefined4, void (__cdecl*)(undefined4, int), int);`n`nvoid __cdecl FUN_10004430(undefined4 param_1, int param_2)`n{`n    auto get_string =`n        reinterpret_cast<GetStringFn>(static_cast<std::uintptr_t>(0x72fb30));`n`n    auto register_callback =`n        reinterpret_cast<RegisterFn>(static_cast<std::uintptr_t>(0x7f0dc0));`n`n    std::uint8_t* _Str1 = get_string(param_1);`n    Context* context = reinterpret_cast<Context*>(`n        static_cast<std::uintptr_t>(param_2));`n`n    int iVar2 = static_cast<int>(FUN_100046f0(param_1, param_2));`n`n    if (iVar2 == 0)`n    {`n        std::uint8_t bVar1;`n        std::uint8_t* pbVar3;`n        std::uint8_t* pbVar4;`n        bool bVar6;`n`n        pbVar4 = reinterpret_cast<std::uint8_t*>(0x10024884);`n        pbVar3 = _Str1;`n`n        do`n        {`n            bVar1 = *pbVar3;`n            bVar6 = bVar1 < *pbVar4;`n`n            if (bVar1 != *pbVar4)`n            {`n                iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                        static_cast<unsigned int>(bVar6 != false);`n                goto compare_10004485;`n            }`n`n            if (bVar1 == 0)`n                break;`n`n            bVar1 = pbVar3[1];`n            bVar6 = bVar1 < pbVar4[1];`n`n            if (bVar1 != pbVar4[1])`n            {`n                iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                        static_cast<unsigned int>(bVar6 != false);`n                goto compare_10004485;`n            }`n`n            pbVar3 += 2;`n            pbVar4 += 2;`n        }`n        while (bVar1 != 0);`n`n        iVar2 = 0;`n`n    compare_10004485:`n        if (iVar2 == 0)`n        {`n            context->reserved_4e8 = param_1;`n        }`n        else`n        {`n            pbVar4 = reinterpret_cast<std::uint8_t*>(0x1002488c);`n            pbVar3 = _Str1;`n`n            do`n            {`n                bVar1 = *pbVar3;`n                bVar6 = bVar1 < *pbVar4;`n`n                if (bVar1 != *pbVar4)`n                {`n                    iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                            static_cast<unsigned int>(bVar6 != false);`n                    goto compare_100044c5;`n                }`n`n                if (bVar1 == 0)`n                    break;`n`n                bVar1 = pbVar3[1];`n                bVar6 = bVar1 < pbVar4[1];`n`n                if (bVar1 != pbVar4[1])`n                {`n                    iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                            static_cast<unsigned int>(bVar6 != false);`n                    goto compare_100044c5;`n                }`n`n                pbVar3 += 2;`n                pbVar4 += 2;`n            }`n            while (bVar1 != 0);`n`n            iVar2 = 0;`n`n        compare_100044c5:`n            if (iVar2 == 0)`n            {`n                context->reserved_4f0 = param_1;`n            }`n            else`n            {`n                pbVar4 = reinterpret_cast<std::uint8_t*>(0x10024894);`n                pbVar3 = _Str1;`n`n                do`n                {`n                    bVar1 = *pbVar3;`n                    bVar6 = bVar1 < *pbVar4;`n`n                    if (bVar1 != *pbVar4)`n                    {`n                        iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                                static_cast<unsigned int>(bVar6 != false);`n                        goto compare_10004505;`n                    }`n`n                    if (bVar1 == 0)`n                        break;`n`n                    bVar1 = pbVar3[1];`n                    bVar6 = bVar1 < pbVar4[1];`n`n                    if (bVar1 != pbVar4[1])`n                    {`n                        iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                                static_cast<unsigned int>(bVar6 != false);`n                        goto compare_10004505;`n                    }`n`n                    pbVar3 += 2;`n                    pbVar4 += 2;`n                }`n                while (bVar1 != 0);`n`n                iVar2 = 0;`n`n            compare_10004505:`n                if (iVar2 == 0)`n                {`n                    context->reserved_4f8 = param_1;`n                }`n                else`n                {`n                    pbVar4 = reinterpret_cast<std::uint8_t*>(0x1002489c);`n                    pbVar3 = _Str1;`n`n                    do`n                    {`n                        bVar1 = *pbVar3;`n                        bVar6 = bVar1 < *pbVar4;`n`n                        if (bVar1 != *pbVar4)`n                        {`n                            iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                                    static_cast<unsigned int>(bVar6 != false);`n                            goto compare_10004545;`n                        }`n`n                        if (bVar1 == 0)`n                            break;`n`n                        bVar1 = pbVar3[1];`n                        bVar6 = bVar1 < pbVar4[1];`n`n                        if (bVar1 != pbVar4[1])`n                        {`n                            iVar2 = (1 - static_cast<unsigned int>(bVar6)) -`n                                    static_cast<unsigned int>(bVar6 != false);`n                            goto compare_10004545;`n                        }`n`n                        pbVar3 += 2;`n                        pbVar4 += 2;`n                    }`n                    while (bVar1 != 0);`n`n                    iVar2 = 0;`n`n                compare_10004545:`n                    if (iVar2 == 0)`n                    {`n                        context->reserved_500 = param_1;`n                    }`n                    else`n                    {`n                        pbVar4 = reinterpret_cast<std::uint8_t*>(0x100248a4);`n                        pbVar3 = _Str1;`n`n                        do`n                        {`n                            bVar1 = *pbVar3;`n                            bVar6 = bVar1 < *pbVar4;`n`n                            if (bVar1 != *pbVar4)`n                            {`n                                iVar2 =`n                                    (1 - static_cast<unsigned int>(bVar6)) -`n                                    static_cast<unsigned int>(bVar6 != false);`n                                goto compare_10004585;`n                            }`n`n                            if (bVar1 == 0)`n                                break;`n`n                            bVar1 = pbVar3[1];`n                            bVar6 = bVar1 < pbVar4[1];`n`n                            if (bVar1 != pbVar4[1])`n                            {`n                                iVar2 =`n                                    (1 - static_cast<unsigned int>(bVar6)) -`n                                    static_cast<unsigned int>(bVar6 != false);`n                                goto compare_10004585;`n                            }`n`n                            pbVar3 += 2;`n                            pbVar4 += 2;`n                        }`n                        while (bVar1 != 0);`n`n                        iVar2 = 0;`n`n                    compare_10004585:`n                        if (iVar2 == 0)`n                        {`n                            context->reserved_508 = param_1;`n                        }`n                        else`n                        {`n                            pbVar4 = reinterpret_cast<std::uint8_t*>(0x100248ac);`n                            pbVar3 = _Str1;`n`n                            do`n                            {`n                                bVar1 = *pbVar3;`n                                bVar6 = bVar1 < *pbVar4;`n`n                                if (bVar1 != *pbVar4)`n                                {`n                                    iVar2 =`n                                        (1 - static_cast<unsigned int>(bVar6)) -`n                                        static_cast<unsigned int>(bVar6 != false);`n                                    goto compare_100045c5;`n                                }`n`n                                if (bVar1 == 0)`n                                    break;`n`n                                bVar1 = pbVar3[1];`n                                bVar6 = bVar1 < pbVar4[1];`n`n                                if (bVar1 != pbVar4[1])`n                                {`n                                    iVar2 =`n                                        (1 - static_cast<unsigned int>(bVar6)) -`n                                        static_cast<unsigned int>(bVar6 != false);`n                                    goto compare_100045c5;`n                                }`n`n                                pbVar3 += 2;`n                                pbVar4 += 2;`n                            }`n                            while (bVar1 != 0);`n`n                            iVar2 = 0;`n`n                        compare_100045c5:`n                            if (iVar2 == 0)`n                            {`n                                context->reserved_510 = param_1;`n                            }`n                            else`n                            {`n                                iVar2 = _strncmp(`n                                    reinterpret_cast<char*>(_Str1),`n                                    const_cast<char*>("movspoiler"),`n                                    10);`n`n                                if (iVar2 == 0)`n                                {`n                                    int* piVar5 =`n                                        reinterpret_cast<int*>(`n                                            context->movspoiler);`n`n                                    iVar2 = 0;`n`n                                    do`n                                    {`n                                        if (*piVar5 == 0)`n                                        {`n                                            FUN_10004a00(`n                                                reinterpret_cast<undefined4*>(`n                                                    &context->movspoiler[iVar2]));`n                                            break;`n                                        }`n`n                                        iVar2 = iVar2 + 1;`n                                        piVar5 = piVar5 + 6;`n                                    }`n                                    while (iVar2 < 3);`n                                }`n                                else`n                                {`n                                    iVar2 = _strncmp(`n                                        reinterpret_cast<char*>(_Str1),`n                                        const_cast<char*>("extra"),`n                                        5);`n`n                                    if ((iVar2 == 0) && (_Str1[5] != 0x5f))`n                                    {`n                                        int* piVar5 =`n                                            reinterpret_cast<int*>(`n                                                context->extra);`n`n                                        iVar2 = 0;`n`n                                        do`n                                        {`n                                            if (*piVar5 == 0)`n                                            {`n                                                context->extra[iVar2].handle =`n                                                    param_1;`n                                                FUN_10004000();`n                                                break;`n                                            }`n`n                                            iVar2 = iVar2 + 1;`n                                            piVar5 = piVar5 + 2;`n                                        }`n                                        while (iVar2 < 5);`n                                    }`n                                    else`n                                    {`n                                        iVar2 = _strncmp(`n                                            reinterpret_cast<char*>(_Str1),`n                                            const_cast<char*>("movsteer"),`n                                            8);`n`n                                        if (iVar2 == 0)`n                                        {`n                                            context->movsteer = param_1;`n`n                                            if (_Str1[8] == 0x5f)`n                                            {`n                                                FID_conflict__sscanf(`n                                                    reinterpret_cast<char*>(`n                                                        _Str1 + 9),`n                                                    const_cast<char*>("%f"),`n                                                    &context->movsteer_scale);`n                                            }`n                                            else`n                                            {`n                                                *reinterpret_cast<undefined4*>(`n                                                    &context->movsteer_scale) =`n                                                    0x3f800000;`n                                            }`n                                        }`n                                        else`n                                        {`n                                            iVar2 = _strncmp(`n                                                reinterpret_cast<char*>(_Str1),`n                                                const_cast<char*>("light_em"),`n                                                8);`n`n                                            if (iVar2 == 0)`n                                            {`n                                                __asm {`n                                                    mov ecx, _Str1`n                                                    push param_1`n                                                    call FUN_10004ab0`n                                                    add esp, 4`n                                                }`n                                            }`n                                        }`n                                    }`n                                }`n                            }`n                        }`n                    }`n                }`n            }`n        }`n    }`n`n    register_callback(param_1, FUN_10004430, param_2);`n}`n
+#include <cstddef>
+#include <cstdint>
+
+using undefined4 = std::uint32_t;
+
+struct ExtraEntry
+{
+    undefined4 handle;
+    undefined4 reserved;
+};
+
+struct SpoilerEntry
+{
+    undefined4 handle;
+    std::uint8_t reserved[0x14];
+};
+
+struct Context
+{
+    std::uint8_t reserved_000[0x328];
+    ExtraEntry extra[5];                 // 0x328
+    std::uint8_t reserved_350[0x144];
+    undefined4 movsteer;                 // 0x494
+    std::uint8_t reserved_498[4];
+    float movsteer_scale;                // 0x49c
+    SpoilerEntry movspoiler[3];          // 0x4a0
+    undefined4 reserved_4e8;             // 0x4e8
+    std::uint32_t padding_4ec;
+    undefined4 reserved_4f0;             // 0x4f0
+    std::uint32_t padding_4f4;
+    undefined4 reserved_4f8;             // 0x4f8
+    std::uint32_t padding_4fc;
+    undefined4 reserved_500;             // 0x500
+    std::uint32_t padding_504;
+    undefined4 reserved_508;             // 0x508
+    std::uint32_t padding_50c;
+    undefined4 reserved_510;             // 0x510
+};
+
+static_assert(offsetof(Context, extra) == 0x328);
+static_assert(offsetof(Context, movsteer) == 0x494);
+static_assert(offsetof(Context, movsteer_scale) == 0x49c);
+static_assert(offsetof(Context, movspoiler) == 0x4a0);
+static_assert(offsetof(Context, reserved_4e8) == 0x4e8);
+static_assert(offsetof(Context, reserved_4f0) == 0x4f0);
+static_assert(offsetof(Context, reserved_4f8) == 0x4f8);
+static_assert(offsetof(Context, reserved_500) == 0x500);
+static_assert(offsetof(Context, reserved_508) == 0x508);
+static_assert(offsetof(Context, reserved_510) == 0x510);
+
+extern "C" undefined4 __cdecl FUN_100046f0(undefined4, int);
+extern "C" int __cdecl strncmp(char*, char*, std::size_t);
+extern "C" void __fastcall FUN_10004a00(undefined4*);
+extern "C" void __stdcall FUN_10004000();
+extern "C" int __cdecl FID_conflict__sscanf(char*, char*, ...);
+struct FUN_10004ab0_this { void __thiscall invoke(undefined4); };
+
+using GetStringFn = std::uint8_t* (__cdecl*)(undefined4);
+using RegisterFn =
+    void (__cdecl*)(undefined4, void (__cdecl*)(undefined4, int), int);
+
+extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
+{
+    auto get_string =
+        reinterpret_cast<GetStringFn>(static_cast<std::uintptr_t>(0x72fb30));
+
+    auto register_callback =
+        reinterpret_cast<RegisterFn>(static_cast<std::uintptr_t>(0x7f0dc0));
+
+    std::uint8_t* _Str1 = get_string(param_1);
+    Context* context = reinterpret_cast<Context*>(
+        static_cast<std::uintptr_t>(param_2));
+
+    int iVar2 = static_cast<int>(FUN_100046f0(param_1, param_2));
+
+    if (iVar2 == 0)
+    {
+        std::uint8_t bVar1;
+        std::uint8_t* pbVar3;
+        std::uint8_t* pbVar4;
+        bool bVar6;
+
+        pbVar4 = reinterpret_cast<std::uint8_t*>(0x10024884);
+        pbVar3 = _Str1;
+
+        do
+        {
+            bVar1 = *pbVar3;
+            bVar6 = bVar1 < *pbVar4;
+
+            if (bVar1 != *pbVar4)
+            {
+                iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                        static_cast<unsigned int>(bVar6 != false);
+                goto compare_10004485;
+            }
+
+            if (bVar1 == 0)
+                break;
+
+            bVar1 = pbVar3[1];
+            bVar6 = bVar1 < pbVar4[1];
+
+            if (bVar1 != pbVar4[1])
+            {
+                iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                        static_cast<unsigned int>(bVar6 != false);
+                goto compare_10004485;
+            }
+
+            pbVar3 += 2;
+            pbVar4 += 2;
+        }
+        while (bVar1 != 0);
+
+        iVar2 = 0;
+
+    compare_10004485:
+        if (iVar2 == 0)
+        {
+            context->reserved_4e8 = param_1;
+        }
+        else
+        {
+            pbVar4 = reinterpret_cast<std::uint8_t*>(0x1002488c);
+            pbVar3 = _Str1;
+
+            do
+            {
+                bVar1 = *pbVar3;
+                bVar6 = bVar1 < *pbVar4;
+
+                if (bVar1 != *pbVar4)
+                {
+                    iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                            static_cast<unsigned int>(bVar6 != false);
+                    goto compare_100044c5;
+                }
+
+                if (bVar1 == 0)
+                    break;
+
+                bVar1 = pbVar3[1];
+                bVar6 = bVar1 < pbVar4[1];
+
+                if (bVar1 != pbVar4[1])
+                {
+                    iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                            static_cast<unsigned int>(bVar6 != false);
+                    goto compare_100044c5;
+                }
+
+                pbVar3 += 2;
+                pbVar4 += 2;
+            }
+            while (bVar1 != 0);
+
+            iVar2 = 0;
+
+        compare_100044c5:
+            if (iVar2 == 0)
+            {
+                context->reserved_4f0 = param_1;
+            }
+            else
+            {
+                pbVar4 = reinterpret_cast<std::uint8_t*>(0x10024894);
+                pbVar3 = _Str1;
+
+                do
+                {
+                    bVar1 = *pbVar3;
+                    bVar6 = bVar1 < *pbVar4;
+
+                    if (bVar1 != *pbVar4)
+                    {
+                        iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                                static_cast<unsigned int>(bVar6 != false);
+                        goto compare_10004505;
+                    }
+
+                    if (bVar1 == 0)
+                        break;
+
+                    bVar1 = pbVar3[1];
+                    bVar6 = bVar1 < pbVar4[1];
+
+                    if (bVar1 != pbVar4[1])
+                    {
+                        iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                                static_cast<unsigned int>(bVar6 != false);
+                        goto compare_10004505;
+                    }
+
+                    pbVar3 += 2;
+                    pbVar4 += 2;
+                }
+                while (bVar1 != 0);
+
+                iVar2 = 0;
+
+            compare_10004505:
+                if (iVar2 == 0)
+                {
+                    context->reserved_4f8 = param_1;
+                }
+                else
+                {
+                    pbVar4 = reinterpret_cast<std::uint8_t*>(0x1002489c);
+                    pbVar3 = _Str1;
+
+                    do
+                    {
+                        bVar1 = *pbVar3;
+                        bVar6 = bVar1 < *pbVar4;
+
+                        if (bVar1 != *pbVar4)
+                        {
+                            iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                                    static_cast<unsigned int>(bVar6 != false);
+                            goto compare_10004545;
+                        }
+
+                        if (bVar1 == 0)
+                            break;
+
+                        bVar1 = pbVar3[1];
+                        bVar6 = bVar1 < pbVar4[1];
+
+                        if (bVar1 != pbVar4[1])
+                        {
+                            iVar2 = (1 - static_cast<unsigned int>(bVar6)) -
+                                    static_cast<unsigned int>(bVar6 != false);
+                            goto compare_10004545;
+                        }
+
+                        pbVar3 += 2;
+                        pbVar4 += 2;
+                    }
+                    while (bVar1 != 0);
+
+                    iVar2 = 0;
+
+                compare_10004545:
+                    if (iVar2 == 0)
+                    {
+                        context->reserved_500 = param_1;
+                    }
+                    else
+                    {
+                        pbVar4 = reinterpret_cast<std::uint8_t*>(0x100248a4);
+                        pbVar3 = _Str1;
+
+                        do
+                        {
+                            bVar1 = *pbVar3;
+                            bVar6 = bVar1 < *pbVar4;
+
+                            if (bVar1 != *pbVar4)
+                            {
+                                iVar2 =
+                                    (1 - static_cast<unsigned int>(bVar6)) -
+                                    static_cast<unsigned int>(bVar6 != false);
+                                goto compare_10004585;
+                            }
+
+                            if (bVar1 == 0)
+                                break;
+
+                            bVar1 = pbVar3[1];
+                            bVar6 = bVar1 < pbVar4[1];
+
+                            if (bVar1 != pbVar4[1])
+                            {
+                                iVar2 =
+                                    (1 - static_cast<unsigned int>(bVar6)) -
+                                    static_cast<unsigned int>(bVar6 != false);
+                                goto compare_10004585;
+                            }
+
+                            pbVar3 += 2;
+                            pbVar4 += 2;
+                        }
+                        while (bVar1 != 0);
+
+                        iVar2 = 0;
+
+                    compare_10004585:
+                        if (iVar2 == 0)
+                        {
+                            context->reserved_508 = param_1;
+                        }
+                        else
+                        {
+                            pbVar4 = reinterpret_cast<std::uint8_t*>(0x100248ac);
+                            pbVar3 = _Str1;
+
+                            do
+                            {
+                                bVar1 = *pbVar3;
+                                bVar6 = bVar1 < *pbVar4;
+
+                                if (bVar1 != *pbVar4)
+                                {
+                                    iVar2 =
+                                        (1 - static_cast<unsigned int>(bVar6)) -
+                                        static_cast<unsigned int>(bVar6 != false);
+                                    goto compare_100045c5;
+                                }
+
+                                if (bVar1 == 0)
+                                    break;
+
+                                bVar1 = pbVar3[1];
+                                bVar6 = bVar1 < pbVar4[1];
+
+                                if (bVar1 != pbVar4[1])
+                                {
+                                    iVar2 =
+                                        (1 - static_cast<unsigned int>(bVar6)) -
+                                        static_cast<unsigned int>(bVar6 != false);
+                                    goto compare_100045c5;
+                                }
+
+                                pbVar3 += 2;
+                                pbVar4 += 2;
+                            }
+                            while (bVar1 != 0);
+
+                            iVar2 = 0;
+
+                        compare_100045c5:
+                            if (iVar2 == 0)
+                            {
+                                context->reserved_510 = param_1;
+                            }
+                            else
+                            {
+                                iVar2 = strncmp(
+                                    reinterpret_cast<char*>(_Str1),
+                                    const_cast<char*>("movspoiler"),
+                                    10);
+
+                                if (iVar2 == 0)
+                                {
+                                    int* piVar5 =
+                                        reinterpret_cast<int*>(
+                                            context->movspoiler);
+
+                                    iVar2 = 0;
+
+                                    do
+                                    {
+                                        if (*piVar5 == 0)
+                                        {
+                                            FUN_10004a00(
+                                                reinterpret_cast<undefined4*>(
+                                                    &context->movspoiler[iVar2]));
+                                            break;
+                                        }
+
+                                        iVar2 = iVar2 + 1;
+                                        piVar5 = piVar5 + 6;
+                                    }
+                                    while (iVar2 < 3);
+                                }
+                                else
+                                {
+                                    iVar2 = strncmp(
+                                        reinterpret_cast<char*>(_Str1),
+                                        const_cast<char*>("extra"),
+                                        5);
+
+                                    if ((iVar2 == 0) && (_Str1[5] != 0x5f))
+                                    {
+                                        int* piVar5 =
+                                            reinterpret_cast<int*>(
+                                                context->extra);
+
+                                        iVar2 = 0;
+
+                                        do
+                                        {
+                                            if (*piVar5 == 0)
+                                            {
+                                                context->extra[iVar2].handle =
+                                                    param_1;
+                                                FUN_10004000();
+                                                break;
+                                            }
+
+                                            iVar2 = iVar2 + 1;
+                                            piVar5 = piVar5 + 2;
+                                        }
+                                        while (iVar2 < 5);
+                                    }
+                                    else
+                                    {
+                                        iVar2 = strncmp(
+                                            reinterpret_cast<char*>(_Str1),
+                                            const_cast<char*>("movsteer"),
+                                            8);
+
+                                        if (iVar2 == 0)
+                                        {
+                                            context->movsteer = param_1;
+
+                                            if (_Str1[8] == 0x5f)
+                                            {
+                                                FID_conflict__sscanf(
+                                                    reinterpret_cast<char*>(
+                                                        _Str1 + 9),
+                                                    const_cast<char*>("%f"),
+                                                    &context->movsteer_scale);
+                                            }
+                                            else
+                                            {
+                                                *reinterpret_cast<undefined4*>(
+                                                    &context->movsteer_scale) =
+                                                    0x3f800000;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            iVar2 = strncmp(
+                                                reinterpret_cast<char*>(_Str1),
+                                                const_cast<char*>("light_em"),
+                                                8);
+
+                                            if (iVar2 == 0)
+                                            {
+                                                reinterpret_cast<FUN_10004ab0_this*>(_Str1)->invoke(param_1);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    register_callback(param_1, FUN_10004430, param_2);
+}

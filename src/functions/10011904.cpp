@@ -1,1 +1,23 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void* __cdecl __getptd_noexit(void);`n`nextern "C" std::uint32_t* __cdecl ___doserrno(void)`n{`n    struct _tiddata`n    {`n        std::uint32_t _tdoserrno;`n    };`n`n    extern std::uint32_t DAT_100291cc;`n`n    _tiddata* p_Var1 =`n        static_cast<_tiddata*>(__getptd_noexit());`n`n    if (p_Var1 == nullptr)`n    {`n        return &DAT_100291cc;`n    }`n`n    return &p_Var1->_tdoserrno;`n}`n
+#include <cstdint>
+
+extern "C" void* __cdecl __getptd_noexit(void);
+
+extern "C" std::uint32_t* __cdecl ___doserrno(void)
+{
+    struct _tiddata
+    {
+        std::uint32_t _tdoserrno;
+    };
+
+    extern std::uint32_t DAT_100291cc;
+
+    _tiddata* p_Var1 =
+        static_cast<_tiddata*>(__getptd_noexit());
+
+    if (p_Var1 == nullptr)
+    {
+        return &DAT_100291cc;
+    }
+
+    return &p_Var1->_tdoserrno;
+}

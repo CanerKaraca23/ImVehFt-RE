@@ -1,1 +1,24 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __stdcall __NLG_Notify(unsigned long);`n`nextern "C" __declspec(naked) void __fastcall _EH4_TransferToHandler(`n    void* ,`n    void* )`n{`n    __asm {`n        mov ebp, edx`n        mov esi, ecx`n        mov eax, ecx`n        push 1`n        call __NLG_Notify`n        xor eax, eax`n        xor ebx, ebx`n        xor ecx, ecx`n        xor edx, edx`n        xor edi, edi`n        jmp esi`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __cdecl __NLG_Notify(int);
+
+extern "C" __declspec(naked) void __fastcall _EH4_TransferToHandler(
+    void* ,
+    void* )
+{
+    __asm {
+        mov ebp, edx
+        mov esi, ecx
+        mov eax, ecx
+        push 1
+        call __NLG_Notify
+        xor eax, eax
+        xor ebx, ebx
+        xor ecx, ecx
+        xor edx, edx
+        xor edi, edi
+        jmp esi
+    }
+}

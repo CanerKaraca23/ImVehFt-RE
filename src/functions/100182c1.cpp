@@ -1,1 +1,568 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <Windows.h>`n#include <cstdint>`n#include <cstddef>`n`nextern "C" std::uintptr_t DAT_1003c420[];`nextern "C" std::uint8_t DAT_10039a0c;`n`nextern "C" int __cdecl FUN_1001b1a5(std::uint32_t*);`nextern "C" unsigned long* __cdecl ___doserrno();`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`nextern "C" std::uint32_t __cdecl __alloc_osfhnd();`nextern "C" void __cdecl __dosmaperr(DWORD);`nextern "C" void __cdecl __set_osfhnd(int, std::intptr_t);`nextern "C" long __cdecl __lseek_nolock(int, long, int);`nextern "C" int __cdecl __close_nolock(int);`nextern "C" int __cdecl __read_nolock(int, void*, unsigned int);`nextern "C" int __cdecl __chsize_nolock(int, std::int64_t);`nextern "C" std::int64_t __cdecl __lseeki64_nolock(int, std::int64_t, int);`nextern "C" int __cdecl __write(int, const void*, unsigned int);`nextern "C" void __cdecl __free_osfhnd(int);`nextern "C" void __cdecl __invoke_watson(`n    const wchar_t*, const wchar_t*, const wchar_t*, unsigned int,`n    std::uintptr_t);`n`nextern "C" int __cdecl FUN_100182c1(`n    std::uint32_t* param_1,`n    LPCSTR param_2,`n    std::uint32_t param_3,`n    int param_4,`n    std::uint8_t param_5)`n{`n    int unaff_EDI;`n    __asm mov unaff_EDI, edi`n`n    std::uint8_t bVar2;`n    std::uint32_t file_handle = 0;`n    int iVar3;`n    std::uint32_t uVar4;`n    unsigned long* puVar5;`n    DWORD DVar7;`n    long lVar8;`n    int iVar9;`n    HANDLE pvVar10;`n    std::uint8_t bVar11;`n    bool bVar12;`n    std::int64_t lVar13;`n    int iVar14;`n`n    SECURITY_ATTRIBUTES local_34{};`n    std::uint32_t local_28;`n    HANDLE local_24;`n    std::uint32_t local_20;`n    DWORD local_1c;`n    std::uint32_t local_18;`n    std::uint32_t local_14;`n    std::uint32_t local_10;`n    int local_c;`n    char local_8;`n    std::uint8_t local_7;`n    std::uint8_t local_6;`n    std::uint8_t local_5;`n`n    bVar12 = (param_3 & 0x80) == 0;`n    local_28 = 0;`n    local_6 = 0;`n    local_c = 0;`n    local_34.nLength = 0xc;`n    local_34.lpSecurityDescriptor = nullptr;`n    local_5 = bVar12 ? 0 : 0x10;`n    local_34.bInheritHandle = static_cast<BOOL>(bVar12);`n`n    iVar3 = FUN_1001b1a5(&local_28);`n    if (iVar3 != 0)`n        __invoke_watson(nullptr, nullptr, nullptr, 0, 0);`n`n    if (((param_3 & 0x8000) == 0) &&`n        (((param_3 & 0x74000) != 0) || (local_28 != 0x8000)))`n        local_5 = local_5 | 0x80;`n`n    uVar4 = param_3 & 3;`n    if (uVar4 == 0)`n        local_10 = 0x80000000;`n    else`n    {`n        if (uVar4 == 1)`n        {`n            if (((param_3 & 8) == 0) || ((param_3 & 0x70000) == 0))`n            {`n                local_10 = 0x40000000;`n                goto LAB_10018383;`n            }`n        }`n        else if (uVar4 != 2)`n            goto LAB_10018343;`n`n        local_10 = 0xc0000000;`n    }`n`nLAB_10018383:`n    if (param_4 == 0x10)`n        local_18 = 0;`n    else if (param_4 == 0x20)`n        local_18 = 1;`n    else if (param_4 == 0x30)`n        local_18 = 2;`n    else if (param_4 == 0x40)`n        local_18 = 3;`n    else`n    {`n        if (param_4 != 0x80)`n        {`nLAB_10018343:`n            *___doserrno() = 0;`n            file_handle = 0xffffffff;`n            *__errno() = 0x16;`n            FUN_1001189f();`n            return 0x16;`n        }`n`n        local_18 = static_cast<std::uint32_t>(local_10 == 0x80000000);`n    }`n`n    uVar4 = param_3 & 0x700;`n    if (uVar4 < 0x401)`n    {`n        if ((uVar4 == 0x400) || (uVar4 == 0))`n            local_1c = 3;`n        else if (uVar4 == 0x100)`n            local_1c = 4;`n        else`n        {`n            if (uVar4 == 0x200)`n                goto LAB_10018445;`n            if (uVar4 != 0x300)`n                goto LAB_10018425;`n            local_1c = 2;`n        }`n    }`n    else`n    {`n        if (uVar4 != 0x500)`n        {`n            if (uVar4 == 0x600)`n            {`nLAB_10018445:`n                local_1c = 5;`n                goto LAB_10018455;`n            }`n`n            if (uVar4 != 0x700)`n            {`nLAB_10018425:`n                *___doserrno() = 0;`n                file_handle = 0xffffffff;`n                *__errno() = 0x16;`n                FUN_1001189f();`n                return 0x16;`n            }`n        }`n`n        local_1c = 1;`n    }`n`nLAB_10018455:`n    local_14 = 0x80;`n`n    if (((param_3 & 0x100) != 0) &&`n        (-1 < static_cast<char>(`n            static_cast<std::uint8_t>(~DAT_10039a0c) & param_5)))`n        local_14 = 1;`n`n    if ((param_3 & 0x40) != 0)`n    {`n        local_14 = local_14 | 0x4000000;`n        local_10 = local_10 | 0x10000;`n        local_18 = local_18 | 4;`n    }`n`n    if ((param_3 & 0x1000) != 0)`n        local_14 = local_14 | 0x100;`n`n    if ((param_3 & 0x20) == 0)`n    {`n        if ((param_3 & 0x10) != 0)`n            local_14 = local_14 | 0x10000000;`n    }`n    else`n        local_14 = local_14 | 0x8000000;`n`n    file_handle = __alloc_osfhnd();`n`n    if (file_handle == 0xffffffff)`n    {`n        *___doserrno() = 0;`n        file_handle = 0xffffffff;`n        *__errno() = 0x18;`n        return *__errno();`n    }`n`n    *param_1 = 1;`n`n    local_24 = CreateFileA(`n        param_2, local_10, local_18, &local_34,`n        local_1c, local_14, nullptr);`n`n    if (local_24 == INVALID_HANDLE_VALUE)`n    {`n        if (((local_10 & 0xc0000000) == 0xc0000000) &&`n            ((param_3 & 1) != 0))`n        {`n            local_10 = local_10 & 0x7fffffff;`n            local_24 = CreateFileA(`n                param_2, local_10, local_18, &local_34,`n                local_1c, local_14, nullptr);`n`n            if (local_24 != INVALID_HANDLE_VALUE)`n                goto LAB_1001857d;`n        }`n`n        *reinterpret_cast<std::uint8_t*>(`n            DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n            4 + (file_handle & 0x1f) * 0x40) &=`n            0xfe;`n`n        DVar7 = GetLastError();`n        __dosmaperr(DVar7);`n        goto LAB_1001856e;`n    }`n`nLAB_1001857d:`n    DVar7 = GetFileType(local_24);`n`n    if (DVar7 == 0)`n    {`n        *reinterpret_cast<std::uint8_t*>(`n            DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n            4 + (file_handle & 0x1f) * 0x40) &=`n            0xfe;`n`n        DVar7 = GetLastError();`n        __dosmaperr(DVar7);`n        CloseHandle(local_24);`n`n        if (DVar7 == 0)`n            *__errno() = 0xd;`n`n        goto LAB_1001856e;`n    }`n`n    if (DVar7 == 2)`n        local_5 = local_5 | 0x40;`n    else if (DVar7 == 3)`n        local_5 = local_5 | 8;`n`n    __set_osfhnd(`n        static_cast<int>(file_handle),`n        reinterpret_cast<std::intptr_t>(local_24));`n`n    bVar11 = local_5 | 1;`n`n    *reinterpret_cast<std::uint8_t*>(`n        DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n        4 + (file_handle & 0x1f) * 0x40) = bVar11;`n`n    *reinterpret_cast<std::uint8_t*>(`n        DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n        0x24 + (file_handle & 0x1f) * 0x40) &=`n        0x80;`n`n    local_7 = local_5 & 0x48;`n`n    if (local_7 == 0)`n    {`n        bVar2 = local_5 & 0x80;`n        local_5 = bVar11;`n`n        if (bVar2 == 0)`n            goto LAB_100188e3;`n`n        if ((param_3 & 2) == 0)`n            goto LAB_100186b1;`n`n        lVar8 = __lseek_nolock(static_cast<int>(file_handle), -1, 2);`n`n        if (lVar8 == -1)`n        {`n            puVar5 = ___doserrno();`n            bVar11 = local_5;`n`n            if (*puVar5 == 0x83)`n                goto LAB_100186b1;`n        }`n        else`n        {`n            local_8 = '\0';`n            iVar3 = __read_nolock(`n                static_cast<int>(file_handle), &local_8, 1);`n`n            if ((((iVar3 != 0) || (local_8 != '\x1a')) ||`n                (iVar3 = __chsize_nolock(`n                    static_cast<int>(file_handle),`n                    static_cast<std::int64_t>(`n                        (static_cast<std::uint64_t>(`n                            static_cast<std::uint32_t>(unaff_EDI)) << 32) |`n                        static_cast<std::uint32_t>(lVar8 >> 0x1f))),`n                    iVar3 != -1)) &&`n                (lVar8 = __lseek_nolock(`n                    static_cast<int>(file_handle), 0, 0),`n                    bVar11 = local_5,`n                    lVar8 != -1))`n                goto LAB_100186b1;`n        }`n`nLAB_10018662:`n        __close_nolock(static_cast<int>(file_handle));`n        goto LAB_1001856e;`n    }`n`nLAB_100186b1:`n    local_5 = bVar11;`n`n    if ((local_5 & 0x80) != 0)`n    {`n        if ((param_3 & 0x74000) == 0)`n        {`n            if ((local_28 & 0x74000) == 0)`n                param_3 = param_3 | 0x4000;`n            else`n                param_3 = param_3 | local_28 & 0x74000;`n        }`n`n        uVar4 = param_3 & 0x74000;`n`n        if (uVar4 == 0x4000)`n            local_6 = 0;`n        else if ((uVar4 == 0x10000) || (uVar4 == 0x14000))`n        {`n            if ((param_3 & 0x301) == 0x301)`n                goto LAB_10018720;`n        }`n        else if ((uVar4 == 0x20000) || (uVar4 == 0x24000))`n        {`nLAB_10018720:`n            local_6 = 2;`n        }`n        else if ((uVar4 == 0x40000) || (uVar4 == 0x44000))`n            local_6 = 1;`n`n        if (((param_3 & 0x70000) != 0) &&`n            (local_20 = 0, (local_5 & 0x40) == 0))`n        {`n            uVar4 = local_10 & 0xc0000000;`n`n            if (uVar4 == 0x40000000)`n            {`n                if (local_1c == 0)`n                    goto LAB_100188e3;`n`n                if (2 < local_1c)`n                {`n                    if (local_1c < 5)`n                    {`n                        lVar13 = __lseeki64_nolock(`n                            static_cast<int>(file_handle),`n                            0x200000000LL,`n                            unaff_EDI);`n`n                        if (lVar13 == 0)`n                            goto LAB_10018788;`n`n                        lVar13 = __lseeki64_nolock(`n                            static_cast<int>(file_handle),`n                            0,`n                            unaff_EDI);`n`n                        uVar4 = static_cast<std::uint32_t>(lVar13) &`n                            static_cast<std::uint32_t>(`n                                static_cast<std::uint64_t>(lVar13) >> 32);`n`n                        goto LAB_1001884d;`n                    }`n`nLAB_1001877f:`n                    if (local_1c != 5)`n                        goto LAB_100188e3;`n                }`n`nLAB_10018788:`n                iVar3 = 0;`n`n                if (local_6 == 1)`n                {`n                    local_20 = 0xbfbbef;`n                    iVar14 = 3;`n                }`n                else`n                {`n                    if (local_6 != 2)`n                        goto LAB_100188e3;`n`n                    local_20 = 0xfeff;`n                    iVar14 = 2;`n                }`n`n                do`n                {`n                    iVar9 = __write(`n                        static_cast<int>(file_handle),`n                        reinterpret_cast<std::uint8_t*>(&local_20) + iVar3,`n                        iVar14 - iVar3);`n`n                    if (iVar9 == -1)`n                        goto LAB_10018662;`n`n                    iVar3 = iVar3 + iVar9;`n                }`n                while (iVar3 < iVar14);`n            }`n            else`n            {`n                if (uVar4 != 0x80000000)`n                {`n                    if ((uVar4 == 0xc0000000) && (local_1c != 0))`n                    {`n                        if (2 < local_1c)`n                        {`n                            if (4 < local_1c)`n                                goto LAB_1001877f;`n`n                            lVar13 = __lseeki64_nolock(`n                                static_cast<int>(file_handle),`n                                0x200000000LL,`n                                unaff_EDI);`n`n                            if (lVar13 != 0)`n                            {`n                                lVar13 = __lseeki64_nolock(`n                                    static_cast<int>(file_handle),`n                                    0,`n                                    unaff_EDI);`n`n                                if (lVar13 == -1)`n                                    goto LAB_10018662;`n`n                                goto LAB_100187d3;`n                            }`n                        }`n`n                        goto LAB_10018788;`n                    }`n`n                    goto LAB_100188e3;`n                }`n`nLAB_100187d3:`n                iVar3 = __read_nolock(`n                    static_cast<int>(file_handle), &local_20, 3);`n`n                if (iVar3 == -1)`n                    goto LAB_10018662;`n`n                if (iVar3 == 2)`n                {`nLAB_1001885a:`n                    if ((local_20 & 0xffff) == 0xfffe)`n                    {`n                        __close_nolock(static_cast<int>(file_handle));`n                        *__errno() = 0x16;`n                        return 0x16;`n                    }`n`n                    if ((local_20 & 0xffff) == 0xfeff)`n                    {`n                        lVar8 = __lseek_nolock(`n                            static_cast<int>(file_handle), 2, 0);`n`n                        if (lVar8 == -1)`n                            goto LAB_10018662;`n`n                        local_6 = 2;`n                        goto LAB_100188e3;`n                    }`n                }`n                else if (iVar3 == 3)`n                {`n                    if (local_20 == 0xbfbbef)`n                    {`n                        local_6 = 1;`n                        goto LAB_100188e3;`n                    }`n`n                    goto LAB_1001885a;`n                }`n`n                uVar4 = static_cast<std::uint32_t>(`n                    __lseek_nolock(`n                        static_cast<int>(file_handle), 0, 0));`n`nLAB_1001884d:`n                if (uVar4 == 0xffffffff)`n                    goto LAB_10018662;`n            }`n        }`n    }`n`nLAB_100188e3:`n    *reinterpret_cast<std::uint8_t*>(`n        DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n        0x24 + (file_handle & 0x1f) * 0x40) =`n        *reinterpret_cast<std::uint8_t*>(`n            DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n            0x24 + (file_handle & 0x1f) * 0x40) ^`n        ((*reinterpret_cast<std::uint8_t*>(`n            DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n            0x24 + (file_handle & 0x1f) * 0x40) ^ local_6) & 0x7f);`n`n    *reinterpret_cast<std::uint8_t*>(`n        DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n        0x24 + (file_handle & 0x1f) * 0x40) =`n        static_cast<std::uint8_t>(param_3 >> 0x10) << 7 |`n        *reinterpret_cast<std::uint8_t*>(`n            DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n            0x24 + (file_handle & 0x1f) * 0x40) & 0x7f;`n`n    if ((local_7 == 0) && ((param_3 & 8) != 0))`n        *reinterpret_cast<std::uint8_t*>(`n            DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n            4 + (file_handle & 0x1f) * 0x40) |= 0x20;`n`n    if ((local_10 & 0xc0000000) != 0xc0000000)`n        return local_c;`n`n    if ((param_3 & 1) == 0)`n        return local_c;`n`n    CloseHandle(local_24);`n`n    pvVar10 = CreateFileA(`n        param_2,`n        local_10 & 0x7fffffff,`n        local_18,`n        &local_34,`n        3,`n        local_14,`n        nullptr);`n`n    if (pvVar10 != INVALID_HANDLE_VALUE)`n    {`n        *reinterpret_cast<HANDLE*>(`n            DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n            (file_handle & 0x1f) * 0x40) = pvVar10;`n        return local_c;`n    }`n`n    DVar7 = GetLastError();`n    __dosmaperr(DVar7);`n`n    *reinterpret_cast<std::uint8_t*>(`n        DAT_1003c420[static_cast<int>(file_handle) >> 5] +`n        4 + (file_handle & 0x1f) * 0x40) &=`n        0xfe;`n`n    __free_osfhnd(file_handle);`n`nLAB_1001856e:`n    return *__errno();`n}`n
+#include <Windows.h>
+#include <cstdint>
+#include <cstddef>
+
+extern "C" std::uintptr_t DAT_1003c420[];
+extern "C" std::uint8_t DAT_10039a0c;
+
+extern "C" int __cdecl FUN_1001b1a5(std::uint32_t*);
+extern "C" unsigned long* __cdecl ___doserrno();
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" std::uint32_t __cdecl __alloc_osfhnd();
+extern "C" void __cdecl __dosmaperr(DWORD);
+extern "C" void __cdecl __set_osfhnd(int, std::intptr_t);
+extern "C" long __cdecl __lseek_nolock(int, long, int);
+extern "C" int __cdecl __close_nolock(int);
+extern "C" int __cdecl __read_nolock(int, void*, unsigned int);
+extern "C" int __cdecl __chsize_nolock(int, std::int64_t);
+extern "C" std::int64_t __cdecl __lseeki64_nolock(int, std::int64_t, int);
+extern "C" int __cdecl __write(int, const void*, unsigned int);
+extern "C" void __cdecl __free_osfhnd(int);
+extern "C" void __cdecl __invoke_watson(
+    const wchar_t*, const wchar_t*, const wchar_t*, unsigned int,
+    std::uintptr_t);
+
+extern "C" int __cdecl FUN_100182c1(
+    std::uint32_t* param_1,
+    LPCSTR param_2,
+    std::uint32_t param_3,
+    int param_4,
+    std::uint8_t param_5)
+{
+    int unaff_EDI;
+    __asm mov unaff_EDI, edi
+
+    std::uint8_t bVar2;
+    std::uint32_t file_handle = 0;
+    int iVar3;
+    std::uint32_t uVar4;
+    unsigned long* puVar5;
+    DWORD DVar7;
+    long lVar8;
+    int iVar9;
+    HANDLE pvVar10;
+    std::uint8_t bVar11;
+    bool bVar12;
+    std::int64_t lVar13;
+    int iVar14;
+
+    SECURITY_ATTRIBUTES local_34{};
+    std::uint32_t local_28;
+    HANDLE local_24;
+    std::uint32_t local_20;
+    DWORD local_1c;
+    std::uint32_t local_18;
+    std::uint32_t local_14;
+    std::uint32_t local_10;
+    int local_c;
+    char local_8;
+    std::uint8_t local_7;
+    std::uint8_t local_6;
+    std::uint8_t local_5;
+
+    bVar12 = (param_3 & 0x80) == 0;
+    local_28 = 0;
+    local_6 = 0;
+    local_c = 0;
+    local_34.nLength = 0xc;
+    local_34.lpSecurityDescriptor = nullptr;
+    local_5 = bVar12 ? 0 : 0x10;
+    local_34.bInheritHandle = static_cast<BOOL>(bVar12);
+
+    iVar3 = FUN_1001b1a5(&local_28);
+    if (iVar3 != 0)
+        __invoke_watson(nullptr, nullptr, nullptr, 0, 0);
+
+    if (((param_3 & 0x8000) == 0) &&
+        (((param_3 & 0x74000) != 0) || (local_28 != 0x8000)))
+        local_5 = local_5 | 0x80;
+
+    uVar4 = param_3 & 3;
+    if (uVar4 == 0)
+        local_10 = 0x80000000;
+    else
+    {
+        if (uVar4 == 1)
+        {
+            if (((param_3 & 8) == 0) || ((param_3 & 0x70000) == 0))
+            {
+                local_10 = 0x40000000;
+                goto LAB_10018383;
+            }
+        }
+        else if (uVar4 != 2)
+            goto LAB_10018343;
+
+        local_10 = 0xc0000000;
+    }
+
+LAB_10018383:
+    if (param_4 == 0x10)
+        local_18 = 0;
+    else if (param_4 == 0x20)
+        local_18 = 1;
+    else if (param_4 == 0x30)
+        local_18 = 2;
+    else if (param_4 == 0x40)
+        local_18 = 3;
+    else
+    {
+        if (param_4 != 0x80)
+        {
+LAB_10018343:
+            *___doserrno() = 0;
+            file_handle = 0xffffffff;
+            *__errno() = 0x16;
+            FUN_1001189f();
+            return 0x16;
+        }
+
+        local_18 = static_cast<std::uint32_t>(local_10 == 0x80000000);
+    }
+
+    uVar4 = param_3 & 0x700;
+    if (uVar4 < 0x401)
+    {
+        if ((uVar4 == 0x400) || (uVar4 == 0))
+            local_1c = 3;
+        else if (uVar4 == 0x100)
+            local_1c = 4;
+        else
+        {
+            if (uVar4 == 0x200)
+                goto LAB_10018445;
+            if (uVar4 != 0x300)
+                goto LAB_10018425;
+            local_1c = 2;
+        }
+    }
+    else
+    {
+        if (uVar4 != 0x500)
+        {
+            if (uVar4 == 0x600)
+            {
+LAB_10018445:
+                local_1c = 5;
+                goto LAB_10018455;
+            }
+
+            if (uVar4 != 0x700)
+            {
+LAB_10018425:
+                *___doserrno() = 0;
+                file_handle = 0xffffffff;
+                *__errno() = 0x16;
+                FUN_1001189f();
+                return 0x16;
+            }
+        }
+
+        local_1c = 1;
+    }
+
+LAB_10018455:
+    local_14 = 0x80;
+
+    if (((param_3 & 0x100) != 0) &&
+        (-1 < static_cast<char>(
+            static_cast<std::uint8_t>(~DAT_10039a0c) & param_5)))
+        local_14 = 1;
+
+    if ((param_3 & 0x40) != 0)
+    {
+        local_14 = local_14 | 0x4000000;
+        local_10 = local_10 | 0x10000;
+        local_18 = local_18 | 4;
+    }
+
+    if ((param_3 & 0x1000) != 0)
+        local_14 = local_14 | 0x100;
+
+    if ((param_3 & 0x20) == 0)
+    {
+        if ((param_3 & 0x10) != 0)
+            local_14 = local_14 | 0x10000000;
+    }
+    else
+        local_14 = local_14 | 0x8000000;
+
+    file_handle = __alloc_osfhnd();
+
+    if (file_handle == 0xffffffff)
+    {
+        *___doserrno() = 0;
+        file_handle = 0xffffffff;
+        *__errno() = 0x18;
+        return *__errno();
+    }
+
+    *param_1 = 1;
+
+    local_24 = CreateFileA(
+        param_2, local_10, local_18, &local_34,
+        local_1c, local_14, nullptr);
+
+    if (local_24 == INVALID_HANDLE_VALUE)
+    {
+        if (((local_10 & 0xc0000000) == 0xc0000000) &&
+            ((param_3 & 1) != 0))
+        {
+            local_10 = local_10 & 0x7fffffff;
+            local_24 = CreateFileA(
+                param_2, local_10, local_18, &local_34,
+                local_1c, local_14, nullptr);
+
+            if (local_24 != INVALID_HANDLE_VALUE)
+                goto LAB_1001857d;
+        }
+
+        *reinterpret_cast<std::uint8_t*>(
+            DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+            4 + (file_handle & 0x1f) * 0x40) &=
+            0xfe;
+
+        DVar7 = GetLastError();
+        __dosmaperr(DVar7);
+        goto LAB_1001856e;
+    }
+
+LAB_1001857d:
+    DVar7 = GetFileType(local_24);
+
+    if (DVar7 == 0)
+    {
+        *reinterpret_cast<std::uint8_t*>(
+            DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+            4 + (file_handle & 0x1f) * 0x40) &=
+            0xfe;
+
+        DVar7 = GetLastError();
+        __dosmaperr(DVar7);
+        CloseHandle(local_24);
+
+        if (DVar7 == 0)
+            *__errno() = 0xd;
+
+        goto LAB_1001856e;
+    }
+
+    if (DVar7 == 2)
+        local_5 = local_5 | 0x40;
+    else if (DVar7 == 3)
+        local_5 = local_5 | 8;
+
+    __set_osfhnd(
+        static_cast<int>(file_handle),
+        reinterpret_cast<std::intptr_t>(local_24));
+
+    bVar11 = local_5 | 1;
+
+    *reinterpret_cast<std::uint8_t*>(
+        DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+        4 + (file_handle & 0x1f) * 0x40) = bVar11;
+
+    *reinterpret_cast<std::uint8_t*>(
+        DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+        0x24 + (file_handle & 0x1f) * 0x40) &=
+        0x80;
+
+    local_7 = local_5 & 0x48;
+
+    if (local_7 == 0)
+    {
+        bVar2 = local_5 & 0x80;
+        local_5 = bVar11;
+
+        if (bVar2 == 0)
+            goto LAB_100188e3;
+
+        if ((param_3 & 2) == 0)
+            goto LAB_100186b1;
+
+        lVar8 = __lseek_nolock(static_cast<int>(file_handle), -1, 2);
+
+        if (lVar8 == -1)
+        {
+            puVar5 = ___doserrno();
+            bVar11 = local_5;
+
+            if (*puVar5 == 0x83)
+                goto LAB_100186b1;
+        }
+        else
+        {
+            local_8 = '\0';
+            iVar3 = __read_nolock(
+                static_cast<int>(file_handle), &local_8, 1);
+
+            if ((((iVar3 != 0) || (local_8 != '\x1a')) ||
+                (iVar3 = __chsize_nolock(
+                    static_cast<int>(file_handle),
+                    static_cast<std::int64_t>(
+                        (static_cast<std::uint64_t>(
+                            static_cast<std::uint32_t>(unaff_EDI)) << 32) |
+                        static_cast<std::uint32_t>(lVar8 >> 0x1f))),
+                    iVar3 != -1)) &&
+                (lVar8 = __lseek_nolock(
+                    static_cast<int>(file_handle), 0, 0),
+                    bVar11 = local_5,
+                    lVar8 != -1))
+                goto LAB_100186b1;
+        }
+
+LAB_10018662:
+        __close_nolock(static_cast<int>(file_handle));
+        goto LAB_1001856e;
+    }
+
+LAB_100186b1:
+    local_5 = bVar11;
+
+    if ((local_5 & 0x80) != 0)
+    {
+        if ((param_3 & 0x74000) == 0)
+        {
+            if ((local_28 & 0x74000) == 0)
+                param_3 = param_3 | 0x4000;
+            else
+                param_3 = param_3 | local_28 & 0x74000;
+        }
+
+        uVar4 = param_3 & 0x74000;
+
+        if (uVar4 == 0x4000)
+            local_6 = 0;
+        else if ((uVar4 == 0x10000) || (uVar4 == 0x14000))
+        {
+            if ((param_3 & 0x301) == 0x301)
+                goto LAB_10018720;
+        }
+        else if ((uVar4 == 0x20000) || (uVar4 == 0x24000))
+        {
+LAB_10018720:
+            local_6 = 2;
+        }
+        else if ((uVar4 == 0x40000) || (uVar4 == 0x44000))
+            local_6 = 1;
+
+        if (((param_3 & 0x70000) != 0) &&
+            (local_20 = 0, (local_5 & 0x40) == 0))
+        {
+            uVar4 = local_10 & 0xc0000000;
+
+            if (uVar4 == 0x40000000)
+            {
+                if (local_1c == 0)
+                    goto LAB_100188e3;
+
+                if (2 < local_1c)
+                {
+                    if (local_1c < 5)
+                    {
+                        lVar13 = __lseeki64_nolock(
+                            static_cast<int>(file_handle),
+                            0x200000000LL,
+                            unaff_EDI);
+
+                        if (lVar13 == 0)
+                            goto LAB_10018788;
+
+                        lVar13 = __lseeki64_nolock(
+                            static_cast<int>(file_handle),
+                            0,
+                            unaff_EDI);
+
+                        uVar4 = static_cast<std::uint32_t>(lVar13) &
+                            static_cast<std::uint32_t>(
+                                static_cast<std::uint64_t>(lVar13) >> 32);
+
+                        goto LAB_1001884d;
+                    }
+
+LAB_1001877f:
+                    if (local_1c != 5)
+                        goto LAB_100188e3;
+                }
+
+LAB_10018788:
+                iVar3 = 0;
+
+                if (local_6 == 1)
+                {
+                    local_20 = 0xbfbbef;
+                    iVar14 = 3;
+                }
+                else
+                {
+                    if (local_6 != 2)
+                        goto LAB_100188e3;
+
+                    local_20 = 0xfeff;
+                    iVar14 = 2;
+                }
+
+                do
+                {
+                    iVar9 = __write(
+                        static_cast<int>(file_handle),
+                        reinterpret_cast<std::uint8_t*>(&local_20) + iVar3,
+                        iVar14 - iVar3);
+
+                    if (iVar9 == -1)
+                        goto LAB_10018662;
+
+                    iVar3 = iVar3 + iVar9;
+                }
+                while (iVar3 < iVar14);
+            }
+            else
+            {
+                if (uVar4 != 0x80000000)
+                {
+                    if ((uVar4 == 0xc0000000) && (local_1c != 0))
+                    {
+                        if (2 < local_1c)
+                        {
+                            if (4 < local_1c)
+                                goto LAB_1001877f;
+
+                            lVar13 = __lseeki64_nolock(
+                                static_cast<int>(file_handle),
+                                0x200000000LL,
+                                unaff_EDI);
+
+                            if (lVar13 != 0)
+                            {
+                                lVar13 = __lseeki64_nolock(
+                                    static_cast<int>(file_handle),
+                                    0,
+                                    unaff_EDI);
+
+                                if (lVar13 == -1)
+                                    goto LAB_10018662;
+
+                                goto LAB_100187d3;
+                            }
+                        }
+
+                        goto LAB_10018788;
+                    }
+
+                    goto LAB_100188e3;
+                }
+
+LAB_100187d3:
+                iVar3 = __read_nolock(
+                    static_cast<int>(file_handle), &local_20, 3);
+
+                if (iVar3 == -1)
+                    goto LAB_10018662;
+
+                if (iVar3 == 2)
+                {
+LAB_1001885a:
+                    if ((local_20 & 0xffff) == 0xfffe)
+                    {
+                        __close_nolock(static_cast<int>(file_handle));
+                        *__errno() = 0x16;
+                        return 0x16;
+                    }
+
+                    if ((local_20 & 0xffff) == 0xfeff)
+                    {
+                        lVar8 = __lseek_nolock(
+                            static_cast<int>(file_handle), 2, 0);
+
+                        if (lVar8 == -1)
+                            goto LAB_10018662;
+
+                        local_6 = 2;
+                        goto LAB_100188e3;
+                    }
+                }
+                else if (iVar3 == 3)
+                {
+                    if (local_20 == 0xbfbbef)
+                    {
+                        local_6 = 1;
+                        goto LAB_100188e3;
+                    }
+
+                    goto LAB_1001885a;
+                }
+
+                uVar4 = static_cast<std::uint32_t>(
+                    __lseek_nolock(
+                        static_cast<int>(file_handle), 0, 0));
+
+LAB_1001884d:
+                if (uVar4 == 0xffffffff)
+                    goto LAB_10018662;
+            }
+        }
+    }
+
+LAB_100188e3:
+    *reinterpret_cast<std::uint8_t*>(
+        DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+        0x24 + (file_handle & 0x1f) * 0x40) =
+        *reinterpret_cast<std::uint8_t*>(
+            DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+            0x24 + (file_handle & 0x1f) * 0x40) ^
+        ((*reinterpret_cast<std::uint8_t*>(
+            DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+            0x24 + (file_handle & 0x1f) * 0x40) ^ local_6) & 0x7f);
+
+    *reinterpret_cast<std::uint8_t*>(
+        DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+        0x24 + (file_handle & 0x1f) * 0x40) =
+        static_cast<std::uint8_t>(param_3 >> 0x10) << 7 |
+        *reinterpret_cast<std::uint8_t*>(
+            DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+            0x24 + (file_handle & 0x1f) * 0x40) & 0x7f;
+
+    if ((local_7 == 0) && ((param_3 & 8) != 0))
+        *reinterpret_cast<std::uint8_t*>(
+            DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+            4 + (file_handle & 0x1f) * 0x40) |= 0x20;
+
+    if ((local_10 & 0xc0000000) != 0xc0000000)
+        return local_c;
+
+    if ((param_3 & 1) == 0)
+        return local_c;
+
+    CloseHandle(local_24);
+
+    pvVar10 = CreateFileA(
+        param_2,
+        local_10 & 0x7fffffff,
+        local_18,
+        &local_34,
+        3,
+        local_14,
+        nullptr);
+
+    if (pvVar10 != INVALID_HANDLE_VALUE)
+    {
+        *reinterpret_cast<HANDLE*>(
+            DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+            (file_handle & 0x1f) * 0x40) = pvVar10;
+        return local_c;
+    }
+
+    DVar7 = GetLastError();
+    __dosmaperr(DVar7);
+
+    *reinterpret_cast<std::uint8_t*>(
+        DAT_1003c420[static_cast<int>(file_handle) >> 5] +
+        4 + (file_handle & 0x1f) * 0x40) &=
+        0xfe;
+
+    __free_osfhnd(file_handle);
+
+LAB_1001856e:
+    return *__errno();
+}

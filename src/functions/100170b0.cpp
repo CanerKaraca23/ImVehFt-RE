@@ -1,1 +1,23 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" unsigned int DAT_10023090[];`nextern "C" wchar_t* UNK_10023094[];`n`nextern "C" wchar_t* __cdecl __GET_RTERRMSG(int param_1)`n{`n    unsigned int uVar1 = 0;`n`n    do`n    {`n        if (static_cast<unsigned int>(param_1) == DAT_10023090[uVar1 * 2])`n        {`n            return UNK_10023094[uVar1 * 2];`n        }`n`n        uVar1 = uVar1 + 1;`n    } while (uVar1 < 0x16);`n`n    return nullptr;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" unsigned int DAT_10023090[];
+extern "C" wchar_t* UNK_10023094[];
+
+extern "C" wchar_t* __cdecl __GET_RTERRMSG(int param_1)
+{
+    unsigned int uVar1 = 0;
+
+    do
+    {
+        if (static_cast<unsigned int>(param_1) == DAT_10023090[uVar1 * 2])
+        {
+            return UNK_10023094[uVar1 * 2];
+        }
+
+        uVar1 = uVar1 + 1;
+    } while (uVar1 < 0x16);
+
+    return nullptr;
+}

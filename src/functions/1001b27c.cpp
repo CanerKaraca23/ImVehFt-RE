@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" HANDLE DAT_10029f10;`n`nextern "C" void __cdecl ___initconout()`n{`n    DAT_10029f10 = CreateFileW(`n        L"CONOUT$",`n        0x40000000,`n        3,`n        nullptr,`n        3,`n        0,`n        nullptr);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <windows.h>
+#include <stdio.h>
+extern "C" HANDLE DAT_10029f10;
+
+extern "C" void __cdecl ___initconout()
+{
+    DAT_10029f10 = CreateFileW(
+        L"CONOUT$",
+        0x40000000,
+        3,
+        nullptr,
+        3,
+        0,
+        nullptr);
+}

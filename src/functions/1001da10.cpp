@@ -1,1 +1,25 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t __fastcall __NLG_Notify1(`n    std::int32_t );`n`nusing UnresolvedCodePointer = void (*)();`n`nextern "C" void __stdcall __CallSettingFrame_12(`n    std::uint32_t ,`n    std::uint32_t ,`n    std::int32_t param_3)`n{`n    auto pcVar1 = reinterpret_cast<UnresolvedCodePointer>(`n        static_cast<std::uintptr_t>(`n            __NLG_Notify1(param_3)));`n`n    (*pcVar1)();`n`n    if (param_3 == 0x100)`n    {`n        param_3 = 2;`n    }`n`n    __NLG_Notify1(param_3);`n}`n
+#include <cstdint>
+
+extern "C" std::uint32_t __fastcall __NLG_Notify1(
+    std::int32_t );
+
+using UnresolvedCodePointer = void (*)();
+
+extern "C" void __stdcall __CallSettingFrame_12(
+    std::uint32_t ,
+    std::uint32_t ,
+    std::int32_t param_3)
+{
+    auto pcVar1 = reinterpret_cast<UnresolvedCodePointer>(
+        static_cast<std::uintptr_t>(
+            __NLG_Notify1(param_3)));
+
+    (*pcVar1)();
+
+    if (param_3 == 0x100)
+    {
+        param_3 = 2;
+    }
+
+    __NLG_Notify1(param_3);
+}

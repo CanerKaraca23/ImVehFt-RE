@@ -1,1 +1,72 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nusing PVOID = void*;`nusing _onexit_t = int (__cdecl*)(void);`n`nextern "C" PVOID __cdecl DecodePointer(PVOID pointer);`nextern "C" PVOID __cdecl EncodePointer(PVOID pointer);`nextern "C" std::size_t __cdecl __msize(PVOID memory);`nextern "C" PVOID __cdecl __realloc_crt(PVOID memory, std::size_t size);`n`nextern PVOID DAT_1003d548;`nextern PVOID DAT_1003d54c;`n`n_onexit_t __cdecl __onexit_nolock(_onexit_t param_1)`n{`n    auto* memory =`n        static_cast<std::uint32_t*>(DecodePointer(DAT_1003d54c));`n    auto* current =`n        static_cast<std::uint32_t*>(DecodePointer(DAT_1003d548));`n`n    int offset;`n    if (current < memory ||`n        (offset = static_cast<int>(`n             reinterpret_cast<std::uintptr_t>(current) -`n             reinterpret_cast<std::uintptr_t>(memory)),`n         offset + 4U < 4))`n    {`n        return nullptr;`n    }`n`n    const std::size_t current_size = __msize(memory);`n`n    if (current_size < offset + 4U)`n    {`n        std::size_t growth = 0x800;`n        if (current_size < 0x800)`n        {`n            growth = current_size;`n        }`n`n        PVOID resized;`n        if (growth + current_size < current_size ||`n            (resized = __realloc_crt(memory, growth + current_size),`n             resized == nullptr))`n        {`n            if (current_size + 0x10 < current_size)`n            {`n                return nullptr;`n            }`n`n            resized = __realloc_crt(memory, current_size + 0x10);`n            if (resized == nullptr)`n            {`n                return nullptr;`n            }`n        }`n`n        current = reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uint32_t>(`n                reinterpret_cast<std::uintptr_t>(resized)) +`n            (offset >> 2) * 4);`n`n        DAT_1003d54c = EncodePointer(resized);`n    }`n`n    const PVOID encoded_param = EncodePointer(reinterpret_cast<PVOID>(param_1));`n    *current = static_cast<std::uint32_t>(`n        reinterpret_cast<std::uintptr_t>(encoded_param));`n`n    DAT_1003d548 = EncodePointer(current + 1);`n    return param_1;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+using PVOID = void*;
+
+extern "C" PVOID __cdecl DecodePointer(PVOID pointer);
+extern "C" PVOID __cdecl EncodePointer(PVOID pointer);
+extern "C" std::size_t __cdecl __msize(PVOID memory);
+extern "C" PVOID __cdecl __realloc_crt(PVOID memory, std::size_t size);
+
+extern PVOID DAT_1003d548;
+extern PVOID DAT_1003d54c;
+
+PVOID __cdecl __onexit_nolock(PVOID param_1)
+{
+    auto* memory =
+        static_cast<std::uint32_t*>(DecodePointer(DAT_1003d54c));
+    auto* current =
+        static_cast<std::uint32_t*>(DecodePointer(DAT_1003d548));
+
+    int offset;
+    if (current < memory ||
+        (offset = static_cast<int>(
+             reinterpret_cast<std::uintptr_t>(current) -
+             reinterpret_cast<std::uintptr_t>(memory)),
+         offset + 4U < 4))
+    {
+        return nullptr;
+    }
+
+    const std::size_t current_size = __msize(memory);
+
+    if (current_size < offset + 4U)
+    {
+        std::size_t growth = 0x800;
+        if (current_size < 0x800)
+        {
+            growth = current_size;
+        }
+
+        PVOID resized;
+        if (growth + current_size < current_size ||
+            (resized = __realloc_crt(memory, growth + current_size),
+             resized == nullptr))
+        {
+            if (current_size + 0x10 < current_size)
+            {
+                return nullptr;
+            }
+
+            resized = __realloc_crt(memory, current_size + 0x10);
+            if (resized == nullptr)
+            {
+                return nullptr;
+            }
+        }
+
+        current = reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uint32_t>(
+                reinterpret_cast<std::uintptr_t>(resized)) +
+            (offset >> 2) * 4);
+
+        DAT_1003d54c = EncodePointer(resized);
+    }
+
+    const PVOID encoded_param = EncodePointer(param_1);
+    *current = static_cast<std::uint32_t>(
+        reinterpret_cast<std::uintptr_t>(encoded_param));
+
+    DAT_1003d548 = EncodePointer(current + 1);
+    return param_1;
+}

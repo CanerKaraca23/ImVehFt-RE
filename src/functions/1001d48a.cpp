@@ -1,1 +1,122 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nstruct EHExceptionRecord; struct EHRegistrationNode; struct _CONTEXT; struct _s_CatchableType; struct _s_FuncInfo;`nstruct TypeDescriptor { void* pVFTable; void* spare; };`nstruct _s_HandlerType { unsigned int adjectives; TypeDescriptor* pType; int dispCatchObj; void* addressOfHandler; };`nstruct _s_TryBlockMapEntry { int tryLow; int tryHigh; int catchHigh; int nCatches; _s_HandlerType* pHandlerArray; };`nstruct _s_FuncInfo { unsigned int magicNumber; int maxState; void* pUnwindMap; unsigned int nTryBlocks; _s_TryBlockMapEntry* pTryBlockMap; };`nstruct _tiddata { std::uint8_t _pad_0000_0080[0x80]; void* _translator; };`nstatic_assert(offsetof(_s_FuncInfo, nTryBlocks) == 0x0c);`nstatic_assert(offsetof(_s_FuncInfo, pTryBlockMap) == 0x10);`nstatic_assert(sizeof(_s_TryBlockMapEntry) == 0x14);`nstatic_assert(offsetof(_s_HandlerType, addressOfHandler) == 0x0c);`nstatic_assert(offsetof(_tiddata, _translator) == 0x80);`nextern "C" _tiddata* __cdecl __getptd(void);`nextern void* __stdcall FUN_10014c40(void);`nextern "C" void __cdecl _inconsistency(void);`nextern "C" int __cdecl _CallSETranslator(EHExceptionRecord*, EHRegistrationNode*, _CONTEXT*, void*, _s_FuncInfo*, int, EHRegistrationNode*);`nextern "C" _s_TryBlockMapEntry* __cdecl _GetRangeOfTrysToCheck(_s_FuncInfo*, int, int, unsigned int*, unsigned int*);`nextern "C" void __cdecl CatchIt(void);`nvoid __cdecl FindHandlerForForeignException(`n    EHExceptionRecord* param_1,`n    EHRegistrationNode* param_2,`n    _CONTEXT* param_3,`n    void* param_4,`n    _s_FuncInfo* param_5,`n    int param_6,`n    int param_7,`n    EHRegistrationNode* param_8)`n{`n    if (*reinterpret_cast<int*>(param_1) != -0x7ffffffd)`n    {`n        _tiddata* p_Var2 = __getptd();`n`n        if (p_Var2->_translator != nullptr)`n        {`n            p_Var2 = __getptd();`n            void* pvVar3 = FUN_10014c40();`n`n            if ((p_Var2->_translator != pvVar3) &&`n                (*reinterpret_cast<int*>(param_1) != -0x1fbcb0b3) &&`n                (*reinterpret_cast<int*>(param_1) != -0x1fbcbcae) &&`n                (_CallSETranslator(`n                     param_1,`n                     param_2,`n                     param_3,`n                     param_4,`n                     param_5,`n                     param_7,`n                     param_8) != 0))`n            {`n                return;`n            }`n        }`n`n        if (param_5->nTryBlocks == 0)`n        {`n            _inconsistency();`n        }`n`n        std::uint32_t local_8;`n        std::uint32_t in_stack_fffffff0;`n`n        _s_TryBlockMapEntry* p_Var5 =`n            _GetRangeOfTrysToCheck(`n                param_5,`n                param_7,`n                param_6,`n                &local_8,`n                &in_stack_fffffff0);`n`n        if (local_8 < in_stack_fffffff0)`n        {`n            std::uint8_t* current =`n                reinterpret_cast<std::uint8_t*>(p_Var5);`n`n            do`n            {`n                _s_TryBlockMapEntry* entry =`n                    reinterpret_cast<_s_TryBlockMapEntry*>(current);`n`n                if ((entry->tryLow <= param_6) &&`n                    (param_6 <= entry->tryHigh))`n                {`n                    _s_HandlerType* handler =`n                        &entry->pHandlerArray[entry->nCatches - 1];`n`n                    TypeDescriptor* pTVar1 = handler->pType;`n`n                    if (((pTVar1 == nullptr) ||`n                         (*reinterpret_cast<const unsigned char*>(`n                              &pTVar1[1].pVFTable) == 0)) &&`n                        ((handler->adjectives & 0x40U) == 0))`n                    {`n                        _s_HandlerType* handler_reg = handler;`n                    EHRegistrationNode* node_reg = param_2;`n                    _s_TryBlockMapEntry* try_reg = entry;`n                    __asm {`n                        mov ebx, handler_reg`n                        mov esi, node_reg`n                        mov edi, try_reg`n                        push param_8`n                        push param_7`n                        push 0`n                        push param_5`n                        push param_4`n                        push param_3`n                        push param_1`n                        call CatchIt`n                        add esp, 1Ch`n                    }`n                    }`n                }`n`n                local_8 = local_8 + 1;`n                current = current + 20;`n            }`n            while (local_8 < in_stack_fffffff0);`n        }`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+struct EHExceptionRecord; struct EHRegistrationNode; struct _CONTEXT; struct _s_CatchableType; struct _s_FuncInfo;
+struct TypeDescriptor { void* pVFTable; void* spare; };
+struct _s_HandlerType { unsigned int adjectives; TypeDescriptor* pType; int dispCatchObj; void* addressOfHandler; };
+struct _s_TryBlockMapEntry { int tryLow; int tryHigh; int catchHigh; int nCatches; _s_HandlerType* pHandlerArray; };
+struct _s_FuncInfo { unsigned int magicNumber; int maxState; void* pUnwindMap; unsigned int nTryBlocks; _s_TryBlockMapEntry* pTryBlockMap; };
+struct _tiddata { std::uint8_t _pad_0000_0080[0x80]; void* _translator; };
+static_assert(offsetof(_s_FuncInfo, nTryBlocks) == 0x0c);
+static_assert(offsetof(_s_FuncInfo, pTryBlockMap) == 0x10);
+static_assert(sizeof(_s_TryBlockMapEntry) == 0x14);
+static_assert(offsetof(_s_HandlerType, addressOfHandler) == 0x0c);
+static_assert(offsetof(_tiddata, _translator) == 0x80);
+extern "C" _tiddata* __cdecl __getptd(void);
+extern "C" void* __stdcall FUN_10014c40(void);
+extern "C" void __cdecl _inconsistency(void);
+extern "C" int __cdecl _CallSETranslator(EHExceptionRecord*, EHRegistrationNode*, _CONTEXT*, void*, _s_FuncInfo*, int, EHRegistrationNode*);
+extern "C" _s_TryBlockMapEntry* __cdecl _GetRangeOfTrysToCheck(_s_FuncInfo*, int, int, unsigned int*, unsigned int*);
+extern "C" void __cdecl CatchIt(void);
+void __cdecl FindHandlerForForeignException(
+    EHExceptionRecord* param_1,
+    EHRegistrationNode* param_2,
+    _CONTEXT* param_3,
+    void* param_4,
+    _s_FuncInfo* param_5,
+    int param_6,
+    int param_7,
+    EHRegistrationNode* param_8)
+{
+    if (*reinterpret_cast<int*>(param_1) != -0x7ffffffd)
+    {
+        _tiddata* p_Var2 = __getptd();
+
+        if (p_Var2->_translator != nullptr)
+        {
+            p_Var2 = __getptd();
+            void* pvVar3 = FUN_10014c40();
+
+            if ((p_Var2->_translator != pvVar3) &&
+                (*reinterpret_cast<int*>(param_1) != -0x1fbcb0b3) &&
+                (*reinterpret_cast<int*>(param_1) != -0x1fbcbcae) &&
+                (_CallSETranslator(
+                     param_1,
+                     param_2,
+                     param_3,
+                     param_4,
+                     param_5,
+                     param_7,
+                     param_8) != 0))
+            {
+                return;
+            }
+        }
+
+        if (param_5->nTryBlocks == 0)
+        {
+            _inconsistency();
+        }
+
+        std::uint32_t local_8;
+        std::uint32_t in_stack_fffffff0;
+
+        _s_TryBlockMapEntry* p_Var5 =
+            _GetRangeOfTrysToCheck(
+                param_5,
+                param_7,
+                param_6,
+                &local_8,
+                &in_stack_fffffff0);
+
+        if (local_8 < in_stack_fffffff0)
+        {
+            std::uint8_t* current =
+                reinterpret_cast<std::uint8_t*>(p_Var5);
+
+            do
+            {
+                _s_TryBlockMapEntry* entry =
+                    reinterpret_cast<_s_TryBlockMapEntry*>(current);
+
+                if ((entry->tryLow <= param_6) &&
+                    (param_6 <= entry->tryHigh))
+                {
+                    _s_HandlerType* handler =
+                        &entry->pHandlerArray[entry->nCatches - 1];
+
+                    TypeDescriptor* pTVar1 = handler->pType;
+
+                    if (((pTVar1 == nullptr) ||
+                         (*reinterpret_cast<const unsigned char*>(
+                              &pTVar1[1].pVFTable) == 0)) &&
+                        ((handler->adjectives & 0x40U) == 0))
+                    {
+                        _s_HandlerType* handler_reg = handler;
+                    EHRegistrationNode* node_reg = param_2;
+                    _s_TryBlockMapEntry* try_reg = entry;
+                    __asm {
+                        mov ebx, handler_reg
+                        mov esi, node_reg
+                        mov edi, try_reg
+                        push param_8
+                        push param_7
+                        push 0
+                        push param_5
+                        push param_4
+                        push param_3
+                        push param_1
+                        call CatchIt
+                        add esp, 1Ch
+                    }
+                    }
+                }
+
+                local_8 = local_8 + 1;
+                current = current + 20;
+            }
+            while (local_8 < in_stack_fffffff0);
+        }
+    }
+}

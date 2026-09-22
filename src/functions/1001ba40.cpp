@@ -1,1 +1,92 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" volatile std::uint32_t DAT_1003c414;`n`n#if !defined(_MSC_VER) || !defined(_M_IX86)`n#error "FUN_1001ba40 requires MSVC x86 inline-assembly support."`n#endif`n`nextern "C" __declspec(naked) std::uint64_t __fastcall FUN_1001ba40(`n    std::uint32_t,`n    std::uint32_t)`n{`n    __asm`n    {`n        cmp dword ptr [DAT_1003c414], 0`n        jz custom_rounding_path`n`n        push ebp`n        mov ebp, esp`n        sub esp, 8`n        and esp, 0fffffff8h`n        fstp qword ptr [esp]`n        _emit 0xf2`n        _emit 0x0f`n        _emit 0x2c`n        _emit 0x04`n        _emit 0x24`n        leave`n        ret`n`n    custom_rounding_path:`n        push ebp`n        mov ebp, esp`n        sub esp, 20h`n        and esp, 0fffffff0h`n        fld st(0)`n        fst dword ptr [esp + 18h]`n        fistp qword ptr [esp + 10h]`n        fild qword ptr [esp + 10h]`n        mov edx, dword ptr [esp + 18h]`n        mov eax, dword ptr [esp + 10h]`n        test eax, eax`n        jz zero_low_word`n        fsubp st(1), st(0)`n        test edx, edx`n        jns nonnegative_input`n`n        fstp dword ptr [esp]`n        mov ecx, dword ptr [esp]`n        xor ecx, 80000000h`n        add ecx, 7fffffffh`n        adc eax, 0`n        mov edx, dword ptr [esp + 14h]`n        adc edx, 0`n        jmp rounding_done`n`n    nonnegative_input:`n        fstp dword ptr [esp]`n        mov ecx, dword ptr [esp]`n        add ecx, 7fffffffh`n        sbb eax, 0`n        mov edx, dword ptr [esp + 14h]`n        sbb edx, 0`n        jmp rounding_done`n`n    zero_low_word:`n        mov edx, dword ptr [esp + 14h]`n        test edx, 7fffffffh`n        jnz zero_word_residual`n        fstp dword ptr [esp + 18h]`n        fstp dword ptr [esp + 18h]`n        leave`n        ret`n`n    zero_word_residual:`n        fsubp st(1), st(0)`n        test edx, edx`n        jns nonnegative_input`n        fstp dword ptr [esp]`n        mov ecx, dword ptr [esp]`n        xor ecx, 80000000h`n        add ecx, 7fffffffh`n        adc eax, 0`n        mov edx, dword ptr [esp + 14h]`n        adc edx, 0`n        jmp rounding_done`n`n    rounding_done:`n        leave`n        ret`n    }`n}`n
+#include <cstdint>
+
+extern "C" volatile std::uint32_t DAT_1003c414;
+
+#if !defined(_MSC_VER) || !defined(_M_IX86)
+#error "FUN_1001ba40 requires MSVC x86 inline-assembly support."
+#endif
+
+extern "C" __declspec(naked) std::uint64_t __fastcall FUN_1001ba40(
+    std::uint32_t,
+    std::uint32_t)
+{
+    __asm
+    {
+        cmp dword ptr [DAT_1003c414], 0
+        jz custom_rounding_path
+
+        push ebp
+        mov ebp, esp
+        sub esp, 8
+        and esp, 0fffffff8h
+        fstp qword ptr [esp]
+        _emit 0xf2
+        _emit 0x0f
+        _emit 0x2c
+        _emit 0x04
+        _emit 0x24
+        leave
+        ret
+
+    custom_rounding_path:
+        push ebp
+        mov ebp, esp
+        sub esp, 20h
+        and esp, 0fffffff0h
+        fld st(0)
+        fst dword ptr [esp + 18h]
+        fistp qword ptr [esp + 10h]
+        fild qword ptr [esp + 10h]
+        mov edx, dword ptr [esp + 18h]
+        mov eax, dword ptr [esp + 10h]
+        test eax, eax
+        jz zero_low_word
+        fsubp st(1), st(0)
+        test edx, edx
+        jns nonnegative_input
+
+        fstp dword ptr [esp]
+        mov ecx, dword ptr [esp]
+        xor ecx, 80000000h
+        add ecx, 7fffffffh
+        adc eax, 0
+        mov edx, dword ptr [esp + 14h]
+        adc edx, 0
+        jmp rounding_done
+
+    nonnegative_input:
+        fstp dword ptr [esp]
+        mov ecx, dword ptr [esp]
+        add ecx, 7fffffffh
+        sbb eax, 0
+        mov edx, dword ptr [esp + 14h]
+        sbb edx, 0
+        jmp rounding_done
+
+    zero_low_word:
+        mov edx, dword ptr [esp + 14h]
+        test edx, 7fffffffh
+        jnz zero_word_residual
+        fstp dword ptr [esp + 18h]
+        fstp dword ptr [esp + 18h]
+        leave
+        ret
+
+    zero_word_residual:
+        fsubp st(1), st(0)
+        test edx, edx
+        jns nonnegative_input
+        fstp dword ptr [esp]
+        mov ecx, dword ptr [esp]
+        xor ecx, 80000000h
+        add ecx, 7fffffffh
+        adc eax, 0
+        mov edx, dword ptr [esp + 14h]
+        adc edx, 0
+        jmp rounding_done
+
+    rounding_done:
+        leave
+        ret
+    }
+}

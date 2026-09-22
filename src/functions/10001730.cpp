@@ -1,1 +1,25 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern int DAT_1003aac8;`n`nextern "C" void __cdecl FUN_100014c0(char* format, ...);`n`nextern "C" void __stdcall FUN_10001730()`n{`n    int unaff_ESI;`n    __asm mov unaff_ESI, esi`n`n    if (unaff_ESI != 0)`n    {`n        if (*reinterpret_cast<int*>(unaff_ESI + 0x54) < 2)`n        {`n            DAT_1003aac8 = DAT_1003aac8 + -1;`n`n            FUN_100014c0(`n                const_cast<char*>("____UNLOADED_TEXTURE %s, TEXTURES_LEFT: %d"));`n        }`n`n        reinterpret_cast<void (__cdecl*)(int)>(`n            static_cast<std::uintptr_t>(0x7f3820))(unaff_ESI);`n    }`n}`n
+#include <cstdint>
+
+extern int DAT_1003aac8;
+
+extern "C" void __cdecl FUN_100014c0(char* format, ...);
+
+extern "C" void __stdcall FUN_10001730()
+{
+    int unaff_ESI;
+    __asm mov unaff_ESI, esi
+
+    if (unaff_ESI != 0)
+    {
+        if (*reinterpret_cast<int*>(unaff_ESI + 0x54) < 2)
+        {
+            DAT_1003aac8 = DAT_1003aac8 + -1;
+
+            FUN_100014c0(
+                const_cast<char*>("____UNLOADED_TEXTURE %s, TEXTURES_LEFT: %d"));
+        }
+
+        reinterpret_cast<void (__cdecl*)(int)>(
+            static_cast<std::uintptr_t>(0x7f3820))(unaff_ESI);
+    }
+}

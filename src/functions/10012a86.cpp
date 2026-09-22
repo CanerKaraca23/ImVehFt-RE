@@ -1,1 +1,45 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" void* __cdecl _realloc(void* ptr, std::size_t new_size);`nextern "C" void __stdcall Sleep(std::uint32_t milliseconds);`n`nextern "C" std::uint32_t DAT_10039a08;`n`nextern "C" void* __cdecl __realloc_crt(`n    void* _Ptr,`n    std::size_t _NewSize)`n{`n    std::uint32_t milliseconds = 0;`n`n    do`n    {`n        void* result = _realloc(_Ptr, _NewSize);`n`n        if (result != nullptr)`n        {`n            return result;`n        }`n`n        if (_NewSize == 0)`n        {`n            return nullptr;`n        }`n`n        if (DAT_10039a08 == 0)`n        {`n            return nullptr;`n        }`n`n        Sleep(milliseconds);`n        milliseconds = milliseconds + 1000;`n`n        if (DAT_10039a08 < milliseconds)`n        {`n            milliseconds = 0xFFFFFFFFu;`n        }`n    }`n    while (milliseconds != 0xFFFFFFFFu);`n`n    return nullptr;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" void* __cdecl _realloc(void* ptr, std::size_t new_size);
+extern "C" void __stdcall Sleep(std::uint32_t milliseconds);
+
+extern "C" std::uint32_t DAT_10039a08;
+
+extern "C" void* __cdecl __realloc_crt(
+    void* _Ptr,
+    std::size_t _NewSize)
+{
+    std::uint32_t milliseconds = 0;
+
+    do
+    {
+        void* result = _realloc(_Ptr, _NewSize);
+
+        if (result != nullptr)
+        {
+            return result;
+        }
+
+        if (_NewSize == 0)
+        {
+            return nullptr;
+        }
+
+        if (DAT_10039a08 == 0)
+        {
+            return nullptr;
+        }
+
+        Sleep(milliseconds);
+        milliseconds = milliseconds + 1000;
+
+        if (DAT_10039a08 < milliseconds)
+        {
+            milliseconds = 0xFFFFFFFFu;
+        }
+    }
+    while (milliseconds != 0xFFFFFFFFu);
+
+    return nullptr;
+}

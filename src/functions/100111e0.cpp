@@ -1,1 +1,489 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" std::int32_t DAT_1003c414;`nextern "C" void* __fastcall FUN_10016f49(std::uint32_t);`n`nvoid* __cdecl FID_conflict__memcpy(`n    void* _Dst,`n    void* _Src,`n    std::size_t _Size)`n{`n    const std::uint32_t dst =`n        static_cast<std::uint32_t>(`n            reinterpret_cast<std::uintptr_t>(_Dst));`n    const std::uint32_t src =`n        static_cast<std::uint32_t>(`n            reinterpret_cast<std::uintptr_t>(_Src));`n    const std::uint32_t size =`n        static_cast<std::uint32_t>(_Size);`n`n    std::uint32_t* puVar1;`n    std::uint32_t* puVar4;`n    std::uint32_t uVar2;`n    // Every non-returning path assigns the tail count before it is consumed.`n    std::uint32_t uVar3 = 0;`n`n    if ((src < dst) && (dst < src + size))`n    {`n        puVar1 = reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(src + size - 4u));`n        puVar4 = reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(dst + size - 4u));`n`n        if ((static_cast<std::uint32_t>(`n                 reinterpret_cast<std::uintptr_t>(puVar4)) & 3u) == 0)`n        {`n            uVar2 = size >> 2;`n            uVar3 = size & 3u;`n`n            if (7u < uVar2)`n            {`n                for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n                {`n                    *puVar4 = *puVar1;`n                    puVar1 = puVar1 - 1;`n                    puVar4 = puVar4 - 1;`n                }`n`n                switch (uVar3)`n                {`n                case 0:`n                    return _Dst;`n                case 2:`n                    goto backward_case_2;`n                case 3:`n                    goto backward_case_3;`n                }`n                goto backward_case_1;`n            }`n        }`n        else`n        {`n            switch (size)`n            {`n            case 0:`n                goto backward_case_0;`n            case 1:`n                goto backward_case_1;`n            case 2:`n                goto backward_case_2;`n            case 3:`n                goto backward_case_3;`n            default:`n                uVar2 = size -`n                    (static_cast<std::uint32_t>(`n                         reinterpret_cast<std::uintptr_t>(puVar4)) & 3u);`n`n                switch (static_cast<std::uint32_t>(`n                            reinterpret_cast<std::uintptr_t>(puVar4)) & 3u)`n                {`n                case 1:`n                    uVar3 = uVar2 & 3u;`n                    reinterpret_cast<std::uint8_t*>(puVar4)[3] =`n                        reinterpret_cast<std::uint8_t*>(puVar1)[3];`n                    puVar1 = reinterpret_cast<std::uint32_t*>(`n                        reinterpret_cast<std::uintptr_t>(puVar1) - 1u);`n                    uVar2 = uVar2 >> 2;`n                    puVar4 = reinterpret_cast<std::uint32_t*>(`n                        reinterpret_cast<std::uintptr_t>(puVar4) - 1u);`n`n                    if (7u < uVar2)`n                    {`n                        for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n                        {`n                            *puVar4 = *puVar1;`n                            puVar1 = puVar1 - 1;`n                            puVar4 = puVar4 - 1;`n                        }`n`n                        switch (uVar3)`n                        {`n                        case 0:`n                            return _Dst;`n                        case 2:`n                            goto backward_case_2;`n                        case 3:`n                            goto backward_case_3;`n                        }`n                        goto backward_case_1;`n                    }`n                    break;`n`n                case 2:`n                    uVar3 = uVar2 & 3u;`n                    reinterpret_cast<std::uint8_t*>(puVar4)[3] =`n                        reinterpret_cast<std::uint8_t*>(puVar1)[3];`n                    uVar2 = uVar2 >> 2;`n                    reinterpret_cast<std::uint8_t*>(puVar4)[2] =`n                        reinterpret_cast<std::uint8_t*>(puVar1)[2];`n                    puVar1 = reinterpret_cast<std::uint32_t*>(`n                        reinterpret_cast<std::uintptr_t>(puVar1) - 2u);`n                    puVar4 = reinterpret_cast<std::uint32_t*>(`n                        reinterpret_cast<std::uintptr_t>(puVar4) - 2u);`n`n                    if (7u < uVar2)`n                    {`n                        for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n                        {`n                            *puVar4 = *puVar1;`n                            puVar1 = puVar1 - 1;`n                            puVar4 = puVar4 - 1;`n                        }`n`n                        switch (uVar3)`n                        {`n                        case 0:`n                            return _Dst;`n                        case 2:`n                            goto backward_case_2;`n                        case 3:`n                            goto backward_case_3;`n                        }`n                        goto backward_case_1;`n                    }`n                    break;`n`n                case 3:`n                    uVar3 = uVar2 & 3u;`n                    reinterpret_cast<std::uint8_t*>(puVar4)[3] =`n                        reinterpret_cast<std::uint8_t*>(puVar1)[3];`n                    reinterpret_cast<std::uint8_t*>(puVar4)[2] =`n                        reinterpret_cast<std::uint8_t*>(puVar1)[2];`n                    uVar2 = uVar2 >> 2;`n                    reinterpret_cast<std::uint8_t*>(puVar4)[1] =`n                        reinterpret_cast<std::uint8_t*>(puVar1)[1];`n                    puVar1 = reinterpret_cast<std::uint32_t*>(`n                        reinterpret_cast<std::uintptr_t>(puVar1) - 3u);`n                    puVar4 = reinterpret_cast<std::uint32_t*>(`n                        reinterpret_cast<std::uintptr_t>(puVar4) - 3u);`n`n                    if (7u < uVar2)`n                    {`n                        for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n                        {`n                            *puVar4 = *puVar1;`n                            puVar1 = puVar1 - 1;`n                            puVar4 = puVar4 - 1;`n                        }`n`n                        switch (uVar3)`n                        {`n                        case 0:`n                            return _Dst;`n                        case 2:`n                            goto backward_case_2;`n                        case 3:`n                            goto backward_case_3;`n                        }`n                        goto backward_case_1;`n                    }`n                    break;`n                }`n            }`n        }`n`n        switch (uVar2)`n        {`n        case 7:`n            puVar4[7u - uVar2] = puVar1[7u - uVar2];`n        case 6:`n            puVar4[6u - uVar2] = puVar1[6u - uVar2];`n        case 5:`n            puVar4[5u - uVar2] = puVar1[5u - uVar2];`n        case 4:`n            puVar4[4u - uVar2] = puVar1[4u - uVar2];`n        case 3:`n            puVar4[3u - uVar2] = puVar1[3u - uVar2];`n        case 2:`n            puVar4[2u - uVar2] = puVar1[2u - uVar2];`n        case 1:`n            puVar4[1u - uVar2] = puVar1[1u - uVar2];`n            puVar1 = puVar1 - uVar2;`n            puVar4 = puVar4 - uVar2;`n        }`n`n        switch (uVar3)`n        {`n        case 1:`n        backward_case_1:`n            reinterpret_cast<std::uint8_t*>(puVar4)[3] =`n                reinterpret_cast<std::uint8_t*>(puVar1)[3];`n            return _Dst;`n`n        case 2:`n        backward_case_2:`n            reinterpret_cast<std::uint8_t*>(puVar4)[3] =`n                reinterpret_cast<std::uint8_t*>(puVar1)[3];`n            reinterpret_cast<std::uint8_t*>(puVar4)[2] =`n                reinterpret_cast<std::uint8_t*>(puVar1)[2];`n            return _Dst;`n`n        case 3:`n        backward_case_3:`n            reinterpret_cast<std::uint8_t*>(puVar4)[3] =`n                reinterpret_cast<std::uint8_t*>(puVar1)[3];`n            reinterpret_cast<std::uint8_t*>(puVar4)[2] =`n                reinterpret_cast<std::uint8_t*>(puVar1)[2];`n            reinterpret_cast<std::uint8_t*>(puVar4)[1] =`n                reinterpret_cast<std::uint8_t*>(puVar1)[1];`n            return _Dst;`n        }`n`n    backward_case_0:`n        return _Dst;`n    }`n`n    if ((size > 0x7fu) &&`n        (DAT_1003c414 != 0) &&`n        ((dst & 0xfu) == (src & 0xfu)))`n    {`n        puVar1 = nullptr;`n        const std::uint32_t helper_size = size;`n        __asm {`n            push esi`n            push edi`n            mov esi, _Src`n            mov edi, _Dst`n            mov ecx, helper_size`n            call FUN_10016f49`n            mov puVar1, eax`n            pop edi`n            pop esi`n        }`n        return puVar1;`n    }`n`n    puVar1 = reinterpret_cast<std::uint32_t*>(`n        static_cast<std::uintptr_t>(dst));`n`n    if ((dst & 3u) == 0)`n    {`n        uVar2 = size >> 2;`n        uVar3 = size & 3u;`n`n        if (7u < uVar2)`n        {`n            for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n            {`n                *puVar1 = *reinterpret_cast<std::uint32_t*>(_Src);`n                _Src = reinterpret_cast<void*>(`n                    reinterpret_cast<std::uintptr_t>(_Src) + 4u);`n                puVar1 = puVar1 + 1;`n            }`n`n            switch (uVar3)`n            {`n            case 0:`n                return _Dst;`n            case 2:`n                goto forward_case_2;`n            case 3:`n                goto forward_case_3;`n            }`n            goto forward_case_1;`n        }`n    }`n    else`n    {`n        switch (size)`n        {`n        case 0:`n            goto forward_case_0;`n        case 1:`n            goto forward_case_1;`n        case 2:`n            goto forward_case_2;`n        case 3:`n            goto forward_case_3;`n        default:`n            uVar2 = (size - 4u) + (dst & 3u);`n`n            switch (dst & 3u)`n            {`n            case 1:`n                uVar3 = uVar2 & 3u;`n                *reinterpret_cast<std::uint8_t*>(`n                    static_cast<std::uintptr_t>(dst)) =`n                    *reinterpret_cast<std::uint8_t*>(_Src);`n                *reinterpret_cast<std::uint8_t*>(`n                    static_cast<std::uintptr_t>(dst + 1u)) =`n                    *reinterpret_cast<std::uint8_t*>(`n                        reinterpret_cast<std::uintptr_t>(_Src) + 1u);`n                uVar2 = uVar2 >> 2;`n                *reinterpret_cast<std::uint8_t*>(`n                    static_cast<std::uintptr_t>(dst + 2u)) =`n                    *reinterpret_cast<std::uint8_t*>(`n                        reinterpret_cast<std::uintptr_t>(_Src) + 2u);`n                _Src = reinterpret_cast<void*>(`n                    reinterpret_cast<std::uintptr_t>(_Src) + 3u);`n                puVar1 = reinterpret_cast<std::uint32_t*>(`n                    static_cast<std::uintptr_t>(dst + 3u));`n`n                if (7u < uVar2)`n                {`n                    for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n                    {`n                        *puVar1 =`n                            *reinterpret_cast<std::uint32_t*>(_Src);`n                        _Src = reinterpret_cast<void*>(`n                            reinterpret_cast<std::uintptr_t>(_Src) + 4u);`n                        puVar1 = puVar1 + 1;`n                    }`n`n                    switch (uVar3)`n                    {`n                    case 0:`n                        return _Dst;`n                    case 2:`n                        goto forward_case_2;`n                    case 3:`n                        goto forward_case_3;`n                    }`n                    goto forward_case_1;`n                }`n                break;`n`n            case 2:`n                uVar3 = uVar2 & 3u;`n                *reinterpret_cast<std::uint8_t*>(`n                    static_cast<std::uintptr_t>(dst)) =`n                    *reinterpret_cast<std::uint8_t*>(_Src);`n                uVar2 = uVar2 >> 2;`n                *reinterpret_cast<std::uint8_t*>(`n                    static_cast<std::uintptr_t>(dst + 1u)) =`n                    *reinterpret_cast<std::uint8_t*>(`n                        reinterpret_cast<std::uintptr_t>(_Src) + 1u);`n                _Src = reinterpret_cast<void*>(`n                    reinterpret_cast<std::uintptr_t>(_Src) + 2u);`n                puVar1 = reinterpret_cast<std::uint32_t*>(`n                    static_cast<std::uintptr_t>(dst + 2u));`n`n                if (7u < uVar2)`n                {`n                    for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n                    {`n                        *puVar1 =`n                            *reinterpret_cast<std::uint32_t*>(_Src);`n                        _Src = reinterpret_cast<void*>(`n                            reinterpret_cast<std::uintptr_t>(_Src) + 4u);`n                        puVar1 = puVar1 + 1;`n                    }`n`n                    switch (uVar3)`n                    {`n                    case 0:`n                        return _Dst;`n                    case 2:`n                        goto forward_case_2;`n                    case 3:`n                        goto forward_case_3;`n                    }`n                    goto forward_case_1;`n                }`n                break;`n`n            case 3:`n                uVar3 = uVar2 & 3u;`n                *reinterpret_cast<std::uint8_t*>(`n                    static_cast<std::uintptr_t>(dst)) =`n                    *reinterpret_cast<std::uint8_t*>(_Src);`n                _Src = reinterpret_cast<void*>(`n                    reinterpret_cast<std::uintptr_t>(_Src) + 1u);`n                uVar2 = uVar2 >> 2;`n                puVar1 = reinterpret_cast<std::uint32_t*>(`n                    static_cast<std::uintptr_t>(dst + 1u));`n`n                if (7u < uVar2)`n                {`n                    for (; uVar2 != 0; uVar2 = uVar2 - 1u)`n                    {`n                        *puVar1 =`n                            *reinterpret_cast<std::uint32_t*>(_Src);`n                        _Src = reinterpret_cast<void*>(`n                            reinterpret_cast<std::uintptr_t>(_Src) + 4u);`n                        puVar1 = puVar1 + 1;`n                    }`n`n                    switch (uVar3)`n                    {`n                    case 0:`n                        return _Dst;`n                    case 2:`n                        goto forward_case_2;`n                    case 3:`n                        goto forward_case_3;`n                    }`n                    goto forward_case_1;`n                }`n                break;`n            }`n        }`n    }`n`n    switch (uVar2)`n    {`n    case 7:`n        puVar1[uVar2 - 7u] =`n            *reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) +`n                (uVar2 - 7u) * 4u);`n    case 6:`n        puVar1[uVar2 - 6u] =`n            *reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) +`n                (uVar2 - 6u) * 4u);`n    case 5:`n        puVar1[uVar2 - 5u] =`n            *reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) +`n                (uVar2 - 5u) * 4u);`n    case 4:`n        puVar1[uVar2 - 4u] =`n            *reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) +`n                (uVar2 - 4u) * 4u);`n    case 3:`n        puVar1[uVar2 - 3u] =`n            *reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) +`n                (uVar2 - 3u) * 4u);`n    case 2:`n        puVar1[uVar2 - 2u] =`n            *reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) +`n                (uVar2 - 2u) * 4u);`n    case 1:`n        puVar1[uVar2 - 1u] =`n            *reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) +`n                (uVar2 - 1u) * 4u);`n        _Src = reinterpret_cast<void*>(`n            reinterpret_cast<std::uintptr_t>(_Src) + uVar2 * 4u);`n        puVar1 = puVar1 + uVar2;`n    }`n`n    switch (uVar3)`n    {`n    case 1:`n    forward_case_1:`n        *reinterpret_cast<std::uint8_t*>(puVar1) =`n            *reinterpret_cast<std::uint8_t*>(_Src);`n        return _Dst;`n`n    case 2:`n    forward_case_2:`n        *reinterpret_cast<std::uint8_t*>(puVar1) =`n            *reinterpret_cast<std::uint8_t*>(_Src);`n        *reinterpret_cast<std::uint8_t*>(`n            reinterpret_cast<std::uintptr_t>(puVar1) + 1u) =`n            *reinterpret_cast<std::uint8_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) + 1u);`n        return _Dst;`n`n    case 3:`n    forward_case_3:`n        *reinterpret_cast<std::uint8_t*>(puVar1) =`n            *reinterpret_cast<std::uint8_t*>(_Src);`n        *reinterpret_cast<std::uint8_t*>(`n            reinterpret_cast<std::uintptr_t>(puVar1) + 1u) =`n            *reinterpret_cast<std::uint8_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) + 1u);`n        *reinterpret_cast<std::uint8_t*>(`n            reinterpret_cast<std::uintptr_t>(puVar1) + 2u) =`n            *reinterpret_cast<std::uint8_t*>(`n                reinterpret_cast<std::uintptr_t>(_Src) + 2u);`n        return _Dst;`n    }`n`nforward_case_0:`n    return _Dst;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" std::int32_t DAT_1003c414;
+extern "C" std::uint32_t* __fastcall FUN_10016f49(std::uint32_t);
+
+void* __cdecl FID_conflict__memcpy(
+    void* _Dst,
+    void* _Src,
+    std::size_t _Size)
+{
+    const std::uint32_t dst =
+        static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(_Dst));
+    const std::uint32_t src =
+        static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(_Src));
+    const std::uint32_t size =
+        static_cast<std::uint32_t>(_Size);
+
+    std::uint32_t* puVar1;
+    std::uint32_t* puVar4;
+    std::uint32_t uVar2;
+    // Every non-returning path assigns the tail count before it is consumed.
+    std::uint32_t uVar3 = 0;
+
+    if ((src < dst) && (dst < src + size))
+    {
+        puVar1 = reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(src + size - 4u));
+        puVar4 = reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(dst + size - 4u));
+
+        if ((static_cast<std::uint32_t>(
+                 reinterpret_cast<std::uintptr_t>(puVar4)) & 3u) == 0)
+        {
+            uVar2 = size >> 2;
+            uVar3 = size & 3u;
+
+            if (7u < uVar2)
+            {
+                for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+                {
+                    *puVar4 = *puVar1;
+                    puVar1 = puVar1 - 1;
+                    puVar4 = puVar4 - 1;
+                }
+
+                switch (uVar3)
+                {
+                case 0:
+                    return _Dst;
+                case 2:
+                    goto backward_case_2;
+                case 3:
+                    goto backward_case_3;
+                }
+                goto backward_case_1;
+            }
+        }
+        else
+        {
+            switch (size)
+            {
+            case 0:
+                goto backward_case_0;
+            case 1:
+                goto backward_case_1;
+            case 2:
+                goto backward_case_2;
+            case 3:
+                goto backward_case_3;
+            default:
+                uVar2 = size -
+                    (static_cast<std::uint32_t>(
+                         reinterpret_cast<std::uintptr_t>(puVar4)) & 3u);
+
+                switch (static_cast<std::uint32_t>(
+                            reinterpret_cast<std::uintptr_t>(puVar4)) & 3u)
+                {
+                case 1:
+                    uVar3 = uVar2 & 3u;
+                    reinterpret_cast<std::uint8_t*>(puVar4)[3] =
+                        reinterpret_cast<std::uint8_t*>(puVar1)[3];
+                    puVar1 = reinterpret_cast<std::uint32_t*>(
+                        reinterpret_cast<std::uintptr_t>(puVar1) - 1u);
+                    uVar2 = uVar2 >> 2;
+                    puVar4 = reinterpret_cast<std::uint32_t*>(
+                        reinterpret_cast<std::uintptr_t>(puVar4) - 1u);
+
+                    if (7u < uVar2)
+                    {
+                        for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+                        {
+                            *puVar4 = *puVar1;
+                            puVar1 = puVar1 - 1;
+                            puVar4 = puVar4 - 1;
+                        }
+
+                        switch (uVar3)
+                        {
+                        case 0:
+                            return _Dst;
+                        case 2:
+                            goto backward_case_2;
+                        case 3:
+                            goto backward_case_3;
+                        }
+                        goto backward_case_1;
+                    }
+                    break;
+
+                case 2:
+                    uVar3 = uVar2 & 3u;
+                    reinterpret_cast<std::uint8_t*>(puVar4)[3] =
+                        reinterpret_cast<std::uint8_t*>(puVar1)[3];
+                    uVar2 = uVar2 >> 2;
+                    reinterpret_cast<std::uint8_t*>(puVar4)[2] =
+                        reinterpret_cast<std::uint8_t*>(puVar1)[2];
+                    puVar1 = reinterpret_cast<std::uint32_t*>(
+                        reinterpret_cast<std::uintptr_t>(puVar1) - 2u);
+                    puVar4 = reinterpret_cast<std::uint32_t*>(
+                        reinterpret_cast<std::uintptr_t>(puVar4) - 2u);
+
+                    if (7u < uVar2)
+                    {
+                        for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+                        {
+                            *puVar4 = *puVar1;
+                            puVar1 = puVar1 - 1;
+                            puVar4 = puVar4 - 1;
+                        }
+
+                        switch (uVar3)
+                        {
+                        case 0:
+                            return _Dst;
+                        case 2:
+                            goto backward_case_2;
+                        case 3:
+                            goto backward_case_3;
+                        }
+                        goto backward_case_1;
+                    }
+                    break;
+
+                case 3:
+                    uVar3 = uVar2 & 3u;
+                    reinterpret_cast<std::uint8_t*>(puVar4)[3] =
+                        reinterpret_cast<std::uint8_t*>(puVar1)[3];
+                    reinterpret_cast<std::uint8_t*>(puVar4)[2] =
+                        reinterpret_cast<std::uint8_t*>(puVar1)[2];
+                    uVar2 = uVar2 >> 2;
+                    reinterpret_cast<std::uint8_t*>(puVar4)[1] =
+                        reinterpret_cast<std::uint8_t*>(puVar1)[1];
+                    puVar1 = reinterpret_cast<std::uint32_t*>(
+                        reinterpret_cast<std::uintptr_t>(puVar1) - 3u);
+                    puVar4 = reinterpret_cast<std::uint32_t*>(
+                        reinterpret_cast<std::uintptr_t>(puVar4) - 3u);
+
+                    if (7u < uVar2)
+                    {
+                        for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+                        {
+                            *puVar4 = *puVar1;
+                            puVar1 = puVar1 - 1;
+                            puVar4 = puVar4 - 1;
+                        }
+
+                        switch (uVar3)
+                        {
+                        case 0:
+                            return _Dst;
+                        case 2:
+                            goto backward_case_2;
+                        case 3:
+                            goto backward_case_3;
+                        }
+                        goto backward_case_1;
+                    }
+                    break;
+                }
+            }
+        }
+
+        switch (uVar2)
+        {
+        case 7:
+            puVar4[7u - uVar2] = puVar1[7u - uVar2];
+        case 6:
+            puVar4[6u - uVar2] = puVar1[6u - uVar2];
+        case 5:
+            puVar4[5u - uVar2] = puVar1[5u - uVar2];
+        case 4:
+            puVar4[4u - uVar2] = puVar1[4u - uVar2];
+        case 3:
+            puVar4[3u - uVar2] = puVar1[3u - uVar2];
+        case 2:
+            puVar4[2u - uVar2] = puVar1[2u - uVar2];
+        case 1:
+            puVar4[1u - uVar2] = puVar1[1u - uVar2];
+            puVar1 = puVar1 - uVar2;
+            puVar4 = puVar4 - uVar2;
+        }
+
+        switch (uVar3)
+        {
+        case 1:
+        backward_case_1:
+            reinterpret_cast<std::uint8_t*>(puVar4)[3] =
+                reinterpret_cast<std::uint8_t*>(puVar1)[3];
+            return _Dst;
+
+        case 2:
+        backward_case_2:
+            reinterpret_cast<std::uint8_t*>(puVar4)[3] =
+                reinterpret_cast<std::uint8_t*>(puVar1)[3];
+            reinterpret_cast<std::uint8_t*>(puVar4)[2] =
+                reinterpret_cast<std::uint8_t*>(puVar1)[2];
+            return _Dst;
+
+        case 3:
+        backward_case_3:
+            reinterpret_cast<std::uint8_t*>(puVar4)[3] =
+                reinterpret_cast<std::uint8_t*>(puVar1)[3];
+            reinterpret_cast<std::uint8_t*>(puVar4)[2] =
+                reinterpret_cast<std::uint8_t*>(puVar1)[2];
+            reinterpret_cast<std::uint8_t*>(puVar4)[1] =
+                reinterpret_cast<std::uint8_t*>(puVar1)[1];
+            return _Dst;
+        }
+
+    backward_case_0:
+        return _Dst;
+    }
+
+    if ((size > 0x7fu) &&
+        (DAT_1003c414 != 0) &&
+        ((dst & 0xfu) == (src & 0xfu)))
+    {
+        puVar1 = FUN_10016f49(size);
+        return puVar1;
+    }
+
+    puVar1 = reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(dst));
+
+    if ((dst & 3u) == 0)
+    {
+        uVar2 = size >> 2;
+        uVar3 = size & 3u;
+
+        if (7u < uVar2)
+        {
+            for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+            {
+                *puVar1 = *reinterpret_cast<std::uint32_t*>(_Src);
+                _Src = reinterpret_cast<void*>(
+                    reinterpret_cast<std::uintptr_t>(_Src) + 4u);
+                puVar1 = puVar1 + 1;
+            }
+
+            switch (uVar3)
+            {
+            case 0:
+                return _Dst;
+            case 2:
+                goto forward_case_2;
+            case 3:
+                goto forward_case_3;
+            }
+            goto forward_case_1;
+        }
+    }
+    else
+    {
+        switch (size)
+        {
+        case 0:
+            goto forward_case_0;
+        case 1:
+            goto forward_case_1;
+        case 2:
+            goto forward_case_2;
+        case 3:
+            goto forward_case_3;
+        default:
+            uVar2 = (size - 4u) + (dst & 3u);
+
+            switch (dst & 3u)
+            {
+            case 1:
+                uVar3 = uVar2 & 3u;
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(dst)) =
+                    *reinterpret_cast<std::uint8_t*>(_Src);
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(dst + 1u)) =
+                    *reinterpret_cast<std::uint8_t*>(
+                        reinterpret_cast<std::uintptr_t>(_Src) + 1u);
+                uVar2 = uVar2 >> 2;
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(dst + 2u)) =
+                    *reinterpret_cast<std::uint8_t*>(
+                        reinterpret_cast<std::uintptr_t>(_Src) + 2u);
+                _Src = reinterpret_cast<void*>(
+                    reinterpret_cast<std::uintptr_t>(_Src) + 3u);
+                puVar1 = reinterpret_cast<std::uint32_t*>(
+                    static_cast<std::uintptr_t>(dst + 3u));
+
+                if (7u < uVar2)
+                {
+                    for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+                    {
+                        *puVar1 =
+                            *reinterpret_cast<std::uint32_t*>(_Src);
+                        _Src = reinterpret_cast<void*>(
+                            reinterpret_cast<std::uintptr_t>(_Src) + 4u);
+                        puVar1 = puVar1 + 1;
+                    }
+
+                    switch (uVar3)
+                    {
+                    case 0:
+                        return _Dst;
+                    case 2:
+                        goto forward_case_2;
+                    case 3:
+                        goto forward_case_3;
+                    }
+                    goto forward_case_1;
+                }
+                break;
+
+            case 2:
+                uVar3 = uVar2 & 3u;
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(dst)) =
+                    *reinterpret_cast<std::uint8_t*>(_Src);
+                uVar2 = uVar2 >> 2;
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(dst + 1u)) =
+                    *reinterpret_cast<std::uint8_t*>(
+                        reinterpret_cast<std::uintptr_t>(_Src) + 1u);
+                _Src = reinterpret_cast<void*>(
+                    reinterpret_cast<std::uintptr_t>(_Src) + 2u);
+                puVar1 = reinterpret_cast<std::uint32_t*>(
+                    static_cast<std::uintptr_t>(dst + 2u));
+
+                if (7u < uVar2)
+                {
+                    for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+                    {
+                        *puVar1 =
+                            *reinterpret_cast<std::uint32_t*>(_Src);
+                        _Src = reinterpret_cast<void*>(
+                            reinterpret_cast<std::uintptr_t>(_Src) + 4u);
+                        puVar1 = puVar1 + 1;
+                    }
+
+                    switch (uVar3)
+                    {
+                    case 0:
+                        return _Dst;
+                    case 2:
+                        goto forward_case_2;
+                    case 3:
+                        goto forward_case_3;
+                    }
+                    goto forward_case_1;
+                }
+                break;
+
+            case 3:
+                uVar3 = uVar2 & 3u;
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(dst)) =
+                    *reinterpret_cast<std::uint8_t*>(_Src);
+                _Src = reinterpret_cast<void*>(
+                    reinterpret_cast<std::uintptr_t>(_Src) + 1u);
+                uVar2 = uVar2 >> 2;
+                puVar1 = reinterpret_cast<std::uint32_t*>(
+                    static_cast<std::uintptr_t>(dst + 1u));
+
+                if (7u < uVar2)
+                {
+                    for (; uVar2 != 0; uVar2 = uVar2 - 1u)
+                    {
+                        *puVar1 =
+                            *reinterpret_cast<std::uint32_t*>(_Src);
+                        _Src = reinterpret_cast<void*>(
+                            reinterpret_cast<std::uintptr_t>(_Src) + 4u);
+                        puVar1 = puVar1 + 1;
+                    }
+
+                    switch (uVar3)
+                    {
+                    case 0:
+                        return _Dst;
+                    case 2:
+                        goto forward_case_2;
+                    case 3:
+                        goto forward_case_3;
+                    }
+                    goto forward_case_1;
+                }
+                break;
+            }
+        }
+    }
+
+    switch (uVar2)
+    {
+    case 7:
+        puVar1[uVar2 - 7u] =
+            *reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) +
+                (uVar2 - 7u) * 4u);
+    case 6:
+        puVar1[uVar2 - 6u] =
+            *reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) +
+                (uVar2 - 6u) * 4u);
+    case 5:
+        puVar1[uVar2 - 5u] =
+            *reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) +
+                (uVar2 - 5u) * 4u);
+    case 4:
+        puVar1[uVar2 - 4u] =
+            *reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) +
+                (uVar2 - 4u) * 4u);
+    case 3:
+        puVar1[uVar2 - 3u] =
+            *reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) +
+                (uVar2 - 3u) * 4u);
+    case 2:
+        puVar1[uVar2 - 2u] =
+            *reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) +
+                (uVar2 - 2u) * 4u);
+    case 1:
+        puVar1[uVar2 - 1u] =
+            *reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) +
+                (uVar2 - 1u) * 4u);
+        _Src = reinterpret_cast<void*>(
+            reinterpret_cast<std::uintptr_t>(_Src) + uVar2 * 4u);
+        puVar1 = puVar1 + uVar2;
+    }
+
+    switch (uVar3)
+    {
+    case 1:
+    forward_case_1:
+        *reinterpret_cast<std::uint8_t*>(puVar1) =
+            *reinterpret_cast<std::uint8_t*>(_Src);
+        return _Dst;
+
+    case 2:
+    forward_case_2:
+        *reinterpret_cast<std::uint8_t*>(puVar1) =
+            *reinterpret_cast<std::uint8_t*>(_Src);
+        *reinterpret_cast<std::uint8_t*>(
+            reinterpret_cast<std::uintptr_t>(puVar1) + 1u) =
+            *reinterpret_cast<std::uint8_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) + 1u);
+        return _Dst;
+
+    case 3:
+    forward_case_3:
+        *reinterpret_cast<std::uint8_t*>(puVar1) =
+            *reinterpret_cast<std::uint8_t*>(_Src);
+        *reinterpret_cast<std::uint8_t*>(
+            reinterpret_cast<std::uintptr_t>(puVar1) + 1u) =
+            *reinterpret_cast<std::uint8_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) + 1u);
+        *reinterpret_cast<std::uint8_t*>(
+            reinterpret_cast<std::uintptr_t>(puVar1) + 2u) =
+            *reinterpret_cast<std::uint8_t*>(
+                reinterpret_cast<std::uintptr_t>(_Src) + 2u);
+        return _Dst;
+    }
+
+forward_case_0:
+    return _Dst;
+}

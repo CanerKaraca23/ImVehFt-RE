@@ -1,1 +1,23 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __cdecl FUN_10010120(`n    float,`n    float)`n{`n    __asm {`n        push ebp`n        mov ebp, esp`n        fld dword ptr [ebp + 0ch]`n        sub esp, 8`n        fstp dword ptr [esp + 4]`n        mov eax, 053cc70h`n        fld dword ptr [ebp + 8]`n        fstp dword ptr [esp]`n        call eax`n        add esp, 8`n        pop ebp`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __cdecl FUN_10010120(
+    float,
+    float)
+{
+    __asm {
+        push ebp
+        mov ebp, esp
+        fld dword ptr [ebp + 0ch]
+        sub esp, 8
+        fstp dword ptr [esp + 4]
+        mov eax, 053cc70h
+        fld dword ptr [ebp + 8]
+        fstp dword ptr [esp]
+        call eax
+        add esp, 8
+        pop ebp
+        ret
+    }
+}

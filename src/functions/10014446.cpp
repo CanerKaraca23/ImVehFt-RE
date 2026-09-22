@@ -1,1 +1,81 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <cstdint>`n#include <windows.h>`n`nstruct __pthreadlocinfo;`nusing pthreadlocinfo = __pthreadlocinfo*;`nstruct __pthreadmbcinfo`n{`n    LONG refcount;`n};`nusing pthreadmbcinfo = __pthreadmbcinfo*;`nstruct __ptiddata_impl`n{`n    std::uint8_t reserved_00[0x68];`n    pthreadmbcinfo ptmbcinfo;`n    pthreadlocinfo ptlocinfo;`n    std::uint32_t _ownlocale;`n};`nusing _ptiddata = __ptiddata_impl*;`nstatic_assert(offsetof(__ptiddata_impl, ptmbcinfo) == 0x68);`nstatic_assert(offsetof(__ptiddata_impl, ptlocinfo) == 0x6c);`nstatic_assert(offsetof(__ptiddata_impl, _ownlocale) == 0x70);`n`nextern LONG DAT_100299c0;`nextern LONG DAT_100294a0;`nextern pthreadmbcinfo PTR_DAT_100298c8;`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`nextern "C" _ptiddata __cdecl __getptd();`nextern "C" void __cdecl __lock(int);`nextern "C" void __cdecl _free(void*);`nextern "C" void __cdecl __amsg_exit(int);`nextern "C" void __stdcall FUN_100144e1(void);`n`nextern "C" pthreadmbcinfo __cdecl ___updatetmbcinfo(void)`n{`n    _ptiddata p_Var1;`n    LONG LVar2;`n    pthreadmbcinfo lpAddend;`n`n    __SEH_prolog4(0x10028370u, 0xcu);`n    p_Var1 = __getptd();`n`n    if (((p_Var1->_ownlocale & DAT_100299c0) == 0) ||`n        (p_Var1->ptlocinfo == (pthreadlocinfo)0x0))`n    {`n        __lock(0xd);`n        lpAddend = p_Var1->ptmbcinfo;`n`n        if (lpAddend != (pthreadmbcinfo)PTR_DAT_100298c8)`n        {`n            if (lpAddend != (pthreadmbcinfo)0x0)`n            {`n                LVar2 = InterlockedDecrement(&lpAddend->refcount);`n`n                if ((LVar2 == 0) &&`n                    (lpAddend != (pthreadmbcinfo)&DAT_100294a0))`n                {`n                    _free(lpAddend);`n                }`n            }`n`n            p_Var1->ptmbcinfo = (pthreadmbcinfo)PTR_DAT_100298c8;`n            lpAddend = (pthreadmbcinfo)PTR_DAT_100298c8;`n            InterlockedIncrement((LONG *)PTR_DAT_100298c8);`n        }`n`n        FUN_100144e1();`n    }`n    else`n    {`n        lpAddend = p_Var1->ptmbcinfo;`n    }`n`n    if (lpAddend == (pthreadmbcinfo)0x0)`n    {`n        __amsg_exit(0x20);`n    }`n`n    __SEH_epilog4();`n    return lpAddend;`n}`n
+#include <cstdint>
+#include <windows.h>
+
+struct __pthreadlocinfo;
+using pthreadlocinfo = __pthreadlocinfo*;
+struct __pthreadmbcinfo
+{
+    LONG refcount;
+};
+using pthreadmbcinfo = __pthreadmbcinfo*;
+struct __ptiddata_impl
+{
+    std::uint8_t reserved_00[0x68];
+    pthreadmbcinfo ptmbcinfo;
+    pthreadlocinfo ptlocinfo;
+    std::uint32_t _ownlocale;
+};
+using _ptiddata = __ptiddata_impl*;
+static_assert(offsetof(__ptiddata_impl, ptmbcinfo) == 0x68);
+static_assert(offsetof(__ptiddata_impl, ptlocinfo) == 0x6c);
+static_assert(offsetof(__ptiddata_impl, _ownlocale) == 0x70);
+
+extern LONG DAT_100299c0;
+extern LONG DAT_100294a0;
+extern pthreadmbcinfo PTR_DAT_100298c8;
+extern "C" void __cdecl __SEH_prolog4(std::uint32_t, int);
+extern "C" void __stdcall __SEH_epilog4();
+extern "C" _ptiddata __cdecl __getptd();
+extern "C" void __cdecl __lock(int);
+extern "C" void __cdecl _free(void*);
+extern "C" void __cdecl __amsg_exit(int);
+extern "C" void __stdcall FUN_100144e1();
+
+pthreadmbcinfo __cdecl ___updatetmbcinfo(void)
+{
+    _ptiddata p_Var1;
+    LONG LVar2;
+    pthreadmbcinfo lpAddend;
+
+    __SEH_prolog4(0x10028370u, 0x0c);
+    p_Var1 = __getptd();
+
+    if (((p_Var1->_ownlocale & DAT_100299c0) == 0) ||
+        (p_Var1->ptlocinfo == (pthreadlocinfo)0x0))
+    {
+        __lock(0xd);
+        lpAddend = p_Var1->ptmbcinfo;
+
+        if (lpAddend != (pthreadmbcinfo)PTR_DAT_100298c8)
+        {
+            if (lpAddend != (pthreadmbcinfo)0x0)
+            {
+                LVar2 = InterlockedDecrement(&lpAddend->refcount);
+
+                if ((LVar2 == 0) &&
+                    (lpAddend != (pthreadmbcinfo)&DAT_100294a0))
+                {
+                    _free(lpAddend);
+                }
+            }
+
+            p_Var1->ptmbcinfo = (pthreadmbcinfo)PTR_DAT_100298c8;
+            lpAddend = (pthreadmbcinfo)PTR_DAT_100298c8;
+            InterlockedIncrement((LONG *)PTR_DAT_100298c8);
+        }
+
+        FUN_100144e1();
+    }
+    else
+    {
+        lpAddend = p_Var1->ptmbcinfo;
+    }
+
+    if (lpAddend == (pthreadmbcinfo)0x0)
+    {
+        __amsg_exit(0x20);
+    }
+
+    __SEH_epilog4();
+    return lpAddend;
+}

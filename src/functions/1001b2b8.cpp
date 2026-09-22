@@ -1,1 +1,36 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uintptr_t PTR_LAB_10029d40;`nextern "C" std::uintptr_t PTR_LAB_10029d44;`nextern "C" std::uintptr_t PTR_LAB_10029d48;`nextern "C" std::uintptr_t PTR_LAB_10029d4c;`nextern "C" std::uintptr_t PTR_LAB_10029d50;`nextern "C" std::uintptr_t PTR_LAB_10029d54;`nextern "C" std::uintptr_t PTR_LAB_10029d58;`nextern "C" std::uintptr_t PTR_LAB_10029d5c;`nextern "C" std::uintptr_t PTR_LAB_10029d60;`nextern "C" std::uintptr_t PTR_LAB_10029d64;`n`nextern "C" void __cdecl __cfltcvt();`nextern "C" void __cdecl __cropzeros();`nextern "C" void __cdecl __fassign();`nextern "C" void __cdecl __forcdecpt();`nextern "C" void __cdecl __positive();`nextern "C" void __cdecl __cfltcvt_l();`nextern "C" void __cdecl __fassign_l();`nextern "C" void __cdecl __cropzeros_l();`nextern "C" void __cdecl __forcdecpt_l();`n`nextern "C" void __stdcall __cfltcvt_init()`n{`n    PTR_LAB_10029d40 = reinterpret_cast<std::uintptr_t>(&__cfltcvt);`n    PTR_LAB_10029d44 = reinterpret_cast<std::uintptr_t>(&__cropzeros);`n    PTR_LAB_10029d48 = reinterpret_cast<std::uintptr_t>(&__fassign);`n    PTR_LAB_10029d4c = reinterpret_cast<std::uintptr_t>(&__forcdecpt);`n    PTR_LAB_10029d50 = reinterpret_cast<std::uintptr_t>(&__positive);`n    PTR_LAB_10029d54 = reinterpret_cast<std::uintptr_t>(&__cfltcvt);`n    PTR_LAB_10029d58 = reinterpret_cast<std::uintptr_t>(&__cfltcvt_l);`n    PTR_LAB_10029d5c = reinterpret_cast<std::uintptr_t>(&__fassign_l);`n    PTR_LAB_10029d60 = reinterpret_cast<std::uintptr_t>(&__cropzeros_l);`n    PTR_LAB_10029d64 = reinterpret_cast<std::uintptr_t>(&__forcdecpt_l);`n}`n
+#include <cstdint>
+
+extern "C" std::uintptr_t PTR_LAB_10029d40;
+extern "C" std::uintptr_t PTR_LAB_10029d44;
+extern "C" std::uintptr_t PTR_LAB_10029d48;
+extern "C" std::uintptr_t PTR_LAB_10029d4c;
+extern "C" std::uintptr_t PTR_LAB_10029d50;
+extern "C" std::uintptr_t PTR_LAB_10029d54;
+extern "C" std::uintptr_t PTR_LAB_10029d58;
+extern "C" std::uintptr_t PTR_LAB_10029d5c;
+extern "C" std::uintptr_t PTR_LAB_10029d60;
+extern "C" std::uintptr_t PTR_LAB_10029d64;
+
+extern "C" void __cdecl __cfltcvt();
+extern "C" void __cdecl __cropzeros();
+extern "C" void __cdecl __fassign();
+extern "C" void __cdecl __forcdecpt();
+extern "C" void __cdecl __positive();
+extern "C" void __cdecl __cfltcvt_l();
+extern "C" void __cdecl __fassign_l();
+extern "C" void __cdecl __cropzeros_l();
+extern "C" void __cdecl __forcdecpt_l();
+
+extern "C" void __stdcall __cfltcvt_init()
+{
+    PTR_LAB_10029d40 = reinterpret_cast<std::uintptr_t>(&__cfltcvt);
+    PTR_LAB_10029d44 = reinterpret_cast<std::uintptr_t>(&__cropzeros);
+    PTR_LAB_10029d48 = reinterpret_cast<std::uintptr_t>(&__fassign);
+    PTR_LAB_10029d4c = reinterpret_cast<std::uintptr_t>(&__forcdecpt);
+    PTR_LAB_10029d50 = reinterpret_cast<std::uintptr_t>(&__positive);
+    PTR_LAB_10029d54 = reinterpret_cast<std::uintptr_t>(&__cfltcvt);
+    PTR_LAB_10029d58 = reinterpret_cast<std::uintptr_t>(&__cfltcvt_l);
+    PTR_LAB_10029d5c = reinterpret_cast<std::uintptr_t>(&__fassign_l);
+    PTR_LAB_10029d60 = reinterpret_cast<std::uintptr_t>(&__cropzeros_l);
+    PTR_LAB_10029d64 = reinterpret_cast<std::uintptr_t>(&__forcdecpt_l);
+}

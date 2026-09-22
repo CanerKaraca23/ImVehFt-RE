@@ -1,1 +1,69 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern void** DAT_1003c3c8;`nextern void* PTR_vftable_10037878;`n`nextern std::uint32_t* DAT_100378a0;`nextern std::uint32_t* DAT_100378a4;`nextern std::uint32_t* DAT_100378a8;`n`nstruct __single_inheritance FUN_1000bb60_this {`n    void __thiscall FUN_1000bb60(std::uint32_t param_1, int param_2, int param_3, int param_4, int param_5);`n};`n`nextern void __stdcall FUN_1000cfe0();`n`nvoid __stdcall FUN_1000bbe0(std::uint32_t param_1)`n{`n    if (DAT_1003c3c8 == nullptr)`n    {`n        DAT_1003c3c8 =`n            reinterpret_cast<void**>(&PTR_vftable_10037878);`n`n        using Initializer = decltype(&FUN_1000bb60_this::FUN_1000bb60);`nstatic_assert(sizeof(Initializer) == sizeof(void*));`nconst Initializer initializer = *reinterpret_cast<Initializer*>(`n    reinterpret_cast<std::uintptr_t>(PTR_vftable_10037878) + 4u);`n(reinterpret_cast<FUN_1000bb60_this*>(DAT_1003c3c8)->*initializer)(`n`n            0x53e293u,`n            0,`n            0,`n            0,`n            0);`n    }`n`n    if ((&param_1 < DAT_100378a4) &&`n        (DAT_100378a0 <= &param_1))`n    {`n        const int iVar1 =`n            static_cast<int>(`n                reinterpret_cast<std::uintptr_t>(&param_1) -`n                reinterpret_cast<std::uintptr_t>(DAT_100378a0));`n`n        if (DAT_100378a4 == DAT_100378a8)`n        {`n            FUN_1000cfe0();`n        }`n`n        if (DAT_100378a4 != nullptr)`n        {`n            *DAT_100378a4 = DAT_100378a0[iVar1 >> 2];`n        }`n`n        DAT_100378a4 = DAT_100378a4 + 1;`n        return;`n    }`n`n    if (DAT_100378a4 == DAT_100378a8)`n    {`n        FUN_1000cfe0();`n    }`n`n    if (DAT_100378a4 != nullptr)`n    {`n        *DAT_100378a4 = param_1;`n    }`n`n    DAT_100378a4 = DAT_100378a4 + 1;`n}`n
+#include <cstdint>
+
+extern void** DAT_1003c3c8;
+extern void* PTR_vftable_10037878;
+
+extern std::uint32_t* DAT_100378a0;
+extern std::uint32_t* DAT_100378a4;
+extern std::uint32_t* DAT_100378a8;
+
+struct __single_inheritance FUN_1000bb60_this {
+    void __thiscall FUN_1000bb60(std::uint32_t param_1, int param_2, int param_3, int param_4, int param_5);
+};
+
+extern "C" void __stdcall FUN_1000cfe0();
+
+void __stdcall FUN_1000bbe0(std::uint32_t param_1)
+{
+    if (DAT_1003c3c8 == nullptr)
+    {
+        DAT_1003c3c8 =
+            reinterpret_cast<void**>(&PTR_vftable_10037878);
+
+        using Initializer = decltype(&FUN_1000bb60_this::FUN_1000bb60);
+static_assert(sizeof(Initializer) == sizeof(void*));
+const Initializer initializer = *reinterpret_cast<Initializer*>(
+    reinterpret_cast<std::uintptr_t>(PTR_vftable_10037878) + 4u);
+(reinterpret_cast<FUN_1000bb60_this*>(DAT_1003c3c8)->*initializer)(
+
+            0x53e293u,
+            0,
+            0,
+            0,
+            0);
+    }
+
+    if ((&param_1 < DAT_100378a4) &&
+        (DAT_100378a0 <= &param_1))
+    {
+        const int iVar1 =
+            static_cast<int>(
+                reinterpret_cast<std::uintptr_t>(&param_1) -
+                reinterpret_cast<std::uintptr_t>(DAT_100378a0));
+
+        if (DAT_100378a4 == DAT_100378a8)
+        {
+            FUN_1000cfe0();
+        }
+
+        if (DAT_100378a4 != nullptr)
+        {
+            *DAT_100378a4 = DAT_100378a0[iVar1 >> 2];
+        }
+
+        DAT_100378a4 = DAT_100378a4 + 1;
+        return;
+    }
+
+    if (DAT_100378a4 == DAT_100378a8)
+    {
+        FUN_1000cfe0();
+    }
+
+    if (DAT_100378a4 != nullptr)
+    {
+        *DAT_100378a4 = param_1;
+    }
+
+    DAT_100378a4 = DAT_100378a4 + 1;
+}

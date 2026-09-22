@@ -1,1 +1,76 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern void** DAT_1003c398;`nextern void* PTR_vftable_100375a0;`nextern std::uint32_t* DAT_100375b8;`nextern std::uint32_t* DAT_100375bc;`nextern std::uint32_t* DAT_100375c0;`n`nstruct __single_inheritance FUN_1000a8c0_this {`n    void __thiscall FUN_1000a8c0(std::uint32_t param_1, std::int32_t param_2, std::int32_t param_3, std::int32_t param_4, std::int32_t param_5);`n};`n`nextern void __stdcall FUN_1000cfe0();`n`nvoid __stdcall FUN_1000a940(std::uint32_t param_1)`n{`n    if (DAT_1003c398 == nullptr)`n    {`n        DAT_1003c398 =`n            reinterpret_cast<void**>(&PTR_vftable_100375a0);`n`n        using Initializer = decltype(&FUN_1000a8c0_this::FUN_1000a8c0);`nstatic_assert(sizeof(Initializer) == sizeof(void*));`nconst Initializer initializer = *reinterpret_cast<Initializer*>(`n    reinterpret_cast<std::uintptr_t>(PTR_vftable_100375a0) + 4u);`n(reinterpret_cast<FUN_1000a8c0_this*>(DAT_1003c398)->*initializer)(`n`n            0x440A0D,`n            0x53BCC9,`n            0x53BE8D,`n            0x53BFC7,`n            0x618F05);`n    }`n`n    const auto parameter_address =`n        reinterpret_cast<std::uintptr_t>(&param_1);`n`n    const auto begin_address =`n        reinterpret_cast<std::uintptr_t>(DAT_100375b8);`n`n    const auto end_address =`n        reinterpret_cast<std::uintptr_t>(DAT_100375bc);`n`n    if ((parameter_address < end_address) &&`n        (begin_address <= parameter_address))`n    {`n        const std::int32_t index =`n            static_cast<std::int32_t>(parameter_address) -`n            static_cast<std::int32_t>(begin_address);`n`n        if (DAT_100375bc == DAT_100375c0)`n        {`n            FUN_1000cfe0();`n        }`n`n        if (DAT_100375bc != nullptr)`n        {`n            *DAT_100375bc = DAT_100375b8[index >> 2];`n        }`n`n        DAT_100375bc = DAT_100375bc + 1;`n        return;`n    }`n`n    if (DAT_100375bc == DAT_100375c0)`n    {`n        FUN_1000cfe0();`n    }`n`n    if (DAT_100375bc != nullptr)`n    {`n        *DAT_100375bc = param_1;`n    }`n`n    DAT_100375bc = DAT_100375bc + 1;`n}`n
+#include <cstdint>
+
+extern void** DAT_1003c398;
+extern void* PTR_vftable_100375a0;
+extern std::uint32_t* DAT_100375b8;
+extern std::uint32_t* DAT_100375bc;
+extern std::uint32_t* DAT_100375c0;
+
+struct __single_inheritance FUN_1000a8c0_this {
+    void __thiscall FUN_1000a8c0(std::uint32_t param_1, std::int32_t param_2, std::int32_t param_3, std::int32_t param_4, std::int32_t param_5);
+};
+
+extern "C" void __stdcall FUN_1000cfe0();
+
+void __stdcall FUN_1000a940(std::uint32_t param_1)
+{
+    if (DAT_1003c398 == nullptr)
+    {
+        DAT_1003c398 =
+            reinterpret_cast<void**>(&PTR_vftable_100375a0);
+
+        using Initializer = decltype(&FUN_1000a8c0_this::FUN_1000a8c0);
+static_assert(sizeof(Initializer) == sizeof(void*));
+const Initializer initializer = *reinterpret_cast<Initializer*>(
+    reinterpret_cast<std::uintptr_t>(PTR_vftable_100375a0) + 4u);
+(reinterpret_cast<FUN_1000a8c0_this*>(DAT_1003c398)->*initializer)(
+
+            0x440A0D,
+            0x53BCC9,
+            0x53BE8D,
+            0x53BFC7,
+            0x618F05);
+    }
+
+    const auto parameter_address =
+        reinterpret_cast<std::uintptr_t>(&param_1);
+
+    const auto begin_address =
+        reinterpret_cast<std::uintptr_t>(DAT_100375b8);
+
+    const auto end_address =
+        reinterpret_cast<std::uintptr_t>(DAT_100375bc);
+
+    if ((parameter_address < end_address) &&
+        (begin_address <= parameter_address))
+    {
+        const std::int32_t index =
+            static_cast<std::int32_t>(parameter_address) -
+            static_cast<std::int32_t>(begin_address);
+
+        if (DAT_100375bc == DAT_100375c0)
+        {
+            FUN_1000cfe0();
+        }
+
+        if (DAT_100375bc != nullptr)
+        {
+            *DAT_100375bc = DAT_100375b8[index >> 2];
+        }
+
+        DAT_100375bc = DAT_100375bc + 1;
+        return;
+    }
+
+    if (DAT_100375bc == DAT_100375c0)
+    {
+        FUN_1000cfe0();
+    }
+
+    if (DAT_100375bc != nullptr)
+    {
+        *DAT_100375bc = param_1;
+    }
+
+    DAT_100375bc = DAT_100375bc + 1;
+}

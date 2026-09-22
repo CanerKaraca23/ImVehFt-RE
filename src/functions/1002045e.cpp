@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) int __stdcall __clrfp(void)`n{`n    __asm {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        push ecx`n        fnstsw word ptr [ebp - 4]`n        fnclex`n        movsx eax, word ptr [ebp - 4]`n        leave`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) int __stdcall __clrfp(void)
+{
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        push ecx
+        fnstsw word ptr [ebp - 4]
+        fnclex
+        movsx eax, word ptr [ebp - 4]
+        leave
+        ret
+    }
+}

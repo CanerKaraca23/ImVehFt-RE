@@ -1,1 +1,68 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c328;`nextern std::uint32_t* DAT_1003c36c;`nextern std::uint32_t* DAT_1003c370;`nextern std::uint32_t* DAT_1003c374;`nextern std::uint32_t* DAT_1003c390;`n`nextern void __stdcall FUN_1000cfe0();`n`nvoid __stdcall FUN_1000a680(std::uint32_t param_1)`n{`n    if (DAT_1003c390 == nullptr)`n    {`n        DAT_1003c390 = &DAT_1003c328;`n`n        reinterpret_cast<void (__cdecl*)(`n            std::uint32_t,`n            std::uint32_t,`n            std::uint32_t,`n            std::uint32_t,`n            std::uint32_t`n        )>(`n            *reinterpret_cast<std::uint32_t*>(`n                static_cast<std::uintptr_t>(DAT_1003c328) + 4u`n            )`n        )(0, 0, 0, 0, 0);`n    }`n`n    auto* param_address = &param_1;`n`n    if ((param_address < DAT_1003c370) &&`n        (DAT_1003c36c <= param_address))`n    {`n        const std::int32_t iVar1 =`n            static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(param_address)`n            ) -`n            static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(DAT_1003c36c)`n            );`n`n        if (DAT_1003c370 == DAT_1003c374)`n        {`n            FUN_1000cfe0();`n        }`n`n        if (DAT_1003c370 != nullptr)`n        {`n            *DAT_1003c370 = DAT_1003c36c[iVar1 >> 2];`n        }`n`n        DAT_1003c370 = DAT_1003c370 + 1;`n        return;`n    }`n`n    if (DAT_1003c370 == DAT_1003c374)`n    {`n        FUN_1000cfe0();`n    }`n`n    if (DAT_1003c370 != nullptr)`n    {`n        *DAT_1003c370 = param_1;`n    }`n`n    DAT_1003c370 = DAT_1003c370 + 1;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c328;
+extern std::uint32_t* DAT_1003c36c;
+extern std::uint32_t* DAT_1003c370;
+extern std::uint32_t* DAT_1003c374;
+extern std::uint32_t* DAT_1003c390;
+
+extern "C" void __stdcall FUN_1000cfe0();
+
+void __stdcall FUN_1000a680(std::uint32_t param_1)
+{
+    if (DAT_1003c390 == nullptr)
+    {
+        DAT_1003c390 = &DAT_1003c328;
+
+        reinterpret_cast<void (__cdecl*)(
+            std::uint32_t,
+            std::uint32_t,
+            std::uint32_t,
+            std::uint32_t,
+            std::uint32_t
+        )>(
+            *reinterpret_cast<std::uint32_t*>(
+                static_cast<std::uintptr_t>(DAT_1003c328) + 4u
+            )
+        )(0, 0, 0, 0, 0);
+    }
+
+    auto* param_address = &param_1;
+
+    if ((param_address < DAT_1003c370) &&
+        (DAT_1003c36c <= param_address))
+    {
+        const std::int32_t iVar1 =
+            static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(param_address)
+            ) -
+            static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(DAT_1003c36c)
+            );
+
+        if (DAT_1003c370 == DAT_1003c374)
+        {
+            FUN_1000cfe0();
+        }
+
+        if (DAT_1003c370 != nullptr)
+        {
+            *DAT_1003c370 = DAT_1003c36c[iVar1 >> 2];
+        }
+
+        DAT_1003c370 = DAT_1003c370 + 1;
+        return;
+    }
+
+    if (DAT_1003c370 == DAT_1003c374)
+    {
+        FUN_1000cfe0();
+    }
+
+    if (DAT_1003c370 != nullptr)
+    {
+        *DAT_1003c370 = param_1;
+    }
+
+    DAT_1003c370 = DAT_1003c370 + 1;
+}

@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nstruct _EXCEPTION_POINTERS;`n`nextern "C" int __cdecl __XcptFilter(unsigned long _ExceptionNum, _EXCEPTION_POINTERS* _ExceptionPtr);`n`nextern "C" int __cdecl ___CppXcptFilter(`n    unsigned long _ExceptionNum,`n    _EXCEPTION_POINTERS* _ExceptionPtr)`n{`n    if (_ExceptionNum == 0xE06D7363UL) {`n        return __XcptFilter(0xE06D7363UL, _ExceptionPtr);`n    }`n`n    return 0;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+struct _EXCEPTION_POINTERS;
+
+extern "C" int __cdecl __XcptFilter(unsigned long _ExceptionNum, _EXCEPTION_POINTERS* _ExceptionPtr);
+
+extern "C" int __cdecl ___CppXcptFilter(
+    unsigned long _ExceptionNum,
+    _EXCEPTION_POINTERS* _ExceptionPtr)
+{
+    if (_ExceptionNum == 0xE06D7363UL) {
+        return __XcptFilter(0xE06D7363UL, _ExceptionPtr);
+    }
+
+    return 0;
+}

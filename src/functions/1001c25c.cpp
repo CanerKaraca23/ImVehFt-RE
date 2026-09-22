@@ -1,1 +1,118 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n#include <cstring>`n#include <corecrt.h>`n`nusing rsize_t = std::size_t;`nstruct localeinfo_struct { void* locinfo; void* mbcinfo; };`nstruct _LocaleUpdate {`n    void* locinfo;`n    void* mbcinfo;`n    void* ptd;`n    std::uint8_t updated;`n    std::uint8_t padding[3];`n    explicit _LocaleUpdate(localeinfo_struct*);`n};`nstatic_assert(sizeof(_LocaleUpdate) == 0x10);`nstatic_assert(offsetof(_LocaleUpdate, updated) == 0x0c);`n`nextern "C" int* __cdecl __errno(void);`nextern "C" void __stdcall FUN_1001189f(void);`nextern "C" std::size_t __cdecl _strlen(const char*);`nvoid* __cdecl FID_conflict__memcpy(void*, void*, std::size_t);`nextern "C" void* __cdecl _memset(void*, int, std::size_t);`n`nstatic std::uint32_t __cdecl __cftof2_l_impl(`n    int* input_record,`n    char* buffer,`n    int param_1,`n    std::size_t param_2,`n    char param_3,`n    localeinfo_struct* param_4)`n{`n    const int precision_slot = input_record[1];`n    _LocaleUpdate locale_update(param_4);`n`n    if (buffer == nullptr || param_1 == 0) {`n        *__errno() = 0x16;`n        FUN_1001189f();`n        if (locale_update.updated != 0) {`n            *reinterpret_cast<std::uint32_t*>(`n                static_cast<unsigned char*>(locale_update.ptd) + 0x70) &= 0xfffffffdU;`n        }`n        return 0x16;`n    }`n`n    if (param_3 != '\0' &&`n        static_cast<std::uint32_t>(precision_slot) - 1U == param_2) {`n        const std::uint32_t sign_offset = *input_record == 0x2d ? 1U : 0U;`n        *reinterpret_cast<std::uint16_t*>(`n            reinterpret_cast<std::uintptr_t>(buffer) + sign_offset +`n            (static_cast<std::uint32_t>(precision_slot) - 1U)) = 0x30;`n    }`n`n    char* cursor = buffer;`n    if (*input_record == 0x2d) {`n        *cursor++ = '-';`n    }`n`n    char* decimal_position;`n    if (precision_slot < 1) {`n        decimal_position = cursor + 1;`n        const std::size_t length = _strlen(cursor);`n        FID_conflict__memcpy(decimal_position, cursor, length + 1);`n        *cursor = '0';`n    } else {`n        decimal_position = cursor + precision_slot;`n    }`n`n    if (param_2 > 0) {`n        const std::size_t length = _strlen(decimal_position);`n        FID_conflict__memcpy(decimal_position + 1, decimal_position, length + 1);`n`n        const auto* locinfo_bytes = static_cast<const unsigned char*>(locale_update.locinfo);`n        void* decimal_table = *reinterpret_cast<void* const*>(locinfo_bytes + 0xbc);`n        const unsigned char* decimal_string =`n            *reinterpret_cast<const unsigned char* const*>(decimal_table);`n        *decimal_position = static_cast<char>(*decimal_string);`n`n        if (precision_slot < 0) {`n            const std::uint32_t shift = 0U - static_cast<std::uint32_t>(precision_slot);`n            if (param_3 != '\0' || static_cast<int>(shift) <= static_cast<int>(param_2)) {`n                param_2 = shift;`n            }`n            if (param_2 != 0) {`n                FID_conflict__memcpy(`n                    decimal_position + 1 + param_2,`n                    decimal_position + 1,`n                    _strlen(decimal_position + 1) + 1);`n            }`n            _memset(decimal_position + 1, 0x30, param_2);`n        }`n    }`n`n    if (locale_update.updated != 0) {`n        *reinterpret_cast<std::uint32_t*>(`n            static_cast<unsigned char*>(locale_update.ptd) + 0x70) &= 0xfffffffdU;`n    }`n    return 0;`n}`n`nextern "C" __declspec(naked) std::uint32_t __cdecl __cftof2_l(`n    int, std::size_t, char, localeinfo_struct*)`n{`n    __asm {`n        push ebp`n        mov ebp, esp`n        push dword ptr [ebp + 014h] // locale`n        push dword ptr [ebp + 010h] // flag`n        push dword ptr [ebp + 00Ch] // size`n        push dword ptr [ebp + 008h] // capacity`n        push ecx                    // buffer in ECX`n        push eax                    // input record in EAX`n        call __cftof2_l_impl`n        add esp, 018h`n        pop ebp`n        ret                         // caller removes the four stack arguments`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
+#include <corecrt.h>
+
+using rsize_t = std::size_t;
+struct localeinfo_struct { void* locinfo; void* mbcinfo; };
+struct _LocaleUpdate {
+    void* locinfo;
+    void* mbcinfo;
+    void* ptd;
+    std::uint8_t updated;
+    std::uint8_t padding[3];
+    explicit _LocaleUpdate(localeinfo_struct*);
+};
+static_assert(sizeof(_LocaleUpdate) == 0x10);
+static_assert(offsetof(_LocaleUpdate, updated) == 0x0c);
+
+extern "C" int* __cdecl __errno(void);
+extern "C" void __stdcall FUN_1001189f(void);
+extern "C" std::size_t __cdecl _strlen(const char*);
+extern "C" void* __cdecl FID_conflict__memcpy(void*, const void*, std::size_t);
+extern "C" void* __cdecl _memset(void*, int, std::size_t);
+
+static std::uint32_t __cdecl __cftof2_l_impl(
+    int* input_record,
+    char* buffer,
+    int param_1,
+    std::size_t param_2,
+    char param_3,
+    localeinfo_struct* param_4)
+{
+    const int precision_slot = input_record[1];
+    _LocaleUpdate locale_update(param_4);
+
+    if (buffer == nullptr || param_1 == 0) {
+        *__errno() = 0x16;
+        FUN_1001189f();
+        if (locale_update.updated != 0) {
+            *reinterpret_cast<std::uint32_t*>(
+                static_cast<unsigned char*>(locale_update.ptd) + 0x70) &= 0xfffffffdU;
+        }
+        return 0x16;
+    }
+
+    if (param_3 != '\0' &&
+        static_cast<std::uint32_t>(precision_slot) - 1U == param_2) {
+        const std::uint32_t sign_offset = *input_record == 0x2d ? 1U : 0U;
+        *reinterpret_cast<std::uint16_t*>(
+            reinterpret_cast<std::uintptr_t>(buffer) + sign_offset +
+            (static_cast<std::uint32_t>(precision_slot) - 1U)) = 0x30;
+    }
+
+    char* cursor = buffer;
+    if (*input_record == 0x2d) {
+        *cursor++ = '-';
+    }
+
+    char* decimal_position;
+    if (precision_slot < 1) {
+        decimal_position = cursor + 1;
+        const std::size_t length = _strlen(cursor);
+        FID_conflict__memcpy(decimal_position, cursor, length + 1);
+        *cursor = '0';
+    } else {
+        decimal_position = cursor + precision_slot;
+    }
+
+    if (param_2 > 0) {
+        const std::size_t length = _strlen(decimal_position);
+        FID_conflict__memcpy(decimal_position + 1, decimal_position, length + 1);
+
+        const auto* locinfo_bytes = static_cast<const unsigned char*>(locale_update.locinfo);
+        void* decimal_table = *reinterpret_cast<void* const*>(locinfo_bytes + 0xbc);
+        const unsigned char* decimal_string =
+            *reinterpret_cast<const unsigned char* const*>(decimal_table);
+        *decimal_position = static_cast<char>(*decimal_string);
+
+        if (precision_slot < 0) {
+            const std::uint32_t shift = 0U - static_cast<std::uint32_t>(precision_slot);
+            if (param_3 != '\0' || static_cast<int>(shift) <= static_cast<int>(param_2)) {
+                param_2 = shift;
+            }
+            if (param_2 != 0) {
+                FID_conflict__memcpy(
+                    decimal_position + 1 + param_2,
+                    decimal_position + 1,
+                    _strlen(decimal_position + 1) + 1);
+            }
+            _memset(decimal_position + 1, 0x30, param_2);
+        }
+    }
+
+    if (locale_update.updated != 0) {
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<unsigned char*>(locale_update.ptd) + 0x70) &= 0xfffffffdU;
+    }
+    return 0;
+}
+
+extern "C" __declspec(naked) std::uint32_t __cdecl __cftof2_l(
+    int, std::size_t, char, localeinfo_struct*)
+{
+    __asm {
+        push ebp
+        mov ebp, esp
+        push dword ptr [ebp + 014h] // locale
+        push dword ptr [ebp + 010h] // flag
+        push dword ptr [ebp + 00Ch] // size
+        push dword ptr [ebp + 008h] // capacity
+        push ecx                    // buffer in ECX
+        push eax                    // input record in EAX
+        call __cftof2_l_impl
+        add esp, 018h
+        pop ebp
+        ret                         // caller removes the four stack arguments
+    }
+}

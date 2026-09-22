@@ -1,1 +1,35 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern void* PTR_vftable_100378b0;`nextern void* DAT_100378d8;`nextern std::uint32_t DAT_100378dc;`nextern std::uint32_t DAT_100378e0;`nextern void* DAT_100378c8;`nextern std::uint32_t _DAT_100378cc;`nextern std::uint32_t _DAT_100378d0;`n`nextern void* BasicCallbackManager_5499603_0_0_0_0_cbPostFXManager_vftable;`n`nextern "C" void __cdecl FUN_10010756(void* param_1);`n`nextern "C" void __stdcall FUN_10021030(void)`n{`n    PTR_vftable_100378b0 =`n        BasicCallbackManager_5499603_0_0_0_0_cbPostFXManager_vftable;`n`n    if (DAT_100378d8 != nullptr) {`n        FUN_10010756(DAT_100378d8);`n    }`n`n    DAT_100378d8 = nullptr;`n    DAT_100378dc = 0;`n    DAT_100378e0 = 0;`n`n    if (DAT_100378c8 != nullptr) {`n        FUN_10010756(DAT_100378c8);`n    }`n`n    DAT_100378c8 = nullptr;`n    _DAT_100378cc = 0;`n    _DAT_100378d0 = 0;`n}`n
+#include <cstdint>
+
+extern void* PTR_vftable_100378b0;
+extern void* DAT_100378d8;
+extern std::uint32_t DAT_100378dc;
+extern std::uint32_t DAT_100378e0;
+extern void* DAT_100378c8;
+extern std::uint32_t _DAT_100378cc;
+extern std::uint32_t _DAT_100378d0;
+
+extern void* BasicCallbackManager_5499603_0_0_0_0_cbPostFXManager_vftable;
+
+extern "C" void __cdecl FUN_10010756(void* param_1);
+
+extern "C" void __stdcall FUN_10021030(void)
+{
+    PTR_vftable_100378b0 =
+        BasicCallbackManager_5499603_0_0_0_0_cbPostFXManager_vftable;
+
+    if (DAT_100378d8 != nullptr) {
+        FUN_10010756(DAT_100378d8);
+    }
+
+    DAT_100378d8 = nullptr;
+    DAT_100378dc = 0;
+    DAT_100378e0 = 0;
+
+    if (DAT_100378c8 != nullptr) {
+        FUN_10010756(DAT_100378c8);
+    }
+
+    DAT_100378c8 = nullptr;
+    _DAT_100378cc = 0;
+    _DAT_100378d0 = 0;
+}

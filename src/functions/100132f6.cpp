@@ -1,1 +1,220 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <Windows.h>`n#include <cstdint>`n#include <cstddef>`n`nextern "C" void* __cdecl __calloc_crt(std::size_t, std::size_t);`nextern "C" std::uint32_t DAT_1003c418;`nextern "C" void* DAT_1003c420[64];`n`nextern "C" int __cdecl __ioinit(void)`n{`n    void* block;`n    DWORD file_type;`n    BOOL initialized;`n    HANDLE handle;`n    UINT count;`n    UINT initialized_count;`n    std::uint32_t* block_slot;`n    std::uint32_t index;`n    std::uint8_t* flags;`n    std::uint8_t* handles;`n    STARTUPINFOW startup_info;`n`n    GetStartupInfoW(&startup_info);`n`n    block = __calloc_crt(0x20, 0x40);`n    if (block == nullptr)`n        return -1;`n`n    DAT_1003c418 = 0x20;`n    DAT_1003c420[0] = block;`n`n    if (reinterpret_cast<std::uintptr_t>(block) <`n        reinterpret_cast<std::uintptr_t>(block) + 0x800U)`n    {`n        std::uintptr_t cursor =`n            reinterpret_cast<std::uintptr_t>(block) + 5U;`n        const std::uintptr_t limit =`n            reinterpret_cast<std::uintptr_t>(block) + 0x800U;`n`n        do`n        {`n            auto* entry = reinterpret_cast<std::uint8_t*>(cursor - 5U);`n`n            *reinterpret_cast<std::uint32_t*>(entry + 0x00) = 0xFFFFFFFFU;`n            *reinterpret_cast<std::uint16_t*>(entry + 0x04) = 0x0A00;`n            *reinterpret_cast<std::uint32_t*>(entry + 0x08) = 0;`n            *reinterpret_cast<std::uint16_t*>(entry + 0x24) = 0x0A00;`n            *reinterpret_cast<std::uint8_t*>(entry + 0x26) = 10;`n            *reinterpret_cast<std::uint32_t*>(entry + 0x38) = 0;`n            *reinterpret_cast<std::uint8_t*>(entry + 0x34) = 0;`n`n            cursor += 0x40U;`n        }`n        while ((cursor - 0x40U) + 0x3BU < limit);`n    }`n`n    if ((startup_info.cbReserved2 != 0) &&`n        (startup_info.lpReserved2 != nullptr))`n    {`n        count = *reinterpret_cast<UINT*>(startup_info.lpReserved2);`n        flags = startup_info.lpReserved2 + 4;`n        handles = flags + count;`n`n        if (0x7FF < static_cast<int>(count))`n            count = 0x800;`n`n        initialized_count = count;`n`n        if (static_cast<int>(DAT_1003c418) < static_cast<int>(count))`n        {`n            block_slot = reinterpret_cast<std::uint32_t*>(&DAT_1003c420[1]);`n`n            do`n            {`n                block = __calloc_crt(0x20, 0x40);`n                initialized_count = DAT_1003c418;`n`n                if (block == nullptr)`n                    break;`n`n                DAT_1003c418 += 0x20;`n                *block_slot = static_cast<std::uint32_t>(`n                    reinterpret_cast<std::uintptr_t>(block));`n`n                if (reinterpret_cast<std::uintptr_t>(block) <`n                    reinterpret_cast<std::uintptr_t>(block) + 0x800U)`n                {`n                    std::uintptr_t cursor =`n                        reinterpret_cast<std::uintptr_t>(block) + 5U;`n                    const std::uintptr_t limit =`n                        reinterpret_cast<std::uintptr_t>(block) + 0x800U;`n`n                    do`n                    {`n                        auto* entry =`n                            reinterpret_cast<std::uint8_t*>(cursor - 5U);`n`n                        *reinterpret_cast<std::uint32_t*>(entry + 0x00) =`n                            0xFFFFFFFFU;`n                        *reinterpret_cast<std::uint32_t*>(entry + 0x08) = 0;`n                        *reinterpret_cast<std::uint8_t*>(entry + 0x24) =`n                            *reinterpret_cast<std::uint8_t*>(entry + 0x24) &`n                            0x80;`n                        *reinterpret_cast<std::uint32_t*>(entry + 0x38) = 0;`n                        *reinterpret_cast<std::uint16_t*>(entry + 0x04) =`n                            0x0A00;`n                        *reinterpret_cast<std::uint16_t*>(entry + 0x25) =`n                            0x0A0A;`n                        *reinterpret_cast<std::uint8_t*>(entry + 0x34) = 0;`n`n                        cursor += 0x40U;`n                    }`n                    while ((cursor - 0x40U) + 0x3BU < limit);`n                }`n`n                ++block_slot;`n                initialized_count = count;`n            }`n            while (static_cast<int>(DAT_1003c418) < static_cast<int>(count));`n        }`n`n        index = 0;`n`n        if (0 < static_cast<int>(initialized_count))`n        {`n            do`n            {`n                handle = *reinterpret_cast<HANDLE*>(handles);`n`n                if ((handle != INVALID_HANDLE_VALUE) &&`n                    (handle != reinterpret_cast<HANDLE>(-2)) &&`n                    ((*flags & 1) != 0) &&`n                    (((*flags & 8) != 0) ||`n                     ((file_type = GetFileType(handle)), file_type != 0)))`n                {`n                    auto* entry = reinterpret_cast<std::uint8_t*>(`n                        DAT_1003c420[index >> 5]) +`n                        ((index & 0x1FU) * 0x40U);`n`n                    *reinterpret_cast<HANDLE*>(entry + 0x00) = handle;`n                    *reinterpret_cast<std::uint8_t*>(entry + 0x04) = *flags;`n`n                    initialized = InitializeCriticalSectionAndSpinCount(`n                        reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0C),`n                        4000);`n`n                    if (initialized == 0)`n                        return -1;`n`n                    *reinterpret_cast<std::uint32_t*>(entry + 0x08) += 1;`n                }`n`n                handles += 4;`n                ++index;`n                ++flags;`n            }`n            while (static_cast<int>(index) <`n                   static_cast<int>(initialized_count));`n        }`n    }`n`n    index = 0;`n`n    do`n    {`n        auto* entry = reinterpret_cast<std::uint8_t*>(`n            DAT_1003c420[0]) + index * 0x40U;`n        auto* entry_handle = reinterpret_cast<HANDLE*>(entry + 0x00);`n        auto* entry_flags = reinterpret_cast<std::uint8_t*>(entry + 0x04);`n`n        if ((*entry_handle == INVALID_HANDLE_VALUE) ||`n            (*entry_handle == reinterpret_cast<HANDLE>(-2)))`n        {`n            *entry_flags = 0x81;`n`n            if (index == 0)`n                file_type = 0xFFFFFFF6U;`n            else`n                file_type = 0xFFFFFFF5U - (index != 1);`n`n            handle = GetStdHandle(file_type);`n`n            if ((handle == INVALID_HANDLE_VALUE) ||`n                (handle == nullptr) ||`n                ((file_type = GetFileType(handle)), file_type == 0))`n            {`n                *entry_flags = *entry_flags | 0x40;`n                *entry_handle = reinterpret_cast<HANDLE>(-2);`n            }`n            else`n            {`n                *entry_handle = handle;`n`n                if ((file_type & 0xFF) == 2)`n                    *entry_flags = *entry_flags | 0x40;`n                else if ((file_type & 0xFF) == 3)`n                    *entry_flags = *entry_flags | 8;`n`n                initialized = InitializeCriticalSectionAndSpinCount(`n                    reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0C),`n                    4000);`n`n                if (initialized == 0)`n                    return -1;`n`n                *reinterpret_cast<std::uint32_t*>(entry + 0x08) += 1;`n            }`n        }`n        else`n        {`n            *entry_flags = *entry_flags | 0x80;`n        }`n`n        ++index;`n    }`n    while (static_cast<int>(index) < 3);`n`n    SetHandleCount(DAT_1003c418);`n    return 0;`n}`n
+#include <Windows.h>
+#include <cstdint>
+#include <cstddef>
+
+extern "C" void* __cdecl __calloc_crt(std::size_t, std::size_t);
+extern "C" std::uint32_t DAT_1003c418;
+extern "C" void* DAT_1003c420[64];
+
+int __cdecl __ioinit(void)
+{
+    void* block;
+    DWORD file_type;
+    BOOL initialized;
+    HANDLE handle;
+    UINT count;
+    UINT initialized_count;
+    std::uint32_t* block_slot;
+    std::uint32_t index;
+    std::uint8_t* flags;
+    std::uint8_t* handles;
+    STARTUPINFOW startup_info;
+
+    GetStartupInfoW(&startup_info);
+
+    block = __calloc_crt(0x20, 0x40);
+    if (block == nullptr)
+        return -1;
+
+    DAT_1003c418 = 0x20;
+    DAT_1003c420[0] = block;
+
+    if (reinterpret_cast<std::uintptr_t>(block) <
+        reinterpret_cast<std::uintptr_t>(block) + 0x800U)
+    {
+        std::uintptr_t cursor =
+            reinterpret_cast<std::uintptr_t>(block) + 5U;
+        const std::uintptr_t limit =
+            reinterpret_cast<std::uintptr_t>(block) + 0x800U;
+
+        do
+        {
+            auto* entry = reinterpret_cast<std::uint8_t*>(cursor - 5U);
+
+            *reinterpret_cast<std::uint32_t*>(entry + 0x00) = 0xFFFFFFFFU;
+            *reinterpret_cast<std::uint16_t*>(entry + 0x04) = 0x0A00;
+            *reinterpret_cast<std::uint32_t*>(entry + 0x08) = 0;
+            *reinterpret_cast<std::uint16_t*>(entry + 0x24) = 0x0A00;
+            *reinterpret_cast<std::uint8_t*>(entry + 0x26) = 10;
+            *reinterpret_cast<std::uint32_t*>(entry + 0x38) = 0;
+            *reinterpret_cast<std::uint8_t*>(entry + 0x34) = 0;
+
+            cursor += 0x40U;
+        }
+        while ((cursor - 0x40U) + 0x3BU < limit);
+    }
+
+    if ((startup_info.cbReserved2 != 0) &&
+        (startup_info.lpReserved2 != nullptr))
+    {
+        count = *reinterpret_cast<UINT*>(startup_info.lpReserved2);
+        flags = startup_info.lpReserved2 + 4;
+        handles = flags + count;
+
+        if (0x7FF < static_cast<int>(count))
+            count = 0x800;
+
+        initialized_count = count;
+
+        if (static_cast<int>(DAT_1003c418) < static_cast<int>(count))
+        {
+            block_slot = reinterpret_cast<std::uint32_t*>(&DAT_1003c420[1]);
+
+            do
+            {
+                block = __calloc_crt(0x20, 0x40);
+                initialized_count = DAT_1003c418;
+
+                if (block == nullptr)
+                    break;
+
+                DAT_1003c418 += 0x20;
+                *block_slot = static_cast<std::uint32_t>(
+                    reinterpret_cast<std::uintptr_t>(block));
+
+                if (reinterpret_cast<std::uintptr_t>(block) <
+                    reinterpret_cast<std::uintptr_t>(block) + 0x800U)
+                {
+                    std::uintptr_t cursor =
+                        reinterpret_cast<std::uintptr_t>(block) + 5U;
+                    const std::uintptr_t limit =
+                        reinterpret_cast<std::uintptr_t>(block) + 0x800U;
+
+                    do
+                    {
+                        auto* entry =
+                            reinterpret_cast<std::uint8_t*>(cursor - 5U);
+
+                        *reinterpret_cast<std::uint32_t*>(entry + 0x00) =
+                            0xFFFFFFFFU;
+                        *reinterpret_cast<std::uint32_t*>(entry + 0x08) = 0;
+                        *reinterpret_cast<std::uint8_t*>(entry + 0x24) =
+                            *reinterpret_cast<std::uint8_t*>(entry + 0x24) &
+                            0x80;
+                        *reinterpret_cast<std::uint32_t*>(entry + 0x38) = 0;
+                        *reinterpret_cast<std::uint16_t*>(entry + 0x04) =
+                            0x0A00;
+                        *reinterpret_cast<std::uint16_t*>(entry + 0x25) =
+                            0x0A0A;
+                        *reinterpret_cast<std::uint8_t*>(entry + 0x34) = 0;
+
+                        cursor += 0x40U;
+                    }
+                    while ((cursor - 0x40U) + 0x3BU < limit);
+                }
+
+                ++block_slot;
+                initialized_count = count;
+            }
+            while (static_cast<int>(DAT_1003c418) < static_cast<int>(count));
+        }
+
+        index = 0;
+
+        if (0 < static_cast<int>(initialized_count))
+        {
+            do
+            {
+                handle = *reinterpret_cast<HANDLE*>(handles);
+
+                if ((handle != INVALID_HANDLE_VALUE) &&
+                    (handle != reinterpret_cast<HANDLE>(-2)) &&
+                    ((*flags & 1) != 0) &&
+                    (((*flags & 8) != 0) ||
+                     ((file_type = GetFileType(handle)), file_type != 0)))
+                {
+                    auto* entry = reinterpret_cast<std::uint8_t*>(
+                        DAT_1003c420[index >> 5]) +
+                        ((index & 0x1FU) * 0x40U);
+
+                    *reinterpret_cast<HANDLE*>(entry + 0x00) = handle;
+                    *reinterpret_cast<std::uint8_t*>(entry + 0x04) = *flags;
+
+                    initialized = InitializeCriticalSectionAndSpinCount(
+                        reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0C),
+                        4000);
+
+                    if (initialized == 0)
+                        return -1;
+
+                    *reinterpret_cast<std::uint32_t*>(entry + 0x08) += 1;
+                }
+
+                handles += 4;
+                ++index;
+                ++flags;
+            }
+            while (static_cast<int>(index) <
+                   static_cast<int>(initialized_count));
+        }
+    }
+
+    index = 0;
+
+    do
+    {
+        auto* entry = reinterpret_cast<std::uint8_t*>(
+            DAT_1003c420[0]) + index * 0x40U;
+        auto* entry_handle = reinterpret_cast<HANDLE*>(entry + 0x00);
+        auto* entry_flags = reinterpret_cast<std::uint8_t*>(entry + 0x04);
+
+        if ((*entry_handle == INVALID_HANDLE_VALUE) ||
+            (*entry_handle == reinterpret_cast<HANDLE>(-2)))
+        {
+            *entry_flags = 0x81;
+
+            if (index == 0)
+                file_type = 0xFFFFFFF6U;
+            else
+                file_type = 0xFFFFFFF5U - (index != 1);
+
+            handle = GetStdHandle(file_type);
+
+            if ((handle == INVALID_HANDLE_VALUE) ||
+                (handle == nullptr) ||
+                ((file_type = GetFileType(handle)), file_type == 0))
+            {
+                *entry_flags = *entry_flags | 0x40;
+                *entry_handle = reinterpret_cast<HANDLE>(-2);
+            }
+            else
+            {
+                *entry_handle = handle;
+
+                if ((file_type & 0xFF) == 2)
+                    *entry_flags = *entry_flags | 0x40;
+                else if ((file_type & 0xFF) == 3)
+                    *entry_flags = *entry_flags | 8;
+
+                initialized = InitializeCriticalSectionAndSpinCount(
+                    reinterpret_cast<LPCRITICAL_SECTION>(entry + 0x0C),
+                    4000);
+
+                if (initialized == 0)
+                    return -1;
+
+                *reinterpret_cast<std::uint32_t*>(entry + 0x08) += 1;
+            }
+        }
+        else
+        {
+            *entry_flags = *entry_flags | 0x80;
+        }
+
+        ++index;
+    }
+    while (static_cast<int>(index) < 3);
+
+    SetHandleCount(DAT_1003c418);
+    return 0;
+}

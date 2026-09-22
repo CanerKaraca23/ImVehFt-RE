@@ -1,1 +1,123 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nstruct TidDataExceptionView`n{`n    std::uint8_t reserved_00[0x5c];`n    unsigned long* pxcptacttab;`n    static_assert(sizeof(unsigned long) == 4);`n    void* tpxcptinfoptrs;`n    int tfpecode;`n};`n`nstatic_assert(offsetof(TidDataExceptionView, pxcptacttab) == 0x5c);`nstatic_assert(offsetof(TidDataExceptionView, tpxcptinfoptrs) == 0x60);`nstatic_assert(offsetof(TidDataExceptionView, tfpecode) == 0x64);`n`nextern "C" TidDataExceptionView* __cdecl __getptd_noexit(void);`n`nextern "C" int __cdecl __XcptFilter(`n    unsigned long _ExceptionNum,`n    _EXCEPTION_POINTERS* _ExceptionPtr)`n{`n    TidDataExceptionView* ptd = __getptd_noexit();`n    int result = 0;`n`n    if (ptd != nullptr) {`n        unsigned long* table = ptd->pxcptacttab;`n        unsigned long* entry = table;`n`n        do {`n            if (*entry == _ExceptionNum) {`n                break;`n            }`n`n            entry += 3;`n        } while (entry < table + 0x24);`n`n        if (entry >= table + 0x24 || *entry != _ExceptionNum) {`n            entry = nullptr;`n        }`n`n        using XcptAction = void(__cdecl*)(unsigned long, ...);`n        XcptAction action =`n            (entry != nullptr)`n                ? reinterpret_cast<XcptAction>(entry[2])`n                : nullptr;`n`n        if (entry == nullptr || action == nullptr) {`n            result = 0;`n        }`n        else if (reinterpret_cast<unsigned long>(action) == 0x5) {`n            entry[2] = 0;`n            result = 1;`n        }`n        else {`n            if (reinterpret_cast<unsigned long>(action) != 0x1) {`n                void* previousExceptionInfo = ptd->tpxcptinfoptrs;`n                ptd->tpxcptinfoptrs = _ExceptionPtr;`n`n                if (entry[1] == 8) {`n                    for (int offset = 0x24; offset < 0x90; offset += 0x0c) {`n                        *reinterpret_cast<unsigned long*>(`n                            reinterpret_cast<unsigned char*>(ptd->pxcptacttab) +`n                            offset + 8) = 0;`n                    }`n`n                    unsigned long exceptionNumber = *entry;`n                    int previousFpCode = ptd->tfpecode;`n`n                    if (exceptionNumber == 0xc000008e) {`n                        ptd->tfpecode = 0x83;`n                    }`n                    else if (exceptionNumber == 0xc0000090) {`n                        ptd->tfpecode = 0x81;`n                    }`n                    else if (exceptionNumber == 0xc0000091) {`n                        ptd->tfpecode = 0x84;`n                    }`n                    else if (exceptionNumber == 0xc0000093) {`n                        ptd->tfpecode = 0x85;`n                    }`n                    else if (exceptionNumber == 0xc000008d) {`n                        ptd->tfpecode = 0x82;`n                    }`n                    else if (exceptionNumber == 0xc000008f) {`n                        ptd->tfpecode = 0x86;`n                    }`n                    else if (exceptionNumber == 0xc0000092) {`n                        ptd->tfpecode = 0x8a;`n                    }`n                    else if (exceptionNumber == 0xc00002b5) {`n                        ptd->tfpecode = 0x8d;`n                    }`n                    else if (exceptionNumber == 0xc00002b4) {`n                        ptd->tfpecode = 0x8e;`n                    }`n`n                    action(8, static_cast<unsigned long>(ptd->tfpecode));`n                    ptd->tfpecode = previousFpCode;`n                }`n                else {`n                    entry[2] = 0;`n                    action(entry[1]);`n                }`n`n                ptd->tpxcptinfoptrs = previousExceptionInfo;`n            }`n`n            result = -1;`n        }`n    }`n`n    return result;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+#include <corecrt.h>
+#include <Windows.h>
+using longlong = std::int64_t;
+using ulonglong = std::uint64_t;
+using undefined = unsigned char;
+using undefined1 = std::uint8_t;
+using undefined2 = std::uint16_t;
+using undefined4 = std::uint32_t;
+using undefined8 = std::uint64_t;
+struct TidDataExceptionView
+{
+    std::uint8_t reserved_00[0x5c];
+    unsigned long* pxcptacttab;
+    static_assert(sizeof(unsigned long) == 4);
+    void* tpxcptinfoptrs;
+    int tfpecode;
+};
+
+static_assert(offsetof(TidDataExceptionView, pxcptacttab) == 0x5c);
+static_assert(offsetof(TidDataExceptionView, tpxcptinfoptrs) == 0x60);
+static_assert(offsetof(TidDataExceptionView, tfpecode) == 0x64);
+
+extern "C" TidDataExceptionView* __cdecl __getptd_noexit(void);
+
+extern "C" int __cdecl __XcptFilter(
+    unsigned long _ExceptionNum,
+    _EXCEPTION_POINTERS* _ExceptionPtr)
+{
+    TidDataExceptionView* ptd = __getptd_noexit();
+    int result = 0;
+
+    if (ptd != nullptr) {
+        unsigned long* table = ptd->pxcptacttab;
+        unsigned long* entry = table;
+
+        do {
+            if (*entry == _ExceptionNum) {
+                break;
+            }
+
+            entry += 3;
+        } while (entry < table + 0x24);
+
+        if (entry >= table + 0x24 || *entry != _ExceptionNum) {
+            entry = nullptr;
+        }
+
+        using XcptAction = void(__cdecl*)(unsigned long, ...);
+        XcptAction action =
+            (entry != nullptr)
+                ? reinterpret_cast<XcptAction>(entry[2])
+                : nullptr;
+
+        if (entry == nullptr || action == nullptr) {
+            result = 0;
+        }
+        else if (reinterpret_cast<unsigned long>(action) == 0x5) {
+            entry[2] = 0;
+            result = 1;
+        }
+        else {
+            if (reinterpret_cast<unsigned long>(action) != 0x1) {
+                void* previousExceptionInfo = ptd->tpxcptinfoptrs;
+                ptd->tpxcptinfoptrs = _ExceptionPtr;
+
+                if (entry[1] == 8) {
+                    for (int offset = 0x24; offset < 0x90; offset += 0x0c) {
+                        *reinterpret_cast<unsigned long*>(
+                            reinterpret_cast<unsigned char*>(ptd->pxcptacttab) +
+                            offset + 8) = 0;
+                    }
+
+                    unsigned long exceptionNumber = *entry;
+                    int previousFpCode = ptd->tfpecode;
+
+                    if (exceptionNumber == 0xc000008e) {
+                        ptd->tfpecode = 0x83;
+                    }
+                    else if (exceptionNumber == 0xc0000090) {
+                        ptd->tfpecode = 0x81;
+                    }
+                    else if (exceptionNumber == 0xc0000091) {
+                        ptd->tfpecode = 0x84;
+                    }
+                    else if (exceptionNumber == 0xc0000093) {
+                        ptd->tfpecode = 0x85;
+                    }
+                    else if (exceptionNumber == 0xc000008d) {
+                        ptd->tfpecode = 0x82;
+                    }
+                    else if (exceptionNumber == 0xc000008f) {
+                        ptd->tfpecode = 0x86;
+                    }
+                    else if (exceptionNumber == 0xc0000092) {
+                        ptd->tfpecode = 0x8a;
+                    }
+                    else if (exceptionNumber == 0xc00002b5) {
+                        ptd->tfpecode = 0x8d;
+                    }
+                    else if (exceptionNumber == 0xc00002b4) {
+                        ptd->tfpecode = 0x8e;
+                    }
+
+                    action(8, static_cast<unsigned long>(ptd->tfpecode));
+                    ptd->tfpecode = previousFpCode;
+                }
+                else {
+                    entry[2] = 0;
+                    action(entry[1]);
+                }
+
+                ptd->tpxcptinfoptrs = previousExceptionInfo;
+            }
+
+            result = -1;
+        }
+    }
+
+    return result;
+}

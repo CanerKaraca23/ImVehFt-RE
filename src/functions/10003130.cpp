@@ -1,1 +1,71 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::int32_t DAT_1003c248;`nextern std::int32_t* _DAT_00b74494;`nextern std::uint32_t _DAT_10025000;`n`nextern std::int32_t __stdcall FUN_10009360();`n`nextern "C" void __cdecl FUN_10003130(`n    std::int32_t param_1,`n    std::uint32_t param_2,`n    std::uint32_t param_3,`n    std::uint32_t param_4,`n    std::uint32_t param_5,`n    std::uint32_t param_6,`n    std::uint32_t param_7,`n    std::uint32_t param_8,`n    std::uint32_t param_9,`n    std::uint32_t param_10,`n    std::uint32_t param_11,`n    std::uint32_t param_12,`n    std::uint32_t param_13,`n    std::uint32_t param_14,`n    std::uint32_t param_15)`n{`n    const std::int32_t local_base = DAT_1003c248;`n    const std::int32_t context = FUN_10009360();`n`n    const std::int32_t index =`n        (param_1 - *_DAT_00b74494) / 0xa18;`n`n    const std::int32_t entry_array =`n        *reinterpret_cast<std::int32_t*>(`n            *reinterpret_cast<std::int32_t*>(context + 0x48) +`n            index * 4);`n`n    if (*reinterpret_cast<char*>(entry_array + 0x1c + local_base) != '\0') {`n        param_9 = _DAT_10025000;`n    }`n`n    reinterpret_cast<void(__cdecl*)(`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t,`n        std::uint32_t)>(`n        0x7000e0)(`n        param_2,`n        param_3,`n        param_4,`n        param_5,`n        param_6,`n        param_7,`n        param_8,`n        param_9,`n        param_10,`n        param_11,`n        param_12,`n        param_13,`n        param_14,`n        param_15);`n}`n
+#include <cstdint>
+
+extern std::int32_t DAT_1003c248;
+extern std::int32_t* _DAT_00b74494;
+extern std::uint32_t _DAT_10025000;
+
+extern "C" std::int32_t __stdcall FUN_10009360();
+
+extern "C" void __cdecl FUN_10003130(
+    std::int32_t param_1,
+    std::uint32_t param_2,
+    std::uint32_t param_3,
+    std::uint32_t param_4,
+    std::uint32_t param_5,
+    std::uint32_t param_6,
+    std::uint32_t param_7,
+    std::uint32_t param_8,
+    std::uint32_t param_9,
+    std::uint32_t param_10,
+    std::uint32_t param_11,
+    std::uint32_t param_12,
+    std::uint32_t param_13,
+    std::uint32_t param_14,
+    std::uint32_t param_15)
+{
+    const std::int32_t local_base = DAT_1003c248;
+    const std::int32_t context = FUN_10009360();
+
+    const std::int32_t index =
+        (param_1 - *_DAT_00b74494) / 0xa18;
+
+    const std::int32_t entry_array =
+        *reinterpret_cast<std::int32_t*>(
+            *reinterpret_cast<std::int32_t*>(context + 0x48) +
+            index * 4);
+
+    if (*reinterpret_cast<char*>(entry_array + 0x1c + local_base) != '\0') {
+        param_9 = _DAT_10025000;
+    }
+
+    reinterpret_cast<void(__cdecl*)(
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t,
+        std::uint32_t)>(
+        0x7000e0)(
+        param_2,
+        param_3,
+        param_4,
+        param_5,
+        param_6,
+        param_7,
+        param_8,
+        param_9,
+        param_10,
+        param_11,
+        param_12,
+        param_13,
+        param_14,
+        param_15);
+}

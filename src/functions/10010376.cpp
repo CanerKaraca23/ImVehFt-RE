@@ -1,1 +1,51 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n`nextern "C" std::size_t __cdecl _strlen(const char*);`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`n`nstd::uint32_t __cdecl vscan_fn(`n    void* param_1,`n    int param_2,`n    std::uint32_t param_3,`n    std::uint32_t param_4`n)`n{`n    char* unaff_ESI;`n    __asm mov unaff_ESI, esi`n    std::uint32_t local_stack[7]{};`n    std::uint32_t& local_20 = local_stack[0];`n    std::uint32_t& local_18 = local_stack[2];`n`n    if (unaff_ESI != nullptr && param_2 != 0)`n    {`n        const std::size_t sVar2 = _strlen(unaff_ESI);`n`n        local_18 = 0x49;`n        local_20 = 0x7FFFFFFF;`n`n        if (sVar2 < 0x80000000ULL)`n        {`n            local_20 = static_cast<std::uint32_t>(sVar2);`n        }`n`n        using Callback = std::uint32_t(__cdecl*)(`n            void*,`n            int,`n            std::uint32_t,`n            std::uint32_t`n        );`n`n        return reinterpret_cast<Callback>(param_1)(`n            reinterpret_cast<std::uint8_t*>(&local_20) - 4,`n            param_2,`n            param_3,`n            param_4`n        );`n    }`n`n    *(__errno()) = 0x16;`n    FUN_1001189f();`n    return 0xFFFFFFFFU;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" std::size_t __cdecl _strlen(const char*);
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+
+std::uint32_t __cdecl vscan_fn(
+    void* param_1,
+    int param_2,
+    std::uint32_t param_3,
+    std::uint32_t param_4
+)
+{
+    char* unaff_ESI;
+    __asm mov unaff_ESI, esi
+    std::uint32_t local_stack[7]{};
+    std::uint32_t& local_20 = local_stack[0];
+    std::uint32_t& local_18 = local_stack[2];
+
+    if (unaff_ESI != nullptr && param_2 != 0)
+    {
+        const std::size_t sVar2 = _strlen(unaff_ESI);
+
+        local_18 = 0x49;
+        local_20 = 0x7FFFFFFF;
+
+        if (sVar2 < 0x80000000ULL)
+        {
+            local_20 = static_cast<std::uint32_t>(sVar2);
+        }
+
+        using Callback = std::uint32_t(__cdecl*)(
+            void*,
+            int,
+            std::uint32_t,
+            std::uint32_t
+        );
+
+        return reinterpret_cast<Callback>(param_1)(
+            reinterpret_cast<std::uint8_t*>(&local_20) - 4,
+            param_2,
+            param_3,
+            param_4
+        );
+    }
+
+    *(__errno()) = 0x16;
+    FUN_1001189f();
+    return 0xFFFFFFFFU;
+}

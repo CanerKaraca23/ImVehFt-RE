@@ -1,1 +1,31 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(safebuffers) std::uint64_t __fastcall __aullshr(std::uint8_t, std::uint32_t)`n{`n    std::uint32_t eax_value;`n    std::uint32_t edx_value;`n    std::uint8_t shift_count;`n`n    __asm {`n        mov eax_value, eax`n        mov edx_value, edx`n        mov shift_count, cl`n    }`n`n    if (shift_count >= 0x40)`n        return 0;`n`n    if (shift_count < 0x20)`n    {`n        const std::uint32_t shift = shift_count & 0x1f;`n        if (shift_count == 0)`n            return (static_cast<std::uint64_t>(edx_value) << 32) | eax_value;`n`n        return (static_cast<std::uint64_t>(edx_value >> shift) << 32)`n             | (eax_value >> shift | edx_value << (0x20 - shift));`n    }`n`n    return static_cast<std::uint64_t>(edx_value >> (shift_count & 0x1f));`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(safebuffers) std::uint64_t __fastcall __aullshr(void)
+{
+    std::uint32_t eax_value;
+    std::uint32_t edx_value;
+    std::uint8_t shift_count;
+
+    __asm {
+        mov eax_value, eax
+        mov edx_value, edx
+        mov shift_count, cl
+    }
+
+    if (shift_count >= 0x40)
+        return 0;
+
+    if (shift_count < 0x20)
+    {
+        const std::uint32_t shift = shift_count & 0x1f;
+        if (shift_count == 0)
+            return (static_cast<std::uint64_t>(edx_value) << 32) | eax_value;
+
+        return (static_cast<std::uint64_t>(edx_value >> shift) << 32)
+             | (eax_value >> shift | edx_value << (0x20 - shift));
+    }
+
+    return static_cast<std::uint64_t>(edx_value >> (shift_count & 0x1f));
+}

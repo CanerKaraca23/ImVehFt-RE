@@ -1,1 +1,218 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n`nusing errno_t = int;`nusing UINT = std::uint32_t;`nusing DWORD = std::uint32_t;`nusing BOOL = std::int32_t;`n`nextern "C" int* __cdecl __errno(void);`nextern "C" void __stdcall FUN_1001189f(void);`nextern "C" void* __cdecl _memset(void* _Dst, int _Val, std::size_t _Size);`n`nstruct _LocaleUpdate`n{`n    std::uint32_t local_14[2];`n    std::int32_t local_c;`n    char local_8;`n};`n`nusing LocaleUpdateCtor = void(__thiscall*)(`n    _LocaleUpdate* _This, _locale_t _Locale);`n`nextern "C" int __stdcall`nWideCharToMultiByte(`n    UINT _CodePage,`n    std::uint32_t _Flags,`n    const wchar_t* _WideCharStr,`n    int _WideCharCount,`n    char* _MultiByteStr,`n    int _MultiByteCount,`n    const char* _DefaultChar,`n    BOOL* _UsedDefaultChar);`n`nextern "C" DWORD __stdcall GetLastError(void);`n`nstatic __forceinline void set_errno_and_report(int value)`n{`n    int* error_slot = __errno();`n    *error_slot = value;`n    FUN_1001189f();`n}`n`nextern "C" errno_t __cdecl`n__wctomb_s_l(`n    int* _SizeConverted,`n    char* _MbCh,`n    std::size_t _SizeInBytes,`n    wchar_t _WCh,`n    _locale_t _Locale)`n{`n    char* lpMultiByteStr = _MbCh;`n    std::size_t _Size = _SizeInBytes;`n    int iVar1;`n    int* piVar2;`n    DWORD DVar3;`n`n    _LocaleUpdate local_14{};`n`n    if ((_MbCh == nullptr) && (_SizeInBytes != 0))`n    {`n        if (_SizeConverted != nullptr)`n        {`n            *_SizeConverted = 0;`n        }`n`n        iVar1 = 0;`n    }`n    else`n    {`n        if (_SizeConverted != nullptr)`n        {`n            *_SizeConverted = -1;`n        }`n`n        if (0x7fffffff < _SizeInBytes)`n        {`n            set_errno_and_report(0x16);`n            return 0x16;`n        }`n`n        // Ghidra 0x1001a7d8: ECX=&local_14, pushed _Locale, CALL 0x10010b1a.`n        reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(&local_14, _Locale);`n`n        if (*reinterpret_cast<std::int32_t*>(`n                reinterpret_cast<std::uintptr_t*>(local_14.local_14[0]) + 0x14 / sizeof(std::uintptr_t)) == 0)`n        {`n            if (static_cast<std::uint16_t>(_WCh) < 0x100)`n            {`n                if (lpMultiByteStr != nullptr)`n                {`n                    if (_Size == 0)`n                    {`n                        set_errno_and_report(0x22);`n`n                        if (local_14.local_8 == '\0')`n                        {`n                            return 0x22;`n                        }`n`n                        *reinterpret_cast<std::uint32_t*>(`n                            static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=`n                            0xfffffffd;`n`n                        return 0x22;`n                    }`n`n                    *lpMultiByteStr = static_cast<char>(_WCh);`n                }`n`n                if (_SizeConverted != nullptr)`n                {`n                    *_SizeConverted = 1;`n                }`n`n                if (local_14.local_8 != '\0')`n                {`n                    *reinterpret_cast<std::uint32_t*>(`n                        static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=`n                        0xfffffffd;`n                }`n`n                iVar1 = 0;`n            }`n            else`n            {`n                if ((lpMultiByteStr != nullptr) && (_Size != 0))`n                {`n                    _memset(lpMultiByteStr, 0, _Size);`n                }`n`n                set_errno_and_report(0x22);`n`n                if (local_14.local_8 == '\0')`n                {`n                    return 0x22;`n                }`n`n                *reinterpret_cast<std::uint32_t*>(`n                    static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=`n                    0xfffffffd;`n`n                return 0x22;`n            }`n        }`n        else`n        {`n            _MbCh = nullptr;`n`n            iVar1 = WideCharToMultiByte(`n                *reinterpret_cast<UINT*>(`n                    static_cast<std::uintptr_t>(local_14.local_14[0]) + 4),`n                0,`n                &_WCh,`n                1,`n                lpMultiByteStr,`n                static_cast<int>(_Size),`n                nullptr,`n                reinterpret_cast<BOOL*>(&_MbCh));`n`n            if (iVar1 == 0)`n            {`n                DVar3 = GetLastError();`n`n                if (DVar3 == 0x7a)`n                {`n                    if ((lpMultiByteStr != nullptr) && (_Size != 0))`n                    {`n                        _memset(lpMultiByteStr, 0, _Size);`n                    }`n`n                    set_errno_and_report(0x22);`n`n                    if (local_14.local_8 == '\0')`n                    {`n                        return 0x22;`n                    }`n`n                    *reinterpret_cast<std::uint32_t*>(`n                        static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=`n                        0xfffffffd;`n`n                    return 0x22;`n                }`n            }`n            else if (_MbCh == nullptr)`n            {`n                if (_SizeConverted != nullptr)`n                {`n                    *_SizeConverted = iVar1;`n                }`n`n                if (local_14.local_8 != '\0')`n                {`n                    *reinterpret_cast<std::uint32_t*>(`n                        static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=`n                        0xfffffffd;`n                }`n`n                iVar1 = 0;`n            }`n`n            piVar2 = __errno();`n            *piVar2 = 0x2a;`n`n            piVar2 = __errno();`n            iVar1 = *piVar2;`n`n            if (local_14.local_8 != '\0')`n            {`n                *reinterpret_cast<std::uint32_t*>(`n                    static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=`n                    0xfffffffd;`n            }`n        }`n    }`n`n    return iVar1;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+using errno_t = int;
+using UINT = std::uint32_t;
+using DWORD = std::uint32_t;
+using BOOL = std::int32_t;
+
+extern "C" int* __cdecl __errno(void);
+extern "C" void __stdcall FUN_1001189f(void);
+extern "C" void* __cdecl _memset(void* _Dst, int _Val, std::size_t _Size);
+
+struct _LocaleUpdate
+{
+    std::uint32_t local_14[2];
+    std::int32_t local_c;
+    char local_8;
+};
+
+using LocaleUpdateCtor = void(__thiscall*)(
+    _LocaleUpdate* _This, _locale_t _Locale);
+
+extern "C" int __stdcall
+WideCharToMultiByte(
+    UINT _CodePage,
+    std::uint32_t _Flags,
+    const wchar_t* _WideCharStr,
+    int _WideCharCount,
+    char* _MultiByteStr,
+    int _MultiByteCount,
+    const char* _DefaultChar,
+    BOOL* _UsedDefaultChar);
+
+extern "C" DWORD __stdcall GetLastError(void);
+
+static __forceinline void set_errno_and_report(int value)
+{
+    int* error_slot = __errno();
+    *error_slot = value;
+    FUN_1001189f();
+}
+
+extern "C" errno_t __cdecl
+__wctomb_s_l(
+    int* _SizeConverted,
+    char* _MbCh,
+    std::size_t _SizeInBytes,
+    wchar_t _WCh,
+    _locale_t _Locale)
+{
+    char* lpMultiByteStr = _MbCh;
+    std::size_t _Size = _SizeInBytes;
+    int iVar1;
+    int* piVar2;
+    DWORD DVar3;
+
+    _LocaleUpdate local_14{};
+
+    if ((_MbCh == nullptr) && (_SizeInBytes != 0))
+    {
+        if (_SizeConverted != nullptr)
+        {
+            *_SizeConverted = 0;
+        }
+
+        iVar1 = 0;
+    }
+    else
+    {
+        if (_SizeConverted != nullptr)
+        {
+            *_SizeConverted = -1;
+        }
+
+        if (0x7fffffff < _SizeInBytes)
+        {
+            set_errno_and_report(0x16);
+            return 0x16;
+        }
+
+        // Ghidra 0x1001a7d8: ECX=&local_14, pushed _Locale, CALL 0x10010b1a.
+        reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(&local_14, _Locale);
+
+        if (*reinterpret_cast<std::int32_t*>(
+                reinterpret_cast<std::uintptr_t*>(local_14.local_14[0]) + 0x14 / sizeof(std::uintptr_t)) == 0)
+        {
+            if (static_cast<std::uint16_t>(_WCh) < 0x100)
+            {
+                if (lpMultiByteStr != nullptr)
+                {
+                    if (_Size == 0)
+                    {
+                        set_errno_and_report(0x22);
+
+                        if (local_14.local_8 == '\0')
+                        {
+                            return 0x22;
+                        }
+
+                        *reinterpret_cast<std::uint32_t*>(
+                            static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
+                            0xfffffffd;
+
+                        return 0x22;
+                    }
+
+                    *lpMultiByteStr = static_cast<char>(_WCh);
+                }
+
+                if (_SizeConverted != nullptr)
+                {
+                    *_SizeConverted = 1;
+                }
+
+                if (local_14.local_8 != '\0')
+                {
+                    *reinterpret_cast<std::uint32_t*>(
+                        static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
+                        0xfffffffd;
+                }
+
+                iVar1 = 0;
+            }
+            else
+            {
+                if ((lpMultiByteStr != nullptr) && (_Size != 0))
+                {
+                    _memset(lpMultiByteStr, 0, _Size);
+                }
+
+                set_errno_and_report(0x22);
+
+                if (local_14.local_8 == '\0')
+                {
+                    return 0x22;
+                }
+
+                *reinterpret_cast<std::uint32_t*>(
+                    static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
+                    0xfffffffd;
+
+                return 0x22;
+            }
+        }
+        else
+        {
+            _MbCh = nullptr;
+
+            iVar1 = WideCharToMultiByte(
+                *reinterpret_cast<UINT*>(
+                    static_cast<std::uintptr_t>(local_14.local_14[0]) + 4),
+                0,
+                &_WCh,
+                1,
+                lpMultiByteStr,
+                static_cast<int>(_Size),
+                nullptr,
+                reinterpret_cast<BOOL*>(&_MbCh));
+
+            if (iVar1 == 0)
+            {
+                DVar3 = GetLastError();
+
+                if (DVar3 == 0x7a)
+                {
+                    if ((lpMultiByteStr != nullptr) && (_Size != 0))
+                    {
+                        _memset(lpMultiByteStr, 0, _Size);
+                    }
+
+                    set_errno_and_report(0x22);
+
+                    if (local_14.local_8 == '\0')
+                    {
+                        return 0x22;
+                    }
+
+                    *reinterpret_cast<std::uint32_t*>(
+                        static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
+                        0xfffffffd;
+
+                    return 0x22;
+                }
+            }
+            else if (_MbCh == nullptr)
+            {
+                if (_SizeConverted != nullptr)
+                {
+                    *_SizeConverted = iVar1;
+                }
+
+                if (local_14.local_8 != '\0')
+                {
+                    *reinterpret_cast<std::uint32_t*>(
+                        static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
+                        0xfffffffd;
+                }
+
+                iVar1 = 0;
+            }
+
+            piVar2 = __errno();
+            *piVar2 = 0x2a;
+
+            piVar2 = __errno();
+            iVar1 = *piVar2;
+
+            if (local_14.local_8 != '\0')
+            {
+                *reinterpret_cast<std::uint32_t*>(
+                    static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
+                    0xfffffffd;
+            }
+        }
+    }
+
+    return iVar1;
+}

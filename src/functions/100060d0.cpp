@@ -1,1 +1,217 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::int32_t DAT_1003c248;`nextern std::int32_t* _DAT_00b74494;`n`nextern std::int32_t __stdcall FUN_10009360();`nextern void __cdecl FUN_10005b60(std::uint32_t);`nextern void __cdecl FUN_10005ef0(std::uint32_t);`nextern void __cdecl FUN_10005d30(std::uint32_t);`nextern "C" char (__cdecl* FUN_006c2130)(...);`n`nvoid __stdcall FUN_100060d0()`n{`n    std::int32_t iVar4Resolved;`n    std::int32_t unaff_ESI;`n    __asm mov unaff_ESI, esi`n    const std::int32_t iVar4 = DAT_1003c248;`n    const std::int32_t iVar7 = FUN_10009360();`n    const auto self = static_cast<std::uintptr_t>(unaff_ESI);`n    const std::int32_t iVar2 =`n        *reinterpret_cast<std::int32_t*>(self + 0x594);`n`n    if (iVar2 == 5)`n        return;`n    if (iVar2 == 4)`n        return;`n    if (iVar2 == 3)`n        return;`n    if (iVar2 == 10)`n        return;`n`n    const bool bVar5 =`n        0.0f < *reinterpret_cast<float*>(self + 0x4A0);`n`n    std::uint32_t uVar8;`n`n    if ((*reinterpret_cast<std::uint8_t*>(self + 0x428) & 0x10) == 0)`n    {`n        if ((!bVar5 ||`n             *reinterpret_cast<std::int32_t*>(self + 0x460) == 0) ||`n            iVar2 == 0xB)`n        {`n            if (iVar2 != 0xB)`n                return;`n`n            const std::int32_t iVar3 =`n                *reinterpret_cast<std::int32_t*>(self + 0x4C8);`n`n            if (iVar3 == 0)`n                return;`n            if (*reinterpret_cast<std::int32_t*>(`n                    static_cast<std::uintptr_t>(iVar3) + 0x460) == 0)`n                return;`n            if (*reinterpret_cast<float*>(`n                    static_cast<std::uintptr_t>(iVar3) + 0x4A0) <= 0.0f)`n                return;`n        }`n`n        uVar8 = 2;`n    }`n    else`n    {`n        bool active = false;`n`n        if (bVar5)`n        {`n            if (*reinterpret_cast<std::int32_t*>(self + 0x460) != 0)`n            {`n                if (iVar2 != 0xB)`n                    active = true;`n            }`n        }`n`n        if (!active)`n        {`n            if (iVar2 == 0xB)`n            {`n                const std::int32_t iVar3 =`n                    *reinterpret_cast<std::int32_t*>(self + 0x4C8);`n`n                if (iVar3 != 0)`n                {`n                    if (*reinterpret_cast<std::int32_t*>(`n                            static_cast<std::uintptr_t>(iVar3) + 0x460) != 0)`n                    {`n                        if (0.0f < *reinterpret_cast<float*>(`n                                static_cast<std::uintptr_t>(iVar3) + 0x4A0))`n                            active = true;`n                    }`n                }`n            }`n        }`n`n        if (active)`n            uVar8 = 3;`n        else`n            uVar8 = 1;`n    }`n`n    const std::uint8_t bVar1 =`n        *reinterpret_cast<std::uint8_t*>(self + 0x584);`n`n    if ((bVar1 & 4) != 0)`n    {`n        if ((bVar1 & 8) != 0)`n        {`n            FUN_10005b60(uVar8);`n            return;`n        }`n`n        goto LAB_100062FD;`n    }`n`n    if ((bVar1 & 8) != 0)`n    {`n        FUN_10005ef0(uVar8);`n        return;`n    }`n`n    if ((*reinterpret_cast<float*>(self + 0x4A0) <= 0.0f) ||`n        (*reinterpret_cast<std::int32_t*>(self + 0x460) == 0) ||`n        iVar2 == 0xB)`n    {`n        if (iVar2 != 0xB)`n            return;`n`n        const std::int32_t iVar3 =`n            *reinterpret_cast<std::int32_t*>(self + 0x4C8);`n`n        if (iVar3 == 0)`n            return;`n        if (*reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(iVar3) + 0x460) == 0)`n            return;`n        if (*reinterpret_cast<float*>(`n                static_cast<std::uintptr_t>(iVar3) + 0x4A0) <= 0.0f)`n            return;`n    }`n`n    iVar4Resolved =`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(`n                *reinterpret_cast<std::int32_t*>(`n                    static_cast<std::uintptr_t>(`n                        *reinterpret_cast<std::int32_t*>(`n                            static_cast<std::uintptr_t>(iVar7) + 0x48) +`n                        ((unaff_ESI - *_DAT_00b74494) / 0xA18) * 4)) +`n                    0x28) +`n                iVar4);`n`n    if (*reinterpret_cast<char*>(`n            static_cast<std::uintptr_t>(iVar4Resolved) + 0x325) == '\0')`n        return;`n`n    if (*reinterpret_cast<char*>(`n            static_cast<std::uintptr_t>(iVar4Resolved) + 0x324) == '\0')`n    {`n        switch (iVar2)`n        {`n        case 0:`n        case 1:`n        case 2:`n        case 0xB:`n            break;`n`n        case 6:`n        case 9:`n            goto switchD_1000628b_caseD_9;`n`n        default:`n            return;`n        }`n    }`n    else`n    {`n        switch (iVar2)`n        {`n        case 0:`n        case 1:`n        case 0xB:`n            if (FUN_006c2130(3) == '\0')`n            {`n                if (FUN_006c2130() != '\0')`n                {`n                    FUN_10005ef0(2);`n                    return;`n                }`n`n                FUN_10005b60(2);`n                return;`n            }`n            break;`n`n        case 6:`n            FUN_10005b60(2);`n            [[fallthrough]];`n`n        case 2:`n            break;`n`n        case 9:`n            goto switchD_1000628b_caseD_9;`n`n        default:`n            return;`n        }`n    }`n`n    if (FUN_006c2130(2) != '\0')`n        return;`n`nswitchD_1000628b_caseD_9:`n    uVar8 = 2;`n`nLAB_100062FD:`n    FUN_10005d30(uVar8);`n}`n
+#include <cstdint>
+
+extern std::int32_t DAT_1003c248;
+extern std::int32_t* _DAT_00b74494;
+
+extern "C" std::int32_t __stdcall FUN_10009360();
+extern "C" void __cdecl FUN_10005b60(std::uint32_t);
+extern "C" void __cdecl FUN_10005ef0(std::uint32_t);
+extern "C" void __cdecl FUN_10005d30(std::uint32_t);
+extern "C" char (__cdecl* FUN_006c2130)(...);
+
+void __stdcall FUN_100060d0()
+{
+    std::int32_t iVar4Resolved;
+    std::int32_t unaff_ESI;
+    __asm mov unaff_ESI, esi
+    const std::int32_t iVar4 = DAT_1003c248;
+    const std::int32_t iVar7 = FUN_10009360();
+    const auto self = static_cast<std::uintptr_t>(unaff_ESI);
+    const std::int32_t iVar2 =
+        *reinterpret_cast<std::int32_t*>(self + 0x594);
+
+    if (iVar2 == 5)
+        return;
+    if (iVar2 == 4)
+        return;
+    if (iVar2 == 3)
+        return;
+    if (iVar2 == 10)
+        return;
+
+    const bool bVar5 =
+        0.0f < *reinterpret_cast<float*>(self + 0x4A0);
+
+    std::uint32_t uVar8;
+
+    if ((*reinterpret_cast<std::uint8_t*>(self + 0x428) & 0x10) == 0)
+    {
+        if ((!bVar5 ||
+             *reinterpret_cast<std::int32_t*>(self + 0x460) == 0) ||
+            iVar2 == 0xB)
+        {
+            if (iVar2 != 0xB)
+                return;
+
+            const std::int32_t iVar3 =
+                *reinterpret_cast<std::int32_t*>(self + 0x4C8);
+
+            if (iVar3 == 0)
+                return;
+            if (*reinterpret_cast<std::int32_t*>(
+                    static_cast<std::uintptr_t>(iVar3) + 0x460) == 0)
+                return;
+            if (*reinterpret_cast<float*>(
+                    static_cast<std::uintptr_t>(iVar3) + 0x4A0) <= 0.0f)
+                return;
+        }
+
+        uVar8 = 2;
+    }
+    else
+    {
+        bool active = false;
+
+        if (bVar5)
+        {
+            if (*reinterpret_cast<std::int32_t*>(self + 0x460) != 0)
+            {
+                if (iVar2 != 0xB)
+                    active = true;
+            }
+        }
+
+        if (!active)
+        {
+            if (iVar2 == 0xB)
+            {
+                const std::int32_t iVar3 =
+                    *reinterpret_cast<std::int32_t*>(self + 0x4C8);
+
+                if (iVar3 != 0)
+                {
+                    if (*reinterpret_cast<std::int32_t*>(
+                            static_cast<std::uintptr_t>(iVar3) + 0x460) != 0)
+                    {
+                        if (0.0f < *reinterpret_cast<float*>(
+                                static_cast<std::uintptr_t>(iVar3) + 0x4A0))
+                            active = true;
+                    }
+                }
+            }
+        }
+
+        if (active)
+            uVar8 = 3;
+        else
+            uVar8 = 1;
+    }
+
+    const std::uint8_t bVar1 =
+        *reinterpret_cast<std::uint8_t*>(self + 0x584);
+
+    if ((bVar1 & 4) != 0)
+    {
+        if ((bVar1 & 8) != 0)
+        {
+            FUN_10005b60(uVar8);
+            return;
+        }
+
+        goto LAB_100062FD;
+    }
+
+    if ((bVar1 & 8) != 0)
+    {
+        FUN_10005ef0(uVar8);
+        return;
+    }
+
+    if ((*reinterpret_cast<float*>(self + 0x4A0) <= 0.0f) ||
+        (*reinterpret_cast<std::int32_t*>(self + 0x460) == 0) ||
+        iVar2 == 0xB)
+    {
+        if (iVar2 != 0xB)
+            return;
+
+        const std::int32_t iVar3 =
+            *reinterpret_cast<std::int32_t*>(self + 0x4C8);
+
+        if (iVar3 == 0)
+            return;
+        if (*reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(iVar3) + 0x460) == 0)
+            return;
+        if (*reinterpret_cast<float*>(
+                static_cast<std::uintptr_t>(iVar3) + 0x4A0) <= 0.0f)
+            return;
+    }
+
+    iVar4Resolved =
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(
+                *reinterpret_cast<std::int32_t*>(
+                    static_cast<std::uintptr_t>(
+                        *reinterpret_cast<std::int32_t*>(
+                            static_cast<std::uintptr_t>(iVar7) + 0x48) +
+                        ((unaff_ESI - *_DAT_00b74494) / 0xA18) * 4)) +
+                    0x28) +
+                iVar4);
+
+    if (*reinterpret_cast<char*>(
+            static_cast<std::uintptr_t>(iVar4Resolved) + 0x325) == '\0')
+        return;
+
+    if (*reinterpret_cast<char*>(
+            static_cast<std::uintptr_t>(iVar4Resolved) + 0x324) == '\0')
+    {
+        switch (iVar2)
+        {
+        case 0:
+        case 1:
+        case 2:
+        case 0xB:
+            break;
+
+        case 6:
+        case 9:
+            goto switchD_1000628b_caseD_9;
+
+        default:
+            return;
+        }
+    }
+    else
+    {
+        switch (iVar2)
+        {
+        case 0:
+        case 1:
+        case 0xB:
+            if (FUN_006c2130(3) == '\0')
+            {
+                if (FUN_006c2130() != '\0')
+                {
+                    FUN_10005ef0(2);
+                    return;
+                }
+
+                FUN_10005b60(2);
+                return;
+            }
+            break;
+
+        case 6:
+            FUN_10005b60(2);
+            [[fallthrough]];
+
+        case 2:
+            break;
+
+        case 9:
+            goto switchD_1000628b_caseD_9;
+
+        default:
+            return;
+        }
+    }
+
+    if (FUN_006c2130(2) != '\0')
+        return;
+
+switchD_1000628b_caseD_9:
+    uVar8 = 2;
+
+LAB_100062FD:
+    FUN_10005d30(uVar8);
+}

@@ -1,1 +1,34 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing HANDLE = void*;`nusing UINT = std::uint32_t;`nusing DWORD = std::uint32_t;`n`nextern "C" void __cdecl __call_reportfault(`n    int nDbgHookCode,`n    DWORD dwExceptionCode,`n    DWORD dwExceptionFlags);`n`nextern "C" HANDLE __stdcall GetCurrentProcess();`n`nextern "C" int __stdcall TerminateProcess(`n    HANDLE hProcess,`n    UINT uExitCode);`n`nextern "C" void __cdecl __invoke_watson(`n    wchar_t* ,`n    wchar_t* ,`n    wchar_t* ,`n    std::uint32_t ,`n    std::uintptr_t )`n{`n    HANDLE hProcess;`n    UINT uExitCode;`n`n    __call_reportfault(2, 0xC0000417u, 1);`n`n    uExitCode = 0xC0000417u;`n    hProcess = GetCurrentProcess();`n    TerminateProcess(hProcess, uExitCode);`n    return;`n}`n
+#include <cstdint>
+
+using HANDLE = void*;
+using UINT = std::uint32_t;
+using DWORD = std::uint32_t;
+
+extern "C" void __cdecl __call_reportfault(
+    int nDbgHookCode,
+    DWORD dwExceptionCode,
+    DWORD dwExceptionFlags);
+
+extern "C" HANDLE __stdcall GetCurrentProcess();
+
+extern "C" int __stdcall TerminateProcess(
+    HANDLE hProcess,
+    UINT uExitCode);
+
+void __cdecl __invoke_watson(
+    wchar_t* ,
+    wchar_t* ,
+    wchar_t* ,
+    std::uint32_t ,
+    std::uintptr_t )
+{
+    HANDLE hProcess;
+    UINT uExitCode;
+
+    __call_reportfault(2, 0xC0000417u, 1);
+
+    uExitCode = 0xC0000417u;
+    hProcess = GetCurrentProcess();
+    TerminateProcess(hProcess, uExitCode);
+    return;
+}

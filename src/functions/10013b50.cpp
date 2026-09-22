@@ -1,1 +1,115 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" int __cdecl _strcmp(char* _Str1, char* _Str2)`n{`n    std::uint16_t uVar1;`n    std::uint32_t uVar2;`n    std::uint8_t bVar3;`n    std::uint8_t bVar4;`n    bool bVar5;`n`n    if ((reinterpret_cast<std::uintptr_t>(_Str1) & 3u) != 0) {`n        if ((reinterpret_cast<std::uintptr_t>(_Str1) & 1u) != 0) {`n            bVar4 = static_cast<std::uint8_t>(*_Str1);`n            _Str1 = _Str1 + 1;`n            bVar5 = bVar4 < static_cast<std::uint8_t>(*_Str2);`n`n            if (bVar4 != static_cast<std::uint8_t>(*_Str2)) {`n                goto LAB_10013b94;`n            }`n`n            _Str2 = _Str2 + 1;`n`n            if (bVar4 == 0) {`n                return 0;`n            }`n`n            if ((reinterpret_cast<std::uintptr_t>(_Str1) & 2u) == 0) {`n                goto LAB_10013b60;`n            }`n        }`n`n        uVar1 = *reinterpret_cast<std::uint16_t*>(_Str1);`n        _Str1 = _Str1 + 2;`n`n        bVar4 = static_cast<std::uint8_t>(uVar1);`n        bVar5 = bVar4 < static_cast<std::uint8_t>(*_Str2);`n`n        if (bVar4 != static_cast<std::uint8_t>(*_Str2)) {`n            goto LAB_10013b94;`n        }`n`n        if (bVar4 == 0) {`n            return 0;`n        }`n`n        bVar4 = static_cast<std::uint8_t>(uVar1 >> 8);`n        bVar5 = bVar4 < static_cast<std::uint8_t>(_Str2[1]);`n`n        if (bVar4 != static_cast<std::uint8_t>(_Str2[1])) {`n            goto LAB_10013b94;`n        }`n`n        if (bVar4 == 0) {`n            return 0;`n        }`n`n        _Str2 = _Str2 + 2;`n    }`n`nLAB_10013b60:`n    while (true) {`n        uVar2 = *reinterpret_cast<std::uint32_t*>(_Str1);`n`n        bVar4 = static_cast<std::uint8_t>(uVar2);`n        bVar5 = bVar4 < static_cast<std::uint8_t>(*_Str2);`n`n        if (bVar4 != static_cast<std::uint8_t>(*_Str2)) {`n            break;`n        }`n`n        if (bVar4 == 0) {`n            return 0;`n        }`n`n        bVar4 = static_cast<std::uint8_t>(uVar2 >> 8);`n        bVar5 = bVar4 < static_cast<std::uint8_t>(_Str2[1]);`n`n        if (bVar4 != static_cast<std::uint8_t>(_Str2[1])) {`n            break;`n        }`n`n        if (bVar4 == 0) {`n            return 0;`n        }`n`n        bVar4 = static_cast<std::uint8_t>(uVar2 >> 0x10);`n        bVar5 = bVar4 < static_cast<std::uint8_t>(_Str2[2]);`n`n        if (bVar4 != static_cast<std::uint8_t>(_Str2[2])) {`n            break;`n        }`n`n        bVar3 = static_cast<std::uint8_t>(uVar2 >> 0x18);`n`n        if (bVar4 == 0) {`n            return 0;`n        }`n`n        bVar5 = bVar3 < static_cast<std::uint8_t>(_Str2[3]);`n`n        if (bVar3 != static_cast<std::uint8_t>(_Str2[3])) {`n            break;`n        }`n`n        _Str2 = _Str2 + 4;`n        _Str1 = _Str1 + 4;`n`n        if (bVar3 == 0) {`n            return 0;`n        }`n    }`n`nLAB_10013b94:`n    return static_cast<int>(static_cast<unsigned int>(bVar5) * -2 + 1);`n}`n
+#include <cstdint>
+
+extern "C" int __cdecl _strcmp(char* _Str1, char* _Str2)
+{
+    std::uint16_t uVar1;
+    std::uint32_t uVar2;
+    std::uint8_t bVar3;
+    std::uint8_t bVar4;
+    bool bVar5;
+
+    if ((reinterpret_cast<std::uintptr_t>(_Str1) & 3u) != 0) {
+        if ((reinterpret_cast<std::uintptr_t>(_Str1) & 1u) != 0) {
+            bVar4 = static_cast<std::uint8_t>(*_Str1);
+            _Str1 = _Str1 + 1;
+            bVar5 = bVar4 < static_cast<std::uint8_t>(*_Str2);
+
+            if (bVar4 != static_cast<std::uint8_t>(*_Str2)) {
+                goto LAB_10013b94;
+            }
+
+            _Str2 = _Str2 + 1;
+
+            if (bVar4 == 0) {
+                return 0;
+            }
+
+            if ((reinterpret_cast<std::uintptr_t>(_Str1) & 2u) == 0) {
+                goto LAB_10013b60;
+            }
+        }
+
+        uVar1 = *reinterpret_cast<std::uint16_t*>(_Str1);
+        _Str1 = _Str1 + 2;
+
+        bVar4 = static_cast<std::uint8_t>(uVar1);
+        bVar5 = bVar4 < static_cast<std::uint8_t>(*_Str2);
+
+        if (bVar4 != static_cast<std::uint8_t>(*_Str2)) {
+            goto LAB_10013b94;
+        }
+
+        if (bVar4 == 0) {
+            return 0;
+        }
+
+        bVar4 = static_cast<std::uint8_t>(uVar1 >> 8);
+        bVar5 = bVar4 < static_cast<std::uint8_t>(_Str2[1]);
+
+        if (bVar4 != static_cast<std::uint8_t>(_Str2[1])) {
+            goto LAB_10013b94;
+        }
+
+        if (bVar4 == 0) {
+            return 0;
+        }
+
+        _Str2 = _Str2 + 2;
+    }
+
+LAB_10013b60:
+    while (true) {
+        uVar2 = *reinterpret_cast<std::uint32_t*>(_Str1);
+
+        bVar4 = static_cast<std::uint8_t>(uVar2);
+        bVar5 = bVar4 < static_cast<std::uint8_t>(*_Str2);
+
+        if (bVar4 != static_cast<std::uint8_t>(*_Str2)) {
+            break;
+        }
+
+        if (bVar4 == 0) {
+            return 0;
+        }
+
+        bVar4 = static_cast<std::uint8_t>(uVar2 >> 8);
+        bVar5 = bVar4 < static_cast<std::uint8_t>(_Str2[1]);
+
+        if (bVar4 != static_cast<std::uint8_t>(_Str2[1])) {
+            break;
+        }
+
+        if (bVar4 == 0) {
+            return 0;
+        }
+
+        bVar4 = static_cast<std::uint8_t>(uVar2 >> 0x10);
+        bVar5 = bVar4 < static_cast<std::uint8_t>(_Str2[2]);
+
+        if (bVar4 != static_cast<std::uint8_t>(_Str2[2])) {
+            break;
+        }
+
+        bVar3 = static_cast<std::uint8_t>(uVar2 >> 0x18);
+
+        if (bVar4 == 0) {
+            return 0;
+        }
+
+        bVar5 = bVar3 < static_cast<std::uint8_t>(_Str2[3]);
+
+        if (bVar3 != static_cast<std::uint8_t>(_Str2[3])) {
+            break;
+        }
+
+        _Str2 = _Str2 + 4;
+        _Str1 = _Str1 + 4;
+
+        if (bVar3 == 0) {
+            return 0;
+        }
+    }
+
+LAB_10013b94:
+    return static_cast<int>(static_cast<unsigned int>(bVar5) * -2 + 1);
+}

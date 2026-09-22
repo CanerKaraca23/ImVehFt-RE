@@ -1,1 +1,11 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl __cropzeros_l(char* _Buf, _locale_t _Locale);`n`nextern "C" void __cdecl __cropzeros(char* _Buf)`n{`n    __cropzeros_l(_Buf, (_locale_t)0x0);`n    return;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __cdecl __cropzeros_l(char* _Buf, _locale_t _Locale);
+
+void __cdecl __cropzeros(char* _Buf)
+{
+    __cropzeros_l(_Buf, (_locale_t)0x0);
+    return;
+}

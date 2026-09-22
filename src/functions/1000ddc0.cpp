@@ -1,1 +1,47 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c39c;`n`nusing Callback = void(__cdecl*)();`nusing ReturnCallback = std::uint32_t(__cdecl*)();`n`nstd::uint32_t __stdcall FUN_1000ddc0()`n{`n    const std::uintptr_t base = DAT_1003c39c;`n`n    auto* end = *reinterpret_cast<Callback**>(base + 0x1c);`n`n    for (auto* current = *reinterpret_cast<Callback**>(base + 0x18);`n         current != end;`n         ++current)`n    {`n        if (*current != nullptr)`n        {`n            (*current)();`n        }`n    }`n`n    std::uint32_t result = 0;`n`n    const ReturnCallback callback =`n        *reinterpret_cast<ReturnCallback*>(base + 0x14);`n`n    if (callback != nullptr)`n    {`n        result = callback();`n    }`n`n    end = *reinterpret_cast<Callback**>(base + 0x2c);`n`n    for (auto* current = *reinterpret_cast<Callback**>(base + 0x28);`n         current != end;`n         ++current)`n    {`n        if (*current != nullptr)`n        {`n            (*current)();`n        }`n    }`n`n    return result;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c39c;
+
+using Callback = void(__cdecl*)();
+using ReturnCallback = std::uint32_t(__cdecl*)();
+
+std::uint32_t __stdcall FUN_1000ddc0()
+{
+    const std::uintptr_t base = DAT_1003c39c;
+
+    auto* end = *reinterpret_cast<Callback**>(base + 0x1c);
+
+    for (auto* current = *reinterpret_cast<Callback**>(base + 0x18);
+         current != end;
+         ++current)
+    {
+        if (*current != nullptr)
+        {
+            (*current)();
+        }
+    }
+
+    std::uint32_t result = 0;
+
+    const ReturnCallback callback =
+        *reinterpret_cast<ReturnCallback*>(base + 0x14);
+
+    if (callback != nullptr)
+    {
+        result = callback();
+    }
+
+    end = *reinterpret_cast<Callback**>(base + 0x2c);
+
+    for (auto* current = *reinterpret_cast<Callback**>(base + 0x28);
+         current != end;
+         ++current)
+    {
+        if (*current != nullptr)
+        {
+            (*current)();
+        }
+    }
+
+    return result;
+}

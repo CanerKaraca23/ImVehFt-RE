@@ -1,1 +1,187 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nusing PVOID = void*;`nusing PBYTE = std::uint8_t*;`nusing BOOL = int;`n`nstruct EXCEPTION_RECORD`n{`n    std::uint32_t ExceptionCode;`n    std::uint32_t ExceptionFlags;`n};`n`nusing PEXCEPTION_RECORD = EXCEPTION_RECORD*;`n`nstruct EH4LocalState`n{`n    PEXCEPTION_RECORD exception_record;`n    std::uint32_t exception_context;`n};`n`nstruct EH4ExceptionFrame`n{`n    EH4LocalState* saved_exception_state; // param_2 - 0x04`n    std::uint32_t reserved_00;            // param_2 + 0x00`n    std::uint32_t reserved_04;            // param_2 + 0x04`n    std::uint32_t scope_cookie;           // param_2 + 0x08`n    PVOID try_level;                      // param_2 + 0x0c`n    std::uint32_t unwind_target;          // param_2 + 0x10`n};`n`nstatic_assert(offsetof(EH4ExceptionFrame, saved_exception_state) == 0x00);`nstatic_assert(offsetof(EH4ExceptionFrame, scope_cookie) == 0x0c);`nstatic_assert(offsetof(EH4ExceptionFrame, try_level) == 0x10);`nstatic_assert(offsetof(EH4ExceptionFrame, unwind_target) == 0x14);`n`nextern "C" std::uint32_t DAT_10029490;`n`nextern "C" void (*PTR____DestructExceptionObject)(`n    PEXCEPTION_RECORD,`n    int,`n    std::uint32_t);`n`nextern "C" void __fastcall __security_check_cookie(std::uintptr_t);`nextern "C" int __fastcall _EH4_CallFilterFunc(void*, void*);`nextern "C" BOOL __cdecl __IsNonwritableInCurrentImage(PBYTE);`nextern "C" void __fastcall _EH4_GlobalUnwind2(`n    PVOID,`n    PEXCEPTION_RECORD);`nextern "C" void __fastcall _EH4_LocalUnwind(`n    int,`n    std::uint32_t,`n    int,`n    std::uint32_t*);`nextern "C" void __fastcall _EH4_TransferToHandler(void*, void*);`n`nextern "C" std::uint32_t __cdecl __except_handler4(`n    PEXCEPTION_RECORD param_1,`n    PVOID param_2,`n    std::uint32_t param_3)`n{`n    auto* frame = reinterpret_cast<EH4ExceptionFrame*>(`n        reinterpret_cast<std::uintptr_t>(param_2) - 0x04u);`n`n    const std::uint32_t encoded_cookie =`n        frame->scope_cookie ^ DAT_10029490;`n`n    EH4LocalState local_state{};`n    std::uint8_t local_cookie = 0;`n    std::uint32_t return_value = 1;`n    const std::uint32_t handler_address = 0x10012ed9u;`n`n    PVOID matched_scope_level = param_2;`n`n    if ((param_1->ExceptionFlags & 0x66u) == 0)`n    {`n        frame->saved_exception_state = &local_state;`n`n        PVOID next_scope_level = frame->try_level;`n`n        local_state.exception_record = param_1;`n        local_state.exception_context = param_3;`n`n        std::uint32_t* scope_record = nullptr;`n`n        for (;;)`n        {`n            void* filter = nullptr;`n`n            do`n            {`n                matched_scope_level = next_scope_level;`n`n                if (matched_scope_level ==`n                    reinterpret_cast<PVOID>(`n                        static_cast<std::uintptr_t>(0xfffffffeu)))`n                {`n                    __security_check_cookie(encoded_cookie);`n                    return return_value;`n                }`n`n                const auto scope_level =`n                    static_cast<std::int32_t>(`n                        reinterpret_cast<std::intptr_t>(`n                            matched_scope_level));`n`n                scope_record =`n                    reinterpret_cast<std::uint32_t*>(`n                        static_cast<std::uintptr_t>(encoded_cookie) +`n                        static_cast<std::intptr_t>(`n                            (scope_level * 3 + 4) * 4));`n`n                filter = reinterpret_cast<void*>(`n                    static_cast<std::uintptr_t>(scope_record[1]));`n`n                next_scope_level = reinterpret_cast<PVOID>(`n                    static_cast<std::uintptr_t>(scope_record[0]));`n            }`n            while (filter == nullptr);`n`n            const int filter_result =`n                _EH4_CallFilterFunc(filter, reinterpret_cast<void*>(reinterpret_cast<std::uintptr_t>(param_2) + 0x10u));`n`n            local_cookie = 1;`n`n            if (filter_result < 0)`n            {`n                __security_check_cookie(encoded_cookie);`n                return 0;`n            }`n`n            if (filter_result >= 1)`n                break;`n        }`n`n        if ((param_1->ExceptionCode == 0xe06d7363u) &&`n            (PTR____DestructExceptionObject != nullptr) &&`n            (__IsNonwritableInCurrentImage(`n                 reinterpret_cast<PBYTE>(`n                     &PTR____DestructExceptionObject)) != 0))`n        {`n            PTR____DestructExceptionObject(`n                param_1,`n                1,`n                handler_address);`n        }`n`n        _EH4_GlobalUnwind2(param_2, param_1);`n`n        if (frame->try_level != matched_scope_level)`n        {`n            _EH4_LocalUnwind(`n                static_cast<int>(`n                    reinterpret_cast<std::uintptr_t>(param_2)),`n                static_cast<std::uint32_t>(`n                    reinterpret_cast<std::uintptr_t>(`n                        matched_scope_level)),`n                static_cast<int>(`n                    reinterpret_cast<std::uintptr_t>(param_2) + 0x10u),`n                &DAT_10029490);`n        }`n`n        frame->try_level = next_scope_level;`n`n        _EH4_TransferToHandler(`n            reinterpret_cast<void*>(`n                static_cast<std::uintptr_t>(`n                    scope_record[2])),`n            reinterpret_cast<void*>(reinterpret_cast<std::uintptr_t>(param_2) + 0x10u));`n    }`n`n    if (*reinterpret_cast<std::int32_t*>(`n            reinterpret_cast<std::uintptr_t>(`n                matched_scope_level) + 0x0cu) != -2)`n    {`n        _EH4_LocalUnwind(`n            static_cast<int>(`n                reinterpret_cast<std::uintptr_t>(`n                    matched_scope_level)),`n            0xfffffffeu,`n            static_cast<int>(`n                reinterpret_cast<std::uintptr_t>(param_2) + 0x10u),`n            &DAT_10029490);`n    }`n`n    __security_check_cookie(encoded_cookie);`n    return return_value;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+using PVOID = void*;
+using PBYTE = std::uint8_t*;
+using BOOL = int;
+
+struct EXCEPTION_RECORD
+{
+    std::uint32_t ExceptionCode;
+    std::uint32_t ExceptionFlags;
+};
+
+using PEXCEPTION_RECORD = EXCEPTION_RECORD*;
+
+struct EH4LocalState
+{
+    PEXCEPTION_RECORD exception_record;
+    std::uint32_t exception_context;
+};
+
+struct EH4ExceptionFrame
+{
+    EH4LocalState* saved_exception_state; // param_2 - 0x04
+    std::uint32_t reserved_00;            // param_2 + 0x00
+    std::uint32_t reserved_04;            // param_2 + 0x04
+    std::uint32_t scope_cookie;           // param_2 + 0x08
+    PVOID try_level;                      // param_2 + 0x0c
+    std::uint32_t unwind_target;          // param_2 + 0x10
+};
+
+static_assert(offsetof(EH4ExceptionFrame, saved_exception_state) == 0x00);
+static_assert(offsetof(EH4ExceptionFrame, scope_cookie) == 0x0c);
+static_assert(offsetof(EH4ExceptionFrame, try_level) == 0x10);
+static_assert(offsetof(EH4ExceptionFrame, unwind_target) == 0x14);
+
+extern "C" std::uint32_t DAT_10029490;
+
+extern "C" void (*PTR____DestructExceptionObject)(
+    PEXCEPTION_RECORD,
+    int,
+    std::uint32_t);
+
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
+extern "C" int __fastcall _EH4_CallFilterFunc(void*);
+extern "C" BOOL __cdecl __IsNonwritableInCurrentImage(PBYTE);
+extern "C" void __fastcall _EH4_GlobalUnwind2(
+    PVOID,
+    PEXCEPTION_RECORD);
+extern "C" void __fastcall _EH4_LocalUnwind(
+    int,
+    std::uint32_t,
+    int,
+    std::uint32_t*);
+extern "C" void __fastcall _EH4_TransferToHandler(void*);
+
+extern "C" std::uint32_t __cdecl __except_handler4(
+    PEXCEPTION_RECORD param_1,
+    PVOID param_2,
+    std::uint32_t param_3)
+{
+    auto* frame = reinterpret_cast<EH4ExceptionFrame*>(
+        reinterpret_cast<std::uintptr_t>(param_2) - 0x04u);
+
+    const std::uint32_t encoded_cookie =
+        frame->scope_cookie ^ DAT_10029490;
+
+    EH4LocalState local_state{};
+    std::uint8_t local_cookie = 0;
+    std::uint32_t return_value = 1;
+    const std::uint32_t handler_address = 0x10012ed9u;
+
+    PVOID matched_scope_level = param_2;
+
+    if ((param_1->ExceptionFlags & 0x66u) == 0)
+    {
+        frame->saved_exception_state = &local_state;
+
+        PVOID next_scope_level = frame->try_level;
+
+        local_state.exception_record = param_1;
+        local_state.exception_context = param_3;
+
+        std::uint32_t* scope_record = nullptr;
+
+        for (;;)
+        {
+            void* filter = nullptr;
+
+            do
+            {
+                matched_scope_level = next_scope_level;
+
+                if (matched_scope_level ==
+                    reinterpret_cast<PVOID>(
+                        static_cast<std::uintptr_t>(0xfffffffeu)))
+                {
+                    __security_check_cookie(encoded_cookie);
+                    return return_value;
+                }
+
+                const auto scope_level =
+                    static_cast<std::int32_t>(
+                        reinterpret_cast<std::intptr_t>(
+                            matched_scope_level));
+
+                scope_record =
+                    reinterpret_cast<std::uint32_t*>(
+                        static_cast<std::uintptr_t>(encoded_cookie) +
+                        static_cast<std::intptr_t>(
+                            (scope_level * 3 + 4) * 4));
+
+                filter = reinterpret_cast<void*>(
+                    static_cast<std::uintptr_t>(scope_record[1]));
+
+                next_scope_level = reinterpret_cast<PVOID>(
+                    static_cast<std::uintptr_t>(scope_record[0]));
+            }
+            while (filter == nullptr);
+
+            const int filter_result =
+                _EH4_CallFilterFunc(filter);
+
+            local_cookie = 1;
+
+            if (filter_result < 0)
+            {
+                __security_check_cookie(encoded_cookie);
+                return 0;
+            }
+
+            if (filter_result >= 1)
+                break;
+        }
+
+        if ((param_1->ExceptionCode == 0xe06d7363u) &&
+            (PTR____DestructExceptionObject != nullptr) &&
+            (__IsNonwritableInCurrentImage(
+                 reinterpret_cast<PBYTE>(
+                     &PTR____DestructExceptionObject)) != 0))
+        {
+            PTR____DestructExceptionObject(
+                param_1,
+                1,
+                handler_address);
+        }
+
+        _EH4_GlobalUnwind2(param_2, param_1);
+
+        if (frame->try_level != matched_scope_level)
+        {
+            _EH4_LocalUnwind(
+                static_cast<int>(
+                    reinterpret_cast<std::uintptr_t>(param_2)),
+                static_cast<std::uint32_t>(
+                    reinterpret_cast<std::uintptr_t>(
+                        matched_scope_level)),
+                static_cast<int>(
+                    reinterpret_cast<std::uintptr_t>(param_2) + 0x10u),
+                &DAT_10029490);
+        }
+
+        frame->try_level = next_scope_level;
+
+        _EH4_TransferToHandler(
+            reinterpret_cast<void*>(
+                static_cast<std::uintptr_t>(
+                    scope_record[2])));
+    }
+
+    if (*reinterpret_cast<std::int32_t*>(
+            reinterpret_cast<std::uintptr_t>(
+                matched_scope_level) + 0x0cu) != -2)
+    {
+        _EH4_LocalUnwind(
+            static_cast<int>(
+                reinterpret_cast<std::uintptr_t>(
+                    matched_scope_level)),
+            0xfffffffeu,
+            static_cast<int>(
+                reinterpret_cast<std::uintptr_t>(param_2) + 0x10u),
+            &DAT_10029490);
+    }
+
+    __security_check_cookie(encoded_cookie);
+    return return_value;
+}

@@ -1,1 +1,61 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t _DAT_00c1703c;`nextern std::int32_t __stdcall FUN_10009360();`n`nvoid __stdcall FUN_10009a80(void)`n{`n    const std::int32_t state = FUN_10009360();`n`n    const auto global_base =`n        static_cast<std::uintptr_t>(_DAT_00c1703c);`n`n    const std::int32_t object =`n        *reinterpret_cast<std::int32_t*>(global_base + 0x60);`n`n    const std::int32_t value_14 =`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(object) + 0x14);`n    const std::int32_t value_0c =`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(object) + 0x0c);`n    const std::int32_t value_10 =`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(object) + 0x10);`n`n    const std::int32_t existing =`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(state) + 0x0c);`n`n    if (existing != 0)`n    {`n        if (*reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(existing) + 0x0c) == value_0c &&`n            *reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(existing) + 0x10) == value_10 &&`n            *reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(existing) + 0x14) == value_14)`n        {`n            return;`n        }`n`n        reinterpret_cast<void(__cdecl*)(std::int32_t)>(`n            0x007FB020)(existing);`n`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(state) + 0x0c) = 0;`n    }`n`n    *reinterpret_cast<std::int32_t*>(`n        static_cast<std::uintptr_t>(state) + 0x0c) =`n        static_cast<std::int32_t>(`n            reinterpret_cast<std::uint32_t(__cdecl*)(`n                std::int32_t,`n                std::int32_t,`n                std::int32_t,`n                std::int32_t)>(0x007FB230)(`n                    value_0c,`n                    value_10,`n                    value_14,`n                    5));`n}`n
+#include <cstdint>
+
+extern std::uint32_t _DAT_00c1703c;
+extern "C" std::int32_t __stdcall FUN_10009360();
+
+void __stdcall FUN_10009a80(void)
+{
+    const std::int32_t state = FUN_10009360();
+
+    const auto global_base =
+        static_cast<std::uintptr_t>(_DAT_00c1703c);
+
+    const std::int32_t object =
+        *reinterpret_cast<std::int32_t*>(global_base + 0x60);
+
+    const std::int32_t value_14 =
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(object) + 0x14);
+    const std::int32_t value_0c =
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(object) + 0x0c);
+    const std::int32_t value_10 =
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(object) + 0x10);
+
+    const std::int32_t existing =
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(state) + 0x0c);
+
+    if (existing != 0)
+    {
+        if (*reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(existing) + 0x0c) == value_0c &&
+            *reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(existing) + 0x10) == value_10 &&
+            *reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(existing) + 0x14) == value_14)
+        {
+            return;
+        }
+
+        reinterpret_cast<void(__cdecl*)(std::int32_t)>(
+            0x007FB020)(existing);
+
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(state) + 0x0c) = 0;
+    }
+
+    *reinterpret_cast<std::int32_t*>(
+        static_cast<std::uintptr_t>(state) + 0x0c) =
+        static_cast<std::int32_t>(
+            reinterpret_cast<std::uint32_t(__cdecl*)(
+                std::int32_t,
+                std::int32_t,
+                std::int32_t,
+                std::int32_t)>(0x007FB230)(
+                    value_0c,
+                    value_10,
+                    value_14,
+                    5));
+}

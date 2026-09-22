@@ -1,1 +1,83 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" std::uint32_t DAT_1003d550;`nextern "C" std::uint32_t DAT_10039b8c;`nextern "C" char DAT_10039a88[0x104];`nextern "C" char* _DAT_10039a2c;`nextern "C" char* DAT_1003d558;`nextern "C" std::uint32_t _DAT_10039a10;`nextern "C" std::uint32_t* _DAT_10039a14;`n`nextern "C" void __stdcall ___initmbctable(void);`n`nvoid __cdecl parse_cmdline(`n    std::uint8_t** argv,`n    std::uint8_t* output_buffer,`n    int* string_size);`n`n// Ghidra shows the fourth logical input in EDX and the argc destination in EDI;`n// the actual callee has three cdecl stack parameters.`nstatic __declspec(naked) void __cdecl call_parse_cmdline_register_abi(`n    std::uint8_t**,`n    std::uint8_t*,`n    int*,`n    int*,`n    std::uint8_t*)`n{`n    __asm {`n        push ebp`n        mov ebp, esp`n        push edi`n        mov edi, dword ptr [ebp + 14h]`n        mov edx, dword ptr [ebp + 18h]`n        push dword ptr [ebp + 10h]`n        push dword ptr [ebp + 0ch]`n        push dword ptr [ebp + 08h]`n        call parse_cmdline`n        add esp, 0ch`n        pop edi`n        mov esp, ebp`n        pop ebp`n        ret`n    }`n}`n`nextern "C" void* __cdecl __malloc_crt(std::size_t size);`n`nextern "C" unsigned long __stdcall GetModuleFileNameA(`n    void* module,`n    char* filename,`n    unsigned long size);`n`nextern "C" int __cdecl __setargv(void)`n{`n    std::uint32_t size;`n    std::uint32_t argc;`n    std::uint32_t* argv;`n    std::uint32_t string_size;`n    char* command_line;`n`n    if (DAT_1003d550 == 0)`n    {`n        ___initmbctable();`n    }`n`n    DAT_10039b8c = 0;`n`n    GetModuleFileNameA(nullptr, DAT_10039a88, 0x104);`n`n    _DAT_10039a2c = DAT_10039a88;`n`n    if (DAT_1003d558 == nullptr || *DAT_1003d558 == '\0')`n    {`n        command_line = DAT_10039a88;`n    }`n    else`n    {`n        command_line = DAT_1003d558;`n    }`n`n    call_parse_cmdline_register_abi(`n        nullptr,`n        nullptr,`n        reinterpret_cast<int*>(&string_size),`n        reinterpret_cast<int*>(&argc),`n        reinterpret_cast<std::uint8_t*>(command_line));`n`n    size = string_size;`n`n    if (argc < 0x3fffffff && string_size != 0xffffffffu)`n    {`n        size = argc * 4 + string_size;`n`n        if (string_size <= size &&`n            (argv = static_cast<std::uint32_t*>(__malloc_crt(size))) != nullptr)`n        {`n            call_parse_cmdline_register_abi(`n                reinterpret_cast<std::uint8_t**>(argv),`n                reinterpret_cast<std::uint8_t*>(argv + argc),`n                reinterpret_cast<int*>(&string_size),`n                reinterpret_cast<int*>(&argc),`n                reinterpret_cast<std::uint8_t*>(command_line));`n`n            _DAT_10039a10 = argc - 1;`n            _DAT_10039a14 = argv;`n            return 0;`n        }`n    }`n`n    return -1;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" std::uint32_t DAT_1003d550;
+extern "C" std::uint32_t DAT_10039b8c;
+extern "C" char DAT_10039a88[0x104];
+extern "C" char* _DAT_10039a2c;
+extern "C" char* DAT_1003d558;
+extern "C" std::uint32_t _DAT_10039a10;
+extern "C" std::uint32_t* _DAT_10039a14;
+
+extern "C" void __stdcall ___initmbctable(void);
+
+extern "C" void __cdecl parse_cmdline(
+    std::uint32_t* argv,
+    std::uint8_t* command_line,
+    int* argc,
+    std::uint32_t* string_size);
+
+extern "C" void* __cdecl __malloc_crt(std::size_t size);
+
+extern "C" unsigned long __stdcall GetModuleFileNameA(
+    void* module,
+    char* filename,
+    unsigned long size);
+
+extern "C" int __cdecl __setargv(void)
+{
+    std::uint32_t size;
+    std::uint32_t argc;
+    std::uint32_t* argv;
+    std::uint32_t string_size;
+    char* command_line;
+
+    if (DAT_1003d550 == 0)
+    {
+        ___initmbctable();
+    }
+
+    DAT_10039b8c = 0;
+
+    GetModuleFileNameA(nullptr, DAT_10039a88, 0x104);
+
+    _DAT_10039a2c = DAT_10039a88;
+
+    if (DAT_1003d558 == nullptr || *DAT_1003d558 == '\0')
+    {
+        command_line = DAT_10039a88;
+    }
+    else
+    {
+        command_line = DAT_1003d558;
+    }
+
+    parse_cmdline(
+        nullptr,
+        reinterpret_cast<std::uint8_t*>(command_line),
+        reinterpret_cast<int*>(&argc),
+        &string_size);
+
+    size = string_size;
+
+    if (argc < 0x3fffffff && string_size != 0xffffffffu)
+    {
+        size = argc * 4 + string_size;
+
+        if (string_size <= size &&
+            (argv = static_cast<std::uint32_t*>(__malloc_crt(size))) != nullptr)
+        {
+            parse_cmdline(
+                argv,
+                reinterpret_cast<std::uint8_t*>(argv + argc),
+                reinterpret_cast<int*>(&argc),
+                &string_size);
+
+            _DAT_10039a10 = argc - 1;
+            _DAT_10039a14 = argv;
+            return 0;
+        }
+    }
+
+    return -1;
+}

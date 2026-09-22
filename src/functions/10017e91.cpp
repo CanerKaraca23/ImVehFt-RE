@@ -1,1 +1,43 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t DAT_1002280c;`n`n#if !defined(_MSC_VER) || !defined(_M_IX86)`n#error "siglookup requires the original 32-bit MSVC x86 ABI with incoming EDX"`n#endif`n`nextern "C" std::uint32_t __cdecl siglookup(std::uint32_t param_1)`n{`n    std::uint32_t edx_value;`n`n    __asm`n    {`n        mov edx_value, edx`n    }`n`n    std::uint32_t current = param_1;`n    const std::uint32_t end = DAT_1002280c * 0xC + param_1;`n`n    do`n    {`n        if (*reinterpret_cast<std::int32_t*>(`n                static_cast<std::uintptr_t>(current) + 4u) ==`n            static_cast<std::int32_t>(edx_value))`n        {`n            break;`n        }`n`n        current += 0xC;`n    }`n    while (current < end);`n`n    if (end <= current ||`n        *reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(current) + 4u) !=`n        static_cast<std::int32_t>(edx_value))`n    {`n        current = 0;`n    }`n`n    return current;`n}`n
+#include <cstdint>
+
+extern "C" std::uint32_t DAT_1002280c;
+
+#if !defined(_MSC_VER) || !defined(_M_IX86)
+#error "siglookup requires the original 32-bit MSVC x86 ABI with incoming EDX"
+#endif
+
+extern "C" std::uint32_t __cdecl siglookup(std::uint32_t param_1)
+{
+    std::uint32_t edx_value;
+
+    __asm
+    {
+        mov edx_value, edx
+    }
+
+    std::uint32_t current = param_1;
+    const std::uint32_t end = DAT_1002280c * 0xC + param_1;
+
+    do
+    {
+        if (*reinterpret_cast<std::int32_t*>(
+                static_cast<std::uintptr_t>(current) + 4u) ==
+            static_cast<std::int32_t>(edx_value))
+        {
+            break;
+        }
+
+        current += 0xC;
+    }
+    while (current < end);
+
+    if (end <= current ||
+        *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(current) + 4u) !=
+        static_cast<std::int32_t>(edx_value))
+    {
+        current = 0;
+    }
+
+    return current;
+}

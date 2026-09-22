@@ -1,1 +1,67 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n#include <new>`n`nstruct pthreadlocinfo;`nstruct pthreadmbcinfo;`n`nstruct localeinfo_struct`n{`n    pthreadlocinfo* locinfo;`n    pthreadmbcinfo* mbcinfo;`n};`n`nstruct _ptiddata`n{`n    std::uint8_t reserved_00[0x68];`n    pthreadmbcinfo* ptmbcinfo;`n    pthreadlocinfo* ptlocinfo;`n    std::uint32_t ownlocale;`n};`n`nstruct _LocaleUpdate`n{`n    pthreadlocinfo* locinfo;`n    pthreadmbcinfo* mbcinfo;`n    _ptiddata* ptd;`n    std::uint8_t updated;`n    _LocaleUpdate(localeinfo_struct* locale);`n};`n`nextern "C" int __cdecl __isctype_l(`n    int c,`n    int mask,`n    localeinfo_struct* locale_info);`n`nextern "C" int __cdecl __isdigit_l(int c, void* locale)`n{`n    alignas(_LocaleUpdate) std::uint8_t local_storage[sizeof(_LocaleUpdate)];`n    auto* local = reinterpret_cast<_LocaleUpdate*>(local_storage);`n    ::new (static_cast<void*>(local)) _LocaleUpdate(`n        reinterpret_cast<localeinfo_struct*>(locale));`n`n    const auto locinfo = reinterpret_cast<std::uintptr_t>(local->locinfo);`n    const auto locale_name_length = *reinterpret_cast<const std::int32_t*>(`n        locinfo + 0xac);`n`n    std::uint32_t result;`n    if (locale_name_length <= 1)`n    {`n        const auto ctype_table = *reinterpret_cast<const std::uintptr_t*>(`n            locinfo + 0xc8);`n        result = *reinterpret_cast<const std::uint16_t*>(`n            ctype_table + static_cast<std::intptr_t>(c) * 2) & 4U;`n    }`n    else`n    {`n        result = static_cast<std::uint32_t>(`n            __isctype_l(c, 4, reinterpret_cast<localeinfo_struct*>(local)));`n    }`n`n    if (local->updated != 0)`n    {`n        local->ptd->ownlocale &= ~2U;`n    }`n`n    return static_cast<int>(result);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <new>
+
+struct pthreadlocinfo;
+struct pthreadmbcinfo;
+
+struct localeinfo_struct
+{
+    pthreadlocinfo* locinfo;
+    pthreadmbcinfo* mbcinfo;
+};
+
+struct _ptiddata
+{
+    std::uint8_t reserved_00[0x68];
+    pthreadmbcinfo* ptmbcinfo;
+    pthreadlocinfo* ptlocinfo;
+    std::uint32_t ownlocale;
+};
+
+struct _LocaleUpdate
+{
+    pthreadlocinfo* locinfo;
+    pthreadmbcinfo* mbcinfo;
+    _ptiddata* ptd;
+    std::uint8_t updated;
+    _LocaleUpdate(localeinfo_struct* locale);
+};
+
+extern "C" int __cdecl __isctype_l(
+    int c,
+    int mask,
+    localeinfo_struct* locale_info);
+
+extern "C" int __cdecl __isdigit_l(int c, void* locale)
+{
+    alignas(_LocaleUpdate) std::uint8_t local_storage[sizeof(_LocaleUpdate)];
+    auto* local = reinterpret_cast<_LocaleUpdate*>(local_storage);
+    ::new (static_cast<void*>(local)) _LocaleUpdate(
+        reinterpret_cast<localeinfo_struct*>(locale));
+
+    const auto locinfo = reinterpret_cast<std::uintptr_t>(local->locinfo);
+    const auto locale_name_length = *reinterpret_cast<const std::int32_t*>(
+        locinfo + 0xac);
+
+    std::uint32_t result;
+    if (locale_name_length <= 1)
+    {
+        const auto ctype_table = *reinterpret_cast<const std::uintptr_t*>(
+            locinfo + 0xc8);
+        result = *reinterpret_cast<const std::uint16_t*>(
+            ctype_table + static_cast<std::intptr_t>(c) * 2) & 4U;
+    }
+    else
+    {
+        result = static_cast<std::uint32_t>(
+            __isctype_l(c, 4, reinterpret_cast<localeinfo_struct*>(local)));
+    }
+
+    if (local->updated != 0)
+    {
+        local->ptd->ownlocale &= ~2U;
+    }
+
+    return static_cast<int>(result);
+}

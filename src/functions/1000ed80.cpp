@@ -1,1 +1,62 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c3c0;`n`nstd::uint32_t __stdcall FUN_1000ed80()`n{`n    using Callback = void(__cdecl*)();`n    using ReturnCallback = std::uint32_t(__cdecl*)();`n`n    struct GlobalState`n    {`n        std::uint8_t field_00[0x08];`n        std::uint32_t field_08;`n        std::uint8_t field_0C[0x0C];`n        std::uint32_t* field_18;`n        std::uint32_t* field_1C;`n        std::uint8_t field_20[0x08];`n        std::uint32_t* field_28;`n        std::uint32_t* field_2C;`n    };`n`n    const std::uint32_t stateAddress = DAT_1003c3c0;`n    auto* state = reinterpret_cast<GlobalState*>(`n        static_cast<std::uintptr_t>(stateAddress));`n`n    std::uint32_t* firstEnd = state->field_1C;`n`n    for (std::uint32_t* current = state->field_18;`n         current != firstEnd;`n         current += 1)`n    {`n        if (*current != 0U)`n        {`n            reinterpret_cast<Callback>(*current)();`n        }`n    }`n`n    std::uint32_t result;`n`n    if (state->field_08 == 0U)`n    {`n        result = 0U;`n    }`n    else`n    {`n        result = reinterpret_cast<ReturnCallback>(state->field_08)();`n    }`n`n    std::uint32_t* secondEnd = state->field_2C;`n`n    for (std::uint32_t* current = state->field_28;`n         current != secondEnd;`n         current += 1)`n    {`n        if (*current != 0U)`n        {`n            reinterpret_cast<Callback>(*current)();`n        }`n    }`n`n    return result;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c3c0;
+
+std::uint32_t __stdcall FUN_1000ed80()
+{
+    using Callback = void(__cdecl*)();
+    using ReturnCallback = std::uint32_t(__cdecl*)();
+
+    struct GlobalState
+    {
+        std::uint8_t field_00[0x08];
+        std::uint32_t field_08;
+        std::uint8_t field_0C[0x0C];
+        std::uint32_t* field_18;
+        std::uint32_t* field_1C;
+        std::uint8_t field_20[0x08];
+        std::uint32_t* field_28;
+        std::uint32_t* field_2C;
+    };
+
+    const std::uint32_t stateAddress = DAT_1003c3c0;
+    auto* state = reinterpret_cast<GlobalState*>(
+        static_cast<std::uintptr_t>(stateAddress));
+
+    std::uint32_t* firstEnd = state->field_1C;
+
+    for (std::uint32_t* current = state->field_18;
+         current != firstEnd;
+         current += 1)
+    {
+        if (*current != 0U)
+        {
+            reinterpret_cast<Callback>(*current)();
+        }
+    }
+
+    std::uint32_t result;
+
+    if (state->field_08 == 0U)
+    {
+        result = 0U;
+    }
+    else
+    {
+        result = reinterpret_cast<ReturnCallback>(state->field_08)();
+    }
+
+    std::uint32_t* secondEnd = state->field_2C;
+
+    for (std::uint32_t* current = state->field_28;
+         current != secondEnd;
+         current += 1)
+    {
+        if (*current != 0U)
+        {
+            reinterpret_cast<Callback>(*current)();
+        }
+    }
+
+    return result;
+}

@@ -1,1 +1,84 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n`nextern "C" void* DAT_10039b90;`nextern "C" std::uint32_t DAT_1003a1c4;`n`nextern "C" void* __cdecl _malloc(std::size_t _Size);`nextern "C" void __cdecl _free(void* _Memory);`nextern "C" int __cdecl __callnewh(std::size_t _Size);`nextern "C" int* __cdecl __errno();`nextern "C" int __cdecl __get_errno_from_oserr(std::uint32_t _OSError);`n`nextern "C" void* __stdcall HeapReAlloc(`n    void* _Heap,`n    std::uint32_t _Flags,`n    void* _Memory,`n    std::size_t _Size);`n`nextern "C" std::uint32_t __stdcall GetLastError();`n`nextern "C" void* __cdecl _realloc(void* _Memory, std::size_t _NewSize)`n{`n    if (_Memory == nullptr)`n    {`n        return _malloc(_NewSize);`n    }`n`n    if (_NewSize == 0)`n    {`n        _free(_Memory);`n    }`n    else`n    {`n        do`n        {`n            if (0xffffffe0u < _NewSize)`n            {`n                __callnewh(_NewSize);`n`n                int* piVar4 = __errno();`n                *piVar4 = 0x0c;`n                return nullptr;`n            }`n`n            if (_NewSize == 0)`n            {`n                _NewSize = 1;`n            }`n`n            void* pvVar2 = HeapReAlloc(`n                DAT_10039b90,`n                0,`n                _Memory,`n                _NewSize);`n`n            if (pvVar2 != nullptr)`n            {`n                return pvVar2;`n            }`n`n            if (DAT_1003a1c4 == 0)`n            {`n                int* piVar4 = __errno();`n                std::uint32_t DVar5 = GetLastError();`n                int iVar3 = __get_errno_from_oserr(DVar5);`n                *piVar4 = iVar3;`n                return nullptr;`n            }`n`n            int iVar3 = __callnewh(_NewSize);`n            if (iVar3 != 0)`n            {`n                continue;`n            }`n`n            int* piVar4 = __errno();`n            std::uint32_t DVar5 = GetLastError();`n            iVar3 = __get_errno_from_oserr(DVar5);`n            *piVar4 = iVar3;`n        } while (false);`n    }`n`n    return nullptr;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" void* DAT_10039b90;
+extern "C" std::uint32_t DAT_1003a1c4;
+
+extern "C" void* __cdecl _malloc(std::size_t _Size);
+extern "C" void __cdecl _free(void* _Memory);
+extern "C" int __cdecl __callnewh(std::size_t _Size);
+extern "C" int* __cdecl __errno();
+extern "C" int __cdecl __get_errno_from_oserr(std::uint32_t _OSError);
+
+extern "C" void* __stdcall HeapReAlloc(
+    void* _Heap,
+    std::uint32_t _Flags,
+    void* _Memory,
+    std::size_t _Size);
+
+extern "C" std::uint32_t __stdcall GetLastError();
+
+extern "C" void* __cdecl _realloc(void* _Memory, std::size_t _NewSize)
+{
+    if (_Memory == nullptr)
+    {
+        return _malloc(_NewSize);
+    }
+
+    if (_NewSize == 0)
+    {
+        _free(_Memory);
+    }
+    else
+    {
+        do
+        {
+            if (0xffffffe0u < _NewSize)
+            {
+                __callnewh(_NewSize);
+
+                int* piVar4 = __errno();
+                *piVar4 = 0x0c;
+                return nullptr;
+            }
+
+            if (_NewSize == 0)
+            {
+                _NewSize = 1;
+            }
+
+            void* pvVar2 = HeapReAlloc(
+                DAT_10039b90,
+                0,
+                _Memory,
+                _NewSize);
+
+            if (pvVar2 != nullptr)
+            {
+                return pvVar2;
+            }
+
+            if (DAT_1003a1c4 == 0)
+            {
+                int* piVar4 = __errno();
+                std::uint32_t DVar5 = GetLastError();
+                int iVar3 = __get_errno_from_oserr(DVar5);
+                *piVar4 = iVar3;
+                return nullptr;
+            }
+
+            int iVar3 = __callnewh(_NewSize);
+            if (iVar3 != 0)
+            {
+                continue;
+            }
+
+            int* piVar4 = __errno();
+            std::uint32_t DVar5 = GetLastError();
+            iVar3 = __get_errno_from_oserr(DVar5);
+            *piVar4 = iVar3;
+        } while (false);
+    }
+
+    return nullptr;
+}

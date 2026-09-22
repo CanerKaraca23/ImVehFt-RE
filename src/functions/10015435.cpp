@@ -1,1 +1,36 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nusing byte = std::uint8_t;`n#include <stdio.h>`nextern "C" int __cdecl __flsbuf(int, void*);`nextern "C" __declspec(naked) void __cdecl write_char(void)`n{`n    __asm {`n        test byte ptr [ecx + 0Ch], 40h`n        jz L_15441`n        cmp dword ptr [ecx + 8], 0`n        jz L_15465`n    L_15441:`n        dec dword ptr [ecx + 4]`n        js L_15451`n        mov edx, dword ptr [ecx]`n        mov byte ptr [edx], al`n        inc dword ptr [ecx]`n        movzx eax, al`n        jmp L_1545D`n    L_15451:`n        movsx eax, al`n        push ecx`n        push eax`n        call __flsbuf`n        pop ecx`n        pop ecx`n    L_1545D:`n        cmp eax, -1`n        jnz L_15465`n        or dword ptr [esi], eax`n        ret`n    L_15465:`n        inc dword ptr [esi]`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+extern "C" int __cdecl __flsbuf(int, void*);
+extern "C" __declspec(naked) void __cdecl write_char(void)
+{
+    __asm {
+        test byte ptr [ecx + 0Ch], 40h
+        jz L_15441
+        cmp dword ptr [ecx + 8], 0
+        jz L_15465
+    L_15441:
+        dec dword ptr [ecx + 4]
+        js L_15451
+        mov edx, dword ptr [ecx]
+        mov byte ptr [edx], al
+        inc dword ptr [ecx]
+        movzx eax, al
+        jmp L_1545D
+    L_15451:
+        movsx eax, al
+        push ecx
+        push eax
+        call __flsbuf
+        pop ecx
+        pop ecx
+    L_1545D:
+        cmp eax, -1
+        jnz L_15465
+        or dword ptr [esi], eax
+        ret
+    L_15465:
+        inc dword ptr [esi]
+        ret
+    }
+}

@@ -1,1 +1,13 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __stdcall FUN_10010170(void);`n`nextern "C" __declspec(naked) void __stdcall Unwind_10020840(void)`n{`n    __asm {`n        lea ecx, dword ptr [ebp - 10h]`n        jmp FUN_10010170`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __stdcall FUN_10010170(void);
+
+extern "C" __declspec(naked) void __stdcall Unwind_10020840(void)
+{
+    __asm {
+        lea ecx, dword ptr [ebp - 10h]
+        jmp FUN_10010170
+    }
+}

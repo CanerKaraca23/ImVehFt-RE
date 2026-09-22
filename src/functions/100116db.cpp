@@ -1,1 +1,32 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n`nusing BOOL = int;`nusing DWORD = std::uint32_t;`nusing HANDLE = void*;`n`nextern HANDLE DAT_10039b90;`n`nextern "C" BOOL __stdcall HeapFree(`n    HANDLE heap,`n    DWORD flags,`n    void* memory);`n`nextern "C" int* __cdecl __errno();`nextern "C" DWORD __stdcall GetLastError();`nextern "C" int __cdecl __get_errno_from_oserr(DWORD error);`n`nextern "C" void __cdecl _free(void* _Memory)`n{`n    if (_Memory != nullptr)`n    {`n        const BOOL result = HeapFree(DAT_10039b90, 0, _Memory);`n`n        if (result == 0)`n        {`n            int* const errno_value = __errno();`n            const DWORD os_error = GetLastError();`n            const int errno_result = __get_errno_from_oserr(os_error);`n            *errno_value = errno_result;`n        }`n    }`n}`n
+#include <cstdint>
+
+using BOOL = int;
+using DWORD = std::uint32_t;
+using HANDLE = void*;
+
+extern HANDLE DAT_10039b90;
+
+extern "C" BOOL __stdcall HeapFree(
+    HANDLE heap,
+    DWORD flags,
+    void* memory);
+
+extern "C" int* __cdecl __errno();
+extern "C" DWORD __stdcall GetLastError();
+extern "C" int __cdecl __get_errno_from_oserr(DWORD error);
+
+extern "C" void __cdecl _free(void* _Memory)
+{
+    if (_Memory != nullptr)
+    {
+        const BOOL result = HeapFree(DAT_10039b90, 0, _Memory);
+
+        if (result == 0)
+        {
+            int* const errno_value = __errno();
+            const DWORD os_error = GetLastError();
+            const int errno_result = __get_errno_from_oserr(os_error);
+            *errno_value = errno_result;
+        }
+    }
+}

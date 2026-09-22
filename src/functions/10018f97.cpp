@@ -1,1 +1,59 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <Windows.h>`n#include <cstdint>`n`nextern "C" std::uint32_t DAT_1003c418;`nextern "C" std::uint8_t* DAT_1003c420[];`nextern "C" int DAT_10039a00;`n`nextern "C" int* __cdecl __errno();`nextern "C" unsigned long* __cdecl ___doserrno();`n`nextern "C" __declspec(dllimport)`nBOOL WINAPI SetStdHandle(DWORD nStdHandle, HANDLE hHandle);`n`nextern "C" int __cdecl __set_osfhnd(int param_1, std::intptr_t param_2)`n{`n    if ((param_1 >= 0) &&`n        (static_cast<std::uint32_t>(param_1) < DAT_1003c418))`n    {`n        const std::uint32_t offset =`n            (static_cast<std::uint32_t>(param_1) & 0x1fU) * 0x40U;`n`n        auto* slot = reinterpret_cast<std::intptr_t*>(`n            DAT_1003c420[param_1 >> 5] + offset);`n`n        if (*slot == -1)`n        {`n            if (DAT_10039a00 == 1)`n            {`n                DWORD nStdHandle;`n`n                if (param_1 == 0)`n                {`n                    nStdHandle = 0xfffffff6UL;`n                }`n                else if (param_1 == 1)`n                {`n                    nStdHandle = 0xfffffff5UL;`n                }`n                else`n                {`n                    if (param_1 != 2)`n                        goto store_handle;`n`n                    nStdHandle = 0xfffffff4UL;`n                }`n`n                SetStdHandle(nStdHandle, reinterpret_cast<HANDLE>(param_2));`n            }`n`n        store_handle:`n            *slot = param_2;`n            return 0;`n        }`n    }`n`n    *__errno() = 9;`n    *___doserrno() = 0;`n    return -1;`n}`n
+#include <Windows.h>
+#include <cstdint>
+
+extern "C" std::uint32_t DAT_1003c418;
+extern "C" std::uint8_t* DAT_1003c420[];
+extern "C" int DAT_10039a00;
+
+extern "C" int* __cdecl __errno();
+extern "C" unsigned long* __cdecl ___doserrno();
+
+extern "C" __declspec(dllimport)
+BOOL WINAPI SetStdHandle(DWORD nStdHandle, HANDLE hHandle);
+
+extern "C" int __cdecl __set_osfhnd(int param_1, std::intptr_t param_2)
+{
+    if ((param_1 >= 0) &&
+        (static_cast<std::uint32_t>(param_1) < DAT_1003c418))
+    {
+        const std::uint32_t offset =
+            (static_cast<std::uint32_t>(param_1) & 0x1fU) * 0x40U;
+
+        auto* slot = reinterpret_cast<std::intptr_t*>(
+            DAT_1003c420[param_1 >> 5] + offset);
+
+        if (*slot == -1)
+        {
+            if (DAT_10039a00 == 1)
+            {
+                DWORD nStdHandle;
+
+                if (param_1 == 0)
+                {
+                    nStdHandle = 0xfffffff6UL;
+                }
+                else if (param_1 == 1)
+                {
+                    nStdHandle = 0xfffffff5UL;
+                }
+                else
+                {
+                    if (param_1 != 2)
+                        goto store_handle;
+
+                    nStdHandle = 0xfffffff4UL;
+                }
+
+                SetStdHandle(nStdHandle, reinterpret_cast<HANDLE>(param_2));
+            }
+
+        store_handle:
+            *slot = param_2;
+            return 0;
+        }
+    }
+
+    *__errno() = 9;
+    *___doserrno() = 0;
+    return -1;
+}

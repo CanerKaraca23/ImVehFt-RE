@@ -1,1 +1,23 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void* PTR_LAB_10029d40[10];`n`nextern "C" void* __stdcall EncodePointer(void* Ptr);`n`nextern "C" void __stdcall __initp_misc_cfltcvt_tab(void)`n{`n    std::uint32_t uVar2 = 0;`n`n    do`n    {`n        void** entry = reinterpret_cast<void**>(`n            reinterpret_cast<std::uintptr_t>(&PTR_LAB_10029d40) + uVar2);`n`n        void* pvVar1 = EncodePointer(*entry);`n        *entry = pvVar1;`n`n        uVar2 = uVar2 + 4;`n    } while (uVar2 < 0x28);`n`n    return;`n}`n
+#include <cstdint>
+
+extern "C" void* PTR_LAB_10029d40[10];
+
+extern "C" void* __stdcall EncodePointer(void* Ptr);
+
+extern "C" void __stdcall __initp_misc_cfltcvt_tab(void)
+{
+    std::uint32_t uVar2 = 0;
+
+    do
+    {
+        void** entry = reinterpret_cast<void**>(
+            reinterpret_cast<std::uintptr_t>(&PTR_LAB_10029d40) + uVar2);
+
+        void* pvVar1 = EncodePointer(*entry);
+        *entry = pvVar1;
+
+        uVar2 = uVar2 + 4;
+    } while (uVar2 < 0x28);
+
+    return;
+}

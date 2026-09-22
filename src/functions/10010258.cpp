@@ -1,1 +1,15 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nchar* __fastcall FUN_10010258(int param_1)`n{`n    char* result = *reinterpret_cast<char**>(param_1 + 4);`n`n    if (result == nullptr)`n    {`n        result = const_cast<char*>("Unknown exception");`n    }`n`n    return result;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+char* __fastcall FUN_10010258(int param_1)
+{
+    char* result = *reinterpret_cast<char**>(param_1 + 4);
+
+    if (result == nullptr)
+    {
+        result = const_cast<char*>("Unknown exception");
+    }
+
+    return result;
+}

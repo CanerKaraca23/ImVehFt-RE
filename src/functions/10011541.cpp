@@ -1,1 +1,27 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing PureCallHandler = void (*)();`n`nextern "C" void* __stdcall DecodePointer(void* pointer);`nextern "C" void __cdecl __NMSG_WRITE(std::uint32_t message);`nextern "C" void __cdecl __set_abort_behavior(`n    std::uint32_t flags,`n    std::uint32_t mask);`nextern "C" [[noreturn]] void __cdecl _abort();`n`nextern void* DAT_1003a1c0;`n`nvoid __stdcall __purecall(void)`n{`n    const auto handler =`n        reinterpret_cast<PureCallHandler>(DecodePointer(DAT_1003a1c0));`n`n    if (handler != nullptr)`n    {`n        handler();`n    }`n`n    __NMSG_WRITE(0x19);`n    __set_abort_behavior(0, 1);`n    _abort();`n}`n
+#include <cstdint>
+
+using PureCallHandler = void (*)();
+
+extern "C" void* __stdcall DecodePointer(void* pointer);
+extern "C" void __stdcall __NMSG_WRITE(std::uint32_t message);
+extern "C" void __stdcall __set_abort_behavior(
+    std::uint32_t flags,
+    std::uint32_t mask);
+extern "C" [[noreturn]] void __stdcall _abort();
+
+extern void* DAT_1003a1c0;
+
+void __stdcall __purecall(void)
+{
+    const auto handler =
+        reinterpret_cast<PureCallHandler>(DecodePointer(DAT_1003a1c0));
+
+    if (handler != nullptr)
+    {
+        handler();
+    }
+
+    __NMSG_WRITE(0x19);
+    __set_abort_behavior(0, 1);
+    _abort();
+}

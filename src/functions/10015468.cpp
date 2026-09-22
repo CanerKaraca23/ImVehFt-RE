@@ -1,1 +1,61 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nusing byte = std::uint8_t;`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`nextern "C" int* __cdecl __errno(void);`nextern "C" void __cdecl write_char(void);`nextern "C" __declspec(naked) void __cdecl write_string(void)`n{`n    __asm {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        push ecx`n        push ebx`n        push esi`n        mov esi, eax`n        mov ebx, ecx`n        call __errno`n        test byte ptr [edi + 0Ch], 40h`n        mov eax, dword ptr [eax]`n        mov dword ptr [ebp - 4], eax`n        jz L_1548E`n        cmp dword ptr [edi + 8], 0`n        jnz L_1548E`n        add dword ptr [esi], ebx`n        jmp L_154D8`n    L_1548E:`n        call __errno`n        and dword ptr [eax], 0`n        jmp L_154C0`n    L_15498:`n        mov eax, dword ptr [ebp + 8]`n        mov al, byte ptr [eax]`n        mov ecx, edi`n        dec ebx`n        call write_char`n        inc dword ptr [ebp + 8]`n        cmp dword ptr [esi], -1`n        jnz L_154C0`n        call __errno`n        cmp dword ptr [eax], 2Ah`n        jnz L_154C4`n        mov ecx, edi`n        mov al, 3Fh`n        call write_char`n    L_154C0:`n        test ebx, ebx`n        jg L_15498`n    L_154C4:`n        call __errno`n        cmp dword ptr [eax], 0`n        jnz L_154D8`n        call __errno`n        mov ecx, dword ptr [ebp - 4]`n        mov dword ptr [eax], ecx`n    L_154D8:`n        pop esi`n        pop ebx`n        leave`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+extern "C" int* __cdecl __errno(void);
+extern "C" void __cdecl write_char(void);
+extern "C" __declspec(naked) void __cdecl write_string(void)
+{
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        push ecx
+        push ebx
+        push esi
+        mov esi, eax
+        mov ebx, ecx
+        call __errno
+        test byte ptr [edi + 0Ch], 40h
+        mov eax, dword ptr [eax]
+        mov dword ptr [ebp - 4], eax
+        jz L_1548E
+        cmp dword ptr [edi + 8], 0
+        jnz L_1548E
+        add dword ptr [esi], ebx
+        jmp L_154D8
+    L_1548E:
+        call __errno
+        and dword ptr [eax], 0
+        jmp L_154C0
+    L_15498:
+        mov eax, dword ptr [ebp + 8]
+        mov al, byte ptr [eax]
+        mov ecx, edi
+        dec ebx
+        call write_char
+        inc dword ptr [ebp + 8]
+        cmp dword ptr [esi], -1
+        jnz L_154C0
+        call __errno
+        cmp dword ptr [eax], 2Ah
+        jnz L_154C4
+        mov ecx, edi
+        mov al, 3Fh
+        call write_char
+    L_154C0:
+        test ebx, ebx
+        jg L_15498
+    L_154C4:
+        call __errno
+        cmp dword ptr [eax], 0
+        jnz L_154D8
+        call __errno
+        mov ecx, dword ptr [ebp - 4]
+        mov dword ptr [eax], ecx
+    L_154D8:
+        pop esi
+        pop ebx
+        leave
+        ret
+    }
+}

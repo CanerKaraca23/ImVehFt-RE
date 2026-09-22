@@ -1,1 +1,26 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nstruct ExceptionStorage`n{`n    ExceptionStorage* __thiscall assign(ExceptionStorage* other);`n    ExceptionStorage* __thiscall copy_construct(ExceptionStorage* other);`n    void** vtable;                 // +0x00`n    char* what;                    // +0x04`n    std::uint8_t do_free;          // +0x08`n};`n`nstatic_assert(offsetof(ExceptionStorage, what) == 4);`nstatic_assert(offsetof(ExceptionStorage, do_free) == 8);`n`nExceptionStorage* ExceptionStorage::copy_construct(ExceptionStorage* other)`n{`n    this->what = nullptr;`n    this->vtable = reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022228));`n    this->do_free = 0;`n`n    using AssignFn = ExceptionStorage* (__thiscall*)(void*, ExceptionStorage*);`n    reinterpret_cast<AssignFn>(static_cast<std::uintptr_t>(0x100102ea))(this, other);`n`n    return this;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+struct ExceptionStorage
+{
+    ExceptionStorage* __thiscall assign(ExceptionStorage* other);
+    ExceptionStorage* __thiscall copy_construct(ExceptionStorage* other);
+    void** vtable;                 // +0x00
+    char* what;                    // +0x04
+    std::uint8_t do_free;          // +0x08
+};
+
+static_assert(offsetof(ExceptionStorage, what) == 4);
+static_assert(offsetof(ExceptionStorage, do_free) == 8);
+
+ExceptionStorage* ExceptionStorage::copy_construct(ExceptionStorage* other)
+{
+    this->what = nullptr;
+    this->vtable = reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022228));
+    this->do_free = 0;
+
+    using AssignFn = ExceptionStorage* (__thiscall*)(void*, ExceptionStorage*);
+    reinterpret_cast<AssignFn>(static_cast<std::uintptr_t>(0x100102ea))(this, other);
+
+    return this;
+}

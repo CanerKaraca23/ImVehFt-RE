@@ -1,1 +1,55 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nusing byte = std::uint8_t;`n#include <stdio.h>`n#include <cstdint>`nextern "C" void __cdecl FUN_10010b1a(void* self, void* locale);`nextern "C" std::uint32_t DAT_10039a58;`nextern "C" __declspec(dllimport) std::uint32_t __stdcall GetACP(void);`nextern "C" __declspec(dllimport) std::uint32_t __stdcall GetOEMCP(void);`n`nextern "C" __declspec(naked) int __cdecl getSystemCP(int )`n{`n    __asm {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        sub esp, 10h`n        push ebx`n        xor ebx, ebx`n        push ebx`n        lea ecx, [ebp - 10h]`n        push ecx`n        call FUN_10010b1a`n        add esp, 8`n        mov dword ptr [DAT_10039a58], ebx`n        cmp esi, -2`n        jnz L_14527`n        mov dword ptr [DAT_10039a58], 1`n        call GetOEMCP`n    L_14519:`n        cmp byte ptr [ebp - 4], bl`n        jz L_14563`n        mov ecx, dword ptr [ebp - 8]`n        and dword ptr [ecx + 70h], 0FFFFFFFDh`n        jmp L_14563`n    L_14527:`n        cmp esi, -3`n        jnz L_1453E`n        mov dword ptr [DAT_10039a58], 1`n        call GetACP`n        jmp L_14519`n    L_1453E:`n        cmp esi, -4`n        jnz L_14555`n        mov eax, dword ptr [ebp - 10h]`n        mov eax, dword ptr [eax + 4]`n        mov dword ptr [DAT_10039a58], 1`n        jmp L_14519`n    L_14555:`n        cmp byte ptr [ebp - 4], bl`n        jz L_14561`n        mov eax, dword ptr [ebp - 8]`n        and dword ptr [eax + 70h], 0FFFFFFFDh`n    L_14561:`n        mov eax, esi`n    L_14563:`n        pop ebx`n        leave`n        ret`n    }`n}`n
+#include <cstdint>
+extern "C" void FUN_10010b1a(void);
+extern "C" std::uint32_t DAT_10039a58;
+extern "C" std::uint32_t DAT_100220c8;
+extern "C" std::uint32_t DAT_100220c4;
+
+extern "C" __declspec(naked) int __cdecl getSystemCP(int )
+{
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        sub esp, 10h
+        push ebx
+        xor ebx, ebx
+        push ebx
+        lea ecx, [ebp - 10h]
+        call FUN_10010b1a
+        mov dword ptr [DAT_10039a58], ebx
+        cmp esi, -2
+        jnz L_14527
+        mov dword ptr [DAT_10039a58], 1
+        call dword ptr [DAT_100220c8]
+    L_14519:
+        cmp byte ptr [ebp - 4], bl
+        jz L_14563
+        mov ecx, dword ptr [ebp - 8]
+        and dword ptr [ecx + 70h], 0FFFFFFFDh
+        jmp L_14563
+    L_14527:
+        cmp esi, -3
+        jnz L_1453E
+        mov dword ptr [DAT_10039a58], 1
+        call dword ptr [DAT_100220c4]
+        jmp L_14519
+    L_1453E:
+        cmp esi, -4
+        jnz L_14555
+        mov eax, dword ptr [ebp - 10h]
+        mov eax, dword ptr [eax + 4]
+        mov dword ptr [DAT_10039a58], 1
+        jmp L_14519
+    L_14555:
+        cmp byte ptr [ebp - 4], bl
+        jz L_14561
+        mov eax, dword ptr [ebp - 8]
+        and dword ptr [eax + 70h], 0FFFFFFFDh
+    L_14561:
+        mov eax, esi
+    L_14563:
+        pop ebx
+        leave
+        ret
+    }
+}

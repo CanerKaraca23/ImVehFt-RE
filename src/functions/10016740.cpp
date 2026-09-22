@@ -1,1 +1,86 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" int DAT_1003c414;`nextern "C" void* __fastcall __VEC_memzero(void* destination, std::size_t size);`n`nextern "C" void* __cdecl _memset(`n    void* _Dst,`n    int _Val,`n    std::size_t _Size)`n{`n    std::uint32_t uVar1;`n    std::uint32_t uVar3;`n    std::size_t sVar4;`n    std::uint32_t* puVar5;`n`n    if (_Size == 0)`n    {`n        return _Dst;`n    }`n`n    uVar1 = static_cast<std::uint32_t>(_Val) & 0xffu;`n`n    if ((static_cast<char>(_Val) == '\0') &&`n        (0x7f < _Size) &&`n        (DAT_1003c414 != 0))`n    {`n        return __VEC_memzero(_Dst, _Size);`n    }`n`n    puVar5 = static_cast<std::uint32_t*>(_Dst);`n`n    if (3 < _Size)`n    {`n        uVar3 =`n            static_cast<std::uint32_t>(`n                -static_cast<std::int32_t>(`n                    reinterpret_cast<std::uintptr_t>(_Dst))) &`n            3u;`n`n        sVar4 = _Size;`n`n        if (uVar3 != 0)`n        {`n            sVar4 = _Size - uVar3;`n`n            do`n            {`n                *reinterpret_cast<char*>(puVar5) = static_cast<char>(_Val);`n                puVar5 = reinterpret_cast<std::uint32_t*>(`n                    reinterpret_cast<std::uintptr_t>(puVar5) + 1);`n                uVar3 = uVar3 - 1;`n            }`n            while (uVar3 != 0);`n        }`n`n        uVar1 = uVar1 * 0x1010101u;`n        _Size = sVar4 & 3u;`n        uVar3 = static_cast<std::uint32_t>(sVar4 >> 2);`n`n        if (uVar3 != 0)`n        {`n            for (; uVar3 != 0; uVar3 = uVar3 - 1)`n            {`n                *puVar5 = uVar1;`n                puVar5 = puVar5 + 1;`n            }`n`n            if (_Size == 0)`n            {`n                return _Dst;`n            }`n        }`n    }`n`n    do`n    {`n        *reinterpret_cast<char*>(puVar5) = static_cast<char>(uVar1);`n        puVar5 = reinterpret_cast<std::uint32_t*>(`n            reinterpret_cast<std::uintptr_t>(puVar5) + 1);`n        _Size = _Size - 1;`n    }`n    while (_Size != 0);`n`n    return _Dst;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" int DAT_1003c414;
+extern "C" void* __cdecl __VEC_memzero(void* destination, std::size_t size);
+
+extern "C" void* __cdecl _memset(
+    void* _Dst,
+    int _Val,
+    std::size_t _Size)
+{
+    std::uint32_t uVar1;
+    std::uint32_t uVar3;
+    std::size_t sVar4;
+    std::uint32_t* puVar5;
+
+    if (_Size == 0)
+    {
+        return _Dst;
+    }
+
+    uVar1 = static_cast<std::uint32_t>(_Val) & 0xffu;
+
+    if ((static_cast<char>(_Val) == '\0') &&
+        (0x7f < _Size) &&
+        (DAT_1003c414 != 0))
+    {
+        return __VEC_memzero(_Dst, _Size);
+    }
+
+    puVar5 = static_cast<std::uint32_t*>(_Dst);
+
+    if (3 < _Size)
+    {
+        uVar3 =
+            static_cast<std::uint32_t>(
+                -static_cast<std::int32_t>(
+                    reinterpret_cast<std::uintptr_t>(_Dst))) &
+            3u;
+
+        sVar4 = _Size;
+
+        if (uVar3 != 0)
+        {
+            sVar4 = _Size - uVar3;
+
+            do
+            {
+                *reinterpret_cast<char*>(puVar5) = static_cast<char>(_Val);
+                puVar5 = reinterpret_cast<std::uint32_t*>(
+                    reinterpret_cast<std::uintptr_t>(puVar5) + 1);
+                uVar3 = uVar3 - 1;
+            }
+            while (uVar3 != 0);
+        }
+
+        uVar1 = uVar1 * 0x1010101u;
+        _Size = sVar4 & 3u;
+        uVar3 = static_cast<std::uint32_t>(sVar4 >> 2);
+
+        if (uVar3 != 0)
+        {
+            for (; uVar3 != 0; uVar3 = uVar3 - 1)
+            {
+                *puVar5 = uVar1;
+                puVar5 = puVar5 + 1;
+            }
+
+            if (_Size == 0)
+            {
+                return _Dst;
+            }
+        }
+    }
+
+    do
+    {
+        *reinterpret_cast<char*>(puVar5) = static_cast<char>(uVar1);
+        puVar5 = reinterpret_cast<std::uint32_t*>(
+            reinterpret_cast<std::uintptr_t>(puVar5) + 1);
+        _Size = _Size - 1;
+    }
+    while (_Size != 0);
+
+    return _Dst;
+}

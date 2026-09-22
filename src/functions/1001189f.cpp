@@ -1,1 +1,13 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void __stdcall FUN_10011872(`n    wchar_t* param_1,`n    wchar_t* param_2,`n    wchar_t* param_3,`n    std::uint32_t param_4,`n    std::uintptr_t param_5);`n`nextern "C" void __stdcall FUN_1001189f()`n{`n    FUN_10011872(nullptr, nullptr, nullptr, 0u, 0u);`n}`n
+#include <cstdint>
+
+extern "C" void __stdcall FUN_10011872(
+    wchar_t* param_1,
+    wchar_t* param_2,
+    wchar_t* param_3,
+    std::uint32_t param_4,
+    std::uintptr_t param_5);
+
+extern "C" void __stdcall FUN_1001189f()
+{
+    FUN_10011872(nullptr, nullptr, nullptr, 0u, 0u);
+}

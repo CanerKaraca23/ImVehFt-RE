@@ -1,1 +1,9 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <windows.h>`n`nextern "C" void __cdecl ___crtCorExitProcess(int param_1);`n`nextern "C" [[noreturn]] void __cdecl ___crtExitProcess(int param_1)`n{`n    ___crtCorExitProcess(param_1);`n    ExitProcess(static_cast<UINT>(param_1));`n}`n
+#include <windows.h>
+
+extern "C" void __cdecl ___crtCorExitProcess(int param_1);
+
+extern "C" [[noreturn]] void __cdecl ___crtExitProcess(int param_1)
+{
+    ___crtCorExitProcess(param_1);
+    ExitProcess(static_cast<UINT>(param_1));
+}

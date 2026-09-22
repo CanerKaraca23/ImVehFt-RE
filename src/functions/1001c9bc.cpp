@@ -1,1 +1,17 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" __declspec(naked) std::uint32_t __stdcall FUN_1001c9bc(void)`n{`n    __asm {`n        test eax, 080000h`n        jz add_error_constant`n        mov eax, 7`n        ret`n`n    add_error_constant:`n        // Explicit FADD emits the same original x87 instruction as the prior bytes.`n        fadd qword ptr ds:[100258e0h]`n        mov eax, 1`n        ret`n    }`n}`n
+#include <cstdint>
+
+extern "C" __declspec(naked) std::uint32_t __stdcall FUN_1001c9bc(void)
+{
+    __asm {
+        test eax, 080000h
+        jz add_error_constant
+        mov eax, 7
+        ret
+
+    add_error_constant:
+        // Explicit FADD emits the same original x87 instruction as the prior bytes.
+        fadd qword ptr ds:[100258e0h]
+        mov eax, 1
+        ret
+    }
+}

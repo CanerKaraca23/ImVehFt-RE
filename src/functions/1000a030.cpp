@@ -1,1 +1,58 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t BasicCallbackManager_0_0_0_0_0_cbResetDeviceManager_vftable[];`nextern "C" void __cdecl FUN_10010756(void*);`n`nstruct FUN_1000a030_this {`n    void* __thiscall FUN_1000a030(std::uint8_t param_1);`n};`n`nvoid* FUN_1000a030_this::FUN_1000a030(std::uint8_t param_1)`n{`n    void* self = static_cast<void*>(this);`n    struct Object`n    {`n        std::uint32_t vftable;`n        std::uint8_t field_04[0x40];`n        std::uint32_t field_44;`n        std::uint32_t field_48;`n        std::uint32_t field_4C;`n        std::uint8_t field_50[4];`n        std::uint32_t field_54;`n        std::uint32_t field_58;`n        std::uint32_t field_5C;`n    };`n`n    auto* object = reinterpret_cast<Object*>(self);`n`n    object->vftable = static_cast<std::uint32_t>(`n        reinterpret_cast<std::uintptr_t>(`n            BasicCallbackManager_0_0_0_0_0_cbResetDeviceManager_vftable));`n`n    if (object->field_54 != 0)`n    {`n        FUN_10010756(reinterpret_cast<void*>(`n            static_cast<std::uintptr_t>(object->field_54)));`n    }`n`n    object->field_54 = 0;`n    object->field_58 = 0;`n    object->field_5C = 0;`n`n    if (object->field_44 != 0)`n    {`n        FUN_10010756(reinterpret_cast<void*>(`n            static_cast<std::uintptr_t>(object->field_44)));`n    }`n`n    object->field_44 = 0;`n    object->field_48 = 0;`n    object->field_4C = 0;`n`n    if ((param_1 & 1u) != 0)`n    {`n        FUN_10010756(self);`n    }`n`n    return self;`n}`n
+#include <cstdint>
+
+extern std::uint32_t BasicCallbackManager_0_0_0_0_0_cbResetDeviceManager_vftable[];
+extern "C" void __cdecl FUN_10010756(void*);
+
+struct FUN_1000a030_this {
+    void* __thiscall FUN_1000a030(std::uint8_t param_1);
+};
+
+void* FUN_1000a030_this::FUN_1000a030(std::uint8_t param_1)
+{
+    void* self = static_cast<void*>(this);
+    struct Object
+    {
+        std::uint32_t vftable;
+        std::uint8_t field_04[0x40];
+        std::uint32_t field_44;
+        std::uint32_t field_48;
+        std::uint32_t field_4C;
+        std::uint8_t field_50[4];
+        std::uint32_t field_54;
+        std::uint32_t field_58;
+        std::uint32_t field_5C;
+    };
+
+    auto* object = reinterpret_cast<Object*>(self);
+
+    object->vftable = static_cast<std::uint32_t>(
+        reinterpret_cast<std::uintptr_t>(
+            BasicCallbackManager_0_0_0_0_0_cbResetDeviceManager_vftable));
+
+    if (object->field_54 != 0)
+    {
+        FUN_10010756(reinterpret_cast<void*>(
+            static_cast<std::uintptr_t>(object->field_54)));
+    }
+
+    object->field_54 = 0;
+    object->field_58 = 0;
+    object->field_5C = 0;
+
+    if (object->field_44 != 0)
+    {
+        FUN_10010756(reinterpret_cast<void*>(
+            static_cast<std::uintptr_t>(object->field_44)));
+    }
+
+    object->field_44 = 0;
+    object->field_48 = 0;
+    object->field_4C = 0;
+
+    if ((param_1 & 1u) != 0)
+    {
+        FUN_10010756(self);
+    }
+
+    return self;
+}

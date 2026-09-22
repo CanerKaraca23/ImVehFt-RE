@@ -1,1 +1,13 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nusing byte = std::uint8_t;`n#include <stdio.h>`n#include <cstddef>`n`nextern "C" void __cdecl _free(void* _Memory);`n`nextern "C" void __cdecl __freea(void* _Memory)`n{`n    if ((_Memory != nullptr) &&`n        (*reinterpret_cast<int*>(`n             static_cast<std::byte*>(_Memory) - 8) == 0xdddd))`n    {`n        _free(static_cast<std::byte*>(_Memory) - 8);`n    }`n}`n
+#include <cstddef>
+
+extern "C" void __cdecl _free(void* _Memory);
+
+extern "C" void __cdecl __freea(void* _Memory)
+{
+    if ((_Memory != nullptr) &&
+        (*reinterpret_cast<int*>(
+             static_cast<std::byte*>(_Memory) - 8) == 0xdddd))
+    {
+        _free(static_cast<std::byte*>(_Memory) - 8);
+    }
+}

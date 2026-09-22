@@ -1,1 +1,82 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nstruct EHExceptionRecord;`nstruct _s_ESTypeList;`n`nextern "C" void __cdecl _inconsistency();`n[[noreturn]] void __cdecl terminate();`n`nextern "C" std::uint32_t __cdecl ___TypeMatch(`n    std::uint8_t*,`n    std::uint8_t*,`n    std::uint32_t*);`n`nstd::uint8_t __cdecl IsInExceptionSpec(`n    EHExceptionRecord* param_1,`n    _s_ESTypeList const* param_2)`n{`n    auto* exception_spec =`n        reinterpret_cast<const std::int32_t*>(param_2);`n`n    if (exception_spec == nullptr)`n    {`n        _inconsistency();`n        terminate();`n    }`n`n    std::int32_t local_c = 0;`n    std::uint8_t local_5 = 0;`n`n    if (0 < *exception_spec)`n    {`n        do`n        {`n            auto* exception_type_list =`n                reinterpret_cast<std::int32_t**>(`n                    static_cast<std::uintptr_t>(`n                        *reinterpret_cast<const std::uint32_t*>(`n                            static_cast<std::uintptr_t>(`n                                *reinterpret_cast<const std::uint32_t*>(`n                                    reinterpret_cast<const std::uint8_t*>(`n                                        param_1) + 0x1c)) + 0x0c)));`n`n            std::int32_t remaining = **exception_type_list;`n`n            if (0 < remaining)`n            {`n                do`n                {`n                    ++exception_type_list;`n`n                    const int type_match = static_cast<int>(___TypeMatch(`n                        reinterpret_cast<std::uint8_t*>(`n                            static_cast<std::uintptr_t>(`n                                exception_spec[1]) +`n                            local_c * 0x10),`n                        reinterpret_cast<std::uint8_t*>(`n                            static_cast<std::uintptr_t>(`n                                **exception_type_list)),`n                        reinterpret_cast<std::uint32_t*>(`n                            static_cast<std::uintptr_t>(`n                                *reinterpret_cast<const std::uint32_t*>(`n                                    reinterpret_cast<const std::uint8_t*>(`n                                        param_1) + 0x1c)))));`n`n                    if (type_match != 0)`n                    {`n                        local_5 = 1;`n                        break;`n                    }`n`n                    remaining = remaining - 1;`n                }`n                while (0 < remaining);`n            }`n`n            local_c = local_c + 1;`n        }`n        while (local_c < *exception_spec);`n    }`n`n    return local_5;`n}`n
+#include <cstdint>
+
+struct EHExceptionRecord;
+struct _s_ESTypeList;
+
+extern "C" void __cdecl _inconsistency();
+extern "C" [[noreturn]] void __cdecl terminate();
+
+extern "C" std::uint32_t __cdecl ___TypeMatch(
+    std::uint8_t*,
+    std::uint8_t*,
+    std::uint32_t*);
+
+std::uint8_t __cdecl IsInExceptionSpec(
+    EHExceptionRecord* param_1,
+    _s_ESTypeList const* param_2)
+{
+    auto* exception_spec =
+        reinterpret_cast<const std::int32_t*>(param_2);
+
+    if (exception_spec == nullptr)
+    {
+        _inconsistency();
+        terminate();
+    }
+
+    std::int32_t local_c = 0;
+    std::uint8_t local_5 = 0;
+
+    if (0 < *exception_spec)
+    {
+        do
+        {
+            auto* exception_type_list =
+                reinterpret_cast<std::int32_t**>(
+                    static_cast<std::uintptr_t>(
+                        *reinterpret_cast<const std::uint32_t*>(
+                            static_cast<std::uintptr_t>(
+                                *reinterpret_cast<const std::uint32_t*>(
+                                    reinterpret_cast<const std::uint8_t*>(
+                                        param_1) + 0x1c)) + 0x0c)));
+
+            std::int32_t remaining = **exception_type_list;
+
+            if (0 < remaining)
+            {
+                do
+                {
+                    ++exception_type_list;
+
+                    const int type_match = static_cast<int>(___TypeMatch(
+                        reinterpret_cast<std::uint8_t*>(
+                            static_cast<std::uintptr_t>(
+                                exception_spec[1]) +
+                            local_c * 0x10),
+                        reinterpret_cast<std::uint8_t*>(
+                            static_cast<std::uintptr_t>(
+                                **exception_type_list)),
+                        reinterpret_cast<std::uint32_t*>(
+                            static_cast<std::uintptr_t>(
+                                *reinterpret_cast<const std::uint32_t*>(
+                                    reinterpret_cast<const std::uint8_t*>(
+                                        param_1) + 0x1c)))));
+
+                    if (type_match != 0)
+                    {
+                        local_5 = 1;
+                        break;
+                    }
+
+                    remaining = remaining - 1;
+                }
+                while (0 < remaining);
+            }
+
+            local_c = local_c + 1;
+        }
+        while (local_c < *exception_spec);
+    }
+
+    return local_5;
+}

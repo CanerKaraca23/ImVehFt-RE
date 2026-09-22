@@ -1,1 +1,57 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c3d8;`n`nusing Callback = void(__cdecl*)(std::uint32_t);`nusing ReturnCallback = std::uint32_t(__cdecl*)();`n`nstd::uint32_t __stdcall FUN_1000faa0(std::uint32_t param_1)`n{`n    const std::uint32_t iVar2 = DAT_1003c3d8;`n`n    auto* puVar1 = *reinterpret_cast<std::uint32_t**>(`n        static_cast<std::uintptr_t>(DAT_1003c3d8) + 0x1c);`n`n    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(`n             static_cast<std::uintptr_t>(DAT_1003c3d8) + 0x18);`n         puVar3 != puVar1;`n         puVar3 += 1)`n    {`n        Callback callback = reinterpret_cast<Callback>(*puVar3);`n        if (callback != nullptr)`n        {`n            callback(param_1);`n        }`n    }`n`n    std::uint32_t local_8;`n`n    ReturnCallback returnCallback = *reinterpret_cast<ReturnCallback*>(`n        static_cast<std::uintptr_t>(iVar2) + 0x0c);`n`n    if (returnCallback == nullptr)`n    {`n        local_8 = 0;`n    }`n    else`n    {`n        local_8 = returnCallback();`n    }`n`n    puVar1 = *reinterpret_cast<std::uint32_t**>(`n        static_cast<std::uintptr_t>(iVar2) + 0x2c);`n`n    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(`n             static_cast<std::uintptr_t>(iVar2) + 0x28);`n         puVar3 != puVar1;`n         puVar3 += 1)`n    {`n        Callback callback = reinterpret_cast<Callback>(*puVar3);`n        if (callback != nullptr)`n        {`n            callback(param_1);`n        }`n    }`n`n    return local_8;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c3d8;
+
+using Callback = void(__cdecl*)(std::uint32_t);
+using ReturnCallback = std::uint32_t(__cdecl*)();
+
+std::uint32_t __stdcall FUN_1000faa0(std::uint32_t param_1)
+{
+    const std::uint32_t iVar2 = DAT_1003c3d8;
+
+    auto* puVar1 = *reinterpret_cast<std::uint32_t**>(
+        static_cast<std::uintptr_t>(DAT_1003c3d8) + 0x1c);
+
+    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(
+             static_cast<std::uintptr_t>(DAT_1003c3d8) + 0x18);
+         puVar3 != puVar1;
+         puVar3 += 1)
+    {
+        Callback callback = reinterpret_cast<Callback>(*puVar3);
+        if (callback != nullptr)
+        {
+            callback(param_1);
+        }
+    }
+
+    std::uint32_t local_8;
+
+    ReturnCallback returnCallback = *reinterpret_cast<ReturnCallback*>(
+        static_cast<std::uintptr_t>(iVar2) + 0x0c);
+
+    if (returnCallback == nullptr)
+    {
+        local_8 = 0;
+    }
+    else
+    {
+        local_8 = returnCallback();
+    }
+
+    puVar1 = *reinterpret_cast<std::uint32_t**>(
+        static_cast<std::uintptr_t>(iVar2) + 0x2c);
+
+    for (auto* puVar3 = *reinterpret_cast<std::uint32_t**>(
+             static_cast<std::uintptr_t>(iVar2) + 0x28);
+         puVar3 != puVar1;
+         puVar3 += 1)
+    {
+        Callback callback = reinterpret_cast<Callback>(*puVar3);
+        if (callback != nullptr)
+        {
+            callback(param_1);
+        }
+    }
+
+    return local_8;
+}

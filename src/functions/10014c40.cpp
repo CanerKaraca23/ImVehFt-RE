@@ -1,1 +1,10 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n`nusing PVOID = void*;`n`nextern "C" PVOID __stdcall EncodePointer(PVOID pointer);`n`nvoid* __stdcall FUN_10014c40()`n{`n    return EncodePointer(nullptr);`n}`n
+#include <cstddef>
+
+using PVOID = void*;
+
+extern "C" PVOID __stdcall EncodePointer(PVOID pointer);
+
+extern "C" void __stdcall FUN_10014c40()
+{
+    (void)EncodePointer(nullptr);
+}

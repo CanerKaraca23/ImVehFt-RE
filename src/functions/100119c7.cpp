@@ -1,1 +1,34 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t __fastcall __inc(std::uint32_t, void*);`nextern "C" int __cdecl _isspace(int);`n`n// __whiteout is a custom x86 entry: ECX and ESI are live-in registers, and`n// the caller cleans the stream argument after this routine's plain RET.`nextern "C" __declspec(naked) std::uint32_t __cdecl __whiteout(void)`n{`n    __asm {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        push ebx`n    whiteout_loop:`n        mov edx, dword ptr [ebp + 8]`n        inc dword ptr [esi]`n        call __inc`n        mov ebx, eax`n        cmp ebx, -1`n        jz whiteout_return`n        movzx eax, bl`n        push eax`n        call _isspace`n        pop ecx`n        test eax, eax`n        jnz whiteout_loop`n    whiteout_return:`n        mov eax, ebx`n        pop ebx`n        pop ebp`n        ret`n    }`n}`n
+#include <cstdint>
+
+extern "C" std::uint32_t __fastcall __inc(std::uint32_t, void*);
+extern "C" int __cdecl _isspace(int);
+
+// __whiteout is a custom x86 entry: ECX and ESI are live-in registers, and
+// the caller cleans the stream argument after this routine's plain RET.
+extern "C" __declspec(naked) std::uint32_t __cdecl __whiteout(void)
+{
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        push ebx
+    whiteout_loop:
+        mov edx, dword ptr [ebp + 8]
+        inc dword ptr [esi]
+        call __inc
+        mov ebx, eax
+        cmp ebx, -1
+        jz whiteout_return
+        movzx eax, bl
+        push eax
+        call _isspace
+        pop ecx
+        test eax, eax
+        jnz whiteout_loop
+    whiteout_return:
+        mov eax, ebx
+        pop ebx
+        pop ebp
+        ret
+    }
+}

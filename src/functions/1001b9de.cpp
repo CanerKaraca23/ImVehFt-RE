@@ -1,1 +1,46 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n#include <intrin.h>`n`nstruct EHRegistrationNode;`nstruct _s_FuncInfo;`n`nextern "C" std::uint32_t DAT_10029490;`nextern "C" void __cdecl SafeCatchGuardHandlerThunk(void);`nextern "C" void* __stdcall __CallSettingFrame_12(`n    void* param_1,`n    EHRegistrationNode* param_2,`n    unsigned long param_3);`n`nstruct EHRegistrationRecord`n{`n    void* volatile previous;`n    void (__cdecl* volatile handler)();`n    std::uint32_t volatile cookie;`n    _s_FuncInfo* volatile function_info;`n    EHRegistrationNode* volatile node;`n    int volatile state;`n};`n`nstatic_assert(sizeof(EHRegistrationRecord) == 0x18);`nstatic_assert(offsetof(EHRegistrationRecord, previous) == 0x00);`nstatic_assert(offsetof(EHRegistrationRecord, handler) == 0x04);`nstatic_assert(offsetof(EHRegistrationRecord, cookie) == 0x08);`nstatic_assert(offsetof(EHRegistrationRecord, function_info) == 0x0c);`nstatic_assert(offsetof(EHRegistrationRecord, node) == 0x10);`nstatic_assert(offsetof(EHRegistrationRecord, state) == 0x14);`n`n#pragma warning(push)`n#pragma warning(disable: 4733)`nextern "C" void* __cdecl _CallCatchBlock2(`n    EHRegistrationNode* param_1,`n    _s_FuncInfo* param_2,`n    void* param_3,`n    int param_4,`n    unsigned long param_5)`n{`n    EHRegistrationRecord registration;`n    registration.cookie = DAT_10029490 ^`n        static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&registration));`n    registration.function_info = param_2;`n    registration.state = param_4 + 1;`n    registration.handler = SafeCatchGuardHandlerThunk;`n    registration.node = param_1;`n    registration.previous = reinterpret_cast<void*>(__readfsdword(0));`n    __writefsdword(0, static_cast<unsigned long>(reinterpret_cast<std::uintptr_t>(&registration)));`n`n    void* result = __CallSettingFrame_12(param_3, param_1, param_5);`n`n    __writefsdword(0, static_cast<unsigned long>(reinterpret_cast<std::uintptr_t>(registration.previous)));`n    return result;`n}`n#pragma warning(pop)`n
+#include <cstdint>
+
+struct EHRegistrationNode;
+struct _s_FuncInfo;
+
+extern "C" void* ExceptionList;
+extern "C" std::uint32_t DAT_10029490;
+
+extern "C" void __cdecl CatchGuardHandler();
+
+extern "C" void* __stdcall __CallSettingFrame_12(
+    void* param_1,
+    EHRegistrationNode* param_2,
+    unsigned long param_3);
+
+extern "C" void* __cdecl _CallCatchBlock2(
+    EHRegistrationNode* param_1,
+    _s_FuncInfo* param_2,
+    void* param_3,
+    int param_4,
+    unsigned long param_5)
+{
+    void* result;
+    void* local_1c;
+    void (*local_18)();
+    std::uint32_t local_14;
+    _s_FuncInfo* local_10;
+    EHRegistrationNode* local_c;
+    int local_8;
+
+    local_14 = DAT_10029490 ^
+               static_cast<std::uint32_t>(
+                   reinterpret_cast<std::uintptr_t>(&local_1c));
+    local_10 = param_2;
+    local_8 = param_4 + 1;
+    local_18 = CatchGuardHandler;
+    local_c = param_1;
+
+    local_1c = ExceptionList;
+    ExceptionList = &local_1c;
+
+    result = __CallSettingFrame_12(param_3, param_1, param_5);
+
+    ExceptionList = local_1c;
+    return result;
+}

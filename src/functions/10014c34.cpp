@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl FUN_10017cd2(int param_1);`n`n// This address is a shared CRT cleanup fragment: it inherits the caller's EBP`n// frame and must restore that frame's saved ESI after releasing lock 12.`nextern "C" __declspec(naked) void __stdcall FUN_10014c34(void)`n{`n    __asm {`n        push 0ch`n        call FUN_10017cd2`n        pop ecx`n        mov esi, dword ptr [ebp - 1ch]`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __cdecl FUN_10017cd2(int param_1);
+
+// This address is a shared CRT cleanup fragment: it inherits the caller's EBP
+// frame and must restore that frame's saved ESI after releasing lock 12.
+extern "C" __declspec(naked) void __stdcall FUN_10014c34(void)
+{
+    __asm {
+        push 0ch
+        call FUN_10017cd2
+        pop ecx
+        mov esi, dword ptr [ebp - 1ch]
+        ret
+    }
+}

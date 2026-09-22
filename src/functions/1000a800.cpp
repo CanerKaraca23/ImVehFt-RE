@@ -1,1 +1,94 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint8_t* DAT_1003c394;`nextern std::uint8_t DAT_1003aef3;`n`nextern std::int32_t __stdcall FUN_10009360();`nextern "C" void __fastcall FUN_1000a560(std::int32_t param_1);`nextern "C" std::int32_t* __stdcall FUN_1000cf80();`n`nstatic void dispatch_with_callback(std::int32_t index, std::uint32_t callback)`n{`n    __asm {`n        mov eax, callback`n        mov ecx, index`n        call FUN_1000a560`n    }`n}`n`nextern "C" std::uint32_t __stdcall FUN_1000a800(`n    std::uint32_t param_1,`n    std::uint32_t param_2)`n{`n    const std::int32_t iVar4 = FUN_10009360();`n`n    if (DAT_1003c394 == nullptr)`n    {`n        DAT_1003c394 = &DAT_1003aef3;`n`n        dispatch_with_callback(0x14, 0x1000d250);`n        dispatch_with_callback(0x15, 0x1000d300);`n        dispatch_with_callback(0x19, 0x1000d030);`n        dispatch_with_callback(7, 0x1000d140);`n    }`n`n    auto* piVar1 = reinterpret_cast<std::int32_t*>(`n        static_cast<std::uintptr_t>(iVar4) + 0x50);`n`n    if (*reinterpret_cast<std::int32_t*>(`n            static_cast<std::uintptr_t>(iVar4) + 0x54) == 0)`n    {`n        *reinterpret_cast<std::int32_t**>(`n            static_cast<std::uintptr_t>(iVar4) + 0x54) = piVar1;`n`n        *piVar1 = static_cast<std::int32_t>(`n            reinterpret_cast<std::uintptr_t>(piVar1));`n    }`n`n    std::int32_t* piVar5 = FUN_1000cf80();`n`n    if (piVar5 == nullptr)`n    {`n        piVar5 = nullptr;`n    }`n    else if (piVar5[1] == 0)`n    {`n        piVar5[1] = static_cast<std::int32_t>(`n            reinterpret_cast<std::uintptr_t>(piVar5));`n        *piVar5 = static_cast<std::int32_t>(`n            reinterpret_cast<std::uintptr_t>(piVar5));`n    }`n`n    const std::int32_t iVar2 = *piVar1;`n`n    auto* puVar3 = *reinterpret_cast<std::uint32_t**>(`n        static_cast<std::uintptr_t>(iVar2) + 4);`n`n    *puVar3 = static_cast<std::uint32_t>(`n        reinterpret_cast<std::uintptr_t>(piVar5));`n`n    *piVar5 = iVar2;`n`n    piVar5[1] = static_cast<std::int32_t>(`n        reinterpret_cast<std::uintptr_t>(puVar3));`n`n    *reinterpret_cast<std::int32_t**>(`n        static_cast<std::uintptr_t>(iVar2) + 4) = piVar5;`n`n    const std::int32_t iVar2AfterLink = *piVar1;`n`n    *reinterpret_cast<std::uint32_t*>(`n        static_cast<std::uintptr_t>(iVar2AfterLink) + 8) =`n        *reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(iVar4) + 0x44);`n`n    *reinterpret_cast<std::uint32_t*>(`n        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x0c) = 0x34;`n`n    *reinterpret_cast<std::int32_t*>(`n        static_cast<std::uintptr_t>(iVar4) + 0x44) += 0x34;`n`n    *reinterpret_cast<std::uint32_t*>(`n        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x10) =`n        0x32465649;`n`n    *reinterpret_cast<std::uint32_t*>(`n        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x14) = param_1;`n`n    *reinterpret_cast<std::uint32_t*>(`n        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x18) = param_2;`n`n    return *reinterpret_cast<std::uint32_t*>(`n        static_cast<std::uintptr_t>(iVar2AfterLink) + 8);`n}`n
+#include <cstdint>
+
+extern std::uint8_t* DAT_1003c394;
+extern std::uint8_t DAT_1003aef3;
+
+extern "C" std::int32_t __stdcall FUN_10009360();
+extern "C" void __fastcall FUN_1000a560(std::int32_t param_1);
+extern "C" std::int32_t* __stdcall FUN_1000cf80();
+
+extern "C" std::uint32_t __stdcall FUN_1000a800(
+    std::uint32_t param_1,
+    std::uint32_t param_2)
+{
+    const std::int32_t iVar4 = FUN_10009360();
+
+    if (DAT_1003c394 == nullptr)
+    {
+        DAT_1003c394 = &DAT_1003aef3;
+
+        FUN_1000a560(0x14);
+        FUN_1000a560(0x15);
+        FUN_1000a560(0x19);
+        FUN_1000a560(7);
+    }
+
+    auto* piVar1 = reinterpret_cast<std::int32_t*>(
+        static_cast<std::uintptr_t>(iVar4) + 0x50);
+
+    if (*reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(iVar4) + 0x54) == 0)
+    {
+        *reinterpret_cast<std::int32_t**>(
+            static_cast<std::uintptr_t>(iVar4) + 0x54) = piVar1;
+
+        *piVar1 = static_cast<std::int32_t>(
+            reinterpret_cast<std::uintptr_t>(piVar1));
+    }
+
+    std::int32_t* piVar5 = FUN_1000cf80();
+
+    if (piVar5 == nullptr)
+    {
+        piVar5 = nullptr;
+    }
+    else if (piVar5[1] == 0)
+    {
+        piVar5[1] = static_cast<std::int32_t>(
+            reinterpret_cast<std::uintptr_t>(piVar5));
+        *piVar5 = static_cast<std::int32_t>(
+            reinterpret_cast<std::uintptr_t>(piVar5));
+    }
+
+    const std::int32_t iVar2 = *piVar1;
+
+    auto* puVar3 = *reinterpret_cast<std::uint32_t**>(
+        static_cast<std::uintptr_t>(iVar2) + 4);
+
+    *puVar3 = static_cast<std::uint32_t>(
+        reinterpret_cast<std::uintptr_t>(piVar5));
+
+    *piVar5 = iVar2;
+
+    piVar5[1] = static_cast<std::int32_t>(
+        reinterpret_cast<std::uintptr_t>(puVar3));
+
+    *reinterpret_cast<std::int32_t**>(
+        static_cast<std::uintptr_t>(iVar2) + 4) = piVar5;
+
+    const std::int32_t iVar2AfterLink = *piVar1;
+
+    *reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(iVar2AfterLink) + 8) =
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(iVar4) + 0x44);
+
+    *reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x0c) = 0x34;
+
+    *reinterpret_cast<std::int32_t*>(
+        static_cast<std::uintptr_t>(iVar4) + 0x44) += 0x34;
+
+    *reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x10) =
+        0x32465649;
+
+    *reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x14) = param_1;
+
+    *reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(iVar2AfterLink) + 0x18) = param_2;
+
+    return *reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(iVar2AfterLink) + 8);
+}

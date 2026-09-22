@@ -1,1 +1,11 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl __forcdecpt(char* _Buf)`n{`n    using ForceDecimalPointLocale = void (__cdecl*)(char*, _locale_t);`n    reinterpret_cast<ForceDecimalPointLocale>(0x1001baeb)(`n        _Buf, (_locale_t)0x0);`n    return;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+void __cdecl __forcdecpt(char* _Buf)
+{
+    using ForceDecimalPointLocale = void (__cdecl*)(char*, _locale_t);
+    reinterpret_cast<ForceDecimalPointLocale>(0x1001baeb)(
+        _Buf, (_locale_t)0x0);
+    return;
+}

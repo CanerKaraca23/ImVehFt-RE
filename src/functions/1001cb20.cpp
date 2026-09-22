@@ -1,1 +1,47 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`n#if !defined(_MSC_VER) || !defined(_M_IX86)`n#error "FUN_1001cb20 requires the MSVC x86 x87 ABI."`n#endif`n`nextern "C" void __cdecl __87except(`n    int param_2,`n    int* local_24,`n    std::uint16_t* param_3);`n`nlong double __fastcall FUN_1001cb20(`n    std::uint32_t param_1,`n    int param_2,`n    std::uint16_t param_3,`n    std::uint32_t param_4,`n    std::uint32_t param_5,`n    std::uint32_t param_6,`n    std::uint32_t param_7,`n    std::uint32_t param_8)`n{`n    int local_24;`n    std::uint32_t uStack_20;`n    std::uint32_t uStack_1c;`n    std::uint32_t uStack_18;`n    std::uint32_t local_14;`n    std::uint32_t local_10;`n    double dStack_c;`n`n    (void)param_4;`n`n    local_14 = param_7;`n    local_10 = param_8;`n`n    __asm`n    {`n        fst dStack_c`n    }`n`n    uStack_1c = param_5;`n    uStack_18 = param_6;`n    uStack_20 = param_1;`n`n    __87except(param_2, &local_24, &param_3);`n`n    return static_cast<long double>(dStack_c);`n}`n
+#include <cstdint>
+
+#if !defined(_MSC_VER) || !defined(_M_IX86)
+#error "FUN_1001cb20 requires the MSVC x86 x87 ABI."
+#endif
+
+extern "C" void __cdecl __87except(
+    int param_2,
+    int* local_24,
+    std::uint16_t* param_3);
+
+long double __fastcall FUN_1001cb20(
+    std::uint32_t param_1,
+    int param_2,
+    std::uint16_t param_3,
+    std::uint32_t param_4,
+    std::uint32_t param_5,
+    std::uint32_t param_6,
+    std::uint32_t param_7,
+    std::uint32_t param_8)
+{
+    int local_24;
+    std::uint32_t uStack_20;
+    std::uint32_t uStack_1c;
+    std::uint32_t uStack_18;
+    std::uint32_t local_14;
+    std::uint32_t local_10;
+    double dStack_c;
+
+    (void)param_4;
+
+    local_14 = param_7;
+    local_10 = param_8;
+
+    __asm
+    {
+        fst dStack_c
+    }
+
+    uStack_1c = param_5;
+    uStack_18 = param_6;
+    uStack_20 = param_1;
+
+    __87except(param_2, &local_24, &param_3);
+
+    return static_cast<long double>(dStack_c);
+}

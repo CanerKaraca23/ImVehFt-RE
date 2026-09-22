@@ -1,1 +1,34 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <windows.h>`nstruct MappedObject`n{`n    unsigned int field_00;`n    HANDLE field_04;`n};`n`nstatic_assert(offsetof(MappedObject, field_04) == 4);`nextern "C" HANDLE DAT_1003c3e8;`nextern "C" MappedObject* DAT_1003c3ec;`n`nvoid __stdcall FUN_10009580()`n{`n    HANDLE hHeap;`n    HANDLE hObject;`n`n    if (DAT_1003c3e8 != (HANDLE)0x0)`n    {`n        hHeap = DAT_1003c3ec->field_04;`n        UnmapViewOfFile(DAT_1003c3ec);`n        DAT_1003c3ec = (MappedObject*)0x0;`n        CloseHandle(DAT_1003c3e8);`n        DAT_1003c3e8 = (HANDLE)0x0;`n`n        hObject = OpenFileMappingA(0xf001f, 0, "GTA_PLUGIN_SDK");`n        if (hObject != (HANDLE)0x0)`n        {`n            CloseHandle(hObject);`n            return;`n        }`n`n        HeapDestroy(hHeap);`n    }`n}`n
+#include <windows.h>
+struct MappedObject
+{
+    unsigned int field_00;
+    HANDLE field_04;
+};
+
+static_assert(offsetof(MappedObject, field_04) == 4);
+extern "C" HANDLE DAT_1003c3e8;
+extern "C" MappedObject* DAT_1003c3ec;
+
+extern "C" void __stdcall FUN_10009580()
+{
+    HANDLE hHeap;
+    HANDLE hObject;
+
+    if (DAT_1003c3e8 != (HANDLE)0x0)
+    {
+        hHeap = DAT_1003c3ec->field_04;
+        UnmapViewOfFile(DAT_1003c3ec);
+        DAT_1003c3ec = (MappedObject*)0x0;
+        CloseHandle(DAT_1003c3e8);
+        DAT_1003c3e8 = (HANDLE)0x0;
+
+        hObject = OpenFileMappingA(0xf001f, 0, "GTA_PLUGIN_SDK");
+        if (hObject != (HANDLE)0x0)
+        {
+            CloseHandle(hObject);
+            return;
+        }
+
+        HeapDestroy(hHeap);
+    }
+}

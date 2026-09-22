@@ -1,1 +1,57 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n#include <cstddef>`n`nstruct TypeInfoStorage`n{`n    std::uint32_t vtable;`n    std::int32_t* name;`n};`nstatic_assert(offsetof(TypeInfoStorage, name) == 4);`n`nextern std::int32_t DAT_10039a44;`nextern std::int32_t* DAT_10039a48;`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __cdecl __lock(int);`nextern "C" void __cdecl _free(void*);`nextern "C" void __stdcall FUN_10013b39(void);`nextern "C" void __stdcall __SEH_epilog4(void);`n`nextern "C" void __cdecl _Type_info_dtor(TypeInfoStorage* param_1)`n{`n    __SEH_prolog4(0x10028308u, 0xcu);`n    __lock(0x0E);`n`n    std::int32_t* memory = DAT_10039a48;`n    auto* name = reinterpret_cast<std::int32_t*>(`n        reinterpret_cast<std::uintptr_t>(param_1) + 4u);`n`n    if (*name != 0)`n    {`n        std::int32_t* previous = &DAT_10039a44;`n        std::int32_t* node;`n`n        do`n        {`n            node = previous;`n`n            if (DAT_10039a48 == nullptr)`n                goto free_name;`n`n            previous = DAT_10039a48;`n        }`n        while (*DAT_10039a48 != *name);`n`n        node[1] = DAT_10039a48[1];`n        _free(memory);`n`n    free_name:`n        _free(reinterpret_cast<void*>(`n            static_cast<std::uintptr_t>(*name)));`n`n        *name = 0;`n    }`n`n    FUN_10013b39();`n    __SEH_epilog4();`n}`n
+#include <cstdint>
+#include <cstddef>
+
+struct TypeInfoStorage
+{
+    std::uint32_t vtable;
+    std::int32_t* name;
+};
+static_assert(offsetof(TypeInfoStorage, name) == 4);
+
+extern std::int32_t DAT_10039a44;
+extern std::int32_t* DAT_10039a48;
+extern "C" void __cdecl __SEH_prolog4(std::uint32_t, int);
+extern "C" void __cdecl __lock(int);
+extern "C" void __cdecl _free(void*);
+extern "C" void __stdcall FUN_10013b39(void);
+extern "C" void __stdcall __SEH_epilog4(void);
+
+extern "C" void __cdecl _Type_info_dtor(TypeInfoStorage* param_1)
+{
+    __SEH_prolog4(0x0C, 0x10028308);
+
+    __lock(0x0E);
+
+    std::int32_t* memory = DAT_10039a48;
+    auto* name = reinterpret_cast<std::int32_t*>(
+        reinterpret_cast<std::uintptr_t>(param_1) + 4u);
+
+    if (*name != 0)
+    {
+        std::int32_t* previous = &DAT_10039a44;
+        std::int32_t* node;
+
+        do
+        {
+            node = previous;
+
+            if (DAT_10039a48 == nullptr)
+                goto free_name;
+
+            previous = DAT_10039a48;
+        }
+        while (*DAT_10039a48 != *name);
+
+        node[1] = DAT_10039a48[1];
+        _free(memory);
+
+    free_name:
+        _free(reinterpret_cast<void*>(
+            static_cast<std::uintptr_t>(*name)));
+
+        *name = 0;
+    }
+
+    FUN_10013b39();
+    __SEH_epilog4();
+}

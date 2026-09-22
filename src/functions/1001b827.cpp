@@ -1,1 +1,84 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nstruct EHExceptionRecord`n{`n    std::uint8_t reserved_00[4];`n    std::uint32_t field_04;`n};`n`nstruct EHRegistrationNode;`nstruct _s_FuncInfo;`n`nstruct TranslatorGuardRN`n{`n    std::uint8_t reserved_00[0x0C];`n    _s_FuncInfo* field_0C;`n    EHRegistrationNode* field_10;`n    int field_14;`n    EHRegistrationNode* field_18;`n    std::uint8_t reserved_1C[8];`n    int field_24;`n};`n`nenum _EXCEPTION_DISPOSITION : int;`n`nextern "C" void __cdecl ___InternalCxxFrameHandler(`n    EHExceptionRecord*, EHRegistrationNode*, void*, void*,`n    _s_FuncInfo*, int, EHRegistrationNode*, unsigned char);`n`nextern "C" void __stdcall _UnwindNestedFrames(`n    EHRegistrationNode*, EHExceptionRecord*);`n`nextern "C" int __cdecl _CallSETranslator(`n    EHExceptionRecord*, EHRegistrationNode*, void*, void*,`n    _s_FuncInfo*, int, EHRegistrationNode*);`n`nusing TranslatorCallback = _EXCEPTION_DISPOSITION(__cdecl*)();`n`n_EXCEPTION_DISPOSITION __cdecl TranslatorGuardHandler(`n    EHExceptionRecord* param_1,`n    TranslatorGuardRN* param_2,`n    void* param_3,`n    void* param_4)`n{`n    (void)param_4;`n`n    if ((param_1->field_04 & 0x66u) != 0)`n    {`n        param_2->field_24 = 1;`n`n        // __security_check_cookie is compiler-injected at the function epilogue.`n        return static_cast<_EXCEPTION_DISPOSITION>(1);`n    }`n`n    ___InternalCxxFrameHandler(`n        param_1,`n        param_2->field_10,`n        param_3,`n        nullptr,`n        param_2->field_0C,`n        param_2->field_14,`n        param_2->field_18,`n        1);`n`n    if (param_2->field_24 == 0)`n    {`n        _UnwindNestedFrames(`n            reinterpret_cast<EHRegistrationNode*>(param_2),`n            param_1);`n    }`n`n    TranslatorCallback local_8;`n`n    _CallSETranslator(`n        reinterpret_cast<EHExceptionRecord*>(0x123),`n        reinterpret_cast<EHRegistrationNode*>(&local_8),`n        nullptr,`n        nullptr,`n        nullptr,`n        0,`n        nullptr);`n`n    // __security_check_cookie is compiler-injected at the function epilogue.`n    return local_8();`n}`n
+#include <cstdint>
+
+struct EHExceptionRecord
+{
+    std::uint8_t reserved_00[4];
+    std::uint32_t field_04;
+};
+
+struct EHRegistrationNode;
+struct _s_FuncInfo;
+
+struct TranslatorGuardRN
+{
+    std::uint8_t reserved_00[0x0C];
+    _s_FuncInfo* field_0C;
+    EHRegistrationNode* field_10;
+    int field_14;
+    EHRegistrationNode* field_18;
+    std::uint8_t reserved_1C[8];
+    int field_24;
+};
+
+enum _EXCEPTION_DISPOSITION : int;
+
+extern "C" void __cdecl ___InternalCxxFrameHandler(
+    EHExceptionRecord*, EHRegistrationNode*, void*, void*,
+    _s_FuncInfo*, int, EHRegistrationNode*, unsigned char);
+
+extern "C" void __stdcall _UnwindNestedFrames(
+    EHRegistrationNode*, EHExceptionRecord*);
+
+extern "C" int __cdecl _CallSETranslator(
+    EHExceptionRecord*, EHRegistrationNode*, void*, void*,
+    _s_FuncInfo*, int, EHRegistrationNode*);
+
+using TranslatorCallback = _EXCEPTION_DISPOSITION(__cdecl*)();
+
+_EXCEPTION_DISPOSITION __cdecl TranslatorGuardHandler(
+    EHExceptionRecord* param_1,
+    TranslatorGuardRN* param_2,
+    void* param_3,
+    void* param_4)
+{
+    (void)param_4;
+
+    if ((param_1->field_04 & 0x66u) != 0)
+    {
+        param_2->field_24 = 1;
+
+        // __security_check_cookie is compiler-injected at the function epilogue.
+        return static_cast<_EXCEPTION_DISPOSITION>(1);
+    }
+
+    ___InternalCxxFrameHandler(
+        param_1,
+        param_2->field_10,
+        param_3,
+        nullptr,
+        param_2->field_0C,
+        param_2->field_14,
+        param_2->field_18,
+        1);
+
+    if (param_2->field_24 == 0)
+    {
+        _UnwindNestedFrames(
+            reinterpret_cast<EHRegistrationNode*>(param_2),
+            param_1);
+    }
+
+    TranslatorCallback local_8;
+
+    _CallSETranslator(
+        reinterpret_cast<EHExceptionRecord*>(0x123),
+        reinterpret_cast<EHRegistrationNode*>(&local_8),
+        nullptr,
+        nullptr,
+        nullptr,
+        0,
+        nullptr);
+
+    // __security_check_cookie is compiler-injected at the function epilogue.
+    return local_8();
+}

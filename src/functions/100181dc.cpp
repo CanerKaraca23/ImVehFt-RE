@@ -1,1 +1,59 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <Windows.h>`n#include <cstdint>`n#include <cstdio>`n`nextern "C" int DAT_1003d540;`nextern "C" int* DAT_1003c520;`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`nextern "C" void __cdecl __lock(int);`nextern "C" int __cdecl _fclose(FILE*);`nextern "C" void __cdecl _free(void*);`nextern "C" void __stdcall FUN_1001826f(void);`n`nextern "C" int __cdecl __fcloseall(void)`n{`n    __SEH_prolog4(0x100284e0u, 0x10u);`n    int local_20 = 0;`n    __lock(1);`n`n    for (int iVar2 = 3; iVar2 < DAT_1003d540; iVar2 = iVar2 + 1)`n    {`n        int* slot = DAT_1003c520 + iVar2;`n`n        if (*slot != 0)`n        {`n            FILE* _File = reinterpret_cast<FILE*>(`n                static_cast<std::uintptr_t>(*slot));`n`n            if ((*reinterpret_cast<int*>(_File) & 0x83) != 0)`n            {`n                int iVar1 = _fclose(_File);`n`n                if (iVar1 != -1)`n                {`n                    local_20 = local_20 + 1;`n                }`n            }`n`n            if (0x13 < iVar2)`n            {`n                DeleteCriticalSection(`n                    reinterpret_cast<LPCRITICAL_SECTION>(`n                        static_cast<std::uintptr_t>(*slot) + 0x20));`n`n                _free(reinterpret_cast<void*>(`n                    static_cast<std::uintptr_t>(*slot)));`n`n                *slot = 0;`n            }`n        }`n    }`n`n    FUN_1001826f();`n    __SEH_epilog4();`n`n    return local_20;`n}`n
+#include <Windows.h>
+#include <cstdint>
+#include <cstdio>
+
+extern "C" int DAT_1003d540;
+extern "C" int* DAT_1003c520;
+
+extern "C" void __cdecl __SEH_prolog4();
+extern "C" void __cdecl __SEH_epilog4();
+extern "C" void __cdecl __lock(int);
+extern "C" int __cdecl fclose(FILE*);
+extern "C" void __cdecl _free(void*);
+extern "C" void __stdcall FUN_1001826f();
+
+extern "C" int __cdecl _fcloseall(void)
+{
+    __SEH_prolog4();
+
+    int local_20 = 0;
+    __lock(1);
+
+    for (int iVar2 = 3; iVar2 < DAT_1003d540; iVar2 = iVar2 + 1)
+    {
+        int* slot = DAT_1003c520 + iVar2;
+
+        if (*slot != 0)
+        {
+            FILE* _File = reinterpret_cast<FILE*>(
+                static_cast<std::uintptr_t>(*slot));
+
+            if ((*reinterpret_cast<int*>(_File) & 0x83) != 0)
+            {
+                int iVar1 = fclose(_File);
+
+                if (iVar1 != -1)
+                {
+                    local_20 = local_20 + 1;
+                }
+            }
+
+            if (0x13 < iVar2)
+            {
+                DeleteCriticalSection(
+                    reinterpret_cast<LPCRITICAL_SECTION>(
+                        static_cast<std::uintptr_t>(*slot) + 0x20));
+
+                _free(reinterpret_cast<void*>(
+                    static_cast<std::uintptr_t>(*slot)));
+
+                *slot = 0;
+            }
+        }
+    }
+
+    FUN_1001826f();
+    __SEH_epilog4();
+
+    return local_20;
+}

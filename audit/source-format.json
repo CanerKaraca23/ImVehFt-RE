@@ -1,0 +1,8 @@
+{
+  "generated_utc": "2026-09-22T22:54:16.1378831Z",
+  "source_count": 705,
+  "files_with_actual_line_breaks": 705,
+  "recognized_or_tool_labels": 306,
+  "auto_generated_address_labels": 399,
+  "note": "Original source filenames cannot be recovered from the stripped binary; the map records Ghidra evidence without guessing."
+}

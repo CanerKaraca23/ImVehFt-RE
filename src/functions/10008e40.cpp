@@ -1,1 +1,59 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing LPVOID = void*;`nusing SIZE_T = std::uint32_t;`nusing DWORD = std::uint32_t;`nusing BOOL = std::int32_t;`n`nextern "C" BOOL __stdcall VirtualProtect(`n    LPVOID,`n    SIZE_T,`n    DWORD,`n    DWORD*`n);`n`nextern "C" void* __cdecl _memset(`n    void*,`n    int,`n    SIZE_T`n);`n`nextern "C" void __cdecl FUN_10008e40(LPVOID param_1)`n{`n    SIZE_T unaff_ESI;`n`n#if defined(_MSC_VER) && defined(_M_IX86)`n    __asm mov unaff_ESI, esi`n#elif defined(__i386__)`n    __asm__ volatile("movl %%esi, %0" : "=r"(unaff_ESI));`n#else`n    register SIZE_T esi_value asm("esi");`n    unaff_ESI = esi_value;`n#endif`n`n    LPVOID local_18 = nullptr;`n    SIZE_T in_stack_ffffffec;`n    DWORD local_10;`n    bool local_c;`n    DWORD local_8;`n`n    if (unaff_ESI == 0)`n    {`n        local_c = false;`n    }`n    else`n    {`n        local_18 = param_1;`n        BOOL result = VirtualProtect(param_1, unaff_ESI, 0x40, &local_10);`n        local_c = result != 0;`n        in_stack_ffffffec = unaff_ESI;`n    }`n`n    _memset(param_1, 0x90, unaff_ESI);`n`n    if (local_c != false)`n    {`n        local_8 = local_10;`n        VirtualProtect(local_18, in_stack_ffffffec, local_10, &local_8);`n    }`n}`n
+#include <cstdint>
+
+using LPVOID = void*;
+using SIZE_T = std::uint32_t;
+using DWORD = std::uint32_t;
+using BOOL = std::int32_t;
+
+extern "C" BOOL __stdcall VirtualProtect(
+    LPVOID,
+    SIZE_T,
+    DWORD,
+    DWORD*
+);
+
+extern "C" void* __cdecl _memset(
+    void*,
+    int,
+    SIZE_T
+);
+
+extern "C" void __cdecl FUN_10008e40(LPVOID param_1)
+{
+    SIZE_T unaff_ESI;
+
+#if defined(_MSC_VER) && defined(_M_IX86)
+    __asm mov unaff_ESI, esi
+#elif defined(__i386__)
+    __asm__ volatile("movl %%esi, %0" : "=r"(unaff_ESI));
+#else
+    register SIZE_T esi_value asm("esi");
+    unaff_ESI = esi_value;
+#endif
+
+    LPVOID local_18 = nullptr;
+    SIZE_T in_stack_ffffffec;
+    DWORD local_10;
+    bool local_c;
+    DWORD local_8;
+
+    if (unaff_ESI == 0)
+    {
+        local_c = false;
+    }
+    else
+    {
+        local_18 = param_1;
+        BOOL result = VirtualProtect(param_1, unaff_ESI, 0x40, &local_10);
+        local_c = result != 0;
+        in_stack_ffffffec = unaff_ESI;
+    }
+
+    _memset(param_1, 0x90, unaff_ESI);
+
+    if (local_c != false)
+    {
+        local_8 = local_10;
+        VirtualProtect(local_18, in_stack_ffffffec, local_10, &local_8);
+    }
+}

@@ -1,1 +1,28 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" errno_t __cdecl __wctomb_s_l(`n    int* _SizeConverted,`n    char* _MbCh,`n    rsize_t _SizeInBytes,`n    wchar_t _WCh,`n    _locale_t _Locale);`n`nextern "C" errno_t __cdecl _wctomb_s(`n    int* _SizeConverted,`n    char* _MbCh,`n    rsize_t _SizeInBytes,`n    wchar_t _WCh)`n{`n    errno_t eVar1;`n`n    eVar1 = __wctomb_s_l(`n        _SizeConverted,`n        _MbCh,`n        _SizeInBytes,`n        _WCh,`n        (_locale_t)0x0);`n`n    return eVar1;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" errno_t __cdecl __wctomb_s_l(
+    int* _SizeConverted,
+    char* _MbCh,
+    rsize_t _SizeInBytes,
+    wchar_t _WCh,
+    _locale_t _Locale);
+
+extern "C" errno_t __cdecl _wctomb_s(
+    int* _SizeConverted,
+    char* _MbCh,
+    rsize_t _SizeInBytes,
+    wchar_t _WCh)
+{
+    errno_t eVar1;
+
+    eVar1 = __wctomb_s_l(
+        _SizeConverted,
+        _MbCh,
+        _SizeInBytes,
+        _WCh,
+        (_locale_t)0x0);
+
+    return eVar1;
+}

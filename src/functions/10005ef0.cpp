@@ -1,1 +1,138 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uintptr_t DAT_1003759c;`nextern float DAT_10024f58;`nextern float DAT_10024f48;`nextern float DAT_10024f50;`nextern float DAT_10024f28;`nextern float DAT_10024ee0;`nextern float DAT_10024ed8;`nextern float DAT_10024eb0;`nextern float DAT_00c812a8;`nextern float DAT_10024f3c;`nextern float DAT_10024f40;`nextern std::uint32_t DAT_10024ec8;`nextern std::uint32_t DAT_1003bc1c;`n`nextern "C" void __cdecl FUN_0054eef0(`n    float*, int, std::uint32_t, float*);`n`nextern "C" void __cdecl FUN_007000e0(`n    int, float, float, float, float, float, float,`n    float, float, int, int, int, int, int);`n`nextern float __stdcall FUN_10008d20();`n`nstatic float call_FUN_10008d20(std::uintptr_t input)`n{`n    float result;`n    __asm {`n        mov eax, input`n        call FUN_10008d20`n        fstp result`n    }`n    return result;`n}`n`n`nextern "C" void __fastcall FUN_100073f0(`n    void*, std::uint32_t, void*, float, float, float,`n    std::uint32_t, std::uint32_t);`n`nextern "C" int __cdecl ROUND(float);`n`nvoid __cdecl FUN_10005ef0(std::uint32_t param_1)`n{`n    std::uintptr_t in_EAX;`n    __asm { mov in_EAX, eax }`n`n    const std::uint32_t uVar6 =`n        *reinterpret_cast<const std::uint32_t*>(in_EAX + 0x14);`n`n    const std::int32_t iVar1 =`n        *reinterpret_cast<const std::int32_t*>(`n            *reinterpret_cast<const std::int32_t*>(`n                DAT_1003759c +`n                static_cast<std::int32_t>(`n                    *reinterpret_cast<const std::int16_t*>(in_EAX + 0x22)) * 4) +`n            0x5c);`n`n    float* pfVar4 = reinterpret_cast<float*>(`n        static_cast<std::uintptr_t>(iVar1) + 0x0c);`n`n    float local_20 = -*pfVar4;`n    float local_1c = *reinterpret_cast<float*>(`n        static_cast<std::uintptr_t>(iVar1) + 0x10);`n    float local_18 = *reinterpret_cast<float*>(`n        static_cast<std::uintptr_t>(iVar1) + 0x14);`n`n    FUN_0054eef0(&local_20, 1, uVar6, pfVar4);`n`n    float local_14 = -*pfVar4;`n    float local_10 = *reinterpret_cast<float*>(`n        static_cast<std::uintptr_t>(iVar1) + 0x10) - DAT_10024f58;`n    float local_c = *reinterpret_cast<float*>(`n        static_cast<std::uintptr_t>(iVar1) + 0x14);`n`n    FUN_0054eef0(&local_14, 1, uVar6, &local_14);`n`n    local_14 = local_14 - local_20;`n    local_10 = local_10 - local_1c;`n    local_c = local_c - local_18;`n`n    FUN_007000e0(`n        1,`n        local_20,`n        local_1c,`n        local_18,`n        local_14,`n        local_10,`n        local_c,`n        DAT_10024f50,`n        DAT_10024f28,`n        0,`n        0,`n        0,`n        0,`n        0);`n`n    local_20 = -*pfVar4;`n    local_1c = *reinterpret_cast<float*>(`n        static_cast<std::uintptr_t>(iVar1) + 0x10) - DAT_10024f48;`n    local_18 = *reinterpret_cast<float*>(`n        static_cast<std::uintptr_t>(iVar1) + 0x14);`n`n    FUN_0054eef0(&local_20, 1, uVar6, &local_20);`n`n    std::uintptr_t extraout_ECX;`n    __asm { mov extraout_ECX, ecx }`n`n    if (static_cast<std::uint8_t>(param_1) == 0x01)`n    {`n        param_1 = (param_1 & 0x00ffffffu) | (0x32u << 24);`n    }`n    else if (static_cast<std::uint8_t>(param_1) == 0x02)`n    {`n        param_1 = (param_1 & 0x00ffffffu) | (0x14u << 24);`n    }`n    else if (static_cast<std::uint8_t>(param_1) == 0x03)`n    {`n        param_1 = (param_1 & 0x00ffffffu) | (0x46u << 24);`n    }`n`n    float fVar2 = DAT_00c812a8;`n    if (DAT_00c812a8 < DAT_10024ee0)`n    {`n        fVar2 = DAT_10024ed8;`n    }`n`n    const std::int32_t local_8 = ROUND(`n        static_cast<float>(`n            static_cast<std::int32_t>(`n                static_cast<std::uint8_t>(param_1 >> 24))) *`n            fVar2 *`n            DAT_10024eb0);`n`n    const std::uint8_t uVar3 =`n        static_cast<std::uint8_t>(local_8);`n`n    FUN_100073f0(`n        reinterpret_cast<void*>(extraout_ECX & 0xffffff00u),`n        static_cast<std::uint32_t>(`n            (reinterpret_cast<std::uintptr_t>(&local_20) & 0xffffff00u) |`n            uVar3),`n        &local_20,`n        DAT_10024f3c,`n        DAT_10024f40,`n        call_FUN_10008d20(uVar6),`n        DAT_10024ec8,`n        DAT_1003bc1c);`n}`n
+#include <cstdint>
+
+extern std::uintptr_t DAT_1003759c;
+extern float DAT_10024f58;
+extern float DAT_10024f48;
+extern float DAT_10024f50;
+extern float DAT_10024f28;
+extern float DAT_10024ee0;
+extern float DAT_10024ed8;
+extern float DAT_10024eb0;
+extern float DAT_00c812a8;
+extern float DAT_10024f3c;
+extern float DAT_10024f40;
+extern std::uint32_t DAT_10024ec8;
+extern std::uint32_t DAT_1003bc1c;
+
+extern "C" void __cdecl FUN_0054eef0(
+    float*, int, std::uint32_t, float*);
+
+extern "C" void __cdecl FUN_007000e0(
+    int, float, float, float, float, float, float,
+    float, float, int, int, int, int, int);
+
+extern "C" long double __stdcall FUN_10008d20();
+
+extern "C" void __fastcall FUN_100073f0(
+    void*, std::uint32_t, void*, float, float, float,
+    std::uint32_t, std::uint32_t);
+
+extern "C" int __cdecl ROUND(float);
+
+extern "C" void __cdecl FUN_10005ef0(std::uint32_t param_1)
+{
+    std::uintptr_t in_EAX;
+    __asm { mov in_EAX, eax }
+
+    const std::uint32_t uVar6 =
+        *reinterpret_cast<const std::uint32_t*>(in_EAX + 0x14);
+
+    const std::int32_t iVar1 =
+        *reinterpret_cast<const std::int32_t*>(
+            *reinterpret_cast<const std::int32_t*>(
+                DAT_1003759c +
+                static_cast<std::int32_t>(
+                    *reinterpret_cast<const std::int16_t*>(in_EAX + 0x22)) * 4) +
+            0x5c);
+
+    float* pfVar4 = reinterpret_cast<float*>(
+        static_cast<std::uintptr_t>(iVar1) + 0x0c);
+
+    float local_20 = -*pfVar4;
+    float local_1c = *reinterpret_cast<float*>(
+        static_cast<std::uintptr_t>(iVar1) + 0x10);
+    float local_18 = *reinterpret_cast<float*>(
+        static_cast<std::uintptr_t>(iVar1) + 0x14);
+
+    FUN_0054eef0(&local_20, 1, uVar6, pfVar4);
+
+    float local_14 = -*pfVar4;
+    float local_10 = *reinterpret_cast<float*>(
+        static_cast<std::uintptr_t>(iVar1) + 0x10) - DAT_10024f58;
+    float local_c = *reinterpret_cast<float*>(
+        static_cast<std::uintptr_t>(iVar1) + 0x14);
+
+    FUN_0054eef0(&local_14, 1, uVar6, &local_14);
+
+    local_14 = local_14 - local_20;
+    local_10 = local_10 - local_1c;
+    local_c = local_c - local_18;
+
+    FUN_007000e0(
+        1,
+        local_20,
+        local_1c,
+        local_18,
+        local_14,
+        local_10,
+        local_c,
+        DAT_10024f50,
+        DAT_10024f28,
+        0,
+        0,
+        0,
+        0,
+        0);
+
+    local_20 = -*pfVar4;
+    local_1c = *reinterpret_cast<float*>(
+        static_cast<std::uintptr_t>(iVar1) + 0x10) - DAT_10024f48;
+    local_18 = *reinterpret_cast<float*>(
+        static_cast<std::uintptr_t>(iVar1) + 0x14);
+
+    FUN_0054eef0(&local_20, 1, uVar6, &local_20);
+
+    std::uintptr_t extraout_ECX;
+    __asm { mov extraout_ECX, ecx }
+
+    if (static_cast<std::uint8_t>(param_1) == 0x01)
+    {
+        param_1 = (param_1 & 0x00ffffffu) | (0x32u << 24);
+    }
+    else if (static_cast<std::uint8_t>(param_1) == 0x02)
+    {
+        param_1 = (param_1 & 0x00ffffffu) | (0x14u << 24);
+    }
+    else if (static_cast<std::uint8_t>(param_1) == 0x03)
+    {
+        param_1 = (param_1 & 0x00ffffffu) | (0x46u << 24);
+    }
+
+    float fVar2 = DAT_00c812a8;
+    if (DAT_00c812a8 < DAT_10024ee0)
+    {
+        fVar2 = DAT_10024ed8;
+    }
+
+    const std::int32_t local_8 = ROUND(
+        static_cast<float>(
+            static_cast<std::int32_t>(
+                static_cast<std::uint8_t>(param_1 >> 24))) *
+            fVar2 *
+            DAT_10024eb0);
+
+    const std::uint8_t uVar3 =
+        static_cast<std::uint8_t>(local_8);
+
+    FUN_100073f0(
+        reinterpret_cast<void*>(extraout_ECX & 0xffffff00u),
+        static_cast<std::uint32_t>(
+            (reinterpret_cast<std::uintptr_t>(&local_20) & 0xffffff00u) |
+            uVar3),
+        &local_20,
+        DAT_10024f3c,
+        DAT_10024f40,
+        static_cast<float>(FUN_10008d20()),
+        DAT_10024ec8,
+        DAT_1003bc1c);
+}

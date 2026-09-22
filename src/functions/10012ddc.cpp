@@ -1,1 +1,10 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl doexit(int code, int quick, int return_status);`n`nextern "C" __declspec(noreturn) void __cdecl __exit(int _Code)`n{`n    doexit(_Code, 1, 0);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __cdecl doexit(int code, int quick, int return_status);
+
+extern "C" __declspec(noreturn) void __cdecl __exit(int _Code)
+{
+    doexit(_Code, 1, 0);
+}

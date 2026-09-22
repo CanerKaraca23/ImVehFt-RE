@@ -1,1 +1,50 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`nextern "C" [[noreturn]] void __stdcall FUN_100101c2(char*);`nextern void __stdcall FUN_1000d380(unsigned int);`n`nvoid __stdcall FUN_1000cfe0()`n{`n    struct VectorStorage`n    {`n        unsigned int begin_address;`n        unsigned int end_address;`n        unsigned int capacity_address;`n    };`n`n    static_assert(offsetof(VectorStorage, begin_address) == 0);`n    static_assert(offsetof(VectorStorage, end_address) == 4);`n    static_assert(offsetof(VectorStorage, capacity_address) == 8);`n`n    VectorStorage* in_EAX;`n    __asm mov in_EAX, eax`n`n    unsigned int uVar1 =`n        (in_EAX->end_address - in_EAX->begin_address) >> 2;`n`n    unsigned long long uVar3 =`n        (static_cast<unsigned long long>(in_EAX->begin_address) << 32) |`n        static_cast<unsigned long long>(uVar1);`n`n    if (0x3ffffffeu < uVar1)`n        FUN_100101c2(const_cast<char*>("vector<T> too long"));`n`n    unsigned int uVar2 =`n        static_cast<unsigned int>(uVar3) + 1u;`n`n    uVar1 =`n        (in_EAX->capacity_address -`n         static_cast<unsigned int>(uVar3 >> 32)) >> 2;`n`n    if (uVar1 < uVar2)`n    {`n        if (0x3fffffffu - (uVar1 >> 1) < uVar1)`n            uVar1 = 0;`n        else`n            uVar1 = uVar1 + (uVar1 >> 1);`n`n        if (uVar1 < uVar2)`n            uVar1 = uVar2;`n`n        FUN_1000d380(uVar1);`n    }`n}`n
+#include <cstddef>
+extern "C" unsigned long long __stdcall FUN_100101c2(const char*);
+extern void __stdcall FUN_1000d380(unsigned int);
+
+extern "C" void __stdcall FUN_1000cfe0()
+{
+    struct VectorStorage
+    {
+        unsigned int begin_address;
+        unsigned int end_address;
+        unsigned int capacity_address;
+    };
+
+    static_assert(offsetof(VectorStorage, begin_address) == 0);
+    static_assert(offsetof(VectorStorage, end_address) == 4);
+    static_assert(offsetof(VectorStorage, capacity_address) == 8);
+
+    VectorStorage* in_EAX;
+    __asm mov in_EAX, eax
+
+    unsigned int uVar1 =
+        (in_EAX->end_address - in_EAX->begin_address) >> 2;
+
+    unsigned long long uVar3 =
+        (static_cast<unsigned long long>(in_EAX->begin_address) << 32) |
+        static_cast<unsigned long long>(uVar1);
+
+    if (0x3ffffffeu < uVar1)
+        uVar3 = FUN_100101c2("vector<T> too long");
+
+    unsigned int uVar2 =
+        static_cast<unsigned int>(uVar3) + 1u;
+
+    uVar1 =
+        (in_EAX->capacity_address -
+         static_cast<unsigned int>(uVar3 >> 32)) >> 2;
+
+    if (uVar1 < uVar2)
+    {
+        if (0x3fffffffu - (uVar1 >> 1) < uVar1)
+            uVar1 = 0;
+        else
+            uVar1 = uVar1 + (uVar1 >> 1);
+
+        if (uVar1 < uVar2)
+            uVar1 = uVar2;
+
+        FUN_1000d380(uVar1);
+    }
+}

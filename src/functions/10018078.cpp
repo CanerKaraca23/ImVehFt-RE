@@ -1,1 +1,8 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint32_t _DAT_1003a330;`n`nextern "C" void __cdecl FUN_10018078(std::uint32_t param_1)`n{`n    _DAT_1003a330 = param_1;`n}`n
+#include <cstdint>
+
+extern "C" std::uint32_t _DAT_1003a330;
+
+extern "C" void __cdecl FUN_10018078(std::uint32_t param_1)
+{
+    _DAT_1003a330 = param_1;
+}

@@ -1,1 +1,62 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing Callback = void(__cdecl*)();`nusing RegisterContext = std::uint32_t*;`n`nextern std::int32_t _DAT_00b7cb4c;`nextern std::uint32_t* _DAT_00c1703c;`n`nextern std::int32_t __stdcall FUN_10009360();`nextern void __stdcall FUN_10009a80();`n`nvoid __stdcall FUN_100099f0(void)`n{`n    RegisterContext in_EAX;`n    __asm mov in_EAX, eax`n`n    std::int32_t state = FUN_10009360();`n`n    if (*reinterpret_cast<std::int32_t*>(`n            reinterpret_cast<std::uint8_t*>(state) + 0x10) != _DAT_00b7cb4c)`n    {`n        *reinterpret_cast<std::int32_t*>(`n            reinterpret_cast<std::uint8_t*>(state) + 0x10) = _DAT_00b7cb4c;`n`n        FUN_10009a80();`n`n        reinterpret_cast<void(__cdecl*)(std::uint32_t*)>(`n            0x007EE180)(_DAT_00c1703c);`n`n        state = FUN_10009360();`n`n        reinterpret_cast<void(__cdecl*)(std::uint32_t)>(`n            0x007FB060)(`n                *reinterpret_cast<std::uint32_t*>(`n                    reinterpret_cast<std::uint8_t*>(state) + 0x0C));`n`n        reinterpret_cast<void(__cdecl*)(std::uint32_t, std::uint32_t, std::uint32_t)>(`n            0x007FAF50)(`n                *reinterpret_cast<std::uint32_t*>(`n                    reinterpret_cast<std::uint8_t*>(_DAT_00c1703c) + 0x60),`n                0,`n                0);`n`n        reinterpret_cast<void(__cdecl*)()>(0x007FB110)();`n`n        reinterpret_cast<void(__cdecl*)(std::uint32_t*)>(`n            0x007EE190)(_DAT_00c1703c);`n    }`n`n    std::uint32_t* end = reinterpret_cast<std::uint32_t*>(in_EAX[1]);`n`n    for (std::uint32_t* current =`n             reinterpret_cast<std::uint32_t*>(in_EAX[0]);`n         current != end;`n         ++current)`n    {`n        auto callback = reinterpret_cast<Callback>(*current);`n`n        reinterpret_cast<void(__cdecl*)()>(0x00700D70)();`n        callback();`n    }`n}`n
+#include <cstdint>
+
+using Callback = void(__cdecl*)();
+using RegisterContext = std::uint32_t*;
+
+extern std::int32_t _DAT_00b7cb4c;
+extern std::uint32_t* _DAT_00c1703c;
+
+extern "C" std::int32_t __stdcall FUN_10009360();
+extern void __stdcall FUN_10009a80();
+
+void __stdcall FUN_100099f0(void)
+{
+    RegisterContext in_EAX;
+    __asm mov in_EAX, eax
+
+    std::int32_t state = FUN_10009360();
+
+    if (*reinterpret_cast<std::int32_t*>(
+            reinterpret_cast<std::uint8_t*>(state) + 0x10) != _DAT_00b7cb4c)
+    {
+        *reinterpret_cast<std::int32_t*>(
+            reinterpret_cast<std::uint8_t*>(state) + 0x10) = _DAT_00b7cb4c;
+
+        FUN_10009a80();
+
+        reinterpret_cast<void(__cdecl*)(std::uint32_t*)>(
+            0x007EE180)(_DAT_00c1703c);
+
+        state = FUN_10009360();
+
+        reinterpret_cast<void(__cdecl*)(std::uint32_t)>(
+            0x007FB060)(
+                *reinterpret_cast<std::uint32_t*>(
+                    reinterpret_cast<std::uint8_t*>(state) + 0x0C));
+
+        reinterpret_cast<void(__cdecl*)(std::uint32_t, std::uint32_t, std::uint32_t)>(
+            0x007FAF50)(
+                *reinterpret_cast<std::uint32_t*>(
+                    reinterpret_cast<std::uint8_t*>(_DAT_00c1703c) + 0x60),
+                0,
+                0);
+
+        reinterpret_cast<void(__cdecl*)()>(0x007FB110)();
+
+        reinterpret_cast<void(__cdecl*)(std::uint32_t*)>(
+            0x007EE190)(_DAT_00c1703c);
+    }
+
+    std::uint32_t* end = reinterpret_cast<std::uint32_t*>(in_EAX[1]);
+
+    for (std::uint32_t* current =
+             reinterpret_cast<std::uint32_t*>(in_EAX[0]);
+         current != end;
+         ++current)
+    {
+        auto callback = reinterpret_cast<Callback>(*current);
+
+        reinterpret_cast<void(__cdecl*)()>(0x00700D70)();
+        callback();
+    }
+}

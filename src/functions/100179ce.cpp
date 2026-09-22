@@ -1,1 +1,20 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n`n`nextern "C" int __cdecl __mbtowc_l(`n    wchar_t* _DstCh,`n    char* _SrcCh,`n    std::size_t _SrcSizeInBytes,`n    _locale_t _Locale);`n`nextern "C" int __cdecl _mbtowc(`n    wchar_t* _DstCh,`n    char* _SrcCh,`n    std::size_t _SrcSizeInBytes)`n{`n    return __mbtowc_l(`n        _DstCh,`n        _SrcCh,`n        _SrcSizeInBytes,`n        static_cast<_locale_t>(nullptr));`n}`n
+#include <cstddef>
+
+
+extern "C" int __cdecl __mbtowc_l(
+    wchar_t* _DstCh,
+    char* _SrcCh,
+    std::size_t _SrcSizeInBytes,
+    _locale_t _Locale);
+
+extern "C" int __cdecl _mbtowc(
+    wchar_t* _DstCh,
+    char* _SrcCh,
+    std::size_t _SrcSizeInBytes)
+{
+    return __mbtowc_l(
+        _DstCh,
+        _SrcCh,
+        _SrcSizeInBytes,
+        static_cast<_locale_t>(nullptr));
+}

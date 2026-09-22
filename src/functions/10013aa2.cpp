@@ -1,1 +1,14 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <Windows.h>`n`n`n`nextern "C" void __fastcall _EH4_GlobalUnwind2(`n    PVOID param_1,`n    PEXCEPTION_RECORD param_2)`n{`n    RtlUnwind(`n        param_1,`n        reinterpret_cast<PVOID>(0x10013AB6),`n        param_2,`n        nullptr);`n}`n
+#include <Windows.h>
+
+
+
+extern "C" void __fastcall _EH4_GlobalUnwind2(
+    PVOID param_1,
+    PEXCEPTION_RECORD param_2)
+{
+    RtlUnwind(
+        param_1,
+        reinterpret_cast<PVOID>(0x10013AB6),
+        param_2,
+        nullptr);
+}

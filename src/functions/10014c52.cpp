@@ -1,1 +1,17 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <windows.h>`n`nextern "C" DWORD DAT_10029c10;`nextern "C" LPVOID DAT_10039a78;`n`nextern "C" LPVOID __stdcall ___set_flsgetvalue(void)`n{`n    LPVOID lpTlsValue = TlsGetValue(DAT_10029c10);`n`n    if (lpTlsValue == nullptr)`n    {`n        lpTlsValue = DecodePointer(DAT_10039a78);`n        TlsSetValue(DAT_10029c10, lpTlsValue);`n    }`n`n    return lpTlsValue;`n}`n
+#include <windows.h>
+
+extern "C" DWORD DAT_10029c10;
+extern "C" LPVOID DAT_10039a78;
+
+extern "C" LPVOID __stdcall ___set_flsgetvalue(void)
+{
+    LPVOID lpTlsValue = TlsGetValue(DAT_10029c10);
+
+    if (lpTlsValue == nullptr)
+    {
+        lpTlsValue = DecodePointer(DAT_10039a78);
+        TlsSetValue(DAT_10029c10, lpTlsValue);
+    }
+
+    return lpTlsValue;
+}

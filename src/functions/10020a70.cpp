@@ -1,1 +1,12 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __stdcall FUN_100013e0(void);`n`nextern "C" __declspec(naked) void __stdcall thunk_FUN_100013e0(void)`n{`n    __asm {`n        jmp FUN_100013e0`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __stdcall FUN_100013e0(void);
+
+extern "C" __declspec(naked) void __stdcall thunk_FUN_100013e0(void)
+{
+    __asm {
+        jmp FUN_100013e0
+    }
+}

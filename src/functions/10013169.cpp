@@ -1,1 +1,50 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nstruct _iobuf { char* _ptr; int _cnt; char* _base; int _flag; int _file; int _charbuf; int _bufsiz; char* _tmpfname; };`nusing FILE = _iobuf;`nstatic_assert(offsetof(_iobuf, _ptr) == 0x00);`nstatic_assert(offsetof(_iobuf, _cnt) == 0x04);`nstatic_assert(offsetof(_iobuf, _base) == 0x08);`nstatic_assert(offsetof(_iobuf, _flag) == 0x0c);`nstatic_assert(sizeof(_iobuf) == 0x20);`nextern "C" void __cdecl __unlock_file(FILE*);`n#include <cstdint>`nextern "C" void __cdecl FUN_10017cd2(int lock_number);`nextern "C" void __stdcall LeaveCriticalSection(void* critical_section);`n`nvoid __cdecl __unlock_file(FILE* _File)`n{`n    if ((reinterpret_cast<FILE*>(0x100291cf) < _File) &&`n        (_File < reinterpret_cast<FILE*>(0x10029431)))`n    {`n        _File->_flag = _File->_flag & 0xffff7fff;`n`n        FUN_10017cd2(`n            (static_cast<int>(`n                 reinterpret_cast<std::uintptr_t>(&_File[-0x80148f]._file)) >>`n             5) +`n            0x10);`n`n        return;`n    }`n`n    LeaveCriticalSection(`n        reinterpret_cast<void*>(`n            reinterpret_cast<std::uint8_t*>(_File) + 0x20));`n}`n
+#include <cstdint>
+
+#include <cstddef>
+#include <corecrt.h>
+using longlong = std::int64_t;
+using ulonglong = std::uint64_t;
+using undefined = unsigned char;
+using undefined1 = std::uint8_t;
+using undefined2 = std::uint16_t;
+using undefined4 = std::uint32_t;
+using undefined8 = std::uint64_t;
+struct _iobuf {
+    char* _ptr;
+    int _cnt;
+    char* _base;
+    int _flag;
+    int _file;
+    int _charbuf;
+    int _bufsiz;
+    char* _tmpfname;
+};
+using FILE = _iobuf;
+static_assert(offsetof(_iobuf, _ptr) == 0x00);
+static_assert(offsetof(_iobuf, _cnt) == 0x04);
+static_assert(offsetof(_iobuf, _base) == 0x08);
+static_assert(offsetof(_iobuf, _flag) == 0x0c);
+static_assert(sizeof(_iobuf) == 0x20);
+extern "C" void __cdecl FUN_10017cd2(int lock_number);
+extern "C" void __stdcall LeaveCriticalSection(void* critical_section);
+
+void __cdecl __unlock_file(FILE* _File)
+{
+    if ((reinterpret_cast<FILE*>(0x100291cf) < _File) &&
+        (_File < reinterpret_cast<FILE*>(0x10029431)))
+    {
+        _File->_flag = _File->_flag & 0xffff7fff;
+
+        FUN_10017cd2(
+            (static_cast<int>(
+                 reinterpret_cast<std::uintptr_t>(&_File[-0x80148f]._file)) >>
+             5) +
+            0x10);
+
+        return;
+    }
+
+    LeaveCriticalSection(
+        reinterpret_cast<void*>(
+            reinterpret_cast<std::uint8_t*>(_File) + 0x20));
+}

@@ -1,1 +1,37 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n#include <exception>`n`nextern "C" void* __cdecl FUN_10010893(std::size_t size);`n[[noreturn]] extern void __cdecl __CxxThrowException_8(`n    void* exception_object,`n    void* throw_info`n);`nextern void* DAT_10028608;`n`nint __fastcall FUN_1000d400(std::uint32_t param_1)`n{`n    void* local_14[3];`n    char* local_8;`n`n    if (param_1 == 0U)`n    {`n        return 0;`n    }`n`n    if (param_1 < 0x40000000U)`n    {`n        void* allocation = FUN_10010893(param_1 * 4U);`n        if (allocation != nullptr)`n        {`n            return static_cast<int>(`n                reinterpret_cast<std::uintptr_t>(allocation));`n        }`n    }`n`n    local_8 = nullptr;`n    using ExceptionCtorFn = void* (__thiscall*)(void*, char**);`n    reinterpret_cast<ExceptionCtorFn>(`n        static_cast<std::uintptr_t>(0x100102c3))(local_14, &local_8);`n`n    local_14[0] = reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x10022250));`n`n    __CxxThrowException_8(local_14, &DAT_10028608);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <exception>
+
+extern "C" int __cdecl FUN_10010893(std::size_t size);
+[[noreturn]] extern void __stdcall __CxxThrowException_8(
+    void* exception_object,
+    void* throw_info
+);
+extern void* DAT_10028608;
+
+int __fastcall FUN_1000d400(std::uint32_t param_1)
+{
+    int iVar1;
+    void* local_14[3];
+    char* local_8;
+
+    if (param_1 == 0U)
+    {
+        return 0;
+    }
+
+    if ((param_1 < 0x40000000U) &&
+        (iVar1 = FUN_10010893(param_1 * 4U), iVar1 != 0))
+    {
+        return iVar1;
+    }
+
+    local_8 = nullptr;
+    using ExceptionCtorFn = void* (__thiscall*)(void*, char**);
+    reinterpret_cast<ExceptionCtorFn>(
+        static_cast<std::uintptr_t>(0x100102c3))(local_14, &local_8);
+
+    local_14[0] = reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x10022250));
+
+    __CxxThrowException_8(local_14, &DAT_10028608);
+}

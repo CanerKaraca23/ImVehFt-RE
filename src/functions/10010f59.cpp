@@ -1,1 +1,177 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nstruct _tiddata;`nusing _ptiddata = _tiddata*;`nusing pthreadlocinfo = void*;`n`nextern "C"`n{`n    extern "C" void __cdecl __SEH_prolog4(unsigned int, int);`n    void __stdcall __SEH_epilog4();`n    int __cdecl __heap_init();`n    int __cdecl __mtinit();`n    void __stdcall __RTC_Initialize();`n    char* __cdecl GetCommandLineA();`n    char* __cdecl ___crtGetEnvironmentStringsA();`n    int __cdecl __ioinit();`n    int __cdecl __setargv();`n    int __stdcall FUN_100168fe();`n    int __cdecl __cinit(int);`n    void __cdecl __ioterm();`n    void __cdecl __mtterm();`n    void __cdecl __heap_term();`n    void __cdecl __cexit();`n    void __cdecl FUN_10011032();`n    void __stdcall ___set_flsgetvalue();`n    _ptiddata __cdecl __calloc_crt(std::uint32_t, std::uint32_t);`n    void* __stdcall DecodePointer(void*);`n    void __cdecl __initptd(_ptiddata, pthreadlocinfo);`n    std::uint32_t __stdcall GetCurrentThreadId();`n    void __cdecl _free(void*);`n    void __cdecl __freeptd(_ptiddata);`n}`n`nusing InitializePtdFunction = int (__cdecl *)(std::uint32_t, _ptiddata);`n`nextern int DAT_100399f0;`nextern int DAT_10039a38;`nextern char* DAT_1003d558;`nextern char* DAT_100399f4;`nextern void* DAT_10039a7c;`nextern std::uint32_t DAT_10029c0c;`n`nstruct _tiddata`n{`n    std::uint32_t _tid;`n    std::uint32_t _thandle;`n};`n`nstd::uint32_t __stdcall __CRT_INIT_12(`n    std::uint32_t param_1,`n    int param_2,`n    int param_3)`n{`n    int init_result = 0;`n    int result = 0;`n    _ptiddata ptd = nullptr;`n    void* decodedPointer = nullptr;`n    InitializePtdFunction initializePtd = nullptr;`n`n    (void)param_1;`n    __SEH_prolog4(0x10028288u, 0x8u);`n    if (param_2 == 1)`n    {`n        init_result = __heap_init();`n`n        if (init_result != 0)`n        {`n            init_result = __mtinit();`n`n            if (init_result != 0)`n            {`n                __RTC_Initialize();`n`n                DAT_1003d558 = GetCommandLineA();`n                DAT_100399f4 = ___crtGetEnvironmentStringsA();`n`n                init_result = __ioinit();`n`n                if (init_result >= 0)`n                {`n                    init_result = __setargv();`n`n                    if (init_result >= 0)`n                    {`n                        init_result = FUN_100168fe();`n`n                        if (init_result >= 0)`n                        {`n                            init_result = __cinit(0);`n`n                            if (init_result == 0)`n                            {`n                                DAT_100399f0 = DAT_100399f0 + 1;`n                                result = 1;`n                                goto finish;`n                            }`n                        }`n                    }`n`n                    __ioterm();`n                }`n            }`n`n            __mtterm();`n        }`n`n        __heap_term();`n    }`n    else if (param_2 == 0)`n    {`n        if (DAT_100399f0 > 0)`n        {`n            DAT_100399f0 = DAT_100399f0 - 1;`n`n            if (DAT_10039a38 == 0)`n            {`n                __cexit();`n            }`n`n            if (param_3 == 0)`n            {`n                __ioterm();`n                __mtterm();`n                __heap_term();`n            }`n`n            FUN_10011032();`n            result = 1;`n            goto finish;`n        }`n    }`n    else`n    {`n        if (param_2 != 2)`n        {`n            if (param_2 != 3)`n            {`n                result = 1;`n                goto finish;`n            }`n`n            __freeptd(nullptr);`n            result = 1;`n            goto finish;`n        }`n`n        ___set_flsgetvalue();`n`n        ptd = __calloc_crt(1, 0x214);`n`n        if (ptd != nullptr)`n        {`n            decodedPointer = DecodePointer(DAT_10039a7c);`n            initializePtd =`n                reinterpret_cast<InitializePtdFunction>(decodedPointer);`n`n            init_result = (*initializePtd)(DAT_10029c0c, ptd);`n`n            if (init_result != 0)`n            {`n                __initptd(ptd, nullptr);`n`n                ptd->_tid = GetCurrentThreadId();`n                ptd->_thandle = 0xffffffffu;`n                result = 1;`n                goto finish;`n            }`n`n            _free(ptd);`n        }`n    }`n`nfinish:`n    __SEH_epilog4();`n    return static_cast<std::uint32_t>(result);`n}`n
+#include <cstdint>
+
+struct _tiddata;
+using _ptiddata = _tiddata*;
+using pthreadlocinfo = void*;
+
+extern "C"
+{
+    void __cdecl __SEH_prolog4(...);
+    void __cdecl __SEH_epilog4(...);
+    int __cdecl __heap_init();
+    int __cdecl __mtinit();
+    void __cdecl __RTC_Initialize();
+    char* __cdecl GetCommandLineA();
+    char* __cdecl ___crtGetEnvironmentStringsA();
+    int __cdecl __ioinit();
+    int __cdecl __setargv();
+    int __stdcall FUN_100168fe();
+    int __cdecl __cinit(int);
+    void __cdecl __ioterm();
+    void __cdecl __mtterm();
+    void __cdecl __heap_term();
+    void __cdecl __cexit();
+    void __stdcall FUN_10011032();
+    void __cdecl ___set_flsgetvalue();
+    _ptiddata __cdecl __calloc_crt(std::uint32_t, std::uint32_t);
+    void* __stdcall DecodePointer(void*);
+    void __cdecl __initptd(_ptiddata, pthreadlocinfo);
+    std::uint32_t __stdcall GetCurrentThreadId();
+    void __cdecl _free(void*);
+    void __cdecl __freeptd(_ptiddata);
+}
+
+using InitializePtdFunction = int (__cdecl *)(std::uint32_t, _ptiddata);
+
+extern int DAT_100399f0;
+extern int DAT_10039a38;
+extern char* DAT_1003d558;
+extern char* DAT_100399f4;
+extern void* DAT_10039a7c;
+extern std::uint32_t DAT_10029c0c;
+
+struct _tiddata
+{
+    std::uint32_t _tid;
+    std::uint32_t _thandle;
+};
+
+std::uint32_t __stdcall __CRT_INIT_12(
+    std::uint32_t param_1,
+    int param_2,
+    int param_3)
+{
+    int init_result = 0;
+    int result = 0;
+    _ptiddata ptd = nullptr;
+    void* decodedPointer = nullptr;
+    InitializePtdFunction initializePtd = nullptr;
+
+    (void)param_1;
+    __SEH_prolog4();
+
+    if (param_2 == 1)
+    {
+        init_result = __heap_init();
+
+        if (init_result != 0)
+        {
+            init_result = __mtinit();
+
+            if (init_result != 0)
+            {
+                __RTC_Initialize();
+
+                DAT_1003d558 = GetCommandLineA();
+                DAT_100399f4 = ___crtGetEnvironmentStringsA();
+
+                init_result = __ioinit();
+
+                if (init_result >= 0)
+                {
+                    init_result = __setargv();
+
+                    if (init_result >= 0)
+                    {
+                        init_result = FUN_100168fe();
+
+                        if (init_result >= 0)
+                        {
+                            init_result = __cinit(0);
+
+                            if (init_result == 0)
+                            {
+                                DAT_100399f0 = DAT_100399f0 + 1;
+                                result = 1;
+                                goto finish;
+                            }
+                        }
+                    }
+
+                    __ioterm();
+                }
+            }
+
+            __mtterm();
+        }
+
+        __heap_term();
+    }
+    else if (param_2 == 0)
+    {
+        if (DAT_100399f0 > 0)
+        {
+            DAT_100399f0 = DAT_100399f0 - 1;
+
+            if (DAT_10039a38 == 0)
+            {
+                __cexit();
+            }
+
+            if (param_3 == 0)
+            {
+                __ioterm();
+                __mtterm();
+                __heap_term();
+            }
+
+            FUN_10011032();
+            result = 1;
+            goto finish;
+        }
+    }
+    else
+    {
+        if (param_2 != 2)
+        {
+            if (param_2 != 3)
+            {
+                result = 1;
+                goto finish;
+            }
+
+            __freeptd(nullptr);
+            result = 1;
+            goto finish;
+        }
+
+        ___set_flsgetvalue();
+
+        ptd = __calloc_crt(1, 0x214);
+
+        if (ptd != nullptr)
+        {
+            decodedPointer = DecodePointer(DAT_10039a7c);
+            initializePtd =
+                reinterpret_cast<InitializePtdFunction>(decodedPointer);
+
+            init_result = (*initializePtd)(DAT_10029c0c, ptd);
+
+            if (init_result != 0)
+            {
+                __initptd(ptd, nullptr);
+
+                ptd->_tid = GetCurrentThreadId();
+                ptd->_thandle = 0xffffffffu;
+                result = 1;
+                goto finish;
+            }
+
+            _free(ptd);
+        }
+    }
+
+finish:
+    __SEH_epilog4();
+    return static_cast<std::uint32_t>(result);
+}

@@ -1,1 +1,67 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl FUN_10010756(void*);`n#include <cstdint>`n`nextern "C" [[noreturn]] void __stdcall FUN_100101c2(char* message);`nextern int __fastcall FUN_1000d400(std::uint32_t count);`nextern void* __cdecl FID_conflict__memcpy(`n    void* destination,`n    void* source,`n    std::uint32_t size`n);`nextern void __cdecl FUN_10010756(void* pointer);`n`nvoid __stdcall FUN_1000d380(std::uint32_t param_1)`n{`n    std::uint32_t* unaff_ESI;`n    __asm mov unaff_ESI, esi`n`n    void* pvVar1;`n    int iVar2;`n    void* _Dst;`n    std::uint32_t uVar3;`n`n    uVar3 = param_1;`n`n    if (0x3fffffffU < param_1)`n    {`n        FUN_100101c2(const_cast<char*>("vector<T> too long"));`n    }`n`n    if (static_cast<std::uint32_t>(`n            (unaff_ESI[2] - *unaff_ESI) >> 2) < uVar3)`n    {`n        _Dst = reinterpret_cast<void*>(static_cast<std::uintptr_t>(`n            static_cast<std::uint32_t>(FUN_1000d400(uVar3))));`n`n        FID_conflict__memcpy(`n            _Dst,`n            reinterpret_cast<void*>(*unaff_ESI),`n            static_cast<std::uint32_t>(`n                ((unaff_ESI[1] - *unaff_ESI) >> 2) * 4));`n`n        pvVar1 = reinterpret_cast<void*>(*unaff_ESI);`n        iVar2 = unaff_ESI[1];`n`n        if (pvVar1 != nullptr)`n        {`n            FUN_10010756(pvVar1);`n        }`n`n        *unaff_ESI = reinterpret_cast<int>(_Dst);`n        unaff_ESI[2] =`n            static_cast<int>(`n                static_cast<std::uintptr_t>(`n                    reinterpret_cast<std::uintptr_t>(_Dst) +`n                    static_cast<std::uintptr_t>(param_1) * 4));`n`n        unaff_ESI[1] =`n            static_cast<int>(`n                static_cast<std::uintptr_t>(`n                    reinterpret_cast<std::uintptr_t>(_Dst) +`n                    static_cast<std::uintptr_t>(`n                        (iVar2 -`n                         reinterpret_cast<int>(pvVar1)) >> 2) *`n                    4));`n    }`n}`n
+#include <cstdint>
+
+extern std::uint32_t extraout_ECX;
+
+extern "C" void __stdcall FUN_100101c2(char* message);
+extern "C" int __fastcall FUN_1000d400(std::uint32_t count);
+extern void __cdecl FID_conflict__memcpy(
+    void* destination,
+    const void* source,
+    std::uint32_t size
+);
+extern void __cdecl FUN_10010756(void* pointer);
+
+void __stdcall FUN_1000d380(std::uint32_t param_1)
+{
+    std::uint32_t* unaff_ESI;
+    __asm mov unaff_ESI, esi
+
+    void* pvVar1;
+    int iVar2;
+    void* _Dst;
+    std::uint32_t uVar3;
+
+    uVar3 = param_1;
+
+    if (0x3fffffffU < param_1)
+    {
+        FUN_100101c2(const_cast<char*>("vector<T> too long"));
+        uVar3 = extraout_ECX;
+    }
+
+    if (static_cast<std::uint32_t>(
+            (unaff_ESI[2] - *unaff_ESI) >> 2) < uVar3)
+    {
+        _Dst = reinterpret_cast<void*>(static_cast<std::uintptr_t>(FUN_1000d400(uVar3)));
+
+        FID_conflict__memcpy(
+            _Dst,
+            reinterpret_cast<void*>(*unaff_ESI),
+            static_cast<std::uint32_t>(
+                ((unaff_ESI[1] - *unaff_ESI) >> 2) * 4));
+
+        pvVar1 = reinterpret_cast<void*>(*unaff_ESI);
+        iVar2 = unaff_ESI[1];
+
+        if (pvVar1 != nullptr)
+        {
+            FUN_10010756(pvVar1);
+        }
+
+        *unaff_ESI = reinterpret_cast<int>(_Dst);
+        unaff_ESI[2] =
+            static_cast<int>(
+                static_cast<std::uintptr_t>(
+                    reinterpret_cast<std::uintptr_t>(_Dst) +
+                    static_cast<std::uintptr_t>(param_1) * 4));
+
+        unaff_ESI[1] =
+            static_cast<int>(
+                static_cast<std::uintptr_t>(
+                    reinterpret_cast<std::uintptr_t>(_Dst) +
+                    static_cast<std::uintptr_t>(
+                        (iVar2 -
+                         reinterpret_cast<int>(pvVar1)) >> 2) *
+                    4));
+    }
+}

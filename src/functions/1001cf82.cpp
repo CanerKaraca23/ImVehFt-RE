@@ -1,1 +1,20 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" int __cdecl ___AdjustPointer(int param_1, int* param_2)`n{`n    int adjusted_pointer = *param_2 + param_1;`n`n    if (param_2[1] >= 0)`n    {`n        adjusted_pointer =`n            adjusted_pointer +`n            *reinterpret_cast<int*>(`n                static_cast<std::uintptr_t>(`n                    *reinterpret_cast<int*>(`n                        static_cast<std::uintptr_t>(param_2[1] + param_1)) +`n                    param_2[2])) +`n            param_2[1];`n    }`n`n    return adjusted_pointer;`n}`n
+#include <cstdint>
+
+int __cdecl ___AdjustPointer(int param_1, int* param_2)
+{
+    int adjusted_pointer = *param_2 + param_1;
+
+    if (param_2[1] >= 0)
+    {
+        adjusted_pointer =
+            adjusted_pointer +
+            *reinterpret_cast<int*>(
+                static_cast<std::uintptr_t>(
+                    *reinterpret_cast<int*>(
+                        static_cast<std::uintptr_t>(param_2[1] + param_1)) +
+                    param_2[2])) +
+            param_2[1];
+    }
+
+    return adjusted_pointer;
+}

@@ -1,1 +1,134 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003bd98;`nextern char DAT_1003a6c8[0x200];`nextern char DAT_1003a8c8[];`nextern char DAT_10024424[];`nextern std::uint32_t DAT_1003bbb0;`nextern int** _DAT_00c97c28;`n`nextern "C" std::uint32_t __cdecl FUN_007ee4f0();`nextern "C" std::uint32_t __cdecl FUN_007f0410();`nextern "C" void __cdecl FUN_00804ef0(std::uint32_t, std::uint32_t);`nextern "C" void __cdecl FUN_007ee3a0(std::uint32_t, int);`n`nextern "C" int __cdecl _strcpy_s(char*, std::size_t, const char*);`nextern "C" int __cdecl _strcat_s(char*, std::size_t, const char*);`n`nextern "C" int __stdcall D3DXCompileShaderFromFileA(`n    const char*,`n    const void*,`n    const void*,`n    const char*,`n    const char*,`n    std::uint32_t,`n    int**,`n    int**,`n    void*);`n`nextern "C" int __stdcall MessageBoxA(`n    void*,`n    const char*,`n    const char*,`n    std::uint32_t);`n`nextern "C" void __stdcall FUN_10001e80()`n{`n    std::uint32_t uVar1;`n    int iVar2;`n    const char* lpText;`n    int* piVar3;`n    std::uint32_t uType;`n    std::uint8_t local_10[4];`n    int* local_c;`n    int* local_8;`n`n    DAT_1003bd98 = FUN_007ee4f0();`n`n    uVar1 = FUN_007f0410();`n    FUN_00804ef0(DAT_1003bd98, uVar1);`n    FUN_007ee3a0(DAT_1003bd98, 2);`n`n    local_8 = nullptr;`n`n    _strcpy_s(DAT_1003a6c8, 0x200, DAT_1003a8c8);`n    _strcat_s(`n        DAT_1003a6c8,`n        0x200,`n        "ImVehFt\\effect\\dirt_layer.fx");`n`n    iVar2 = D3DXCompileShaderFromFileA(`n        DAT_1003a6c8,`n        nullptr,`n        nullptr,`n        DAT_10024424,`n        "ps_2_0",`n        1,`n        &local_c,`n        &local_8,`n        local_10);`n`n    if (local_8 != nullptr)`n    {`n        uType = 0;`n        piVar3 = local_8;`n`n        lpText =`n            reinterpret_cast<const char* (__thiscall*)(int*, int, int)>(`n                (*reinterpret_cast<std::uintptr_t**>(local_8))[3])(`n                    local_8,`n                    0,`n                    0);`n`n        MessageBoxA(`n            nullptr,`n            lpText,`n            reinterpret_cast<const char*>(piVar3),`n            uType);`n`n        reinterpret_cast<void (__thiscall*)(int*)>(`n            (*reinterpret_cast<std::uintptr_t**>(local_8))[2])(`n                local_8);`n    }`n`n    piVar3 = *_DAT_00c97c28;`n`n    if (iVar2 < 0)`n    {`n        MessageBoxA(`n            nullptr,`n            "ImVehFtDecals::Initialise: D3DXCreateEffectFromFile() - FAILED",`n            nullptr,`n            0);`n        return;`n    }`n`n    iVar2 = reinterpret_cast<int>(*_DAT_00c97c28);`n`n    uVar1 =`n        reinterpret_cast<std::uint32_t (__thiscall*)(int*, std::uint32_t*)>(`n            (*reinterpret_cast<std::uintptr_t**>(local_c))[3])(`n                local_c,`n                &DAT_1003bbb0);`n`n    iVar2 =`n        reinterpret_cast<int (__thiscall*)(int*, std::uint32_t)>(`n            (*reinterpret_cast<std::uintptr_t**>(piVar3))[106])(`n                piVar3,`n                uVar1);`n`n    if (iVar2 < 0)`n    {`n        MessageBoxA(`n            nullptr,`n            "ImVehFtDecals::Initialise: Failed to create pixel shader",`n            nullptr,`n            0);`n        return;`n    }`n`n    reinterpret_cast<void (__thiscall*)(int*)>(`n        (*reinterpret_cast<std::uintptr_t**>(local_c))[2])(`n            local_c);`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern std::uint32_t DAT_1003bd98;
+extern char DAT_1003a6c8[0x200];
+extern char DAT_1003a8c8[];
+extern char DAT_10024424[];
+extern std::uint32_t DAT_1003bbb0;
+extern int** _DAT_00c97c28;
+
+extern "C" std::uint32_t __cdecl FUN_007ee4f0();
+extern "C" std::uint32_t __cdecl FUN_007f0410();
+extern "C" void __cdecl FUN_00804ef0(std::uint32_t, std::uint32_t);
+extern "C" void __cdecl FUN_007ee3a0(std::uint32_t, int);
+
+extern "C" int __cdecl strcpy_s(char*, std::size_t, const char*);
+extern "C" int __cdecl strcat_s(char*, std::size_t, const char*);
+
+extern "C" int __stdcall D3DXCompileShaderFromFileA(
+    const char*,
+    const void*,
+    const void*,
+    const char*,
+    const char*,
+    std::uint32_t,
+    int**,
+    int**,
+    void*);
+
+extern "C" int __stdcall MessageBoxA(
+    void*,
+    const char*,
+    const char*,
+    std::uint32_t);
+
+extern "C" void __stdcall FUN_10001e80()
+{
+    std::uint32_t uVar1;
+    int iVar2;
+    const char* lpText;
+    int* piVar3;
+    std::uint32_t uType;
+    std::uint8_t local_10[4];
+    int* local_c;
+    int* local_8;
+
+    DAT_1003bd98 = FUN_007ee4f0();
+
+    uVar1 = FUN_007f0410();
+    FUN_00804ef0(DAT_1003bd98, uVar1);
+    FUN_007ee3a0(DAT_1003bd98, 2);
+
+    local_8 = nullptr;
+
+    strcpy_s(DAT_1003a6c8, 0x200, DAT_1003a8c8);
+    strcat_s(
+        DAT_1003a6c8,
+        0x200,
+        "ImVehFt\\effect\\dirt_layer.fx");
+
+    iVar2 = D3DXCompileShaderFromFileA(
+        DAT_1003a6c8,
+        nullptr,
+        nullptr,
+        DAT_10024424,
+        "ps_2_0",
+        1,
+        &local_c,
+        &local_8,
+        local_10);
+
+    if (local_8 != nullptr)
+    {
+        uType = 0;
+        piVar3 = local_8;
+
+        lpText =
+            reinterpret_cast<const char* (__thiscall*)(int*, int, int)>(
+                (*reinterpret_cast<std::uintptr_t**>(local_8))[3])(
+                    local_8,
+                    0,
+                    0);
+
+        MessageBoxA(
+            nullptr,
+            lpText,
+            reinterpret_cast<const char*>(piVar3),
+            uType);
+
+        reinterpret_cast<void (__thiscall*)(int*)>(
+            (*reinterpret_cast<std::uintptr_t**>(local_8))[2])(
+                local_8);
+    }
+
+    piVar3 = *_DAT_00c97c28;
+
+    if (iVar2 < 0)
+    {
+        MessageBoxA(
+            nullptr,
+            "ImVehFtDecals::Initialise: D3DXCreateEffectFromFile() - FAILED",
+            nullptr,
+            0);
+        return;
+    }
+
+    iVar2 = reinterpret_cast<int>(*_DAT_00c97c28);
+
+    uVar1 =
+        reinterpret_cast<std::uint32_t (__thiscall*)(int*, std::uint32_t*)>(
+            (*reinterpret_cast<std::uintptr_t**>(local_c))[3])(
+                local_c,
+                &DAT_1003bbb0);
+
+    iVar2 =
+        reinterpret_cast<int (__thiscall*)(int*, std::uint32_t)>(
+            (*reinterpret_cast<std::uintptr_t**>(piVar3))[106])(
+                piVar3,
+                uVar1);
+
+    if (iVar2 < 0)
+    {
+        MessageBoxA(
+            nullptr,
+            "ImVehFtDecals::Initialise: Failed to create pixel shader",
+            nullptr,
+            0);
+        return;
+    }
+
+    reinterpret_cast<void (__thiscall*)(int*)>(
+        (*reinterpret_cast<std::uintptr_t**>(local_c))[2])(
+            local_c);
+}

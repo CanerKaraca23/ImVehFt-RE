@@ -1,1 +1,63 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void* ExceptionList;`nextern "C" std::uint32_t DAT_10029490;`n`nextern "C" void __stdcall __NLG_Notify(unsigned long);`nextern "C" void __stdcall FUN_10018f94();`n`nextern "C" void __cdecl __local_unwind4(`n    std::uint32_t* param_1,`n    int param_2,`n    std::uint32_t param_3)`n{`n    struct RegistrationRecord`n    {`n        void* previous;`n        void* handler;`n        std::uint32_t cookie;`n    };`n`n    RegistrationRecord registration{`n        ExceptionList,`n        reinterpret_cast<void*>(0x10013A10u),`n        DAT_10029490 ^`n            static_cast<std::uint32_t>(`n                reinterpret_cast<std::uintptr_t>(&registration))`n    };`n`n    ExceptionList = &registration;`n`n    while (true)`n    {`n        const std::uint32_t state =`n            *reinterpret_cast<std::uint32_t*>(`n                static_cast<std::uintptr_t>(param_2) + 0x0Cu);`n`n        if (state == 0xFFFFFFFEu ||`n            (param_3 != 0xFFFFFFFEu && state <= param_3))`n        {`n            break;`n        }`n`n        auto* unwind_entry =`n            reinterpret_cast<std::uint32_t*>(`n                ((*reinterpret_cast<std::uint32_t*>(`n                      static_cast<std::uintptr_t>(param_2) + 0x08u) ^`n                  *param_1) +`n                 0x10u) +`n                state * 0x0Cu);`n`n        *reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(param_2) + 0x0Cu) =`n            unwind_entry[0];`n`n        if (unwind_entry[1] == 0)`n        {`n            __NLG_Notify(0x101u);`n            FUN_10018f94();`n        }`n    }`n`n    ExceptionList = registration.previous;`n}`n
+#include <cstdint>
+
+extern "C" void* ExceptionList;
+extern "C" std::uint32_t DAT_10029490;
+
+extern "C" void __stdcall __NLG_Notify(unsigned long);
+extern "C" void __stdcall FUN_10018f94();
+
+void __cdecl __local_unwind4(
+    std::uint32_t* param_1,
+    int param_2,
+    std::uint32_t param_3)
+{
+    struct RegistrationRecord
+    {
+        void* previous;
+        void* handler;
+        std::uint32_t cookie;
+    };
+
+    RegistrationRecord registration{
+        ExceptionList,
+        reinterpret_cast<void*>(0x10013A10u),
+        DAT_10029490 ^
+            static_cast<std::uint32_t>(
+                reinterpret_cast<std::uintptr_t>(&registration))
+    };
+
+    ExceptionList = &registration;
+
+    while (true)
+    {
+        const std::uint32_t state =
+            *reinterpret_cast<std::uint32_t*>(
+                static_cast<std::uintptr_t>(param_2) + 0x0Cu);
+
+        if (state == 0xFFFFFFFEu ||
+            (param_3 != 0xFFFFFFFEu && state <= param_3))
+        {
+            break;
+        }
+
+        auto* unwind_entry =
+            reinterpret_cast<std::uint32_t*>(
+                ((*reinterpret_cast<std::uint32_t*>(
+                      static_cast<std::uintptr_t>(param_2) + 0x08u) ^
+                  *param_1) +
+                 0x10u) +
+                state * 0x0Cu);
+
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(param_2) + 0x0Cu) =
+            unwind_entry[0];
+
+        if (unwind_entry[1] == 0)
+        {
+            __NLG_Notify(0x101u);
+            FUN_10018f94();
+        }
+    }
+
+    ExceptionList = registration.previous;
+}

@@ -1,1 +1,73 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n`nusing HANDLE = void*;`nusing LPVOID = void*;`nusing SIZE_T = std::size_t;`nusing DWORD = std::uint32_t;`n`nextern HANDLE DAT_10039b90;`nextern int DAT_1003a1c4;`n`nextern "C" void __cdecl __FF_MSGBANNER();`nextern "C" void __cdecl __NMSG_WRITE(std::uint32_t message);`nextern "C" [[noreturn]] void __cdecl ___crtExitProcess(std::uint32_t code);`nextern "C" LPVOID __stdcall HeapAlloc(`n    HANDLE heap,`n    DWORD flags,`n    SIZE_T bytes);`nextern "C" int __cdecl __callnewh(std::size_t size);`nextern "C" int* __cdecl __errno();`n`nextern "C" void* __cdecl _malloc(std::size_t _Size)`n{`n    if (_Size < static_cast<std::size_t>(0xffffffe1u))`n    {`n        do`n        {`n            if (DAT_10039b90 == nullptr)`n            {`n                __FF_MSGBANNER();`n                __NMSG_WRITE(0x1e);`n                ___crtExitProcess(0xff);`n            }`n`n            SIZE_T dwBytes = _Size;`n            if (_Size == 0)`n            {`n                dwBytes = 1;`n            }`n`n            LPVOID pvVar1 = HeapAlloc(DAT_10039b90, 0, dwBytes);`n            if (pvVar1 != nullptr)`n            {`n                return pvVar1;`n            }`n`n            if (DAT_1003a1c4 == 0)`n            {`n                int* piVar3 = __errno();`n                *piVar3 = 0xc;`n                break;`n            }`n`n            const int iVar2 = __callnewh(_Size);`n            if (iVar2 == 0)`n            {`n                break;`n            }`n        } while (true);`n`n        int* piVar3 = __errno();`n        *piVar3 = 0xc;`n    }`n    else`n    {`n        __callnewh(_Size);`n`n        int* piVar3 = __errno();`n        *piVar3 = 0xc;`n    }`n`n    return nullptr;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+using HANDLE = void*;
+using LPVOID = void*;
+using SIZE_T = std::size_t;
+using DWORD = std::uint32_t;
+
+extern HANDLE DAT_10039b90;
+extern int DAT_1003a1c4;
+
+extern "C" void __cdecl __FF_MSGBANNER();
+extern "C" void __cdecl __NMSG_WRITE(std::uint32_t message);
+extern "C" [[noreturn]] void __cdecl ___crtExitProcess(std::uint32_t code);
+extern "C" LPVOID __stdcall HeapAlloc(
+    HANDLE heap,
+    DWORD flags,
+    SIZE_T bytes);
+extern "C" int __cdecl __callnewh(std::size_t size);
+extern "C" int* __cdecl __errno();
+
+extern "C" void* __cdecl _malloc(std::size_t _Size)
+{
+    if (_Size < static_cast<std::size_t>(0xffffffe1u))
+    {
+        do
+        {
+            if (DAT_10039b90 == nullptr)
+            {
+                __FF_MSGBANNER();
+                __NMSG_WRITE(0x1e);
+                ___crtExitProcess(0xff);
+            }
+
+            SIZE_T dwBytes = _Size;
+            if (_Size == 0)
+            {
+                dwBytes = 1;
+            }
+
+            LPVOID pvVar1 = HeapAlloc(DAT_10039b90, 0, dwBytes);
+            if (pvVar1 != nullptr)
+            {
+                return pvVar1;
+            }
+
+            if (DAT_1003a1c4 == 0)
+            {
+                int* piVar3 = __errno();
+                *piVar3 = 0xc;
+                break;
+            }
+
+            const int iVar2 = __callnewh(_Size);
+            if (iVar2 == 0)
+            {
+                break;
+            }
+        } while (true);
+
+        int* piVar3 = __errno();
+        *piVar3 = 0xc;
+    }
+    else
+    {
+        __callnewh(_Size);
+
+        int* piVar3 = __errno();
+        *piVar3 = 0xc;
+    }
+
+    return nullptr;
+}

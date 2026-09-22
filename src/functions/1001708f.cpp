@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" unsigned int DAT_10029d30;`n`nextern "C" unsigned int __cdecl __set_abort_behavior(`n    unsigned int _Flags,`n    unsigned int _Mask)`n{`n    unsigned int uVar1 = DAT_10029d30;`n`n    DAT_10029d30 =`n        (~_Mask & DAT_10029d30) |`n        (_Flags & _Mask);`n`n    return uVar1;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" unsigned int DAT_10029d30;
+
+extern "C" unsigned int __cdecl __set_abort_behavior(
+    unsigned int _Flags,
+    unsigned int _Mask)
+{
+    unsigned int uVar1 = DAT_10029d30;
+
+    DAT_10029d30 =
+        (~_Mask & DAT_10029d30) |
+        (_Flags & _Mask);
+
+    return uVar1;
+}

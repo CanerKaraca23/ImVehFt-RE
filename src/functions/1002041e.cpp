@@ -1,1 +1,20 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`nextern "C" int* __cdecl __errno(void);`n`nextern "C" void __cdecl __set_errno_from_matherr(int param_1)`n{`n    if (param_1 == 1) {`n        int* piVar1 = __errno();`n        *piVar1 = 0x21;`n    }`n    else if ((1 < param_1) && (param_1 < 4)) {`n        int* piVar1 = __errno();`n        *piVar1 = 0x22;`n        return;`n    }`n`n    return;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" int* __cdecl __errno(void);
+
+extern "C" void __cdecl __set_errno_from_matherr(int param_1)
+{
+    if (param_1 == 1) {
+        int* piVar1 = __errno();
+        *piVar1 = 0x21;
+    }
+    else if ((1 < param_1) && (param_1 < 4)) {
+        int* piVar1 = __errno();
+        *piVar1 = 0x22;
+        return;
+    }
+
+    return;
+}

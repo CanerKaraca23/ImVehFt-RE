@@ -1,1 +1,62 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n#include <windows.h>`n`nextern "C" intptr_t __cdecl __get_osfhandle(int _FileHandle);`nextern "C" int* __cdecl __errno();`nextern "C" void __cdecl __dosmaperr(unsigned long _Error);`nextern "C" std::uint8_t* DAT_1003c420[];`n`nextern "C" long __cdecl __lseek_nolock(`n    int _FileHandle,`n    long _Offset,`n    int _Origin)`n{`n    HANDLE hFile;`n    int* piVar2;`n    DWORD DVar3;`n    unsigned long uVar4;`n    std::uint8_t* pbVar1;`n`n    hFile = reinterpret_cast<HANDLE>(__get_osfhandle(_FileHandle));`n`n    if (hFile == reinterpret_cast<HANDLE>(static_cast<std::uintptr_t>(0xffffffffu)))`n    {`n        piVar2 = __errno();`n        *piVar2 = 9;`n        DVar3 = 0xffffffffu;`n    }`n    else`n    {`n        DVar3 = ::SetFilePointer(`n            hFile,`n            static_cast<LONG>(_Offset),`n            nullptr,`n            static_cast<DWORD>(_Origin));`n`n        if (DVar3 == 0xffffffffu)`n        {`n            uVar4 = static_cast<unsigned long>(::GetLastError());`n        }`n        else`n        {`n            uVar4 = 0;`n        }`n`n        if (uVar4 == 0)`n        {`n            pbVar1 =`n                DAT_1003c420[_FileHandle >> 5] +`n                4 +`n                (_FileHandle & 0x1fU) * 0x40;`n`n            *pbVar1 = *pbVar1 & 0xfd;`n        }`n        else`n        {`n            __dosmaperr(uVar4);`n            DVar3 = 0xffffffffu;`n        }`n    }`n`n    return static_cast<long>(DVar3);`n}`n
+#include <cstdint>
+#include <windows.h>
+
+extern "C" intptr_t __cdecl __get_osfhandle(int _FileHandle);
+extern "C" int* __cdecl __errno();
+extern "C" void __cdecl __dosmaperr(unsigned long _Error);
+extern "C" std::uint8_t* DAT_1003c420[];
+
+extern "C" long __cdecl __lseek_nolock(
+    int _FileHandle,
+    long _Offset,
+    int _Origin)
+{
+    HANDLE hFile;
+    int* piVar2;
+    DWORD DVar3;
+    unsigned long uVar4;
+    std::uint8_t* pbVar1;
+
+    hFile = reinterpret_cast<HANDLE>(__get_osfhandle(_FileHandle));
+
+    if (hFile == reinterpret_cast<HANDLE>(static_cast<std::uintptr_t>(0xffffffffu)))
+    {
+        piVar2 = __errno();
+        *piVar2 = 9;
+        DVar3 = 0xffffffffu;
+    }
+    else
+    {
+        DVar3 = ::SetFilePointer(
+            hFile,
+            static_cast<LONG>(_Offset),
+            nullptr,
+            static_cast<DWORD>(_Origin));
+
+        if (DVar3 == 0xffffffffu)
+        {
+            uVar4 = static_cast<unsigned long>(::GetLastError());
+        }
+        else
+        {
+            uVar4 = 0;
+        }
+
+        if (uVar4 == 0)
+        {
+            pbVar1 =
+                DAT_1003c420[_FileHandle >> 5] +
+                4 +
+                (_FileHandle & 0x1fU) * 0x40;
+
+            *pbVar1 = *pbVar1 & 0xfd;
+        }
+        else
+        {
+            __dosmaperr(uVar4);
+            DVar3 = 0xffffffffu;
+        }
+    }
+
+    return static_cast<long>(DVar3);
+}

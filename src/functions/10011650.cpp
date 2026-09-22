@@ -1,1 +1,79 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" std::size_t __cdecl _strlen(char* _Str)`n{`n    std::uint32_t uVar1;`n    std::uint32_t* puVar2;`n    std::uint32_t* puVar3;`n`n    puVar2 = reinterpret_cast<std::uint32_t*>(_Str);`n`n    do`n    {`n        if ((static_cast<std::uint32_t>(`n                 static_cast<std::uintptr_t>(`n                     reinterpret_cast<std::uintptr_t>(puVar2))) &`n             3u) == 0)`n        {`n            goto LAB_10011680;`n        }`n`n        uVar1 = *reinterpret_cast<const std::uint8_t*>(puVar2);`n        puVar2 = reinterpret_cast<std::uint32_t*>(`n            static_cast<std::int32_t>(`n                reinterpret_cast<std::uintptr_t>(puVar2)) + 1);`n    }`n    while (static_cast<char>(uVar1) != '\0');`n`nLAB_100116b3:`n    return static_cast<std::size_t>(`n        static_cast<std::int32_t>(`n            reinterpret_cast<std::uintptr_t>(puVar2)) +`n        (-1 - static_cast<std::int32_t>(`n                  reinterpret_cast<std::uintptr_t>(_Str))));`n`nLAB_10011680:`n    do`n    {`n        do`n        {`n            puVar3 = puVar2;`n            puVar2 = puVar3 + 1;`n        }`n        while (((*puVar3 ^ 0xffffffffu ^ *puVar3 + 0x7efefeffu) &`n                0x81010100u) == 0);`n`n        uVar1 = *puVar3;`n`n        if (static_cast<char>(uVar1) == '\0')`n        {`n            return static_cast<std::size_t>(`n                static_cast<std::int32_t>(`n                    reinterpret_cast<std::uintptr_t>(puVar3)) -`n                static_cast<std::int32_t>(`n                    reinterpret_cast<std::uintptr_t>(_Str)));`n        }`n`n        if (static_cast<char>(uVar1 >> 8) == '\0')`n        {`n            return static_cast<std::size_t>(`n                static_cast<std::int32_t>(`n                    reinterpret_cast<std::uintptr_t>(puVar3)) +`n                (1 - static_cast<std::int32_t>(`n                         reinterpret_cast<std::uintptr_t>(_Str))));`n        }`n`n        if ((uVar1 & 0x00ff0000u) == 0)`n        {`n            return static_cast<std::size_t>(`n                static_cast<std::int32_t>(`n                    reinterpret_cast<std::uintptr_t>(puVar3)) +`n                (2 - static_cast<std::int32_t>(`n                         reinterpret_cast<std::uintptr_t>(_Str))));`n        }`n    }`n    while ((uVar1 & 0xff000000u) != 0);`n`n    goto LAB_100116b3;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" std::size_t __cdecl _strlen(char* _Str)
+{
+    std::uint32_t uVar1;
+    std::uint32_t* puVar2;
+    std::uint32_t* puVar3;
+
+    puVar2 = reinterpret_cast<std::uint32_t*>(_Str);
+
+    do
+    {
+        if ((static_cast<std::uint32_t>(
+                 static_cast<std::uintptr_t>(
+                     reinterpret_cast<std::uintptr_t>(puVar2))) &
+             3u) == 0)
+        {
+            goto LAB_10011680;
+        }
+
+        uVar1 = *reinterpret_cast<const std::uint8_t*>(puVar2);
+        puVar2 = reinterpret_cast<std::uint32_t*>(
+            static_cast<std::int32_t>(
+                reinterpret_cast<std::uintptr_t>(puVar2)) + 1);
+    }
+    while (static_cast<char>(uVar1) != '\0');
+
+LAB_100116b3:
+    return static_cast<std::size_t>(
+        static_cast<std::int32_t>(
+            reinterpret_cast<std::uintptr_t>(puVar2)) +
+        (-1 - static_cast<std::int32_t>(
+                  reinterpret_cast<std::uintptr_t>(_Str))));
+
+LAB_10011680:
+    do
+    {
+        do
+        {
+            puVar3 = puVar2;
+            puVar2 = puVar3 + 1;
+        }
+        while (((*puVar3 ^ 0xffffffffu ^ *puVar3 + 0x7efefeffu) &
+                0x81010100u) == 0);
+
+        uVar1 = *puVar3;
+
+        if (static_cast<char>(uVar1) == '\0')
+        {
+            return static_cast<std::size_t>(
+                static_cast<std::int32_t>(
+                    reinterpret_cast<std::uintptr_t>(puVar3)) -
+                static_cast<std::int32_t>(
+                    reinterpret_cast<std::uintptr_t>(_Str)));
+        }
+
+        if (static_cast<char>(uVar1 >> 8) == '\0')
+        {
+            return static_cast<std::size_t>(
+                static_cast<std::int32_t>(
+                    reinterpret_cast<std::uintptr_t>(puVar3)) +
+                (1 - static_cast<std::int32_t>(
+                         reinterpret_cast<std::uintptr_t>(_Str))));
+        }
+
+        if ((uVar1 & 0x00ff0000u) == 0)
+        {
+            return static_cast<std::size_t>(
+                static_cast<std::int32_t>(
+                    reinterpret_cast<std::uintptr_t>(puVar3)) +
+                (2 - static_cast<std::int32_t>(
+                         reinterpret_cast<std::uintptr_t>(_Str))));
+        }
+    }
+    while ((uVar1 & 0xff000000u) != 0);
+
+    goto LAB_100116b3;
+}

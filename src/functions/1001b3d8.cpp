@@ -1,1 +1,71 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void __cdecl FUN_1001ca2e(void);`nextern "C" std::uint16_t DAT_100258e8;`nextern "C" void DAT_100258ea(void);`nextern "C" void DAT_100258b0(void);`nextern "C" std::uint32_t DAT_1003c404;`nextern "C" void DAT_10039570(void);`nextern "C" std::uint32_t __stdcall FUN_1001c9bc(void);`nextern "C" void __fastcall __math_exit(void*, int, std::uint32_t, std::uint32_t, std::uint32_t);`nextern "C" void __fastcall __startOneArgErrorHandling(void*, int, std::uint16_t, std::uint32_t, std::uint32_t, std::uint32_t);`n`nextern "C" __declspec(naked) std::uint32_t __cdecl FUN_1001b3d8(`n    int , std::uint32_t )`n{`n    __asm {`n        push edx`n        fstcw word ptr [esp]`n        jz L_sin_zero_flag`n        cmp word ptr [esp], 027fh`n        jz L_sin_fsin`n        fldcw word ptr [DAT_100258e8]`nL_sin_fsin:`n        fsin`n        fstsw ax`n        sahf`n        jp L_sin_reduce`nL_sin_check_errno:`n        cmp dword ptr [DAT_1003c404], 0`n        jz L_sin_errno_ok`n        jmp FUN_1001ca2e`n    L_sin_errno_ok:`n        mov edx, 01eh`n        lea ecx, DAT_10039570`n        jmp __math_exit`nL_sin_reduce:`n        fld tbyte ptr [DAT_100258ea]`n        fxch`nL_sin_fprem:`n        fprem1`n        fstsw ax`n        sahf`n        jp L_sin_fprem`n        fstp st(1)`n        fsin`n        jmp L_sin_check_errno`nL_sin_call_finite:`n        call FUN_1001c9bc`n        jmp L_sin_report`nL_sin_zero_flag:`n        test eax, 0fffffh`n        jnz L_sin_call_finite`n        cmp dword ptr [esp + 8], 0`n        jnz L_sin_call_finite`n        fstp st(0)`n        fld tbyte ptr [DAT_100258b0]`n        mov eax, 1`nL_sin_report:`n        cmp dword ptr [DAT_1003c404], 0`n        jz L_sin_report_ok`n        jmp FUN_1001ca2e`n    L_sin_report_ok:`n        mov edx, 01eh`n        lea ecx, DAT_10039570`n        call __startOneArgErrorHandling`n        pop edx`n        ret`n`n`n    }`n}`n
+#include <cstdint>
+
+extern "C" void __cdecl FUN_1001ca2e(void);
+extern "C" std::uint16_t DAT_100258e8;
+extern "C" void DAT_100258ea(void);
+extern "C" void DAT_100258b0(void);
+extern "C" std::uint32_t DAT_1003c404;
+extern "C" void DAT_10039570(void);
+extern "C" std::uint32_t __stdcall FUN_1001c9bc(void);
+extern "C" void __fastcall __math_exit(void*, int, std::uint32_t, std::uint32_t, std::uint32_t);
+extern "C" void __fastcall __startOneArgErrorHandling(void*, int, std::uint16_t, std::uint32_t, std::uint32_t, std::uint32_t);
+
+extern "C" __declspec(naked) std::uint32_t __cdecl FUN_1001b3d8(
+    int , std::uint32_t )
+{
+    __asm {
+        push edx
+        fstcw word ptr [esp]
+        jz L_sin_zero_flag
+        cmp word ptr [esp], 027fh
+        jz L_sin_fsin
+        fldcw word ptr [DAT_100258e8]
+L_sin_fsin:
+        fsin
+        fstsw ax
+        sahf
+        jp L_sin_reduce
+L_sin_check_errno:
+        cmp dword ptr [DAT_1003c404], 0
+        jz L_sin_errno_ok
+        jmp FUN_1001ca2e
+    L_sin_errno_ok:
+        mov edx, 01eh
+        lea ecx, DAT_10039570
+        jmp __math_exit
+L_sin_reduce:
+        fld tbyte ptr [DAT_100258ea]
+        fxch
+L_sin_fprem:
+        fprem1
+        fstsw ax
+        sahf
+        jp L_sin_fprem
+        fstp st(1)
+        fsin
+        jmp L_sin_check_errno
+L_sin_call_finite:
+        call FUN_1001c9bc
+        jmp L_sin_report
+L_sin_zero_flag:
+        test eax, 0fffffh
+        jnz L_sin_call_finite
+        cmp dword ptr [esp + 8], 0
+        jnz L_sin_call_finite
+        fstp st(0)
+        fld tbyte ptr [DAT_100258b0]
+        mov eax, 1
+L_sin_report:
+        cmp dword ptr [DAT_1003c404], 0
+        jz L_sin_report_ok
+        jmp FUN_1001ca2e
+    L_sin_report_ok:
+        mov edx, 01eh
+        lea ecx, DAT_10039570
+        call __startOneArgErrorHandling
+        pop edx
+        ret
+
+
+    }
+}

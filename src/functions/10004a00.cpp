@@ -1,1 +1,58 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`n`nextern std::uint32_t _DAT_10024ea8;`n`nextern std::uint32_t* __cdecl FUN_10010ed0(std::uint32_t*, char*);`nextern int __cdecl FID_conflict__sscanf(char*, char*, ...);`nextern void __stdcall FUN_10004000();`n`nvoid __fastcall FUN_10004a00(std::uint32_t* param_1)`n{`n    std::uint32_t in_EAX;`n    std::uint32_t* unaff_ESI;`n    __asm mov in_EAX, eax`n    __asm mov unaff_ESI, esi`n    std::uint32_t& field_00 =`n        *reinterpret_cast<std::uint32_t*>(param_1 + 0);`n    std::uint32_t& field_08_raw =`n        *reinterpret_cast<std::uint32_t*>(param_1 + 2);`n    float* field_08 =`n        reinterpret_cast<float*>(&field_08_raw);`n    std::int32_t& field_0C =`n        *reinterpret_cast<std::int32_t*>(param_1 + 3);`n    std::uint16_t& field_14 =`n        *reinterpret_cast<std::uint16_t*>(param_1 + 5);`n`n    std::uint32_t* puVar2;`n    std::uint32_t uVar1;`n    float* puVar3;`n    std::int32_t* puVar4;`n`n    field_00 = in_EAX;`n    field_14 = 0;`n`n    puVar2 = FUN_10010ed0(unaff_ESI, const_cast<char*>("_"));`n    uVar1 = _DAT_10024ea8;`n`n    if (puVar2 != nullptr)`n    {`n        puVar4 = &field_0C;`n        puVar3 = field_08;`n`n        puVar2 = FUN_10010ed0(unaff_ESI, const_cast<char*>("_"));`n        FID_conflict__sscanf(`n            reinterpret_cast<char*>(puVar2),`n            const_cast<char*>("_%f_%d"),`n            puVar3,`n            puVar4);`n`n        FUN_10004000();`n        return;`n    }`n`n    field_0C = 0x9c4;`n    field_08_raw = uVar1;`n`n    FUN_10004000();`n}`n
+#include <cstdint>
+
+
+extern std::uint32_t _DAT_10024ea8;
+
+extern "C" std::uint32_t* __cdecl FUN_10010ed0(std::uint32_t*, char*);
+extern int __cdecl FID_conflict__sscanf(char*, char*, ...);
+extern "C" void __stdcall FUN_10004000();
+
+extern "C" void __fastcall FUN_10004a00(std::uint32_t* param_1)
+{
+    std::uint32_t in_EAX;
+    std::uint32_t* unaff_ESI;
+    __asm mov in_EAX, eax
+    __asm mov unaff_ESI, esi
+    std::uint32_t& field_00 =
+        *reinterpret_cast<std::uint32_t*>(param_1 + 0);
+    std::uint32_t& field_08_raw =
+        *reinterpret_cast<std::uint32_t*>(param_1 + 2);
+    float* field_08 =
+        reinterpret_cast<float*>(&field_08_raw);
+    std::int32_t& field_0C =
+        *reinterpret_cast<std::int32_t*>(param_1 + 3);
+    std::uint16_t& field_14 =
+        *reinterpret_cast<std::uint16_t*>(param_1 + 5);
+
+    std::uint32_t* puVar2;
+    std::uint32_t uVar1;
+    float* puVar3;
+    std::int32_t* puVar4;
+
+    field_00 = in_EAX;
+    field_14 = 0;
+
+    puVar2 = FUN_10010ed0(unaff_ESI, const_cast<char*>("_"));
+    uVar1 = _DAT_10024ea8;
+
+    if (puVar2 != nullptr)
+    {
+        puVar4 = &field_0C;
+        puVar3 = field_08;
+
+        puVar2 = FUN_10010ed0(unaff_ESI, const_cast<char*>("_"));
+        FID_conflict__sscanf(
+            reinterpret_cast<char*>(puVar2),
+            const_cast<char*>("_%f_%d"),
+            puVar3,
+            puVar4);
+
+        FUN_10004000();
+        return;
+    }
+
+    field_0C = 0x9c4;
+    field_08_raw = uVar1;
+
+    FUN_10004000();
+}

@@ -1,1 +1,41 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdarg>`n#include <cstdio>`n`nextern "C" int __cdecl __vsnprintf(`n    char* destination,`n    std::size_t count,`n    char* format,`n    va_list arguments);`n`nextern "C" int __cdecl _fputs(`n    const char* string,`n    FILE* stream);`n`nextern char DAT_1003a6c4;`nextern FILE* DAT_1003a6c0;`n`nextern "C" void __cdecl FUN_100014c0(char* param_1, ...)`n{`n    char local_204[512];`n`n    if (DAT_1003a6c4 != '\0')`n    {`n        va_list arguments;`n        va_start(arguments, param_1);`n`n        __vsnprintf(`n            local_204,`n            0x200,`n            param_1,`n            arguments);`n`n        va_end(arguments);`n`n        _fputs(local_204, DAT_1003a6c0);`n        _fputs("\n", DAT_1003a6c0);`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+#include <cstdarg>
+#include <cstdio>
+#pragma warning(disable:4996)
+#include <cstdarg>
+#include <cstdio>
+
+
+extern "C" int __cdecl FUN_10014206(char*, std::size_t, char*, va_list);
+
+extern "C" int __cdecl fputs(
+    const char* string,
+    FILE* stream);
+
+extern char DAT_1003a6c4;
+extern FILE* DAT_1003a6c0;
+
+extern "C" void __cdecl FUN_100014c0(char* param_1, ...)
+{
+    char local_204[512];
+
+    if (DAT_1003a6c4 != '\0')
+    {
+        va_list arguments;
+        va_start(arguments, param_1);
+
+        FUN_10014206(
+            local_204,
+            0x200,
+            param_1,
+            arguments);
+
+        va_end(arguments);
+
+        fputs(local_204, DAT_1003a6c0);
+        fputs("\n", DAT_1003a6c0);
+    }
+}

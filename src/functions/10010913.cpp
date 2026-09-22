@@ -1,1 +1,93 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n`nstruct FILE`n{`n    unsigned char _reserved[0x0C];`n    unsigned int _flag;`n};`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" void __stdcall __SEH_epilog4();`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`nextern "C" unsigned int __cdecl __fileno(FILE*);`nextern "C" std::size_t __cdecl _strlen(const char*);`nextern "C" void __cdecl __lock_file(FILE*);`nextern "C" int __cdecl __stbuf(FILE*);`nextern "C" std::size_t __cdecl __fwrite_nolock(`n    const void*, std::size_t, std::size_t, FILE*);`nextern "C" void __cdecl __ftbuf(int, FILE*);`nextern void __stdcall FUN_10010a11();`nextern unsigned char DAT_10029450;`nextern unsigned char* DAT_1003C420[32];`n`nextern "C" int __cdecl _fputs(char* _Str, FILE* _File)`n{`n    int* error_number;`n    unsigned int file_descriptor;`n    size_t count;`n    int buffer_flag;`n    size_t written;`n    int result;`n    unsigned char* file_info;`n`n    __SEH_prolog4(0x10028268u, 0x10u);`n    if ((_Str == nullptr) || (_File == nullptr))`n        goto invalid_argument;`n`n    if ((_File->_flag & 0x40) != 0)`n        goto write_string;`n`n    file_descriptor = __fileno(_File);`n    if ((file_descriptor == 0xFFFFFFFFu) ||`n        (file_descriptor == 0xFFFFFFFEu))`n    {`n        file_info = &DAT_10029450;`n    }`n    else`n    {`n        file_info = reinterpret_cast<unsigned char*>(`n            (file_descriptor & 0x1Fu) * 0x40u +`n            reinterpret_cast<std::uintptr_t>(`n                (&DAT_1003C420)[file_descriptor >> 5]));`n    }`n`n    if ((file_info[0x24] & 0x7Fu) != 0)`n        goto invalid_argument;`n`n    if ((file_descriptor == 0xFFFFFFFFu) ||`n        (file_descriptor == 0xFFFFFFFEu))`n    {`n        file_info = &DAT_10029450;`n    }`n    else`n    {`n        file_info = reinterpret_cast<unsigned char*>(`n            (file_descriptor & 0x1Fu) * 0x40u +`n            reinterpret_cast<std::uintptr_t>(`n                (&DAT_1003C420)[file_descriptor >> 5]));`n    }`n`n    if ((file_info[0x24] & 0x80u) != 0)`n        goto invalid_argument;`n`nwrite_string:`n    count = _strlen(_Str);`n    __lock_file(_File);`n    buffer_flag = __stbuf(_File);`n    written = __fwrite_nolock(_Str, 1, count, _File);`n    __ftbuf(buffer_flag, _File);`n    FUN_10010a11();`n    result = (written == count) - 1;`n    __SEH_epilog4();`n    return result;`n`ninvalid_argument:`n    error_number = __errno();`n    *error_number = 0x16;`n    FUN_1001189f();`n    __SEH_epilog4();`n    return -1;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+struct FILE
+{
+    unsigned char _reserved[0x0C];
+    unsigned int _flag;
+};
+
+extern "C" void __cdecl __SEH_prolog4(...);
+extern "C" void __cdecl __SEH_epilog4(...);
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" unsigned int __cdecl __fileno(FILE*);
+extern "C" std::size_t __cdecl _strlen(const char*);
+extern "C" void __cdecl __lock_file(FILE*);
+extern "C" int __cdecl __stbuf(FILE*);
+extern "C" std::size_t __cdecl __fwrite_nolock(
+    const void*, std::size_t, std::size_t, FILE*);
+extern "C" void __cdecl __ftbuf(int, FILE*);
+extern "C" void __stdcall FUN_10010a11();
+extern unsigned char DAT_10029450;
+extern unsigned char* DAT_1003C420[32];
+
+int __cdecl fputs(char* _Str, FILE* _File)
+{
+    int* error_number;
+    unsigned int file_descriptor;
+    size_t count;
+    int buffer_flag;
+    size_t written;
+    int result;
+    unsigned char* file_info;
+
+    __SEH_prolog4();
+
+    if ((_Str == nullptr) || (_File == nullptr))
+        goto invalid_argument;
+
+    if ((_File->_flag & 0x40) != 0)
+        goto write_string;
+
+    file_descriptor = __fileno(_File);
+    if ((file_descriptor == 0xFFFFFFFFu) ||
+        (file_descriptor == 0xFFFFFFFEu))
+    {
+        file_info = &DAT_10029450;
+    }
+    else
+    {
+        file_info = reinterpret_cast<unsigned char*>(
+            (file_descriptor & 0x1Fu) * 0x40u +
+            reinterpret_cast<std::uintptr_t>(
+                (&DAT_1003C420)[file_descriptor >> 5]));
+    }
+
+    if ((file_info[0x24] & 0x7Fu) != 0)
+        goto invalid_argument;
+
+    if ((file_descriptor == 0xFFFFFFFFu) ||
+        (file_descriptor == 0xFFFFFFFEu))
+    {
+        file_info = &DAT_10029450;
+    }
+    else
+    {
+        file_info = reinterpret_cast<unsigned char*>(
+            (file_descriptor & 0x1Fu) * 0x40u +
+            reinterpret_cast<std::uintptr_t>(
+                (&DAT_1003C420)[file_descriptor >> 5]));
+    }
+
+    if ((file_info[0x24] & 0x80u) != 0)
+        goto invalid_argument;
+
+write_string:
+    count = _strlen(_Str);
+    __lock_file(_File);
+    buffer_flag = __stbuf(_File);
+    written = __fwrite_nolock(_Str, 1, count, _File);
+    __ftbuf(buffer_flag, _File);
+    FUN_10010a11();
+    result = (written == count) - 1;
+    __SEH_epilog4();
+    return result;
+
+invalid_argument:
+    error_number = __errno();
+    *error_number = 0x16;
+    FUN_1001189f();
+    __SEH_epilog4();
+    return -1;
+}

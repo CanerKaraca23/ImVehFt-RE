@@ -1,1 +1,14 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nstruct TypeInfoStorage`n{`n    void __thiscall destroy();`n    void** vtable; // offset 0`n};`n`nvoid TypeInfoStorage::destroy()`n{`n    this->vtable = reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022248));`n    using TypeInfoDtorFn = void (__cdecl*)(void*);`n    reinterpret_cast<TypeInfoDtorFn>(static_cast<std::uintptr_t>(0x10013ad2))(this);`n}`n
+#include <cstdint>
+
+struct TypeInfoStorage
+{
+    void __thiscall destroy();
+    void** vtable; // offset 0
+};
+
+void TypeInfoStorage::destroy()
+{
+    this->vtable = reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022248));
+    using TypeInfoDtorFn = void (__cdecl*)(void*);
+    reinterpret_cast<TypeInfoDtorFn>(static_cast<std::uintptr_t>(0x10013ad2))(this);
+}

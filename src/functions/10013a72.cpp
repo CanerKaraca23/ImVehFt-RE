@@ -1,1 +1,27 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __fastcall _EH4_CallFilterFunc(`n    void* ,`n    void* )`n{`n    __asm {`n        push ebp`n        push esi`n        push edi`n        push ebx`n        mov ebp, edx`n        xor eax, eax`n        xor ebx, ebx`n        xor edx, edx`n        xor esi, esi`n        xor edi, edi`n        call ecx`n        pop ebx`n        pop edi`n        pop esi`n        pop ebp`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __fastcall _EH4_CallFilterFunc(
+    void* ,
+    void* )
+{
+    __asm {
+        push ebp
+        push esi
+        push edi
+        push ebx
+        mov ebp, edx
+        xor eax, eax
+        xor ebx, ebx
+        xor edx, edx
+        xor esi, esi
+        xor edi, edi
+        call ecx
+        pop ebx
+        pop edi
+        pop esi
+        pop ebp
+        ret
+    }
+}

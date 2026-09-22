@@ -1,1 +1,114 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n`nusing errno_t = int;`nusing rsize_t = std::size_t;`n`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`n`nextern "C" errno_t __cdecl _wcsncpy_s(`n    wchar_t* _Dst,`n    rsize_t _SizeInWords,`n    wchar_t* _Src,`n    rsize_t _MaxCount)`n{`n    wchar_t wVar1;`n    int* piVar2;`n    wchar_t* pwVar3;`n    int iVar4;`n    rsize_t rVar5;`n    errno_t eStack_14;`n`n    if (_MaxCount == 0) {`n        if (_Dst == nullptr) {`n            if (_SizeInWords == 0) {`n                return 0;`n            }`n        } else {`n            goto LAB_1001acc1;`n        }`n    } else if (_Dst != nullptr) {`n        goto LAB_1001acc1;`n    }`n`n    piVar2 = __errno();`n    eStack_14 = 0x16;`n    *piVar2 = 0x16;`n    goto LAB_1001acd2;`n`nLAB_1001acc1:`n    if (_SizeInWords != 0) {`n        if (_MaxCount == 0) {`n            *_Dst = L'\0';`n            return 0;`n        }`n`n        if (_Src != nullptr) {`n            rVar5 = _SizeInWords;`n`n            if (_MaxCount == static_cast<rsize_t>(0xFFFFFFFFu)) {`n                iVar4 = static_cast<int>(`n                    reinterpret_cast<char*>(_Dst) -`n                    reinterpret_cast<char*>(_Src));`n`n                do {`n                    wVar1 = *_Src;`n                    *reinterpret_cast<wchar_t*>(`n                        reinterpret_cast<char*>(_Src) + iVar4) = wVar1;`n                    _Src += 1;`n`n                    if (wVar1 == L'\0') {`n                        break;`n                    }`n`n                    rVar5 -= 1;`n                } while (rVar5 != 0);`n            } else {`n                pwVar3 = _Dst;`n`n                do {`n                    wVar1 = *_Src;`n                    *pwVar3 = wVar1;`n                    pwVar3 += 1;`n                    _Src += 1;`n`n                    if ((wVar1 == L'\0') ||`n                        ((rVar5 -= 1) == 0)) {`n                        break;`n                    }`n`n                    _MaxCount -= 1;`n                } while (_MaxCount != 0);`n`n                if (_MaxCount == 0) {`n                    *pwVar3 = L'\0';`n                }`n            }`n`n            if (rVar5 != 0) {`n                return 0;`n            }`n`n            if (_MaxCount == static_cast<rsize_t>(0xFFFFFFFFu)) {`n                _Dst[_SizeInWords - 1] = L'\0';`n                return 0x50;`n            }`n`n            *_Dst = L'\0';`n            piVar2 = __errno();`n            eStack_14 = 0x22;`n            *piVar2 = 0x22;`n            goto LAB_1001acd2;`n        }`n`n        *_Dst = L'\0';`n    }`n`n    piVar2 = __errno();`n    eStack_14 = 0x16;`n    *piVar2 = 0x16;`n`nLAB_1001acd2:`n    FUN_1001189f();`n    return eStack_14;`n}`n
+#include <cstddef>
+
+using errno_t = int;
+using rsize_t = std::size_t;
+
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+
+extern "C" errno_t __cdecl _wcsncpy_s(
+    wchar_t* _Dst,
+    rsize_t _SizeInWords,
+    wchar_t* _Src,
+    rsize_t _MaxCount)
+{
+    wchar_t wVar1;
+    int* piVar2;
+    wchar_t* pwVar3;
+    int iVar4;
+    rsize_t rVar5;
+    errno_t eStack_14;
+
+    if (_MaxCount == 0) {
+        if (_Dst == nullptr) {
+            if (_SizeInWords == 0) {
+                return 0;
+            }
+        } else {
+            goto LAB_1001acc1;
+        }
+    } else if (_Dst != nullptr) {
+        goto LAB_1001acc1;
+    }
+
+    piVar2 = __errno();
+    eStack_14 = 0x16;
+    *piVar2 = 0x16;
+    goto LAB_1001acd2;
+
+LAB_1001acc1:
+    if (_SizeInWords != 0) {
+        if (_MaxCount == 0) {
+            *_Dst = L'\0';
+            return 0;
+        }
+
+        if (_Src != nullptr) {
+            rVar5 = _SizeInWords;
+
+            if (_MaxCount == static_cast<rsize_t>(0xFFFFFFFFu)) {
+                iVar4 = static_cast<int>(
+                    reinterpret_cast<char*>(_Dst) -
+                    reinterpret_cast<char*>(_Src));
+
+                do {
+                    wVar1 = *_Src;
+                    *reinterpret_cast<wchar_t*>(
+                        reinterpret_cast<char*>(_Src) + iVar4) = wVar1;
+                    _Src += 1;
+
+                    if (wVar1 == L'\0') {
+                        break;
+                    }
+
+                    rVar5 -= 1;
+                } while (rVar5 != 0);
+            } else {
+                pwVar3 = _Dst;
+
+                do {
+                    wVar1 = *_Src;
+                    *pwVar3 = wVar1;
+                    pwVar3 += 1;
+                    _Src += 1;
+
+                    if ((wVar1 == L'\0') ||
+                        ((rVar5 -= 1) == 0)) {
+                        break;
+                    }
+
+                    _MaxCount -= 1;
+                } while (_MaxCount != 0);
+
+                if (_MaxCount == 0) {
+                    *pwVar3 = L'\0';
+                }
+            }
+
+            if (rVar5 != 0) {
+                return 0;
+            }
+
+            if (_MaxCount == static_cast<rsize_t>(0xFFFFFFFFu)) {
+                _Dst[_SizeInWords - 1] = L'\0';
+                return 0x50;
+            }
+
+            *_Dst = L'\0';
+            piVar2 = __errno();
+            eStack_14 = 0x22;
+            *piVar2 = 0x22;
+            goto LAB_1001acd2;
+        }
+
+        *_Dst = L'\0';
+    }
+
+    piVar2 = __errno();
+    eStack_14 = 0x16;
+    *piVar2 = 0x16;
+
+LAB_1001acd2:
+    FUN_1001189f();
+    return eStack_14;
+}

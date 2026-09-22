@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl _alloca_probe();`n`nextern "C" __declspec(naked) void __cdecl _alloca_probe_8()`n{`n    __asm {`n        push    ecx`n        lea     ecx, [esp + 8]`n        sub     ecx, eax`n        and     ecx, 7`n        add     eax, ecx`n        sbb     ecx, ecx`n        or      eax, ecx`n        pop     ecx`n        jmp     _alloca_probe`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) unsigned int __stdcall __alloca_probe_8()
+{
+    __asm {
+        mov     ecx, 4
+        sub     ecx, eax
+        and     ecx, 7
+
+        add     eax, ecx
+        sbb     edx, edx
+        or      eax, edx
+
+        ret
+    }
+}

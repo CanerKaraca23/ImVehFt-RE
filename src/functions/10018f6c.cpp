@@ -1,1 +1,13 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" __declspec(naked)`nstd::uint32_t __fastcall __NLG_Notify1(std::uint32_t )`n{`n    __asm`n    {`n        mov dword ptr ds:0x10029E98, ecx`n        mov dword ptr ds:0x10029E94, eax`n        mov dword ptr ds:0x10029E9C, ebp`n        ret`n    }`n}`n
+#include <cstdint>
+
+extern "C" __declspec(naked)
+std::uint32_t __fastcall __NLG_Notify1(std::uint32_t )
+{
+    __asm
+    {
+        mov dword ptr ds:0x10029E98, ecx
+        mov dword ptr ds:0x10029E94, eax
+        mov dword ptr ds:0x10029E9C, ebp
+        ret
+    }
+}

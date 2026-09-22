@@ -2,7 +2,7 @@
 
 An evidence-led, work-in-progress reconstruction of 705 functions from the local ImVehFt binary. This repository contains reconstructed candidate translation units, not the original ImVehFt source tree.
 
-**Status as of 2026-09-22:** all 705 candidate translation units compiled individually with MSVC 2022 x86, C++20, `/O2`. This is an object/static-archive build only. It is **not** a completed ImVehFt plugin, a successful full link, proof of source equivalence, or a passing in-game test.
+**Status as of 2026-09-23:** all 705 candidate translation units are exported from the latest local ReAgent progress snapshot with real UTF-8 line breaks. They compiled individually with MSVC 2022 x86, C++20, `/O2`. This is an object/static-archive build only. It is **not** a completed ImVehFt plugin, a successful full link, proof of source equivalence, or a passing in-game test.
 
 ## Build the candidate archive
 
@@ -24,7 +24,7 @@ The script compiles each file in `src/functions/` independently with `/std:c++20
 - MSVC `/O2 /W4 /WX`: **700/705**; five diagnostics remain at `10003810`, `100076d0`, `10012e65`, `1001b65a`, and `1001e03d`. They are not suppressed or guessed away.
 - Clang x86 `/O2`: **701/705** in the recorded audit; four toolchain/target incompatibilities remain.
 - ReAgent objective/parity report: 705/705 recorded as passing/green, with 11 scope-limited manual call-count adjudications. These checks do not establish semantic correctness.
-- Full COFF inventory: 1,012 unique unresolved symbols (1,552 object-symbol references) remain, including reconstructed image data, CRT/Windows/SDK dependencies, and absent project globals.
+- The current diagnostic full-set link still has 228 unresolved externals; this is a diagnostic probe, not a production plugin project.
 - Full original-project link, plugin-sdk integration, and GTA San Andreas runtime testing: **not completed**.
 
 See [`audit/status.json`](audit/status.json) for the recorded counts and scope limits, and [`audit/source-sha256.csv`](audit/source-sha256.csv) for the candidate source fingerprints. A green compile or parity score is not equivalent to a behaviorally verified function.
@@ -32,10 +32,16 @@ See [`audit/status.json`](audit/status.json) for the recorded counts and scope l
 ## Source and evidence
 
 - `src/functions/`: the 705 candidate C++ translation units used by the latest MSVC `/O2` audit.
-- `audit/`: compact verification summary and per-function SHA-256 inventory.
+- `audit/`: compact verification summary, per-function SHA-256 inventory, and `function-name-map.csv` mapping addresses to names/signatures observed by Ghidra.
 - The original `ImVehFt.asi`, GTA files, generated object files, and large historical progress backups are intentionally not included.
 
 The reference binary was SHA-256 `409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3` when recorded locally. This fingerprint is included for traceability; it does not imply that the original binary is distributed here.
+
+## Names and formatting
+
+The binary does not contain the original source filenames. Address-based names such as `10001040.cpp` are stable identifiers, not claims about the developer's original naming. `audit/function-name-map.csv` preserves the Ghidra-observed function name and signature for every candidate. Names such as `FUN_...` are automatic Ghidra labels; recognized library/ABI names are marked separately, but they are not assumed to be the original author names.
+
+The candidate files are stored with actual line breaks. Older generated exports may display literal `\\n` sequences; those are serialization artifacts and are not used by the current `src/functions/` set.
 
 ## Rights and use
 

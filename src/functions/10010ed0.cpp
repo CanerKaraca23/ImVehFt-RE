@@ -1,1 +1,88 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nstd::uint32_t* __cdecl FUN_10016846(std::uint32_t* param_1);`n`nstd::uint32_t* __cdecl FUN_10010ed0(`n    std::uint32_t* param_1,`n    char* param_2)`n{`n    char cVar3;`n    std::uint32_t* puVar4;`n    std::uint32_t* puVar5;`n    char* pcVar1;`n    char* pcVar2;`n    char* pcVar6;`n`n    if (*param_2 == '\0')`n    {`n        return param_1;`n    }`n`n    if (param_2[1] == '\0')`n    {`n        puVar5 = FUN_10016846(param_1);`n        return puVar5;`n    }`n`n    do`n    {`n        cVar3 = *reinterpret_cast<char*>(param_1);`n`n        do`n        {`n            puVar5 = param_1;`n            param_1 = reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<char*>(puVar5) + 1);`n`n            if (cVar3 == *param_2)`n            {`n                break;`n            }`n`n            if (cVar3 == '\0')`n            {`n                return nullptr;`n            }`n`n            cVar3 = *reinterpret_cast<char*>(param_1);`n        }`n        while (true);`n`n        cVar3 = *reinterpret_cast<char*>(param_1);`n        pcVar6 = param_2;`n        puVar4 = puVar5;`n`n        if (cVar3 != param_2[1])`n        {`n            continue;`n        }`n`n        do`n        {`n            if (pcVar6[2] == '\0')`n            {`n                return puVar5;`n            }`n`n            if (*reinterpret_cast<char*>(`n                    reinterpret_cast<char*>(puVar4) + 2) != pcVar6[2])`n            {`n                break;`n            }`n`n            pcVar1 = pcVar6 + 3;`n`n            if (*pcVar1 == '\0')`n            {`n                return puVar5;`n            }`n`n            pcVar2 = reinterpret_cast<char*>(puVar4) + 3;`n            pcVar6 = pcVar6 + 2;`n            puVar4 = reinterpret_cast<std::uint32_t*>(`n                reinterpret_cast<char*>(puVar4) + 2);`n        }`n        while (*pcVar1 == *pcVar2);`n    }`n    while (true);`n}`n
+#include <cstdint>
+
+std::uint32_t* __cdecl FUN_10016846(std::uint32_t* param_1);
+
+extern "C" std::uint32_t* __cdecl FUN_10010ed0(
+    std::uint32_t* param_1,
+    char* param_2)
+{
+    char cVar3;
+    std::uint32_t* puVar4;
+    std::uint32_t* puVar5;
+    char* pcVar1;
+    char* pcVar2;
+    char* pcVar6;
+
+    if (*param_2 == '\0')
+    {
+        return param_1;
+    }
+
+    if (param_2[1] == '\0')
+    {
+        puVar5 = FUN_10016846(param_1);
+        return puVar5;
+    }
+
+    do
+    {
+        cVar3 = *reinterpret_cast<char*>(param_1);
+
+        do
+        {
+            puVar5 = param_1;
+            param_1 = reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<char*>(puVar5) + 1);
+
+            if (cVar3 == *param_2)
+            {
+                break;
+            }
+
+            if (cVar3 == '\0')
+            {
+                return nullptr;
+            }
+
+            cVar3 = *reinterpret_cast<char*>(param_1);
+        }
+        while (true);
+
+        cVar3 = *reinterpret_cast<char*>(param_1);
+        pcVar6 = param_2;
+        puVar4 = puVar5;
+
+        if (cVar3 != param_2[1])
+        {
+            continue;
+        }
+
+        do
+        {
+            if (pcVar6[2] == '\0')
+            {
+                return puVar5;
+            }
+
+            if (*reinterpret_cast<char*>(
+                    reinterpret_cast<char*>(puVar4) + 2) != pcVar6[2])
+            {
+                break;
+            }
+
+            pcVar1 = pcVar6 + 3;
+
+            if (*pcVar1 == '\0')
+            {
+                return puVar5;
+            }
+
+            pcVar2 = reinterpret_cast<char*>(puVar4) + 3;
+            pcVar6 = pcVar6 + 2;
+            puVar4 = reinterpret_cast<std::uint32_t*>(
+                reinterpret_cast<char*>(puVar4) + 2);
+        }
+        while (*pcVar1 == *pcVar2);
+    }
+    while (true);
+}

@@ -1,1 +1,80 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern int __cdecl FUN_007ed2d0(`n    std::uint32_t param_1,`n    std::int32_t param_2,`n    std::int32_t* param_3,`n    std::uint8_t* param_4);`n`nextern int __cdecl FUN_007ec9d0(`n    std::uint32_t param_1,`n    std::int16_t* param_2,`n    std::int32_t param_3);`n`nextern int __cdecl FUN_007f3600();`nextern int __cdecl FUN_00730e60(std::uint32_t param_1);`nextern void __cdecl FUN_007f3980(`n    std::int32_t param_1,`n    std::int32_t param_2);`n`nextern void __cdecl FUN_007f3730(`n    std::int32_t param_1,`n    std::uintptr_t param_2,`n    std::int32_t param_3);`n`nextern void __cdecl FUN_007f36a0(std::int32_t param_1);`n`nextern int* __cdecl FUN_10001980(int* param_1, unsigned int param_2);`n`nint __cdecl FUN_100018a0(std::uint32_t param_1)`n{`n    int iVar1;`n    int iVar2;`n    std::uint8_t local_10[4];`n    int local_c;`n    std::int16_t local_8[2];`n`n    iVar1 = FUN_007ed2d0(param_1, 1, &local_c, local_10);`n`n    if ((iVar1 != 0) &&`n        ((iVar1 = FUN_007ec9d0(param_1, local_8, local_c)),`n         (iVar1 == local_c)))`n    {`n        iVar1 = FUN_007f3600();`n`n        if (iVar1 != 0)`n        {`n            if (local_8[0] == 0)`n            {`n                return iVar1;`n            }`n`n            local_8[0] = local_8[0] + -1;`n            iVar2 = FUN_00730e60(param_1);`n`n            while (iVar2 != 0)`n            {`n                FUN_007f3980(iVar1, iVar2);`n`n                if (local_8[0] == 0)`n                {`n                    FUN_007f3730(`n                        iVar1,`n                        reinterpret_cast<std::uintptr_t>(&FUN_10001980),`n                        iVar1);`n                    return iVar1;`n                }`n`n                local_8[0] = local_8[0] + -1;`n                iVar2 = FUN_00730e60(param_1);`n            }`n`n            FUN_007f3730(iVar1, static_cast<std::uintptr_t>(0x730e50), 0);`n            FUN_007f36a0(iVar1);`n        }`n`n        return 0;`n    }`n`n    return 0;`n}`n
+#include <cstdint>
+
+extern int __cdecl FUN_007ed2d0(
+    std::uint32_t param_1,
+    std::int32_t param_2,
+    std::int32_t* param_3,
+    std::uint8_t* param_4);
+
+extern int __cdecl FUN_007ec9d0(
+    std::uint32_t param_1,
+    std::int16_t* param_2,
+    std::int32_t param_3);
+
+extern int __cdecl FUN_007f3600();
+extern int __cdecl FUN_00730e60(std::uint32_t param_1);
+extern void __cdecl FUN_007f3980(
+    std::int32_t param_1,
+    std::int32_t param_2);
+
+extern void __cdecl FUN_007f3730(
+    std::int32_t param_1,
+    std::uintptr_t param_2,
+    std::int32_t param_3);
+
+extern void __cdecl FUN_007f36a0(std::int32_t param_1);
+
+extern "C" int* __cdecl FUN_10001980(int*, unsigned int);
+
+int __cdecl FUN_100018a0(std::uint32_t param_1)
+{
+    int iVar1;
+    int iVar2;
+    std::uint8_t local_10[4];
+    int local_c;
+    std::int16_t local_8[2];
+
+    iVar1 = FUN_007ed2d0(param_1, 1, &local_c, local_10);
+
+    if ((iVar1 != 0) &&
+        ((iVar1 = FUN_007ec9d0(param_1, local_8, local_c)),
+         (iVar1 == local_c)))
+    {
+        iVar1 = FUN_007f3600();
+
+        if (iVar1 != 0)
+        {
+            if (local_8[0] == 0)
+            {
+                return iVar1;
+            }
+
+            local_8[0] = local_8[0] + -1;
+            iVar2 = FUN_00730e60(param_1);
+
+            while (iVar2 != 0)
+            {
+                FUN_007f3980(iVar1, iVar2);
+
+                if (local_8[0] == 0)
+                {
+                    FUN_007f3730(
+                        iVar1,
+                        reinterpret_cast<std::uintptr_t>(&FUN_10001980),
+                        iVar1);
+                    return iVar1;
+                }
+
+                local_8[0] = local_8[0] + -1;
+                iVar2 = FUN_00730e60(param_1);
+            }
+
+            FUN_007f3730(iVar1, static_cast<std::uintptr_t>(0x730e50), 0);
+            FUN_007f36a0(iVar1);
+        }
+
+        return 0;
+    }
+
+    return 0;
+}

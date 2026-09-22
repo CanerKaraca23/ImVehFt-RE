@@ -1,1 +1,64 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern int _DAT_1003c24c;`nextern int* _DAT_00b74494;`n`nextern int __stdcall FUN_10009360();`n`nvoid __cdecl FUN_1000d250(int param_1)`n{`n    int* piVar1;`n    int iVar2;`n    int iVar3;`n    int iVar4;`n`n    _DAT_1003c24c = param_1;`n`n    iVar2 = FUN_10009360();`n    iVar3 = (param_1 - *_DAT_00b74494) / 0xA18;`n`n    piVar1 = reinterpret_cast<int*>(`n        *reinterpret_cast<int*>(iVar2 + 0x48) + iVar3 * 4);`n`n    if (*reinterpret_cast<int*>(`n            *reinterpret_cast<int*>(iVar2 + 0x48) + iVar3 * 4) == 0)`n    {`n        iVar3 = FUN_10009360();`n        iVar2 = FUN_10009360();`n        iVar4 = iVar3 + 0x50;`n`n        *piVar1 =`n            ((param_1 - *_DAT_00b74494) / 0xA18) *`n                *reinterpret_cast<int*>(iVar2 + 0x44) +`n            *reinterpret_cast<int*>(iVar2 + 0x40);`n`n        if (*reinterpret_cast<int*>(iVar3 + 0x54) == 0)`n        {`n            *reinterpret_cast<int*>(iVar3 + 0x54) = iVar4;`n            *reinterpret_cast<int*>(iVar4) = iVar4;`n        }`n`n        iVar2 = *reinterpret_cast<int*>(iVar3 + 0x54);`n`n        while (true)`n        {`n            if (*reinterpret_cast<int*>(iVar3 + 0x54) == 0)`n            {`n                *reinterpret_cast<int*>(iVar3 + 0x54) = iVar4;`n                *reinterpret_cast<int*>(iVar4) = iVar4;`n            }`n`n            if (iVar2 == iVar4)`n                break;`n`n            using Callback = void (__cdecl*)(int, int);`n`n            reinterpret_cast<Callback>(`n                *reinterpret_cast<int*>(iVar2 + 0x14))(`n                    param_1,`n                    *reinterpret_cast<int*>(iVar2 + 0x08) + *piVar1);`n`n            iVar2 = *reinterpret_cast<int*>(iVar2 + 0x04);`n        }`n    }`n}`n
+#include <cstdint>
+
+extern int _DAT_1003c24c;
+extern int* _DAT_00b74494;
+
+extern "C" int __stdcall FUN_10009360();
+
+void __cdecl FUN_1000d250(int param_1)
+{
+    int* piVar1;
+    int iVar2;
+    int iVar3;
+    int iVar4;
+
+    _DAT_1003c24c = param_1;
+
+    iVar2 = FUN_10009360();
+    iVar3 = (param_1 - *_DAT_00b74494) / 0xA18;
+
+    piVar1 = reinterpret_cast<int*>(
+        *reinterpret_cast<int*>(iVar2 + 0x48) + iVar3 * 4);
+
+    if (*reinterpret_cast<int*>(
+            *reinterpret_cast<int*>(iVar2 + 0x48) + iVar3 * 4) == 0)
+    {
+        iVar3 = FUN_10009360();
+        iVar2 = FUN_10009360();
+        iVar4 = iVar3 + 0x50;
+
+        *piVar1 =
+            ((param_1 - *_DAT_00b74494) / 0xA18) *
+                *reinterpret_cast<int*>(iVar2 + 0x44) +
+            *reinterpret_cast<int*>(iVar2 + 0x40);
+
+        if (*reinterpret_cast<int*>(iVar3 + 0x54) == 0)
+        {
+            *reinterpret_cast<int*>(iVar3 + 0x54) = iVar4;
+            *reinterpret_cast<int*>(iVar4) = iVar4;
+        }
+
+        iVar2 = *reinterpret_cast<int*>(iVar3 + 0x54);
+
+        while (true)
+        {
+            if (*reinterpret_cast<int*>(iVar3 + 0x54) == 0)
+            {
+                *reinterpret_cast<int*>(iVar3 + 0x54) = iVar4;
+                *reinterpret_cast<int*>(iVar4) = iVar4;
+            }
+
+            if (iVar2 == iVar4)
+                break;
+
+            using Callback = void (__cdecl*)(int, int);
+
+            reinterpret_cast<Callback>(
+                *reinterpret_cast<int*>(iVar2 + 0x14))(
+                    param_1,
+                    *reinterpret_cast<int*>(iVar2 + 0x08) + *piVar1);
+
+            iVar2 = *reinterpret_cast<int*>(iVar2 + 0x04);
+        }
+    }
+}

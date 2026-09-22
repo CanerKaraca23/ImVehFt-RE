@@ -1,1 +1,66 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing int3 = std::uint32_t;`nstatic constexpr std::uint16_t CONCAT11(std::uint8_t high, std::uint8_t low)`n{`n    return static_cast<std::uint16_t>((static_cast<std::uint16_t>(high) << 8) | low);`n}`nstatic constexpr std::uint32_t CONCAT31(int3 high24, std::uint8_t low)`n{`n    return static_cast<std::uint32_t>((high24 << 8) | low);`n}`n`n`n/* Library Function - Single Match`n`n    ___ascii_strnicmp`n`n`n`n   Library: Visual Studio 2010 Release */`n`n`n`nextern "C" int __cdecl ___ascii_strnicmp(char *_Str1,char *_Str2,size_t _MaxCount)`n`n`n`n{`n`n  char cVar1;`n`n  std::uint8_t bVar2;`n`n  std::uint16_t uVar3;`n`n  std::uint32_t uVar4;`n`n  int iVar5;`n`n  bool bVar6;`n`n`n`n  iVar5 = 0;`n`n  if (_MaxCount != 0) {`n`n    do {`n`n      bVar2 = *_Str1;`n`n      cVar1 = *_Str2;`n`n      uVar3 = CONCAT11(bVar2,cVar1);`n`n      if (bVar2 == 0) break;`n`n      uVar3 = CONCAT11(bVar2,cVar1);`n`n      uVar4 = (std::uint32_t)uVar3;`n`n      if (cVar1 == '\0') break;`n`n      _Str1 = _Str1 + 1;`n`n      _Str2 = _Str2 + 1;`n`n      if ((0x40 < bVar2) && (bVar2 < 0x5b)) {`n`n        uVar4 = (std::uint32_t)CONCAT11(bVar2 + 0x20,cVar1);`n`n      }`n`n      uVar3 = (std::uint16_t)uVar4;`n`n      bVar2 = (std::uint8_t)uVar4;`n`n      if ((0x40 < bVar2) && (bVar2 < 0x5b)) {`n`n        uVar3 = (std::uint16_t)CONCAT31((int3)(uVar4 >> 8),bVar2 + 0x20);`n`n      }`n`n      bVar2 = (std::uint8_t)(uVar3 >> 8);`n`n      bVar6 = bVar2 < (std::uint8_t)uVar3;`n`n      if (bVar2 != (std::uint8_t)uVar3) goto LAB_100152c1;`n`n      _MaxCount = _MaxCount - 1;`n`n    } while (_MaxCount != 0);`n`n    iVar5 = 0;`n`n    bVar2 = (std::uint8_t)(uVar3 >> 8);`n`n    bVar6 = bVar2 < (std::uint8_t)uVar3;`n`n    if (bVar2 != (std::uint8_t)uVar3) {`n`nLAB_100152c1:`n`n      iVar5 = -1;`n`n      if (!bVar6) {`n`n        iVar5 = 1;`n`n      }`n`n    }`n`n  }`n`n  return iVar5;`n`n}`n
+#include <cstdint>
+
+using int3 = std::uint32_t;
+static constexpr std::uint16_t CONCAT11(std::uint8_t high, std::uint8_t low)
+{
+    return static_cast<std::uint16_t>((static_cast<std::uint16_t>(high) << 8) | low);
+}
+static constexpr std::uint32_t CONCAT31(int3 high24, std::uint8_t low)
+{
+    return static_cast<std::uint32_t>((high24 << 8) | low);
+}
+
+/* Library Function - Single Match
+    ___ascii_strnicmp
+   
+   Library: Visual Studio 2010 Release */
+
+int __cdecl ___ascii_strnicmp(char *_Str1,char *_Str2,size_t _MaxCount)
+
+{
+  char cVar1;
+  std::uint8_t bVar2;
+  std::uint16_t uVar3;
+  std::uint32_t uVar4;
+  int iVar5;
+  bool bVar6;
+  
+  iVar5 = 0;
+  if (_MaxCount != 0) {
+    do {
+      bVar2 = *_Str1;
+      cVar1 = *_Str2;
+      uVar3 = CONCAT11(bVar2,cVar1);
+      if (bVar2 == 0) break;
+      uVar3 = CONCAT11(bVar2,cVar1);
+      uVar4 = (std::uint32_t)uVar3;
+      if (cVar1 == '\0') break;
+      _Str1 = _Str1 + 1;
+      _Str2 = _Str2 + 1;
+      if ((0x40 < bVar2) && (bVar2 < 0x5b)) {
+        uVar4 = (std::uint32_t)CONCAT11(bVar2 + 0x20,cVar1);
+      }
+      uVar3 = (std::uint16_t)uVar4;
+      bVar2 = (std::uint8_t)uVar4;
+      if ((0x40 < bVar2) && (bVar2 < 0x5b)) {
+        uVar3 = (std::uint16_t)CONCAT31((int3)(uVar4 >> 8),bVar2 + 0x20);
+      }
+      bVar2 = (std::uint8_t)(uVar3 >> 8);
+      bVar6 = bVar2 < (std::uint8_t)uVar3;
+      if (bVar2 != (std::uint8_t)uVar3) goto LAB_100152c1;
+      _MaxCount = _MaxCount - 1;
+    } while (_MaxCount != 0);
+    iVar5 = 0;
+    bVar2 = (std::uint8_t)(uVar3 >> 8);
+    bVar6 = bVar2 < (std::uint8_t)uVar3;
+    if (bVar2 != (std::uint8_t)uVar3) {
+LAB_100152c1:
+      iVar5 = -1;
+      if (!bVar6) {
+        iVar5 = 1;
+      }
+    }
+  }
+  return iVar5;
+}
+

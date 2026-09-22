@@ -1,1 +1,25 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstddef>`n#include <cstdint>`n`nextern "C" int* __cdecl __errno(void);`nextern "C" void __stdcall FUN_1001189f(void);`nextern "C" std::size_t __stdcall HeapSize(`n    void* hHeap,`n    std::uint32_t dwFlags,`n    const void* lpMem);`n`nextern "C" void* DAT_10039b90;`n`nextern "C" std::size_t __cdecl __msize(void* _Memory)`n{`n    if (_Memory == nullptr)`n    {`n        int* piVar1 = __errno();`n        *piVar1 = 0x16;`n        FUN_1001189f();`n        return static_cast<std::size_t>(0xFFFFFFFFu);`n    }`n`n    std::size_t SVar2 = HeapSize(DAT_10039b90, 0, _Memory);`n    return SVar2;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" int* __cdecl __errno(void);
+extern "C" void __stdcall FUN_1001189f(void);
+extern "C" std::size_t __stdcall HeapSize(
+    void* hHeap,
+    std::uint32_t dwFlags,
+    const void* lpMem);
+
+extern "C" void* DAT_10039b90;
+
+extern "C" std::size_t __cdecl __msize(void* _Memory)
+{
+    if (_Memory == nullptr)
+    {
+        int* piVar1 = __errno();
+        *piVar1 = 0x16;
+        FUN_1001189f();
+        return static_cast<std::size_t>(0xFFFFFFFFu);
+    }
+
+    std::size_t SVar2 = HeapSize(DAT_10039b90, 0, _Memory);
+    return SVar2;
+}

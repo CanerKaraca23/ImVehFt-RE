@@ -1,1 +1,12 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" __declspec(naked) std::uint32_t __cdecl FUN_10003f80()`n{`n    __asm {`n        push edi`n        push 0x10003fe0`n        push esi`n        mov eax, 0x7f1200`n        call eax`n        push edi`n        push 0x10003fb0`n        push esi`n        mov ecx, 0x7f0dc0`n        call ecx`n        add esp, 0x18`n        mov eax, esi`n        ret`n    }`n}`n
+#include <cstdint>
+
+using UnresolvedVoidStdcallFunction = void (__stdcall*)();
+
+extern "C" void __stdcall FUN_10003f80()
+{
+    reinterpret_cast<UnresolvedVoidStdcallFunction>(
+        static_cast<std::uintptr_t>(0x7F1200u))();
+
+    reinterpret_cast<UnresolvedVoidStdcallFunction>(
+        static_cast<std::uintptr_t>(0x7F0DC0u))();
+}

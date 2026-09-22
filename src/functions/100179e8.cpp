@@ -1,1 +1,37 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nstruct _LocaleUpdate`n{`n    std::uint32_t locinfo;`n    std::uint32_t mbcinfo;`n    std::uint32_t ptd;`n    std::uint8_t updated;`n`n    _LocaleUpdate(_locale_t locale);`n};`n`nstatic_assert(offsetof(_LocaleUpdate, locinfo) == 0x00);`nstatic_assert(offsetof(_LocaleUpdate, mbcinfo) == 0x04);`nstatic_assert(offsetof(_LocaleUpdate, ptd) == 0x08);`nstatic_assert(offsetof(_LocaleUpdate, updated) == 0x0c);`nstatic_assert(sizeof(_LocaleUpdate) == 0x10);`n`nextern "C" int __cdecl __isleadbyte_l(int _C, _locale_t _Locale)`n{`n    _LocaleUpdate local_14(_Locale);`n`n    const std::uint16_t uVar1 = *reinterpret_cast<const std::uint16_t*>(`n        static_cast<std::uintptr_t>(local_14.locinfo) +`n        200u +`n        (static_cast<unsigned int>(_C) & 0xffu) * 2u);`n`n    if (local_14.updated != 0)`n    {`n        *reinterpret_cast<std::uint32_t*>(`n            static_cast<std::uintptr_t>(local_14.ptd) + 0x70u) &=`n            0xfffffffdu;`n    }`n`n    return uVar1 & 0x8000u;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+struct _LocaleUpdate
+{
+    std::uint32_t locinfo;
+    std::uint32_t mbcinfo;
+    std::uint32_t ptd;
+    std::uint8_t updated;
+
+    _LocaleUpdate(_locale_t locale);
+};
+
+static_assert(offsetof(_LocaleUpdate, locinfo) == 0x00);
+static_assert(offsetof(_LocaleUpdate, mbcinfo) == 0x04);
+static_assert(offsetof(_LocaleUpdate, ptd) == 0x08);
+static_assert(offsetof(_LocaleUpdate, updated) == 0x0c);
+static_assert(sizeof(_LocaleUpdate) == 0x10);
+
+extern "C" int __cdecl __isleadbyte_l(int _C, _locale_t _Locale)
+{
+    _LocaleUpdate local_14(_Locale);
+
+    const std::uint16_t uVar1 = *reinterpret_cast<const std::uint16_t*>(
+        static_cast<std::uintptr_t>(local_14.locinfo) +
+        200u +
+        (static_cast<unsigned int>(_C) & 0xffu) * 2u);
+
+    if (local_14.updated != 0)
+    {
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(local_14.ptd) + 0x70u) &=
+            0xfffffffdu;
+    }
+
+    return uVar1 & 0x8000u;
+}

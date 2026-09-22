@@ -1,1 +1,29 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" std::size_t __cdecl _strlen(const char*);`nextern "C" void* __cdecl _malloc(std::size_t);`nextern "C" int __cdecl _strcpy_s(char*, std::size_t, const char*);`nstruct CopyStr_this { void __thiscall invoke(char* param_1); };`n`nvoid CopyStr_this::invoke(char* param_1)`n{`n    void* this_ = static_cast<void*>(this);`n    if (param_1 != nullptr)`n    {`n        const size_t length = _strlen(param_1);`n        char* destination = static_cast<char*>(_malloc(length + 1));`n`n        *reinterpret_cast<char**>(`n            static_cast<unsigned char*>(this_) + 4`n        ) = destination;`n`n        if (destination != nullptr)`n        {`n            _strcpy_s(destination, length + 1, param_1);`n            *reinterpret_cast<unsigned char*>(`n                static_cast<unsigned char*>(this_) + 8`n            ) = 1;`n        }`n    }`n}`n
+ #include <cstddef>
+#include <cstring>
+
+extern "C" int __cdecl _strcpy_s(char*, std::size_t, const char*);
+extern "C" void* __cdecl _malloc(std::size_t);
+extern "C" std::size_t __cdecl _strlen(const char*);
+struct CopyStr_this { void __thiscall invoke(char* param_1); };
+
+void CopyStr_this::invoke(char* param_1)
+{
+    void* this_ = static_cast<void*>(this);
+    if (param_1 != nullptr)
+    {
+        const size_t length = _strlen(param_1);
+        char* destination = static_cast<char*>(_malloc(length + 1));
+
+        *reinterpret_cast<char**>(
+            static_cast<unsigned char*>(this_) + 4
+        ) = destination;
+
+        if (destination != nullptr)
+        {
+            strcpy_s(destination, length + 1, param_1);
+            *reinterpret_cast<unsigned char*>(
+                static_cast<unsigned char*>(this_) + 8
+            ) = 1;
+        }
+    }
+}

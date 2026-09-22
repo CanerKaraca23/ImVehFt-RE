@@ -1,1 +1,36 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern void* PTR_vftable_10037990;`nextern void* DAT_100379b8;`nextern std::uint32_t DAT_100379bc;`nextern std::uint32_t DAT_100379c0;`nextern void* DAT_100379a8;`nextern std::uint32_t _DAT_100379ac;`nextern std::uint32_t _DAT_100379b0;`n`nextern void*`n    BasicCallbackManager_6195212_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable;`n`nextern "C" void __cdecl FUN_10010756(void* param_1);`n`nextern "C" void __stdcall FUN_100211b0(void)`n{`n    PTR_vftable_10037990 =`n        BasicCallbackManager_6195212_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable;`n`n    if (DAT_100379b8 != nullptr) {`n        FUN_10010756(DAT_100379b8);`n    }`n`n    DAT_100379b8 = nullptr;`n    DAT_100379bc = 0;`n    DAT_100379c0 = 0;`n`n    if (DAT_100379a8 != nullptr) {`n        FUN_10010756(DAT_100379a8);`n    }`n`n    DAT_100379a8 = nullptr;`n    _DAT_100379ac = 0;`n    _DAT_100379b0 = 0;`n}`n
+#include <cstdint>
+
+extern void* PTR_vftable_10037990;
+extern void* DAT_100379b8;
+extern std::uint32_t DAT_100379bc;
+extern std::uint32_t DAT_100379c0;
+extern void* DAT_100379a8;
+extern std::uint32_t _DAT_100379ac;
+extern std::uint32_t _DAT_100379b0;
+
+extern void*
+    BasicCallbackManager_6195212_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable;
+
+extern "C" void __cdecl FUN_10010756(void* param_1);
+
+extern "C" void __stdcall FUN_100211b0(void)
+{
+    PTR_vftable_10037990 =
+        BasicCallbackManager_6195212_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable;
+
+    if (DAT_100379b8 != nullptr) {
+        FUN_10010756(DAT_100379b8);
+    }
+
+    DAT_100379b8 = nullptr;
+    DAT_100379bc = 0;
+    DAT_100379c0 = 0;
+
+    if (DAT_100379a8 != nullptr) {
+        FUN_10010756(DAT_100379a8);
+    }
+
+    DAT_100379a8 = nullptr;
+    _DAT_100379ac = 0;
+    _DAT_100379b0 = 0;
+}

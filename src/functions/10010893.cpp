@@ -1,1 +1,59 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" void* __cdecl _malloc(std::size_t size);`nextern "C" int __cdecl __callnewh(std::size_t size);`nextern "C" int __cdecl _atexit(void (__cdecl* callback)());`n`nextern "C" [[noreturn]] void __cdecl __CxxThrowException_8(`n    void* exception_object,`n    const void* throw_info);`n`nextern std::uint32_t _DAT_100399ec;`nstruct BadAllocStorage { void** vtable; char* what; std::uint8_t do_free; };`nextern BadAllocStorage DAT_100399e0;`nextern std::uint8_t DAT_10028608;`n`nextern "C" void __cdecl FUN_10021267();`n`nextern "C" void* __cdecl FUN_10010893(std::size_t param_1)`n{`n    void* pvVar2;`n    int iVar1;`n    void* local_14[3];`n    char* local_8;`n`n    do`n    {`n        pvVar2 = _malloc(param_1);`n        if (pvVar2 != nullptr)`n        {`n            return pvVar2;`n        }`n`n        iVar1 = __callnewh(param_1);`n    }`n    while (iVar1 != 0);`n`n    if ((_DAT_100399ec & 1u) == 0)`n    {`n        _DAT_100399ec |= 1u;`n`n        local_8 = const_cast<char*>("bad allocation");`n        using BadAllocInitFn = void (__thiscall*)(void*, const std::uint32_t*);`n        reinterpret_cast<BadAllocInitFn>(static_cast<std::uintptr_t>(0x1001023b))(`n            &DAT_100399e0, reinterpret_cast<const std::uint32_t*>(&local_8));`n`n        DAT_100399e0.vtable =`n            reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022250));`n`n        _atexit(FUN_10021267);`n    }`n`n    using BadAllocCopyCtorFn = void* (__thiscall*)(void*, void*);`n    reinterpret_cast<BadAllocCopyCtorFn>(static_cast<std::uintptr_t>(0x10010351))(`n        local_14, &DAT_100399e0);`n    local_14[0] = reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x10022250));`n`n    __CxxThrowException_8(local_14, &DAT_10028608);`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" void* __cdecl _malloc(std::size_t size);
+extern "C" int __cdecl __callnewh(std::size_t size);
+extern "C" int __cdecl _atexit(void (__cdecl* callback)());
+
+extern "C" [[noreturn]] void __stdcall __CxxThrowException_8(
+    void* exception_object,
+    const void* throw_info);
+
+extern std::uint32_t _DAT_100399ec;
+struct BadAllocStorage { void** vtable; char* what; std::uint8_t do_free; };
+extern BadAllocStorage DAT_100399e0;
+extern std::uint8_t DAT_10028608;
+
+extern "C" void __stdcall FUN_10021267();
+
+extern "C" void __cdecl FUN_10010893(std::size_t param_1)
+{
+    void* pvVar2;
+    int iVar1;
+    void* local_14[3];
+    char* local_8;
+
+    do
+    {
+        pvVar2 = _malloc(param_1);
+        if (pvVar2 != nullptr)
+        {
+            return;
+        }
+
+        iVar1 = __callnewh(param_1);
+    }
+    while (iVar1 != 0);
+
+    if ((_DAT_100399ec & 1u) == 0)
+    {
+        _DAT_100399ec |= 1u;
+
+        local_8 = const_cast<char*>("bad allocation");
+        using BadAllocInitFn = void (__thiscall*)(void*, const std::uint32_t*);
+        reinterpret_cast<BadAllocInitFn>(static_cast<std::uintptr_t>(0x1001023b))(
+            &DAT_100399e0, reinterpret_cast<const std::uint32_t*>(&local_8));
+
+        DAT_100399e0.vtable =
+            reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022250));
+
+        _atexit(reinterpret_cast<void (__cdecl*)()>(FUN_10021267));
+    }
+
+    using BadAllocCopyCtorFn = void* (__thiscall*)(void*, void*);
+    reinterpret_cast<BadAllocCopyCtorFn>(static_cast<std::uintptr_t>(0x10010351))(
+        local_14, &DAT_100399e0);
+    local_14[0] = reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x10022250));
+
+    __CxxThrowException_8(local_14, &DAT_10028608);
+}

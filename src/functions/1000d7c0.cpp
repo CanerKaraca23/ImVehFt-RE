@@ -1,1 +1,49 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c390;`n`nextern std::uint32_t __stdcall FUN_100096e0(`n    std::int32_t param_1,`n    std::int32_t param_2`n);`n`n// Indirect callback calling convention is unresolved by the supplied evidence.`nusing Callback = void (*)();`n`nstd::uint32_t __stdcall FUN_1000d7c0()`n{`n    const std::int32_t iVar2 =`n        static_cast<std::int32_t>(DAT_1003c390);`n`n    auto* puVar1 = *reinterpret_cast<std::uint32_t**>(`n        static_cast<std::uintptr_t>(iVar2) + 0x48u);`n`n    for (auto* puVar4 = *reinterpret_cast<std::uint32_t**>(`n             static_cast<std::uintptr_t>(iVar2) + 0x44u);`n         puVar4 != puVar1;`n         puVar4 += 1)`n    {`n        if (*puVar4 != 0u)`n        {`n            reinterpret_cast<Callback>(*puVar4)();`n        }`n    }`n`n    const std::uint32_t uVar3 = FUN_100096e0(iVar2 + 4, 9);`n`n    puVar1 = *reinterpret_cast<std::uint32_t**>(`n        static_cast<std::uintptr_t>(iVar2) + 0x58u);`n`n    for (auto* puVar4 = *reinterpret_cast<std::uint32_t**>(`n             static_cast<std::uintptr_t>(iVar2) + 0x54u);`n         puVar4 != puVar1;`n         puVar4 += 1)`n    {`n        if (*puVar4 != 0u)`n        {`n            reinterpret_cast<Callback>(*puVar4)();`n        }`n    }`n`n    return uVar3;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c390;
+
+extern std::uint32_t __stdcall FUN_100096e0(
+    std::int32_t param_1,
+    std::int32_t param_2
+);
+
+// Indirect callback calling convention is unresolved by the supplied evidence.
+using Callback = void (*)();
+
+std::uint32_t __stdcall FUN_1000d7c0()
+{
+    const std::int32_t iVar2 =
+        static_cast<std::int32_t>(DAT_1003c390);
+
+    auto* puVar1 = *reinterpret_cast<std::uint32_t**>(
+        static_cast<std::uintptr_t>(iVar2) + 0x48u);
+
+    for (auto* puVar4 = *reinterpret_cast<std::uint32_t**>(
+             static_cast<std::uintptr_t>(iVar2) + 0x44u);
+         puVar4 != puVar1;
+         puVar4 += 1)
+    {
+        if (*puVar4 != 0u)
+        {
+            reinterpret_cast<Callback>(*puVar4)();
+        }
+    }
+
+    const std::uint32_t uVar3 = FUN_100096e0(iVar2 + 4, 9);
+
+    puVar1 = *reinterpret_cast<std::uint32_t**>(
+        static_cast<std::uintptr_t>(iVar2) + 0x58u);
+
+    for (auto* puVar4 = *reinterpret_cast<std::uint32_t**>(
+             static_cast<std::uintptr_t>(iVar2) + 0x54u);
+         puVar4 != puVar1;
+         puVar4 += 1)
+    {
+        if (*puVar4 != 0u)
+        {
+            reinterpret_cast<Callback>(*puVar4)();
+        }
+    }
+
+    return uVar3;
+}

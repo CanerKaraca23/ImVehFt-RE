@@ -1,1 +1,30 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" unsigned char DAT_10029d30;`n`nextern "C" void* __stdcall FUN_10017ec8(void);`nextern "C" int __cdecl _raise(int _Signal);`nextern "C" void __cdecl __call_reportfault(`n    int nDbgHookCode,`n    unsigned long dwExceptionCode,`n    unsigned long dwExceptionFlags);`nextern "C" [[noreturn]] void __cdecl __exit(int _Code);`n`nextern "C" [[noreturn]] void __cdecl _abort(void)`n{`n    void* pvVar1 = FUN_10017ec8();`n`n    if (pvVar1 != nullptr)`n    {`n        _raise(0x16);`n    }`n`n    if ((DAT_10029d30 & 2) != 0)`n    {`n        __call_reportfault(3, 0x40000015UL, 1UL);`n    }`n`n    __exit(3);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" unsigned char DAT_10029d30;
+
+extern "C" int __stdcall FUN_10017ec8(void);
+extern "C" int __cdecl _raise(int _Signal);
+extern "C" void __cdecl __call_reportfault(
+    int nDbgHookCode,
+    unsigned long dwExceptionCode,
+    unsigned long dwExceptionFlags);
+extern "C" [[noreturn]] void __cdecl __exit(int _Code);
+
+extern "C" [[noreturn]] void __cdecl _abort(void)
+{
+    int iVar1 = FUN_10017ec8();
+
+    if (iVar1 != 0)
+    {
+        _raise(0x16);
+    }
+
+    if ((DAT_10029d30 & 2) != 0)
+    {
+        __call_reportfault(3, 0x40000015UL, 1UL);
+    }
+
+    __exit(3);
+}

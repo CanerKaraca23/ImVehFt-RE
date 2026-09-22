@@ -1,1 +1,16 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <exception>`n`nstruct FUN_1001d906_this { void* __thiscall invoke(std::exception* param_1); };`n`nvoid* FUN_1001d906_this::invoke(std::exception* param_1)`n{`n    void* self = static_cast<void*>(this);`n    using ExceptionCopyConstructor =`n        void (__thiscall*)(void*, std::exception*);`n    reinterpret_cast<ExceptionCopyConstructor>(0x10010351)(self, param_1);`n`n    *reinterpret_cast<void***>(self) =`n        reinterpret_cast<void**>(0x100261e8);`n`n    return self;`n}`n
+#include <exception>
+
+struct FUN_1001d906_this { void* __thiscall invoke(std::exception* param_1); };
+
+void* FUN_1001d906_this::invoke(std::exception* param_1)
+{
+    void* self = static_cast<void*>(this);
+    using ExceptionCopyConstructor =
+        void (__thiscall*)(void*, std::exception*);
+    reinterpret_cast<ExceptionCopyConstructor>(0x10010351)(self, param_1);
+
+    *reinterpret_cast<void***>(self) =
+        reinterpret_cast<void**>(0x100261e8);
+
+    return self;
+}

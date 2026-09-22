@@ -1,1 +1,14 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n`nextern "C" void* __cdecl FUN_10010893(std::size_t size);`n`nextern "C" __declspec(naked) void __cdecl FUN_10010230(std::size_t)`n{`n    __asm {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        pop ebp`n        jmp FUN_10010893`n    }`n}`n
+#include <cstddef>
+
+extern "C" void* __cdecl FUN_10010893(std::size_t size);
+
+extern "C" __declspec(naked) void __cdecl FUN_10010230(std::size_t)
+{
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        pop ebp
+        jmp FUN_10010893
+    }
+}

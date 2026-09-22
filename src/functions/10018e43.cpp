@@ -1,1 +1,18 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int __cdecl __mbsnbcmp_l(`n    unsigned char* _Str1,`n    unsigned char* _Str2,`n    size_t _MaxCount,`n    _locale_t _Locale);`n`nextern "C" int __cdecl __mbsnbcmp(`n    unsigned char* _Str1,`n    unsigned char* _Str2,`n    size_t _MaxCount)`n{`n    int iVar1 = __mbsnbcmp_l(_Str1, _Str2, _MaxCount, (_locale_t)0x0);`n    return iVar1;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" int __cdecl __mbsnbcmp_l(
+    unsigned char* _Str1,
+    unsigned char* _Str2,
+    size_t _MaxCount,
+    _locale_t _Locale);
+
+extern "C" int __cdecl __mbsnbcmp(
+    unsigned char* _Str1,
+    unsigned char* _Str2,
+    size_t _MaxCount)
+{
+    int iVar1 = __mbsnbcmp_l(_Str1, _Str2, _MaxCount, (_locale_t)0x0);
+    return iVar1;
+}

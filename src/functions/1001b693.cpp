@@ -1,1 +1,33 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nstruct EHRegistrationNode;`nstruct EHExceptionRecord;`n`nextern "C" void* ExceptionList;`n`nextern "C" void __stdcall RtlUnwind(`n    void* target_frame,`n    void* target_ip,`n    void* exception_record,`n    void* return_value);`n`nextern "C" void __stdcall _UnwindNestedFrames(`n    EHRegistrationNode* param_1,`n    EHExceptionRecord* param_2)`n{`n    void* saved_exception_list = ExceptionList;`n`n    RtlUnwind(`n        param_1,`n        reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x1001b6beu)),`n        param_2,`n        nullptr);`n`n    auto* exception_flags = reinterpret_cast<std::uint32_t*>(`n        reinterpret_cast<std::uint8_t*>(param_2) + 4);`n`n    *exception_flags &= 0xfffffffdu;`n`n    *reinterpret_cast<void**>(saved_exception_list) = ExceptionList;`n    ExceptionList = saved_exception_list;`n}`n
+#include <cstdint>
+
+struct EHRegistrationNode;
+struct EHExceptionRecord;
+
+extern "C" void* ExceptionList;
+
+extern "C" void __stdcall RtlUnwind(
+    void* target_frame,
+    void* target_ip,
+    void* exception_record,
+    void* return_value);
+
+extern "C" void __stdcall _UnwindNestedFrames(
+    EHRegistrationNode* param_1,
+    EHExceptionRecord* param_2)
+{
+    void* saved_exception_list = ExceptionList;
+
+    RtlUnwind(
+        param_1,
+        reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x1001b6beu)),
+        param_2,
+        nullptr);
+
+    auto* exception_flags = reinterpret_cast<std::uint32_t*>(
+        reinterpret_cast<std::uint8_t*>(param_2) + 4);
+
+    *exception_flags &= 0xfffffffdu;
+
+    *reinterpret_cast<void**>(saved_exception_list) = ExceptionList;
+    ExceptionList = saved_exception_list;
+}

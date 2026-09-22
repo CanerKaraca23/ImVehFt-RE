@@ -1,1 +1,13 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __stdcall FUN_10016cec(void)`n{`n    __asm`n    {`n        mov eax, 10028188h`n        cmp eax, 10028188h`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __stdcall FUN_10016cec(void)
+{
+    __asm
+    {
+        mov eax, 10028188h
+        cmp eax, 10028188h
+        ret
+    }
+}

@@ -1,1 +1,39 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void __cdecl __87except();`n`n// This CRT helper receives its 80-bit argument in ST(0), and returns the`n// preserved value in ST(0). Ghidra's `float10` is not a source-level MSVC`n// type, so model the original x87 ABI explicitly instead of substituting`n// `long double` (which is 64-bit under the MSVC ABI).`nextern "C" __declspec(naked) void __fastcall __startOneArgErrorHandling(std::uint32_t, int, std::uint16_t, std::uint32_t, std::uint32_t, std::uint32_t)`n{`n    __asm`n    {`n        push ebp`n        mov ebp, esp`n        sub esp, 20h`n        mov dword ptr [ebp - 20h], eax`n        fstp qword ptr [ebp - 8]`n        mov dword ptr [ebp - 1Ch], ecx`n        mov eax, dword ptr [ebp + 10h]`n        mov ecx, dword ptr [ebp + 14h]`n        mov dword ptr [ebp - 18h], eax`n        mov dword ptr [ebp - 14h], ecx`n        lea eax, [ebp + 8]`n        lea ecx, [ebp - 20h]`n        push eax`n        push ecx`n        push edx`n        call __87except`n        add esp, 0Ch`n        fld qword ptr [ebp - 8]`n        cmp word ptr [ebp + 8], 027Fh`n        je restore_frame`n        fldcw word ptr [ebp + 8]`n`n    restore_frame:`n        leave`n        ret`n    }`n}`n
+#include <cstdint>
+
+extern "C" void __cdecl __87except();
+
+// This CRT helper receives its 80-bit argument in ST(0), and returns the
+// preserved value in ST(0). Ghidra's `float10` is not a source-level MSVC
+// type, so model the original x87 ABI explicitly instead of substituting
+// `long double` (which is 64-bit under the MSVC ABI).
+extern "C" __declspec(naked) void __fastcall __startOneArgErrorHandling()
+{
+    __asm
+    {
+        push ebp
+        mov ebp, esp
+        sub esp, 20h
+        mov dword ptr [ebp - 20h], eax
+        fstp qword ptr [ebp - 8]
+        mov dword ptr [ebp - 1Ch], ecx
+        mov eax, dword ptr [ebp + 10h]
+        mov ecx, dword ptr [ebp + 14h]
+        mov dword ptr [ebp - 18h], eax
+        mov dword ptr [ebp - 14h], ecx
+        lea eax, [ebp + 8]
+        lea ecx, [ebp - 20h]
+        push eax
+        push ecx
+        push edx
+        call __87except
+        add esp, 0Ch
+        fld qword ptr [ebp - 8]
+        cmp word ptr [ebp + 8], 027Fh
+        je restore_frame
+        fldcw word ptr [ebp + 8]
+
+    restore_frame:
+        leave
+        ret
+    }
+}

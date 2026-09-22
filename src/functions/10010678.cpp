@@ -1,1 +1,63 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdio>`n`nextern "C" void __cdecl __SEH_prolog4(unsigned int, int);`nextern "C" int* __cdecl __errno();`nextern "C" void __stdcall FUN_1001189f();`nextern "C" FILE* __cdecl __getstream();`nextern "C" FILE* __cdecl __openfile(`n    char* _Filename,`n    char* _Mode,`n    int _ShFlag,`n    FILE* _Stream);`nextern "C" void __cdecl FUN_1001072a();`nextern "C" void __cdecl __local_unwind4(`n    void* _FrameInfo,`n    int _TryLevel,`n    int _ExceptionCode);`nextern "C" void __stdcall __SEH_epilog4();`n`nextern unsigned char DAT_10028228;`nextern unsigned char DAT_10029490;`n`nFILE* __cdecl __fsopen(char* _Filename, char* _Mode, int _ShFlag)`n{`n    char local_14[8];`n    unsigned int uStack_c;`n    unsigned char* local_8;`n`n    __SEH_prolog4(0x10028228u, 0xcu);`n    local_8 = &DAT_10028228;`n    uStack_c = 0x10010684;`n`n    if (_Filename == nullptr || _Mode == nullptr || *_Mode == '\0') {`n        *__errno() = 0x16;`n        FUN_1001189f();`n    } else {`n        FILE* stream = __getstream();`n`n        if (stream == nullptr) {`n            *__errno() = 0x18;`n        } else {`n            local_8 = nullptr;`n`n            if (*_Filename != '\0') {`n                stream = __openfile(_Filename, _Mode, _ShFlag, stream);`n                local_8 = reinterpret_cast<unsigned char*>(0xfffffffe);`n                FUN_1001072a();`n                __SEH_epilog4();`n                return stream;`n            }`n`n            *__errno() = 0x16;`n`n            __local_unwind4(`n                &DAT_10029490,`n                reinterpret_cast<int>(local_14),`n                0xfffffffe);`n        }`n    }`n`n    __SEH_epilog4();`n    return nullptr;`n}`n
+#include <cstdio>
+
+extern "C" void __cdecl __SEH_prolog4();
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" FILE* __cdecl __getstream();
+extern "C" FILE* __cdecl __openfile(
+    char* _Filename,
+    char* _Mode,
+    int _ShFlag,
+    FILE* _Stream);
+extern "C" void __stdcall FUN_1001072a();
+extern "C" void __cdecl __local_unwind4(
+    void* _FrameInfo,
+    int _TryLevel,
+    int _ExceptionCode);
+extern "C" void __cdecl __SEH_epilog4();
+
+extern unsigned char DAT_10028228;
+extern unsigned char DAT_10029490;
+
+FILE* __cdecl __fsopen(char* _Filename, char* _Mode, int _ShFlag)
+{
+    char local_14[8];
+    unsigned int uStack_c;
+    unsigned char* local_8;
+
+    __SEH_prolog4();
+
+    local_8 = &DAT_10028228;
+    uStack_c = 0x10010684;
+
+    if (_Filename == nullptr || _Mode == nullptr || *_Mode == '\0') {
+        *__errno() = 0x16;
+        FUN_1001189f();
+    } else {
+        FILE* stream = __getstream();
+
+        if (stream == nullptr) {
+            *__errno() = 0x18;
+        } else {
+            local_8 = nullptr;
+
+            if (*_Filename != '\0') {
+                stream = __openfile(_Filename, _Mode, _ShFlag, stream);
+                local_8 = reinterpret_cast<unsigned char*>(0xfffffffe);
+                FUN_1001072a();
+                __SEH_epilog4();
+                return stream;
+            }
+
+            *__errno() = 0x16;
+
+            __local_unwind4(
+                &DAT_10029490,
+                reinterpret_cast<int>(local_14),
+                0xfffffffe);
+        }
+    }
+
+    __SEH_epilog4();
+    return nullptr;
+}

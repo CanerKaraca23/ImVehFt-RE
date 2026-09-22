@@ -1,1 +1,20 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void FUN_1001cb9e(void);`n`nextern "C" __declspec(naked) void __fastcall FUN_1001cb80(void* )`n{`n    __asm {`n        push ebp`n        mov ebp, esp`n        sub esp, 8`n        and esp, 0fffffff0h`n        fstp qword ptr [esp]`n        movq xmm0, qword ptr [esp]`n        call FUN_1001cb9e`n        leave`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void FUN_1001cb9e(void);
+
+extern "C" __declspec(naked) void __fastcall FUN_1001cb80(void* )
+{
+    __asm {
+        push ebp
+        mov ebp, esp
+        sub esp, 8
+        and esp, 0fffffff0h
+        fstp qword ptr [esp]
+        movq xmm0, qword ptr [esp]
+        call FUN_1001cb9e
+        leave
+        ret
+    }
+}

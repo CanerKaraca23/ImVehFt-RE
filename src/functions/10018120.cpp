@@ -1,1 +1,45 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <Windows.h>`n`nextern "C" PVOID ExceptionList;`nextern "C" BOOL __cdecl __ValidateImageBase(PBYTE pImageBase);`nextern "C" PIMAGE_SECTION_HEADER __cdecl __FindPESection(`n    PBYTE pImageBase,`n    DWORD_PTR rva);`nextern "C" void __cdecl __except_handler4();`n`nextern "C" BOOL __cdecl __IsNonwritableInCurrentImage(PBYTE pTarget)`n{`n    void* pcStack_10 = reinterpret_cast<void*>(&__except_handler4);`n    void* local_14 = ExceptionList;`n    unsigned int local_c =`n        *reinterpret_cast<unsigned int*>(0x10029490) ^ 0x100284c0u;`n`n    ExceptionList = &local_14;`n`n    unsigned int local_8 = 0;`n`n    (void)pcStack_10;`n    (void)local_c;`n    (void)local_8;`n`n    PBYTE imageBase = reinterpret_cast<PBYTE>(0x10000000u);`n    BOOL result = __ValidateImageBase(imageBase);`n`n    if (result != 0)`n    {`n        PIMAGE_SECTION_HEADER section =`n            __FindPESection(`n                imageBase,`n                reinterpret_cast<DWORD_PTR>(pTarget) - 0x10000000u);`n`n        if (section != nullptr)`n        {`n            ExceptionList = local_14;`n            return static_cast<BOOL>(`n                ~(section->Characteristics >> 0x1f) & 1u);`n        }`n    }`n`n    ExceptionList = local_14;`n    return 0;`n}`n
+#include <Windows.h>
+
+extern "C" PVOID ExceptionList;
+extern "C" BOOL __cdecl __ValidateImageBase(PBYTE pImageBase);
+extern "C" PIMAGE_SECTION_HEADER __cdecl __FindPESection(
+    PBYTE pImageBase,
+    DWORD_PTR rva);
+extern "C" void __cdecl __except_handler4();
+
+extern "C" BOOL __cdecl __IsNonwritableInCurrentImage(PBYTE pTarget)
+{
+    void* pcStack_10 = reinterpret_cast<void*>(&__except_handler4);
+    void* local_14 = ExceptionList;
+    unsigned int local_c =
+        *reinterpret_cast<unsigned int*>(0x10029490) ^ 0x100284c0u;
+
+    ExceptionList = &local_14;
+
+    unsigned int local_8 = 0;
+
+    (void)pcStack_10;
+    (void)local_c;
+    (void)local_8;
+
+    PBYTE imageBase = reinterpret_cast<PBYTE>(0x10000000u);
+    BOOL result = __ValidateImageBase(imageBase);
+
+    if (result != 0)
+    {
+        PIMAGE_SECTION_HEADER section =
+            __FindPESection(
+                imageBase,
+                reinterpret_cast<DWORD_PTR>(pTarget) - 0x10000000u);
+
+        if (section != nullptr)
+        {
+            ExceptionList = local_14;
+            return static_cast<BOOL>(
+                ~(section->Characteristics >> 0x1f) & 1u);
+        }
+    }
+
+    ExceptionList = local_14;
+    return 0;
+}

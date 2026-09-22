@@ -1,1 +1,71 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <cstdint>`n#include <windows.h>`n`nextern "C" intptr_t __cdecl __get_osfhandle(int _FileHandle);`nextern "C" int* __cdecl __errno();`nextern "C" void __cdecl __dosmaperr(unsigned long _Error);`n`nextern "C" std::uint8_t* DAT_1003c420[];`n`nextern "C" long long __cdecl __lseeki64_nolock(`n    int _FileHandle,`n    long long _Offset,`n    int _Origin)`n{`n    LONG distance_high = static_cast<LONG>(`n        static_cast<std::uint64_t>(_Offset) >> 32);`n`n    const HANDLE hFile = reinterpret_cast<HANDLE>(`n        __get_osfhandle(_FileHandle));`n`n    DWORD result;`n`n    if (hFile == reinterpret_cast<HANDLE>(`n                     static_cast<std::intptr_t>(-1)))`n    {`n        *__errno() = 9;`n        result = 0xffffffffu;`n        distance_high = -1;`n    }`n    else`n    {`n        result = ::SetFilePointer(`n            hFile,`n            static_cast<LONG>(_Offset),`n            &distance_high,`n            static_cast<DWORD>(_Origin));`n`n        if (result == 0xffffffffu)`n        {`n            const DWORD error = ::GetLastError();`n`n            if (error != 0)`n            {`n                __dosmaperr(error);`n`n                const std::uint64_t combined =`n                    (static_cast<std::uint64_t>(`n                         static_cast<std::uint32_t>(-1))`n                     << 32) |`n                    static_cast<std::uint32_t>(0xffffffffu);`n`n                return static_cast<long long>(combined);`n            }`n        }`n`n        std::uint8_t* const file_info =`n            DAT_1003c420[_FileHandle >> 5] +`n            4 +`n            (_FileHandle & 0x1fU) * 0x40;`n`n        *file_info = static_cast<std::uint8_t>(*file_info & 0xfdU);`n    }`n`n    const std::uint64_t combined =`n        (static_cast<std::uint64_t>(`n             static_cast<std::uint32_t>(distance_high))`n         << 32) |`n        static_cast<std::uint32_t>(result);`n`n    return static_cast<long long>(combined);`n}`n
+#include <cstdint>
+#include <windows.h>
+
+extern "C" intptr_t __cdecl __get_osfhandle(int _FileHandle);
+extern "C" int* __cdecl __errno();
+extern "C" void __cdecl __dosmaperr(unsigned long _Error);
+
+extern "C" std::uint8_t* DAT_1003c420[];
+
+extern "C" long long __cdecl __lseeki64_nolock(
+    int _FileHandle,
+    long long _Offset,
+    int _Origin)
+{
+    LONG distance_high = static_cast<LONG>(
+        static_cast<std::uint64_t>(_Offset) >> 32);
+
+    const HANDLE hFile = reinterpret_cast<HANDLE>(
+        __get_osfhandle(_FileHandle));
+
+    DWORD result;
+
+    if (hFile == reinterpret_cast<HANDLE>(
+                     static_cast<std::intptr_t>(-1)))
+    {
+        *__errno() = 9;
+        result = 0xffffffffu;
+        distance_high = -1;
+    }
+    else
+    {
+        result = ::SetFilePointer(
+            hFile,
+            static_cast<LONG>(_Offset),
+            &distance_high,
+            static_cast<DWORD>(_Origin));
+
+        if (result == 0xffffffffu)
+        {
+            const DWORD error = ::GetLastError();
+
+            if (error != 0)
+            {
+                __dosmaperr(error);
+
+                const std::uint64_t combined =
+                    (static_cast<std::uint64_t>(
+                         static_cast<std::uint32_t>(-1))
+                     << 32) |
+                    static_cast<std::uint32_t>(0xffffffffu);
+
+                return static_cast<long long>(combined);
+            }
+        }
+
+        std::uint8_t* const file_info =
+            DAT_1003c420[_FileHandle >> 5] +
+            4 +
+            (_FileHandle & 0x1fU) * 0x40;
+
+        *file_info = static_cast<std::uint8_t>(*file_info & 0xfdU);
+    }
+
+    const std::uint64_t combined =
+        (static_cast<std::uint64_t>(
+             static_cast<std::uint32_t>(distance_high))
+         << 32) |
+        static_cast<std::uint32_t>(result);
+
+    return static_cast<long long>(combined);
+}

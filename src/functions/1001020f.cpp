@@ -1,1 +1,20 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __fastcall FUN_1001031f(void*);`nextern "C" void __cdecl FUN_10010756(void*);`nstruct FUN_1001020f_this { void* __thiscall invoke(unsigned char param_1); };`n`nvoid* FUN_1001020f_this::invoke(unsigned char param_1)`n{`n    void* this_ = static_cast<void*>(this);`n    FUN_1001031f(this_);`n`n    if ((param_1 & 1) != 0)`n    {`n        FUN_10010756(this_);`n    }`n`n    return this_;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __cdecl FUN_10010756(void*);
+extern "C" void __fastcall FUN_1001031f(void*);
+struct FUN_1001020f_this { void* __thiscall invoke(unsigned char param_1); };
+
+void* FUN_1001020f_this::invoke(unsigned char param_1)
+{
+    void* this_ = static_cast<void*>(this);
+    FUN_1001031f(this_);
+
+    if ((param_1 & 1) != 0)
+    {
+        FUN_10010756(this_);
+    }
+
+    return this_;
+}

@@ -1,1 +1,46 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nusing _ptiddata = void*;`n`nextern int DAT_10029c0c;`nextern std::uint32_t DAT_10029c10;`nextern void* DAT_10039a7c;`n`nextern "C" void* __stdcall TlsGetValue(std::uint32_t tlsIndex);`nextern "C" void* __stdcall DecodePointer(void* encodedPointer);`nextern "C" int __stdcall TlsSetValue(std::uint32_t tlsIndex, void* value);`nextern "C" void __stdcall __freefls_4(_ptiddata ptd);`n`nusing fls_get_value_fn = _ptiddata(__cdecl*)(int);`nusing fls_free_value_fn = void(__cdecl*)(int, unsigned int);`n`nextern "C" void __cdecl __freeptd(_ptiddata _Ptd)`n{`n    if (DAT_10029c0c != -1)`n    {`n        if ((_Ptd == nullptr) &&`n            (TlsGetValue(DAT_10029c10) != nullptr))`n        {`n            const int iVar3 = DAT_10029c0c;`n            const auto pcVar2 =`n                reinterpret_cast<fls_get_value_fn>(`n                    TlsGetValue(DAT_10029c10));`n`n            _Ptd = (*pcVar2)(iVar3);`n        }`n`n        const unsigned int uVar4 = 0;`n        const int iVar3 = DAT_10029c0c;`n        const auto pcVar2 =`n            reinterpret_cast<fls_free_value_fn>(`n                DecodePointer(DAT_10039a7c));`n`n        (*pcVar2)(iVar3, uVar4);`n        __freefls_4(_Ptd);`n    }`n`n    if (DAT_10029c10 != 0xffffffffU)`n    {`n        TlsSetValue(DAT_10029c10, nullptr);`n    }`n}`n
+#include <cstdint>
+
+using _ptiddata = void*;
+
+extern int DAT_10029c0c;
+extern std::uint32_t DAT_10029c10;
+extern void* DAT_10039a7c;
+
+extern "C" void* __stdcall TlsGetValue(std::uint32_t tlsIndex);
+extern "C" void* __stdcall DecodePointer(void* encodedPointer);
+extern "C" int __stdcall TlsSetValue(std::uint32_t tlsIndex, void* value);
+extern "C" void __stdcall __freefls_4(_ptiddata ptd);
+
+using fls_get_value_fn = _ptiddata(__cdecl*)(int);
+using fls_free_value_fn = void(__cdecl*)(int, unsigned int);
+
+extern "C" void __cdecl __freeptd(_ptiddata _Ptd)
+{
+    if (DAT_10029c0c != -1)
+    {
+        if ((_Ptd == nullptr) &&
+            (TlsGetValue(DAT_10029c10) != nullptr))
+        {
+            const int iVar3 = DAT_10029c0c;
+            const auto pcVar2 =
+                reinterpret_cast<fls_get_value_fn>(
+                    TlsGetValue(DAT_10029c10));
+
+            _Ptd = (*pcVar2)(iVar3);
+        }
+
+        const unsigned int uVar4 = 0;
+        const int iVar3 = DAT_10029c0c;
+        const auto pcVar2 =
+            reinterpret_cast<fls_free_value_fn>(
+                DecodePointer(DAT_10039a7c));
+
+        (*pcVar2)(iVar3, uVar4);
+        __freefls_4(_Ptd);
+    }
+
+    if (DAT_10029c10 != 0xffffffffU)
+    {
+        TlsSetValue(DAT_10029c10, nullptr);
+    }
+}

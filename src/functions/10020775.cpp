@@ -1,1 +1,88 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nusing byte = std::uint8_t;`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" long double __cdecl __set_exp(std::uint64_t value, short exponent);`n`nextern "C" __declspec(naked) long double __cdecl FUN_10020775(`n    std::uint32_t,`n    std::uint32_t,`n    int*)`n{`n    __asm`n    {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        fld qword ptr [ebp + 8]`n        fldz`n        fld st(0)`n        fucomp st(2)`n        fnstsw ax`n        fstp st(1)`n        test ah, 44h`n        jp SPECIAL_VALUE`n        xor edx, edx`n        jmp STORE_RESULT`n`n    SPECIAL_VALUE:`n        movzx eax, word ptr [ebp + 0eh]`n        xor ecx, ecx`n        test eax, 7ff0h`n        jnz NORMAL_OR_SPECIAL`n        test dword ptr [ebp + 0ch], 0fffffh`n        jnz SUBNORMAL`n        cmp dword ptr [ebp + 8], ecx`n        jz NORMAL_OR_SPECIAL`n`n    SUBNORMAL:`n        fcomp qword ptr [ebp + 8]`n        mov edx, 0fffffc03h`n        fnstsw ax`n        test ah, 41h`n        jnz POSITIVE_SUBNORMAL`n        xor eax, eax`n        inc eax`n        jmp NORMALIZE_LOOP_TEST`n`n    POSITIVE_SUBNORMAL:`n        xor eax, eax`n        jmp NORMALIZE_LOOP_TEST`n`n    NORMALIZE_LOOP:`n        shl dword ptr [ebp + 0ch], 1`n        test dword ptr [ebp + 8], 80000000h`n        jz LOW_WORD_SHIFT`n        or dword ptr [ebp + 0ch], 1`n`n    LOW_WORD_SHIFT:`n        shl dword ptr [ebp + 8], 1`n        dec edx`n`n    NORMALIZE_LOOP_TEST:`n        test byte ptr [ebp + 0eh], 10h`n        jz NORMALIZE_LOOP`n        push esi`n        mov esi, 0ffefh`n        and word ptr [ebp + 0eh], si`n        pop esi`n        cmp eax, ecx`n        jz LOAD_NORMALIZED`n        mov eax, 8000h`n        or word ptr [ebp + 0eh], ax`n`n    LOAD_NORMALIZED:`n        fld qword ptr [ebp + 8]`n        push ecx`n        push ecx`n        push ecx`n        fstp qword ptr [esp]`n        call __set_exp`n        add esp, 0ch`n        jmp STORE_RESULT`n`n    NORMAL_OR_SPECIAL:`n        push ecx`n        fstp st(0)`n        fld qword ptr [ebp + 8]`n        push ecx`n        push ecx`n        fstp qword ptr [esp]`n        call __set_exp`n        movzx edx, word ptr [ebp + 0eh]`n        shr edx, 4`n        and edx, 7ffh`n        add esp, 0ch`n        sub edx, 3feh`n`n    STORE_RESULT:`n        mov eax, dword ptr [ebp + 10h]`n        mov dword ptr [eax], edx`n        pop ebp`n        ret`n    }`n}`n
+#include <bit>
+#include <cstdint>
+
+extern "C" long double __cdecl __set_exp(
+    std::uint64_t value,
+    short exponent);
+
+extern "C" void __cdecl FUN_10020775(
+    std::uint32_t param_1,
+    std::uint32_t param_2,
+    int* param_3)
+{
+    std::uint16_t uVar1;
+    bool bVar2;
+    int iVar3;
+    int extraout_EDX;
+
+    const std::uint64_t value =
+        (static_cast<std::uint64_t>(param_2) << 32) |
+        static_cast<std::uint64_t>(param_1);
+
+    if (std::bit_cast<double>(value) == 0.0)
+    {
+        iVar3 = 0;
+    }
+    else if (((param_2 & 0x7ff00000U) == 0U) &&
+             (((param_2 & 0x000fffffU) != 0U) || (param_1 != 0U)))
+    {
+        if (0.0 <= std::bit_cast<double>(value))
+        {
+            bVar2 = false;
+        }
+        else
+        {
+            bVar2 = true;
+        }
+
+        while ((param_2 & 0x00100000U) == 0U)
+        {
+            iVar3 = static_cast<int>(param_2 << 1);
+            param_2 = param_2 << 1;
+
+            if ((param_1 & 0x80000000U) != 0U)
+            {
+                param_2 =
+                    (param_2 & 0xffff0000U) |
+                    static_cast<std::uint16_t>(param_2 | 1U);
+            }
+
+            param_1 = param_1 << 1;
+        }
+
+        uVar1 = static_cast<std::uint16_t>((param_2 >> 16) & 0xffefU);
+        param_2 =
+            (param_2 & 0x0000ffffU) |
+            (static_cast<std::uint32_t>(uVar1) << 16);
+
+        if (bVar2)
+        {
+            param_2 = param_2 | 0x80000000U;
+        }
+
+        const std::uint64_t normalized_value =
+            (static_cast<std::uint64_t>(param_2) << 32) |
+            static_cast<std::uint64_t>(param_1);
+
+        (void)__set_exp(normalized_value, 0);
+
+#if defined(_MSC_VER) && defined(_M_IX86)
+        __asm
+        {
+            mov extraout_EDX, edx
+        }
+#else
+#error "This reversal requires the target x86 ABI to capture EDX after __set_exp."
+#endif
+
+        iVar3 = extraout_EDX;
+    }
+    else
+    {
+        (void)__set_exp(value, 0);
+        iVar3 = static_cast<int>(
+            ((param_2 >> 20) & 0x7ffU) - 0x3feU);
+    }
+
+    *param_3 = iVar3;
+}

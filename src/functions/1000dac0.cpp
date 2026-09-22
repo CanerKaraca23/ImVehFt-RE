@@ -1,1 +1,57 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c398;`n`nusing VoidCallback = void (__cdecl*)();`nusing ReturnCallback = std::uint32_t (__cdecl*)();`n`nstd::uint32_t __stdcall FUN_1000dac0()`n{`n    const std::uint32_t instance = DAT_1003c398;`n`n    auto* end = *reinterpret_cast<std::uint32_t**>(`n        static_cast<std::uintptr_t>(instance) + 0x1C);`n`n    for (auto* current = *reinterpret_cast<std::uint32_t**>(`n             static_cast<std::uintptr_t>(instance) + 0x18);`n         current != end;`n         ++current)`n    {`n        if (*current != 0U)`n        {`n            (*reinterpret_cast<VoidCallback>(`n                static_cast<std::uintptr_t>(*current)))();`n        }`n    }`n`n    std::uint32_t result;`n`n    auto callback = *reinterpret_cast<ReturnCallback*>(`n        static_cast<std::uintptr_t>(instance) + 0x08);`n`n    if (callback == nullptr)`n    {`n        result = 0U;`n    }`n    else`n    {`n        result = callback();`n    }`n`n    end = *reinterpret_cast<std::uint32_t**>(`n        static_cast<std::uintptr_t>(instance) + 0x2C);`n`n    for (auto* current = *reinterpret_cast<std::uint32_t**>(`n             static_cast<std::uintptr_t>(instance) + 0x28);`n         current != end;`n         ++current)`n    {`n        if (*current != 0U)`n        {`n            (*reinterpret_cast<VoidCallback>(`n                static_cast<std::uintptr_t>(*current)))();`n        }`n    }`n`n    return result;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c398;
+
+using VoidCallback = void (__cdecl*)();
+using ReturnCallback = std::uint32_t (__cdecl*)();
+
+std::uint32_t __stdcall FUN_1000dac0()
+{
+    const std::uint32_t instance = DAT_1003c398;
+
+    auto* end = *reinterpret_cast<std::uint32_t**>(
+        static_cast<std::uintptr_t>(instance) + 0x1C);
+
+    for (auto* current = *reinterpret_cast<std::uint32_t**>(
+             static_cast<std::uintptr_t>(instance) + 0x18);
+         current != end;
+         ++current)
+    {
+        if (*current != 0U)
+        {
+            (*reinterpret_cast<VoidCallback>(
+                static_cast<std::uintptr_t>(*current)))();
+        }
+    }
+
+    std::uint32_t result;
+
+    auto callback = *reinterpret_cast<ReturnCallback*>(
+        static_cast<std::uintptr_t>(instance) + 0x08);
+
+    if (callback == nullptr)
+    {
+        result = 0U;
+    }
+    else
+    {
+        result = callback();
+    }
+
+    end = *reinterpret_cast<std::uint32_t**>(
+        static_cast<std::uintptr_t>(instance) + 0x2C);
+
+    for (auto* current = *reinterpret_cast<std::uint32_t**>(
+             static_cast<std::uintptr_t>(instance) + 0x28);
+         current != end;
+         ++current)
+    {
+        if (*current != 0U)
+        {
+            (*reinterpret_cast<VoidCallback>(
+                static_cast<std::uintptr_t>(*current)))();
+        }
+    }
+
+    return result;
+}

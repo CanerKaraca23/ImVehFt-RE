@@ -1,1 +1,28 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __cdecl _alloca_probe()`n{`n    __asm {`n        push    ecx`n        lea     ecx, [esp + 4]`n        sub     ecx, eax`n        sbb     eax, eax`n        not     eax`n        and     ecx, eax`n        mov     eax, esp`n        and     eax, 0FFFFF000h`n        probe_loop:`n        cmp     ecx, eax`n        jc      probe_pages`n        mov     eax, ecx`n        pop     ecx`n        xchg    eax, esp`n        mov     eax, [eax]`n        mov     [esp], eax`n        ret`n        probe_pages:`n        sub     eax, 1000h`n        test    dword ptr [eax], eax`n        jmp     probe_loop`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __stdcall __alloca_probe()
+{
+    __asm {
+        mov     ecx, esp
+        sub     ecx, eax
+        sbb     edx, edx
+        not     edx
+        and     ecx, edx
+
+        lea     edx, [esp - 4]
+        and     edx, 0FFFFF000h
+
+    probe_loop:
+        cmp     ecx, edx
+        jae     probe_done
+        sub     edx, 400h
+        jmp     probe_loop
+
+    probe_done:
+        mov     eax, [esp]
+        mov     [ecx], eax
+        ret
+    }
+}

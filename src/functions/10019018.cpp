@@ -1,1 +1,61 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" int* __cdecl __errno(void);`n#include <Windows.h>`n#include <cstdint>`n`nextern "C" std::uint32_t DAT_1003c418;`nextern "C" std::uint8_t* DAT_1003c420[];`nextern "C" int DAT_10039a00;`n`nextern "C" int* __cdecl __errno();`nextern "C" unsigned long* __cdecl ___doserrno();`n`nextern "C" __declspec(dllimport)`nBOOL WINAPI SetStdHandle(DWORD nStdHandle, HANDLE hHandle);`n`nextern "C" int __cdecl __free_osfhnd(int param_1)`n{`n    if ((param_1 >= 0) &&`n        (static_cast<std::uint32_t>(param_1) < DAT_1003c418))`n    {`n        const std::uint32_t offset =`n            (static_cast<std::uint32_t>(param_1) & 0x1fU) * 0x40U;`n`n        auto* base = DAT_1003c420[param_1 >> 5];`n`n        if (((*(base + 4U + offset) & 1U) != 0U) &&`n            (*reinterpret_cast<std::int32_t*>(base + offset) != -1))`n        {`n            if (DAT_10039a00 == 1)`n            {`n                DWORD nStdHandle;`n`n                if (param_1 == 0)`n                {`n                    nStdHandle = 0xfffffff6U;`n                }`n                else if (param_1 == 1)`n                {`n                    nStdHandle = 0xfffffff5U;`n                }`n                else`n                {`n                    if (param_1 != 2)`n                    {`n                        goto clear_handle;`n                    }`n`n                    nStdHandle = 0xfffffff4U;`n                }`n`n                SetStdHandle(nStdHandle, nullptr);`n            }`n`n        clear_handle:`n            *reinterpret_cast<std::int32_t*>(base + offset) = -1;`n            return 0;`n        }`n    }`n`n    *__errno() = 9;`n    *___doserrno() = 0;`n    return -1;`n}`n
+#include <Windows.h>
+#include <cstdint>
+
+extern "C" std::uint32_t DAT_1003c418;
+extern "C" std::uint8_t* DAT_1003c420[];
+extern "C" int DAT_10039a00;
+
+extern "C" int* __cdecl __errno();
+extern "C" unsigned long* __cdecl ___doserrno();
+
+extern "C" __declspec(dllimport)
+BOOL WINAPI SetStdHandle(DWORD nStdHandle, HANDLE hHandle);
+
+extern "C" int __cdecl __free_osfhnd(int param_1)
+{
+    if ((param_1 >= 0) &&
+        (static_cast<std::uint32_t>(param_1) < DAT_1003c418))
+    {
+        const std::uint32_t offset =
+            (static_cast<std::uint32_t>(param_1) & 0x1fU) * 0x40U;
+
+        auto* base = DAT_1003c420[param_1 >> 5];
+
+        if (((*(base + 4U + offset) & 1U) != 0U) &&
+            (*reinterpret_cast<std::int32_t*>(base + offset) != -1))
+        {
+            if (DAT_10039a00 == 1)
+            {
+                DWORD nStdHandle;
+
+                if (param_1 == 0)
+                {
+                    nStdHandle = 0xfffffff6U;
+                }
+                else if (param_1 == 1)
+                {
+                    nStdHandle = 0xfffffff5U;
+                }
+                else
+                {
+                    if (param_1 != 2)
+                    {
+                        goto clear_handle;
+                    }
+
+                    nStdHandle = 0xfffffff4U;
+                }
+
+                SetStdHandle(nStdHandle, nullptr);
+            }
+
+        clear_handle:
+            *reinterpret_cast<std::int32_t*>(base + offset) = -1;
+            return 0;
+        }
+    }
+
+    *__errno() = 9;
+    *___doserrno() = 0;
+    return -1;
+}

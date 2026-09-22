@@ -1,1 +1,67 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <windows.h>`n#include <cstdint>`n`nextern void __stdcall FUN_100095f0();`nextern void __stdcall FUN_100094d0();`n`nstruct FUN_10009430_this {`n    std::uint32_t __thiscall FUN_10009430(char param_1);`n};`n`nstd::uint32_t FUN_10009430_this::FUN_10009430(char param_1)`n{`n    void* this_ptr = static_cast<void*>(this);`n    auto* base = static_cast<unsigned char*>(this_ptr);`n    HANDLE& mapping_handle = *reinterpret_cast<HANDLE*>(base);`n    LPVOID& mapping_view = *reinterpret_cast<LPVOID*>(base + 4);`n`n    if (mapping_view == nullptr)`n    {`n        if (mapping_handle == nullptr)`n            goto LAB_10009448;`n`nLAB_10009460:`n        if (mapping_view == nullptr)`n        {`n            mapping_view = MapViewOfFile(`n                mapping_handle,`n                0xF001F,`n                0,`n                0,`n                0);`n        }`n`n        if (mapping_view != nullptr &&`n            mapping_handle != nullptr &&`n            *reinterpret_cast<int*>(mapping_view) == 0)`n        {`n            FUN_100095f0();`n        }`n    }`n    else`n    {`n        if (mapping_handle != nullptr)`n            goto LAB_100094A9;`n`nLAB_10009448:`n        mapping_handle = OpenFileMappingA(`n            0xF001F,`n            FALSE,`n            "GTA_PLUGIN_SDK");`n`n        if (mapping_handle != nullptr)`n            goto LAB_10009460;`n    }`n`n    if (param_1 == '\0' &&`n        (mapping_view == nullptr || mapping_handle == nullptr))`n    {`n        FUN_100094d0();`n    }`n`nLAB_100094A9:`n    if (mapping_view != nullptr && mapping_handle != nullptr)`n        return 1;`n`n    return 0;`n}`n
+#include <windows.h>
+#include <cstdint>
+
+extern "C" void __stdcall FUN_100095f0();
+extern "C" void __stdcall FUN_100094d0();
+
+struct FUN_10009430_this {
+    int __thiscall FUN_10009430(char param_1);
+};
+
+int FUN_10009430_this::FUN_10009430(char param_1)
+{
+    void* this_ptr = static_cast<void*>(this);
+    auto* base = static_cast<unsigned char*>(this_ptr);
+    HANDLE& mapping_handle = *reinterpret_cast<HANDLE*>(base);
+    LPVOID& mapping_view = *reinterpret_cast<LPVOID*>(base + 4);
+
+    if (mapping_view == nullptr)
+    {
+        if (mapping_handle == nullptr)
+            goto LAB_10009448;
+
+LAB_10009460:
+        if (mapping_view == nullptr)
+        {
+            mapping_view = MapViewOfFile(
+                mapping_handle,
+                0xF001F,
+                0,
+                0,
+                0);
+        }
+
+        if (mapping_view != nullptr &&
+            mapping_handle != nullptr &&
+            *reinterpret_cast<int*>(mapping_view) == 0)
+        {
+            FUN_100095f0();
+        }
+    }
+    else
+    {
+        if (mapping_handle != nullptr)
+            goto LAB_100094A9;
+
+LAB_10009448:
+        mapping_handle = OpenFileMappingA(
+            0xF001F,
+            FALSE,
+            "GTA_PLUGIN_SDK");
+
+        if (mapping_handle != nullptr)
+            goto LAB_10009460;
+    }
+
+    if (param_1 == '\0' &&
+        (mapping_view == nullptr || mapping_handle == nullptr))
+    {
+        FUN_100094d0();
+    }
+
+LAB_100094A9:
+    if (mapping_view != nullptr && mapping_handle != nullptr)
+        return 1;
+
+    return 0;
+}

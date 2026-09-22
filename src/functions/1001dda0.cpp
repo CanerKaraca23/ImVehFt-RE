@@ -1,1 +1,116 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" std::uint64_t __stdcall __alldvrm(`n    std::uint32_t param_1,`n    std::uint32_t param_2,`n    std::uint32_t param_3,`n    std::uint32_t param_4)`n{`n    std::uint64_t uVar1;`n    std::int32_t iVar4;`n    std::uint32_t uVar3;`n    std::uint32_t uVar5;`n    std::uint32_t uVar6;`n    std::uint32_t uVar7;`n    std::uint32_t uVar8;`n    std::uint32_t uVar9;`n    bool bVar10;`n    char cVar11;`n`n    cVar11 = static_cast<char>(`n        static_cast<std::int32_t>(param_2) < 0);`n`n    if (cVar11 != 0)`n    {`n        bVar10 = param_1 != 0;`n        param_1 = 0u - param_1;`n        param_2 = 0u - static_cast<std::uint32_t>(bVar10) - param_2;`n    }`n`n    if (static_cast<std::int32_t>(param_4) < 0)`n    {`n        cVar11 = static_cast<char>(cVar11 + 1);`n        bVar10 = param_3 != 0;`n        param_3 = 0u - param_3;`n        param_4 = 0u - static_cast<std::uint32_t>(bVar10) - param_4;`n    }`n`n    uVar7 = param_1;`n    uVar3 = param_3;`n    uVar5 = param_2;`n    uVar9 = param_4;`n`n    if (param_4 == 0)`n    {`n        uVar3 = param_2 / param_3;`n`n        iVar4 = static_cast<std::int32_t>(`n            ((static_cast<std::uint64_t>(param_2 % param_3) << 32) |`n             static_cast<std::uint64_t>(param_1)) /`n            static_cast<std::uint64_t>(param_3));`n    }`n    else`n    {`n        do`n        {`n            uVar8 = uVar9 >> 1;`n`n            uVar3 = static_cast<std::uint32_t>(`n                ((static_cast<std::uint64_t>(uVar9 & 1u) << 32) |`n                 static_cast<std::uint64_t>(uVar3)) >> 1);`n`n            uVar6 = uVar5 >> 1;`n`n            uVar7 = static_cast<std::uint32_t>(`n                ((static_cast<std::uint64_t>(uVar5 & 1u) << 32) |`n                 static_cast<std::uint64_t>(uVar7)) >> 1);`n`n            uVar5 = uVar6;`n            uVar9 = uVar8;`n        }`n        while (uVar8 != 0);`n`n        uVar1 =`n            ((static_cast<std::uint64_t>(uVar6) << 32) |`n             static_cast<std::uint64_t>(uVar7)) /`n            static_cast<std::uint64_t>(uVar3);`n`n        iVar4 = static_cast<std::int32_t>(uVar1);`n`n        const std::uint64_t lVar2 =`n            static_cast<std::uint64_t>(param_3) *`n            (uVar1 & 0xffffffffull);`n`n        uVar3 = static_cast<std::uint32_t>(lVar2 >> 32);`n`n        const std::uint32_t correction =`n            static_cast<std::uint32_t>(iVar4) * param_4;`n`n        const std::uint32_t previous_uVar3 = uVar3;`n        uVar7 = uVar3 + correction;`n`n        const bool carry = uVar7 < previous_uVar3;`n`n        if (carry ||`n            (param_2 < uVar7) ||`n            ((param_2 <= uVar7) &&`n             (param_1 < static_cast<std::uint32_t>(lVar2))))`n        {`n            iVar4 = static_cast<std::int32_t>(`n                static_cast<std::uint32_t>(iVar4) - 1u);`n        }`n`n        uVar3 = 0;`n    }`n`n    if (cVar11 == 1)`n    {`n        bVar10 = iVar4 != 0;`n        iVar4 = static_cast<std::int32_t>(`n            0u - static_cast<std::uint32_t>(iVar4));`n        uVar3 = 0u - static_cast<std::uint32_t>(bVar10) - uVar3;`n    }`n`n    return (static_cast<std::uint64_t>(uVar3) << 32) |`n           static_cast<std::uint32_t>(iVar4);`n}`n
+#include <cstdint>
+
+extern "C" std::uint64_t __stdcall __alldvrm(
+    std::uint32_t param_1,
+    std::uint32_t param_2,
+    std::uint32_t param_3,
+    std::uint32_t param_4)
+{
+    std::uint64_t uVar1;
+    std::int32_t iVar4;
+    std::uint32_t uVar3;
+    std::uint32_t uVar5;
+    std::uint32_t uVar6;
+    std::uint32_t uVar7;
+    std::uint32_t uVar8;
+    std::uint32_t uVar9;
+    bool bVar10;
+    char cVar11;
+
+    cVar11 = static_cast<char>(
+        static_cast<std::int32_t>(param_2) < 0);
+
+    if (cVar11 != 0)
+    {
+        bVar10 = param_1 != 0;
+        param_1 = 0u - param_1;
+        param_2 = 0u - static_cast<std::uint32_t>(bVar10) - param_2;
+    }
+
+    if (static_cast<std::int32_t>(param_4) < 0)
+    {
+        cVar11 = static_cast<char>(cVar11 + 1);
+        bVar10 = param_3 != 0;
+        param_3 = 0u - param_3;
+        param_4 = 0u - static_cast<std::uint32_t>(bVar10) - param_4;
+    }
+
+    uVar7 = param_1;
+    uVar3 = param_3;
+    uVar5 = param_2;
+    uVar9 = param_4;
+
+    if (param_4 == 0)
+    {
+        uVar3 = param_2 / param_3;
+
+        iVar4 = static_cast<std::int32_t>(
+            ((static_cast<std::uint64_t>(param_2 % param_3) << 32) |
+             static_cast<std::uint64_t>(param_1)) /
+            static_cast<std::uint64_t>(param_3));
+    }
+    else
+    {
+        do
+        {
+            uVar8 = uVar9 >> 1;
+
+            uVar3 = static_cast<std::uint32_t>(
+                ((static_cast<std::uint64_t>(uVar9 & 1u) << 32) |
+                 static_cast<std::uint64_t>(uVar3)) >> 1);
+
+            uVar6 = uVar5 >> 1;
+
+            uVar7 = static_cast<std::uint32_t>(
+                ((static_cast<std::uint64_t>(uVar5 & 1u) << 32) |
+                 static_cast<std::uint64_t>(uVar7)) >> 1);
+
+            uVar5 = uVar6;
+            uVar9 = uVar8;
+        }
+        while (uVar8 != 0);
+
+        uVar1 =
+            ((static_cast<std::uint64_t>(uVar6) << 32) |
+             static_cast<std::uint64_t>(uVar7)) /
+            static_cast<std::uint64_t>(uVar3);
+
+        iVar4 = static_cast<std::int32_t>(uVar1);
+
+        const std::uint64_t lVar2 =
+            static_cast<std::uint64_t>(param_3) *
+            (uVar1 & 0xffffffffull);
+
+        uVar3 = static_cast<std::uint32_t>(lVar2 >> 32);
+
+        const std::uint32_t correction =
+            static_cast<std::uint32_t>(iVar4) * param_4;
+
+        const std::uint32_t previous_uVar3 = uVar3;
+        uVar7 = uVar3 + correction;
+
+        const bool carry = uVar7 < previous_uVar3;
+
+        if (carry ||
+            (param_2 < uVar7) ||
+            ((param_2 <= uVar7) &&
+             (param_1 < static_cast<std::uint32_t>(lVar2))))
+        {
+            iVar4 = static_cast<std::int32_t>(
+                static_cast<std::uint32_t>(iVar4) - 1u);
+        }
+
+        uVar3 = 0;
+    }
+
+    if (cVar11 == 1)
+    {
+        bVar10 = iVar4 != 0;
+        iVar4 = static_cast<std::int32_t>(
+            0u - static_cast<std::uint32_t>(iVar4));
+        uVar3 = 0u - static_cast<std::uint32_t>(bVar10) - uVar3;
+    }
+
+    return (static_cast<std::uint64_t>(uVar3) << 32) |
+           static_cast<std::uint32_t>(iVar4);
+}

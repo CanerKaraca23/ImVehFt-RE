@@ -1,1 +1,67 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nstruct __localeinfo;`nstruct localeinfo_struct`n{`n    __localeinfo* locinfo;`n    void* mbcinfo;`n};`nstruct __ptiddata_impl`n{`n    std::uint8_t reserved_00[0x70];`n    std::uint32_t _Field_0x70;`n};`nstruct _LocaleUpdate`n{`n    __localeinfo* _Ptdlocinfo;          // Ghidra: this+0x00, ptd->ptlocinfo`n    void* _Unknown04;                  // Ghidra: this+0x04, ptd->ptmbcinfo`n    __ptiddata_impl* _Locinfo;         // Ghidra: this+0x08, ptd`n    std::uint8_t _Updated;             // Ghidra: this+0x0c`n    std::uint8_t reserved_0d[3];`n    _LocaleUpdate(_locale_t locale);`n};`nstatic_assert(offsetof(localeinfo_struct, locinfo) == 0x00);`nstatic_assert(offsetof(localeinfo_struct, mbcinfo) == 0x04);`nstatic_assert(offsetof(__ptiddata_impl, _Field_0x70) == 0x70);`nstatic_assert(offsetof(_LocaleUpdate, _Ptdlocinfo) == 0x00);`nstatic_assert(offsetof(_LocaleUpdate, _Unknown04) == 0x04);`nstatic_assert(offsetof(_LocaleUpdate, _Locinfo) == 0x08);`nstatic_assert(offsetof(_LocaleUpdate, _Updated) == 0x0c);`nstatic_assert(sizeof(_LocaleUpdate) == 0x10);`nextern "C" int __cdecl __crtGetStringTypeA_stat(`n    localeinfo_struct*, unsigned long, char*, int, unsigned short*, int, int, int);`n`nextern "C" BOOL __cdecl ___crtGetStringTypeA(`n    _locale_t _Plocinfo,`n    DWORD _DWInfoType,`n    LPCSTR _LpSrcStr,`n    int _CchSrc,`n    LPWORD _LpCharType,`n    int _Code_page,`n    BOOL _BError)`n{`n    _LocaleUpdate _LocaleUpdateObject(_Plocinfo);`n`n    const int _Result = __crtGetStringTypeA_stat(`n        reinterpret_cast<localeinfo_struct*>(&_LocaleUpdateObject),`n        _DWInfoType,`n        const_cast<char*>(_LpSrcStr),`n        _CchSrc,`n        _LpCharType,`n        _Code_page,`n        _BError,`n        static_cast<int>(`n            reinterpret_cast<std::uintptr_t>(`n                _LocaleUpdateObject._Ptdlocinfo)));`n`n    if (_LocaleUpdateObject._Updated != 0)`n    {`n        _LocaleUpdateObject._Locinfo->_Field_0x70 &=`n            0xfffffffdU;`n    }`n`n    return _Result;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <windows.h>
+#include <stdio.h>
+struct __localeinfo;
+struct localeinfo_struct
+{
+    __localeinfo* locinfo;
+    void* mbcinfo;
+};
+struct __ptiddata_impl
+{
+    std::uint8_t reserved_00[0x70];
+    std::uint32_t _Field_0x70;
+};
+struct _LocaleUpdate
+{
+    __localeinfo* _Ptdlocinfo;          // Ghidra: this+0x00, ptd->ptlocinfo
+    void* _Unknown04;                  // Ghidra: this+0x04, ptd->ptmbcinfo
+    __ptiddata_impl* _Locinfo;         // Ghidra: this+0x08, ptd
+    std::uint8_t _Updated;             // Ghidra: this+0x0c
+    std::uint8_t reserved_0d[3];
+    _LocaleUpdate(_locale_t locale);
+};
+static_assert(offsetof(localeinfo_struct, locinfo) == 0x00);
+static_assert(offsetof(localeinfo_struct, mbcinfo) == 0x04);
+static_assert(offsetof(__ptiddata_impl, _Field_0x70) == 0x70);
+static_assert(offsetof(_LocaleUpdate, _Ptdlocinfo) == 0x00);
+static_assert(offsetof(_LocaleUpdate, _Unknown04) == 0x04);
+static_assert(offsetof(_LocaleUpdate, _Locinfo) == 0x08);
+static_assert(offsetof(_LocaleUpdate, _Updated) == 0x0c);
+static_assert(sizeof(_LocaleUpdate) == 0x10);
+extern "C" int __cdecl __crtGetStringTypeA_stat(
+    localeinfo_struct*, unsigned long, char*, int, unsigned short*, int, int, int);
+
+BOOL __cdecl ___crtGetStringTypeA(
+    _locale_t _Plocinfo,
+    DWORD _DWInfoType,
+    LPCSTR _LpSrcStr,
+    int _CchSrc,
+    LPWORD _LpCharType,
+    int _Code_page,
+    BOOL _BError)
+{
+    _LocaleUpdate _LocaleUpdateObject(_Plocinfo);
+
+    const int _Result = __crtGetStringTypeA_stat(
+        reinterpret_cast<localeinfo_struct*>(&_LocaleUpdateObject),
+        _DWInfoType,
+        const_cast<char*>(_LpSrcStr),
+        _CchSrc,
+        _LpCharType,
+        _Code_page,
+        _BError,
+        static_cast<int>(
+            reinterpret_cast<std::uintptr_t>(
+                _LocaleUpdateObject._Ptdlocinfo)));
+
+    if (_LocaleUpdateObject._Updated != 0)
+    {
+        _LocaleUpdateObject._Locinfo->_Field_0x70 &=
+            0xfffffffdU;
+    }
+
+    return _Result;
+}

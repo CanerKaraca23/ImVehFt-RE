@@ -1,1 +1,70 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint8_t PTR_vftable_100376f0;`nextern void** DAT_1003c3b0;`n`nextern std::uint32_t* DAT_10037718;`nextern std::uint32_t* DAT_1003771c;`nextern std::uint32_t* DAT_10037720;`n`nstruct __single_inheritance FUN_1000b120_this`n{`n    void __thiscall FUN_1000b120(`n        std::uint32_t param_1,`n        int param_2,`n        int param_3,`n        int param_4,`n        int param_5);`n};`n`nextern void __stdcall FUN_1000cfe0();`n`nvoid __stdcall FUN_1000b1a0(std::uint32_t param_1)`n{`n    if (DAT_1003c3b0 == nullptr)`n    {`n        DAT_1003c3b0 =`n            reinterpret_cast<void**>(&PTR_vftable_100376f0);`n`n        reinterpret_cast<FUN_1000b120_this*>(DAT_1003c3b0)->FUN_1000b120(`n            0x53e981u,`n            0,`n            0,`n            0,`n            0);`n    }`n`n    const auto parameter_address =`n        reinterpret_cast<std::uintptr_t>(&param_1);`n`n    if ((parameter_address <`n         reinterpret_cast<std::uintptr_t>(DAT_1003771c)) &&`n        (reinterpret_cast<std::uintptr_t>(DAT_10037718) <=`n         parameter_address))`n    {`n        const int offset =`n            static_cast<int>(`n                parameter_address -`n                reinterpret_cast<std::uintptr_t>(DAT_10037718));`n`n        if (DAT_1003771c == DAT_10037720)`n        {`n            FUN_1000cfe0();`n        }`n`n        if (DAT_1003771c != nullptr)`n        {`n            *DAT_1003771c = DAT_10037718[offset >> 2];`n        }`n`n        DAT_1003771c = DAT_1003771c + 1;`n        return;`n    }`n`n    if (DAT_1003771c == DAT_10037720)`n    {`n        FUN_1000cfe0();`n    }`n`n    if (DAT_1003771c != nullptr)`n    {`n        *DAT_1003771c = param_1;`n    }`n`n    DAT_1003771c = DAT_1003771c + 1;`n}`n
+#include <cstdint>
+
+extern std::uint8_t PTR_vftable_100376f0;
+extern void** DAT_1003c3b0;
+
+extern std::uint32_t* DAT_10037718;
+extern std::uint32_t* DAT_1003771c;
+extern std::uint32_t* DAT_10037720;
+
+extern "C" void FUN_1000b120();
+extern "C" void __stdcall FUN_1000cfe0();
+
+using FUN_1000b120_t =
+    void (__thiscall*)(void*, std::uint32_t, int, int, int, int);
+
+void __stdcall FUN_1000b1a0(std::uint32_t param_1)
+{
+    if (DAT_1003c3b0 == nullptr)
+    {
+        DAT_1003c3b0 =
+            reinterpret_cast<void**>(&PTR_vftable_100376f0);
+
+        reinterpret_cast<FUN_1000b120_t>(&FUN_1000b120)(
+            DAT_1003c3b0,
+            0x53e981,
+            0,
+            0,
+            0,
+            0);
+    }
+
+    const auto parameter_address =
+        reinterpret_cast<std::uintptr_t>(&param_1);
+
+    if ((parameter_address <
+         reinterpret_cast<std::uintptr_t>(DAT_1003771c)) &&
+        (reinterpret_cast<std::uintptr_t>(DAT_10037718) <=
+         parameter_address))
+    {
+        const int offset =
+            static_cast<int>(
+                parameter_address -
+                reinterpret_cast<std::uintptr_t>(DAT_10037718));
+
+        if (DAT_1003771c == DAT_10037720)
+        {
+            FUN_1000cfe0();
+        }
+
+        if (DAT_1003771c != nullptr)
+        {
+            *DAT_1003771c = DAT_10037718[offset >> 2];
+        }
+
+        DAT_1003771c = DAT_1003771c + 1;
+        return;
+    }
+
+    if (DAT_1003771c == DAT_10037720)
+    {
+        FUN_1000cfe0();
+    }
+
+    if (DAT_1003771c != nullptr)
+    {
+        *DAT_1003771c = param_1;
+    }
+
+    DAT_1003771c = DAT_1003771c + 1;
+}

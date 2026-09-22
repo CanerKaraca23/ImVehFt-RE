@@ -1,1 +1,62 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern std::uint32_t DAT_1003c3b4;`n`nstd::uint32_t __stdcall FUN_1000e780()`n{`n    using Callback = void(__cdecl*)();`n    using ReturnCallback = std::uint32_t(__cdecl*)();`n`n    struct Context`n    {`n        std::uint32_t field_00;`n        ReturnCallback field_04;`n        std::uint8_t padding_08[0x10];`n        Callback* field_18;`n        Callback* field_1c;`n        std::uint8_t padding_20[0x08];`n        Callback* field_28;`n        Callback* field_2c;`n    };`n`n    Context* context =`n        reinterpret_cast<Context*>(`n            static_cast<std::uintptr_t>(DAT_1003c3b4));`n`n    Callback* end_1c = context->field_1c;`n`n    for (Callback* callback = context->field_18;`n         callback != end_1c;`n         ++callback)`n    {`n        if (*callback != nullptr)`n        {`n            (*callback)();`n        }`n    }`n`n    std::uint32_t result;`n`n    if (context->field_04 == nullptr)`n    {`n        result = 0U;`n    }`n    else`n    {`n        result = context->field_04();`n    }`n`n    Callback* end_2c = context->field_2c;`n`n    for (Callback* callback = context->field_28;`n         callback != end_2c;`n         ++callback)`n    {`n        if (*callback != nullptr)`n        {`n            (*callback)();`n        }`n    }`n`n    return result;`n}`n
+#include <cstdint>
+
+extern std::uint32_t DAT_1003c3b4;
+
+std::uint32_t __stdcall FUN_1000e780()
+{
+    using Callback = void(__cdecl*)();
+    using ReturnCallback = std::uint32_t(__cdecl*)();
+
+    struct Context
+    {
+        std::uint32_t field_00;
+        ReturnCallback field_04;
+        std::uint8_t padding_08[0x10];
+        Callback* field_18;
+        Callback* field_1c;
+        std::uint8_t padding_20[0x08];
+        Callback* field_28;
+        Callback* field_2c;
+    };
+
+    Context* context =
+        reinterpret_cast<Context*>(
+            static_cast<std::uintptr_t>(DAT_1003c3b4));
+
+    Callback* end_1c = context->field_1c;
+
+    for (Callback* callback = context->field_18;
+         callback != end_1c;
+         ++callback)
+    {
+        if (*callback != nullptr)
+        {
+            (*callback)();
+        }
+    }
+
+    std::uint32_t result;
+
+    if (context->field_04 == nullptr)
+    {
+        result = 0U;
+    }
+    else
+    {
+        result = context->field_04();
+    }
+
+    Callback* end_2c = context->field_2c;
+
+    for (Callback* callback = context->field_28;
+         callback != end_2c;
+         ++callback)
+    {
+        if (*callback != nullptr)
+        {
+            (*callback)();
+        }
+    }
+
+    return result;
+}

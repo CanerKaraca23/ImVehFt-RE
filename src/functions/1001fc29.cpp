@@ -1,1 +1,207 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" volatile std::uint32_t DAT_1003c414;`n`nextern "C" std::uint32_t __stdcall __hw_cw();`nextern "C" std::uint32_t __fastcall ___hw_cw_sse2(`n    std::uint32_t,`n    std::uint32_t);`nextern "C" void __cdecl ___set_fpsr_sse2(std::uint32_t);`n`nextern "C" std::uint32_t __cdecl __control87(`n    std::uint32_t _NewValue,`n    std::uint32_t _Mask)`n{`n    std::uint16_t in_FPUControlWord;`n`n#if defined(_MSC_VER) && defined(_M_IX86)`n    __asm {`n        fnstcw in_FPUControlWord`n    }`n#elif defined(__i386__)`n    asm volatile("fnstcw %0" : "=m"(in_FPUControlWord));`n#else`n#error "__control87 requires x86 FPU instructions"`n#endif`n`n    std::uint32_t uVar5 = 0;`n`n    if ((in_FPUControlWord & 1) != 0)`n        uVar5 = 0x10;`n    if ((in_FPUControlWord & 4) != 0)`n        uVar5 = uVar5 | 8;`n    if ((in_FPUControlWord & 8) != 0)`n        uVar5 = uVar5 | 4;`n    if ((in_FPUControlWord & 0x10) != 0)`n        uVar5 = uVar5 | 2;`n    if ((in_FPUControlWord & 0x20) != 0)`n        uVar5 = uVar5 | 1;`n    if ((in_FPUControlWord & 2) != 0)`n        uVar5 = uVar5 | 0x80000;`n`n    const std::uint16_t uVar1 = in_FPUControlWord & 0xc00;`n`n    if ((in_FPUControlWord & 0xc00) != 0) {`n        if (uVar1 == 0x400)`n            uVar5 = uVar5 | 0x100;`n        else if (uVar1 == 0x800)`n            uVar5 = uVar5 | 0x200;`n        else if (uVar1 == 0xc00)`n            uVar5 = uVar5 | 0x300;`n    }`n`n    if ((in_FPUControlWord & 0x300) == 0)`n        uVar5 = uVar5 | 0x20000;`n    else if ((in_FPUControlWord & 0x300) == 0x200)`n        uVar5 = uVar5 | 0x10000;`n`n    if ((in_FPUControlWord & 0x1000) != 0)`n        uVar5 = uVar5 | 0x40000;`n`n    std::uint32_t uVar2 = ~_Mask & uVar5 | _NewValue & _Mask;`n`n    if (uVar2 != uVar5) {`n        uVar5 = __hw_cw();`n        uVar2 = 0;`n`n        if ((uVar5 & 1) != 0)`n            uVar2 = 0x10;`n        if ((uVar5 & 4) != 0)`n            uVar2 = uVar2 | 8;`n        if ((uVar5 & 8) != 0)`n            uVar2 = uVar2 | 4;`n        if ((uVar5 & 0x10) != 0)`n            uVar2 = uVar2 | 2;`n        if ((uVar5 & 0x20) != 0)`n            uVar2 = uVar2 | 1;`n        if ((uVar5 & 2) != 0)`n            uVar2 = uVar2 | 0x80000;`n`n        const std::uint32_t uVar3 = uVar5 & 0xc00;`n`n        if (uVar3 != 0) {`n            if (uVar3 == 0x400)`n                uVar2 = uVar2 | 0x100;`n            else if (uVar3 == 0x800)`n                uVar2 = uVar2 | 0x200;`n            else if (uVar3 == 0xc00)`n                uVar2 = uVar2 | 0x300;`n        }`n`n        if ((uVar5 & 0x300) == 0)`n            uVar2 = uVar2 | 0x20000;`n        else if ((uVar5 & 0x300) == 0x200)`n            uVar2 = uVar2 | 0x10000;`n`n        if ((uVar5 & 0x1000) != 0)`n            uVar2 = uVar2 | 0x40000;`n    }`n`n    uVar5 = 0;`n`n    if (DAT_1003c414 != 0) {`n        std::uint32_t MXCSR;`n`n#if defined(_MSC_VER) && defined(_M_IX86)`n        __asm {`n            stmxcsr MXCSR`n        }`n#elif defined(__i386__)`n        asm volatile("stmxcsr %0" : "=m"(MXCSR));`n#else`n#error "__control87 requires x86 SSE instructions"`n#endif`n`n        if (static_cast<std::int8_t>(MXCSR) < 0)`n            uVar5 = 0x10;`n        if ((MXCSR & 0x200) != 0)`n            uVar5 = uVar5 | 8;`n        if ((MXCSR & 0x400) != 0)`n            uVar5 = uVar5 | 4;`n        if ((MXCSR & 0x800) != 0)`n            uVar5 = uVar5 | 2;`n        if ((MXCSR & 0x1000) != 0)`n            uVar5 = uVar5 | 1;`n        if ((MXCSR & 0x100) != 0)`n            uVar5 = uVar5 | 0x80000;`n`n        std::uint32_t uVar3 = MXCSR & 0x6000;`n`n        if (uVar3 != 0) {`n            if (uVar3 == 0x2000)`n                uVar5 = uVar5 | 0x100;`n            else if (uVar3 == 0x4000)`n                uVar5 = uVar5 | 0x200;`n            else if (uVar3 == 0x6000)`n                uVar5 = uVar5 | 0x300;`n        }`n`n        std::uint32_t uVar4 = MXCSR & 0x8040;`n`n        if (uVar4 == 0x40)`n            uVar5 = uVar5 | 0x2000000;`n        else if (uVar4 == 0x8000)`n            uVar5 = uVar5 | 0x3000000;`n        else if (uVar4 == 0x8040)`n            uVar5 = uVar5 | 0x1000000;`n`n        uVar4 = ~(_Mask & 0x308031f) & uVar5 |`n                _Mask & 0x308031f & _NewValue;`n`n        if (uVar4 != uVar5) {`n            uVar5 = ___hw_cw_sse2(uVar3, uVar4);`n            ___set_fpsr_sse2(uVar5);`n`n#if defined(_MSC_VER) && defined(_M_IX86)`n            __asm {`n                stmxcsr MXCSR`n            }`n#elif defined(__i386__)`n            asm volatile("stmxcsr %0" : "=m"(MXCSR));`n#endif`n`n            uVar5 = 0;`n`n            if (static_cast<std::int8_t>(MXCSR) < 0)`n                uVar5 = 0x10;`n            if ((MXCSR & 0x200) != 0)`n                uVar5 = uVar5 | 8;`n            if ((MXCSR & 0x400) != 0)`n                uVar5 = uVar5 | 4;`n            if ((MXCSR & 0x800) != 0)`n                uVar5 = uVar5 | 2;`n            if ((MXCSR & 0x1000) != 0)`n                uVar5 = uVar5 | 1;`n            if ((MXCSR & 0x100) != 0)`n                uVar5 = uVar5 | 0x80000;`n`n            uVar3 = MXCSR & 0x6000;`n`n            if (uVar3 != 0) {`n                if (uVar3 == 0x2000)`n                    uVar5 = uVar5 | 0x100;`n                else if (uVar3 == 0x4000)`n                    uVar5 = uVar5 | 0x200;`n                else if (uVar3 == 0x6000)`n                    uVar5 = uVar5 | 0x300;`n            }`n`n            uVar3 = MXCSR & 0x8040;`n`n            if (uVar3 == 0x40)`n                uVar5 = uVar5 | 0x2000000;`n            else if (uVar3 == 0x8000)`n                uVar5 = uVar5 | 0x3000000;`n            else if (uVar3 == 0x8040)`n                uVar5 = uVar5 | 0x1000000;`n        }`n`n        uVar3 = uVar5 ^ uVar2;`n        uVar2 = uVar5 | uVar2;`n`n        if ((uVar3 & 0x8031f) != 0)`n            uVar2 = uVar2 | 0x80000000;`n    }`n`n    return uVar2;`n}`n
+#include <cstdint>
+
+extern "C" volatile std::uint32_t DAT_1003c414;
+
+extern "C" std::uint32_t __stdcall __hw_cw();
+extern "C" std::uint32_t __fastcall ___hw_cw_sse2(
+    std::uint32_t,
+    std::uint32_t);
+extern "C" void __cdecl ___set_fpsr_sse2(std::uint32_t);
+
+std::uint32_t __cdecl __control87(
+    std::uint32_t _NewValue,
+    std::uint32_t _Mask)
+{
+    std::uint16_t in_FPUControlWord;
+
+#if defined(_MSC_VER) && defined(_M_IX86)
+    __asm {
+        fnstcw in_FPUControlWord
+    }
+#elif defined(__i386__)
+    asm volatile("fnstcw %0" : "=m"(in_FPUControlWord));
+#else
+#error "__control87 requires x86 FPU instructions"
+#endif
+
+    std::uint32_t uVar5 = 0;
+
+    if ((in_FPUControlWord & 1) != 0)
+        uVar5 = 0x10;
+    if ((in_FPUControlWord & 4) != 0)
+        uVar5 = uVar5 | 8;
+    if ((in_FPUControlWord & 8) != 0)
+        uVar5 = uVar5 | 4;
+    if ((in_FPUControlWord & 0x10) != 0)
+        uVar5 = uVar5 | 2;
+    if ((in_FPUControlWord & 0x20) != 0)
+        uVar5 = uVar5 | 1;
+    if ((in_FPUControlWord & 2) != 0)
+        uVar5 = uVar5 | 0x80000;
+
+    const std::uint16_t uVar1 = in_FPUControlWord & 0xc00;
+
+    if ((in_FPUControlWord & 0xc00) != 0) {
+        if (uVar1 == 0x400)
+            uVar5 = uVar5 | 0x100;
+        else if (uVar1 == 0x800)
+            uVar5 = uVar5 | 0x200;
+        else if (uVar1 == 0xc00)
+            uVar5 = uVar5 | 0x300;
+    }
+
+    if ((in_FPUControlWord & 0x300) == 0)
+        uVar5 = uVar5 | 0x20000;
+    else if ((in_FPUControlWord & 0x300) == 0x200)
+        uVar5 = uVar5 | 0x10000;
+
+    if ((in_FPUControlWord & 0x1000) != 0)
+        uVar5 = uVar5 | 0x40000;
+
+    std::uint32_t uVar2 = ~_Mask & uVar5 | _NewValue & _Mask;
+
+    if (uVar2 != uVar5) {
+        uVar5 = __hw_cw();
+        uVar2 = 0;
+
+        if ((uVar5 & 1) != 0)
+            uVar2 = 0x10;
+        if ((uVar5 & 4) != 0)
+            uVar2 = uVar2 | 8;
+        if ((uVar5 & 8) != 0)
+            uVar2 = uVar2 | 4;
+        if ((uVar5 & 0x10) != 0)
+            uVar2 = uVar2 | 2;
+        if ((uVar5 & 0x20) != 0)
+            uVar2 = uVar2 | 1;
+        if ((uVar5 & 2) != 0)
+            uVar2 = uVar2 | 0x80000;
+
+        const std::uint32_t uVar3 = uVar5 & 0xc00;
+
+        if (uVar3 != 0) {
+            if (uVar3 == 0x400)
+                uVar2 = uVar2 | 0x100;
+            else if (uVar3 == 0x800)
+                uVar2 = uVar2 | 0x200;
+            else if (uVar3 == 0xc00)
+                uVar2 = uVar2 | 0x300;
+        }
+
+        if ((uVar5 & 0x300) == 0)
+            uVar2 = uVar2 | 0x20000;
+        else if ((uVar5 & 0x300) == 0x200)
+            uVar2 = uVar2 | 0x10000;
+
+        if ((uVar5 & 0x1000) != 0)
+            uVar2 = uVar2 | 0x40000;
+    }
+
+    uVar5 = 0;
+
+    if (DAT_1003c414 != 0) {
+        std::uint32_t MXCSR;
+
+#if defined(_MSC_VER) && defined(_M_IX86)
+        __asm {
+            stmxcsr MXCSR
+        }
+#elif defined(__i386__)
+        asm volatile("stmxcsr %0" : "=m"(MXCSR));
+#else
+#error "__control87 requires x86 SSE instructions"
+#endif
+
+        if (static_cast<std::int8_t>(MXCSR) < 0)
+            uVar5 = 0x10;
+        if ((MXCSR & 0x200) != 0)
+            uVar5 = uVar5 | 8;
+        if ((MXCSR & 0x400) != 0)
+            uVar5 = uVar5 | 4;
+        if ((MXCSR & 0x800) != 0)
+            uVar5 = uVar5 | 2;
+        if ((MXCSR & 0x1000) != 0)
+            uVar5 = uVar5 | 1;
+        if ((MXCSR & 0x100) != 0)
+            uVar5 = uVar5 | 0x80000;
+
+        std::uint32_t uVar3 = MXCSR & 0x6000;
+
+        if (uVar3 != 0) {
+            if (uVar3 == 0x2000)
+                uVar5 = uVar5 | 0x100;
+            else if (uVar3 == 0x4000)
+                uVar5 = uVar5 | 0x200;
+            else if (uVar3 == 0x6000)
+                uVar5 = uVar5 | 0x300;
+        }
+
+        std::uint32_t uVar4 = MXCSR & 0x8040;
+
+        if (uVar4 == 0x40)
+            uVar5 = uVar5 | 0x2000000;
+        else if (uVar4 == 0x8000)
+            uVar5 = uVar5 | 0x3000000;
+        else if (uVar4 == 0x8040)
+            uVar5 = uVar5 | 0x1000000;
+
+        uVar4 = ~(_Mask & 0x308031f) & uVar5 |
+                _Mask & 0x308031f & _NewValue;
+
+        if (uVar4 != uVar5) {
+            uVar5 = ___hw_cw_sse2(uVar3, uVar4);
+            ___set_fpsr_sse2(uVar5);
+
+#if defined(_MSC_VER) && defined(_M_IX86)
+            __asm {
+                stmxcsr MXCSR
+            }
+#elif defined(__i386__)
+            asm volatile("stmxcsr %0" : "=m"(MXCSR));
+#endif
+
+            uVar5 = 0;
+
+            if (static_cast<std::int8_t>(MXCSR) < 0)
+                uVar5 = 0x10;
+            if ((MXCSR & 0x200) != 0)
+                uVar5 = uVar5 | 8;
+            if ((MXCSR & 0x400) != 0)
+                uVar5 = uVar5 | 4;
+            if ((MXCSR & 0x800) != 0)
+                uVar5 = uVar5 | 2;
+            if ((MXCSR & 0x1000) != 0)
+                uVar5 = uVar5 | 1;
+            if ((MXCSR & 0x100) != 0)
+                uVar5 = uVar5 | 0x80000;
+
+            uVar3 = MXCSR & 0x6000;
+
+            if (uVar3 != 0) {
+                if (uVar3 == 0x2000)
+                    uVar5 = uVar5 | 0x100;
+                else if (uVar3 == 0x4000)
+                    uVar5 = uVar5 | 0x200;
+                else if (uVar3 == 0x6000)
+                    uVar5 = uVar5 | 0x300;
+            }
+
+            uVar3 = MXCSR & 0x8040;
+
+            if (uVar3 == 0x40)
+                uVar5 = uVar5 | 0x2000000;
+            else if (uVar3 == 0x8000)
+                uVar5 = uVar5 | 0x3000000;
+            else if (uVar3 == 0x8040)
+                uVar5 = uVar5 | 0x1000000;
+        }
+
+        uVar3 = uVar5 ^ uVar2;
+        uVar2 = uVar5 | uVar2;
+
+        if ((uVar3 & 0x8031f) != 0)
+            uVar2 = uVar2 | 0x80000000;
+    }
+
+    return uVar2;
+}

@@ -1,1 +1,23 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdarg>`n`nextern "C" int __cdecl __vsnprintf_l(`n    char* _DstBuf,`n    std::size_t _MaxCount,`n    char* _Format,`n    _locale_t _Locale,`n    va_list _ArgList);`n`nextern "C" int __cdecl __vsnprintf(`n    char* _Dest,`n    std::size_t _Count,`n    char* _Format,`n    va_list _Args)`n{`n    int iVar1;`n`n    iVar1 = __vsnprintf_l(`n        _Dest,`n        _Count,`n        _Format,`n        (_locale_t)0x0,`n        _Args);`n`n    return iVar1;`n}`n
+#include <cstddef>
+#include <cstdarg>
+
+extern "C" int __cdecl FUN_1001415a(char*, std::size_t, const char*, _locale_t, va_list);
+
+
+extern "C" int __cdecl FUN_10014206(
+    char* _Dest,
+    std::size_t _Count,
+    const char* _Format,
+    va_list _Args)
+{
+    int iVar1;
+
+    iVar1 = FUN_1001415a(
+        _Dest,
+        _Count,
+        _Format,
+        (_locale_t)0x0,
+        _Args);
+
+    return iVar1;
+}

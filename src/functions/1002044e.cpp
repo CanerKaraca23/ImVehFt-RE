@@ -1,1 +1,15 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int __stdcall __statfp(void)`n{`n    short in_FPUStatusWord;`n`n    __asm`n    {`n        fstsw in_FPUStatusWord`n    }`n`n    return static_cast<int>(in_FPUStatusWord);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" int __stdcall __statfp(void)
+{
+    short in_FPUStatusWord;
+
+    __asm
+    {
+        fstsw in_FPUStatusWord
+    }
+
+    return static_cast<int>(in_FPUStatusWord);
+}

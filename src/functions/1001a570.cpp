@@ -1,1 +1,49 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n`nextern "C" std::size_t __cdecl _strcspn(char* _Str, char* _Control)`n{`n    std::uint8_t abStack_28[32]{};`n    std::uint8_t bVar1;`n`n    while (true)`n    {`n        bVar1 =`n            *reinterpret_cast<const std::uint8_t*>(_Control);`n`n        if (bVar1 == 0)`n        {`n            break;`n        }`n`n        ++_Control;`n        abStack_28[static_cast<int>(static_cast<unsigned int>(bVar1)) >> 3] =`n            static_cast<std::uint8_t>(`n                abStack_28[static_cast<int>(`n                    static_cast<unsigned int>(bVar1)) >> 3] |`n                (static_cast<std::uint8_t>(1u) << (bVar1 & 7)));`n    }`n`n    std::size_t sVar2 = static_cast<std::size_t>(0xffffffffu);`n`n    do`n    {`n        sVar2 = sVar2 + 1;`n`n        bVar1 =`n            *reinterpret_cast<const std::uint8_t*>(_Str);`n`n        if (bVar1 == 0)`n        {`n            return sVar2;`n        }`n`n        ++_Str;`n    }`n    while ((abStack_28[static_cast<int>(`n                static_cast<unsigned int>(bVar1)) >> 3] >>`n            (bVar1 & 7) &`n            1) == 0);`n`n    return sVar2;`n}`n
+#include <cstddef>
+#include <cstdint>
+
+extern "C" std::size_t __cdecl _strcspn(char* _Str, char* _Control)
+{
+    std::uint8_t abStack_28[32]{};
+    std::uint8_t bVar1;
+
+    while (true)
+    {
+        bVar1 =
+            *reinterpret_cast<const std::uint8_t*>(_Control);
+
+        if (bVar1 == 0)
+        {
+            break;
+        }
+
+        ++_Control;
+        abStack_28[static_cast<int>(static_cast<unsigned int>(bVar1)) >> 3] =
+            static_cast<std::uint8_t>(
+                abStack_28[static_cast<int>(
+                    static_cast<unsigned int>(bVar1)) >> 3] |
+                (static_cast<std::uint8_t>(1u) << (bVar1 & 7)));
+    }
+
+    std::size_t sVar2 = static_cast<std::size_t>(0xffffffffu);
+
+    do
+    {
+        sVar2 = sVar2 + 1;
+
+        bVar1 =
+            *reinterpret_cast<const std::uint8_t*>(_Str);
+
+        if (bVar1 == 0)
+        {
+            return sVar2;
+        }
+
+        ++_Str;
+    }
+    while ((abStack_28[static_cast<int>(
+                static_cast<unsigned int>(bVar1)) >> 3] >>
+            (bVar1 & 7) &
+            1) == 0);
+
+    return sVar2;
+}

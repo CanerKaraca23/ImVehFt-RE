@@ -1,1 +1,63 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nunsigned int __stdcall FUN_1000eea0()`n{`n    using Callback = void(__cdecl*)();`n    using ReturnCallback = unsigned int(__cdecl*)();`n`n    struct GlobalState`n    {`n        unsigned char reserved_00[0x14];`n        ReturnCallback callback_14;`n        Callback* callbacks_begin_18;`n        Callback* callbacks_end_1c;`n        unsigned char reserved_20[0x08];`n        Callback* callbacks_begin_28;`n        Callback* callbacks_end_2c;`n    };`n`n    extern int DAT_1003c3c0;`n`n    const int iVar2 = DAT_1003c3c0;`n    auto* state = reinterpret_cast<GlobalState*>(`n        static_cast<unsigned int>(iVar2));`n`n    Callback* callbacks_end_1c = state->callbacks_end_1c;`n`n    for (Callback* callback = state->callbacks_begin_18;`n         callback != callbacks_end_1c;`n         ++callback)`n    {`n        if (*callback != nullptr)`n        {`n            (*callback)();`n        }`n    }`n`n    unsigned int local_8;`n`n    if (state->callback_14 == nullptr)`n    {`n        local_8 = 0U;`n    }`n    else`n    {`n        local_8 = state->callback_14();`n    }`n`n    Callback* callbacks_end_2c = state->callbacks_end_2c;`n`n    for (Callback* callback = state->callbacks_begin_28;`n         callback != callbacks_end_2c;`n         ++callback)`n    {`n        if (*callback != nullptr)`n        {`n            (*callback)();`n        }`n    }`n`n    return local_8;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+unsigned int __stdcall FUN_1000eea0()
+{
+    using Callback = void(__cdecl*)();
+    using ReturnCallback = unsigned int(__cdecl*)();
+
+    struct GlobalState
+    {
+        unsigned char reserved_00[0x14];
+        ReturnCallback callback_14;
+        Callback* callbacks_begin_18;
+        Callback* callbacks_end_1c;
+        unsigned char reserved_20[0x08];
+        Callback* callbacks_begin_28;
+        Callback* callbacks_end_2c;
+    };
+
+    extern int DAT_1003c3c0;
+
+    const int iVar2 = DAT_1003c3c0;
+    auto* state = reinterpret_cast<GlobalState*>(
+        static_cast<unsigned int>(iVar2));
+
+    Callback* callbacks_end_1c = state->callbacks_end_1c;
+
+    for (Callback* callback = state->callbacks_begin_18;
+         callback != callbacks_end_1c;
+         ++callback)
+    {
+        if (*callback != nullptr)
+        {
+            (*callback)();
+        }
+    }
+
+    unsigned int local_8;
+
+    if (state->callback_14 == nullptr)
+    {
+        local_8 = 0U;
+    }
+    else
+    {
+        local_8 = state->callback_14();
+    }
+
+    Callback* callbacks_end_2c = state->callbacks_end_2c;
+
+    for (Callback* callback = state->callbacks_begin_28;
+         callback != callbacks_end_2c;
+         ++callback)
+    {
+        if (*callback != nullptr)
+        {
+            (*callback)();
+        }
+    }
+
+    return local_8;
+}

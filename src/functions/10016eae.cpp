@@ -1,1 +1,54 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`nextern "C" DWORD DAT_10029490;`nextern "C" DWORD DAT_10029494;`n`nextern "C" void __cdecl ___security_init_cookie(void)`n{`n    DWORD DVar1;`n    DWORD DVar2;`n    DWORD DVar3;`n    unsigned int uVar4;`n    LARGE_INTEGER local_14;`n    FILETIME local_c;`n`n    local_c.dwLowDateTime = 0;`n    local_c.dwHighDateTime = 0;`n`n    if ((DAT_10029490 == 0xBB40E64E) ||`n        ((DAT_10029490 & 0xFFFF0000) == 0))`n    {`n        GetSystemTimeAsFileTime(&local_c);`n`n        uVar4 = local_c.dwHighDateTime ^ local_c.dwLowDateTime;`n        DVar1 = GetCurrentProcessId();`n        DVar2 = GetCurrentThreadId();`n        DVar3 = GetTickCount();`n`n        QueryPerformanceCounter(&local_14);`n`n        DAT_10029490 =`n            uVar4 ^`n            DVar1 ^`n            DVar2 ^`n            DVar3 ^`n            local_14.HighPart ^`n            local_14.LowPart;`n`n        if (DAT_10029490 == 0xBB40E64E)`n        {`n            DAT_10029490 = 0xBB40E64F;`n        }`n        else if ((DAT_10029490 & 0xFFFF0000) == 0)`n        {`n            DAT_10029490 =`n                DAT_10029490 |`n                ((DAT_10029490 | 0x4711) << 0x10);`n        }`n    }`n`n    DAT_10029494 = ~DAT_10029490;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <windows.h>
+#include <stdio.h>
+extern "C" DWORD DAT_10029490;
+extern "C" DWORD DAT_10029494;
+
+extern "C" void __cdecl ___security_init_cookie(void)
+{
+    DWORD DVar1;
+    DWORD DVar2;
+    DWORD DVar3;
+    unsigned int uVar4;
+    LARGE_INTEGER local_14;
+    FILETIME local_c;
+
+    local_c.dwLowDateTime = 0;
+    local_c.dwHighDateTime = 0;
+
+    if ((DAT_10029490 == 0xBB40E64E) ||
+        ((DAT_10029490 & 0xFFFF0000) == 0))
+    {
+        GetSystemTimeAsFileTime(&local_c);
+
+        uVar4 = local_c.dwHighDateTime ^ local_c.dwLowDateTime;
+        DVar1 = GetCurrentProcessId();
+        DVar2 = GetCurrentThreadId();
+        DVar3 = GetTickCount();
+
+        QueryPerformanceCounter(&local_14);
+
+        DAT_10029490 =
+            uVar4 ^
+            DVar1 ^
+            DVar2 ^
+            DVar3 ^
+            local_14.HighPart ^
+            local_14.LowPart;
+
+        if (DAT_10029490 == 0xBB40E64E)
+        {
+            DAT_10029490 = 0xBB40E64F;
+        }
+        else if ((DAT_10029490 & 0xFFFF0000) == 0)
+        {
+            DAT_10029490 =
+                DAT_10029490 |
+                ((DAT_10029490 | 0x4711) << 0x10);
+        }
+    }
+
+    DAT_10029494 = ~DAT_10029490;
+}

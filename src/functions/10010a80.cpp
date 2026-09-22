@@ -1,1 +1,56 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" char* __cdecl _strrchr(char* _Str, int _Ch)`n{`n    char cVar1;`n    int iVar2;`n    char* pcVar3;`n    char* pcVar4;`n`n    iVar2 = -1;`n    do`n    {`n        pcVar4 = _Str;`n`n        if (iVar2 == 0)`n        {`n            break;`n        }`n`n        iVar2 = iVar2 + -1;`n        pcVar4 = _Str + 1;`n        cVar1 = *_Str;`n        _Str = pcVar4;`n    }`n    while (cVar1 != '\0');`n`n    iVar2 = -(iVar2 + 1);`n    pcVar4 = pcVar4 + -1;`n`n    do`n    {`n        pcVar3 = pcVar4;`n`n        if (iVar2 == 0)`n        {`n            break;`n        }`n`n        iVar2 = iVar2 + -1;`n        pcVar3 = pcVar4 + -1;`n        cVar1 = *pcVar4;`n        pcVar4 = pcVar3;`n    }`n    while ((char)_Ch != cVar1);`n`n    pcVar3 = pcVar3 + 1;`n`n    if (*pcVar3 != (char)_Ch)`n    {`n        pcVar3 = nullptr;`n    }`n`n    return pcVar3;`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+char* __cdecl strrchr(char* _Str, int _Ch)
+{
+    char cVar1;
+    int iVar2;
+    char* pcVar3;
+    char* pcVar4;
+
+    iVar2 = -1;
+    do
+    {
+        pcVar4 = _Str;
+
+        if (iVar2 == 0)
+        {
+            break;
+        }
+
+        iVar2 = iVar2 + -1;
+        pcVar4 = _Str + 1;
+        cVar1 = *_Str;
+        _Str = pcVar4;
+    }
+    while (cVar1 != '\0');
+
+    iVar2 = -(iVar2 + 1);
+    pcVar4 = pcVar4 + -1;
+
+    do
+    {
+        pcVar3 = pcVar4;
+
+        if (iVar2 == 0)
+        {
+            break;
+        }
+
+        iVar2 = iVar2 + -1;
+        pcVar3 = pcVar4 + -1;
+        cVar1 = *pcVar4;
+        pcVar4 = pcVar3;
+    }
+    while ((char)_Ch != cVar1);
+
+    pcVar3 = pcVar3 + 1;
+
+    if (*pcVar3 != (char)_Ch)
+    {
+        pcVar3 = nullptr;
+    }
+
+    return pcVar3;
+}

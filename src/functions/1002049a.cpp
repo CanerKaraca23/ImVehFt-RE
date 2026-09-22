@@ -1,1 +1,72 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`nusing byte = std::uint8_t;`n#include <stdio.h>`n#include <cstdint>`n`n// MSVC's inline assembler cannot encode FLD m80fp at an absolute address`n// without adding a segment prefix. Emit the original DB /5 absolute forms.`nextern "C" __declspec(naked) void __cdecl FUN_1002049a(std::uint32_t)`n{`n    __asm {`n        mov edi, edi`n        push ebp`n        mov ebp, esp`n        push ecx`n        push ecx`n        mov cl, byte ptr [ebp + 8]`n`n        test cl, 01h`n        jz skip_integer_rounding`n        _emit 0DBh`n        _emit 02Dh`n        _emit 0DCh`n        _emit 096h`n        _emit 003h`n        _emit 010h`n        fistp dword ptr [ebp + 8]`n        wait`n`n    skip_integer_rounding:`n        test cl, 08h`n        jz skip_status_capture`n        fstsw ax`n        _emit 0DBh`n        _emit 02Dh`n        _emit 0DCh`n        _emit 096h`n        _emit 003h`n        _emit 010h`n        fstp qword ptr [ebp - 8]`n        wait`n        fstsw ax`n`n    skip_status_capture:`n        test cl, 10h`n        jz skip_secondary_constant`n        _emit 0DBh`n        _emit 02Dh`n        _emit 0E8h`n        _emit 096h`n        _emit 003h`n        _emit 010h`n        fstp qword ptr [ebp - 8]`n        wait`n`n    skip_secondary_constant:`n        test cl, 04h`n        jz skip_divide`n        fldz`n        fld1`n        fdivrp st(1), st(0)`n        fstp st(0)`n        wait`n`n    skip_divide:`n        test cl, 20h`n        jz finish`n        fldpi`n        fstp qword ptr [ebp - 8]`n        wait`n`n    finish:`n        leave`n        ret`n    }`n}`n
+#include <cstdint>
+
+// MSVC's inline assembler cannot encode FLD m80fp at an absolute address
+// without adding a segment prefix. Emit the original DB /5 absolute forms.
+extern "C" __declspec(naked) void __cdecl FUN_1002049a(std::uint32_t)
+{
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        push ecx
+        push ecx
+        mov cl, byte ptr [ebp + 8]
+
+        test cl, 01h
+        jz skip_integer_rounding
+        _emit 0DBh
+        _emit 02Dh
+        _emit 0DCh
+        _emit 096h
+        _emit 003h
+        _emit 010h
+        fistp dword ptr [ebp + 8]
+        wait
+
+    skip_integer_rounding:
+        test cl, 08h
+        jz skip_status_capture
+        fstsw ax
+        _emit 0DBh
+        _emit 02Dh
+        _emit 0DCh
+        _emit 096h
+        _emit 003h
+        _emit 010h
+        fstp qword ptr [ebp - 8]
+        wait
+        fstsw ax
+
+    skip_status_capture:
+        test cl, 10h
+        jz skip_secondary_constant
+        _emit 0DBh
+        _emit 02Dh
+        _emit 0E8h
+        _emit 096h
+        _emit 003h
+        _emit 010h
+        fstp qword ptr [ebp - 8]
+        wait
+
+    skip_secondary_constant:
+        test cl, 04h
+        jz skip_divide
+        fldz
+        fld1
+        fdivrp st(1), st(0)
+        fstp st(0)
+        wait
+
+    skip_divide:
+        test cl, 20h
+        jz finish
+        fldpi
+        fstp qword ptr [ebp - 8]
+        wait
+
+    finish:
+        leave
+        ret
+    }
+}

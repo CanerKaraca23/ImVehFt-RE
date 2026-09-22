@@ -1,1 +1,13 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <Windows.h>`n#include <cstdint>`n`nextern "C" std::uint8_t* DAT_1003c420[];`n`nextern "C" void __cdecl __unlock_fhandle(int _Filehandle)`n{`n    LeaveCriticalSection(`n        reinterpret_cast<LPCRITICAL_SECTION>(`n            DAT_1003c420[_Filehandle >> 5] +`n            0x0cU +`n            (_Filehandle & 0x1fU) * 0x40U));`n}`n
+#include <Windows.h>
+#include <cstdint>
+
+extern "C" std::uint8_t* DAT_1003c420[];
+
+extern "C" void __cdecl __unlock_fhandle(int _Filehandle)
+{
+    LeaveCriticalSection(
+        reinterpret_cast<LPCRITICAL_SECTION>(
+            DAT_1003c420[_Filehandle >> 5] +
+            0x0cU +
+            (_Filehandle & 0x1fU) * 0x40U));
+}

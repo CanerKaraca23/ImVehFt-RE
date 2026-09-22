@@ -1,1 +1,16 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" void __cdecl FUN_1001ca18(std::uint32_t low_word, std::uint32_t high_word);`nextern "C" void __cdecl FUN_1001b5bd(std::uint32_t low_word, std::uint32_t high_word);`n`nextern "C" __declspec(naked) void __stdcall FUN_1001b5a0(void)`n{`n    __asm {`n        sub esp, 0ch`n        fst qword ptr [esp]`n        call FUN_1001ca18`n        call FUN_1001b5bd`n        add esp, 0ch`n        ret`n    }`n}`n
+#include <cstdint>
+
+extern "C" void __cdecl FUN_1001ca18(std::uint32_t low_word, std::uint32_t high_word);
+extern "C" void __cdecl FUN_1001b5bd(std::uint32_t low_word, std::uint32_t high_word);
+
+extern "C" __declspec(naked) void __stdcall FUN_1001b5a0(void)
+{
+    __asm {
+        sub esp, 0ch
+        fst qword ptr [esp]
+        call FUN_1001ca18
+        call FUN_1001b5bd
+        add esp, 0ch
+        ret
+    }
+}

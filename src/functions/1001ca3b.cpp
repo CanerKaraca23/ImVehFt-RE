@@ -1,1 +1,35 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`n#include <cstdint>`n`nextern "C" long double __fastcall __startOneArgErrorHandling(`n    std::uint32_t param_1,`n    int param_2,`n    std::uint16_t param_3,`n    std::uint32_t param_4,`n    std::uint32_t param_5,`n    std::uint32_t param_6);`n`nextern "C" __declspec(naked) void __fastcall __math_exit(void*, int, std::uint32_t, std::uint32_t, std::uint32_t)`n{`n    __asm`n    {`n        mov ax, word ptr [esp]`n        cmp ax, 027Fh`n        je already_default`n        test ax, 020h`n        je restore_control_word`n        fstsw ax`n        test ax, 020h`n        je restore_control_word`n        mov eax, 8`n        call __startOneArgErrorHandling`n        pop edx`n        ret`n`n    restore_control_word:`n        fldcw word ptr [esp]`n`n    already_default:`n        pop edx`n        ret`n    }`n}`n`n// Ghidra's shared block at 0x1001ca2e; exact operations are confirmed in`n// ghidra_exports/1001b5bd.json. It restores the saved x87 control word,`n// pops the saved temporary stack slot into EDX, then returns to the caller.`nextern "C" __declspec(naked) void __cdecl FUN_1001ca2e(void)`n{`n    __asm {`n        cmp word ptr [esp], 027Fh`n        je already_default`n        fldcw word ptr [esp]`n    already_default:`n        pop edx`n        ret`n    }`n}`n
+#include <cstdint>
+
+extern "C" long double __fastcall __startOneArgErrorHandling(
+    std::uint32_t param_1,
+    int param_2,
+    std::uint16_t param_3,
+    std::uint32_t param_4,
+    std::uint32_t param_5,
+    std::uint32_t param_6);
+
+extern "C" __declspec(naked) void __cdecl __math_exit()
+{
+    __asm
+    {
+        mov ax, word ptr [esp]
+        cmp ax, 027Fh
+        je already_default
+        test ax, 020h
+        je restore_control_word
+        fstsw ax
+        test ax, 020h
+        je restore_control_word
+        mov eax, 8
+        call __startOneArgErrorHandling
+        pop edx
+        ret
+
+    restore_control_word:
+        fldcw word ptr [esp]
+
+    already_default:
+        pop edx
+        ret
+    }
+}

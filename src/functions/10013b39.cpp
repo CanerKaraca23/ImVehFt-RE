@@ -1,1 +1,10 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void FUN_10017cd2(std::uint32_t param_1);`n`nextern "C" void __stdcall FUN_10013b39()`n{`n    FUN_10017cd2(0xEu);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void FUN_10017cd2(std::uint32_t param_1);
+
+extern "C" void __stdcall FUN_10013b39()
+{
+    FUN_10017cd2(0xEu);
+}

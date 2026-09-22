@@ -1,1 +1,10 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" __declspec(naked) void __fastcall FUN_1000a560(int)`n{`n    __asm {`n        jmp dword ptr [ecx * 4 + 01000a618h]`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" __declspec(naked) void __fastcall FUN_1000a560(int)
+{
+    __asm {
+        jmp dword ptr [ecx * 4 + 01000a618h]
+    }
+}

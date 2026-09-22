@@ -1,1 +1,31 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" int DAT_10039a00;`n`nextern "C" int __cdecl __set_error_mode(int mode);`nextern "C" void __cdecl __NMSG_WRITE(int message);`n`nextern "C" void __cdecl __FF_MSGBANNER(void)`n{`n    int iVar1 = __set_error_mode(3);`n`n    if (iVar1 != 1)`n    {`n        iVar1 = __set_error_mode(3);`n`n        if (iVar1 != 0)`n        {`n            return;`n        }`n`n        if (DAT_10039a00 != 1)`n        {`n            return;`n        }`n    }`n`n    __NMSG_WRITE(0xfc);`n    __NMSG_WRITE(0xff);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" int DAT_10039a00;
+
+extern "C" int __cdecl __set_error_mode(int mode);
+extern "C" void __cdecl __NMSG_WRITE(int message);
+
+extern "C" void __cdecl __FF_MSGBANNER(void)
+{
+    int iVar1 = __set_error_mode(3);
+
+    if (iVar1 != 1)
+    {
+        iVar1 = __set_error_mode(3);
+
+        if (iVar1 != 0)
+        {
+            return;
+        }
+
+        if (DAT_10039a00 != 1)
+        {
+            return;
+        }
+    }
+
+    __NMSG_WRITE(0xfc);
+    __NMSG_WRITE(0xff);
+}

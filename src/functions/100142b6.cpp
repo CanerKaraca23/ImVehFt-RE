@@ -1,1 +1,213 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <windows.h>`n#include <stdio.h>`n#include <cstddef>`n#include <cstdint>`n#include <windows.h>`n`nstruct threadmbcinfostruct;`n`nextern "C" std::uint32_t DAT_10029490;`n`nextern "C" void __fastcall __security_check_cookie(`n    std::uintptr_t stack_cookie);`n`nextern "C" void* __cdecl _memset(`n    void* destination,`n    int value,`n    std::size_t size);`n`nextern "C" BOOL __cdecl ___crtGetStringTypeA(`n    _locale_t,`n    DWORD,`n    LPCSTR,`n    int,`n    LPWORD,`n    int,`n    BOOL);`n`nextern "C" int __cdecl ___crtLCMapStringA(`n    _locale_t,`n    LPCWSTR,`n    DWORD,`n    LPCSTR,`n    int,`n    LPSTR,`n    int,`n    int,`n    BOOL);`n`nvoid __cdecl setSBUpLow(threadmbcinfostruct* param_1)`n{`n    auto* const base = reinterpret_cast<std::uint8_t*>(param_1);`n`n    const std::uintptr_t stack_cookie =`n        static_cast<std::uintptr_t>(DAT_10029490) ^`n        reinterpret_cast<std::uintptr_t>(&stack_cookie);`n`n    _cpinfo local_51c;`n    WORD local_508[256];`n    CHAR local_308[256];`n    CHAR local_208[256];`n    CHAR local_108[256];`n`n    const UINT code_page =`n        *reinterpret_cast<const UINT*>(base + 0x04);`n`n    const BOOL locale_flag =`n        *reinterpret_cast<const BOOL*>(base + 0x0c);`n`n    const LPCWSTR locale_name =`n        *reinterpret_cast<const LPCWSTR*>(base + 0x0c);`n`n    auto* const mbctype =`n        reinterpret_cast<BYTE*>(base + 0x1d);`n`n    auto* const mbcasemap =`n        reinterpret_cast<CHAR*>(base + 0x11d);`n`n    if (GetCPInfo(code_page, &local_51c) == 0)`n    {`n        std::uint32_t index = 0;`n`n        do`n        {`n            CHAR* const map_entry = mbcasemap + index;`n`n            if (index >= 0x41 && index < 0x5b)`n            {`n                BYTE* const type_entry = mbctype + index;`n                *type_entry = static_cast<BYTE>(*type_entry | 0x10);`n`n                const CHAR mapped =`n                    static_cast<CHAR>(index) + ' ';`n`n                *map_entry = mapped;`n            }`n            else`n            {`n                CHAR mapped;`n                if (index >= 0x61 && index < 0x7b)`n                {`n                    BYTE* const type_entry = mbctype + index;`n                    *type_entry = static_cast<BYTE>(*type_entry | 0x20);`n`n                    mapped = static_cast<CHAR>(index) - 0x20;`n`n                    goto LAB_1001442c_with_value;`n                }`n`n                *map_entry = '\0';`n                goto LAB_1001442c_done;`n`n            LAB_1001442c_with_value:`n                *map_entry = mapped;`n            }`n`n        LAB_1001442c_done:`n            index = index + 1;`n        }`n        while (index < 0x100);`n    }`n    else`n    {`n        std::uint32_t index = 0;`n`n        do`n        {`n            local_108[index] = static_cast<CHAR>(index);`n            index = index + 1;`n        }`n        while (index < 0x100);`n`n        local_108[0] = ' ';`n`n        if (local_51c.LeadByte[0] != 0)`n        {`n            BYTE* lead_byte = local_51c.LeadByte + 1;`n`n            do`n            {`n                const std::uint32_t first =`n                    static_cast<std::uint32_t>(local_51c.LeadByte[0]);`n`n                if (first <= *lead_byte)`n                {`n                    _memset(`n                        local_108 + first,`n                        0x20,`n                        (*lead_byte - first) + 1);`n                }`n`n                local_51c.LeadByte[0] = lead_byte[1];`n                lead_byte = lead_byte + 2;`n            }`n            while (local_51c.LeadByte[0] != 0);`n        }`n`n        ___crtGetStringTypeA(`n            static_cast<_locale_t>(nullptr),`n            1,`n            local_108,`n            0x100,`n            local_508,`n            static_cast<int>(code_page),`n            locale_flag);`n`n        ___crtLCMapStringA(`n            static_cast<_locale_t>(nullptr),`n            locale_name,`n            0x100,`n            local_108,`n            0x100,`n            local_208,`n            0x100,`n            static_cast<int>(code_page),`n            0);`n`n        ___crtLCMapStringA(`n            static_cast<_locale_t>(nullptr),`n            locale_name,`n            0x200,`n            local_108,`n            0x100,`n            local_308,`n            0x100,`n            static_cast<int>(code_page),`n            0);`n`n        index = 0;`n`n        do`n        {`n            CHAR mapped;`n            BYTE* type_entry;`n`n            if ((local_508[index] & 1) == 0)`n            {`n                if ((local_508[index] & 2) != 0)`n                {`n                    type_entry = mbctype + index;`n                    *type_entry = static_cast<BYTE>(*type_entry | 0x20);`n`n                    mapped = local_308[index];`n                    goto LAB_100143cf;`n                }`n`n                mbcasemap[index] = '\0';`n            }`n            else`n            {`n                type_entry = mbctype + index;`n                *type_entry = static_cast<BYTE>(*type_entry | 0x10);`n`n                mapped = local_208[index];`n`n            LAB_100143cf:`n                mbcasemap[index] = mapped;`n            }`n`n            index = index + 1;`n        }`n        while (index < 0x100);`n    }`n`n    __security_check_cookie(stack_cookie);`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <windows.h>
+
+struct threadmbcinfostruct;
+
+extern "C" std::uint32_t DAT_10029490;
+
+extern "C" void __fastcall __security_check_cookie(
+    std::uintptr_t stack_cookie);
+
+extern "C" void* __cdecl _memset(
+    void* destination,
+    int value,
+    std::size_t size);
+
+extern "C" BOOL __cdecl ___crtGetStringTypeA(
+    _locale_t,
+    DWORD,
+    LPCSTR,
+    int,
+    LPWORD,
+    int,
+    BOOL);
+
+extern "C" int __cdecl ___crtLCMapStringA(
+    _locale_t,
+    LPCWSTR,
+    DWORD,
+    LPCSTR,
+    int,
+    LPSTR,
+    int,
+    int,
+    BOOL);
+
+void __cdecl setSBUpLow(threadmbcinfostruct* param_1)
+{
+    auto* const base = reinterpret_cast<std::uint8_t*>(param_1);
+
+    const std::uintptr_t stack_cookie =
+        static_cast<std::uintptr_t>(DAT_10029490) ^
+        reinterpret_cast<std::uintptr_t>(&stack_cookie);
+
+    _cpinfo local_51c;
+    WORD local_508[256];
+    CHAR local_308[256];
+    CHAR local_208[256];
+    CHAR local_108[256];
+
+    const UINT code_page =
+        *reinterpret_cast<const UINT*>(base + 0x04);
+
+    const BOOL locale_flag =
+        *reinterpret_cast<const BOOL*>(base + 0x0c);
+
+    const LPCWSTR locale_name =
+        *reinterpret_cast<const LPCWSTR*>(base + 0x0c);
+
+    auto* const mbctype =
+        reinterpret_cast<BYTE*>(base + 0x1d);
+
+    auto* const mbcasemap =
+        reinterpret_cast<CHAR*>(base + 0x11d);
+
+    if (GetCPInfo(code_page, &local_51c) == 0)
+    {
+        std::uint32_t index = 0;
+
+        do
+        {
+            CHAR* const map_entry = mbcasemap + index;
+
+            if (index >= 0x41 && index < 0x5b)
+            {
+                BYTE* const type_entry = mbctype + index;
+                *type_entry = static_cast<BYTE>(*type_entry | 0x10);
+
+                const CHAR mapped =
+                    static_cast<CHAR>(index) + ' ';
+
+                *map_entry = mapped;
+            }
+            else
+            {
+                CHAR mapped;
+                if (index >= 0x61 && index < 0x7b)
+                {
+                    BYTE* const type_entry = mbctype + index;
+                    *type_entry = static_cast<BYTE>(*type_entry | 0x20);
+
+                    mapped = static_cast<CHAR>(index) - 0x20;
+
+                    goto LAB_1001442c_with_value;
+                }
+
+                *map_entry = '\0';
+                goto LAB_1001442c_done;
+
+            LAB_1001442c_with_value:
+                *map_entry = mapped;
+            }
+
+        LAB_1001442c_done:
+            index = index + 1;
+        }
+        while (index < 0x100);
+    }
+    else
+    {
+        std::uint32_t index = 0;
+
+        do
+        {
+            local_108[index] = static_cast<CHAR>(index);
+            index = index + 1;
+        }
+        while (index < 0x100);
+
+        local_108[0] = ' ';
+
+        if (local_51c.LeadByte[0] != 0)
+        {
+            BYTE* lead_byte = local_51c.LeadByte + 1;
+
+            do
+            {
+                const std::uint32_t first =
+                    static_cast<std::uint32_t>(local_51c.LeadByte[0]);
+
+                if (first <= *lead_byte)
+                {
+                    _memset(
+                        local_108 + first,
+                        0x20,
+                        (*lead_byte - first) + 1);
+                }
+
+                local_51c.LeadByte[0] = lead_byte[1];
+                lead_byte = lead_byte + 2;
+            }
+            while (local_51c.LeadByte[0] != 0);
+        }
+
+        ___crtGetStringTypeA(
+            static_cast<_locale_t>(nullptr),
+            1,
+            local_108,
+            0x100,
+            local_508,
+            static_cast<int>(code_page),
+            locale_flag);
+
+        ___crtLCMapStringA(
+            static_cast<_locale_t>(nullptr),
+            locale_name,
+            0x100,
+            local_108,
+            0x100,
+            local_208,
+            0x100,
+            static_cast<int>(code_page),
+            0);
+
+        ___crtLCMapStringA(
+            static_cast<_locale_t>(nullptr),
+            locale_name,
+            0x200,
+            local_108,
+            0x100,
+            local_308,
+            0x100,
+            static_cast<int>(code_page),
+            0);
+
+        index = 0;
+
+        do
+        {
+            CHAR mapped;
+            BYTE* type_entry;
+
+            if ((local_508[index] & 1) == 0)
+            {
+                if ((local_508[index] & 2) != 0)
+                {
+                    type_entry = mbctype + index;
+                    *type_entry = static_cast<BYTE>(*type_entry | 0x20);
+
+                    mapped = local_308[index];
+                    goto LAB_100143cf;
+                }
+
+                mbcasemap[index] = '\0';
+            }
+            else
+            {
+                type_entry = mbctype + index;
+                *type_entry = static_cast<BYTE>(*type_entry | 0x10);
+
+                mapped = local_208[index];
+
+            LAB_100143cf:
+                mbcasemap[index] = mapped;
+            }
+
+            index = index + 1;
+        }
+        while (index < 0x100);
+    }
+
+    __security_check_cookie(stack_cookie);
+}

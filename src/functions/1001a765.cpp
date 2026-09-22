@@ -1,1 +1,10 @@
-#include <cstddef>`n#include <cstdint>`n#include <corecrt.h>`n#include <stdio.h>`nextern "C" void __cdecl __unlock_fhandle(int _FileHandle);`n`n#if !defined(_MSC_VER) || !defined(_M_IX86)`n#error "FUN_1001a765 requires the original MSVC x86 frame/register ABI"`n#endif`n`nextern "C" __declspec(naked) void __stdcall FUN_1001a765(void)`n{`n    __asm {`n        push dword ptr [ebp + 8]`n        call __unlock_fhandle`n        pop ecx`n        ret`n    }`n}`n
+#include <cstddef>
+#include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
+extern "C" void __cdecl __unlock_fhandle(int _Filehandle);
+
+extern "C" void __stdcall FUN_1001a765(int _FileHandle)
+{
+    __unlock_fhandle(_FileHandle);
+}
