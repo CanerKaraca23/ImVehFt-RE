@@ -21,7 +21,7 @@ The script compiles each file in `src/functions/` independently with `/std:c++20
 ## Verification status
 
 - MSVC 2022 x86 `/O2`: **705/705 translation units compiled**.
-- MSVC `/O2 /W4 /WX`: **700/705**; five diagnostics remain at `10003810`, `100076d0`, `10012e65`, `1001b65a`, and `1001e03d`. They are not suppressed or guessed away.
+- Latest standalone MSVC `/O2 /W4 /WX /MT` compatibility audit: **705/705** translation-unit probes passed. This does not prove that the full plugin links or runs.
 - Clang x86 `/O2`: **701/705** in the recorded audit; four toolchain/target incompatibilities remain.
 - ReAgent objective/parity report: 705/705 recorded as passing/green, with 11 scope-limited manual call-count adjudications. These checks do not establish semantic correctness.
 - The current diagnostic full-set link still has 228 unresolved externals; this is a diagnostic probe, not a production plugin project.
