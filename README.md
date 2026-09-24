@@ -24,8 +24,9 @@ The script compiles each file in `src/functions/` independently with `/std:c++20
 - Previous standalone MSVC `/O2 /W4 /WX` audit: **705/705** passed; after the two current edits, those changed units separately passed `/W4 /WX /MT` and the remaining 703 are unchanged. This does not prove that the full plugin links or runs.
 - Clang x86 `/O2`: **701/705** in the recorded audit; four toolchain/target incompatibilities remain.
 - ReAgent objective/parity report: 705/705 recorded as passing/green, with 11 scope-limited manual call-count adjudications. These checks do not establish semantic correctness.
-- The latest historical-SDK diagnostic probe against the updated 705 object set has 205 unresolved externals; it produced no DLL and is not a production plugin project. Details and limitations are in [`audit/candidate-correction-10003ba0-10003e60.md`](audit/candidate-correction-10003ba0-10003e60.md).
+- The latest historical-SDK diagnostic probe against the updated 705 object set has 204 unresolved externals; it produced no DLL and is not a production plugin project. Details and limitations are in [`audit/candidate-correction-10003ba0-10003e60.md`](audit/candidate-correction-10003ba0-10003e60.md).
 - Targeted ReAgent 0.4.0 parity for the two corrected functions is green (2/2); this is a local consistency check, not behavioral/runtime validation. The previously recorded 705/705 objective/parity counts predate these two candidate edits.
+- The ReAgent 0.4.0 non-LLM objective verifier was rerun for both edited candidates: **2/2 PASS** with no structural findings. It is a structural gate, not a semantic equivalence or runtime test.
 - Full original-project link, plugin-sdk integration, and GTA San Andreas runtime testing: **not completed**.
 
 See [`audit/status.json`](audit/status.json) for the recorded counts and scope limits, and [`audit/source-sha256.csv`](audit/source-sha256.csv) for the candidate source fingerprints. A green compile or parity score is not equivalent to a behaviorally verified function.

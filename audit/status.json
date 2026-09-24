@@ -26,9 +26,14 @@
     "red": 0,
     "scope": "10003ba0 and 10003e60 after current edits; not behavioral or runtime proof"
   },
+  "targeted_objective_verifier": {
+    "pass": 2,
+    "fail": 0,
+    "scope": "ReAgent 0.4.0 structural verifier run locally against current Ghidra JSON and both candidate sources; not behavioral or runtime proof"
+  },
   "diagnostic_full_set_link": {
     "scope": "diagnostic probe only; not production link",
-    "unresolved_unique_externals": 205,
+    "unresolved_unique_externals": 204,
     "latest_probe": "audit/candidate-correction-10003ba0-10003e60.md"
   },
   "full_plugin_link": "not completed; original project source and compatible plugin-sdk build inputs are unavailable",

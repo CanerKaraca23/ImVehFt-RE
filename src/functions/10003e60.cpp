@@ -2,12 +2,10 @@
 
 using Address32 = std::uint32_t;
 
-extern void __cdecl FUN_006fd7c0(std::int32_t*, std::int32_t*);
-
 extern std::uint8_t* _DAT_00c3ef78;
 
 std::uint32_t __cdecl FUN_10003e60(
-    std::uint32_t,
+    std::uint32_t param_1,
     std::int32_t param_2,
     std::uint32_t,
     std::int32_t param_4)
@@ -54,7 +52,19 @@ std::uint32_t __cdecl FUN_10003e60(
             iStack_c = 1;
             iStack_10 = 1;
 
-            FUN_006fd7c0(&iStack_c, &iStack_10);
+            __asm
+            {
+                lea eax, iStack_10
+                push eax
+                lea eax, iStack_c
+                push eax
+                mov eax, param_1
+                add eax, iVar5
+                mov al, byte ptr [eax]
+                mov edx, 0x6fd7c0
+                call edx
+                add esp, 8
+            }
 
             iVar2 =
                 (iStack_10 * 0x100 + iStack_c) * 0x80 +
