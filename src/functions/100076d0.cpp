@@ -1,6 +1,8 @@
 #include <cstddef>
 #include <cstdint>
 
+struct RwTexture;
+
 extern std::int32_t DAT_1003c248;
 extern std::int32_t DAT_1003c1fc;
 extern float _DAT_1003c1ec;
@@ -20,9 +22,6 @@ extern std::int32_t _DAT_1003bc00;
 
 extern std::int32_t* _DAT_00b74494;
 extern std::int32_t* _DAT_00c8800c;
-extern std::int32_t _DAT_00b4e68c;
-extern std::int32_t _DAT_00b4e690;
-extern std::uint32_t* _DAT_00b4e47c;
 
 extern std::int32_t DAT_1003bc78;
 extern char DAT_1003aef0;
@@ -125,7 +124,8 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
                 DAT_1003aacc + 8 + local_14);
     }
 
-    if (_DAT_00b4e47c != nullptr &&
+    if (*reinterpret_cast<RwTexture**>(
+            static_cast<std::uintptr_t>(0x00b4e47c)) != nullptr &&
         local_14 != 0 &&
         *reinterpret_cast<char*>(
             static_cast<std::uintptr_t>(local_14) + 0x10) == '#')
@@ -135,11 +135,15 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
         if (iVar12 == 0)
         {
             *param_1 = static_cast<std::int32_t>(
-                reinterpret_cast<std::uintptr_t>(_DAT_00b4e47c));
+                reinterpret_cast<std::uintptr_t>(
+                    *reinterpret_cast<RwTexture**>(
+                        static_cast<std::uintptr_t>(0x00b4e47c))));
         }
         else
         {
-            puVar13 = FUN_10001fb0(_DAT_00b4e47c);
+            puVar13 = FUN_10001fb0(reinterpret_cast<std::uint32_t*>(
+                *reinterpret_cast<RwTexture**>(
+                    static_cast<std::uintptr_t>(0x00b4e47c))));
             *param_1 = static_cast<std::int32_t>(
                 reinterpret_cast<std::uintptr_t>(puVar13));
         }
@@ -421,11 +425,15 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
     if (local_8 == 0 ||
         texture_lookup(local_8, "vehiclelights") == 0)
     {
-        iVar12 = _DAT_00b4e68c;
+        iVar12 = static_cast<std::int32_t>(reinterpret_cast<std::uintptr_t>(
+            *reinterpret_cast<RwTexture**>(
+                static_cast<std::uintptr_t>(0x00b4e68c))));
     }
 
     if (local_14 == iVar12 ||
-        local_14 == _DAT_00b4e68c)
+        local_14 == static_cast<std::int32_t>(reinterpret_cast<std::uintptr_t>(
+            *reinterpret_cast<RwTexture**>(
+                static_cast<std::uintptr_t>(0x00b4e68c)))))
     {
         iVar12 = 0;
 
@@ -466,7 +474,9 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
                         local_8,
                         "vehiclelights_on") == 0)
                 {
-                    iVar12 = _DAT_00b4e690;
+                    iVar12 = static_cast<std::int32_t>(reinterpret_cast<std::uintptr_t>(
+                        *reinterpret_cast<RwTexture**>(
+                            static_cast<std::uintptr_t>(0x00b4e690))));
                 }
 
                 *param_1 = iVar12;
