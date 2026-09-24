@@ -2,7 +2,7 @@
 
 An evidence-led, work-in-progress reconstruction of 705 functions from the local ImVehFt binary. This repository contains reconstructed candidate translation units, not the original ImVehFt source tree.
 
-**Status as of 2026-09-24:** all 705 candidate translation units are exported from the latest local ReAgent progress snapshot with real UTF-8 line breaks. After four evidence-backed type/call-site corrections, they compiled individually with MSVC 2022 x86, C++20, `/O2`; the four changed units passed `/W4 /WX /MT` compilation. The open `100076d0` C4701/data-flow risk remains documented and is not considered resolved by compilation. This is an object/static-archive build only. It is **not** a completed ImVehFt plugin, proof of source equivalence, or a passing in-game test.
+**Status as of 2026-09-24:** all 705 candidate translation units are exported from the latest local ReAgent progress snapshot with real UTF-8 line breaks. After five evidence-backed type/call-site corrections, they compiled individually with MSVC 2022 x86, C++20, `/O2`; the five changed units passed `/W4 /WX /MT` compilation. The open `100076d0` C4701/data-flow risk remains documented and is not considered resolved by compilation. This is an object/static-archive build only. It is **not** a completed ImVehFt plugin, proof of source equivalence, or a passing in-game test.
 
 ## Build the candidate archive
 
@@ -21,12 +21,12 @@ The script compiles each file in `src/functions/` independently with `/std:c++20
 ## Verification status
 
 - MSVC 2022 x86 `/O2`: **705/705 translation units compiled**.
-- Previous standalone MSVC `/O2 /W4 /WX` audit: **705/705** passed; after the four current edits, those changed units separately compiled with `/W4 /WX /MT` and the remaining 701 are unchanged. `100076d0` still has the C4701 concern described below; compilation under `/WX` alone must not be read as resolving it.
+- Previous standalone MSVC `/O2 /W4 /WX` audit: **705/705** passed; after the five current edits, those changed units separately compiled with `/W4 /WX /MT` and the remaining 700 are unchanged. `100076d0` still has the C4701 concern described below; compilation under `/WX` alone must not be read as resolving it.
 - Clang x86 `/O2`: **701/705** in the recorded audit; four toolchain/target incompatibilities remain.
 - ReAgent objective/parity report: 705/705 recorded as passing/green, with 11 scope-limited manual call-count adjudications. These checks do not establish semantic correctness.
-- The latest historical-SDK diagnostic probe against the updated 705 object set has 200 unresolved externals; it produced no DLL and is not a production plugin project. Details and limitations are in [`audit/candidate-correction-100099f0.md`](audit/candidate-correction-100099f0.md).
-- Targeted ReAgent 0.4.0 parity for the four corrected functions is green (4/4); this is a local consistency check, not behavioral/runtime validation. The previously recorded 705/705 objective/parity counts predate these four candidate edits.
-- The ReAgent 0.4.0 non-LLM objective verifier was rerun for the four edited candidates: **4/4 PASS** with no structural failures. It is a structural gate, not semantic equivalence or runtime proof; the parity report still carries the scoped `local_c` C4701 concern.
+- The latest historical-SDK diagnostic probe against the updated 705 object set has 199 unresolved externals; it produced no DLL and is not a production plugin project. Details and limitations are in [`audit/candidate-correction-100074d0.md`](audit/candidate-correction-100074d0.md).
+- Targeted ReAgent 0.4.0 parity for the five corrected functions is green (5/5); this is a local consistency check, not behavioral/runtime validation. The previously recorded 705/705 objective/parity counts predate these five candidate edits.
+- The ReAgent 0.4.0 non-LLM objective verifier was rerun for the five edited candidates: **5/5 PASS** with no structural failures. It is a structural gate, not semantic equivalence or runtime proof; the parity report still carries the scoped `local_c` C4701 concern.
 - Full original-project link, plugin-sdk integration, and GTA San Andreas runtime testing: **not completed**.
 
 See [`audit/status.json`](audit/status.json) for the recorded counts and scope limits, and [`audit/source-sha256.csv`](audit/source-sha256.csv) for the candidate source fingerprints. A green compile or parity score is not equivalent to a behaviorally verified function.
@@ -40,6 +40,7 @@ See [`audit/status.json`](audit/status.json) for the recorded counts and scope l
 - `audit/candidate-correction-10003ba0-10003e60.md`: Ghidra/SDK evidence, edits, and targeted build/parity/link results for the raster-lock buffer pair.
 - `audit/candidate-correction-100076d0.md`: Ghidra/Plugin-SDK address evidence and the remaining warning/validation limits for the texture-global correction.
 - `audit/candidate-correction-100099f0.md`: Ghidra/Plugin-SDK evidence, x86 object confirmation, and validation limits for the frame-counter global correction.
+- `audit/candidate-correction-100074d0.md`: Ghidra/Plugin-SDK pool-layout evidence, x86 object confirmation, and scoped validation limits for the vehicle-pool correction.
 - The original `ImVehFt.asi`, GTA files, generated object files, and large historical progress backups are intentionally not included.
 
 The reference binary was SHA-256 `409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3` when recorded locally. This fingerprint is included for traceability; it does not imply that the original binary is distributed here.

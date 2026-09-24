@@ -10,7 +10,6 @@ extern "C" void __stdcall FUN_10006ad0();
 extern "C" void __cdecl FUN_10005860(std::int32_t);
 
 extern volatile std::int32_t DAT_1003c248;
-extern volatile std::int32_t DAT_00b74494;
 extern volatile std::uint32_t DAT_1003aedc;
 extern volatile std::uint32_t DAT_1003aee0;
 extern volatile std::uint32_t DAT_1003aee4;
@@ -44,6 +43,13 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
 
     const std::int32_t base = DAT_1003c248;
     const std::int32_t shared = FUN_10009360();
+    const std::int32_t vehicle_pool =
+        *reinterpret_cast<volatile std::int32_t*>(
+            static_cast<std::uintptr_t>(0x00b74494));
+    const std::int32_t vehicle_objects =
+        *reinterpret_cast<volatile std::int32_t*>(
+            static_cast<std::uintptr_t>(
+                static_cast<std::uint32_t>(vehicle_pool)));
 
     const std::int32_t record =
         *reinterpret_cast<volatile std::int32_t*>(
@@ -52,7 +58,7 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
                     static_cast<std::uintptr_t>(
                         static_cast<std::uint32_t>(shared)) + 0x48)) +
             static_cast<std::uintptr_t>(
-                ((param_1 - DAT_00b74494) / 0xa18) * 4));
+                ((param_1 - vehicle_objects) / 0xa18) * 4));
 
     const std::uint32_t uVar1 =
         *reinterpret_cast<volatile std::uint32_t*>(
