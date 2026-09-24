@@ -4,7 +4,7 @@
 
 This cross-check compares unresolved `DAT_...` references in the 705 candidate translation units with the named absolute-address definitions in the local Plugin-SDK checkout (`DK22Pac/plugin-sdk`, checkout `b55e89b336a81448c1aa1a5b188431c9845ebaa9`). The local `ImVehFt.asi` was re-hashed during this audit and still matches the recorded SHA-256 `409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3`.
 
-The SDK entries below identify GTA San Andreas US 1.00 global addresses and their SDK names/types. This establishes useful address-level corroboration, not that every candidate's inferred type, control flow, or use is correct. The source inventory was verified against `audit/source-sha256.csv`: 705 rows, zero missing/mismatched files. No candidate source was edited for this audit.
+The SDK entries below identify GTA San Andreas US 1.00 global addresses and their SDK names/types. This establishes useful address-level corroboration, not that every candidate's inferred type, control flow, or use is correct. The initial source inventory was verified against `audit/source-sha256.csv`: 705 rows, zero missing/mismatched files. Subsequent evidence-backed edits and their scoped validation are recorded in the linked correction reports.
 
 ## Exact SDK crosswalk
 
@@ -14,7 +14,7 @@ The SDK entries below identify GTA San Andreas US 1.00 global addresses and thei
 | `0x00B4E47C` | `CVehicleModelInfo::ms_pRemapTexture`, `RwTexture*` global | Ghidra shows a null check and two loads from this exact slot. `100076d0.cpp` now reads the pointer from this fixed game address instead of requiring an external C++ data symbol. |
 | `0x00B4E68C` | `CVehicleModelInfo::ms_pLightsTexture`, `RwTexture*` global | Ghidra shows the pointer loaded and compared at this exact address; `100076d0.cpp` now uses a typed `RwTexture**` slot read from the fixed game address. |
 | `0x00B4E690` | `CVehicleModelInfo::ms_pLightsOnTexture`, `RwTexture*` global | Ghidra shows the pointer load at this exact address; `100076d0.cpp` now uses a typed `RwTexture**` slot read from the fixed game address. Details: [`candidate-correction-100076d0.md`](candidate-correction-100076d0.md). |
-| `0x00B7CB4C` | `CTimer::m_FrameCounter`, 32-bit unsigned counter | Candidate reads/writes a 32-bit integer in `100099f0.cpp`; width matches, signedness and temporal semantics still need instruction-level confirmation. |
+| `0x00B7CB4C` | `CTimer::m_FrameCounter`, 32-bit unsigned counter | Ghidra shows one load reused for compare/store; `100099f0.cpp` now reads one `uint32_t` snapshot from the fixed game address, matching the SDK type and machine-code load behavior. See [`candidate-correction-100099f0.md`](candidate-correction-100099f0.md). |
 | `0x00B7CB84` | `CTimer::m_snTimeInMilliseconds`, 32-bit unsigned milliseconds | Used for elapsed-time arithmetic in several candidates. Width matches; signed/unsigned treatment differs in places and should be checked against the original comparisons and wrap behavior. |
 | `0x00B7CD98` | `CWorld::Players`, base address of player-info storage | Candidate treats this as an integer in `10004bb0.cpp` and compares it against an object field. Address identity is supported; whether that comparison is semantically correct needs Ghidra structure/cross-reference confirmation. |
 | `0x00C3EF5C` | `CCustomCarPlateMgr::pCharsetTex`, `RwTexture*` global | Candidate initializes and uses it as the charset texture pointer; this aligns with the SDK label at the address. |

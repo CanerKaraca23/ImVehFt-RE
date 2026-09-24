@@ -7,6 +7,15 @@ $buildRoot = Join-Path $repoRoot 'build'
 $objectRoot = Join-Path $buildRoot 'obj'
 $sourceFiles = @(Get-ChildItem -LiteralPath $sourceRoot -File -Filter '*.cpp' | Sort-Object Name)
 
+function Get-RepoRelativePath([string]$Path) {
+    $fullPath = [System.IO.Path]::GetFullPath($Path)
+    $repoPrefix = [System.IO.Path]::GetFullPath($repoRoot).TrimEnd('\') + '\'
+    if (-not $fullPath.StartsWith($repoPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+        throw "Path is outside the repository root: $fullPath"
+    }
+    return $fullPath.Substring($repoPrefix.Length).Replace('\', '/')
+}
+
 if ($sourceFiles.Count -ne 705) {
     throw "Expected 705 candidate translation units; found $($sourceFiles.Count)."
 }
@@ -22,9 +31,9 @@ foreach ($source in $sourceFiles) {
     $exitCode = $LASTEXITCODE
     $results.Add([pscustomobject]@{
         address = $source.BaseName.ToLowerInvariant()
-        source = [System.IO.Path]::GetRelativePath($repoRoot, $source.FullName).Replace('\', '/')
+        source = Get-RepoRelativePath $source.FullName
         exit_code = $exitCode
-        object = [System.IO.Path]::GetRelativePath($repoRoot, $objectPath).Replace('\', '/')
+        object = Get-RepoRelativePath $objectPath
         diagnostic = ($diagnostics | ForEach-Object { $_.ToString() }) -join "`n"
     })
 }

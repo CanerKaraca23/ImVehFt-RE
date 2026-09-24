@@ -3,7 +3,6 @@
 using Callback = void(__cdecl*)();
 using RegisterContext = std::uint32_t*;
 
-extern std::int32_t _DAT_00b7cb4c;
 extern std::uint32_t* _DAT_00c1703c;
 
 extern "C" std::int32_t __stdcall FUN_10009360();
@@ -16,11 +15,14 @@ void __stdcall FUN_100099f0(void)
 
     std::int32_t state = FUN_10009360();
 
-    if (*reinterpret_cast<std::int32_t*>(
-            reinterpret_cast<std::uint8_t*>(state) + 0x10) != _DAT_00b7cb4c)
+    const std::uint32_t frame_counter = *reinterpret_cast<std::uint32_t*>(
+        static_cast<std::uintptr_t>(0x00b7cb4c));
+
+    if (*reinterpret_cast<std::uint32_t*>(
+            reinterpret_cast<std::uint8_t*>(state) + 0x10) != frame_counter)
     {
-        *reinterpret_cast<std::int32_t*>(
-            reinterpret_cast<std::uint8_t*>(state) + 0x10) = _DAT_00b7cb4c;
+        *reinterpret_cast<std::uint32_t*>(
+            reinterpret_cast<std::uint8_t*>(state) + 0x10) = frame_counter;
 
         FUN_10009a80();
 

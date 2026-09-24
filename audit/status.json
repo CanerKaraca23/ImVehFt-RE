@@ -8,33 +8,33 @@
   },
   "msvc_2022_x86_w4_wx": {
     "failed": 0,
-    "scope": "three currently changed translation units recompiled with /W4 /WX /MT; remaining 702 unchanged from prior 705/705 audit",
-    "passed": 3
+    "scope": "four currently changed translation units recompiled with /W4 /WX /MT; remaining 701 unchanged from prior 705/705 audit",
+    "passed": 4
   },
   "reagent_objective": {
     "passed": 705,
-    "scope": "previous source snapshot; objective verification not rerun for the three current candidate edits",
+    "scope": "previous source snapshot; objective verification not rerun for the four current candidate edits",
     "manual_scope_limited_adjudications": 11
   },
   "reagent_parity": {
     "green": 705,
-    "scope": "previous source snapshot; targeted parity rerun for the three current candidate edits is recorded separately",
+    "scope": "previous source snapshot; targeted parity rerun for the four current candidate edits is recorded separately",
     "manual_scope_limited_adjudications": 11
   },
   "targeted_reagent_040_parity": {
-    "green": 3,
+    "green": 4,
     "red": 0,
-    "scope": "10003ba0, 10003e60, and 100076d0 after current edits; not behavioral or runtime proof"
+    "scope": "10003ba0, 10003e60, 100076d0, and 100099f0 after current edits; not behavioral or runtime proof"
   },
   "targeted_objective_verifier": {
-    "pass": 3,
+    "pass": 4,
     "fail": 0,
-    "scope": "ReAgent 0.4.0 structural verifier run locally against current Ghidra JSON and three candidate sources; not behavioral or runtime proof"
+    "scope": "ReAgent 0.4.0 structural verifier run locally against current Ghidra JSON and four candidate sources; not behavioral or runtime proof"
   },
   "diagnostic_full_set_link": {
     "scope": "diagnostic probe only; not production link",
-    "unresolved_unique_externals": 201,
-    "latest_probe": "audit/candidate-correction-100076d0.md"
+    "unresolved_unique_externals": 200,
+    "latest_probe": "audit/candidate-correction-100099f0.md"
   },
   "full_plugin_link": "not completed; original project source and compatible plugin-sdk build inputs are unavailable",
   "in_game_validation": "not performed",
