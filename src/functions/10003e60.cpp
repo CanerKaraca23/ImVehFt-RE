@@ -2,11 +2,9 @@
 
 using Address32 = std::uint32_t;
 
-extern std::uint32_t DAT_007fb2d0(std::int32_t, std::int32_t, std::int32_t);
 extern void __cdecl FUN_006fd7c0(std::int32_t*, std::int32_t*);
-extern std::uint32_t DAT_007faec0(std::int32_t);
 
-extern std::uint32_t DAT_00c3ef78;
+extern std::uint8_t* _DAT_00c3ef78;
 
 std::uint32_t __cdecl FUN_10003e60(
     std::uint32_t,
@@ -26,10 +24,18 @@ std::uint32_t __cdecl FUN_10003e60(
     std::int32_t iStack_8;
     std::int32_t iStack_4;
 
-    uVar1 = DAT_007fb2d0(param_4, 0, 5);
+    using RasterLock = std::uint8_t* (__cdecl*)(
+        void*, std::uint8_t, std::int32_t);
+    const auto* rasterPixels = reinterpret_cast<RasterLock>(
+        static_cast<std::uintptr_t>(0x7fb2d0))(
+            reinterpret_cast<void*>(static_cast<std::uintptr_t>(
+                static_cast<std::uint32_t>(param_4))),
+            0, 5);
+    uVar1 = static_cast<std::uint32_t>(
+        reinterpret_cast<std::uintptr_t>(rasterPixels));
 
-    if ((uVar1 != 0) &&
-        (DAT_00c3ef78 != 0) &&
+    if ((rasterPixels != nullptr) &&
+        (_DAT_00c3ef78 != nullptr) &&
         ((iStack_8 =
               *reinterpret_cast<std::int32_t*>(
                   static_cast<std::uintptr_t>(
@@ -52,7 +58,8 @@ std::uint32_t __cdecl FUN_10003e60(
 
             iVar2 =
                 (iStack_10 * 0x100 + iStack_c) * 0x80 +
-                static_cast<std::int32_t>(DAT_00c3ef78);
+                static_cast<std::int32_t>(
+                    reinterpret_cast<std::uintptr_t>(_DAT_00c3ef78));
 
             iVar7 = 0x40;
             uVar6 = uVar1;
@@ -86,7 +93,13 @@ std::uint32_t __cdecl FUN_10003e60(
         }
         while (iVar5 < 8);
 
-        uVar3 = DAT_007faec0(param_4);
+        using RasterUnlock = void* (__cdecl*)(void*);
+        uVar3 = static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(
+                reinterpret_cast<RasterUnlock>(
+                    static_cast<std::uintptr_t>(0x7faec0))(
+                    reinterpret_cast<void*>(static_cast<std::uintptr_t>(
+                        static_cast<std::uint32_t>(param_4))))));
         return (uVar3 & 0xffffff00u) | 1u;
     }
 

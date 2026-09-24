@@ -37,7 +37,7 @@ extern Texture* _DAT_00c3ef5c;
 extern Texture* _DAT_00c3ef60;
 extern Texture* _DAT_00c3ef64;
 extern Texture* _DAT_00c3ef68;
-extern Texture* _DAT_00c3ef78;
+extern std::uint8_t* _DAT_00c3ef78;
 
 extern Texture* DAT_1003bd9c;
 extern Texture* DAT_1003bda0;
@@ -119,12 +119,13 @@ void __stdcall FUN_10003ba0()
     _DAT_00c3ef68 = reinterpret_cast<Texture*>(
         static_cast<std::uintptr_t>(iVar1));
 
-    _DAT_00c3ef78 = reinterpret_cast<Texture*>(
-        reinterpret_cast<Texture*(__cdecl*)(std::uint32_t, int, int)>(
+    _DAT_00c3ef78 = reinterpret_cast<std::uint8_t*(__cdecl*)(
+        void*, std::uint8_t, std::int32_t)>(
             static_cast<std::uintptr_t>(0x7fb2d0))(
-            _DAT_00c3ef5c->field_00,
+            reinterpret_cast<void*>(static_cast<std::uintptr_t>(
+                _DAT_00c3ef5c->field_00)),
             0,
-            2));
+            2);
 
     strcpy_s(DAT_1003a6c8, 0x200, DAT_1003a8c8);
     strcat_s(
