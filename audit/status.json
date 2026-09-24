@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23",
+  "as_of": "2026-09-24",
   "candidate_translation_units": 705,
   "msvc_2022_x86_o2": {
     "failed": 0,
@@ -21,7 +21,8 @@
   },
   "diagnostic_full_set_link": {
     "scope": "diagnostic probe only; not production link",
-    "unresolved_unique_externals": 228
+    "unresolved_unique_externals": 210,
+    "latest_probe": "audit/link-probe-2026-09-24.md"
   },
   "full_plugin_link": "not completed; original project source and compatible plugin-sdk build inputs are unavailable",
   "in_game_validation": "not performed",
