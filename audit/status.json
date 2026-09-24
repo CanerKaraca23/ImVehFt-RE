@@ -28,5 +28,6 @@
   "in_game_validation": "not performed",
   "reference_binary_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
   "source_manifest": "audit/source-sha256.csv",
-  "name_map": "audit/function-name-map.csv"
+  "name_map": "audit/function-name-map.csv",
+  "global_address_crosswalk": "audit/global-address-crosswalk-2026-09-24.md"
 }

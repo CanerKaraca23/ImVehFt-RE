@@ -34,6 +34,7 @@ See [`audit/status.json`](audit/status.json) for the recorded counts and scope l
 - `src/functions/`: the 705 candidate C++ translation units used by the latest MSVC `/O2` audit.
 - `audit/`: compact verification summary, per-function SHA-256 inventory, and `function-name-map.csv` mapping addresses to names/signatures observed by Ghidra.
 - `audit/sdk-provenance.md`: historical SDK comparison and why the 2014 static Plugin-SDK line is a better candidate than the local 2013 import-library snapshot.
+- `audit/global-address-crosswalk-2026-09-24.md`: exact GTA SA global-address matches from Plugin-SDK and candidate declaration/use mismatches that still affect confidence and linking.
 - The original `ImVehFt.asi`, GTA files, generated object files, and large historical progress backups are intentionally not included.
 
 The reference binary was SHA-256 `409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3` when recorded locally. This fingerprint is included for traceability; it does not imply that the original binary is distributed here.
