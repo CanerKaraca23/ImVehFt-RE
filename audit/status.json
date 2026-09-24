@@ -21,7 +21,7 @@
   },
   "diagnostic_full_set_link": {
     "scope": "diagnostic probe only; not production link",
-    "unresolved_unique_externals": 210,
+    "unresolved_unique_externals": 208,
     "latest_probe": "audit/link-probe-2026-09-24.md"
   },
   "full_plugin_link": "not completed; original project source and compatible plugin-sdk build inputs are unavailable",
