@@ -1,0 +1,627 @@
+{
+  "scope": "Reclassifies the current appended-body diagnostic code-symbol set. Candidate and GTA addresses are resolved to preserved original entry/runtime VAs; one byte-verified __chkstk alias is routed to the original __alloca_probe entry. Remaining imports and CRT records remain unresolved for final-image integration. Does not apply COFF fixups.",
+  "symbol_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-local-closure-symbol-delta-2026-09-30.json",
+  "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\placement-plan-conservative-current-2026-09-30.json",
+  "function_map": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\function-name-map.csv",
+  "candidate_entries": 705,
+  "game_exe": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\gta_sa.exe",
+  "game_image_base": "0x400000",
+  "unique_symbols": 48,
+  "occurrences": 96,
+  "unique_by_status": {
+    "candidate-entry-va": 42,
+    "candidate-name-crosswalk": 4,
+    "import-or-system-api": 1,
+    "unresolved-code-target": 1
+  },
+  "occurrences_by_status": {
+    "candidate-entry-va": 88,
+    "candidate-name-crosswalk": 4,
+    "import-or-system-api": 3,
+    "unresolved-code-target": 1
+  },
+  "unresolved_symbols": [
+    {
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "__dtest",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "unresolved-code-target",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "i libucrt:_test.obj"
+      ],
+      "detail": "No evidence-backed production target class was established."
+    }
+  ],
+  "rows": [
+    {
+      "symbol": "?TranslatorGuardHandler@@YA?AW4_EXCEPTION_DISPOSITION@@PAUEHExceptionRecord@@PAUTranslatorGuardRN@@PAX2@Z",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001b827",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001b827.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10010b1a",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10010b1a.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "??0_LocaleUpdate@@QAE@PAUlocaleinfo_struct@@@Z",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x10010b1a",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10010b1a.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "?__fileno@@YAHPAU_iobuf@@@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001358e",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001358e.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "?construct@ExceptionStorage@@QAEPAXPAPAD@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x100102c3",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100102c3.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "@FUN_100073f0@32",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x100073f0",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "100073f0.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "@FUN_1001ba40@8",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001ba40",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "1001ba40.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "@__security_check_cookie@4",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x100172d5",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "100172d5.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_CatchIt",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001d41c",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001d41c.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_FID_conflict__memcpy",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "candidate-entry-va",
+      "target_va": "0x100172f0",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100172f0.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_FUN_10008d20@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10008d20",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10008d20.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_FUN_10009360@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10009360",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10009360.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_FUN_10010120",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x10010120",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10010120.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_FUN_1001189f@0",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001189f",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "1001189f.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_FUN_1001b1a5",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001b1a5",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "1001b1a5.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_ImVehFt_Recovered_RtlUnwind@16",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001b2b2",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001b2b2.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "____doserrno",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "candidate-entry-va",
+      "target_va": "0x10011904",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10011904.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "____mtold12",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10020564",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "10020564.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___alloc_osfhnd",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x100191cd",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100191cd.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___aulldvrm@16",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001a900",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001a900.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___cftof2_l",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001c25c",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "1001c25c.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___chsize_nolock",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001af34",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "1001af34.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___close_nolock",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x10013bd8",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10013bd8.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___dosmaperr",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "candidate-entry-va",
+      "target_va": "0x10011917",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10011917.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___errno",
+      "relocation_type": "REL32",
+      "occurrences": 10,
+      "status": "candidate-entry-va",
+      "target_va": "0x100118f1",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "100118f1.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___free_osfhnd",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10019018",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10019018.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___get_printf_count_output",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001a76f",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001a76f.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___getptd",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10014df0",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10014df0.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___invoke_watson",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001184d",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "1001184d.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___isleadbyte_l",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x100179e8",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100179e8.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___lseek_nolock",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "candidate-entry-va",
+      "target_va": "0x100167ba",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100167ba.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___lseeki64_nolock",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001a600",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001a600.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___malloc_crt",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x100129f5",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100129f5.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___read_nolock",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x10016088",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "10016088.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___set_osfhnd",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10018f97",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "10018f97.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "___write",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10019a63",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10019a63.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "__aullshr",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-name-crosswalk",
+      "target_va": "0x1001de80",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "libcmt:ullshr.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk. The diagnostic link selected another provider; final VA comes from the Ghidra function-name map, not that provider VA."
+    },
+    {
+      "symbol": "__dtest",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "unresolved-code-target",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "i libucrt:_test.obj"
+      ],
+      "detail": "No evidence-backed production target class was established."
+    },
+    {
+      "symbol": "__free",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x100116db",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "100116db.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "__memset",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x10016740",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "10016740.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "__strlen",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "candidate-entry-va",
+      "target_va": "0x10011650",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "10011650.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "__wctomb_s",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001a8da",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001a8da.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_memset",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-name-crosswalk",
+      "target_va": "0x10016740",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "libvcruntime-without-exsup4:memset.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk. The diagnostic link selected another provider; final VA comes from the Ghidra function-name map, not that provider VA."
+    },
+    {
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-name-crosswalk",
+      "target_va": "0x10010a19",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "libucrt:strcpy_s.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk. The diagnostic link selected another provider; final VA comes from the Ghidra function-name map, not that provider VA."
+    },
+    {
+      "symbol": "_strlen",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-name-crosswalk",
+      "target_va": "0x10011650",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "libucrt:strlen.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk. The diagnostic link selected another provider; final VA comes from the Ghidra function-name map, not that provider VA."
+    },
+    {
+      "symbol": "_write_char",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "candidate-entry-va",
+      "target_va": "0x10015435",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10015435.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_write_string",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "candidate-entry-va",
+      "target_va": "0x10015468",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10015468.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    }
+  ]
+}

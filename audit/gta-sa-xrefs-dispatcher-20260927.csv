@@ -1,0 +1,4 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+004c8430,".text","FUN_004c8430[Function,DEFAULT,primary]","004c8430:PUSH ECX","006d662b:UNCONDITIONAL_CALL@006d64f0:FUN_006d64f0"
+006d6617,".text","","006d6617:CALL 0x004c8c90",""
+004c8c90,".text","FUN_004c8c90[Function,DEFAULT,primary]","004c8c90:MOV EAX;dword ptr [ESP + 0x4]","006d6617:UNCONDITIONAL_CALL@006d64f0:FUN_006d64f0"

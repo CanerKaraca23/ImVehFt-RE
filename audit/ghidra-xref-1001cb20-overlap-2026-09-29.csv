@@ -1,0 +1,7 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+1001cb20,".text","FUN_1001cb20[Function,DEFAULT,primary]","1001cb20:PUSH EBP",""
+1001cb35,".text","","1001cb35:JMP 0x1001cb40",""
+1001cb37,".text","__startOneArgErrorHandling[Function,ANALYSIS,primary]","1001cb37:PUSH EBP","1001b653:UNCONDITIONAL_CALL@1001b5bd:FUN_1001b5bd|1001ca59:UNCONDITIONAL_CALL@1001ca3b:__math_exit|1001b462:UNCONDITIONAL_CALL@1001b3d8:FUN_1001b3d8|1001b592:UNCONDITIONAL_CALL@1001b508:FUN_1001b508"
+1001cb40,".text","LAB_1001cb40[Label,DEFAULT,primary]","1001cb40:FSTP double ptr [EBP + -0x8]","1001cb35:UNCONDITIONAL_JUMP@1001cb20:FUN_1001cb20"
+1001cb43,".text","","1001cb43:MOV dword ptr [EBP + -0x1c];ECX",""
+1001cb71,".text","LAB_1001cb71[Label,DEFAULT,primary]","1001cb71:LEAVE","1001cb6c:CONDITIONAL_JUMP@1001cb37:__startOneArgErrorHandling"

@@ -5,7 +5,6 @@
 extern "C" std::uint32_t DAT_1003c418;
 extern "C" std::uint8_t* DAT_1003c420[];
 extern "C" std::uint8_t DAT_10029c30[256];
-extern "C" int unaff_EDI;
 
 extern "C" unsigned long* __cdecl ___doserrno();
 extern "C" int* __cdecl __errno();
@@ -101,10 +100,7 @@ extern "C" int __cdecl __read_nolock(
             return -1;
         }
 
-        lVar15 = __lseeki64_nolock(
-            _FileHandle,
-            0x100000000LL,
-            unaff_EDI);
+        lVar15 = __lseeki64_nolock(_FileHandle, 0, 1);
 
         *reinterpret_cast<std::uint32_t*>(file + 0x28) =
             static_cast<std::uint32_t>(lVar15);
@@ -256,10 +252,7 @@ LAB_100165c7:
                                 (local_c == 10))
                                 goto LAB_10016534;
 
-                            __lseeki64_nolock(
-                                _FileHandle,
-                                0x1ffffffffLL,
-                                unaff_EDI);
+                            __lseeki64_nolock(_FileHandle, -2, 1);
 
                             if (local_c == 10)
                                 goto LAB_100165d0;
@@ -365,10 +358,7 @@ LAB_1001638b:
                                 (local_5 == '\n'))
                                 goto LAB_10016314;
 
-                            __lseeki64_nolock(
-                                _FileHandle,
-                                0x1ffffffffLL,
-                                unaff_EDI);
+                            __lseeki64_nolock(_FileHandle, -1, 1);
 
                             if (local_5 == '\n')
                                 goto LAB_1001638f;
@@ -436,10 +426,8 @@ LAB_1001638f:
             else if ((file[4] & 0x48) == 0) {
                 __lseeki64_nolock(
                     _FileHandle,
-                    0x100000000LL |
-                        static_cast<std::uint32_t>(
-                            -iVar12 >> 0x1f),
-                    unaff_EDI);
+                    -static_cast<std::int64_t>(iVar12),
+                    1);
             }
             else {
                 pbVar7 = pbVar11 + 1;

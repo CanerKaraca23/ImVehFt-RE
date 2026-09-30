@@ -1,0 +1,28 @@
+{
+  "scope": "Diagnostic relocation-only PE probe; candidate machine code otherwise copied byte-for-byte from v9.",
+  "input_v9_sha256": "FB2BBA1CF9544BCD8C22CB338DB34C9010568D352A6B96DF5EA9D6BC6DE86057",
+  "payload_census_sha256": "B67E21CA17D66D4AD174AFFC47B575C2285A5395413D5661CD41ECFACC01930E",
+  "seh_object_sha256": "F19CC316DD091841CCC2E88F306F32FE61E711D3BB5A48E10B2542DE1E8ED942",
+  "preferred_image_base": "0x10000000",
+  "observed_candidate_load_base": "0x67ef0000",
+  "added_highlow_rvas": [
+    "0x4bd91",
+    "0x4bdae"
+  ],
+  "preferred_values": [
+    "0x10012e90",
+    "0x10029490"
+  ],
+  "rebased_values_verified": [
+    "0x67f02e90",
+    "0x67f19490"
+  ],
+  "total_highlow_sites": 6390,
+  "relocation_directory_bytes": 13424,
+  "relocation_directory_fits": true,
+  "output_sha256": "96F454B8E1F92BB79D7EEECB3C27CFACC5A28A18EC523C63ED1C15F65F5D5E09",
+  "limitations": [
+    "This diagnostic probe does not replace a fresh complete PE build from the 705-object set.",
+    "Successful static rebasing is not runtime or semantic validation."
+  ]
+}

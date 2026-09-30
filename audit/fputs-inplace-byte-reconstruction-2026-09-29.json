@@ -1,0 +1,97 @@
+{
+  "scope": "in-memory application of Ghidra-addressed REL32 fixups to the candidate COMDAT, then full raw-byte comparison at the original VA; does not write or load a patched ASI",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_object_sha256": "2604C67C9972909FBFD92F5A84E4B612AD3D18E18378CECE4A5753FEADA59D45",
+  "entry_va": "0x10010913",
+  "body_size": 251,
+  "rel32_fixup_count": 11,
+  "resolved_fixups": [
+    {
+      "site": "0x08",
+      "coff_symbol": "___SEH_prolog4",
+      "ghidra_target": "__SEH_prolog4",
+      "target_va": "0x10012E20",
+      "rel32": 9473
+    },
+    {
+      "site": "0x19",
+      "coff_symbol": "___errno",
+      "ghidra_target": "__errno",
+      "target_va": "0x100118F1",
+      "rel32": 4033
+    },
+    {
+      "site": "0x24",
+      "coff_symbol": "_FUN_1001189f@0",
+      "ghidra_target": "FUN_1001189f",
+      "target_va": "0x1001189F",
+      "rel32": 3940
+    },
+    {
+      "site": "0x46",
+      "coff_symbol": "?__fileno@@YAHPAU_iobuf@@@Z",
+      "ghidra_target": "__fileno",
+      "target_va": "0x1001358E",
+      "rel32": 11313
+    },
+    {
+      "site": "0xA7",
+      "coff_symbol": "__strlen",
+      "ghidra_target": "_strlen",
+      "target_va": "0x10011650",
+      "rel32": 3218
+    },
+    {
+      "site": "0xB0",
+      "coff_symbol": "?__lock_file@@YAXPAU_iobuf@@@Z",
+      "ghidra_target": "__lock_file",
+      "target_va": "0x100130F6",
+      "rel32": 10031
+    },
+    {
+      "site": "0xBC",
+      "coff_symbol": "___stbuf",
+      "ghidra_target": "__stbuf",
+      "target_va": "0x10013F33",
+      "rel32": 13664
+    },
+    {
+      "site": "0xCC",
+      "coff_symbol": "?__fwrite_nolock@@YAIPAXIIPAU_iobuf@@@Z",
+      "ghidra_target": "__fwrite_nolock",
+      "target_va": "0x10014003",
+      "rel32": 13856
+    },
+    {
+      "site": "0xD6",
+      "coff_symbol": "___ftbuf",
+      "ghidra_target": "__ftbuf",
+      "target_va": "0x10013FCF",
+      "rel32": 13794
+    },
+    {
+      "site": "0xE5",
+      "coff_symbol": "_FUN_10010a11@0",
+      "ghidra_target": "FUN_10010a11",
+      "target_va": "0x10010A11",
+      "rel32": 21
+    },
+    {
+      "site": "0xF6",
+      "coff_symbol": "___SEH_epilog4@0",
+      "ghidra_target": "__SEH_epilog4",
+      "target_va": "0x10012E65",
+      "rel32": 9304
+    }
+  ],
+  "original_highlow_sites_preserved_at_entry": [
+    "0x10010916",
+    "0x10010978",
+    "0x1001097F",
+    "0x100109A1",
+    "0x100109A8"
+  ],
+  "full_body_exact_match_after_rel32_resolution": true,
+  "mismatch_offsets": [],
+  "interpretation": "an in-place patch that retains the original relocation directory preserves these five existing HIGHLOW entries because the corresponding absolute-operand bytes occupy the same VAs; relocation-directory retention must still be verified by any final PE writer"
+}

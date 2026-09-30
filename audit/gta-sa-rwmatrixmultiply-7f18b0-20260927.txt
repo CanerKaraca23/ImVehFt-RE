@@ -1,0 +1,89 @@
+FUNCTION FUN_007f18b0 @ 007f18b0
+007f18b0  MOV ECX,dword ptr [0x00c979bc]
+007f18b6  MOV EDX,dword ptr [ESP + 0x8]
+007f18ba  PUSH EBX
+007f18bb  PUSH EBP
+007f18bc  MOV EBP,dword ptr [0x00c97b24]
+007f18c2  MOV EBX,dword ptr [EDX + 0xc]
+007f18c5  PUSH ESI
+007f18c6  MOV ESI,dword ptr [ESP + 0x18]
+007f18ca  MOV EAX,dword ptr [ECX + EBP*0x1 + 0x4]
+007f18ce  PUSH EDI
+007f18cf  MOV EDI,dword ptr [ESI + 0xc]
+007f18d2  AND EAX,0x20000
+007f18d7  TEST EBX,EAX
+007f18d9  JZ 0x007f18ed
+007f18db  MOV EAX,dword ptr [ESP + 0x14]
+007f18df  MOV ECX,0x10
+007f18e4  MOV EDI,EAX
+007f18e6  MOVSD.REP ES:EDI,ESI
+007f18e8  POP EDI
+007f18e9  POP ESI
+007f18ea  POP EBP
+007f18eb  POP EBX
+007f18ec  RET
+007f18ed  TEST EDI,EAX
+007f18ef  JZ 0x007f1905
+007f18f1  MOV EAX,dword ptr [ESP + 0x14]
+007f18f5  MOV ECX,0x10
+007f18fa  MOV ESI,EDX
+007f18fc  MOV EDI,EAX
+007f18fe  MOVSD.REP ES:EDI,ESI
+007f1900  POP EDI
+007f1901  POP ESI
+007f1902  POP EBP
+007f1903  POP EBX
+007f1904  RET
+007f1905  PUSH ESI
+007f1906  MOV ESI,dword ptr [ESP + 0x18]
+007f190a  PUSH EDX
+007f190b  PUSH ESI
+007f190c  CALL dword ptr [ECX + EBP*0x1 + 0x8]
+007f1910  ADD ESP,0xc
+007f1913  AND EDI,EBX
+007f1915  MOV dword ptr [ESI + 0xc],EDI
+007f1918  MOV EAX,ESI
+007f191a  POP EDI
+007f191b  POP ESI
+007f191c  POP EBP
+007f191d  POP EBX
+007f191e  RET
+
+DECOMPILED SOURCE
+
+undefined4 * FUN_007f18b0(undefined4 *param_1,undefined4 *param_2,undefined4 *param_3)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  int iVar4;
+  undefined4 *puVar5;
+  
+  uVar1 = param_2[3];
+  uVar2 = param_3[3];
+  uVar3 = *(uint *)(DAT_00c979bc + 4 + DAT_00c97b24) & 0x20000;
+  if ((uVar1 & uVar3) != 0) {
+    puVar5 = param_1;
+    for (iVar4 = 0x10; iVar4 != 0; iVar4 = iVar4 + -1) {
+      *puVar5 = *param_3;
+      param_3 = param_3 + 1;
+      puVar5 = puVar5 + 1;
+    }
+    return param_1;
+  }
+  if ((uVar2 & uVar3) != 0) {
+    puVar5 = param_1;
+    for (iVar4 = 0x10; iVar4 != 0; iVar4 = iVar4 + -1) {
+      *puVar5 = *param_2;
+      param_2 = param_2 + 1;
+      puVar5 = puVar5 + 1;
+    }
+    return param_1;
+  }
+  (**(code **)(DAT_00c979bc + 8 + DAT_00c97b24))(param_1,param_2,param_3);
+  param_1[3] = uVar2 & uVar1;
+  return param_1;
+}
+
+

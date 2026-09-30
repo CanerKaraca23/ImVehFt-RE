@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 #include <cstdlib>
 
@@ -22,7 +23,7 @@ extern "C" void __cdecl ___freetlocinfo(void* param_1)
     auto& field_d4 = *reinterpret_cast<std::uint32_t*>(bytes + 0xD4);
 
     if (field_bc != 0 &&
-        field_bc != 0x10029EA8 &&
+        field_bc != IVF_IMAGE_ADDRESS_10029EA8 &&
         field_b0 != 0 &&
         *reinterpret_cast<std::uint32_t*>(
             static_cast<std::uintptr_t>(field_b0)) == 0)
@@ -76,7 +77,7 @@ extern "C" void __cdecl ___freetlocinfo(void* param_1)
     auto* const locale_time = reinterpret_cast<std::uint32_t*>(
         static_cast<std::uintptr_t>(field_d4));
 
-    if (locale_time != reinterpret_cast<std::uint32_t*>(0x100299C8) &&
+    if (locale_time != reinterpret_cast<std::uint32_t*>(IVF_IMAGE_ADDRESS_100299C8) &&
         locale_time[0x2D] == 0)
     {
         ___free_lc_time(locale_time);
@@ -90,7 +91,7 @@ extern "C" void __cdecl ___freetlocinfo(void* param_1)
     for (int count = 6; count != 0; --count)
     {
         if (reinterpret_cast<void*>(static_cast<std::uintptr_t>(entry[-2])) !=
-                reinterpret_cast<void*>(0x100299C4) &&
+                reinterpret_cast<void*>(IVF_IMAGE_ADDRESS_100299C4) &&
             entry[0] != 0 &&
             *reinterpret_cast<std::uint32_t*>(
                 static_cast<std::uintptr_t>(entry[0])) == 0)

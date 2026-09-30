@@ -1,0 +1,41 @@
+{
+  "scope": "Independent PE byte-level verification of inventoried relocation values and emitted section payloads; not semantic or runtime validation.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_asi_sha256": "306FAD1D39DD12C6FF1E691B8640D7391794341BE117B33EEEEA1D71213343FC",
+  "manifest_sha256": {
+    "direct_fixups": "3EB4937CAE568E045A4F456B5362ADFE5424F46BBD98BDD3D0C79EB83E521E11",
+    "appended_fixups": "4EB1FB371FE183E710459C792214BEA929AFE0DB9AE06DF6BC7663C5BF697153",
+    "closure_fixups": "556B0224E2550A2FEBC76D9ACCE326E1EC8F49A9416E5CFAC7AB08851333BFFD",
+    "text_report": "9622F07D64DC44C3F0C810622F8215F6F43473931F3648360A49AE6F88BF4AF7",
+    "payload_report": "556B0224E2550A2FEBC76D9ACCE326E1EC8F49A9416E5CFAC7AB08851333BFFD"
+  },
+  "fixup_groups": [
+    {
+      "inventory": "direct-bodies",
+      "fields_checked": 1577,
+      "mismatches": 0
+    },
+    {
+      "inventory": "appended-payload",
+      "fields_checked": 3078,
+      "mismatches": 0
+    },
+    {
+      "inventory": "direct-local-closure",
+      "fields_checked": 155,
+      "mismatches": 0
+    }
+  ],
+  "unique_fixup_fields_checked": 4810,
+  "field_value_mismatches": 0,
+  "section_virtual_byte_sha256": {
+    ".text": "B3A36BC229A728AA20DE63D167F87D2E8FECBE0860D180072A31D0D3E9275D41",
+    ".xcode": "F81646539D7C8198A227B72CC032BE9CEC38102AEDB531C0B44D01D9C4263FB7",
+    ".xrdata": "D0BA973A786CC669B73C74DEFC3ABDE69013B2B4CE8422A14E70A56D97495FBF",
+    ".xdata": "B4EC39562D6B7F01AF2AEE63B6DC21FAFBB48035C423E4E96AC41D2A9804943F"
+  },
+  "section_payloads_match_reports": true,
+  "limitations": [
+    "This does not prove semantic equivalence, successful Windows loading, plugin startup, or GTA behavior."
+  ]
+}

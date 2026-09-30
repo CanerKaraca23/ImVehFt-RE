@@ -1,0 +1,26 @@
+{
+  "scope": "resolve the candidate COFF DIR32/REL32 at the original entry VA and compare its full instruction body; no PE is written",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "object_sha256": "A4AE49E3F111259D2DE6EA7BFC7B1F0F9499EC4744E8B40D29BEB8E741928AB7",
+  "entry_va": "0x100172D5",
+  "body_size": 15,
+  "fixups": [
+    {
+      "site": "0x02",
+      "symbol": "_DAT_10029490",
+      "target_va": "0x10029490",
+      "type": "DIR32"
+    },
+    {
+      "site": "0x0B",
+      "symbol": "____report_gsfailure",
+      "target_va": "0x1001AE25",
+      "type": "REL32"
+    }
+  ],
+  "original_highlow_sites": [
+    "0x100172D7"
+  ],
+  "exact_body_match": true,
+  "mismatch_offsets": []
+}

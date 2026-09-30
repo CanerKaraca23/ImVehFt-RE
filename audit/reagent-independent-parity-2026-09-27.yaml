@@ -1,0 +1,24 @@
+project_profile:
+  name: imvehft-re-705
+  language_standard: C++20
+  source_root: C:/Users/caner/OneDrive/Documents/ImVehFt/_repo_update/ImVehFt-RE-publish2/src/functions
+  source_extensions:
+    - .cpp
+  hooks_csv: C:/Users/caner/OneDrive/Documents/ImVehFt/_repo_update/ImVehFt-RE-publish2/build/recheck/reagent-current-parity-hooks-705.csv
+  hook_patterns: []
+  stub_patterns:
+    - TODO|NOT_IMPLEMENTED
+  stub_markers:
+    - NOT_IMPLEMENTED
+  stub_call_prefix: __re_agent_no_stub_prefix__
+  class_macro: ''
+backend:
+  type: ghidra-json
+  export_dir: C:/Users/caner/OneDrive/Documents/ImVehFt/ghidra_exports
+parity:
+  enabled: true
+  call_count_warn_diff: 3
+  inline_wrapper_autoskip: false
+  cache_dir: C:/Users/caner/OneDrive/Documents/ImVehFt/_repo_update/ImVehFt-RE-publish2/build/recheck/parity-cache-independent
+  manual_checks_file: C:/Users/caner/OneDrive/Documents/ImVehFt/reports/re-agent/manual-parity-checks.md
+  semantic_rules_file: C:/Users/caner/OneDrive/Documents/ImVehFt/reports/re-agent/semantic-rules.json

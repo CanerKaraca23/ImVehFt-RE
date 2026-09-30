@@ -1,0 +1,101 @@
+{
+  "scope": "COFF absolute external symbol table only; no PE section/body emitted. Symbols point at pinned original-IAT preferred VAs and require compatible final image base relocation handling.",
+  "crosswalk": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-code-api-original-iat-crosswalk-2026-09-29.json",
+  "crosswalk_sha256": "2684147F283B333DE2A4C8D17F5F685EC400E4B877BCE3F4C2171BFC9AA7A8A8",
+  "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\api-thunks-unique-20260929\\original_iat_absolute_symbols.obj",
+  "object_sha256": "39DE4143251F9807D4AED04630EA97B577280B5D665232ED67B9E2B31B84F7F3",
+  "machine": "i386",
+  "section_count": 0,
+  "absolute_external_symbol_count": 21,
+  "symbols": [
+    {
+      "name": "__imp__DecodePointer@4",
+      "preferred_va": "0x10022060"
+    },
+    {
+      "name": "__imp__EncodePointer@4",
+      "preferred_va": "0x1002205C"
+    },
+    {
+      "name": "__imp__EnterCriticalSection@4",
+      "preferred_va": "0x10022098"
+    },
+    {
+      "name": "__imp__GetCPInfo@8",
+      "preferred_va": "0x10022000"
+    },
+    {
+      "name": "__imp__GetCurrentProcess@0",
+      "preferred_va": "0x10022084"
+    },
+    {
+      "name": "__imp__GetCurrentThreadId@0",
+      "preferred_va": "0x10022064"
+    },
+    {
+      "name": "__imp__GetLastError@0",
+      "preferred_va": "0x10022070"
+    },
+    {
+      "name": "__imp__GetStringTypeW@16",
+      "preferred_va": "0x10022138"
+    },
+    {
+      "name": "__imp__HeapAlloc@12",
+      "preferred_va": "0x10022040"
+    },
+    {
+      "name": "__imp__HeapSize@12",
+      "preferred_va": "0x1002208C"
+    },
+    {
+      "name": "__imp__InitializeCriticalSectionAndSpinCount@8",
+      "preferred_va": "0x100220A8"
+    },
+    {
+      "name": "__imp__InterlockedDecrement@4",
+      "preferred_va": "0x100220C0"
+    },
+    {
+      "name": "__imp__IsValidCodePage@4",
+      "preferred_va": "0x100220CC"
+    },
+    {
+      "name": "__imp__LCMapStringW@24",
+      "preferred_va": "0x10022134"
+    },
+    {
+      "name": "__imp__LeaveCriticalSection@4",
+      "preferred_va": "0x1002209C"
+    },
+    {
+      "name": "__imp__MessageBoxA@16",
+      "preferred_va": "0x10022144"
+    },
+    {
+      "name": "__imp__MultiByteToWideChar@24",
+      "preferred_va": "0x100220E4"
+    },
+    {
+      "name": "__imp__Sleep@4",
+      "preferred_va": "0x10022088"
+    },
+    {
+      "name": "__imp__TerminateProcess@8",
+      "preferred_va": "0x10022080"
+    },
+    {
+      "name": "__imp__VirtualProtect@16",
+      "preferred_va": "0x1002201C"
+    },
+    {
+      "name": "__imp__WideCharToMultiByte@32",
+      "preferred_va": "0x100220F4"
+    }
+  ],
+  "limitations": [
+    "This object is for a bounded linker probe, not a standalone plugin.",
+    "Call-thunk COFF DIR32 relocations and final PE HIGHLOW relocations still need image-layout integration.",
+    "No loader or GTA runtime test is performed."
+  ]
+}

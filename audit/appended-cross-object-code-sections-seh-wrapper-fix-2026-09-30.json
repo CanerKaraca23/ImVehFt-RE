@@ -1,0 +1,395 @@
+{
+  "scope": "COFF-backed placement of cross-object local code sections needed by appended roots.",
+  "inputs": {
+    "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+    "root_relocations_sha256": "1BABF4EEC13A8BA18D08EDA3F507BED22944DC0C2E7B2A3437FF78AE8DACAB84",
+    "bridge_layout_sha256": "62A7FB8E0EF85119FBA1033F3A02664C75ABDAE00C53B6446A5F6351628626C9",
+    "extended_layout_sha256": "16AB1805CBE8A3CE56B17622C855DFADA086F36C5FEC0A609A98EA8CFE914B2B"
+  },
+  "summary": {
+    "cross_object_references": 29,
+    "unique_target_sections": 3,
+    "new_xcode_sections": 3,
+    "new_xcode_bytes": 77,
+    "helper_section_relocations": 3,
+    "helper_rel32_all_in_range": true,
+    "extended_code_virtual_size": 101043,
+    "estimated_code_raw_size": 101376,
+    "appended_rdata_rva_unchanged": true
+  },
+  "new_xcode_sections": [
+    {
+      "source_entry": "0x10006be0",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "size": 54,
+      "alignment": 1,
+      "payload_offset": 100966,
+      "preferred_va": "0x1005ba66",
+      "object_sha256": "280BCB6BBB7A6DA60801DAE58A17D77469713AAFD9D05BE99C65C920E9BB19F2",
+      "section_sha256": "AAD69CE07B8845A76363B1450B0AB61FC213DFCA249F0DF319F287273F83514F",
+      "relocation_count": 1,
+      "bytes_hex": "55 8b ec 8b 45 38 ff 75 34 ff 75 30 ff 75 2c ff 75 28 ff 75 24 ff 75 20 ff 75 1c ff 75 18 ff 75 14 ff 75 10 ff 75 0c ff 75 08 e8 00 00 00 00 83 c4 30 8b e5 5d c3"
+    },
+    {
+      "source_entry": "0x10009610",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "size": 5,
+      "alignment": 1,
+      "payload_offset": 101020,
+      "preferred_va": "0x1005ba9c",
+      "object_sha256": "FD5382663923519C2314CC71D27BD0892608C9109AC91A4AFDD8F96ED58E63BC",
+      "section_sha256": "E8EBD827D1F36D7CFA5E5220610AA6370284D1589989363F48AC40166362D449",
+      "relocation_count": 1,
+      "bytes_hex": "e9 00 00 00 00"
+    },
+    {
+      "source_entry": "0x10010b1a",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "size": 18,
+      "alignment": 1,
+      "payload_offset": 101025,
+      "preferred_va": "0x1005baa1",
+      "object_sha256": "336334A31EEEF707FD232FB84283526BC3669AEE1AFDF2044D10BFBED06BC822",
+      "section_sha256": "1CFC432C9161C8AC51E5671C0F85CB4D061592E34B7E2367129A2CF1E96B9824",
+      "relocation_count": 1,
+      "bytes_hex": "56 ff 74 24 08 8b f1 e8 00 00 00 00 8b c6 5e c2 04 00"
+    }
+  ],
+  "helper_fixups": [
+    {
+      "source_entry": "0x10006be0",
+      "source_section_number": 4,
+      "site": 43,
+      "type": "REL32",
+      "target_symbol": "_FUN_10006be0",
+      "target_va": "0x100468c0",
+      "target_identity": "appended-root-body",
+      "raw_addend": 0,
+      "computed_field_value": "0xfffeae2b",
+      "rel32_fits_signed_range": true
+    },
+    {
+      "source_entry": "0x10009610",
+      "source_section_number": 4,
+      "site": 1,
+      "type": "REL32",
+      "target_symbol": "?FUN_10009610@FUN_10009610_this@@QAEXHHH@Z",
+      "target_va": "0x100475a0",
+      "target_identity": "appended-root-body",
+      "raw_addend": 0,
+      "computed_field_value": "0xfffebaff",
+      "rel32_fits_signed_range": true
+    },
+    {
+      "source_entry": "0x10010b1a",
+      "source_section_number": 3,
+      "site": 8,
+      "type": "REL32",
+      "target_symbol": "??0_LocaleUpdate@@QAE@PAUlocaleinfo_struct@@@Z",
+      "target_va": "0x10010b1a",
+      "target_identity": "inplace-root-body",
+      "raw_addend": 0,
+      "computed_field_value": "0xfffb506d",
+      "rel32_fits_signed_range": true
+    }
+  ],
+  "cross_object_target_callsites": [
+    {
+      "source_entry": "0x10005860",
+      "site": 630,
+      "type": "REL32",
+      "symbol": "_FUN_10006be0_call_bridge",
+      "target_section_owner": "0x10006be0",
+      "target_section_number": 4,
+      "target_va": "0x1005ba66",
+      "placement": "0x1005ba66"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 29,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 51,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 73,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 95,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 117,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 139,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 161,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 183,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 205,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 227,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 249,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 271,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 293,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 315,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 337,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x10009790",
+      "site": 359,
+      "type": "REL32",
+      "symbol": "_FUN_10009610_relocatable_entry",
+      "target_section_owner": "0x10009610",
+      "target_section_number": 4,
+      "target_va": "0x1005ba9c",
+      "placement": "0x1005ba9c"
+    },
+    {
+      "source_entry": "0x1000da60",
+      "site": 6,
+      "type": "DIR32",
+      "symbol": "?DAT_1003c398@@3IA",
+      "target_section_owner": "0x1000db80",
+      "target_section_number": 3,
+      "target_va": "0x1005d034",
+      "placement": "0x1005d034"
+    },
+    {
+      "source_entry": "0x1000dac0",
+      "site": 6,
+      "type": "DIR32",
+      "symbol": "?DAT_1003c398@@3IA",
+      "target_section_owner": "0x1000db80",
+      "target_section_number": 3,
+      "target_va": "0x1005d034",
+      "placement": "0x1005d034"
+    },
+    {
+      "source_entry": "0x10015122",
+      "site": 15,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x100154dc",
+      "site": 99,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x100178b8",
+      "site": 44,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x100179e8",
+      "site": 13,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x10018ad9",
+      "site": 16,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x10018cf7",
+      "site": 31,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x10019f9a",
+      "site": 13,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x1001a4b8",
+      "site": 15,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x1001baeb",
+      "site": 14,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    },
+    {
+      "source_entry": "0x1001da5c",
+      "site": 27,
+      "type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "target_section_owner": "0x10010b1a",
+      "target_section_number": 3,
+      "target_va": "0x1005baa1",
+      "placement": "0x1005baa1"
+    }
+  ],
+  "limitations": [
+    "This only resolves the 29 cross-object candidate section references and their local helper edges.",
+    "It does not write fields, patch/emit a PE, or validate loader/game behavior."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "scope": "Complete HIGHLOW site inventory for the current 284 in-place candidate bodies plus 421 appended candidate bodies and local referenced rdata; standalone table only, no PE patch emitted.",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\placement-plan-conservative-ghidra-positive-2026-09-30.json",
+  "placement_plan_sha256": "34AB2B82ADBEF08D19A335AFB349AB554DBAB6A6E6E3FF6BD03019E10980FF6F",
+  "inplace_reconciliation": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\inplace-base-relocation-reconciliation-conservative-current-2026-09-30-v2.json",
+  "appended_payload": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-payload-census-ghidra-positive-2026-09-30.json",
+  "original_highlow_sites": 4681,
+  "modified_original_ranges": {
+    "inplace_candidate_bodies": 284,
+    "thunk_entry_windows": 421
+  },
+  "original_highlow_sites_removed_in_modified_ranges": 950,
+  "inplace_candidate_dir32_sites_added": 800,
+  "appended_code_and_rdata_dir32_sites_added": 1584,
+  "candidate_highlow_sites_added_total": 2384,
+  "final_highlow_sites": 6115,
+  "encoded_directory_bytes": 12820,
+  "encoded_directory_sha256": "25EA555BDDFDC608A56E93D493D8FD3C2B01AC41ED8B448E5D17E13D1F49D880",
+  "directory_roundtrip_exact": true,
+  "original_reloc_directory_rva": "0x0003f000",
+  "original_reloc_directory_size": 9768,
+  "original_reloc_section_virtual_size": 16196,
+  "original_reloc_section_raw_size": 16384,
+  "directory_fits_original_reloc_section": true,
+  "limitations": [
+    "Candidate COFF DIR32 target values must still be applied/resolved at the final addresses; this audit records fixup sites only.",
+    "The candidate .data/.rdata providers, import table, entry hooks/startup, PE headers, and final code/data bytes are not emitted or validated here.",
+    "The placement plan checks instruction-boundary safety, not full behavioral semantics or every dynamic reference.",
+    "No original PE bytes are changed; this is not a loadable ASI and no GTA runtime test was run."
+  ]
+}

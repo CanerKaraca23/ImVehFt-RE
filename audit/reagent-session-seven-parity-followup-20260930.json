@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "symbol": "::__chsize_nolock",
+      "address": "0x1001af34",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001bc9e",
+      "address": "0x1001bc9e",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `FUN_1001bc9e`: reviewed Ghidra entry/return assembly and the helper at `1001bc59` against the current candidate. The wrapper forwards incoming EAX as the hidden output buffer; register setup before `__shift` proves EDI is `(param_2 > 0)` and EAX is the buffer plus sign offset, matching the candidate's guarded shift. The helper body is reproduced by strlen/memcpy operations; locale construction, both errno paths, cleanup, `_strcpy_s`, final memcpy, and Watson failure path map to the candidate. Ghidra shares the common errno/cleanup tail; the candidate has mutually exclusive copies, and the ABI wrapper adds one internal call. Both Clang and MSVC x86 candidate objects have 11 CALLs versus Ghidra's 8 at the wrapper address; this reflects the wrapper/helper expansion and split mutually-exclusive tails, not an unreviewed added path. The arithmetic was changed to explicit uint32 addition to avoid signed-overflow UB while preserving the Ghidra 32-bit wrap; the pre/post MSVC `/O2` objects had identical 180-instruction text. Suppress only the call-count heuristic; this remains static analysis, not a runtime or full-link proof."
+        }
+      ]
+    },
+    {
+      "symbol": "::__cftoe_l",
+      "address": "0x1001bdff",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftof2_l",
+      "address": "0x1001c25c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftof_l",
+      "address": "0x1001c35f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FindHandler",
+      "address": "0x1001d591",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `FindHandler`: Ghidra has 31 CALL instructions. The exact-hash MSVC 2022 x86 `/O2` object for the target `FindHandler` symbol has 32; its COFF relocations map the Ghidra exception-dispatch targets (including `__getptd`, `_ValidateRead`, `_inconsistency`, `IsInExceptionSpec`, `TypeInfoStorage::equals`, `__GetRangeOfTrysToCheck`, `__TypeMatch`, exception destruction, unwind, `FUN_1001d026`, and `FindHandlerForForeignException`) to the candidate's calls. The one additional relocation is MSVC 2022's `__security_check_cookie` epilogue call; the source-level scanner reports 35 because it counts expression-level member/helper calls rather than emitted target instructions. Suppress only this call-count heuristic; all other findings remain enabled. This is a static x86 object/relocation review, not runtime validation or proof of byte-identical VS2010 output."
+        }
+      ]
+    },
+    {
+      "symbol": "::$I10_OUTPUT",
+      "address": "0x1001f203",
+      "status": "green",
+      "findings": []
+    }
+  ]
+}

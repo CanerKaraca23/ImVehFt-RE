@@ -1,7 +1,7 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern int _DAT_1003c24c;
-extern int* _DAT_00b74494;
 
 extern "C" int __stdcall FUN_10009360();
 
@@ -15,7 +15,7 @@ void __cdecl FUN_1000d250(int param_1)
     _DAT_1003c24c = param_1;
 
     iVar2 = FUN_10009360();
-    iVar3 = (param_1 - *_DAT_00b74494) / 0xA18;
+    iVar3 = (param_1 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xA18;
 
     piVar1 = reinterpret_cast<int*>(
         *reinterpret_cast<int*>(iVar2 + 0x48) + iVar3 * 4);
@@ -28,7 +28,7 @@ void __cdecl FUN_1000d250(int param_1)
         iVar4 = iVar3 + 0x50;
 
         *piVar1 =
-            ((param_1 - *_DAT_00b74494) / 0xA18) *
+            ((param_1 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xA18) *
                 *reinterpret_cast<int*>(iVar2 + 0x44) +
             *reinterpret_cast<int*>(iVar2 + 0x40);
 

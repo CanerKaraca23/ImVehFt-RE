@@ -9,7 +9,7 @@ static_assert(sizeof(CRT_FLOAT_RESULT_SLOT) == 8);
 extern "C" int __cdecl FID_conflict___atoflt_l_1001db04(_CRT_FLOAT*, char*, _locale_t);
 extern "C" int __cdecl FID_conflict___atoflt_l_1001da5c(_CRT_FLOAT*, char*, _locale_t);
 
-void __cdecl __fassign_l(
+extern "C" void __cdecl __fassign_l(
     int flag,
     char* argument,
     char* number,

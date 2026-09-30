@@ -1,0 +1,4 @@
+target_va,instruction_va,instruction_bytes,instruction,function_owner,decode_status
+10013075,10013075,"33 D2","XOR EDX,EDX","",disassembled-in-memory
+10013075,10013077,"B9 D0 91 02 10","MOV ECX,0x100291d0","",existing-instruction
+10013075,1001307c,"EB 05","JMP 0x10013083","",existing-instruction

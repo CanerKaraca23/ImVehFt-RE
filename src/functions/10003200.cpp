@@ -1,10 +1,9 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
-extern std::int32_t* _DAT_00b74494;
 extern std::uint32_t _DAT_10024ff0;
 extern std::uint32_t _DAT_10024ff8;
-extern float _DAT_00c81300;
 
 extern "C" std::int32_t __stdcall FUN_10009360();
 
@@ -44,7 +43,7 @@ extern "C" void __cdecl FUN_10003200(
                     *reinterpret_cast<const std::int32_t*>(
                         *reinterpret_cast<const std::int32_t*>(
                             context_1 + 0x48) +
-                        ((param_2 - *_DAT_00b74494) / 0xa18) * 4) +
+                        ((param_2 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
                     0x28 + base) +
                 0x325) == '\0')
         {
@@ -55,7 +54,7 @@ extern "C" void __cdecl FUN_10003200(
                         *reinterpret_cast<const std::int32_t*>(
                             *reinterpret_cast<const std::int32_t*>(
                                 context_2 + 0x48) +
-                            ((param_2 - *_DAT_00b74494) / 0xa18) * 4) +
+                            ((param_2 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
                         0x28 + base_1) +
                     0x324) == '\0' &&
                 0.0f < *reinterpret_cast<const float*>(param_2 + 0x4a0) &&
@@ -111,7 +110,7 @@ extern "C" void __cdecl FUN_10003200(
         local_8,
         param_7,
         param_8 * static_cast<float>(_DAT_10024ff0) +
-            _DAT_00c81300 * static_cast<float>(_DAT_10024ff8),
+            IMVEHFT_GLOBAL_AT(float, 0x00c81300) * static_cast<float>(_DAT_10024ff8),
         param_9,
         param_10,
         param_11,

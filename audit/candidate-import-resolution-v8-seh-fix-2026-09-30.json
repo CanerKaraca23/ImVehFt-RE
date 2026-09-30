@@ -1,0 +1,18 @@
+{
+    "candidate":  "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\pe-layout-probe\\ImVehFt-candidate-705-static-20260930-v8-seh-fix.asi",
+    "sha256":  "73A9A04DDEA5C38B092EB7D22C2932836F80505A28738ABA280EDD5C825C9CCC",
+    "import_count":  82,
+    "modules":  [
+                    "d3dx9_43.dll",
+                    "kernel32.dll",
+                    "user32.dll"
+                ],
+    "resolved":  82,
+    "missing":  [
+
+                ],
+    "imports_were_resolved_in_candidate":  false,
+    "candidate_dllmain_called":  false,
+    "gta_or_plugin_loader_started":  false,
+    "probe_modules_freed":  true
+}

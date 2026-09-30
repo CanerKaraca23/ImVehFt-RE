@@ -1,0 +1,44 @@
+{
+  "scope": "Section index for the current diagnostic-only DLL; no final target addresses inferred.",
+  "diagnostic_image": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\link-probe\\current-set-ghidra-cleanup-exact-aliasprobe-20260930\\ImVehFt-current-set-diagnostic-not-ASI.dll",
+  "diagnostic_image_sha256": "2D60E4F38A95EF722CBCB886A92C2B365D982929AF7FB39344210B32CC5E1FDB",
+  "image_base": 268435456,
+  "sections": [
+    {
+      "name": ".xcode\u0000\u0000",
+      "va": 268439552,
+      "virtual_size": 124655,
+      "raw_size": 124928
+    },
+    {
+      "name": ".text\u0000\u0000\u0000",
+      "va": 268566528,
+      "virtual_size": 177415,
+      "raw_size": 177664
+    },
+    {
+      "name": ".rdata\u0000\u0000",
+      "va": 268746752,
+      "virtual_size": 214346,
+      "raw_size": 214528
+    },
+    {
+      "name": ".data\u0000\u0000\u0000",
+      "va": 268963840,
+      "virtual_size": 398604,
+      "raw_size": 395776
+    },
+    {
+      "name": ".fptable",
+      "va": 269365248,
+      "virtual_size": 128,
+      "raw_size": 512
+    },
+    {
+      "name": ".reloc\u0000\u0000",
+      "va": 269369344,
+      "virtual_size": 19148,
+      "raw_size": 19456
+    }
+  ]
+}

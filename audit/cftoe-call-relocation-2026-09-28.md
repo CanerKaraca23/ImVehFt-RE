@@ -1,0 +1,9 @@
+# `__cftoe_l` call relocation (2026-09-28)
+
+Replaced the final preferred-base call to `0x1001bdff` in `src/functions/1001bec6.cpp` with the candidate symbol `__cftoe_l`.
+
+Evidence: Ghidra exports `ghidra_exports/1001bec6.json` and `ghidra_exports/1001c50d.json` show both wrappers calling `__cftoe_l` with six cdecl arguments and forwarding EAX as `errno_t`. Candidate `1001c50d.cpp` already declares and directly calls the same C-linkage symbol. The final 705-object link map shows both `__cftoe_l` and its C++ implementation symbol at the same address in `1001bdff.obj`, so the new call is relocatable and reaches the candidate implementation, not a CRT-library fallback. The candidate body's Ghidra output labels its return `void`/undefined, while callers preserve the post-call EAX; the source declaration preserves that observed wrapper behavior without inventing a new return value.
+
+Backup: `src/functions/1001bec6.cpp.pre-relocatable-crt-calls-20260928.bak`. Fresh full checks: MSVC x86 `/O2 /W4 /WX /MT` 705/705 (`build/strict-all-post-cftoe-symbol-call-20260928.json`), ReAgent objective 705 PASS / 0 FAIL / 0 UNKNOWN (`audit/objective-post-cftoe-symbol-call-2026-09-28.json`), parity 705 GREEN / 0 YELLOW / 0 RED (`build/parity-post-cftoe-symbol-call-20260928.json`), and successful normal link of all 705 objects (`build/link-probe/strict-704-historical-sdk/ImVehFt-cftoe-symbol-call-diagnostic-not-ASI.dll`). Both 705-row source manifests have been refreshed.
+
+The preferred-image inventory is now 20 occurrences / 19 unique addresses: 19 `.text` references and one `.rdata` pointer (`audit/candidate-internal-image-address-literals-v19-2026-09-28.json`). Remaining occurrences include comments, instruction-local labels, handler pointers, and the unresolved scope-table pointer; the inventory alone does not classify them as defects. The linked DLL remains diagnostic-only and has not been loaded in game.

@@ -1,0 +1,16 @@
+FUNCTION FUN_006fc580 @ 006fc580
+006fc580  MOVZX EDX,byte ptr [ESP + 0x28]
+006fc585  MOV EAX,dword ptr [EDX*0x4 + 0xc3e000]
+006fc58c  MOV dword ptr [ESP + 0x28],EAX
+006fc590  JMP 0x006fc180
+
+DECOMPILED SOURCE
+
+void FUN_006fc580(void)
+
+{
+  FUN_006fc180();
+  return;
+}
+
+

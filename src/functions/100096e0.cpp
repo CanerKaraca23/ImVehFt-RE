@@ -1,10 +1,10 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c400;
 extern const char* DAT_1003c3f0;
 extern std::uint16_t DAT_1003c3f4;
 extern std::uint16_t DAT_1003c3f6;
-extern std::int32_t* DAT_00c97c28;
 
 extern "C" std::uint32_t __stdcall FUN_10009120();
 extern "C" void __cdecl FUN_100099e0(void*, void*, std::uint32_t);
@@ -22,7 +22,8 @@ std::uint32_t __stdcall FUN_100096e0(
         FUN_10009120();
     }
 
-    std::int32_t* pluginInterface = DAT_00c97c28;
+    std::int32_t* pluginInterface = reinterpret_cast<std::int32_t*>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97c28));
 
     if ((DAT_1003c400 & 1) == 0)
     {

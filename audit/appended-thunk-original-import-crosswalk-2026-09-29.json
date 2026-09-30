@@ -1,0 +1,693 @@
+{
+  "scope": "Name-based import-slot crosswalk for __imp_* COFF symbols referenced by the 147 thunk bodies.",
+  "pinned_original_asi": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "symbol_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-link-map-resolution-v3-2026-09-29.json",
+  "symbol_report_sha256": "8807E878093852D5750A9FFC16E49DEB6EE5B821065C2C0F4084826A1EB6BB1D",
+  "original_imported_function_count": 82,
+  "candidate_import_symbol_count": 45,
+  "matched_candidate_import_symbols": 45,
+  "candidate_symbols_absent_from_original_iat": [],
+  "limitations": [
+    "Matching is by decorated API name only; confirm DLL identity when duplicate imports exist.",
+    "The IAT slot VAs are from the original image and are the relevant fixed-address targets; this does not patch the appended body.",
+    "Non-import external aliases, CRT code/data, base-relocation generation, and loader/runtime behavior are not covered."
+  ],
+  "imports": [
+    {
+      "coff_import_symbol": "__imp__DecodePointer@4",
+      "api_name": "decodepointer",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 5,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "DecodePointer",
+          "iat_va": "0x10022060"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__DeleteCriticalSection@4",
+      "api_name": "deletecriticalsection",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "DeleteCriticalSection",
+          "iat_va": "0x100220B4"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__EncodePointer@4",
+      "api_name": "encodepointer",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 6,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "EncodePointer",
+          "iat_va": "0x1002205C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__EnterCriticalSection@4",
+      "api_name": "entercriticalsection",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "EnterCriticalSection",
+          "iat_va": "0x10022098"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__FindClose@4",
+      "api_name": "findclose",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "FindClose",
+          "iat_va": "0x10022028"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__FindFirstFileA@8",
+      "api_name": "findfirstfilea",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "FindFirstFileA",
+          "iat_va": "0x10022024"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__FindNextFileA@8",
+      "api_name": "findnextfilea",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "FindNextFileA",
+          "iat_va": "0x1002202C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetCPInfo@8",
+      "api_name": "getcpinfo",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetCPInfo",
+          "iat_va": "0x10022000"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetCurrentProcess@0",
+      "api_name": "getcurrentprocess",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetCurrentProcess",
+          "iat_va": "0x10022084"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetCurrentProcessId@0",
+      "api_name": "getcurrentprocessid",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetCurrentProcessId",
+          "iat_va": "0x10022104"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetCurrentThreadId@0",
+      "api_name": "getcurrentthreadid",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 3,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetCurrentThreadId",
+          "iat_va": "0x10022064"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetFileType@4",
+      "api_name": "getfiletype",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetFileType",
+          "iat_va": "0x100220AC"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetFullPathNameA@16",
+      "api_name": "getfullpathnamea",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 3,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetFullPathNameA",
+          "iat_va": "0x10022020"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetLastError@0",
+      "api_name": "getlasterror",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 6,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetLastError",
+          "iat_va": "0x10022070"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetModuleFileNameW@12",
+      "api_name": "getmodulefilenamew",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetModuleFileNameW",
+          "iat_va": "0x10022114"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetModuleHandleW@4",
+      "api_name": "getmodulehandlew",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetModuleHandleW",
+          "iat_va": "0x10022094"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetProcAddress@8",
+      "api_name": "getprocaddress",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetProcAddress",
+          "iat_va": "0x10022090"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetProcessHeap@0",
+      "api_name": "getprocessheap",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetProcessHeap",
+          "iat_va": "0x1002200C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetStartupInfoW@4",
+      "api_name": "getstartupinfow",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetStartupInfoW",
+          "iat_va": "0x100220B0"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetStdHandle@4",
+      "api_name": "getstdhandle",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetStdHandle",
+          "iat_va": "0x100220A4"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetSystemTimeAsFileTime@4",
+      "api_name": "getsystemtimeasfiletime",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetSystemTimeAsFileTime",
+          "iat_va": "0x10022108"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetTickCount@0",
+      "api_name": "gettickcount",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetTickCount",
+          "iat_va": "0x10022100"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__HeapAlloc@12",
+      "api_name": "heapalloc",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "HeapAlloc",
+          "iat_va": "0x10022040"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__HeapDestroy@4",
+      "api_name": "heapdestroy",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "HeapDestroy",
+          "iat_va": "0x10022048"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__HeapFree@12",
+      "api_name": "heapfree",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "HeapFree",
+          "iat_va": "0x10022044"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__InitializeCriticalSectionAndSpinCount@8",
+      "api_name": "initializecriticalsectionandspincount",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 3,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "InitializeCriticalSectionAndSpinCount",
+          "iat_va": "0x100220A8"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__IsDebuggerPresent@0",
+      "api_name": "isdebuggerpresent",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "IsDebuggerPresent",
+          "iat_va": "0x1002207C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__LeaveCriticalSection@4",
+      "api_name": "leavecriticalsection",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "LeaveCriticalSection",
+          "iat_va": "0x1002209C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__LoadLibraryW@4",
+      "api_name": "loadlibraryw",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "LoadLibraryW",
+          "iat_va": "0x1002211C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__MultiByteToWideChar@24",
+      "api_name": "multibytetowidechar",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "MultiByteToWideChar",
+          "iat_va": "0x100220E4"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__QueryPerformanceCounter@4",
+      "api_name": "queryperformancecounter",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "QueryPerformanceCounter",
+          "iat_va": "0x100220FC"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__RaiseException@16",
+      "api_name": "raiseexception",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "RaiseException",
+          "iat_va": "0x1002206C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__ReadFile@20",
+      "api_name": "readfile",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "ReadFile",
+          "iat_va": "0x100220E8"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__SetEndOfFile@4",
+      "api_name": "setendoffile",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "SetEndOfFile",
+          "iat_va": "0x10022010"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__SetHandleCount@4",
+      "api_name": "sethandlecount",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "SetHandleCount",
+          "iat_va": "0x100220A0"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__SetLastError@4",
+      "api_name": "setlasterror",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "SetLastError",
+          "iat_va": "0x100220E0"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__SetUnhandledExceptionFilter@4",
+      "api_name": "setunhandledexceptionfilter",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "SetUnhandledExceptionFilter",
+          "iat_va": "0x10022078"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__TerminateProcess@8",
+      "api_name": "terminateprocess",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TerminateProcess",
+          "iat_va": "0x10022080"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__TlsAlloc@0",
+      "api_name": "tlsalloc",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsAlloc",
+          "iat_va": "0x100220D0"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__TlsFree@4",
+      "api_name": "tlsfree",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsFree",
+          "iat_va": "0x100220DC"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__TlsGetValue@4",
+      "api_name": "tlsgetvalue",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsGetValue",
+          "iat_va": "0x100220D4"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__TlsSetValue@8",
+      "api_name": "tlssetvalue",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsSetValue",
+          "iat_va": "0x100220D8"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__UnhandledExceptionFilter@4",
+      "api_name": "unhandledexceptionfilter",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "UnhandledExceptionFilter",
+          "iat_va": "0x10022074"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__VirtualProtect@16",
+      "api_name": "virtualprotect",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "VirtualProtect",
+          "iat_va": "0x1002201C"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__WriteFile@20",
+      "api_name": "writefile",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "original_iat_matches": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "WriteFile",
+          "iat_va": "0x10022110"
+        }
+      ]
+    }
+  ]
+}

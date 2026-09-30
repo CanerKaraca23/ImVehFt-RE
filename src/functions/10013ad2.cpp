@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 #include <cstddef>
 
@@ -18,7 +19,7 @@ extern "C" void __stdcall __SEH_epilog4(void);
 
 extern "C" void __cdecl _Type_info_dtor(TypeInfoStorage* param_1)
 {
-    __SEH_prolog4(0x0C, 0x10028308);
+    __SEH_prolog4(IVF_IMAGE_ADDRESS_10028308, 0x0C);
 
     __lock(0x0E);
 

@@ -4,7 +4,7 @@
 extern "C" std::uint32_t DAT_1003c420[64];
 extern "C" void __cdecl _free(void* memory);
 
-void __cdecl __ioterm(void)
+extern "C" void __cdecl __ioterm(void)
 {
     std::uint32_t* puVar3 = DAT_1003c420;
 

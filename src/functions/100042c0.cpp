@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 #include <cstring>
 
 extern "C" {
@@ -13,12 +14,12 @@ extern i32 DAT_1003c248;
 extern u16 DAT_1003bd8c;
 extern u32 DAT_1003b700[];
 extern i32* DAT_1003c25c;
-extern i32* _DAT_00b74494;
 extern i32 _DAT_1003b6f8;
 extern i32 _DAT_1003c1e8;
+extern void* __cdecl _memset(void* destination, int value, std::size_t size);
 
 extern "C" i32 __stdcall FUN_10009360();
-void FUN_10010756(void*);
+extern "C" void __cdecl FUN_10010756(void*);
 extern "C" u32 __cdecl FUN_10010230(std::size_t);
 
 void FUN_10004430();
@@ -43,7 +44,7 @@ void FUN_100042c0_this::FUN_100042c0(u32 param_1)
 
     const int objectIndex =
         (static_cast<int>(reinterpret_cast<unsigned long>(self)) -
-         *_DAT_00b74494) /
+         IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) /
         0xa18;
 
     const int objectBase =
@@ -63,8 +64,7 @@ void FUN_100042c0_this::FUN_100042c0(u32 param_1)
 
     _DAT_1003c1e8 = state;
 
-    reinterpret_cast<void*(__cdecl*)(void*, int, unsigned long)>(
-        0x10016740)(
+    _memset(
         *reinterpret_cast<void**>(objectBase + 0x28 + baseOffset),
         0,
         0x518);

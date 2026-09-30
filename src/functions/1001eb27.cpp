@@ -15,6 +15,7 @@ using undefined8 = std::uint64_t;
 extern "C" int* __cdecl __errno(void);
 extern "C" void __stdcall FUN_1001189f(void);
 extern "C" std::uint32_t DAT_10029490;
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
 
 inline char locale_decimal_point(_locale_t locale) noexcept {
     const auto root = *reinterpret_cast<const std::uint32_t*>(locale);
@@ -36,8 +37,8 @@ struct _Mtold12Output {
 static_assert(sizeof(_Mtold12Output) == 12);
 static_assert(offsetof(_Mtold12Output, upper_low) == 8);
 
-struct _LDBL12 { std::uint8_t ld12[12]; };
-static_assert(sizeof(_LDBL12) == 12);
+struct ImVehFtLdbL12 { std::uint8_t ld12[12]; };
+static_assert(sizeof(ImVehFtLdbL12) == 12);
 template<class H, class L> constexpr std::uint32_t CONCAT22(H high, L low) noexcept {
     return static_cast<std::uint32_t>(((static_cast<std::uint64_t>(high) & 0xffffULL) << 16) |
                                       (static_cast<std::uint64_t>(low) & 0xffffULL));
@@ -63,9 +64,9 @@ static_assert(CONCAT11(0x12, 0x34) == 0x1234U);
 
 
 
-std::uint32_t __cdecl
+extern "C" std::uint32_t __cdecl
 
-___strgtold12_l(_LDBL12 *pld12,char **p_end_ptr,char *str,int mult12,int scale,int decpt,
+___strgtold12_l(ImVehFtLdbL12 *pld12,char **p_end_ptr,char *str,int mult12,int scale,int decpt,
 
                int implicit_E,_locale_t _Locale)
 
@@ -202,7 +203,7 @@ ___strgtold12_l(_LDBL12 *pld12,char **p_end_ptr,char *str,int mult12,int scale,i
 
     FUN_1001189f();
 
-    return 0;
+    goto cleanup;
 
   }
 
@@ -1132,6 +1133,10 @@ LAB_1001f1ab:
 
   *(undefined4 *)(pld12->ld12 + 6) = uVar16;
 
+cleanup:
+  __security_check_cookie(
+      local_8 ^ static_cast<std::uint32_t>(
+          reinterpret_cast<std::uintptr_t>(&local_8)));
   return local_70;
 
 }

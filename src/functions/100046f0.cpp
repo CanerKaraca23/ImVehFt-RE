@@ -1,8 +1,7 @@
 #include <cstddef>
 #include <cstdint>
 
-extern "C" std::uint32_t* (__cdecl* const FUN_100072fb30)(
-    std::uint32_t param_1);
+using FUN_0072fb30_t = std::uint32_t*(__cdecl*)(std::uint32_t);
 
 extern "C" int __cdecl strncmp(
     char* str1,
@@ -24,8 +23,9 @@ extern "C" std::uint32_t __cdecl FUN_100046f0(
     std::uint32_t param_1,
     int param_2)
 {
-    std::uint32_t* name =
-        FUN_100072fb30(param_1);
+    const auto FUN_0072fb30 = reinterpret_cast<FUN_0072fb30_t>(
+        static_cast<std::uintptr_t>(0x0072fb30));
+    std::uint32_t* name = FUN_0072fb30(param_1);
 
     std::uint32_t local_1c = 0;
     std::uint32_t local_18 = 3;

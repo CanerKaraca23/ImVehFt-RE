@@ -1,0 +1,939 @@
+{
+  "scope": "Ghidra callsite versus current x86 COFF entry/prolog comparison; not a semantic or runtime proof.",
+  "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports",
+  "objects_directory": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-ghidra-cleanup-exact-20260930",
+  "placement_sha256": "EE610BCB074759777AE80D4C7389CBFE55EBB8C4A88C790DF990F7ADAA6779A0",
+  "summary": {
+    "ghidra_callsite_count": 35,
+    "ghidra_caller_count": 35,
+    "missing_or_count_mismatched_object_calls": 12,
+    "coff_parse_errors": 0,
+    "frame_size_matches": 12,
+    "scope_alias_matches": 7,
+    "scope_relocation_present": 11,
+    "entry_prolog_shape_matches": 10,
+    "current_sources_naked": 7
+  },
+  "callsites": [
+    {
+      "address": "0x100104ed",
+      "name": "__onexit",
+      "source": "src/functions/100104ed.cpp",
+      "source_sha256": "25FB225898E1180E697E5747815A46BD8D8CF70865F8149E4F23097508BA65A1",
+      "ghidra_export_sha256": "E22F2D45AEA17786772E249CCC6EC567B780E8EB8A7917B51B852DE727D190AE",
+      "object_sha256": "E82528C78B72904B0794F49F0712125894A4B74ACF2FBA113293220F68B33B5A",
+      "ghidra_call": "100104f4  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268599784
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "56 E8 00 00 00 00 FF 74 24 08 E8 00 00 00 00 59 8B F0 E8 00 00 00 00 8B",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x10010540",
+      "name": "_fgets",
+      "source": "src/functions/10010540.cpp",
+      "source_sha256": "9BFD70DF35EC37B95EBB403EDEA22C8188041ECBD03254CA97C2799BAA4A6B17",
+      "ghidra_export_sha256": "9BD9B8AA42994FBCC571586D5F85A108144D2C0C3B07F0C1DB03B7BFBEFB38B4",
+      "object_sha256": "29EFDFFA993406083111EBFB64A2D05A1FE3F9A753303B96A9ED274AE03971F6",
+      "ghidra_call": "10010547  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        20,
+        268599816
+      ],
+      "object_helper_call_offset": 3,
+      "object_helper_call_relocation": {
+        "site": 4,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "55 56 57 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10010678",
+      "name": "__fsopen",
+      "source": "src/functions/10010678.cpp",
+      "source_sha256": "4C07A7A0146EF973A64854C6692FD59337C7A7F55FCA8D5659A16E0D1F22B7EE",
+      "ghidra_export_sha256": "027A7C4ED62CAD1E8CC0BCF0F2CB6B9968AEC648E1A710FDD89FBB01A1472985",
+      "object_sha256": "A55CBECF98FB54BB00A8F68FC3AC7A0FE1E4BE6DCD2EFE7858540022BE32DF5B",
+      "ghidra_call": "1001067f  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268599848
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 12,
+      "object_scope_relocation": {
+        "site": 3,
+        "type": 6,
+        "target": "?fsopen_scope_table@@3UEH4ScopeTable@@B"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": true,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "6A 0C 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001081f",
+      "name": "_fclose",
+      "source": "src/functions/1001081f.cpp",
+      "source_sha256": "A94BB21EDF90342E8125456142496B0CB8B701657BD6E23B82D3484C8F9A0D2C",
+      "ghidra_export_sha256": "3DC7F9E7438F2EA6004FAACC0C7B70D986E3C25280D6ABAAA03090AF5B833DFD",
+      "object_sha256": "0F4F788346BC6417C8AEBEBB3BE67C4E0F8208AB42ED9FFD6FED994B4A43E559",
+      "ghidra_call": "10010826  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268599880
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "56 8B 74 24 08 57 83 CF FF 85 F6 75 12 E8 00 00 00 00 C7 00 16 00 00 00",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x10010913",
+      "name": "_fputs",
+      "source": "src/functions/10010913.cpp",
+      "source_sha256": "25DFC4344B07A566060200DC3C119061A2C53BB4A97A7A034A3F68AD15D2A87F",
+      "ghidra_export_sha256": "33B7BFF33A870C39362453900029B347324C58ADA257223B18D8CAE1811F0F1A",
+      "object_sha256": "0FB8B84BFEE09F9CCCEF7193DAB2B7B2A4924AF8B11EB7EA9F9BAC48560464ED",
+      "ghidra_call": "1001091a  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268599912
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 16,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": true,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "6A 10 68 68 82 02 10 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10010f59",
+      "name": "__CRT_INIT@12",
+      "source": "src/functions/10010f59.cpp",
+      "source_sha256": "A075180C890FD305E7E0CBD57A070DEB0AF65FFEF85BF8CF68024BD2657CB47E",
+      "ghidra_export_sha256": "D44299FBE2B1B1B9624E73F50F952A1FFA38942142EB2C2D94F1B6A98BFE8319",
+      "object_sha256": "D2A63EA4FD6E1B02A67E0F6985E8EC686C246D21934E348D35D767D48E7330F7",
+      "ghidra_call": "10010f60  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268599944
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 8,
+      "object_scope_relocation": {
+        "site": 3,
+        "type": 6,
+        "target": "_IVF_RELOC_TARGET_10028288"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": true,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": true,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "6A 08 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x100110bd",
+      "name": "___DllMainCRTStartup",
+      "source": "src/functions/100110bd.cpp",
+      "source_sha256": "256C0115716BA89213B4A740418695419DE8F64D1A9CE5E0FAD61E5EEE6E315C",
+      "ghidra_export_sha256": "3356EC62AA249A4F8637BBE9793CF90DB0BB2D233DFEA4763ED34817C8C0EF1D",
+      "object_sha256": "5863982288DABBF2853A1BE37B68CF7ABF7B834C3938BF0A15D7944BED425192",
+      "ghidra_call": "100110c4  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268599976
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 12,
+      "object_scope_relocation": {
+        "site": 3,
+        "type": 6,
+        "target": "_IVF_RELOC_TARGET_100282A8"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": true,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": true,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "6A 0C 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10012c9c",
+      "name": "doexit",
+      "source": "src/functions/10012c9c.cpp",
+      "source_sha256": "2D4225E64C498C707AFD18F5AE97D3B5988FC5EF24D4AAC77EDF422296FA522F",
+      "ghidra_export_sha256": "069F97433905A46E24A9B6B88294995A11951A4FC0CC743D5E3AD8A12FA8181A",
+      "object_sha256": "C08FFC2CD3A887703660BAB743836C20EAA0551C47DE215DE52063E2BE435010",
+      "ghidra_call": "10012ca3  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        32,
+        268600008
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "51 51 53 6A 00 6A 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001384b",
+      "name": "__getstream",
+      "source": "src/functions/1001384b.cpp",
+      "source_sha256": "AC5A65A1C886DC603CDF5BF7EE12D03FFDDCCB90AF8F65B807389F193D3C1337",
+      "ghidra_export_sha256": "EC81C084A95CAC8CCAA2A1139DD9454C54A807B30AE5617A5FCF23F84C89B47D",
+      "object_sha256": "BB26D5F5B4E4FB7B3FCD7BFA05EB37477BCEECDE3F932287C6C2522A794D9A54",
+      "ghidra_call": "10013852  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268600040
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "55 56 57 33 ED 55 55 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10013ad2",
+      "name": "_Type_info_dtor",
+      "source": "src/functions/10013ad2.cpp",
+      "source_sha256": "D0019833CB1429832388E5E591DB48ECB49C53E4EE8BB88BAF231D4B513684A6",
+      "ghidra_export_sha256": "FDE936B9B50D0550CBEB88CF7E8BF6353293ADB9AAEA9CBB945AAD1EBF534B42",
+      "object_sha256": "552A4C16BDE496F15ACD78FC8FC667616945E9EBFE9FE0B4A7E1C4186C19CC35",
+      "ghidra_call": "10013ad9  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268600072
+      ],
+      "object_helper_call_offset": 8,
+      "object_helper_call_relocation": {
+        "site": 9,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 12,
+      "object_scope_relocation": {
+        "site": 4,
+        "type": 6,
+        "target": "_IVF_RELOC_TARGET_10028308"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": true,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "56 6A 0C 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10013c74",
+      "name": "__close",
+      "source": "src/functions/10013c74.cpp",
+      "source_sha256": "7671E9932A8B2418B0463CF90C70755A2C8D894A1D2E2DF6E7E267E962B4A36D",
+      "ghidra_export_sha256": "B59D205AF72DB329AFCFF5647972491F38E5F59EF5D9986CE6BB0D31C75734B1",
+      "object_sha256": "FA7E00CEFC70A3B9AD3DEC36A52A120BCA1612496D973F547B0867A32685AEC6",
+      "ghidra_call": "10013c7b  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268600104
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "53 55 56 8B 74 24 10 57 83 CF FF 83 FE FE 75 18 E8 00 00 00 00 C7 00 00",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x10013e19",
+      "name": "flsall",
+      "source": "src/functions/10013e19.cpp",
+      "source_sha256": "3FF8211A7E016542115EAF6102D17BD2E15E6C29B8B0742C3D844CA343139624",
+      "ghidra_export_sha256": "3247543F17FC924B494011494C93D9343F0DFC36DEB94B3CA9CBF7602CF4DB84",
+      "object_sha256": "20B979FBD03147C9236BAA7DA64852F6B843CAA44225FA4FB3FDBE82208208C7",
+      "ghidra_call": "10013e20  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        20,
+        268600136
+      ],
+      "object_helper_call_offset": 3,
+      "object_helper_call_relocation": {
+        "site": 4,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "55 56 57 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10014446",
+      "name": "___updatetmbcinfo",
+      "source": "src/functions/10014446.cpp",
+      "source_sha256": "6A7B3EEFDA05E8411A0F92B9842A6136D71FAAD85D13E99F9BB0387E4F19EB7B",
+      "ghidra_export_sha256": "BA5DDB06A0722DDF648641A4D1FEED973ACBD759A7EF784B8ABB80EFD9242BC8",
+      "object_sha256": "468386F98F038D9438B27A0717DF091B6AD373593523B52BDF679A680A2BEFD1",
+      "ghidra_call": "1001444d  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268600176
+      ],
+      "object_helper_call_offset": 10,
+      "object_helper_call_relocation": {
+        "site": 11,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 12,
+      "object_scope_relocation": {
+        "site": 6,
+        "type": 6,
+        "target": "_IVF_RELOC_TARGET_10028370"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": true,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "51 56 57 6A 0C 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001474f",
+      "name": "__setmbcp",
+      "source": "src/functions/1001474f.cpp",
+      "source_sha256": "23A637B0D45997C2D6DD5D59CEF81808841C6435F0E02A9D0CD45235309FAE7C",
+      "ghidra_export_sha256": "6DAEC1924C575EA9573E38CBD7615885A6C98FDE301574D7376683E0C6352DBA",
+      "object_sha256": "50AA4927BEB122836872596E49BE1B55AAA91C60F101E04C958C79DC038E8B84",
+      "ghidra_call": "10014756  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        20,
+        268600208
+      ],
+      "object_helper_call_offset": 15,
+      "object_helper_call_relocation": {
+        "site": 16,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 20,
+      "object_scope_relocation": {
+        "site": 11,
+        "type": 6,
+        "target": "_IVF_RELOC_TARGET_10028390"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": false,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": true,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "55 8B EC 51 51 53 56 57 6A 14 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10014bc7",
+      "name": "___updatetlocinfo",
+      "source": "src/functions/10014bc7.cpp",
+      "source_sha256": "D073B1067077229FB45BFDD49E47364B38534F102080C98E54CB106BECAD7303",
+      "ghidra_export_sha256": "64C704B2FB99319DFB4CC00C4FA5560800F6B892C878900C90699D8AC5687A7E",
+      "object_sha256": "31B3B86C3757C8281CD305D834A2DC6D46857FABEFE0A5F8A45A3631F8CF824F",
+      "ghidra_call": "10014bce  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268600240
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "56 E8 00 00 00 00 8B 0D 00 00 00 00 8D 70 6C 85 48 70 74 0F 83 3E 00 74",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x10014cc3",
+      "name": "__initptd",
+      "source": "src/functions/10014cc3.cpp",
+      "source_sha256": "B990E1477C70F68F9C50E049B0C79E269791C1EE692271872BC98DD6EDE7D092",
+      "ghidra_export_sha256": "DABB962E74776B01B3348786F3E3FA9C2C0F5DE478AB71BA614F57014D9AA9C7",
+      "object_sha256": "91114A0BA0FB6590E5EA899343AE4A78320FA00CDEB623A484A8A0EEBC265DD0",
+      "ghidra_call": "10014cca  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268600272
+      ],
+      "object_helper_call_offset": 8,
+      "object_helper_call_relocation": {
+        "site": 9,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 8,
+      "object_scope_relocation": {
+        "site": 4,
+        "type": 6,
+        "target": "_IVF_RELOC_TARGET_100283D0"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": true,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "56 6A 08 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10014e0a",
+      "name": "__freefls@4",
+      "source": "src/functions/10014e0a.cpp",
+      "source_sha256": "10F41350DD2A42C67C887071742D3695CFE0BC022448A6F04A14E8FA15045300",
+      "ghidra_export_sha256": "D1EE8E227482316E7CC3909433671497869B1C5B31C411089C391D6CE07FB8EB",
+      "object_sha256": "33DB7A2995EC42C3A08E0EE9A6E1123B173A9CA3F8FC0A965007F5FE80DF47AF",
+      "ghidra_call": "10014e11  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268600312
+      ],
+      "object_helper_call_offset": 8,
+      "object_helper_call_relocation": {
+        "site": 9,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 8,
+      "object_scope_relocation": {
+        "site": 4,
+        "type": 6,
+        "target": "_IVF_RELOC_TARGET_100283F8"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": true,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "56 6A 08 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001663f",
+      "name": "__read",
+      "source": "src/functions/1001663f.cpp",
+      "source_sha256": "699E76D7037E0D37730204B1FE1F7DAC3E6329EC51F0A28BC8E47C03030ED4A8",
+      "ghidra_export_sha256": "2CBF5A72A9FA664F4567416F73C4421A7CD261F9D7E461E6CF2B5501005A41A8",
+      "object_sha256": "42E65C124CD9821CB10F34A857EC51DD717C45100D12717E9AEAAFAFBF7D90EF",
+      "ghidra_call": "10016646  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268600352
+      ],
+      "object_helper_call_offset": 2,
+      "object_helper_call_relocation": {
+        "site": 3,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "56 57 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10017ce9",
+      "name": "__mtinitlocknum",
+      "source": "src/functions/10017ce9.cpp",
+      "source_sha256": "A61F0F6C33B6A962BF96B253C4171FE5573E155F61D968664AD8185E89E14E1D",
+      "ghidra_export_sha256": "DBADFF5416B5A323AB784522BA8A49CDFB19F83B2A00C0AAE08319363BCD03EB",
+      "object_sha256": "3156C54696103FA2C8727451340825D926AD92DC579AAA3D1960DAE10E47DCE7",
+      "ghidra_call": "10017cf0  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268600384
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "56 33 F6 46 83 3D 00 00 00 00 00 74 7F 53 8B 5C 24 0C 83 3C DD 00 00 00",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x10017dde",
+      "name": "terminate",
+      "source": "src/functions/10017dde.cpp",
+      "source_sha256": "FA57ACD2BDD8E95E28B189C894B9233EA28945A586A8D3F5BAD89DC7FF9572B8",
+      "ghidra_export_sha256": "732A9EA6B060B51185D4928E7304E31E33814D2A1907DFFB26E6FEB7CFED385F",
+      "object_sha256": "C303FEBAB74FC829260AFCFFCD90C8DA70537EF25D6693828FE3C63DC6A9AC49",
+      "ghidra_call": "10017de5  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268600416
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 8,
+      "object_scope_relocation": {
+        "site": 3,
+        "type": 6,
+        "target": "?g_terminate_scope_table@@3Uterminate_scope_table@@B"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": true,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "6A 08 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10017e2a",
+      "name": "_inconsistency",
+      "source": "src/functions/10017e2a.cpp",
+      "source_sha256": "4C50BF199C03F3A892F313139F3EF755981CD1B1E3109086757B4C642F5B311D",
+      "ghidra_export_sha256": "83D585B8E3829EB5267DAF899C5A002072031090C57D2648B0DAED183B4A0FB9",
+      "object_sha256": "60E1010B8D7C275A50D1DA91D94870B26E6AEB06117F66AB98CF86CE3D61CD1E",
+      "ghidra_call": "10017e31  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268600448
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "FF 35 00 00 00 00 E8 00 00 00 00 85 C0 74 02 FF D0 E9 00 00 00 00",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x10017ed5",
+      "name": "_raise",
+      "source": "src/functions/10017ed5.cpp",
+      "source_sha256": "0A1D7A4FBF4C3788CC781FF8EC872E8C05FF074025C27061C4DE4B2700216E16",
+      "ghidra_export_sha256": "B72C4640485838D305CC5782D26BE192C46DABB8C6CC9C65C764AB48CE5541C5",
+      "object_sha256": "818A26B4128C65196CBF426DE10EA70CE938329E4BF90CA59AE44EACF7ABE6B0",
+      "ghidra_call": "10017edc  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        32,
+        268600480
+      ],
+      "object_helper_call_offset": 15,
+      "object_helper_call_relocation": {
+        "site": 16,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "83 EC 10 53 55 56 57 33 DB 8B FB 89 7C 24 18 E8 00 00 00 00"
+    },
+    {
+      "address": "0x100181dc",
+      "name": "__fcloseall",
+      "source": "src/functions/100181dc.cpp",
+      "source_sha256": "5B8DD29D3945B315A5BA10737ACE3D38A21618175016367F9960437937FE69EB",
+      "ghidra_export_sha256": "B5AADD17914A59033893154C9FDF852FF839060DBAAF879BCB325A235A514A9E",
+      "object_sha256": "55E5EF193DD51AC187F37DF3F394A7C6636E303FA2EE8FB07CC5F09B0C54DDB7",
+      "ghidra_call": "100181e3  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268600544
+      ],
+      "object_helper_call_offset": 2,
+      "object_helper_call_relocation": {
+        "site": 3,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "56 57 E8 00 00 00 00"
+    },
+    {
+      "address": "0x100189f5",
+      "name": "FID_conflict:__sopen_helper",
+      "source": "src/functions/100189f5.cpp",
+      "source_sha256": "679B3CA5B67AAB5ADBD7EECD061B72BF7BF10329D66DB5668626509A12D8FEEC",
+      "ghidra_export_sha256": "09628E24B03DC46F8069FE3A4C4A18F5C81688C15346C2D823F957C3E36D0900",
+      "object_sha256": "366F6482D8FA37BCD8E04C7515358D2CFC74455BB49AD350C929890C19105E6E",
+      "ghidra_call": "100189fc  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        20,
+        268600576
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 20,
+      "object_scope_relocation": {
+        "site": 3,
+        "type": 6,
+        "target": "?sopen_scope_table@@3UEH4ScopeTable@@B"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": true,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "6A 14 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10019107",
+      "name": "___lock_fhandle",
+      "source": "src/functions/10019107.cpp",
+      "source_sha256": "B7BC847865FE5143357ADEE9492BBF09878BDD06FB2692C034966CFE7AA86F40",
+      "ghidra_export_sha256": "A4E06AEF6E8767E41369B4C2F1A6EC95CB229A9EBC608A25E901BC1A66F75DBB",
+      "object_sha256": "4763ABAEC36249CCA6997457752AAA9B5EE64B57EA4BE6EAE47705EACD17ACC2",
+      "ghidra_call": "1001910e  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268600608
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "55 8B EC 53 57 8B 7D 08 33 DB 8B C7 43 C1 F8 05 83 E7 1F C1 E7 06 03 3C",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x100191cd",
+      "name": "__alloc_osfhnd",
+      "source": "src/functions/100191cd.cpp",
+      "source_sha256": "6C4ABFB8F43560806213CE0694DE3D4F5C7F3BCE88FDEDB93A081D6589A11EAB",
+      "ghidra_export_sha256": "BEEB1B6F5ADA52D561F8ECEAE920FE413CEFED9C77B8EBDA43AB01B2B24723C2",
+      "object_sha256": "4C0FDE9665D079BF4007C074F6E8D710FC3B95B463855FB256A629D87DD5EAE3",
+      "ghidra_call": "100191d4  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        24,
+        268600640
+      ],
+      "object_helper_call_offset": 8,
+      "object_helper_call_relocation": {
+        "site": 9,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "51 51 53 56 33 DB 53 53 E8 00 00 00 00"
+    },
+    {
+      "address": "0x10019a63",
+      "name": "__write",
+      "source": "src/functions/10019a63.cpp",
+      "source_sha256": "F3818246C286EE9A536E3CD71D526138DA3D8E80F48EF1BFDD8DBD7E507E213F",
+      "ghidra_export_sha256": "3E269727B4DF7015180D7DE3A6CC72FD9DDBFCA8DCCE64D0DD857F14E553B91E",
+      "object_sha256": "45901E1A6233D0839BB0A1340B6ECF907A37574B9B88107304F3B3BF3FAE7E5A",
+      "ghidra_call": "10019a6a  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268600680
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "53 55 56 8B 74 24 10 57 83 CF FF 83 FE FE 75 1B E8 00 00 00 00 C7 00 00",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x10019b37",
+      "name": "__commit",
+      "source": "src/functions/10019b37.cpp",
+      "source_sha256": "35E2A15C891D8230698E8E3B4A78E562FDFE127D39123ABC074451C896A7B105",
+      "ghidra_export_sha256": "D6660FE6EFD5B063246C78421175834F8755F7C3A7AAEEB99ACA717CE8C21814",
+      "object_sha256": "DA0F41DDA8AC4DF3C67CC2B0BC772A8E2ABE94DF89BB61638B448D97F1E5BA1C",
+      "ghidra_call": "10019b3e  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268600712
+      ],
+      "object_helper_call_offset": 4,
+      "object_helper_call_relocation": {
+        "site": 5,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "53 55 56 57 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001a685",
+      "name": "__lseeki64",
+      "source": "src/functions/1001a685.cpp",
+      "source_sha256": "44636F26161A9A47545768CDF8CBA1B5B5AFE0A08991793420C37A4EA85F5D8D",
+      "ghidra_export_sha256": "8BAE645B935A5AF211134018A5B799DCA8F29C38ACE3051CFFE12C0718B2792A",
+      "object_sha256": "658C1FF4E44BD572883EC25839E047D2CAF5200E6535E0193E044A3BD216C8E4",
+      "ghidra_call": "1001a68c  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        20,
+        268600744
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "53 56 8B 74 24 0C 57 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001ce0c",
+      "name": "___FrameUnwindToState",
+      "source": "src/functions/1001ce0c.cpp",
+      "source_sha256": "618ACEED7BA50DDC37C85CD681244E35853DE5E247673DE4D9AEE008A8838B15",
+      "ghidra_export_sha256": "3D751F51A16B8FBADA3A34498A21CE3ADCE3499781256204EA2BD2CBDE1DBB4E",
+      "object_sha256": "3999F447317D0DDEE07DD3D50DC27EFD4964A6979362CAE393E0B30689C621A9",
+      "ghidra_call": "1001ce13  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        16,
+        268600904
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "53 8B 5C 24 10 55 56 57 81 7B 04 81 00 00 00 8B 7C 24 14 7D 06 0F BE 77",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x1001cf2d",
+      "name": "___DestructExceptionObject",
+      "source": "src/functions/1001cf2d.cpp",
+      "source_sha256": "FA443CFD335B0B804F0C13D3F8DEACFAC2F153EF154F4FCE2E0701A32774BE66",
+      "ghidra_export_sha256": "FEE0D77B711F42B01980986D43831EF049CDC5A4F32FC20C048B13DF0DD65E1D",
+      "object_sha256": "66E6322902E3B28FB07ABE0F496F2656A11794CF05C10F155730287FA6C9D718",
+      "ghidra_call": "1001cf34  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268600944
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "8B 44 24 04 85 C0 74 20 81 38 63 73 6D E0 75 18 8B 48 1C 85 C9 74 11 83",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x1001d06f",
+      "name": "CallCatchBlock",
+      "source": "src/functions/1001d06f.cpp",
+      "source_sha256": "F6D91A4E473DE8A7E00541DF48576038743BC9F268E23991E35B8E48FFD265F9",
+      "ghidra_export_sha256": "F56A7DF8113610DEB24AE7F2EC2D7DBB76342BD0641406BF5F371EC54302C1E9",
+      "object_sha256": "277F9E4190506329E57D8C1D90F6BBEEB0FE37B06F38EA82EB677DBDF461DB14",
+      "ghidra_call": "1001d076  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        44,
+        268601064
+      ],
+      "object_helper_call_offset": 7,
+      "object_helper_call_relocation": {
+        "site": 8,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": 44,
+      "object_scope_relocation": {
+        "site": 3,
+        "type": 6,
+        "target": "_CallCatchBlock_scope_table_experiment"
+      },
+      "object_scope_relocation_present": true,
+      "source_naked": true,
+      "source_has_asm": true,
+      "frame_size_matches": true,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": true,
+      "object_entry_prefix": "6A 2C 68 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001d20b",
+      "name": "___BuildCatchObjectHelper",
+      "source": "src/functions/1001d20b.cpp",
+      "source_sha256": "6C2478B21CD018354EB29E46775A98DC02C31C845624E93331B37B445F057FEB",
+      "ghidra_export_sha256": "388C19128B728E30213415476B6DBA6BCFCCA47B2B773409CC0CC3D79C46BE2E",
+      "object_sha256": "31DC9E2DBD82A99F4C96297B26694DADF31726E440CBF33402778D9ACD2EDCEB",
+      "ghidra_call": "1001d212  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        12,
+        268601104
+      ],
+      "object_helper_call_offset": 13,
+      "object_helper_call_relocation": {
+        "site": 14,
+        "type": 20,
+        "target": "___SEH_prolog4"
+      },
+      "object_frame_size_push": null,
+      "object_scope_relocation": null,
+      "object_scope_relocation_present": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "frame_size_matches": false,
+      "scope_table_relocation_matches": false,
+      "expected_prolog_bytes_at_entry": false,
+      "object_entry_prefix": "56 8B 74 24 10 C7 44 24 10 00 00 00 00 E8 00 00 00 00"
+    },
+    {
+      "address": "0x1001d38a",
+      "name": "___BuildCatchObject",
+      "source": "src/functions/1001d38a.cpp",
+      "source_sha256": "971506917E3B3FE0CB58FF0C253CC3EDCC80B807074EFA5F443EAC0565BDA9DE",
+      "ghidra_export_sha256": "1478BD10F8ABD8D48B18B085A7A7CDBEA3724532B53C84F86935B7383E3895FF",
+      "object_sha256": "60EB8C48A6A85D1E642617A4BD3860C734B879F87BADB3619A48632DA7CEEAC4",
+      "ghidra_call": "1001d391  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268601136
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "8B 54 24 0C 8B 4C 24 08 53 56 83 3A 00 57 8B F9 7C 08 8B 42 08 8D 79 0C",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    },
+    {
+      "address": "0x100204f2",
+      "name": "___set_fpsr_sse2",
+      "source": "src/functions/100204f2.cpp",
+      "source_sha256": "02442DD6EE5ABB63CE18FD6B3CA46E813A27F2091D26A2D815356CBA38880C19",
+      "ghidra_export_sha256": "CAA26DC6A575CFDA2EBA34A3216AD28B9E49AD84233B907BE0D8F827AB7DE4B9",
+      "object_sha256": "6E8313E131DAAC10C87899ACA4412BEE766DE54412954C5C4B3ECBC3738812BE",
+      "ghidra_call": "100204f9  CALL 0x10012e20",
+      "ghidra_pushes_in_order": [
+        8,
+        268601224
+      ],
+      "object_helper_relocation_count": 0,
+      "source_mentions_helper": false,
+      "source_naked": false,
+      "source_has_asm": false,
+      "object_entry_prefix": "55 8B EC 51 83 3D 00 00 00 00 00 74 23 8B 45 08 A8 40 74 12 83 3D 00 00",
+      "error": "COFF body does not contain the Ghidra __SEH_prolog4 call count"
+    }
+  ],
+  "limitations": [
+    "Scope-table matching recognizes relocatable IVF_RELOC_TARGET_<address> references only; local reconstructed scope tables require manual content comparison.",
+    "Instruction shape and argument checks do not prove scope-table contents, EH funclet correctness, or runtime safety."
+  ]
+}

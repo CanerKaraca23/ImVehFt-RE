@@ -7,12 +7,16 @@ extern std::uint8_t* DAT_1003c3ec;
 
 extern "C" int __cdecl _atexit(void (__cdecl* function)());
 extern "C" void __stdcall thunk_FUN_10009580();
-using MappingEnsureFn = std::uint32_t (__thiscall*)(void*, char);
 extern "C" void __stdcall FUN_100095f0();
 extern "C" void* __stdcall HeapAlloc(
     void* heap,
     std::uint32_t flags,
     std::size_t bytes);
+
+struct FUN_10009430_this
+{
+    int __thiscall FUN_10009430(char);
+};
 
 extern "C" void __stdcall FUN_1000cf80()
 {
@@ -26,7 +30,8 @@ extern "C" void __stdcall FUN_1000cf80()
         _atexit(reinterpret_cast<void (__cdecl*)()>(thunk_FUN_10009580));
     }
 
-    uVar1 = reinterpret_cast<MappingEnsureFn>(static_cast<std::uintptr_t>(0x10009430))(&DAT_1003c3e8, '\0');
+    uVar1 = reinterpret_cast<FUN_10009430_this*>(&DAT_1003c3e8)
+                ->FUN_10009430('\0');
 
     if (static_cast<char>(uVar1) == '\0')
     {

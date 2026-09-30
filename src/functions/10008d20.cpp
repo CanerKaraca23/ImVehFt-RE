@@ -1,46 +1,64 @@
 #include <cstdint>
 
-using Float10 = long double;
-
-// The calling convention of the indirect target at 0x0053CC70 is unresolved.
-using UnknownFloatFunction = Float10 (*)(std::uint32_t, std::uint32_t);
-
-extern float _DAT_10024e70;
-extern float _DAT_10024e78;
-extern std::uintptr_t _PTR_10024e68;
-
-extern "C" void __stdcall FUN_10008d20()
-{
-    std::uint32_t in_EAX;
+extern "C" double DAT_10024e68;
+extern "C" double DAT_10024e70;
+extern "C" double DAT_10024e78;
 
 #if defined(_MSC_VER) && defined(_M_IX86)
-    __asm mov in_EAX, eax
-#else
-#error "FUN_10008d20 requires access to the incoming EAX register."
-#endif
+extern "C" __declspec(naked) void __stdcall FUN_10008d20()
+{
+    __asm {
+        push ebp
+        mov ebp, esp
+        sub esp, 8
+        fld dword ptr [eax + 10h]
+        sub esp, 8
+        fstp dword ptr [ebp - 8]
+        fld dword ptr [eax + 14h]
+        mov eax, 53cc70h
+        fstp dword ptr [ebp - 4]
+        fld dword ptr [ebp - 4]
+        fstp dword ptr [esp + 4]
+        fld dword ptr [ebp - 8]
+        fstp dword ptr [esp]
+        call eax
+        fmul qword ptr [DAT_10024e78]
+        add esp, 8
+        fsub qword ptr [DAT_10024e70]
+        fstp dword ptr [ebp - 4]
+        fldz
+        fld dword ptr [ebp - 4]
+        fcom
+        fnstsw ax
+        test ah, 5
+        jp short nonnegative_or_unordered
+        fld qword ptr [DAT_10024e68]
+        jmp short add_period
 
-    const auto function_0053cc70 =
-        reinterpret_cast<UnknownFloatFunction>(0x0053CC70u);
+    add_period_again:
+        fxch
+    add_period:
+        fadd st(1), st(0)
+        fxch
+        fstp dword ptr [ebp - 4]
+        fld dword ptr [ebp - 4]
+        fcom st(2)
+        fnstsw ax
+        test ah, 5
+        jnp short add_period_again
+        fstp st(2)
+        fstp st(0)
+        mov esp, ebp
+        pop ebp
+        ret
 
-    float fVar1 = static_cast<float>(
-        function_0053cc70(
-            *reinterpret_cast<const std::uint32_t*>(
-                static_cast<std::uintptr_t>(in_EAX) + 0x10u),
-            *reinterpret_cast<const std::uint32_t*>(
-                static_cast<std::uintptr_t>(in_EAX) + 0x14u))
-        * static_cast<Float10>(_DAT_10024e78)
-        - static_cast<Float10>(_DAT_10024e70));
-
-    if (0.0f <= fVar1)
-    {
-        return;
+    nonnegative_or_unordered:
+        fstp st(1)
+        mov esp, ebp
+        pop ebp
+        ret
     }
-
-    do
-    {
-        fVar1 = fVar1 + static_cast<float>(_PTR_10024e68);
-    }
-    while (fVar1 < 0.0f);
-
-    return;
 }
+#else
+#error "FUN_10008d20 requires the MSVC x86 inline assembler."
+#endif

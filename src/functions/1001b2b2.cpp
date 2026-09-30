@@ -5,11 +5,12 @@ using PVOID = void*;
 struct _EXCEPTION_RECORD;
 using PEXCEPTION_RECORD = _EXCEPTION_RECORD*;
 
-// The original function is an unresolved indirect jump thunk.
-// The indirect target/IAT slot could not be recovered from the supplied evidence.
-extern "C" void* const DAT_RtlUnwind_IndirectTarget;
+extern "C" void* _imp__RtlUnwind;
+#pragma comment(linker, "/alternatename:__imp__RtlUnwind=__imp__RtlUnwind@16")
 
-extern "C" __declspec(naked) void __stdcall RtlUnwind(
+// Keep this recovered IAT thunk distinct from the SDK/import-library
+// RtlUnwind symbol so both the thunk and KERNEL32 import can be linked.
+extern "C" __declspec(naked) void __stdcall ImVehFt_Recovered_RtlUnwind(
     PVOID ,
     PVOID ,
     PEXCEPTION_RECORD ,
@@ -17,6 +18,6 @@ extern "C" __declspec(naked) void __stdcall RtlUnwind(
 {
     __asm
     {
-        jmp dword ptr [DAT_RtlUnwind_IndirectTarget]
+        jmp dword ptr [_imp__RtlUnwind]
     }
 }

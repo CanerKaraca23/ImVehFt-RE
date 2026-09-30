@@ -1,0 +1,2629 @@
+{
+  "scope": "Read-only closure audit of same-object non-.rdata sections referenced by the current 422 appended root bodies.",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "payload_census": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-payload-census-conservative-current-2026-09-30.json",
+  "relocation_target_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-relocation-targets-conservative-current-2026-09-30.json",
+  "root_thunk_count": 422,
+  "referenced_non_rdata_section_count": 17,
+  "sections_by_name": {
+    ".bss": 1,
+    ".data": 1,
+    ".xcode": 15
+  },
+  "total_section_bytes_including_bss_virtual_extent": 11090,
+  "total_relocations_in_these_sections": 223,
+  "relocation_counts_by_type": {
+    "DIR32": 128,
+    "REL32": 95
+  },
+  "relocation_target_classes": {
+    "same-object-section": 26,
+    "undefined-external": 197
+  },
+  "payload_census_included_these_sections": false,
+  "conclusion": "The current 87,963-byte code+rdata payload census includes the 422 root bodies and 118 referenced .rdata sections, but not these referenced local .xcode/.data/.bss sections. Their code/data closure and relocation targets must be placed and fixed before the CRT helper offsets or a final PE layout can be considered authoritative.",
+  "data_hygiene_note": "The source census hashes four bytes at file offset zero for the .bss section because its COFF raw pointer is zero. This equals neither materialized BSS contents nor an on-disk section payload; this audit instead models the section's four zero-initialized bytes and records both hashes.",
+  "limitations": [
+    "This audit inventories exact bytes and section relocations; it does not resolve or apply them.",
+    "Executable .xcode auxiliaries may require distinct placement; .data/.bss require writable storage and initialization/lifetime review.",
+    "No candidate object, PE, ASI, or game state is modified or validated."
+  ],
+  "sections": [
+    {
+      "source_entry": "0x10004bb0",
+      "inventory_reported_sha256": "2EDA8C969C45233906D69FE961CC2AD82731D930E9A4602A5A26CA668F613A57",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "2522B5015FC50771BEB5BD35699EDE2931231478D95E5D2C0D187484A3E98D72",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "section_bytes": 1511,
+      "section_raw_pointer": 729,
+      "section_flags": "0x60101020",
+      "section_sha256": "2EDA8C969C45233906D69FE961CC2AD82731D930E9A4602A5A26CA668F613A57",
+      "relocation_count": 31,
+      "relocation_counts_by_type": {
+        "DIR32": 28,
+        "REL32": 3
+      },
+      "relocation_target_classes": {
+        "undefined-external": 31
+      },
+      "relocations": [
+        {
+          "site": 8,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003c248@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 13,
+          "type": "REL32",
+          "target_symbol": "_FUN_10009360@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 78,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003a6c6@@3EA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 110,
+          "type": "DIR32",
+          "target_symbol": "__imp__GetKeyState@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 128,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bc04@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 144,
+          "type": "DIR32",
+          "target_symbol": "?DAT_100374bc@@3EA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 163,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bc04@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 171,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bc74@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 184,
+          "type": "DIR32",
+          "target_symbol": "?DAT_100374bc@@3EA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 205,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_1003bc20@@3IA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 250,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_1003bc20@@3IA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 307,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003b6fc@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 337,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bbbc@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 360,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bc0c@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 381,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bc24@@3HA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 423,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bc70@@3IA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 439,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003aed8@@3IA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 511,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024fc0@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 557,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024e90@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1085,
+          "type": "REL32",
+          "target_symbol": "_FUN_10010120",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1091,
+          "type": "DIR32",
+          "target_symbol": "_DAT_10024e78",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1099,
+          "type": "DIR32",
+          "target_symbol": "_DAT_10024e70",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1109,
+          "type": "DIR32",
+          "target_symbol": "?DAT_10024e68@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1187,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024fb8@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1252,
+          "type": "REL32",
+          "target_symbol": "_FUN_10010120",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1258,
+          "type": "DIR32",
+          "target_symbol": "_DAT_10024e78",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1266,
+          "type": "DIR32",
+          "target_symbol": "_DAT_10024e70",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1297,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024fb8@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1433,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024fb0@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1443,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024fac@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1481,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024fa8@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x10006be0",
+      "inventory_reported_sha256": "6460E6A0D983AA61D5CB0C139366C251DDC6436BD3A008111D22931C75B8F1E8",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "974A716D0A628BD557BA4EA699DABD42808C76527F667178EB6B525BED18B25F",
+      "section_number": 5,
+      "section_name": ".xcode",
+      "section_bytes": 1251,
+      "section_raw_pointer": 847,
+      "section_flags": "0x60101020",
+      "section_sha256": "6460E6A0D983AA61D5CB0C139366C251DDC6436BD3A008111D22931C75B8F1E8",
+      "relocation_count": 29,
+      "relocation_counts_by_type": {
+        "DIR32": 24,
+        "REL32": 5
+      },
+      "relocation_target_classes": {
+        "same-object-section": 1,
+        "undefined-external": 28
+      },
+      "relocations": [
+        {
+          "site": 320,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f28@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 338,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f10@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 412,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f30@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 442,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f28@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 502,
+          "type": "REL32",
+          "target_symbol": "@FUN_1001ba40@8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 521,
+          "type": "REL32",
+          "target_symbol": "@FUN_1001ba40@8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 541,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f28@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 559,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f10@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 602,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f28@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 635,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f38@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 687,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f30@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 729,
+          "type": "DIR32",
+          "target_symbol": "__real@4f800000",
+          "target_value": 0,
+          "target_section_number": 9,
+          "target_section": ".rdata",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 774,
+          "type": "REL32",
+          "target_symbol": "@FUN_1001ba40@8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 794,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f28@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 812,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024f10@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 881,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024ef8@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 890,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003bc1c@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 903,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003c1f8@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 911,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024eec@@3IA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 917,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024e88@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 968,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024ee0@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 981,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024ed8@@3MA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1030,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024ed0@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1084,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024ed0@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1121,
+          "type": "DIR32",
+          "target_symbol": "?_DAT_10024ed0@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1146,
+          "type": "DIR32",
+          "target_symbol": "?DAT_10024ec8@@3IA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1157,
+          "type": "REL32",
+          "target_symbol": "_FUN_10008d20@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1209,
+          "type": "DIR32",
+          "target_symbol": "?DAT_10024ec0@@3NA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1242,
+          "type": "REL32",
+          "target_symbol": "@FUN_100073f0@32",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x10008140",
+      "inventory_reported_sha256": "7955CB2DE90DD9EFC6DF9FDBF5F5D10C114F4135A9A6B52DB1003BE749E32F7A",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "F11D08CB5E11F53BD60811667AE89DD1AACD529D5C971286C9A04F5B01D16DE9",
+      "section_number": 5,
+      "section_name": ".data",
+      "section_bytes": 52,
+      "section_raw_pointer": 4153,
+      "section_flags": "0xC0300040",
+      "section_sha256": "7955CB2DE90DD9EFC6DF9FDBF5F5D10C114F4135A9A6B52DB1003BE749E32F7A",
+      "relocation_count": 13,
+      "relocation_counts_by_type": {
+        "DIR32": 13
+      },
+      "relocation_target_classes": {
+        "undefined-external": 13
+      },
+      "relocations": [
+        {
+          "site": 0,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003C1F4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 4,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003A6C8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 8,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003A8C8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 12,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003BC80",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 16,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003AAC8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 20,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003C208",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 24,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003BBB4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 28,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003BC7C",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 32,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003BC1C",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 36,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003BC08",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 40,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003BD8C",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 44,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_1003C1F8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 48,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_100249A8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1000db80",
+      "inventory_reported_sha256": "FF71F2694330CE24BA09F9AC33B84ECAE94A2E1528644769D793B6666A483BE8",
+      "inventory_hash_is_materialized_section_content": false,
+      "object_sha256": "504888D409C22B71D3AD7A8B3F67ECEF876C252580B9AB704FA3BF22183ABE5D",
+      "section_number": 3,
+      "section_name": ".bss",
+      "section_bytes": 4,
+      "section_raw_pointer": 0,
+      "section_flags": "0xC0300080",
+      "section_sha256": "DF3F619804A92FDB4057192DC43DD748EA778ADC52BC498CE80524C014B81119",
+      "relocation_count": 0,
+      "relocation_counts_by_type": {},
+      "relocation_target_classes": {},
+      "relocations": []
+    },
+    {
+      "source_entry": "0x10014fa7",
+      "inventory_reported_sha256": "712835D1898714079D0D3BEB8DD06F625F08EF3B21058DAA717FE8A1BEDBC755",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "33DDA654E15100CC86731BFC1FF579E8BC999DE9C7928BDCC1B0CD9C3DBC9346",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 9,
+      "section_raw_pointer": 829,
+      "section_flags": "0x60101020",
+      "section_sha256": "712835D1898714079D0D3BEB8DD06F625F08EF3B21058DAA717FE8A1BEDBC755",
+      "relocation_count": 1,
+      "relocation_counts_by_type": {
+        "DIR32": 1
+      },
+      "relocation_target_classes": {
+        "undefined-external": 1
+      },
+      "relocations": [
+        {
+          "site": 2,
+          "type": "DIR32",
+          "target_symbol": "__imp__TlsAlloc@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x100154dc",
+      "inventory_reported_sha256": "B14DA5CFB99B95F2F8196C343FAA28B1831257E1F14175227FE1EB1984808875",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "95B02DE79000B073F598B1AD30CCAE211C3DCC63C474875D0BCC82F513BC6B55",
+      "section_number": 6,
+      "section_name": ".xcode",
+      "section_bytes": 2572,
+      "section_raw_pointer": 911,
+      "section_flags": "0x60101020",
+      "section_sha256": "B14DA5CFB99B95F2F8196C343FAA28B1831257E1F14175227FE1EB1984808875",
+      "relocation_count": 47,
+      "relocation_counts_by_type": {
+        "DIR32": 21,
+        "REL32": 26
+      },
+      "relocation_target_classes": {
+        "same-object-section": 9,
+        "undefined-external": 38
+      },
+      "relocations": [
+        {
+          "site": 61,
+          "type": "REL32",
+          "target_symbol": "_memset",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 85,
+          "type": "DIR32",
+          "target_symbol": "_IVF_RELOC_TARGET_10029490",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 99,
+          "type": "REL32",
+          "target_symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 122,
+          "type": "REL32",
+          "target_symbol": "?__fileno@@YAHPAU_iobuf@@@Z",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 130,
+          "type": "DIR32",
+          "target_symbol": "?DAT_10029450@@3EA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 160,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003c420@@3PAPAEA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 202,
+          "type": "DIR32",
+          "target_symbol": "?DAT_1003c420@@3PAPAEA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 280,
+          "type": "DIR32",
+          "target_symbol": "?DAT_100226f0@@3PAEA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 299,
+          "type": "DIR32",
+          "target_symbol": "?DAT_10022710@@3PAEA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 317,
+          "type": "DIR32",
+          "target_symbol": "$LN260",
+          "target_value": 2540,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 408,
+          "type": "DIR32",
+          "target_symbol": "?PTR_s__null__10029c24@@3PB_WB",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 857,
+          "type": "REL32",
+          "target_symbol": "___isleadbyte_l",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 868,
+          "type": "REL32",
+          "target_symbol": "_write_char",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 888,
+          "type": "REL32",
+          "target_symbol": "_write_char",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1057,
+          "type": "REL32",
+          "target_symbol": "___get_printf_count_output",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1322,
+          "type": "DIR32",
+          "target_symbol": "?PTR_s__null__10029c24@@3PB_WB",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1643,
+          "type": "REL32",
+          "target_symbol": "___aulldvrm@16",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1766,
+          "type": "REL32",
+          "target_symbol": "__strlen",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1849,
+          "type": "REL32",
+          "target_symbol": "_write_char",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1968,
+          "type": "REL32",
+          "target_symbol": "___malloc_crt",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2006,
+          "type": "DIR32",
+          "target_symbol": "?PTR_LAB_10029d58@@3PAXA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2011,
+          "type": "REL32",
+          "target_symbol": "_DecodePointer@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2074,
+          "type": "DIR32",
+          "target_symbol": "?PTR_LAB_10029d64@@3PAXA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2079,
+          "type": "REL32",
+          "target_symbol": "_DecodePointer@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2105,
+          "type": "DIR32",
+          "target_symbol": "?PTR_LAB_10029d60@@3PAXA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2110,
+          "type": "REL32",
+          "target_symbol": "_DecodePointer@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2161,
+          "type": "REL32",
+          "target_symbol": "__strlen",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2249,
+          "type": "REL32",
+          "target_symbol": "__wctomb_s",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2287,
+          "type": "DIR32",
+          "target_symbol": "?PTR_u__null__10029c28@@3PB_WB",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2332,
+          "type": "REL32",
+          "target_symbol": "_write_string",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2349,
+          "type": "REL32",
+          "target_symbol": "_write_char",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2391,
+          "type": "REL32",
+          "target_symbol": "__wctomb_s",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2408,
+          "type": "REL32",
+          "target_symbol": "_write_string",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2433,
+          "type": "REL32",
+          "target_symbol": "_write_string",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2448,
+          "type": "REL32",
+          "target_symbol": "_write_char",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2467,
+          "type": "REL32",
+          "target_symbol": "__free",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2504,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2515,
+          "type": "REL32",
+          "target_symbol": "_FUN_1001189f@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2526,
+          "type": "REL32",
+          "target_symbol": "@__security_check_cookie@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2540,
+          "type": "DIR32",
+          "target_symbol": "$LN282",
+          "target_value": 843,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2544,
+          "type": "DIR32",
+          "target_symbol": "$LN44",
+          "target_value": 321,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2548,
+          "type": "DIR32",
+          "target_symbol": "$LN45",
+          "target_value": 477,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2552,
+          "type": "DIR32",
+          "target_symbol": "$LN55",
+          "target_value": 554,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2556,
+          "type": "DIR32",
+          "target_symbol": "$LN59",
+          "target_value": 606,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2560,
+          "type": "DIR32",
+          "target_symbol": "$LN60",
+          "target_value": 616,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2564,
+          "type": "DIR32",
+          "target_symbol": "$LN64",
+          "target_value": 666,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2568,
+          "type": "DIR32",
+          "target_symbol": "$LN79",
+          "target_value": 897,
+          "target_section_number": 6,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x100182c1",
+      "inventory_reported_sha256": "C98B9D34D39027257BCBA4B5D8518DE9E76210DAB78AEB1B15D380859B741609",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "83AB4BB81009BDDDCEC80958D0F79DE7CE98120CBAD74F568CC4BDEB2591C885",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "section_bytes": 1937,
+      "section_raw_pointer": 631,
+      "section_flags": "0x60101020",
+      "section_sha256": "C98B9D34D39027257BCBA4B5D8518DE9E76210DAB78AEB1B15D380859B741609",
+      "relocation_count": 50,
+      "relocation_counts_by_type": {
+        "DIR32": 19,
+        "REL32": 31
+      },
+      "relocation_target_classes": {
+        "undefined-external": 50
+      },
+      "relocations": [
+        {
+          "site": 71,
+          "type": "REL32",
+          "target_symbol": "_FUN_1001b1a5",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 88,
+          "type": "REL32",
+          "target_symbol": "___invoke_watson",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 375,
+          "type": "DIR32",
+          "target_symbol": "_DAT_10039a0c",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 474,
+          "type": "REL32",
+          "target_symbol": "___alloc_osfhnd",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 490,
+          "type": "REL32",
+          "target_symbol": "____doserrno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 507,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 518,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 562,
+          "type": "DIR32",
+          "target_symbol": "__imp__CreateFileA@28",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 626,
+          "type": "DIR32",
+          "target_symbol": "__imp__CreateFileA@28",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 655,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 666,
+          "type": "DIR32",
+          "target_symbol": "__imp__GetLastError@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 672,
+          "type": "REL32",
+          "target_symbol": "___dosmaperr",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 684,
+          "type": "DIR32",
+          "target_symbol": "__imp__GetFileType@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 708,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 719,
+          "type": "DIR32",
+          "target_symbol": "__imp__GetLastError@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 727,
+          "type": "REL32",
+          "target_symbol": "___dosmaperr",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 738,
+          "type": "DIR32",
+          "target_symbol": "__imp__CloseHandle@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 751,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 797,
+          "type": "REL32",
+          "target_symbol": "___set_osfhnd",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 832,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 856,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 898,
+          "type": "REL32",
+          "target_symbol": "___lseek_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 913,
+          "type": "REL32",
+          "target_symbol": "____doserrno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 945,
+          "type": "REL32",
+          "target_symbol": "___read_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 975,
+          "type": "REL32",
+          "target_symbol": "___chsize_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 998,
+          "type": "REL32",
+          "target_symbol": "___lseek_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1149,
+          "type": "REL32",
+          "target_symbol": "___lseeki64_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1175,
+          "type": "REL32",
+          "target_symbol": "___lseeki64_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1332,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1374,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1418,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1455,
+          "type": "DIR32",
+          "target_symbol": "__imp__CloseHandle@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1489,
+          "type": "DIR32",
+          "target_symbol": "__imp__CreateFileA@28",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1520,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1544,
+          "type": "REL32",
+          "target_symbol": "___lseeki64_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1566,
+          "type": "REL32",
+          "target_symbol": "___lseeki64_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1594,
+          "type": "REL32",
+          "target_symbol": "___read_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1709,
+          "type": "REL32",
+          "target_symbol": "___write",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1750,
+          "type": "REL32",
+          "target_symbol": "___close_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1756,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1784,
+          "type": "REL32",
+          "target_symbol": "___lseek_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1813,
+          "type": "REL32",
+          "target_symbol": "___lseek_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1834,
+          "type": "REL32",
+          "target_symbol": "___close_nolock",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1842,
+          "type": "DIR32",
+          "target_symbol": "__imp__GetLastError@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1848,
+          "type": "REL32",
+          "target_symbol": "___dosmaperr",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1868,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c420",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1880,
+          "type": "REL32",
+          "target_symbol": "___free_osfhnd",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1892,
+          "type": "REL32",
+          "target_symbol": "____doserrno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1913,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1923,
+          "type": "REL32",
+          "target_symbol": "_FUN_1001189f@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001b693",
+      "inventory_reported_sha256": "2187A99191979144F0D09F572AD1E3927C268FB4917556083C5E155E37434095",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "EE67162C3D5447551C612EE030AE01C593583C5C78C5E61067F8D2F85594811C",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 86,
+      "section_raw_pointer": 463,
+      "section_flags": "0x60101020",
+      "section_sha256": "2187A99191979144F0D09F572AD1E3927C268FB4917556083C5E155E37434095",
+      "relocation_count": 2,
+      "relocation_counts_by_type": {
+        "DIR32": 1,
+        "REL32": 1
+      },
+      "relocation_target_classes": {
+        "same-object-section": 1,
+        "undefined-external": 1
+      },
+      "relocations": [
+        {
+          "site": 23,
+          "type": "DIR32",
+          "target_symbol": "$unwind_nested_frames_continue$3",
+          "target_value": 43,
+          "target_section_number": 3,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 39,
+          "type": "REL32",
+          "target_symbol": "_ImVehFt_Recovered_RtlUnwind@16",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001b750",
+      "inventory_reported_sha256": "50B9D85DAFE31D15F30DAA92C6A8207B3CAB49400F68DE8A47E761CC69CBE44E",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "2343E026F27006B7B6FB88A7AAADCEA0790A0E5001763739CEB2CE265D8FCBAF",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 217,
+      "section_raw_pointer": 463,
+      "section_flags": "0x60101020",
+      "section_sha256": "50B9D85DAFE31D15F30DAA92C6A8207B3CAB49400F68DE8A47E761CC69CBE44E",
+      "relocation_count": 4,
+      "relocation_counts_by_type": {
+        "DIR32": 3,
+        "REL32": 1
+      },
+      "relocation_target_classes": {
+        "same-object-section": 1,
+        "undefined-external": 3
+      },
+      "relocations": [
+        {
+          "site": 19,
+          "type": "DIR32",
+          "target_symbol": "$translator_exception_chain_restore$3",
+          "target_value": 171,
+          "target_section_number": 3,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 43,
+          "type": "DIR32",
+          "target_symbol": "?TranslatorGuardHandler@@YA?AW4_EXCEPTION_DISPOSITION@@PAUEHExceptionRecord@@PAUTranslatorGuardRN@@PAX2@Z",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 48,
+          "type": "DIR32",
+          "target_symbol": "?DAT_10029490@@3IA",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 140,
+          "type": "REL32",
+          "target_symbol": "___getptd",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001bbe1",
+      "inventory_reported_sha256": "80BA238D940C7366C6A0E857E82795E2F78971E32087CED6347140CCBFD3B17F",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "362B47182063F99E2E0A704F2CE0F73D661E21A08A116AC681D2A4619796498D",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 28,
+      "section_raw_pointer": 769,
+      "section_flags": "0x60101020",
+      "section_sha256": "80BA238D940C7366C6A0E857E82795E2F78971E32087CED6347140CCBFD3B17F",
+      "relocation_count": 1,
+      "relocation_counts_by_type": {
+        "REL32": 1
+      },
+      "relocation_target_classes": {
+        "undefined-external": 1
+      },
+      "relocations": [
+        {
+          "site": 14,
+          "type": "REL32",
+          "target_symbol": "__dtest",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001bc9e",
+      "inventory_reported_sha256": "872E4DC07B7B1BBB3FB74547DF3A8B5CADD9CB730C9577D69B1E2F0CF4C0CD6B",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "29C0A26CDB1CF21AA9A8E2897700F8AE62F5D0689A24A5497C5BED04D5BFFE9E",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 373,
+      "section_raw_pointer": 583,
+      "section_flags": "0x60101020",
+      "section_sha256": "872E4DC07B7B1BBB3FB74547DF3A8B5CADD9CB730C9577D69B1E2F0CF4C0CD6B",
+      "relocation_count": 11,
+      "relocation_counts_by_type": {
+        "DIR32": 2,
+        "REL32": 9
+      },
+      "relocation_target_classes": {
+        "same-object-section": 1,
+        "undefined-external": 10
+      },
+      "relocations": [
+        {
+          "site": 14,
+          "type": "REL32",
+          "target_symbol": "??0_LocaleUpdate@@QAE@PAUlocaleinfo_struct@@@Z",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 65,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 111,
+          "type": "REL32",
+          "target_symbol": "_strlen",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 120,
+          "type": "REL32",
+          "target_symbol": "_FID_conflict__memcpy",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 197,
+          "type": "DIR32",
+          "target_symbol": "??_C@_05KLBDPFGC@e?$CL000@",
+          "target_value": 0,
+          "target_section_number": 6,
+          "target_section": ".rdata",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 204,
+          "type": "REL32",
+          "target_symbol": "_strcpy_s",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 291,
+          "type": "DIR32",
+          "target_symbol": "_DAT_1003c408",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 314,
+          "type": "REL32",
+          "target_symbol": "_FID_conflict__memcpy",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 324,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 334,
+          "type": "REL32",
+          "target_symbol": "_FUN_1001189f@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 368,
+          "type": "REL32",
+          "target_symbol": "___invoke_watson",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001bee6",
+      "inventory_reported_sha256": "655E538460B5CD5CA3725E05A45013CBB84B80A7C9F9D3B5D3E6B61632620085",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "section_number": 5,
+      "section_name": ".xcode",
+      "section_bytes": 30,
+      "section_raw_pointer": 764,
+      "section_flags": "0x60101020",
+      "section_sha256": "655E538460B5CD5CA3725E05A45013CBB84B80A7C9F9D3B5D3E6B61632620085",
+      "relocation_count": 1,
+      "relocation_counts_by_type": {
+        "REL32": 1
+      },
+      "relocation_target_classes": {
+        "undefined-external": 1
+      },
+      "relocations": [
+        {
+          "site": 26,
+          "type": "REL32",
+          "target_symbol": "__aullshr",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001c25c",
+      "inventory_reported_sha256": "B187B338AE5E891E6DB8B94C838B36F55353D43F625B08C37F57D9866A8291B1",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "DD0E554C65719385AF36CF1BC420B12EBB6B0BC1B66E958A5C5C9D3783E6D076",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 282,
+      "section_raw_pointer": 543,
+      "section_flags": "0x60101020",
+      "section_sha256": "B187B338AE5E891E6DB8B94C838B36F55353D43F625B08C37F57D9866A8291B1",
+      "relocation_count": 10,
+      "relocation_counts_by_type": {
+        "REL32": 10
+      },
+      "relocation_target_classes": {
+        "undefined-external": 10
+      },
+      "relocations": [
+        {
+          "site": 21,
+          "type": "REL32",
+          "target_symbol": "??0_LocaleUpdate@@QAE@PAUlocaleinfo_struct@@@Z",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 106,
+          "type": "REL32",
+          "target_symbol": "__strlen",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 115,
+          "type": "REL32",
+          "target_symbol": "_FID_conflict__memcpy",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 136,
+          "type": "REL32",
+          "target_symbol": "__strlen",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 148,
+          "type": "REL32",
+          "target_symbol": "_FID_conflict__memcpy",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 193,
+          "type": "REL32",
+          "target_symbol": "__strlen",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 207,
+          "type": "REL32",
+          "target_symbol": "_FID_conflict__memcpy",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 216,
+          "type": "REL32",
+          "target_symbol": "__memset",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 244,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 254,
+          "type": "REL32",
+          "target_symbol": "_FUN_1001189f@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001c35f",
+      "inventory_reported_sha256": "7F43D246F213FCD56C03B96AA1BB2923B71DCA4939D18E382B73C0D78158BF25",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "F08C169FFA001ACD217DFE454CC9C6E4393374EA42E96B710341D201026B4F2B",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 30,
+      "section_raw_pointer": 543,
+      "section_flags": "0x60101020",
+      "section_sha256": "7F43D246F213FCD56C03B96AA1BB2923B71DCA4939D18E382B73C0D78158BF25",
+      "relocation_count": 1,
+      "relocation_counts_by_type": {
+        "REL32": 1
+      },
+      "relocation_target_classes": {
+        "undefined-external": 1
+      },
+      "relocations": [
+        {
+          "site": 19,
+          "type": "REL32",
+          "target_symbol": "___cftof2_l",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001d591",
+      "inventory_reported_sha256": "3B98E66C528AB65F5755D215A8754A90E3163F4BAAFEAB77EC3E215E76339CAA",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "8DC2DE57026C6A47A583EDC0CCACE8E926BB7FCF7F12BC2C939EBF60E990469B",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "section_bytes": 54,
+      "section_raw_pointer": 769,
+      "section_flags": "0x60101020",
+      "section_sha256": "3B98E66C528AB65F5755D215A8754A90E3163F4BAAFEAB77EC3E215E76339CAA",
+      "relocation_count": 1,
+      "relocation_counts_by_type": {
+        "REL32": 1
+      },
+      "relocation_target_classes": {
+        "undefined-external": 1
+      },
+      "relocations": [
+        {
+          "site": 40,
+          "type": "REL32",
+          "target_symbol": "_CatchIt",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001d591",
+      "inventory_reported_sha256": "208F1E0098B7B57ED904E0A2BAB4597C2450CE36B21070776190DF5C1795143E",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "8DC2DE57026C6A47A583EDC0CCACE8E926BB7FCF7F12BC2C939EBF60E990469B",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "section_bytes": 14,
+      "section_raw_pointer": 833,
+      "section_flags": "0x60101020",
+      "section_sha256": "208F1E0098B7B57ED904E0A2BAB4597C2450CE36B21070776190DF5C1795143E",
+      "relocation_count": 1,
+      "relocation_counts_by_type": {
+        "REL32": 1
+      },
+      "relocation_target_classes": {
+        "undefined-external": 1
+      },
+      "relocations": [
+        {
+          "site": 9,
+          "type": "REL32",
+          "target_symbol": "?construct@ExceptionStorage@@QAEPAXPAPAD@Z",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    },
+    {
+      "source_entry": "0x1001eb27",
+      "inventory_reported_sha256": "E48D8B4774D82CEDBC97068326E0A91FF0FBC2FADB41B82A7AF33F0FCBF236B7",
+      "inventory_hash_is_materialized_section_content": true,
+      "object_sha256": "BC5EDD0E37CD029E2EAC9D984B64DC57F20DCD23A9DA15BF15D9C007C9E32E2C",
+      "section_number": 9,
+      "section_name": ".xcode",
+      "section_bytes": 2640,
+      "section_raw_pointer": 880,
+      "section_flags": "0x60101020",
+      "section_sha256": "E48D8B4774D82CEDBC97068326E0A91FF0FBC2FADB41B82A7AF33F0FCBF236B7",
+      "relocation_count": 20,
+      "relocation_counts_by_type": {
+        "DIR32": 16,
+        "REL32": 4
+      },
+      "relocation_target_classes": {
+        "same-object-section": 13,
+        "undefined-external": 7
+      },
+      "relocations": [
+        {
+          "site": 25,
+          "type": "DIR32",
+          "target_symbol": "_DAT_10029490",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 83,
+          "type": "REL32",
+          "target_symbol": "___errno",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 94,
+          "type": "REL32",
+          "target_symbol": "_FUN_1001189f@0",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 156,
+          "type": "DIR32",
+          "target_symbol": "$LN392",
+          "target_value": 2592,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 897,
+          "type": "REL32",
+          "target_symbol": "____mtold12",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1067,
+          "type": "DIR32",
+          "target_symbol": "_DAT_10039698",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 1087,
+          "type": "DIR32",
+          "target_symbol": "_DAT_100397f8",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2573,
+          "type": "REL32",
+          "target_symbol": "@__security_check_cookie@4",
+          "target_value": 0,
+          "target_section_number": 0,
+          "target_section": "UNDEFINED",
+          "target_class": "undefined-external",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2592,
+          "type": "DIR32",
+          "target_symbol": "$LN34",
+          "target_value": 160,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2596,
+          "type": "DIR32",
+          "target_symbol": "$LN45",
+          "target_value": 242,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2600,
+          "type": "DIR32",
+          "target_symbol": "$LN55",
+          "target_value": 305,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2604,
+          "type": "DIR32",
+          "target_symbol": "$LN235",
+          "target_value": 366,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2608,
+          "type": "DIR32",
+          "target_symbol": "$LN65",
+          "target_value": 435,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2612,
+          "type": "DIR32",
+          "target_symbol": "$LN74",
+          "target_value": 549,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2616,
+          "type": "DIR32",
+          "target_symbol": "$LN78",
+          "target_value": 576,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2620,
+          "type": "DIR32",
+          "target_symbol": "$LN86",
+          "target_value": 602,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2624,
+          "type": "DIR32",
+          "target_symbol": "$LN88",
+          "target_value": 629,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2628,
+          "type": "DIR32",
+          "target_symbol": "$LN91",
+          "target_value": 720,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2632,
+          "type": "DIR32",
+          "target_symbol": "$switchD_1001ebb0_caseD_a$519",
+          "target_value": 707,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        },
+        {
+          "site": 2636,
+          "type": "DIR32",
+          "target_symbol": "$LN95",
+          "target_value": 669,
+          "target_section_number": 9,
+          "target_section": ".xcode",
+          "target_class": "same-object-section",
+          "raw_field_bytes": "00 00 00 00"
+        }
+      ]
+    }
+  ]
+}

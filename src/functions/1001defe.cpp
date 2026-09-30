@@ -14,7 +14,9 @@ extern "C" void __cdecl __raise_exc(
     std::uint32_t*,
     std::uint32_t*);
 
-extern "C" int __stdcall __ctrlfp(void);
+extern "C" int __cdecl __ctrlfp(
+    std::uint32_t new_control_bits,
+    std::uint32_t control_mask);
 extern "C" std::uint32_t __stdcall FUN_1002044b(void);
 extern "C" void __cdecl __set_errno_from_matherr(int);
 extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
@@ -27,11 +29,11 @@ void __cdecl __87except(
     int* param_2,
     std::uint16_t* param_3)
 {
+    const std::uintptr_t frame_base =
+        reinterpret_cast<std::uintptr_t>(_AddressOfReturnAddress()) &
+        ~static_cast<std::uintptr_t>(0x0f);
     const std::uint32_t local_14 =
-        DAT_10029490 ^
-        static_cast<std::uint32_t>(
-            reinterpret_cast<std::uintptr_t>(_AddressOfReturnAddress()) &
-            ~static_cast<std::uintptr_t>(0x0f));
+        DAT_10029490 ^ static_cast<std::uint32_t>(frame_base);
 
     const std::uint32_t local_98 = static_cast<std::uint32_t>(*param_3);
 
@@ -107,18 +109,20 @@ void __cdecl __87except(
     }
 
 finish:
-    __ctrlfp();
+    __ctrlfp(0xffffU, local_98);
 
     if ((*param_2 != 8) &&
         (DAT_100396d8 == 0) &&
         (FUN_1002044b() != 0))
     {
-        __security_check_cookie(local_14);
+        __security_check_cookie(
+            local_14 ^ static_cast<std::uint32_t>(frame_base));
         return;
     }
 
     __set_errno_from_matherr(*param_2);
 
-    __security_check_cookie(local_14);
+    __security_check_cookie(
+        local_14 ^ static_cast<std::uint32_t>(frame_base));
     return;
 }

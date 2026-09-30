@@ -13,7 +13,7 @@ extern "C" int __cdecl __ismbblead(std::uint32_t);
 
 
 
-void __cdecl parse_cmdline(std::uint8_t** param_1,std::uint8_t *param_2,int *param_3)
+extern "C" void __cdecl parse_cmdline(std::uint8_t** param_1,std::uint8_t *param_2,int *param_3)
 
 
 

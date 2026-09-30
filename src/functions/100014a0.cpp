@@ -1,10 +1,10 @@
 #include <exception>
+#include "imvehft_image_aliases.hpp"
 
-struct ExceptionCopyThis
+struct ExceptionStorage
 {
-    void __thiscall FUN_10010351(std::exception* source);
+    ExceptionStorage* __thiscall copy_construct(ExceptionStorage* other);
 };
-extern void* PTR_std_bad_alloc_vftable;
 
 struct FUN_100014a0_this
 {
@@ -13,8 +13,9 @@ struct FUN_100014a0_this
 
 void* FUN_100014a0_this::FUN_100014a0(std::exception* source)
 {
-    reinterpret_cast<ExceptionCopyThis*>(this)->FUN_10010351(source);
-    *reinterpret_cast<void***>(this) =
-        reinterpret_cast<void**>(PTR_std_bad_alloc_vftable);
+    reinterpret_cast<ExceptionStorage*>(this)->copy_construct(
+        reinterpret_cast<ExceptionStorage*>(source));
+    *reinterpret_cast<void***>(this) = reinterpret_cast<void**>(
+        static_cast<std::uintptr_t>(IVF_IMAGE_ADDRESS_10022250));
     return this;
 }

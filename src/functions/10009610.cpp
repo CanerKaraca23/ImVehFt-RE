@@ -13,9 +13,9 @@ extern "C" void __stdcall FUN_10009120();
 extern "C" int* __cdecl FUN_10009060(int*, std::uint8_t*, int);
 extern "C" void __cdecl FUN_10008e40(void*);
 
-struct FUN_10009610_this { void __thiscall invoke(int param_1, int param_2); };
+struct FUN_10009610_this { void __thiscall FUN_10009610(int param_1, int param_2, [[maybe_unused]] int stack_cleanup_slot); };
 
-void FUN_10009610_this::invoke(int param_1, int param_2)
+void FUN_10009610_this::FUN_10009610(int param_1, int param_2, [[maybe_unused]] int stack_cleanup_slot)
 {
     void* this_ = static_cast<void*>(this);
     void* local_8 = this_;
@@ -66,4 +66,9 @@ void FUN_10009610_this::invoke(int param_1, int param_2)
     }
 
     FUN_10008e40(unaff_EDI + 5);
+}
+
+extern "C" __declspec(naked) void __cdecl FUN_10009610_relocatable_entry()
+{
+    __asm jmp FUN_10009610_this::FUN_10009610
 }

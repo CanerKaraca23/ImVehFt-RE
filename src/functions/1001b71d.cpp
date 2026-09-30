@@ -1,7 +1,5 @@
-#include <cstddef>
 #include <cstdint>
-#include <corecrt.h>
-#include <stdio.h>
+#include <cstddef>
 
 using _EXCEPTION_DISPOSITION = int;
 struct EHExceptionRecord;
@@ -19,41 +17,50 @@ static_assert(offsetof(CatchGuardRN, security_cookie) == 0x08);
 static_assert(offsetof(CatchGuardRN, _field_0x0c) == 0x0c);
 static_assert(offsetof(CatchGuardRN, _field_0x10) == 0x10);
 static_assert(offsetof(CatchGuardRN, _field_0x14) == 0x14);
-_EXCEPTION_DISPOSITION __cdecl CatchGuardHandler(
-    EHExceptionRecord* param_1,
-    CatchGuardRN* param_2,
-    void* param_3,
-    void* )
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
+extern std::uint32_t __cdecl ___InternalCxxFrameHandler(
+    EHExceptionRecord*,
+    EHRegistrationNode*,
+    _CONTEXT*,
+    void*,
+    _s_FuncInfo*,
+    int,
+    EHRegistrationNode*,
+    unsigned char);
+
+#if !defined(_MSC_VER) || !defined(_M_IX86)
+#error "CatchGuardHandler requires the MSVC x86 inline-assembly ABI"
+#endif
+
+__declspec(naked) _EXCEPTION_DISPOSITION __cdecl CatchGuardHandler(
+    EHExceptionRecord*,
+    CatchGuardRN*,
+    void*,
+    void*)
 {
-    extern std::uintptr_t __security_cookie;
-    extern void __fastcall __security_check_cookie(std::uintptr_t);
-    extern _EXCEPTION_DISPOSITION __cdecl ___InternalCxxFrameHandler(
-        EHExceptionRecord*,
-        EHRegistrationNode*,
-        _CONTEXT*,
-        void*,
-        _s_FuncInfo*,
-        int,
-        EHRegistrationNode*,
-        unsigned char);
-
-    std::uintptr_t stack_cookie =
-        __security_cookie ^
-        reinterpret_cast<std::uintptr_t>(&stack_cookie);
-
-    _EXCEPTION_DISPOSITION result = ___InternalCxxFrameHandler(
-        param_1,
-        param_2->_field_0x10,
-        static_cast<_CONTEXT*>(param_3),
-        nullptr,
-        param_2->_field_0x0c,
-        param_2->_field_0x14,
-        reinterpret_cast<EHRegistrationNode*>(param_2),
-        '\0');
-
-    __security_check_cookie(
-        stack_cookie ^
-        reinterpret_cast<std::uintptr_t>(&stack_cookie));
-
-    return result;
+    __asm
+    {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        push esi
+        cld
+        mov esi, dword ptr [ebp + 0Ch]
+        mov ecx, dword ptr [esi + 8]
+        xor ecx, esi
+        call __security_check_cookie
+        push 0
+        push esi
+        push dword ptr [esi + 14h]
+        push dword ptr [esi + 0Ch]
+        push 0
+        push dword ptr [ebp + 10h]
+        push dword ptr [esi + 10h]
+        push dword ptr [ebp + 8]
+        call ___InternalCxxFrameHandler
+        add esp, 20h
+        pop esi
+        pop ebp
+        ret
+    }
 }

@@ -1,0 +1,4 @@
+address,bytes_16,little_endian_u32,defined_data
+10025004,"18 B3 01 10 65 2B 30 30 30 00 00 00 00 00 00 00",0x1001B318,"pointer:addr 1001b318"
+10025000,"00 00 0C 42 18 B3 01 10 65 2B 30 30 30 00 00 00",0x420C0000,"undefined:?? 00h"
+10029d40,"2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10",0x1001AF2B,"pointer:addr 1001af2b"

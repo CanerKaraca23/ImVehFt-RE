@@ -1,27 +1,27 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
-extern std::uint8_t PTR_vftable_100376f0;
-extern void** DAT_1003c3b0;
-
-extern std::uint32_t* DAT_10037718;
-extern std::uint32_t* DAT_1003771c;
-extern std::uint32_t* DAT_10037720;
-
-extern "C" void FUN_1000b120();
+#define DAT_1003c3b0 IMVEHFT_GLOBAL_AT(void**, IVF_IMAGE_ADDRESS_1003C3B0)
+#define DAT_10037718 IMVEHFT_GLOBAL_AT(std::uint32_t*, IVF_IMAGE_ADDRESS_10037718)
+#define DAT_1003771c IMVEHFT_GLOBAL_AT(std::uint32_t*, IVF_IMAGE_ADDRESS_1003771C)
+#define DAT_10037720 IMVEHFT_GLOBAL_AT(std::uint32_t*, IVF_IMAGE_ADDRESS_10037720)
 extern "C" void __stdcall FUN_1000cfe0();
 
-using FUN_1000b120_t =
+using VtableFunction =
     void (__thiscall*)(void*, std::uint32_t, int, int, int, int);
 
 void __stdcall FUN_1000b1a0(std::uint32_t param_1)
 {
     if (DAT_1003c3b0 == nullptr)
     {
-        DAT_1003c3b0 =
-            reinterpret_cast<void**>(&PTR_vftable_100376f0);
+        DAT_1003c3b0 = reinterpret_cast<void**>(IVF_IMAGE_ADDRESS_100376F0);
 
-        reinterpret_cast<FUN_1000b120_t>(&FUN_1000b120)(
-            DAT_1003c3b0,
+        const auto vtable_entry = *reinterpret_cast<VtableFunction*>(
+            reinterpret_cast<std::uintptr_t>(
+                IMVEHFT_GLOBAL_AT(void*, IVF_IMAGE_ADDRESS_100376F0)) + 4u);
+        vtable_entry(
+            reinterpret_cast<void*>(IVF_IMAGE_ADDRESS_100376F0),
             0x53e981,
             0,
             0,

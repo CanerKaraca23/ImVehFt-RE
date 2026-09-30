@@ -1,0 +1,14 @@
+FUNCTION FUN_00406e9a @ 00406e9a
+00406e9a  MOV ECX,0x358
+00406e9f  JMP 0x005bc533
+
+DECOMPILED SOURCE
+
+void FUN_00406e9a(void)
+
+{
+  FUN_005bc533();
+  return;
+}
+
+

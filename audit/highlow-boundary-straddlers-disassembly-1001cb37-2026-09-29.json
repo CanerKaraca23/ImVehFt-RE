@@ -1,0 +1,2723 @@
+{
+  "original_path": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "image_base": "0x10000000",
+  "text_rva": "0x00001000",
+  "text_raw_size": 132096,
+  "reconciliation_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\inplace-base-relocation-reconciliation-current-1001cb37-2026-09-29.json",
+  "candidate_objects": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-1001cb37-add-esp-20260929",
+  "boundary_straddler_count": 44,
+  "results": [
+    {
+      "entry_va": "0x10001770",
+      "candidate_body_size": 171,
+      "candidate_body_end_exclusive": "0x1000181b",
+      "original_highlow_site": "0x10001819",
+      "site_offset_from_entry": 169,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10001818",
+        "bytes": "bf a0 18 00 10",
+        "instruction": "mov edi, 0x100018a0"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10001818",
+        "bytes": "bf a0 18 00 10",
+        "instruction": "mov edi, 0x100018a0",
+        "bytes_before_candidate_end": 3,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10001810",
+          "bytes": "8d 55 f4",
+          "instruction": "lea edx, [ebp - 0xc]"
+        },
+        {
+          "address": "0x10001813",
+          "bytes": "52",
+          "instruction": "push edx"
+        },
+        {
+          "address": "0x10001814",
+          "bytes": "6a 40",
+          "instruction": "push 0x40"
+        },
+        {
+          "address": "0x10001816",
+          "bytes": "6a 04",
+          "instruction": "push 4"
+        },
+        {
+          "address": "0x10001818",
+          "bytes": "bf a0 18 00 10",
+          "instruction": "mov edi, 0x100018a0"
+        },
+        {
+          "address": "0x1000181d",
+          "bytes": "68 0a 1e 73 00",
+          "instruction": "push 0x731e0a"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10004bb0",
+      "candidate_body_size": 10,
+      "candidate_body_end_exclusive": "0x10004bba",
+      "original_highlow_site": "0x10004bb9",
+      "site_offset_from_entry": 9,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x10004bb7",
+        "bytes": "8b 1d 48 c2 03 10",
+        "instruction": "mov ebx, dword ptr [0x1003c248]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10004bb7",
+        "bytes": "8b 1d 48 c2 03 10",
+        "instruction": "mov ebx, dword ptr [0x1003c248]",
+        "bytes_before_candidate_end": 3,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10004bb0",
+          "bytes": "55",
+          "instruction": "push ebp"
+        },
+        {
+          "address": "0x10004bb1",
+          "bytes": "8b ec",
+          "instruction": "mov ebp, esp"
+        },
+        {
+          "address": "0x10004bb3",
+          "bytes": "83 ec 20",
+          "instruction": "sub esp, 0x20"
+        },
+        {
+          "address": "0x10004bb6",
+          "bytes": "53",
+          "instruction": "push ebx"
+        },
+        {
+          "address": "0x10004bb7",
+          "bytes": "8b 1d 48 c2 03 10",
+          "instruction": "mov ebx, dword ptr [0x1003c248]"
+        },
+        {
+          "address": "0x10004bbd",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "address": "0x10004bbe",
+          "bytes": "57",
+          "instruction": "push edi"
+        },
+        {
+          "address": "0x10004bbf",
+          "bytes": "8b f8",
+          "instruction": "mov edi, eax"
+        },
+        {
+          "address": "0x10004bc1",
+          "bytes": "e8 9a 47 00 00",
+          "instruction": "call 0x10009360"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100060d0",
+      "candidate_body_size": 587,
+      "candidate_body_end_exclusive": "0x1000631b",
+      "original_highlow_site": "0x10006318",
+      "site_offset_from_entry": 584,
+      "candidate_body_overlap_bytes": 3,
+      "original_instruction_containing_site": {
+        "address": "0x10006315",
+        "bytes": "ff 24 8d 44 63 00 10",
+        "instruction": "jmp dword ptr [ecx*4 + 0x10006344]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10006315",
+        "bytes": "ff 24 8d 44 63 00 10",
+        "instruction": "jmp dword ptr [ecx*4 + 0x10006344]",
+        "bytes_before_candidate_end": 6,
+        "bytes_after_candidate_end": 1
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10006315",
+          "bytes": "ff 24 8d 44 63 00 10",
+          "instruction": "jmp dword ptr [ecx*4 + 0x10006344]"
+        },
+        {
+          "address": "0x1000631c",
+          "bytes": "dd d8",
+          "instruction": "fstp st(0)"
+        },
+        {
+          "address": "0x1000631e",
+          "bytes": "5f",
+          "instruction": "pop edi"
+        },
+        {
+          "address": "0x1000631f",
+          "bytes": "5b",
+          "instruction": "pop ebx"
+        },
+        {
+          "address": "0x10006320",
+          "bytes": "59",
+          "instruction": "pop ecx"
+        },
+        {
+          "address": "0x10006321",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10006322",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x1000cdc0",
+      "candidate_body_size": 402,
+      "candidate_body_end_exclusive": "0x1000cf52",
+      "original_highlow_site": "0x1000cf4f",
+      "site_offset_from_entry": 399,
+      "candidate_body_overlap_bytes": 3,
+      "original_instruction_containing_site": {
+        "address": "0x1000cf4d",
+        "bytes": "89 1d f6 c3 03 10",
+        "instruction": "mov dword ptr [0x1003c3f6], ebx"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1000cf4d",
+        "bytes": "89 1d f6 c3 03 10",
+        "instruction": "mov dword ptr [0x1003c3f6], ebx",
+        "bytes_before_candidate_end": 5,
+        "bytes_after_candidate_end": 1
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x1000cf4d",
+          "bytes": "89 1d f6 c3 03 10",
+          "instruction": "mov dword ptr [0x1003c3f6], ebx"
+        },
+        {
+          "address": "0x1000cf53",
+          "bytes": "66 89 1d f4 c3 03 10",
+          "instruction": "mov word ptr [0x1003c3f4], bx"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100101c2",
+      "candidate_body_size": 40,
+      "candidate_body_end_exclusive": "0x100101ea",
+      "original_highlow_site": "0x100101e8",
+      "site_offset_from_entry": 38,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x100101e5",
+        "bytes": "c7 45 f4 1c 22 02 10",
+        "instruction": "mov dword ptr [ebp - 0xc], 0x1002221c"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x100101e5",
+        "bytes": "c7 45 f4 1c 22 02 10",
+        "instruction": "mov dword ptr [ebp - 0xc], 0x1002221c",
+        "bytes_before_candidate_end": 5,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x100101e1",
+          "bytes": "8d 45 f4",
+          "instruction": "lea eax, [ebp - 0xc]"
+        },
+        {
+          "address": "0x100101e4",
+          "bytes": "50",
+          "instruction": "push eax"
+        },
+        {
+          "address": "0x100101e5",
+          "bytes": "c7 45 f4 1c 22 02 10",
+          "instruction": "mov dword ptr [ebp - 0xc], 0x1002221c"
+        },
+        {
+          "address": "0x100101ec",
+          "bytes": "e8 7a 13 00 00",
+          "instruction": "call 0x1001156b"
+        },
+        {
+          "address": "0x100101f1",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10010406",
+      "candidate_body_size": 167,
+      "candidate_body_end_exclusive": "0x100104ad",
+      "original_highlow_site": "0x100104ac",
+      "site_offset_from_entry": 166,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x100104ab",
+        "bytes": "a3 48 d5 03 10",
+        "instruction": "mov dword ptr [0x1003d548], eax"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x100104ab",
+        "bytes": "a3 48 d5 03 10",
+        "instruction": "mov dword ptr [0x1003d548], eax",
+        "bytes_before_candidate_end": 2,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x100104a1",
+          "bytes": "ff d7",
+          "instruction": "call edi"
+        },
+        {
+          "address": "0x100104a3",
+          "bytes": "89 06",
+          "instruction": "mov dword ptr [esi], eax"
+        },
+        {
+          "address": "0x100104a5",
+          "bytes": "83 c6 04",
+          "instruction": "add esi, 4"
+        },
+        {
+          "address": "0x100104a8",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "address": "0x100104a9",
+          "bytes": "ff d7",
+          "instruction": "call edi"
+        },
+        {
+          "address": "0x100104ab",
+          "bytes": "a3 48 d5 03 10",
+          "instruction": "mov dword ptr [0x1003d548], eax"
+        },
+        {
+          "address": "0x100104b0",
+          "bytes": "8b 45 08",
+          "instruction": "mov eax, dword ptr [ebp + 8]"
+        },
+        {
+          "address": "0x100104b3",
+          "bytes": "eb 02",
+          "instruction": "jmp 0x100104b7"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10011715",
+      "candidate_body_size": 10,
+      "candidate_body_end_exclusive": "0x1001171f",
+      "original_highlow_site": "0x1001171e",
+      "site_offset_from_entry": 9,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x1001171d",
+        "bytes": "a3 04 9a 03 10",
+        "instruction": "mov dword ptr [0x10039a04], eax"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1001171d",
+        "bytes": "a3 04 9a 03 10",
+        "instruction": "mov dword ptr [0x10039a04], eax",
+        "bytes_before_candidate_end": 2,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10011715",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10011717",
+          "bytes": "55",
+          "instruction": "push ebp"
+        },
+        {
+          "address": "0x10011718",
+          "bytes": "8b ec",
+          "instruction": "mov ebp, esp"
+        },
+        {
+          "address": "0x1001171a",
+          "bytes": "8b 45 08",
+          "instruction": "mov eax, dword ptr [ebp + 8]"
+        },
+        {
+          "address": "0x1001171d",
+          "bytes": "a3 04 9a 03 10",
+          "instruction": "mov dword ptr [0x10039a04], eax"
+        },
+        {
+          "address": "0x10011722",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x10011723",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10011724",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10011726",
+          "bytes": "55",
+          "instruction": "push ebp"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x1001184d",
+      "candidate_body_size": 33,
+      "candidate_body_end_exclusive": "0x1001186e",
+      "original_highlow_site": "0x1001186c",
+      "site_offset_from_entry": 31,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x1001186a",
+        "bytes": "ff 15 80 20 02 10",
+        "instruction": "call dword ptr [0x10022080]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1001186a",
+        "bytes": "ff 15 80 20 02 10",
+        "instruction": "call dword ptr [0x10022080]",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10011862",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "address": "0x10011863",
+          "bytes": "ff 15 84 20 02 10",
+          "instruction": "call dword ptr [0x10022084]"
+        },
+        {
+          "address": "0x10011869",
+          "bytes": "50",
+          "instruction": "push eax"
+        },
+        {
+          "address": "0x1001186a",
+          "bytes": "ff 15 80 20 02 10",
+          "instruction": "call dword ptr [0x10022080]"
+        },
+        {
+          "address": "0x10011870",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10011871",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10011872",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10011874",
+          "bytes": "55",
+          "instruction": "push ebp"
+        },
+        {
+          "address": "0x10011875",
+          "bytes": "8b ec",
+          "instruction": "mov ebp, esp"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10012b84",
+      "candidate_body_size": 21,
+      "candidate_body_end_exclusive": "0x10012b99",
+      "original_highlow_site": "0x10012b97",
+      "site_offset_from_entry": 19,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10012b95",
+        "bytes": "ff 15 34 20 02 10",
+        "instruction": "call dword ptr [0x10022034]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10012b95",
+        "bytes": "ff 15 34 20 02 10",
+        "instruction": "call dword ptr [0x10022034]",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10012b91",
+          "bytes": "59",
+          "instruction": "pop ecx"
+        },
+        {
+          "address": "0x10012b92",
+          "bytes": "ff 75 08",
+          "instruction": "push dword ptr [ebp + 8]"
+        },
+        {
+          "address": "0x10012b95",
+          "bytes": "ff 15 34 20 02 10",
+          "instruction": "call dword ptr [0x10022034]"
+        },
+        {
+          "address": "0x10012b9b",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10012b9c",
+          "bytes": "6a 08",
+          "instruction": "push 8"
+        },
+        {
+          "address": "0x10012b9e",
+          "bytes": "e8 08 52 00 00",
+          "instruction": "call 0x10017dab"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100130f6",
+      "candidate_body_size": 60,
+      "candidate_body_end_exclusive": "0x10013132",
+      "original_highlow_site": "0x10013130",
+      "site_offset_from_entry": 58,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x1001312e",
+        "bytes": "ff 15 98 20 02 10",
+        "instruction": "call dword ptr [0x10022098]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1001312e",
+        "bytes": "ff 15 98 20 02 10",
+        "instruction": "call dword ptr [0x10022098]",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10013127",
+          "bytes": "59",
+          "instruction": "pop ecx"
+        },
+        {
+          "address": "0x10013128",
+          "bytes": "eb 0a",
+          "instruction": "jmp 0x10013134"
+        },
+        {
+          "address": "0x1001312a",
+          "bytes": "83 c6 20",
+          "instruction": "add esi, 0x20"
+        },
+        {
+          "address": "0x1001312d",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "address": "0x1001312e",
+          "bytes": "ff 15 98 20 02 10",
+          "instruction": "call dword ptr [0x10022098]"
+        },
+        {
+          "address": "0x10013134",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10013135",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x10013136",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10013137",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10013139",
+          "bytes": "55",
+          "instruction": "push ebp"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10013137",
+      "candidate_body_size": 45,
+      "candidate_body_end_exclusive": "0x10013164",
+      "original_highlow_site": "0x10013163",
+      "site_offset_from_entry": 44,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x10013161",
+        "bytes": "ff 15 98 20 02 10",
+        "instruction": "call dword ptr [0x10022098]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10013161",
+        "bytes": "ff 15 98 20 02 10",
+        "instruction": "call dword ptr [0x10022098]",
+        "bytes_before_candidate_end": 3,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10013158",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x10013159",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x1001315a",
+          "bytes": "8b 45 0c",
+          "instruction": "mov eax, dword ptr [ebp + 0xc]"
+        },
+        {
+          "address": "0x1001315d",
+          "bytes": "83 c0 20",
+          "instruction": "add eax, 0x20"
+        },
+        {
+          "address": "0x10013160",
+          "bytes": "50",
+          "instruction": "push eax"
+        },
+        {
+          "address": "0x10013161",
+          "bytes": "ff 15 98 20 02 10",
+          "instruction": "call dword ptr [0x10022098]"
+        },
+        {
+          "address": "0x10013167",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x10013168",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10013169",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x1001316b",
+          "bytes": "55",
+          "instruction": "push ebp"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10013efc",
+      "candidate_body_size": 10,
+      "candidate_body_end_exclusive": "0x10013f06",
+      "original_highlow_site": "0x10013f05",
+      "site_offset_from_entry": 9,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x10013f04",
+        "bytes": "a3 4c 9a 03 10",
+        "instruction": "mov dword ptr [0x10039a4c], eax"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10013f04",
+        "bytes": "a3 4c 9a 03 10",
+        "instruction": "mov dword ptr [0x10039a4c], eax",
+        "bytes_before_candidate_end": 2,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10013efc",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10013efe",
+          "bytes": "55",
+          "instruction": "push ebp"
+        },
+        {
+          "address": "0x10013eff",
+          "bytes": "8b ec",
+          "instruction": "mov ebp, esp"
+        },
+        {
+          "address": "0x10013f01",
+          "bytes": "8b 45 08",
+          "instruction": "mov eax, dword ptr [ebp + 8]"
+        },
+        {
+          "address": "0x10013f04",
+          "bytes": "a3 4c 9a 03 10",
+          "instruction": "mov dword ptr [0x10039a4c], eax"
+        },
+        {
+          "address": "0x10013f09",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x10013f0a",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10013f0b",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10013f0d",
+          "bytes": "55",
+          "instruction": "push ebp"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10014bc7",
+      "candidate_body_size": 78,
+      "candidate_body_end_exclusive": "0x10014c15",
+      "original_highlow_site": "0x10014c14",
+      "site_offset_from_entry": 77,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x10014c12",
+        "bytes": "ff 35 08 9c 02 10",
+        "instruction": "push dword ptr [0x10029c08]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10014c12",
+        "bytes": "ff 35 08 9c 02 10",
+        "instruction": "push dword ptr [0x10029c08]",
+        "bytes_before_candidate_end": 3,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10014c0d",
+          "bytes": "59",
+          "instruction": "pop ecx"
+        },
+        {
+          "address": "0x10014c0e",
+          "bytes": "83 65 fc 00",
+          "instruction": "and dword ptr [ebp - 4], 0"
+        },
+        {
+          "address": "0x10014c12",
+          "bytes": "ff 35 08 9c 02 10",
+          "instruction": "push dword ptr [0x10029c08]"
+        },
+        {
+          "address": "0x10014c18",
+          "bytes": "83 c6 6c",
+          "instruction": "add esi, 0x6c"
+        },
+        {
+          "address": "0x10014c1b",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "address": "0x10014c1c",
+          "bytes": "e8 59 ff ff ff",
+          "instruction": "call 0x10014b7a"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10016cc6",
+      "candidate_body_size": 11,
+      "candidate_body_end_exclusive": "0x10016cd1",
+      "original_highlow_site": "0x10016ccf",
+      "site_offset_from_entry": 9,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10016cce",
+        "bytes": "be 80 81 02 10",
+        "instruction": "mov esi, 0x10028180"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10016cce",
+        "bytes": "be 80 81 02 10",
+        "instruction": "mov esi, 0x10028180",
+        "bytes_before_candidate_end": 3,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10016cc6",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10016cc8",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "address": "0x10016cc9",
+          "bytes": "b8 80 81 02 10",
+          "instruction": "mov eax, 0x10028180"
+        },
+        {
+          "address": "0x10016cce",
+          "bytes": "be 80 81 02 10",
+          "instruction": "mov esi, 0x10028180"
+        },
+        {
+          "address": "0x10016cd3",
+          "bytes": "57",
+          "instruction": "push edi"
+        },
+        {
+          "address": "0x10016cd4",
+          "bytes": "8b f8",
+          "instruction": "mov edi, eax"
+        },
+        {
+          "address": "0x10016cd6",
+          "bytes": "3b c6",
+          "instruction": "cmp eax, esi"
+        },
+        {
+          "address": "0x10016cd8",
+          "bytes": "73 0f",
+          "instruction": "jae 0x10016ce9"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10016cec",
+      "candidate_body_size": 11,
+      "candidate_body_end_exclusive": "0x10016cf7",
+      "original_highlow_site": "0x10016cf5",
+      "site_offset_from_entry": 9,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10016cf4",
+        "bytes": "be 88 81 02 10",
+        "instruction": "mov esi, 0x10028188"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10016cf4",
+        "bytes": "be 88 81 02 10",
+        "instruction": "mov esi, 0x10028188",
+        "bytes_before_candidate_end": 3,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10016cec",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10016cee",
+          "bytes": "56",
+          "instruction": "push esi"
+        },
+        {
+          "address": "0x10016cef",
+          "bytes": "b8 88 81 02 10",
+          "instruction": "mov eax, 0x10028188"
+        },
+        {
+          "address": "0x10016cf4",
+          "bytes": "be 88 81 02 10",
+          "instruction": "mov esi, 0x10028188"
+        },
+        {
+          "address": "0x10016cf9",
+          "bytes": "57",
+          "instruction": "push edi"
+        },
+        {
+          "address": "0x10016cfa",
+          "bytes": "8b f8",
+          "instruction": "mov edi, eax"
+        },
+        {
+          "address": "0x10016cfc",
+          "bytes": "3b c6",
+          "instruction": "cmp eax, esi"
+        },
+        {
+          "address": "0x10016cfe",
+          "bytes": "73 0f",
+          "instruction": "jae 0x10016d0f"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x1001708f",
+      "candidate_body_size": 30,
+      "candidate_body_end_exclusive": "0x100170ad",
+      "original_highlow_site": "0x100170aa",
+      "site_offset_from_entry": 27,
+      "candidate_body_overlap_bytes": 3,
+      "original_instruction_containing_site": {
+        "address": "0x100170a8",
+        "bytes": "89 0d 30 9d 02 10",
+        "instruction": "mov dword ptr [0x10029d30], ecx"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x100170a8",
+        "bytes": "89 0d 30 9d 02 10",
+        "instruction": "mov dword ptr [0x10029d30], ecx",
+        "bytes_before_candidate_end": 5,
+        "bytes_after_candidate_end": 1
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x100170a2",
+          "bytes": "f7 d1",
+          "instruction": "not ecx"
+        },
+        {
+          "address": "0x100170a4",
+          "bytes": "23 c8",
+          "instruction": "and ecx, eax"
+        },
+        {
+          "address": "0x100170a6",
+          "bytes": "0b ca",
+          "instruction": "or ecx, edx"
+        },
+        {
+          "address": "0x100170a8",
+          "bytes": "89 0d 30 9d 02 10",
+          "instruction": "mov dword ptr [0x10029d30], ecx"
+        },
+        {
+          "address": "0x100170ae",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x100170af",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x100170b0",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x100170b2",
+          "bytes": "55",
+          "instruction": "push ebp"
+        },
+        {
+          "address": "0x100170b3",
+          "bytes": "8b ec",
+          "instruction": "mov ebp, esp"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100172be",
+      "candidate_body_size": 10,
+      "candidate_body_end_exclusive": "0x100172c8",
+      "original_highlow_site": "0x100172c7",
+      "site_offset_from_entry": 9,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x100172c6",
+        "bytes": "a3 c0 a1 03 10",
+        "instruction": "mov dword ptr [0x1003a1c0], eax"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x100172c6",
+        "bytes": "a3 c0 a1 03 10",
+        "instruction": "mov dword ptr [0x1003a1c0], eax",
+        "bytes_before_candidate_end": 2,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x100172be",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x100172c0",
+          "bytes": "55",
+          "instruction": "push ebp"
+        },
+        {
+          "address": "0x100172c1",
+          "bytes": "8b ec",
+          "instruction": "mov ebp, esp"
+        },
+        {
+          "address": "0x100172c3",
+          "bytes": "8b 45 08",
+          "instruction": "mov eax, dword ptr [ebp + 8]"
+        },
+        {
+          "address": "0x100172c6",
+          "bytes": "a3 c0 a1 03 10",
+          "instruction": "mov dword ptr [0x1003a1c0], eax"
+        },
+        {
+          "address": "0x100172cb",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x100172cc",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x100172cd",
+          "bytes": "83 25 10 c4 03 10 00",
+          "instruction": "and dword ptr [0x1003c410], 0"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10017e2a",
+      "candidate_body_size": 22,
+      "candidate_body_end_exclusive": "0x10017e40",
+      "original_highlow_site": "0x10017e3e",
+      "site_offset_from_entry": 20,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10017e3c",
+        "bytes": "ff 15 60 20 02 10",
+        "instruction": "call dword ptr [0x10022060]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10017e3c",
+        "bytes": "ff 15 60 20 02 10",
+        "instruction": "call dword ptr [0x10022060]",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10017e36",
+          "bytes": "ff 35 18 a3 03 10",
+          "instruction": "push dword ptr [0x1003a318]"
+        },
+        {
+          "address": "0x10017e3c",
+          "bytes": "ff 15 60 20 02 10",
+          "instruction": "call dword ptr [0x10022060]"
+        },
+        {
+          "address": "0x10017e42",
+          "bytes": "85 c0",
+          "instruction": "test eax, eax"
+        },
+        {
+          "address": "0x10017e44",
+          "bytes": "74 16",
+          "instruction": "je 0x10017e5c"
+        },
+        {
+          "address": "0x10017e46",
+          "bytes": "83 65 fc 00",
+          "instruction": "and dword ptr [ebp - 4], 0"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10017e73",
+      "candidate_body_size": 25,
+      "candidate_body_end_exclusive": "0x10017e8c",
+      "original_highlow_site": "0x10017e8b",
+      "site_offset_from_entry": 24,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x10017e8a",
+        "bytes": "a3 28 a3 03 10",
+        "instruction": "mov dword ptr [0x1003a328], eax"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10017e8a",
+        "bytes": "a3 28 a3 03 10",
+        "instruction": "mov dword ptr [0x1003a328], eax",
+        "bytes_before_candidate_end": 2,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10017e80",
+          "bytes": "a3 20 a3 03 10",
+          "instruction": "mov dword ptr [0x1003a320], eax"
+        },
+        {
+          "address": "0x10017e85",
+          "bytes": "a3 24 a3 03 10",
+          "instruction": "mov dword ptr [0x1003a324], eax"
+        },
+        {
+          "address": "0x10017e8a",
+          "bytes": "a3 28 a3 03 10",
+          "instruction": "mov dword ptr [0x1003a328], eax"
+        },
+        {
+          "address": "0x10017e8f",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x10017e90",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10017e91",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x10017e93",
+          "bytes": "55",
+          "instruction": "push ebp"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10018078",
+      "candidate_body_size": 10,
+      "candidate_body_end_exclusive": "0x10018082",
+      "original_highlow_site": "0x10018081",
+      "site_offset_from_entry": 9,
+      "candidate_body_overlap_bytes": 1,
+      "original_instruction_containing_site": {
+        "address": "0x10018080",
+        "bytes": "a3 30 a3 03 10",
+        "instruction": "mov dword ptr [0x1003a330], eax"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10018080",
+        "bytes": "a3 30 a3 03 10",
+        "instruction": "mov dword ptr [0x1003a330], eax",
+        "bytes_before_candidate_end": 2,
+        "bytes_after_candidate_end": 3
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10018078",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        },
+        {
+          "address": "0x1001807a",
+          "bytes": "55",
+          "instruction": "push ebp"
+        },
+        {
+          "address": "0x1001807b",
+          "bytes": "8b ec",
+          "instruction": "mov ebp, esp"
+        },
+        {
+          "address": "0x1001807d",
+          "bytes": "8b 45 08",
+          "instruction": "mov eax, dword ptr [ebp + 8]"
+        },
+        {
+          "address": "0x10018080",
+          "bytes": "a3 30 a3 03 10",
+          "instruction": "mov dword ptr [0x1003a330], eax"
+        },
+        {
+          "address": "0x10018085",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x10018086",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10018087",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10018088",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10018089",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100181dc",
+      "candidate_body_size": 119,
+      "candidate_body_end_exclusive": "0x10018253",
+      "original_highlow_site": "0x10018250",
+      "site_offset_from_entry": 116,
+      "candidate_body_overlap_bytes": 3,
+      "original_instruction_containing_site": {
+        "address": "0x1001824f",
+        "bytes": "a1 20 c5 03 10",
+        "instruction": "mov eax, dword ptr [0x1003c520]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1001824f",
+        "bytes": "a1 20 c5 03 10",
+        "instruction": "mov eax, dword ptr [0x1003c520]",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 1
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10018249",
+          "bytes": "e8 8d 94 ff ff",
+          "instruction": "call 0x100116db"
+        },
+        {
+          "address": "0x1001824e",
+          "bytes": "59",
+          "instruction": "pop ecx"
+        },
+        {
+          "address": "0x1001824f",
+          "bytes": "a1 20 c5 03 10",
+          "instruction": "mov eax, dword ptr [0x1003c520]"
+        },
+        {
+          "address": "0x10018254",
+          "bytes": "89 1c b0",
+          "instruction": "mov dword ptr [eax + esi*4], ebx"
+        },
+        {
+          "address": "0x10018257",
+          "bytes": "47",
+          "instruction": "inc edi"
+        },
+        {
+          "address": "0x10018258",
+          "bytes": "eb a1",
+          "instruction": "jmp 0x100181fb"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100191a6",
+      "candidate_body_size": 35,
+      "candidate_body_end_exclusive": "0x100191c9",
+      "original_highlow_site": "0x100191c7",
+      "site_offset_from_entry": 33,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x100191c5",
+        "bytes": "ff 15 9c 20 02 10",
+        "instruction": "call dword ptr [0x1002209c]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x100191c5",
+        "bytes": "ff 15 9c 20 02 10",
+        "instruction": "call dword ptr [0x1002209c]",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x100191bd",
+          "bytes": "c1 e0 06",
+          "instruction": "shl eax, 6"
+        },
+        {
+          "address": "0x100191c0",
+          "bytes": "8d 44 01 0c",
+          "instruction": "lea eax, [ecx + eax + 0xc]"
+        },
+        {
+          "address": "0x100191c4",
+          "bytes": "50",
+          "instruction": "push eax"
+        },
+        {
+          "address": "0x100191c5",
+          "bytes": "ff 15 9c 20 02 10",
+          "instruction": "call dword ptr [0x1002209c]"
+        },
+        {
+          "address": "0x100191cb",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x100191cc",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x100191cd",
+          "bytes": "6a 18",
+          "instruction": "push 0x18"
+        },
+        {
+          "address": "0x100191cf",
+          "bytes": "68 40 85 02 10",
+          "instruction": "push 0x10028540"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x1001b1a5",
+      "candidate_body_size": 38,
+      "candidate_body_end_exclusive": "0x1001b1cb",
+      "original_highlow_site": "0x1001b1c8",
+      "site_offset_from_entry": 35,
+      "candidate_body_overlap_bytes": 3,
+      "original_instruction_containing_site": {
+        "address": "0x1001b1c6",
+        "bytes": "8b 0d bc a6 03 10",
+        "instruction": "mov ecx, dword ptr [0x1003a6bc]"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1001b1c6",
+        "bytes": "8b 0d bc a6 03 10",
+        "instruction": "mov ecx, dword ptr [0x1003a6bc]",
+        "bytes_before_candidate_end": 5,
+        "bytes_after_candidate_end": 1
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x1001b1c1",
+          "bytes": "6a 16",
+          "instruction": "push 0x16"
+        },
+        {
+          "address": "0x1001b1c3",
+          "bytes": "58",
+          "instruction": "pop eax"
+        },
+        {
+          "address": "0x1001b1c4",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x1001b1c5",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x1001b1c6",
+          "bytes": "8b 0d bc a6 03 10",
+          "instruction": "mov ecx, dword ptr [0x1003a6bc]"
+        },
+        {
+          "address": "0x1001b1cc",
+          "bytes": "89 08",
+          "instruction": "mov dword ptr [eax], ecx"
+        },
+        {
+          "address": "0x1001b1ce",
+          "bytes": "33 c0",
+          "instruction": "xor eax, eax"
+        },
+        {
+          "address": "0x1001b1d0",
+          "bytes": "5d",
+          "instruction": "pop ebp"
+        },
+        {
+          "address": "0x1001b1d1",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x1001b1d2",
+          "bytes": "8b ff",
+          "instruction": "mov edi, edi"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020a90",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020ae3",
+      "original_highlow_site": "0x10020ae1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020adf",
+        "bytes": "89 35 c0 75 03 10",
+        "instruction": "mov dword ptr [0x100375c0], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020adf",
+        "bytes": "89 35 c0 75 03 10",
+        "instruction": "mov dword ptr [0x100375c0], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020ad9",
+          "bytes": "89 35 bc 75 03 10",
+          "instruction": "mov dword ptr [0x100375bc], esi"
+        },
+        {
+          "address": "0x10020adf",
+          "bytes": "89 35 c0 75 03 10",
+          "instruction": "mov dword ptr [0x100375c0], esi"
+        },
+        {
+          "address": "0x10020ae5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020ae6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020ae7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020ae8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020ae9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020aea",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020af0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020b43",
+      "original_highlow_site": "0x10020b41",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020b3f",
+        "bytes": "89 35 f8 75 03 10",
+        "instruction": "mov dword ptr [0x100375f8], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020b3f",
+        "bytes": "89 35 f8 75 03 10",
+        "instruction": "mov dword ptr [0x100375f8], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020b39",
+          "bytes": "89 35 f4 75 03 10",
+          "instruction": "mov dword ptr [0x100375f4], esi"
+        },
+        {
+          "address": "0x10020b3f",
+          "bytes": "89 35 f8 75 03 10",
+          "instruction": "mov dword ptr [0x100375f8], esi"
+        },
+        {
+          "address": "0x10020b45",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020b46",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020b47",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020b48",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020b49",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020b4a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020b50",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020ba3",
+      "original_highlow_site": "0x10020ba1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020b9f",
+        "bytes": "89 35 30 76 03 10",
+        "instruction": "mov dword ptr [0x10037630], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020b9f",
+        "bytes": "89 35 30 76 03 10",
+        "instruction": "mov dword ptr [0x10037630], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020b99",
+          "bytes": "89 35 2c 76 03 10",
+          "instruction": "mov dword ptr [0x1003762c], esi"
+        },
+        {
+          "address": "0x10020b9f",
+          "bytes": "89 35 30 76 03 10",
+          "instruction": "mov dword ptr [0x10037630], esi"
+        },
+        {
+          "address": "0x10020ba5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020ba6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020ba7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020ba8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020ba9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020baa",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020bb0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020c03",
+      "original_highlow_site": "0x10020c01",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020bff",
+        "bytes": "89 35 68 76 03 10",
+        "instruction": "mov dword ptr [0x10037668], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020bff",
+        "bytes": "89 35 68 76 03 10",
+        "instruction": "mov dword ptr [0x10037668], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020bf9",
+          "bytes": "89 35 64 76 03 10",
+          "instruction": "mov dword ptr [0x10037664], esi"
+        },
+        {
+          "address": "0x10020bff",
+          "bytes": "89 35 68 76 03 10",
+          "instruction": "mov dword ptr [0x10037668], esi"
+        },
+        {
+          "address": "0x10020c05",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020c06",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020c07",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020c08",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020c09",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020c0a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020c10",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020c63",
+      "original_highlow_site": "0x10020c61",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020c5f",
+        "bytes": "89 35 a0 76 03 10",
+        "instruction": "mov dword ptr [0x100376a0], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020c5f",
+        "bytes": "89 35 a0 76 03 10",
+        "instruction": "mov dword ptr [0x100376a0], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020c59",
+          "bytes": "89 35 9c 76 03 10",
+          "instruction": "mov dword ptr [0x1003769c], esi"
+        },
+        {
+          "address": "0x10020c5f",
+          "bytes": "89 35 a0 76 03 10",
+          "instruction": "mov dword ptr [0x100376a0], esi"
+        },
+        {
+          "address": "0x10020c65",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020c66",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020c67",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020c68",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020c69",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020c6a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020c70",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020cc3",
+      "original_highlow_site": "0x10020cc1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020cbf",
+        "bytes": "89 35 d8 76 03 10",
+        "instruction": "mov dword ptr [0x100376d8], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020cbf",
+        "bytes": "89 35 d8 76 03 10",
+        "instruction": "mov dword ptr [0x100376d8], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020cb9",
+          "bytes": "89 35 d4 76 03 10",
+          "instruction": "mov dword ptr [0x100376d4], esi"
+        },
+        {
+          "address": "0x10020cbf",
+          "bytes": "89 35 d8 76 03 10",
+          "instruction": "mov dword ptr [0x100376d8], esi"
+        },
+        {
+          "address": "0x10020cc5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020cc6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020cc7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020cc8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020cc9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020cca",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020cd0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020d23",
+      "original_highlow_site": "0x10020d21",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020d1f",
+        "bytes": "89 35 10 77 03 10",
+        "instruction": "mov dword ptr [0x10037710], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020d1f",
+        "bytes": "89 35 10 77 03 10",
+        "instruction": "mov dword ptr [0x10037710], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020d19",
+          "bytes": "89 35 0c 77 03 10",
+          "instruction": "mov dword ptr [0x1003770c], esi"
+        },
+        {
+          "address": "0x10020d1f",
+          "bytes": "89 35 10 77 03 10",
+          "instruction": "mov dword ptr [0x10037710], esi"
+        },
+        {
+          "address": "0x10020d25",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020d26",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020d27",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020d28",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020d29",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020d2a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020d30",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020d83",
+      "original_highlow_site": "0x10020d81",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020d7f",
+        "bytes": "89 35 48 77 03 10",
+        "instruction": "mov dword ptr [0x10037748], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020d7f",
+        "bytes": "89 35 48 77 03 10",
+        "instruction": "mov dword ptr [0x10037748], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020d79",
+          "bytes": "89 35 44 77 03 10",
+          "instruction": "mov dword ptr [0x10037744], esi"
+        },
+        {
+          "address": "0x10020d7f",
+          "bytes": "89 35 48 77 03 10",
+          "instruction": "mov dword ptr [0x10037748], esi"
+        },
+        {
+          "address": "0x10020d85",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020d86",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020d87",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020d88",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020d89",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020d8a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020d90",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020de3",
+      "original_highlow_site": "0x10020de1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020ddf",
+        "bytes": "89 35 80 77 03 10",
+        "instruction": "mov dword ptr [0x10037780], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020ddf",
+        "bytes": "89 35 80 77 03 10",
+        "instruction": "mov dword ptr [0x10037780], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020dd9",
+          "bytes": "89 35 7c 77 03 10",
+          "instruction": "mov dword ptr [0x1003777c], esi"
+        },
+        {
+          "address": "0x10020ddf",
+          "bytes": "89 35 80 77 03 10",
+          "instruction": "mov dword ptr [0x10037780], esi"
+        },
+        {
+          "address": "0x10020de5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020de6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020de7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020de8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020de9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020dea",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020df0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020e43",
+      "original_highlow_site": "0x10020e41",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020e3f",
+        "bytes": "89 35 b8 77 03 10",
+        "instruction": "mov dword ptr [0x100377b8], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020e3f",
+        "bytes": "89 35 b8 77 03 10",
+        "instruction": "mov dword ptr [0x100377b8], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020e39",
+          "bytes": "89 35 b4 77 03 10",
+          "instruction": "mov dword ptr [0x100377b4], esi"
+        },
+        {
+          "address": "0x10020e3f",
+          "bytes": "89 35 b8 77 03 10",
+          "instruction": "mov dword ptr [0x100377b8], esi"
+        },
+        {
+          "address": "0x10020e45",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020e46",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020e47",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020e48",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020e49",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020e4a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020e50",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020ea3",
+      "original_highlow_site": "0x10020ea1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020e9f",
+        "bytes": "89 35 f0 77 03 10",
+        "instruction": "mov dword ptr [0x100377f0], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020e9f",
+        "bytes": "89 35 f0 77 03 10",
+        "instruction": "mov dword ptr [0x100377f0], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020e99",
+          "bytes": "89 35 ec 77 03 10",
+          "instruction": "mov dword ptr [0x100377ec], esi"
+        },
+        {
+          "address": "0x10020e9f",
+          "bytes": "89 35 f0 77 03 10",
+          "instruction": "mov dword ptr [0x100377f0], esi"
+        },
+        {
+          "address": "0x10020ea5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020ea6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020ea7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020ea8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020ea9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020eaa",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020eb0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020f03",
+      "original_highlow_site": "0x10020f01",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020eff",
+        "bytes": "89 35 28 78 03 10",
+        "instruction": "mov dword ptr [0x10037828], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020eff",
+        "bytes": "89 35 28 78 03 10",
+        "instruction": "mov dword ptr [0x10037828], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020ef9",
+          "bytes": "89 35 24 78 03 10",
+          "instruction": "mov dword ptr [0x10037824], esi"
+        },
+        {
+          "address": "0x10020eff",
+          "bytes": "89 35 28 78 03 10",
+          "instruction": "mov dword ptr [0x10037828], esi"
+        },
+        {
+          "address": "0x10020f05",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020f06",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020f07",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020f08",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020f09",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020f0a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020f10",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020f63",
+      "original_highlow_site": "0x10020f61",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020f5f",
+        "bytes": "89 35 60 78 03 10",
+        "instruction": "mov dword ptr [0x10037860], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020f5f",
+        "bytes": "89 35 60 78 03 10",
+        "instruction": "mov dword ptr [0x10037860], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020f59",
+          "bytes": "89 35 5c 78 03 10",
+          "instruction": "mov dword ptr [0x1003785c], esi"
+        },
+        {
+          "address": "0x10020f5f",
+          "bytes": "89 35 60 78 03 10",
+          "instruction": "mov dword ptr [0x10037860], esi"
+        },
+        {
+          "address": "0x10020f65",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020f66",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020f67",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020f68",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020f69",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020f6a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020f70",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10020fc3",
+      "original_highlow_site": "0x10020fc1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x10020fbf",
+        "bytes": "89 35 98 78 03 10",
+        "instruction": "mov dword ptr [0x10037898], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x10020fbf",
+        "bytes": "89 35 98 78 03 10",
+        "instruction": "mov dword ptr [0x10037898], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10020fb9",
+          "bytes": "89 35 94 78 03 10",
+          "instruction": "mov dword ptr [0x10037894], esi"
+        },
+        {
+          "address": "0x10020fbf",
+          "bytes": "89 35 98 78 03 10",
+          "instruction": "mov dword ptr [0x10037898], esi"
+        },
+        {
+          "address": "0x10020fc5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10020fc6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10020fc7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020fc8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020fc9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10020fca",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10020fd0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10021023",
+      "original_highlow_site": "0x10021021",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x1002101f",
+        "bytes": "89 35 74 c3 03 10",
+        "instruction": "mov dword ptr [0x1003c374], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1002101f",
+        "bytes": "89 35 74 c3 03 10",
+        "instruction": "mov dword ptr [0x1003c374], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10021019",
+          "bytes": "89 35 70 c3 03 10",
+          "instruction": "mov dword ptr [0x1003c370], esi"
+        },
+        {
+          "address": "0x1002101f",
+          "bytes": "89 35 74 c3 03 10",
+          "instruction": "mov dword ptr [0x1003c374], esi"
+        },
+        {
+          "address": "0x10021025",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10021026",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10021027",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021028",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021029",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x1002102a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10021030",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10021083",
+      "original_highlow_site": "0x10021081",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x1002107f",
+        "bytes": "89 35 d0 78 03 10",
+        "instruction": "mov dword ptr [0x100378d0], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1002107f",
+        "bytes": "89 35 d0 78 03 10",
+        "instruction": "mov dword ptr [0x100378d0], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10021079",
+          "bytes": "89 35 cc 78 03 10",
+          "instruction": "mov dword ptr [0x100378cc], esi"
+        },
+        {
+          "address": "0x1002107f",
+          "bytes": "89 35 d0 78 03 10",
+          "instruction": "mov dword ptr [0x100378d0], esi"
+        },
+        {
+          "address": "0x10021085",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10021086",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10021087",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021088",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021089",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x1002108a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10021090",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x100210e3",
+      "original_highlow_site": "0x100210e1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x100210df",
+        "bytes": "89 35 08 79 03 10",
+        "instruction": "mov dword ptr [0x10037908], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x100210df",
+        "bytes": "89 35 08 79 03 10",
+        "instruction": "mov dword ptr [0x10037908], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x100210d9",
+          "bytes": "89 35 04 79 03 10",
+          "instruction": "mov dword ptr [0x10037904], esi"
+        },
+        {
+          "address": "0x100210df",
+          "bytes": "89 35 08 79 03 10",
+          "instruction": "mov dword ptr [0x10037908], esi"
+        },
+        {
+          "address": "0x100210e5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x100210e6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x100210e7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x100210e8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x100210e9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x100210ea",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100210f0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10021143",
+      "original_highlow_site": "0x10021141",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x1002113f",
+        "bytes": "89 35 40 79 03 10",
+        "instruction": "mov dword ptr [0x10037940], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1002113f",
+        "bytes": "89 35 40 79 03 10",
+        "instruction": "mov dword ptr [0x10037940], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10021139",
+          "bytes": "89 35 3c 79 03 10",
+          "instruction": "mov dword ptr [0x1003793c], esi"
+        },
+        {
+          "address": "0x1002113f",
+          "bytes": "89 35 40 79 03 10",
+          "instruction": "mov dword ptr [0x10037940], esi"
+        },
+        {
+          "address": "0x10021145",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10021146",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10021147",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021148",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021149",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x1002114a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10021150",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x100211a3",
+      "original_highlow_site": "0x100211a1",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x1002119f",
+        "bytes": "89 35 78 79 03 10",
+        "instruction": "mov dword ptr [0x10037978], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1002119f",
+        "bytes": "89 35 78 79 03 10",
+        "instruction": "mov dword ptr [0x10037978], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10021199",
+          "bytes": "89 35 74 79 03 10",
+          "instruction": "mov dword ptr [0x10037974], esi"
+        },
+        {
+          "address": "0x1002119f",
+          "bytes": "89 35 78 79 03 10",
+          "instruction": "mov dword ptr [0x10037978], esi"
+        },
+        {
+          "address": "0x100211a5",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x100211a6",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x100211a7",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x100211a8",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x100211a9",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x100211aa",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x100211b0",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10021203",
+      "original_highlow_site": "0x10021201",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x100211ff",
+        "bytes": "89 35 b0 79 03 10",
+        "instruction": "mov dword ptr [0x100379b0], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x100211ff",
+        "bytes": "89 35 b0 79 03 10",
+        "instruction": "mov dword ptr [0x100379b0], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x100211f9",
+          "bytes": "89 35 ac 79 03 10",
+          "instruction": "mov dword ptr [0x100379ac], esi"
+        },
+        {
+          "address": "0x100211ff",
+          "bytes": "89 35 b0 79 03 10",
+          "instruction": "mov dword ptr [0x100379b0], esi"
+        },
+        {
+          "address": "0x10021205",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10021206",
+          "bytes": "c3",
+          "instruction": "ret"
+        },
+        {
+          "address": "0x10021207",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021208",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x10021209",
+          "bytes": "cc",
+          "instruction": "int3"
+        },
+        {
+          "address": "0x1002120a",
+          "bytes": "cc",
+          "instruction": "int3"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x10021210",
+      "candidate_body_size": 83,
+      "candidate_body_end_exclusive": "0x10021263",
+      "original_highlow_site": "0x10021261",
+      "site_offset_from_entry": 81,
+      "candidate_body_overlap_bytes": 2,
+      "original_instruction_containing_site": {
+        "address": "0x1002125f",
+        "bytes": "89 35 e8 79 03 10",
+        "instruction": "mov dword ptr [0x100379e8], esi"
+      },
+      "site_fully_inside_one_decoded_instruction": true,
+      "original_instruction_crosses_candidate_end": {
+        "address": "0x1002125f",
+        "bytes": "89 35 e8 79 03 10",
+        "instruction": "mov dword ptr [0x100379e8], esi",
+        "bytes_before_candidate_end": 4,
+        "bytes_after_candidate_end": 2
+      },
+      "original_disassembly_near_boundary": [
+        {
+          "address": "0x10021259",
+          "bytes": "89 35 e4 79 03 10",
+          "instruction": "mov dword ptr [0x100379e4], esi"
+        },
+        {
+          "address": "0x1002125f",
+          "bytes": "89 35 e8 79 03 10",
+          "instruction": "mov dword ptr [0x100379e8], esi"
+        },
+        {
+          "address": "0x10021265",
+          "bytes": "5e",
+          "instruction": "pop esi"
+        },
+        {
+          "address": "0x10021266",
+          "bytes": "c3",
+          "instruction": "ret"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Linear disassembly begins at each function entry and uses Capstone; this does not prove reachability or ownership of tail bytes.",
+    "The report identifies instruction/fixup overlap only; it does not patch the PE or prove full-image/runtime correctness."
+  ]
+}

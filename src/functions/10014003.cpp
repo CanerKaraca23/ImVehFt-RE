@@ -2,6 +2,15 @@
 #include <cstdint>
 #include <cstdio>
 
+extern "C" int* __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" void* __cdecl FID_conflict__memcpy(
+    void*, void*, std::size_t);
+extern "C" int __cdecl __flush(FILE*);
+extern "C" std::uint32_t __cdecl __write(
+    int, const void*, std::uint32_t);
+extern "C" int __cdecl __flsbuf(int, FILE*);
+
 std::size_t __cdecl __fwrite_nolock(
     void* _DstBuf,
     std::size_t _Size,
@@ -19,15 +28,7 @@ std::size_t __cdecl __fwrite_nolock(
         std::int32_t _bufsiz;
     };
 
-    extern int* __cdecl __errno();
-
-    extern void* __cdecl FID_conflict__memcpy(
-        void*, const void*, std::uint32_t);
-    extern int __cdecl __flush(FILE*);
     extern int __cdecl __fileno(FILE*);
-    extern std::uint32_t __cdecl __write(
-        int, const void*, std::uint32_t);
-    extern int __cdecl __flsbuf(int, FILE*);
 
     if ((_Size != 0) && (_Count != 0))
     {
@@ -191,7 +192,7 @@ std::size_t __cdecl __fwrite_nolock(
         }
 
         *(__errno()) = 0x16;
-        reinterpret_cast<void (__cdecl*)()>(0x1001189f)();
+        FUN_1001189f();
     }
 
     return 0;

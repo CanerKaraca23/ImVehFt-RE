@@ -28,7 +28,7 @@ using undefined4 = std::uint32_t;
 using undefined8 = std::uint64_t;
 extern "C" int __cdecl flsall(int);
 extern "C" int __cdecl __flush(FILE* _File);
-extern "C" int __cdecl __fileno(FILE* _File);
+int __cdecl __fileno(FILE* _File);
 extern "C" int __cdecl __commit(int _FileHandle);
 
 extern "C" int __cdecl __fflush_nolock(FILE* _File)

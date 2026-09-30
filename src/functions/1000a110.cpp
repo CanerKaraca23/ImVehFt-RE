@@ -1,6 +1,6 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
-extern void* BasicCallbackManager_5499603_0_0_0_0_cbPostFXManager_vftable[];
 extern "C" void __cdecl FUN_10010756(void*);
 
 struct FUN_1000a110_this {
@@ -27,8 +27,7 @@ void* FUN_1000a110_this::FUN_1000a110(std::uint8_t param_1)
 
     auto* object = static_cast<Object*>(self);
 
-    object->vftable =
-        BasicCallbackManager_5499603_0_0_0_0_cbPostFXManager_vftable;
+    object->vftable = reinterpret_cast<void**>(IVF_IMAGE_ADDRESS_10024DE8);
 
     if (object->field_28 != nullptr)
     {

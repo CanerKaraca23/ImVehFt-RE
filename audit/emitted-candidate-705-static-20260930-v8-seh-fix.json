@@ -1,0 +1,19 @@
+{
+  "scope": "Targeted experimental patch of candidate v7 for the Ghidra-confirmed _Type_info_dtor SEH argument-order defect.",
+  "input_candidate_sha256": "041B0CD18AFF3F7872AA4BC8EA8D1BBA96181B98C8D231D08FC9BBDAED74E320",
+  "corrected_object_sha256": "1FB0D194691010ABAC4F21C9CBD17D21A373EF8EFDCB635CE939FBD06FAD1E4E",
+  "output_candidate_sha256": "73A9A04DDEA5C38B092EB7D22C2932836F80505A28738ABA280EDD5C825C9CCC",
+  "output_bytes": 352768,
+  "function_va": "0x10013AD2",
+  "old_prolog_bytes": "56 68 08 83 02 10 6A 0C",
+  "new_prolog_bytes": "56 6A 0C 68 08 83 02 10",
+  "scope_table_va": "0x10028308",
+  "base_relocation_moved_from_rva": "0x00013AD4",
+  "base_relocation_moved_to_rva": "0x00013AD6",
+  "base_relocation_count_preserved": true,
+  "limitations": [
+    "This is a targeted correction layered onto candidate v7, not a fresh full-set PE emission.",
+    "The v7 image already has a known runtime crash; this patch tests only the identified cause and may expose additional defects.",
+    "No successful game startup or gameplay behavior is established by producing this file."
+  ]
+}

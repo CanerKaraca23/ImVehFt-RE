@@ -1,16 +1,16 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 using Float10 = long double;
 
-extern float _DAT_10024fd8;
-extern float _DAT_10024e88;
-extern float _DAT_10024fd0;
+extern double _DAT_10024fd8;
+extern double _DAT_10024e88;
+extern double _DAT_10024fd0;
 extern float _DAT_10024fc8;
 
 extern std::int32_t DAT_1003c248;
 extern std::uint32_t DAT_1003bc7c;
 extern std::uint32_t DAT_1003bbb4;
-extern std::int32_t* _DAT_00b74494;
 
 extern "C" Float10 __stdcall FUN_1001b5a0();
 extern "C" std::int32_t __stdcall FUN_10009360();
@@ -49,9 +49,7 @@ void FUN_10003660_this::FUN_10003660(std::int32_t param_1)
             0x30);
     }
 
-    float local_14 = position[0];
-    float local_10 = position[1];
-    float local_c = position[2];
+    float local_position[3] = { position[0], position[1], position[2] };
 
     const float fVar3 =
         *reinterpret_cast<float*>(
@@ -91,17 +89,16 @@ void FUN_10003660_this::FUN_10003660(std::int32_t param_1)
         static_cast<float>(
             static_cast<Float10>(fVar4) * fVar10));
 
-    local_14 = static_cast<float>(
+    local_position[0] = static_cast<float>(
         fVar10 * fVar12 +
-        static_cast<Float10>(local_14));
+        static_cast<Float10>(local_position[0]));
 
-    local_10 = static_cast<float>(
+    local_position[1] = static_cast<float>(
         fVar12 * fVar13 +
-        static_cast<Float10>(local_10));
+        static_cast<Float10>(local_position[1]));
 
-    local_c =
-        local_c +
-        static_cast<float>(_DAT_10024fd0);
+    local_position[2] = static_cast<float>(
+        static_cast<double>(local_position[2]) + _DAT_10024fd0);
 
     const std::int32_t iVar7 = FUN_10009360();
 
@@ -112,7 +109,7 @@ void FUN_10003660_this::FUN_10003660(std::int32_t param_1)
             reinterpret_cast<std::uintptr_t>(this_));
 
     const std::int32_t objectIndex =
-        (thisAddress - *_DAT_00b74494) / 0xA18;
+        (thisAddress - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xA18;
 
     if (*reinterpret_cast<std::uint8_t*>(
             *reinterpret_cast<std::int32_t*>(
@@ -157,7 +154,7 @@ void FUN_10003660_this::FUN_10003660(std::int32_t param_1)
     dispatch(
         2,
         uVar9,
-        &local_14,
+        local_position,
         static_cast<float>(
             fVar10 *
             static_cast<Float10>(

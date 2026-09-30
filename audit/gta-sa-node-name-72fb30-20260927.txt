@@ -1,0 +1,13 @@
+FUNCTION thunk_FUN_00405ac5 @ 0072fb30
+0072fb30  JMP 0x00405ac5
+
+DECOMPILED SOURCE
+
+void thunk_FUN_00405ac5(void)
+
+{
+  FUN_0072fb35();
+  return;
+}
+
+

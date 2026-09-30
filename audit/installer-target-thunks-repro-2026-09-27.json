@@ -1,0 +1,205 @@
+{
+  "scope": "22 original installer rel32 sites from the preserved target inventory mapped to relocatable C-linkage tail-jump wrappers",
+  "patch_site_count": 22,
+  "unique_destination_count": 20,
+  "patches": [
+    {
+      "field_address": "0x006D6618",
+      "opcode_address": "0x006D6617",
+      "original_displacement": "0x0F930EB4",
+      "target_address": "0x100074D0",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_100074d0@@YAHH@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_100074D0"
+    },
+    {
+      "field_address": "0x005B8FFE",
+      "opcode_address": "0x005B8FFD",
+      "original_displacement": "0x0FA4F13E",
+      "target_address": "0x10008140",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_10008140@@YGIXZ",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10008140"
+    },
+    {
+      "field_address": "0x006D6495",
+      "opcode_address": "0x006D6494",
+      "original_displacement": "0x0F92EC47",
+      "target_address": "0x100050E0",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_100050e0@@YIXH@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_100050E0"
+    },
+    {
+      "field_address": "0x0053BFCD",
+      "opcode_address": "0x0053BFCC",
+      "original_displacement": "0x0FAC8B3F",
+      "target_address": "0x10004B10",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10004B10",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10004B10"
+    },
+    {
+      "field_address": "0x006D6A59",
+      "opcode_address": "0x006D6A58",
+      "original_displacement": "0x0F92D863",
+      "target_address": "0x100042C0",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_100042c0@FUN_100042c0_this@@QAEXI@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_100042C0"
+    },
+    {
+      "field_address": "0x005D5BC8",
+      "opcode_address": "0x005D5BC7",
+      "original_displacement": "0x0FA32BB4",
+      "target_address": "0x10008780",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10008780",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10008780"
+    },
+    {
+      "field_address": "0x005D5C1F",
+      "opcode_address": "0x005D5C1E",
+      "original_displacement": "0x0FA32C0D",
+      "target_address": "0x10008830",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10008830",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10008830"
+    },
+    {
+      "field_address": "0x005D5AD2",
+      "opcode_address": "0x005D5AD1",
+      "original_displacement": "0x0FA32E6A",
+      "target_address": "0x10008940",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10008940",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10008940"
+    },
+    {
+      "field_address": "0x006E198F",
+      "opcode_address": "0x006E198E",
+      "original_displacement": "0x0F9265FD",
+      "target_address": "0x10007F90",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10007F90",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10007F90"
+    },
+    {
+      "field_address": "0x006E18DB",
+      "opcode_address": "0x006E18DA",
+      "original_displacement": "0x0F926671",
+      "target_address": "0x10007F50",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10007F50",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10007F50"
+    },
+    {
+      "field_address": "0x006E1A2E",
+      "opcode_address": "0x006E1A2D",
+      "original_displacement": "0x0F92653E",
+      "target_address": "0x10007F70",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10007F70",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10007F70"
+    },
+    {
+      "field_address": "0x006FDED7",
+      "opcode_address": "0x006FDED6",
+      "original_displacement": "0x0F905F65",
+      "target_address": "0x10003E40",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10003E40",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003E40"
+    },
+    {
+      "field_address": "0x006FDF11",
+      "opcode_address": "0x006FDF10",
+      "original_displacement": "0x0F90602B",
+      "target_address": "0x10003F40",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_10003f40@@YAXPADHIH@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003F40"
+    },
+    {
+      "field_address": "0x006AB351",
+      "opcode_address": "0x006AB350",
+      "original_displacement": "0x0F957CDB",
+      "target_address": "0x10003030",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10003030",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003030"
+    },
+    {
+      "field_address": "0x006F3AEE",
+      "opcode_address": "0x006F3AED",
+      "original_displacement": "0x0F90F56E",
+      "target_address": "0x10003060",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10003060",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003060"
+    },
+    {
+      "field_address": "0x006F3974",
+      "opcode_address": "0x006F3973",
+      "original_displacement": "0x0F90F708",
+      "target_address": "0x10003080",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_10003080",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003080"
+    },
+    {
+      "field_address": "0x006E174C",
+      "opcode_address": "0x006E174B",
+      "original_displacement": "0x0F921CB0",
+      "target_address": "0x10003400",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_10003400@FUN_10003400_this@@QAEXPAMD@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003400"
+    },
+    {
+      "field_address": "0x006E175F",
+      "opcode_address": "0x006E175E",
+      "original_displacement": "0x0F921C9D",
+      "target_address": "0x10003400",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_10003400@FUN_10003400_this@@QAEXPAMD@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003400"
+    },
+    {
+      "field_address": "0x006E173D",
+      "opcode_address": "0x006E173C",
+      "original_displacement": "0x0F921F1F",
+      "target_address": "0x10003660",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_10003660@FUN_10003660_this@@QAEXH@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003660"
+    },
+    {
+      "field_address": "0x006E1774",
+      "opcode_address": "0x006E1773",
+      "original_displacement": "0x0F921EE8",
+      "target_address": "0x10003660",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_10003660@FUN_10003660_this@@QAEXH@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003660"
+    },
+    {
+      "field_address": "0x006E27E7",
+      "opcode_address": "0x006E27E6",
+      "original_displacement": "0x0F9209F5",
+      "target_address": "0x100031E0",
+      "target_kind": "supplemental-hook-shim",
+      "target_symbol": "_ImVehFtHook_100031E0",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_100031E0"
+    },
+    {
+      "field_address": "0x006E0DF8",
+      "opcode_address": "0x006E0DF7",
+      "original_displacement": "0x0F922544",
+      "target_address": "0x10003340",
+      "target_kind": "candidate-function",
+      "target_symbol": "?FUN_10003340@@YAXIHIIIIIMIIIIIIIIIIIII@Z",
+      "wrapper_symbol": "_IVF_INSTALL_TARGET_10003340"
+    }
+  ]
+}

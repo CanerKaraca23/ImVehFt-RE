@@ -5,7 +5,7 @@ extern "C" std::size_t __cdecl _strlen(const char*);
 extern "C" int* __cdecl __errno();
 extern "C" void __stdcall FUN_1001189f();
 
-std::uint32_t __cdecl vscan_fn(
+extern "C" std::uint32_t __cdecl vscan_fn(
     void* param_1,
     int param_2,
     std::uint32_t param_3,

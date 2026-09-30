@@ -1,0 +1,121 @@
+{
+  "scope": "original .rdata/.data bytes, data-to-data fixups, exact candidate-function fixups, 22 CRT initializer thunks, CRT fallback helper, 18 byte-template local code stubs for 21 pointer targets, context shim and CRT cleanup callback, and four _initterm_e stubs; not a loadable image",
+  "image": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\modloader\\My Scripts\\.ImVehFt\\ImVehFt.asi",
+  "image_sha256": "409f0df7ae579841db05c3ec6dad0a9afc579194632874962e1bdee0ccf020d3",
+  "unresolved_dat_names_defined": 601,
+  "relocation_sites_by_site_and_target_section": {
+    ".data -> .data": 30,
+    ".data -> .rdata": 234,
+    ".data -> .text": 10,
+    ".rdata -> .data": 166,
+    ".rdata -> .rdata": 892,
+    ".rdata -> .text": 189
+  },
+  "data_to_data_sites_emitted_as_offset_relocations": 1322,
+  "code_target_sites_emitted_as_offset_relocations": 178,
+  "unique_candidate_function_external_symbols": 106,
+  "crt_initializer_registration_thunks_reconstructed": 22,
+  "crt_fallback_helper_stubs_reconstructed": 1,
+  "crt_cleanup_stubs_reconstructed": 1,
+  "context_shims_reconstructed": 1,
+  "simple_local_code_stubs_reconstructed": 18,
+  "initterm_e_stubs_reconstructed": 4,
+  "initterm_e_processor_feature_stubs_reconstructed": 2,
+  "initterm_e_allocation_stub_reconstructed": true,
+  "initterm_e_state_table_stub_reconstructed": true,
+  "text_target_sites_left_unresolved": 21,
+  "text_target_sites": [
+    {
+      "site_va": "0x100282A0",
+      "stored_va": "0x10011030"
+    },
+    {
+      "site_va": "0x100282BC",
+      "stored_va": "0x10011190"
+    },
+    {
+      "site_va": "0x100282C0",
+      "stored_va": "0x100111A1"
+    },
+    {
+      "site_va": "0x1002836C",
+      "stored_va": "0x10013EB6"
+    },
+    {
+      "site_va": "0x10028478",
+      "stored_va": "0x10017E02"
+    },
+    {
+      "site_va": "0x10028498",
+      "stored_va": "0x10017E52"
+    },
+    {
+      "site_va": "0x100284B8",
+      "stored_va": "0x10018036"
+    },
+    {
+      "site_va": "0x100284D4",
+      "stored_va": "0x100181AB"
+    },
+    {
+      "site_va": "0x100284D8",
+      "stored_va": "0x100181BE"
+    },
+    {
+      "site_va": "0x10028518",
+      "stored_va": "0x10018A86"
+    },
+    {
+      "site_va": "0x10028660",
+      "stored_va": "0x1001CEC8"
+    },
+    {
+      "site_va": "0x10028668",
+      "stored_va": "0x1001CE8A"
+    },
+    {
+      "site_va": "0x1002866C",
+      "stored_va": "0x1001CE94"
+    },
+    {
+      "site_va": "0x10028688",
+      "stored_va": "0x1001CF79"
+    },
+    {
+      "site_va": "0x10028700",
+      "stored_va": "0x1001D18F"
+    },
+    {
+      "site_va": "0x10028708",
+      "stored_va": "0x1001D0FF"
+    },
+    {
+      "site_va": "0x1002870C",
+      "stored_va": "0x1001D108"
+    },
+    {
+      "site_va": "0x10028728",
+      "stored_va": "0x1001D37A"
+    },
+    {
+      "site_va": "0x10028748",
+      "stored_va": "0x1001D413"
+    },
+    {
+      "site_va": "0x1002879C",
+      "stored_va": "0x1002051F"
+    },
+    {
+      "site_va": "0x100287A0",
+      "stored_va": "0x1002053B"
+    }
+  ],
+  "unique_synthetic_data_target_labels": 712,
+  "assembly_sha256": "25f19fafeb00f1929e0375bba13112baa81b039ceb4d76f5937cc6d099722c6f",
+  "limitations": [
+    "noncandidate text-target pointers stay at preferred-base values",
+    "the original .text contains a Ghidra-verified state-table stub, but reconstructed code/data remain diagnostic and are not loader-integrated",
+    "the original .text has 3160 additional HIGHLOW relocations not represented here",
+    "section RVAs, function layout, hook shim fixups, CRT tables, and PE image layout are not reconstructed"
+  ]
+}

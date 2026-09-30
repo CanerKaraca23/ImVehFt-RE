@@ -1,0 +1,1258 @@
+{
+  "source": "audit\\asi-hook-target-cfg-2026-09-27.csv",
+  "image_range": [
+    "0x10000000",
+    "0x10043000"
+  ],
+  "shim_count": 12,
+  "internal_position_relative_branches_verified": 42,
+  "fixup_count": 139,
+  "fixup_counts_by_kind": {
+    "absolute-image-memory-reference": 123,
+    "absolute-image-pointer-immediate": 5,
+    "candidate-function-rel32-call": 11
+  },
+  "fixups": [
+    {
+      "shim": "0x10003030",
+      "instruction_va": "0x10003030",
+      "mnemonic": "MOV dword ptr [0x1003bc2c],ESI",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003030",
+      "instruction_va": "0x1000303B",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10004A60"
+    },
+    {
+      "shim": "0x10003060",
+      "instruction_va": "0x10003061",
+      "mnemonic": "MOV dword ptr [0x1003bc2c],ESI",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003060",
+      "instruction_va": "0x10003067",
+      "mnemonic": "MOV EAX,[0x1003bc2c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003080",
+      "instruction_va": "0x10003081",
+      "mnemonic": "MOV dword ptr [0x1003bc2c],ESI",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003080",
+      "instruction_va": "0x10003087",
+      "mnemonic": "MOV EAX,[0x1003bc2c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003080",
+      "instruction_va": "0x1000309C",
+      "mnemonic": "MOV EAX,[0x1003bc2c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x100031e0",
+      "instruction_va": "0x100031E0",
+      "mnemonic": "MOV dword ptr [0x1003bc14],ESI",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC14"
+    },
+    {
+      "shim": "0x100031e0",
+      "instruction_va": "0x100031E7",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10003130"
+    },
+    {
+      "shim": "0x10004b10",
+      "instruction_va": "0x10004B10",
+      "mnemonic": "MOV AX,[0x10037508]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10004b10",
+      "instruction_va": "0x10004B16",
+      "mnemonic": "MOV byte ptr [0x1003a6c6],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003A6C6"
+    },
+    {
+      "shim": "0x10004b10",
+      "instruction_va": "0x10004B29",
+      "mnemonic": "MOV [0x10037508],AX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10004b10",
+      "instruction_va": "0x10004B6C",
+      "mnemonic": "MOV byte ptr [0x1003a6c6],0x2",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003A6C6"
+    },
+    {
+      "shim": "0x10004b10",
+      "instruction_va": "0x10004B73",
+      "mnemonic": "MOV word ptr [0x10037508],CX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10004b10",
+      "instruction_va": "0x10004B93",
+      "mnemonic": "MOV byte ptr [0x1003a6c6],0x1",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003A6C6"
+    },
+    {
+      "shim": "0x10004b10",
+      "instruction_va": "0x10004B9A",
+      "mnemonic": "MOV word ptr [0x10037508],CX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10007f50",
+      "instruction_va": "0x10007F50",
+      "mnemonic": "FCOMP float ptr [0x1003c258]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C258"
+    },
+    {
+      "shim": "0x10007f70",
+      "instruction_va": "0x10007F75",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10003200"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007F90",
+      "mnemonic": "MOV dword ptr [0x1003bd88],ESI",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007F97",
+      "mnemonic": "MOV EAX,[0x1003bd88]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007F9C",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10008E00"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007FA1",
+      "mnemonic": "MOV [0x1003bd84],EAX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BD84"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007FA6",
+      "mnemonic": "MOV EAX,[0x1003bd88]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007FB1",
+      "mnemonic": "FCOMP double ptr [0x10024f88]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024F88"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007FBE",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bd88]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007f90",
+      "instruction_va": "0x10007FCD",
+      "mnemonic": "MOV EDX,dword ptr [0x1003bd84]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD84"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008781",
+      "mnemonic": "PUSH 0x1003bc80",
+      "kind": "absolute-image-pointer-immediate",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC80"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008790",
+      "mnemonic": "MOV [0x1003c200],EAX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008795",
+      "mnemonic": "PUSH 0x1003bc10",
+      "kind": "absolute-image-pointer-immediate",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC10"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000879A",
+      "mnemonic": "PUSH 0x1003bc28",
+      "kind": "absolute-image-pointer-immediate",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC28"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000879F",
+      "mnemonic": "PUSH 0x1003c204",
+      "kind": "absolute-image-pointer-immediate",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003C204"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087A4",
+      "mnemonic": "PUSH 0x1003bbb8",
+      "kind": "absolute-image-pointer-immediate",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BBB8"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087AB",
+      "mnemonic": "MOV ECX,dword ptr [0x1003c200]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087BC",
+      "mnemonic": "MOV EAX,[0x1003bc10]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC10"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087C2",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bc28]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC28"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087C9",
+      "mnemonic": "MOV EDX,dword ptr [0x1003c204]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C204"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087D0",
+      "mnemonic": "MOV EAX,[0x1003bbb8]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BBB8"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087E0",
+      "mnemonic": "MOV [0x1003bd94],EAX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BD94"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087E5",
+      "mnemonic": "MOV EDX,dword ptr [0x1003c200]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087EC",
+      "mnemonic": "MOV EAX,[0x1003bd94]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BD94"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087FC",
+      "mnemonic": "MOV EDX,dword ptr [0x1003c200]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000880D",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bd94]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD94"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000881E",
+      "mnemonic": "MOV [0x1003c1f0],EAX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008824",
+      "mnemonic": "MOV EAX,[0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008830",
+      "mnemonic": "MOV [0x1003c1f0],EAX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008835",
+      "mnemonic": "MOV dword ptr [0x1003bc18],EBP",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000883C",
+      "mnemonic": "CMP dword ptr [0x1003c1f4],0x1",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008845",
+      "mnemonic": "MOV EAX,[0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000884D",
+      "mnemonic": "MOV ECX,dword ptr [0x1002496c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1002496C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008855",
+      "mnemonic": "MOV EDX,dword ptr [0x10024970]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024970"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000885E",
+      "mnemonic": "MOV ECX,dword ptr [0x10024974]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024974"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008867",
+      "mnemonic": "MOV EDX,dword ptr [0x10024978]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024978"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008870",
+      "mnemonic": "MOV CL,byte ptr [0x1002497c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1002497C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008879",
+      "mnemonic": "MOV EDX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000887F",
+      "mnemonic": "MOV EAX,[0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008884",
+      "mnemonic": "MOV dword ptr [EDX*0x4 + 0x1003c1a8],EAX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008890",
+      "mnemonic": "CMP dword ptr [0x1003c1f4],0x2",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008899",
+      "mnemonic": "MOV ECX,dword ptr [0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088A2",
+      "mnemonic": "MOV EDX,dword ptr [0x10024980]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024980"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088AA",
+      "mnemonic": "MOV EAX,[0x10024984]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10024984"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088B2",
+      "mnemonic": "MOV EDX,dword ptr [0x10024988]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024988"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088BB",
+      "mnemonic": "MOV EAX,[0x1002498c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1002498C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088C3",
+      "mnemonic": "MOV DL,byte ptr [0x10024990]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024990"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088CC",
+      "mnemonic": "MOV EAX,[0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088D1",
+      "mnemonic": "MOV ECX,dword ptr [0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088D7",
+      "mnemonic": "MOV dword ptr [EAX*0x4 + 0x1003bbc0],ECX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088E0",
+      "mnemonic": "CMP dword ptr [0x1003c1f4],0x3",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088E9",
+      "mnemonic": "MOV EDX,dword ptr [0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088F2",
+      "mnemonic": "MOV EAX,[0x10024994]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10024994"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088F9",
+      "mnemonic": "MOV ECX,dword ptr [0x10024998]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x10024998"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008902",
+      "mnemonic": "MOV EAX,[0x1002499c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1002499C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000890A",
+      "mnemonic": "MOV ECX,dword ptr [0x100249a0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x100249A0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008913",
+      "mnemonic": "MOV AL,[0x100249a4]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x100249A4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000891B",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008921",
+      "mnemonic": "MOV EDX,dword ptr [0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008927",
+      "mnemonic": "MOV dword ptr [ECX*0x4 + 0x1003bc30],EDX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008932",
+      "mnemonic": "MOV ECX,dword ptr [0x1003c1f0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008940",
+      "mnemonic": "MOV dword ptr [0x1003bc18],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000894C",
+      "mnemonic": "MOV EAX,[0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008954",
+      "mnemonic": "MOV [0x1003bc18],EAX",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008959",
+      "mnemonic": "CMP dword ptr [0x1003bc18],0x10",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008966",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000896C",
+      "mnemonic": "CMP dword ptr [ECX*0x4 + 0x1003c1a8],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008976",
+      "mnemonic": "MOV EDX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000897C",
+      "mnemonic": "MOV EAX,dword ptr [EDX*0x4 + 0x1003c1a8]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000898E",
+      "mnemonic": "MOV EDX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008994",
+      "mnemonic": "CMP dword ptr [EDX*0x4 + 0x1003bbc0],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000899E",
+      "mnemonic": "MOV EAX,[0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089A3",
+      "mnemonic": "MOV ECX,dword ptr [EAX*0x4 + 0x1003bbc0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089B5",
+      "mnemonic": "MOV EAX,[0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089BA",
+      "mnemonic": "CMP dword ptr [EAX*0x4 + 0x1003bc30],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089C4",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089CA",
+      "mnemonic": "MOV EDX,dword ptr [ECX*0x4 + 0x1003bc30]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089DC",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089E2",
+      "mnemonic": "CMP dword ptr [ECX*0x4 + 0x1003c208],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003C208"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089EC",
+      "mnemonic": "MOV EDX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089F2",
+      "mnemonic": "MOV ESI,dword ptr [EDX*0x4 + 0x1003c208]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003C208"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089F9",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089FE",
+      "mnemonic": "MOV EAX,[0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A03",
+      "mnemonic": "MOV dword ptr [EAX*0x4 + 0x1003c1a8],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A0E",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A14",
+      "mnemonic": "MOV dword ptr [ECX*0x4 + 0x1003bbc0],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A1F",
+      "mnemonic": "MOV EDX,dword ptr [0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A25",
+      "mnemonic": "MOV dword ptr [EDX*0x4 + 0x1003bc30],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A30",
+      "mnemonic": "MOV EAX,[0x1003bc18]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A35",
+      "mnemonic": "MOV dword ptr [EAX*0x4 + 0x1003c208],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 3,
+      "width": 4,
+      "original_target": "0x1003C208"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A45",
+      "mnemonic": "CMP dword ptr [0x1003bd90],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD90"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A4E",
+      "mnemonic": "MOV ESI,dword ptr [0x1003bd90]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD90"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A54",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A59",
+      "mnemonic": "CMP dword ptr [0x1003bbb4],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BBB4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A62",
+      "mnemonic": "MOV ESI,dword ptr [0x1003bbb4]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BBB4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A68",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A6D",
+      "mnemonic": "CMP dword ptr [0x1003bc7c],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC7C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A76",
+      "mnemonic": "MOV ESI,dword ptr [0x1003bc7c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC7C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A7C",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A81",
+      "mnemonic": "CMP dword ptr [0x1003bc1c],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC1C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A8A",
+      "mnemonic": "MOV ESI,dword ptr [0x1003bc1c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC1C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A90",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A95",
+      "mnemonic": "CMP dword ptr [0x1003bc08],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC08"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A9E",
+      "mnemonic": "MOV ESI,dword ptr [0x1003bc08]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC08"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AA4",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AA9",
+      "mnemonic": "CMP dword ptr [0x1003c1f8],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AB2",
+      "mnemonic": "MOV ESI,dword ptr [0x1003c1f8]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AB8",
+      "kind": "candidate-function-rel32-call",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008ABD",
+      "mnemonic": "MOV dword ptr [0x1003bd90],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD90"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AC7",
+      "mnemonic": "MOV dword ptr [0x1003bbb4],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BBB4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AD1",
+      "mnemonic": "MOV dword ptr [0x1003bc7c],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC7C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008ADB",
+      "mnemonic": "MOV dword ptr [0x1003bc1c],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC1C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AE5",
+      "mnemonic": "MOV dword ptr [0x1003bc08],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BC08"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AEF",
+      "mnemonic": "MOV dword ptr [0x1003c1f8],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003C1F8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AF9",
+      "mnemonic": "CMP dword ptr [0x1003bd9c],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD9C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B02",
+      "mnemonic": "MOV ECX,dword ptr [0x1003bd9c]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD9C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B13",
+      "mnemonic": "CMP dword ptr [0x1003bda0],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BDA0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B1C",
+      "mnemonic": "MOV EAX,[0x1003bda0]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 1,
+      "width": 4,
+      "original_target": "0x1003BDA0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B2C",
+      "mnemonic": "CMP dword ptr [0x1003bda4],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BDA4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B35",
+      "mnemonic": "MOV EDX,dword ptr [0x1003bda4]",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BDA4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B46",
+      "mnemonic": "MOV dword ptr [0x1003bd9c],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BD9C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B50",
+      "mnemonic": "MOV dword ptr [0x1003bda0],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BDA0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B5A",
+      "mnemonic": "MOV dword ptr [0x1003bda4],0x0",
+      "kind": "absolute-image-memory-reference",
+      "field_offset": 2,
+      "width": 4,
+      "original_target": "0x1003BDA4"
+    }
+  ],
+  "scope_limit": "Address operands decoded from bounded hook CFGs only. Does not prove the generated PE layout, target symbol mapping, runtime patching, or game behavior."
+}

@@ -1,0 +1,2020 @@
+{
+  "scope": "Closure-only undefined symbol pairs, after exact subtraction of the existing root-body link-map inventory.",
+  "closure_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-local-section-closure-ghidra-positive-2026-09-30.json",
+  "combined_link_map_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-full-closure-diagnostic-link-map-ghidra-positive-2026-09-30.json",
+  "root_link_map_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-root-diagnostic-link-map-ghidra-positive-2026-09-30.json",
+  "undefined_occurrences": 196,
+  "unique_symbol_type_pairs": 118,
+  "symbols": [
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100226f0@@3PAEA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100226F0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10033510",
+          "segment": "0003",
+          "segment_offset": "0x00001510",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10022710@@3PAEA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10022710",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10033530",
+          "segment": "0003",
+          "segment_offset": "0x00001530",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024e68@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024E68",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035C88",
+          "segment": "0003",
+          "segment_offset": "0x00003C88",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024ec0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EC0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CE0",
+          "segment": "0003",
+          "segment_offset": "0x00003CE0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024ec8@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EC8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CE8",
+          "segment": "0003",
+          "segment_offset": "0x00003CE8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10029450@@3EA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10029450",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056484",
+          "segment": "0004",
+          "segment_offset": "0x00000484",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10029490@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10029490",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100564C4",
+          "segment": "0004",
+          "segment_offset": "0x000004C4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100374bc@@3EA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100374BC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100644F0",
+          "segment": "0004",
+          "segment_offset": "0x0000E4F0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003a6c6@@3EA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A6C6",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100676FA",
+          "segment": "0004",
+          "segment_offset": "0x000116FA",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aed8@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003AED8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F0C",
+          "segment": "0004",
+          "segment_offset": "0x00011F0C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003b6fc@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003B6FC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068730",
+          "segment": "0004",
+          "segment_offset": "0x00012730",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bbbc@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BBBC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068BF0",
+          "segment": "0004",
+          "segment_offset": "0x00012BF0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc04@@3HA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003BC04",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068C38",
+          "segment": "0004",
+          "segment_offset": "0x00012C38",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc0c@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BC0C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068C40",
+          "segment": "0004",
+          "segment_offset": "0x00012C40",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc1c@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BC1C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068C50",
+          "segment": "0004",
+          "segment_offset": "0x00012C50",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc24@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BC24",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068C58",
+          "segment": "0004",
+          "segment_offset": "0x00012C58",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc70@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BC70",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068CA4",
+          "segment": "0004",
+          "segment_offset": "0x00012CA4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc74@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BC74",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068CA8",
+          "segment": "0004",
+          "segment_offset": "0x00012CA8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003c1f8@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C1F8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006922C",
+          "segment": "0004",
+          "segment_offset": "0x0001322C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003c248@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C248",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006927C",
+          "segment": "0004",
+          "segment_offset": "0x0001327C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003c420@@3PAPAEA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003C420",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069454",
+          "segment": "0004",
+          "segment_offset": "0x00013454",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?PTR_LAB_10029d58@@3PAXA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10078810",
+          "segment": "0004",
+          "segment_offset": "0x00022810",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "current-clean-link-address-alias-provider-20260929.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?PTR_LAB_10029d60@@3PAXA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10078818",
+          "segment": "0004",
+          "segment_offset": "0x00022818",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "current-clean-link-address-alias-provider-20260929.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?PTR_LAB_10029d64@@3PAXA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x1007881C",
+          "segment": "0004",
+          "segment_offset": "0x0002281C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "current-clean-link-address-alias-provider-20260929.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?PTR_s__null__10029c24@@3PB_WB",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x100786DC",
+          "segment": "0004",
+          "segment_offset": "0x000226DC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "current-clean-link-address-alias-provider-20260929.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?PTR_u__null__10029c28@@3PB_WB",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x100786E0",
+          "segment": "0004",
+          "segment_offset": "0x000226E0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "current-clean-link-address-alias-provider-20260929.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?TranslatorGuardHandler@@YA?AW4_EXCEPTION_DISPOSITION@@PAUEHExceptionRecord@@PAUTranslatorGuardRN@@PAX2@Z",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10018518",
+          "segment": "0001",
+          "segment_offset": "0x00017518",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001b827.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024e88@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024E88",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CA8",
+          "segment": "0003",
+          "segment_offset": "0x00003CA8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024e90@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024E90",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CB0",
+          "segment": "0003",
+          "segment_offset": "0x00003CB0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ed0@@3NA",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x10024ED0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CF0",
+          "segment": "0003",
+          "segment_offset": "0x00003CF0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ed8@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024ED8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CF8",
+          "segment": "0003",
+          "segment_offset": "0x00003CF8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ee0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EE0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D00",
+          "segment": "0003",
+          "segment_offset": "0x00003D00",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024eec@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EEC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D0C",
+          "segment": "0003",
+          "segment_offset": "0x00003D0C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ef8@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EF8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D18",
+          "segment": "0003",
+          "segment_offset": "0x00003D18",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f10@@3MA",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x10024F10",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D30",
+          "segment": "0003",
+          "segment_offset": "0x00003D30",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f28@@3MA",
+      "occurrences": 5,
+      "address_encoded_in_symbol": "0x10024F28",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D48",
+          "segment": "0003",
+          "segment_offset": "0x00003D48",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f30@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024F30",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D50",
+          "segment": "0003",
+          "segment_offset": "0x00003D50",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f38@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F38",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D58",
+          "segment": "0003",
+          "segment_offset": "0x00003D58",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fa8@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024FA8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DC8",
+          "segment": "0003",
+          "segment_offset": "0x00003DC8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fac@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024FAC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DCC",
+          "segment": "0003",
+          "segment_offset": "0x00003DCC",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fb0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024FB0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DD0",
+          "segment": "0003",
+          "segment_offset": "0x00003DD0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fb8@@3MA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024FB8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DD8",
+          "segment": "0003",
+          "segment_offset": "0x00003DD8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fc0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024FC0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DE0",
+          "segment": "0003",
+          "segment_offset": "0x00003DE0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_1003bc20@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003BC20",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068C54",
+          "segment": "0004",
+          "segment_offset": "0x00012C54",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10024e70",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024E70",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035C90",
+          "segment": "0003",
+          "segment_offset": "0x00003C90",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10024e78",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024E78",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035C98",
+          "segment": "0003",
+          "segment_offset": "0x00003C98",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10029490",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10029490",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100564C4",
+          "segment": "0004",
+          "segment_offset": "0x000004C4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039698",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039698",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100666CC",
+          "segment": "0004",
+          "segment_offset": "0x000106CC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100397f8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100397F8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006682C",
+          "segment": "0004",
+          "segment_offset": "0x0001082C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a0c",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A0C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A40",
+          "segment": "0004",
+          "segment_offset": "0x00010A40",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c408",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C408",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006943C",
+          "segment": "0004",
+          "segment_offset": "0x0001343C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c420",
+      "occurrences": 9,
+      "address_encoded_in_symbol": "0x1003C420",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069454",
+          "segment": "0004",
+          "segment_offset": "0x00013454",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_100249A8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x100357C8",
+          "segment": "0003",
+          "segment_offset": "0x000037C8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10029490",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x100564C4",
+          "segment": "0004",
+          "segment_offset": "0x000004C4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003A6C8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x100676FC",
+          "segment": "0004",
+          "segment_offset": "0x000116FC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003A8C8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x100678FC",
+          "segment": "0004",
+          "segment_offset": "0x000118FC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003AAC8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10067AFC",
+          "segment": "0004",
+          "segment_offset": "0x00011AFC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003BBB4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10068BE8",
+          "segment": "0004",
+          "segment_offset": "0x00012BE8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003BC08",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10068C3C",
+          "segment": "0004",
+          "segment_offset": "0x00012C3C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003BC1C",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10068C50",
+          "segment": "0004",
+          "segment_offset": "0x00012C50",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003BC7C",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10068CB0",
+          "segment": "0004",
+          "segment_offset": "0x00012CB0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003BC80",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10068CB4",
+          "segment": "0004",
+          "segment_offset": "0x00012CB4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003BD8C",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10068DC0",
+          "segment": "0004",
+          "segment_offset": "0x00012DC0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003C1F4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10069228",
+          "segment": "0004",
+          "segment_offset": "0x00013228",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003C1F8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x1006922C",
+          "segment": "0004",
+          "segment_offset": "0x0001322C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1003C208",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x1006923C",
+          "segment": "0004",
+          "segment_offset": "0x0001323C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__CloseHandle@4",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032038",
+          "segment": "0003",
+          "segment_offset": "0x00000038",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__CreateFileA@28",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320E8",
+          "segment": "0003",
+          "segment_offset": "0x000000E8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetFileType@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032084",
+          "segment": "0003",
+          "segment_offset": "0x00000084",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetKeyState@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003215C",
+          "segment": "0003",
+          "segment_offset": "0x0000015C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "user32:USER32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetLastError@0",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003205C",
+          "segment": "0003",
+          "segment_offset": "0x0000005C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__TlsAlloc@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320B4",
+          "segment": "0003",
+          "segment_offset": "0x000000B4",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000DB22",
+          "segment": "0001",
+          "segment_offset": "0x0000CB22",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10010b1a.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "??0_LocaleUpdate@@QAE@PAUlocaleinfo_struct@@@Z",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000DAA2",
+          "segment": "0001",
+          "segment_offset": "0x0000CAA2",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10010b1a.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "?__fileno@@YAHPAU_iobuf@@@Z",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100100F7",
+          "segment": "0001",
+          "segment_offset": "0x0000F0F7",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001358e.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "?construct@ExceptionStorage@@QAEPAXPAPAD@Z",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000D444",
+          "segment": "0001",
+          "segment_offset": "0x0000C444",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100102c3.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "@FUN_100073f0@32",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10006C84",
+          "segment": "0001",
+          "segment_offset": "0x00005C84",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100073f0.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "@FUN_1001ba40@8",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100186BE",
+          "segment": "0001",
+          "segment_offset": "0x000176BE",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001ba40.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "@__security_check_cookie@4",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10013DFD",
+          "segment": "0001",
+          "segment_offset": "0x00012DFD",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100172d5.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_CatchIt",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100193A3",
+          "segment": "0001",
+          "segment_offset": "0x000183A3",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001d41c.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_DecodePointer@4",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F941",
+          "segment": "0002",
+          "segment_offset": "0x0000F941",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_FID_conflict__memcpy",
+      "occurrences": 5,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10013E0C",
+          "segment": "0001",
+          "segment_offset": "0x00012E0C",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100172f0.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_FUN_10008d20@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10007A3A",
+          "segment": "0001",
+          "segment_offset": "0x00006A3A",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10008d20.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_FUN_10009360@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10007F44",
+          "segment": "0001",
+          "segment_offset": "0x00006F44",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10009360.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_FUN_10010120",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000D2E4",
+          "segment": "0001",
+          "segment_offset": "0x0000C2E4",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10010120.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_FUN_1001189f@0",
+      "occurrences": 5,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E71B",
+          "segment": "0001",
+          "segment_offset": "0x0000D71B",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001189f.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_FUN_1001b1a5",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10017E9A",
+          "segment": "0001",
+          "segment_offset": "0x00016E9A",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001b1a5.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_ImVehFt_Recovered_RtlUnwind@16",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10017F8E",
+          "segment": "0001",
+          "segment_offset": "0x00016F8E",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001b2b2.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "____doserrno",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E773",
+          "segment": "0001",
+          "segment_offset": "0x0000D773",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10011904.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "____mtold12",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1001C001",
+          "segment": "0001",
+          "segment_offset": "0x0001B001",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10020564.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___alloc_osfhnd",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10015CC7",
+          "segment": "0001",
+          "segment_offset": "0x00014CC7",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100191cd.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___aulldvrm@16",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10017346",
+          "segment": "0001",
+          "segment_offset": "0x00016346",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001a900.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___cftof2_l",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1001893C",
+          "segment": "0001",
+          "segment_offset": "0x0001793C",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001c25c.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___chsize_nolock",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10017B81",
+          "segment": "0001",
+          "segment_offset": "0x00016B81",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001af34.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___close_nolock",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100106AE",
+          "segment": "0001",
+          "segment_offset": "0x0000F6AE",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10013bd8.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___dosmaperr",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E782",
+          "segment": "0001",
+          "segment_offset": "0x0000D782",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10011917.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___errno",
+      "occurrences": 10,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E764",
+          "segment": "0001",
+          "segment_offset": "0x0000D764",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100118f1.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___free_osfhnd",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10015B3F",
+          "segment": "0001",
+          "segment_offset": "0x00014B3F",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10019018.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___get_printf_count_output",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100171A2",
+          "segment": "0001",
+          "segment_offset": "0x000161A2",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001a76f.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___getptd",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10011841",
+          "segment": "0001",
+          "segment_offset": "0x00010841",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10014df0.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___invoke_watson",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E6E4",
+          "segment": "0001",
+          "segment_offset": "0x0000D6E4",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001184d.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___isleadbyte_l",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10014573",
+          "segment": "0001",
+          "segment_offset": "0x00013573",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100179e8.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___lseek_nolock",
+      "occurrences": 4,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100130A3",
+          "segment": "0001",
+          "segment_offset": "0x000120A3",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100167ba.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___lseeki64_nolock",
+      "occurrences": 4,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10017048",
+          "segment": "0001",
+          "segment_offset": "0x00016048",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001a600.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___malloc_crt",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000F686",
+          "segment": "0001",
+          "segment_offset": "0x0000E686",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100129f5.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___read_nolock",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10012953",
+          "segment": "0001",
+          "segment_offset": "0x00011953",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10016088.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___set_osfhnd",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10015AC4",
+          "segment": "0001",
+          "segment_offset": "0x00014AC4",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10018f97.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "___write",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100164B5",
+          "segment": "0001",
+          "segment_offset": "0x000154B5",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10019a63.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__aullshr",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021D40",
+          "segment": "0002",
+          "segment_offset": "0x00001D40",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libcmt:ullshr.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__free",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E57D",
+          "segment": "0001",
+          "segment_offset": "0x0000D57D",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100116db.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__memset",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1001300D",
+          "segment": "0001",
+          "segment_offset": "0x0001200D",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10016740.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__strlen",
+      "occurrences": 5,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E516",
+          "segment": "0001",
+          "segment_offset": "0x0000D516",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10011650.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__wctomb_s",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1001732B",
+          "segment": "0001",
+          "segment_offset": "0x0001632B",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "1001a8da.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_memset",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021710",
+          "segment": "0002",
+          "segment_offset": "0x00001710",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libvcruntime-without-exsup4:memset.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_strcpy_s",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10022160",
+          "segment": "0002",
+          "segment_offset": "0x00002160",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:strcpy_s.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_strlen",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10022800",
+          "segment": "0002",
+          "segment_offset": "0x00002800",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:strlen.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_write_char",
+      "occurrences": 5,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10011EA0",
+          "segment": "0001",
+          "segment_offset": "0x00010EA0",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10015435.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_write_string",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10011ED3",
+          "segment": "0001",
+          "segment_offset": "0x00010ED3",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10015468.obj"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Diagnostic symbol addresses are not production target VAs.",
+    "Classification does not resolve section placement, types, lifetimes, or initialization."
+  ]
+}

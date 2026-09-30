@@ -34,7 +34,7 @@ extern "C" int __cdecl ___crtLCMapStringA(
     int,
     BOOL);
 
-void __cdecl setSBUpLow(threadmbcinfostruct* param_1)
+extern "C" void __cdecl setSBUpLow(threadmbcinfostruct* param_1)
 {
     auto* const base = reinterpret_cast<std::uint8_t*>(param_1);
 

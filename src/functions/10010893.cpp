@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 
@@ -10,6 +11,18 @@ extern "C" [[noreturn]] void __stdcall __CxxThrowException_8(
     const void* throw_info);
 
 extern std::uint32_t _DAT_100399ec;
+struct ExceptionStorage {
+    void** vtable;
+    char* what;
+    std::uint8_t do_free;
+    ExceptionStorage* __thiscall copy_construct(ExceptionStorage* other);
+};
+struct FUN_1001023b_this
+{
+    void __thiscall invoke(
+        const std::uint32_t* message,
+        std::uint32_t unused_stack_param);
+};
 struct BadAllocStorage { void** vtable; char* what; std::uint8_t do_free; };
 extern BadAllocStorage DAT_100399e0;
 extern std::uint8_t DAT_10028608;
@@ -40,20 +53,19 @@ extern "C" void __cdecl FUN_10010893(std::size_t param_1)
         _DAT_100399ec |= 1u;
 
         local_8 = const_cast<char*>("bad allocation");
-        using BadAllocInitFn = void (__thiscall*)(void*, const std::uint32_t*);
-        reinterpret_cast<BadAllocInitFn>(static_cast<std::uintptr_t>(0x1001023b))(
-            &DAT_100399e0, reinterpret_cast<const std::uint32_t*>(&local_8));
+        reinterpret_cast<FUN_1001023b_this*>(&DAT_100399e0)->invoke(
+            reinterpret_cast<const std::uint32_t*>(&local_8),
+            1u);
 
         DAT_100399e0.vtable =
-            reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022250));
+            reinterpret_cast<void**>(static_cast<std::uintptr_t>(IVF_IMAGE_ADDRESS_10022250));
 
         _atexit(reinterpret_cast<void (__cdecl*)()>(FUN_10021267));
     }
 
-    using BadAllocCopyCtorFn = void* (__thiscall*)(void*, void*);
-    reinterpret_cast<BadAllocCopyCtorFn>(static_cast<std::uintptr_t>(0x10010351))(
-        local_14, &DAT_100399e0);
-    local_14[0] = reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x10022250));
+    reinterpret_cast<ExceptionStorage*>(local_14)->copy_construct(
+        reinterpret_cast<ExceptionStorage*>(&DAT_100399e0));
+    local_14[0] = reinterpret_cast<void*>(static_cast<std::uintptr_t>(IVF_IMAGE_ADDRESS_10022250));
 
     __CxxThrowException_8(local_14, &DAT_10028608);
 }

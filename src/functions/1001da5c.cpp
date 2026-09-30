@@ -41,7 +41,7 @@ extern "C" INTRNCVT_STATUS __cdecl FUN_1001e085(
 extern "C" void __fastcall __security_check_cookie(
     std::uintptr_t stack_cookie);
 
-extern "C" int __cdecl FID_conflict___atoflt_l(
+extern "C" int __cdecl FID_conflict___atoflt_l_1001da5c(
     _CRT_FLOAT* result,
     char* string,
     _locale_t locale)

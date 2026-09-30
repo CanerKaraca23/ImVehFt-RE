@@ -1,0 +1,408 @@
+{
+  "scope": "Checks only the original-VA addresses encoded in symbols from the diagnostic relocation crosswalk; does not patch or validate runtime data semantics.",
+  "symbols_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-local-closure-symbol-delta-2026-09-30.json",
+  "original_image": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "image_base": "0x10000000",
+  "target_section_headers": {
+    ".rdata": {
+      "virtual_address": "0x00022000",
+      "virtual_size": "0x00006F44",
+      "raw_offset": "0x00020800",
+      "raw_size": "0x00007000",
+      "characteristics": "0x40000040"
+    },
+    ".data": {
+      "virtual_address": "0x00029000",
+      "virtual_size": "0x0001455C",
+      "raw_offset": "0x00027800",
+      "raw_size": "0x00010A00",
+      "characteristics": "0xC0000040"
+    }
+  },
+  "encoded_symbol_count": 46,
+  "encoded_reference_occurrences": 70,
+  "occurrences_by_original_section_and_backing": {
+    ".data:raw-backed": 7,
+    ".data:virtual-only": 28,
+    ".rdata:raw-backed": 35
+  },
+  "unmapped_symbol_count": 0,
+  "unmapped_occurrences": 0,
+  "unmapped": [],
+  "mapped_targets": [
+    {
+      "symbol": "?DAT_100226f0@@3PAEA",
+      "va": "0x100226F0",
+      "section": ".rdata",
+      "section_offset": "0x000006F0",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_10022710@@3PAEA",
+      "va": "0x10022710",
+      "section": ".rdata",
+      "section_offset": "0x00000710",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_10024e68@@3NA",
+      "va": "0x10024E68",
+      "section": ".rdata",
+      "section_offset": "0x00002E68",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_10024ec0@@3NA",
+      "va": "0x10024EC0",
+      "section": ".rdata",
+      "section_offset": "0x00002EC0",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_10024ec8@@3IA",
+      "va": "0x10024EC8",
+      "section": ".rdata",
+      "section_offset": "0x00002EC8",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_10029450@@3EA",
+      "va": "0x10029450",
+      "section": ".data",
+      "section_offset": "0x00000450",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_10029490@@3IA",
+      "va": "0x10029490",
+      "section": ".data",
+      "section_offset": "0x00000490",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_100374bc@@3EA",
+      "va": "0x100374BC",
+      "section": ".data",
+      "section_offset": "0x0000E4BC",
+      "backing": "raw-backed",
+      "occurrences": 2
+    },
+    {
+      "symbol": "?DAT_1003a6c6@@3EA",
+      "va": "0x1003A6C6",
+      "section": ".data",
+      "section_offset": "0x000116C6",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003aed8@@3IA",
+      "va": "0x1003AED8",
+      "section": ".data",
+      "section_offset": "0x00011ED8",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003b6fc@@3HA",
+      "va": "0x1003B6FC",
+      "section": ".data",
+      "section_offset": "0x000126FC",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003bbbc@@3HA",
+      "va": "0x1003BBBC",
+      "section": ".data",
+      "section_offset": "0x00012BBC",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003bc04@@3HA",
+      "va": "0x1003BC04",
+      "section": ".data",
+      "section_offset": "0x00012C04",
+      "backing": "virtual-only",
+      "occurrences": 2
+    },
+    {
+      "symbol": "?DAT_1003bc0c@@3HA",
+      "va": "0x1003BC0C",
+      "section": ".data",
+      "section_offset": "0x00012C0C",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003bc1c@@3MA",
+      "va": "0x1003BC1C",
+      "section": ".data",
+      "section_offset": "0x00012C1C",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003bc24@@3HA",
+      "va": "0x1003BC24",
+      "section": ".data",
+      "section_offset": "0x00012C24",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003bc70@@3IA",
+      "va": "0x1003BC70",
+      "section": ".data",
+      "section_offset": "0x00012C70",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003bc74@@3HA",
+      "va": "0x1003BC74",
+      "section": ".data",
+      "section_offset": "0x00012C74",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003c1f8@@3MA",
+      "va": "0x1003C1F8",
+      "section": ".data",
+      "section_offset": "0x000131F8",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003c248@@3HA",
+      "va": "0x1003C248",
+      "section": ".data",
+      "section_offset": "0x00013248",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?DAT_1003c420@@3PAPAEA",
+      "va": "0x1003C420",
+      "section": ".data",
+      "section_offset": "0x00013420",
+      "backing": "virtual-only",
+      "occurrences": 2
+    },
+    {
+      "symbol": "?_DAT_10024e88@@3NA",
+      "va": "0x10024E88",
+      "section": ".rdata",
+      "section_offset": "0x00002E88",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024e90@@3MA",
+      "va": "0x10024E90",
+      "section": ".rdata",
+      "section_offset": "0x00002E90",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024ed0@@3NA",
+      "va": "0x10024ED0",
+      "section": ".rdata",
+      "section_offset": "0x00002ED0",
+      "backing": "raw-backed",
+      "occurrences": 3
+    },
+    {
+      "symbol": "?_DAT_10024ed8@@3MA",
+      "va": "0x10024ED8",
+      "section": ".rdata",
+      "section_offset": "0x00002ED8",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024ee0@@3NA",
+      "va": "0x10024EE0",
+      "section": ".rdata",
+      "section_offset": "0x00002EE0",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024eec@@3IA",
+      "va": "0x10024EEC",
+      "section": ".rdata",
+      "section_offset": "0x00002EEC",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024ef8@@3MA",
+      "va": "0x10024EF8",
+      "section": ".rdata",
+      "section_offset": "0x00002EF8",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024f10@@3MA",
+      "va": "0x10024F10",
+      "section": ".rdata",
+      "section_offset": "0x00002F10",
+      "backing": "raw-backed",
+      "occurrences": 3
+    },
+    {
+      "symbol": "?_DAT_10024f28@@3MA",
+      "va": "0x10024F28",
+      "section": ".rdata",
+      "section_offset": "0x00002F28",
+      "backing": "raw-backed",
+      "occurrences": 5
+    },
+    {
+      "symbol": "?_DAT_10024f30@@3NA",
+      "va": "0x10024F30",
+      "section": ".rdata",
+      "section_offset": "0x00002F30",
+      "backing": "raw-backed",
+      "occurrences": 2
+    },
+    {
+      "symbol": "?_DAT_10024f38@@3MA",
+      "va": "0x10024F38",
+      "section": ".rdata",
+      "section_offset": "0x00002F38",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024fa8@@3MA",
+      "va": "0x10024FA8",
+      "section": ".rdata",
+      "section_offset": "0x00002FA8",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024fac@@3MA",
+      "va": "0x10024FAC",
+      "section": ".rdata",
+      "section_offset": "0x00002FAC",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024fb0@@3NA",
+      "va": "0x10024FB0",
+      "section": ".rdata",
+      "section_offset": "0x00002FB0",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_10024fb8@@3MA",
+      "va": "0x10024FB8",
+      "section": ".rdata",
+      "section_offset": "0x00002FB8",
+      "backing": "raw-backed",
+      "occurrences": 2
+    },
+    {
+      "symbol": "?_DAT_10024fc0@@3NA",
+      "va": "0x10024FC0",
+      "section": ".rdata",
+      "section_offset": "0x00002FC0",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "?_DAT_1003bc20@@3IA",
+      "va": "0x1003BC20",
+      "section": ".data",
+      "section_offset": "0x00012C20",
+      "backing": "virtual-only",
+      "occurrences": 2
+    },
+    {
+      "symbol": "_DAT_10024e70",
+      "va": "0x10024E70",
+      "section": ".rdata",
+      "section_offset": "0x00002E70",
+      "backing": "raw-backed",
+      "occurrences": 2
+    },
+    {
+      "symbol": "_DAT_10024e78",
+      "va": "0x10024E78",
+      "section": ".rdata",
+      "section_offset": "0x00002E78",
+      "backing": "raw-backed",
+      "occurrences": 2
+    },
+    {
+      "symbol": "_DAT_10029490",
+      "va": "0x10029490",
+      "section": ".data",
+      "section_offset": "0x00000490",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "_DAT_10039698",
+      "va": "0x10039698",
+      "section": ".data",
+      "section_offset": "0x00010698",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "_DAT_100397f8",
+      "va": "0x100397F8",
+      "section": ".data",
+      "section_offset": "0x000107F8",
+      "backing": "raw-backed",
+      "occurrences": 1
+    },
+    {
+      "symbol": "_DAT_10039a0c",
+      "va": "0x10039A0C",
+      "section": ".data",
+      "section_offset": "0x00010A0C",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "_DAT_1003c408",
+      "va": "0x1003C408",
+      "section": ".data",
+      "section_offset": "0x00013408",
+      "backing": "virtual-only",
+      "occurrences": 1
+    },
+    {
+      "symbol": "_DAT_1003c420",
+      "va": "0x1003C420",
+      "section": ".data",
+      "section_offset": "0x00013420",
+      "backing": "virtual-only",
+      "occurrences": 9
+    }
+  ],
+  "limitations": [
+    "A section-mapped VA is not proof that the target has the required type, initialization, or lifetime.",
+    "Virtual-only .data addresses have no raw file bytes and depend on PE zero-fill and later initialization.",
+    "No candidate fixup was applied and no production PE/ASI or GTA runtime behavior was tested."
+  ]
+}

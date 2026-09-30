@@ -1,116 +1,119 @@
 #include <cstdint>
 
-extern "C" std::uint64_t __stdcall __alldvrm(
-    std::uint32_t param_1,
-    std::uint32_t param_2,
-    std::uint32_t param_3,
-    std::uint32_t param_4)
+extern "C" __declspec(naked) std::uint64_t __stdcall __alldvrm(
+    std::uint32_t,
+    std::uint32_t,
+    std::uint32_t,
+    std::uint32_t)
 {
-    std::uint64_t uVar1;
-    std::int32_t iVar4;
-    std::uint32_t uVar3;
-    std::uint32_t uVar5;
-    std::uint32_t uVar6;
-    std::uint32_t uVar7;
-    std::uint32_t uVar8;
-    std::uint32_t uVar9;
-    bool bVar10;
-    char cVar11;
+    __asm {
+        push edi
+        push esi
+        push ebp
+        xor edi, edi
+        xor ebp, ebp
+        mov eax, dword ptr [esp + 14h]
+        or eax, eax
+        jge dividend_nonnegative
+        inc edi
+        inc ebp
+        mov edx, dword ptr [esp + 10h]
+        neg eax
+        neg edx
+        sbb eax, 0
+        mov dword ptr [esp + 14h], eax
+        mov dword ptr [esp + 10h], edx
 
-    cVar11 = static_cast<char>(
-        static_cast<std::int32_t>(param_2) < 0);
+    dividend_nonnegative:
+        mov eax, dword ptr [esp + 1Ch]
+        or eax, eax
+        jge divisor_nonnegative
+        inc edi
+        mov edx, dword ptr [esp + 18h]
+        neg eax
+        neg edx
+        sbb eax, 0
+        mov dword ptr [esp + 1Ch], eax
+        mov dword ptr [esp + 18h], edx
 
-    if (cVar11 != 0)
-    {
-        bVar10 = param_1 != 0;
-        param_1 = 0u - param_1;
-        param_2 = 0u - static_cast<std::uint32_t>(bVar10) - param_2;
+    divisor_nonnegative:
+        or eax, eax
+        jnz signed_divisor_nonzero
+        mov ecx, dword ptr [esp + 18h]
+        mov eax, dword ptr [esp + 14h]
+        xor edx, edx
+        div ecx
+        mov ebx, eax
+        mov eax, dword ptr [esp + 10h]
+        div ecx
+        mov esi, eax
+        mov eax, ebx
+        mul dword ptr [esp + 18h]
+        mov ecx, eax
+        mov eax, esi
+        mul dword ptr [esp + 18h]
+        add edx, ecx
+        jmp signed_quotient_ready
+
+    signed_divisor_nonzero:
+        mov ebx, eax
+        mov ecx, dword ptr [esp + 18h]
+        mov edx, dword ptr [esp + 14h]
+        mov eax, dword ptr [esp + 10h]
+    normalize_signed_divisor:
+        shr ebx, 1
+        rcr ecx, 1
+        shr edx, 1
+        rcr eax, 1
+        or ebx, ebx
+        jnz normalize_signed_divisor
+        div ecx
+        mov esi, eax
+        mul dword ptr [esp + 1Ch]
+        mov ecx, eax
+        mov eax, dword ptr [esp + 18h]
+        mul esi
+        add edx, ecx
+        jc correct_signed_quotient
+        cmp edx, dword ptr [esp + 14h]
+        ja correct_signed_quotient
+        jc signed_quotient_remainder_ready
+        cmp eax, dword ptr [esp + 10h]
+        jbe signed_quotient_remainder_ready
+
+    correct_signed_quotient:
+        dec esi
+        sub eax, dword ptr [esp + 18h]
+        sbb edx, dword ptr [esp + 1Ch]
+
+    signed_quotient_remainder_ready:
+        xor ebx, ebx
+
+    signed_quotient_ready:
+        sub eax, dword ptr [esp + 10h]
+        sbb edx, dword ptr [esp + 14h]
+        dec ebp
+        jns remainder_nonnegative
+        neg edx
+        neg eax
+        sbb edx, 0
+
+    remainder_nonnegative:
+        mov ecx, edx
+        mov edx, ebx
+        mov ebx, ecx
+        mov ecx, eax
+        mov eax, esi
+        dec edi
+        jnz quotient_nonnegative
+        neg edx
+        neg eax
+        sbb edx, 0
+
+    quotient_nonnegative:
+        pop ebp
+        pop esi
+        pop edi
+        ret 10h
     }
-
-    if (static_cast<std::int32_t>(param_4) < 0)
-    {
-        cVar11 = static_cast<char>(cVar11 + 1);
-        bVar10 = param_3 != 0;
-        param_3 = 0u - param_3;
-        param_4 = 0u - static_cast<std::uint32_t>(bVar10) - param_4;
-    }
-
-    uVar7 = param_1;
-    uVar3 = param_3;
-    uVar5 = param_2;
-    uVar9 = param_4;
-
-    if (param_4 == 0)
-    {
-        uVar3 = param_2 / param_3;
-
-        iVar4 = static_cast<std::int32_t>(
-            ((static_cast<std::uint64_t>(param_2 % param_3) << 32) |
-             static_cast<std::uint64_t>(param_1)) /
-            static_cast<std::uint64_t>(param_3));
-    }
-    else
-    {
-        do
-        {
-            uVar8 = uVar9 >> 1;
-
-            uVar3 = static_cast<std::uint32_t>(
-                ((static_cast<std::uint64_t>(uVar9 & 1u) << 32) |
-                 static_cast<std::uint64_t>(uVar3)) >> 1);
-
-            uVar6 = uVar5 >> 1;
-
-            uVar7 = static_cast<std::uint32_t>(
-                ((static_cast<std::uint64_t>(uVar5 & 1u) << 32) |
-                 static_cast<std::uint64_t>(uVar7)) >> 1);
-
-            uVar5 = uVar6;
-            uVar9 = uVar8;
-        }
-        while (uVar8 != 0);
-
-        uVar1 =
-            ((static_cast<std::uint64_t>(uVar6) << 32) |
-             static_cast<std::uint64_t>(uVar7)) /
-            static_cast<std::uint64_t>(uVar3);
-
-        iVar4 = static_cast<std::int32_t>(uVar1);
-
-        const std::uint64_t lVar2 =
-            static_cast<std::uint64_t>(param_3) *
-            (uVar1 & 0xffffffffull);
-
-        uVar3 = static_cast<std::uint32_t>(lVar2 >> 32);
-
-        const std::uint32_t correction =
-            static_cast<std::uint32_t>(iVar4) * param_4;
-
-        const std::uint32_t previous_uVar3 = uVar3;
-        uVar7 = uVar3 + correction;
-
-        const bool carry = uVar7 < previous_uVar3;
-
-        if (carry ||
-            (param_2 < uVar7) ||
-            ((param_2 <= uVar7) &&
-             (param_1 < static_cast<std::uint32_t>(lVar2))))
-        {
-            iVar4 = static_cast<std::int32_t>(
-                static_cast<std::uint32_t>(iVar4) - 1u);
-        }
-
-        uVar3 = 0;
-    }
-
-    if (cVar11 == 1)
-    {
-        bVar10 = iVar4 != 0;
-        iVar4 = static_cast<std::int32_t>(
-            0u - static_cast<std::uint32_t>(iVar4));
-        uVar3 = 0u - static_cast<std::uint32_t>(bVar10) - uVar3;
-    }
-
-    return (static_cast<std::uint64_t>(uVar3) << 32) |
-           static_cast<std::uint32_t>(iVar4);
 }

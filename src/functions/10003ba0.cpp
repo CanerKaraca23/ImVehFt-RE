@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 struct TextureBytes
 {
@@ -33,11 +34,6 @@ extern "C" int __cdecl strcat_s(char*, std::size_t, char*);
 extern char DAT_1003a6c8[0x200];
 extern char DAT_1003a8c8[];
 
-extern Texture* _DAT_00c3ef5c;
-extern Texture* _DAT_00c3ef60;
-extern Texture* _DAT_00c3ef64;
-extern Texture* _DAT_00c3ef68;
-extern std::uint8_t* _DAT_00c3ef78;
 
 extern Texture* DAT_1003bd9c;
 extern Texture* DAT_1003bda0;
@@ -48,13 +44,13 @@ void __stdcall FUN_10003ba0()
     FUN_100014c0(const_cast<char*>("Loading HD plates textures..."));
 
     reinterpret_cast<void(__cdecl*)(Texture*)>(
-        static_cast<std::uintptr_t>(0x7f3820))(_DAT_00c3ef5c);
+        static_cast<std::uintptr_t>(0x7f3820))(IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef5c));
     reinterpret_cast<void(__cdecl*)(Texture*)>(
-        static_cast<std::uintptr_t>(0x7f3820))(_DAT_00c3ef60);
+        static_cast<std::uintptr_t>(0x7f3820))(IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef60));
     reinterpret_cast<void(__cdecl*)(Texture*)>(
-        static_cast<std::uintptr_t>(0x7f3820))(_DAT_00c3ef64);
+        static_cast<std::uintptr_t>(0x7f3820))(IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef64));
     reinterpret_cast<void(__cdecl*)(Texture*)>(
-        static_cast<std::uintptr_t>(0x7f3820))(_DAT_00c3ef68);
+        static_cast<std::uintptr_t>(0x7f3820))(IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef68));
 
     strcpy_s(DAT_1003a6c8, 0x200, DAT_1003a8c8);
     strcat_s(
@@ -62,11 +58,11 @@ void __stdcall FUN_10003ba0()
         0x200,
         const_cast<char*>("ImVehFt\\plates\\platecharset.png"));
 
-    _DAT_00c3ef5c = reinterpret_cast<Texture*>(
+    IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef5c) = reinterpret_cast<Texture*>(
         FUN_10001590(reinterpret_cast<std::uint32_t>(DAT_1003a6c8)));
 
-    _DAT_00c3ef5c->field_50 = 3;
-    _DAT_00c3ef5c->bytes.field_51 = 0x33;
+    IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef5c)->field_50 = 3;
+    IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef5c)->bytes.field_51 = 0x33;
 
     strcpy_s(DAT_1003a6c8, 0x200, DAT_1003a8c8);
     strcat_s(
@@ -82,7 +78,7 @@ void __stdcall FUN_10003ba0()
         static_cast<std::uintptr_t>(iVar1) + 0x50) = 4;
     *reinterpret_cast<std::uint8_t*>(
         static_cast<std::uintptr_t>(iVar1) + 0x51) = 0x33;
-    _DAT_00c3ef60 = reinterpret_cast<Texture*>(
+    IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef60) = reinterpret_cast<Texture*>(
         static_cast<std::uintptr_t>(iVar1));
 
     strcpy_s(DAT_1003a6c8, 0x200, DAT_1003a8c8);
@@ -99,7 +95,7 @@ void __stdcall FUN_10003ba0()
         static_cast<std::uintptr_t>(iVar1) + 0x50) = 4;
     *reinterpret_cast<std::uint8_t*>(
         static_cast<std::uintptr_t>(iVar1) + 0x51) = 0x33;
-    _DAT_00c3ef64 = reinterpret_cast<Texture*>(
+    IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef64) = reinterpret_cast<Texture*>(
         static_cast<std::uintptr_t>(iVar1));
 
     strcpy_s(DAT_1003a6c8, 0x200, DAT_1003a8c8);
@@ -116,14 +112,14 @@ void __stdcall FUN_10003ba0()
         static_cast<std::uintptr_t>(iVar1) + 0x50) = 4;
     *reinterpret_cast<std::uint8_t*>(
         static_cast<std::uintptr_t>(iVar1) + 0x51) = 0x33;
-    _DAT_00c3ef68 = reinterpret_cast<Texture*>(
+    IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef68) = reinterpret_cast<Texture*>(
         static_cast<std::uintptr_t>(iVar1));
 
-    _DAT_00c3ef78 = reinterpret_cast<std::uint8_t*(__cdecl*)(
+    IMVEHFT_GLOBAL_AT(std::uint8_t*, 0x00c3ef78) = reinterpret_cast<std::uint8_t*(__cdecl*)(
         void*, std::uint8_t, std::int32_t)>(
             static_cast<std::uintptr_t>(0x7fb2d0))(
             reinterpret_cast<void*>(static_cast<std::uintptr_t>(
-                _DAT_00c3ef5c->field_00)),
+                IMVEHFT_GLOBAL_AT(Texture*, 0x00c3ef5c)->field_00)),
             0,
             2);
 

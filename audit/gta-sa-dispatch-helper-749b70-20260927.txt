@@ -1,0 +1,52 @@
+FUNCTION FUN_00749b70 @ 00749b70
+00749b70  MOV EAX,dword ptr [ESP + 0x4]
+00749b74  PUSH EBX
+00749b75  PUSH EBP
+00749b76  PUSH ESI
+00749b77  PUSH EDI
+00749b78  LEA EDI,[EAX + 0x8]
+00749b7b  MOV EAX,dword ptr [EAX + 0x8]
+00749b7e  CMP EAX,EDI
+00749b80  JZ 0x00749ba0
+00749b82  MOV EBX,dword ptr [ESP + 0x1c]
+00749b86  MOV EBP,dword ptr [ESP + 0x18]
+00749b8a  MOV ESI,dword ptr [EAX]
+00749b8c  ADD EAX,-0x40
+00749b8f  PUSH EBX
+00749b90  PUSH EAX
+00749b91  CALL EBP
+00749b93  ADD ESP,0x8
+00749b96  TEST EAX,EAX
+00749b98  JZ 0x00749ba0
+00749b9a  CMP ESI,EDI
+00749b9c  MOV EAX,ESI
+00749b9e  JNZ 0x00749b8a
+00749ba0  MOV EAX,dword ptr [ESP + 0x14]
+00749ba4  POP EDI
+00749ba5  POP ESI
+00749ba6  POP EBP
+00749ba7  POP EBX
+00749ba8  RET
+
+DECOMPILED SOURCE
+
+int FUN_00749b70(int param_1,code *param_2,undefined4 param_3)
+
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  int iVar3;
+  
+  puVar2 = *(undefined4 **)(param_1 + 8);
+  do {
+    if (puVar2 == (undefined4 *)(param_1 + 8)) {
+      return param_1;
+    }
+    puVar1 = (undefined4 *)*puVar2;
+    iVar3 = (*param_2)(puVar2 + -0x10,param_3);
+    puVar2 = puVar1;
+  } while (iVar3 != 0);
+  return param_1;
+}
+
+

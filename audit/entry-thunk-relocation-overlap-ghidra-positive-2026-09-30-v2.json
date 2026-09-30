@@ -1,0 +1,474 @@
+{
+  "scope": "Original .text HIGHLOW relocation DWORD ranges intersecting 5-byte E9 rel32 entry patch windows.",
+  "reference_pe": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "function_map": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\function-name-map.csv",
+  "function_map_sha256": "A8BC89A35EBA09E6459A28338EC9FA112E81D3FCA3BFBB16AD8228A196138B8D",
+  "feasibility_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\placement-plan-conservative-ghidra-positive-2026-09-30.json",
+  "thunk_entries_selected_from_feasibility": 421,
+  "image_base": "0x10000000",
+  "text_start": "0x10001000",
+  "text_end_exclusive": "0x1002127b",
+  "original_text_highlow_site_count": 3160,
+  "entry_count": 421,
+  "entry_thunk_size": 5,
+  "overlapping_relocation_count": 64,
+  "relocation_sites_to_remove_from_base_relocation_directory": 64,
+  "fully_overwritten_fixup_count": 24,
+  "partially_overwritten_fixup_count": 40,
+  "overlaps": [
+    {
+      "relocation_site_va": "0x100013e2",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x100013e0",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10003ba4",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10003ba0",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10004a04",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10004a00",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10005674",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10005670",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x100104f0",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x100104ed",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10010543",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10010540",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001067b",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10010678",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10010822",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001081f",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10010f5c",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10010f59",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x100110c0",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x100110bd",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10011543",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x10011541",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10012c9f",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10012c9c",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10012e21",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10012e20",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x1001384e",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001384b",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10013c77",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10013c74",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10013ebc",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10013ebb",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10014449",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10014446",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10014752",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001474f",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10014bca",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10014bc7",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10014c87",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10014c86",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10014cc6",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10014cc3",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10014e0d",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10014e0a",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10014fab",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10014fa7",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016642",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001663f",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016900",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x100168fe",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016cca",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10016cc6",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016cf0",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10016cec",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016d32",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x10016d30",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x100172cf",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x100172cd",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10017de1",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10017dde",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10017e2d",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10017e2a",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10017ed8",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10017ed5",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x100181df",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x100181dc",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10018f6f",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10018f6c",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10018f78",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10018f75",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001910a",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10019107",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x100191d0",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x100191cd",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10019b3a",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10019b37",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001a688",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001a685",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001b4b2",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x1001b4b0",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001ba42",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x1001ba40",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001ce0f",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001ce0c",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001d38d",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001d38a",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10020a91",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020a90",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020af1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020af0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020b51",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020b50",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020bb1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020bb0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020c11",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020c10",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020c71",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020c70",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020cd1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020cd0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020d31",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020d30",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020d91",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020d90",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020df1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020df0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020e51",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020e50",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020eb1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020eb0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020f11",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020f10",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020f71",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020f70",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10020fd1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10020fd0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10021031",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10021030",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10021091",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10021090",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x100210f1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x100210f0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10021151",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10021150",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x100211b1",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x100211b0",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10021211",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10021210",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    }
+  ],
+  "limitations": [
+    "This identifies relocation entries whose 4-byte patch field intersects a planned entry thunk; it does not emit or patch a PE.",
+    "It does not validate original instruction/control-flow boundaries, data references, startup/import behavior, or runtime semantics.",
+    "A combined-image builder must omit these original fixup records and correctly merge all remaining original and candidate relocation entries."
+  ]
+}

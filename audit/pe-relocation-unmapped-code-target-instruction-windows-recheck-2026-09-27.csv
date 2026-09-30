@@ -1,0 +1,189 @@
+target_va,instruction_va,instruction_bytes,instruction,function_owner,terminated,decode_status
+10001000,10001000,"C7 01 50 22 02 10","MOV dword ptr [ECX],0x10022250","",false,decoded
+10001000,10001006,"E9 14 F3 00 00","JMP 0x1001031f","",true,decoded
+100101a0,,,,,false,no-instruction-at-target
+100104bc,100104bc,"8B FF","MOV EDI,EDI","",false,decoded
+100104bc,100104be,"56","PUSH ESI","",false,decoded
+100104bc,100104bf,"6A 04","PUSH 0x4","",false,decoded
+100104bc,100104c1,"6A 20","PUSH 0x20","",false,decoded
+100104bc,100104c3,"E8 72 25 00 00","CALL 0x10012a3a","",false,decoded
+100104bc,100104c8,"59","POP ECX","",false,decoded
+100104bc,100104c9,"59","POP ECX","",false,decoded
+100104bc,100104ca,"8B F0","MOV ESI,EAX","",false,decoded
+100104bc,100104cc,"56","PUSH ESI","",false,decoded
+100104bc,100104cd,"FF 15 5C 20 02 10","CALL dword ptr [0x1002205c]","",false,decoded
+100104bc,100104d3,"A3 4C D5 03 10","MOV [0x1003d54c],EAX","",false,decoded
+100104bc,100104d8,"A3 48 D5 03 10","MOV [0x1003d548],EAX","",false,decoded
+100104bc,100104dd,"85 F6","TEST ESI,ESI","",false,decoded
+100104bc,100104df,"75 05","JNZ 0x100104e6","",false,decoded
+100104bc,100104e1,"6A 18","PUSH 0x18","",false,decoded
+100104bc,100104e3,"58","POP EAX","",false,decoded
+1001066d,,,,,false,no-instruction-at-target
+10010888,,,,,false,no-instruction-at-target
+10010a0e,,,,,false,no-instruction-at-target
+10011030,,,,,false,no-instruction-at-target
+10011190,,,,,false,no-instruction-at-target
+100111a1,,,,,false,no-instruction-at-target
+10013025,10013025,"A1 40 D5 03 10","MOV EAX,[0x1003d540]","",false,decoded
+10013025,1001302a,"56","PUSH ESI","",false,decoded
+10013025,1001302b,"6A 14","PUSH 0x14","",false,decoded
+10013025,1001302d,"5E","POP ESI","",false,decoded
+10013025,1001302e,"85 C0","TEST EAX,EAX","",false,decoded
+10013025,10013030,"75 07","JNZ 0x10013039","",false,decoded
+10013025,10013032,"B8 00 02 00 00","MOV EAX,0x200","",false,decoded
+10013025,10013037,"EB 06","JMP 0x1001303f","",true,decoded
+100130d6,100130d6,"E8 18 0E 00 00","CALL 0x10013ef3","",false,decoded
+100130d6,100130db,"80 3D 34 9A 03 10 00","CMP byte ptr [0x10039a34],0x0","",false,decoded
+100130d6,100130e2,"74 05","JZ 0x100130e9","",false,decoded
+100130d6,100130e4,"E8 F3 50 00 00","CALL 0x100181dc","",false,decoded
+100130d6,100130e9,"FF 35 20 C5 03 10","PUSH dword ptr [0x1003c520]","",false,decoded
+100130d6,100130ef,"E8 E7 E5 FF FF","CALL 0x100116db","",false,decoded
+100130d6,100130f4,"59","POP ECX","",false,decoded
+100130d6,100130f5,"C3","RET","",true,decoded
+10013972,,,,,false,no-instruction-at-target
+10013d2d,,,,,false,no-instruction-at-target
+10013eb6,,,,,false,no-instruction-at-target
+100144de,,,,,false,no-instruction-at-target
+10014d5f,,,,,false,no-instruction-at-target
+10014f21,,,,,false,no-instruction-at-target
+10014f2d,,,,,false,no-instruction-at-target
+1001672a,,,,,false,no-instruction-at-target
+1001704c,1001704c,"6A 0A","PUSH 0xa","",false,decoded
+1001704c,1001704e,"FF 15 0C 21 02 10","CALL dword ptr [0x1002210c]","",false,decoded
+1001704c,10017054,"A3 14 C4 03 10","MOV [0x1003c414],EAX","",false,decoded
+1001704c,10017059,"33 C0","XOR EAX,EAX","",false,decoded
+1001704c,1001705b,"C3","RET","",true,decoded
+10017dfe,,,,,false,no-instruction-at-target
+10017e02,,,,,false,no-instruction-at-target
+10017e4e,,,,,false,no-instruction-at-target
+10017e52,,,,,false,no-instruction-at-target
+10018036,,,,,false,no-instruction-at-target
+100181ab,,,,,false,no-instruction-at-target
+100181be,,,,,false,no-instruction-at-target
+10018a86,,,,,false,no-instruction-at-target
+10019198,,,,,false,no-instruction-at-target
+10019299,,,,,false,no-instruction-at-target
+10019b2c,,,,,false,no-instruction-at-target
+10019c05,,,,,false,no-instruction-at-target
+1001af2b,1001af2b,"6A 02","PUSH 0x2","",false,decoded
+1001af2b,1001af2d,"E8 CF 7E FF FF","CALL 0x10012e01","",false,decoded
+1001af2b,1001af32,"59","POP ECX","",false,decoded
+1001af2b,1001af33,"C3","RET","",true,decoded
+1001c5e0,1001c5e0,"6A 0A","PUSH 0xa","",false,decoded
+1001c5e0,1001c5e2,"FF 15 0C 21 02 10","CALL dword ptr [0x1002210c]","",false,decoded
+1001c5e0,1001c5e8,"A3 0C C4 03 10","MOV [0x1003c40c],EAX","",false,decoded
+1001c5e0,1001c5ed,"33 C0","XOR EAX,EAX","",false,decoded
+1001c5e0,1001c5ef,"C3","RET","",true,decoded
+1001cd2c,,,,,false,no-instruction-at-target
+1001ce8a,,,,,false,no-instruction-at-target
+1001ce94,,,,,false,no-instruction-at-target
+1001cec8,,,,,false,no-instruction-at-target
+1001cf70,,,,,false,no-instruction-at-target
+1001cf79,,,,,false,no-instruction-at-target
+1001d0ff,,,,,false,no-instruction-at-target
+1001d108,,,,,false,no-instruction-at-target
+1001d18f,,,,,false,no-instruction-at-target
+1001d376,,,,,false,no-instruction-at-target
+1001d37a,,,,,false,no-instruction-at-target
+1001d40f,,,,,false,no-instruction-at-target
+1001d413,,,,,false,no-instruction-at-target
+1002051f,,,,,false,no-instruction-at-target
+1002053b,,,,,false,no-instruction-at-target
+100208d0,100208d0,"B8 01 00 00 00","MOV EAX,0x1","",false,decoded
+100208d0,100208d5,"84 05 FC C3 03 10","TEST byte ptr [0x1003c3fc],AL","",false,decoded
+100208d0,100208db,"75 1F","JNZ 0x100208fc","",false,decoded
+100208d0,100208dd,"09 05 FC C3 03 10","OR dword ptr [0x1003c3fc],EAX","",false,decoded
+100208d0,100208e3,"33 C0","XOR EAX,EAX","",false,decoded
+100208d0,100208e5,"68 80 0A 02 10","PUSH 0x10020a80","",false,decoded
+100208d0,100208ea,"A3 E8 C3 03 10","MOV [0x1003c3e8],EAX","",false,decoded
+100208d0,100208ef,"A3 EC C3 03 10","MOV [0x1003c3ec],EAX","",false,decoded
+100208d0,100208f4,"E8 30 FC FE FF","CALL 0x10010529","",false,decoded
+100208d0,100208f9,"83 C4 04","ADD ESP,0x4","",false,decoded
+100208d0,100208fc,"C7 05 8C C3 03 10 E8 C3 03 10","MOV dword ptr [0x1003c38c],0x1003c3e8","",false,decoded
+100208d0,10020906,"C3","RET","",true,decoded
+10020910,10020910,"68 90 0A 02 10","PUSH 0x10020a90","",false,decoded
+10020910,10020915,"E8 0F FC FE FF","CALL 0x10010529","",false,decoded
+10020910,1002091a,"59","POP ECX","",false,decoded
+10020910,1002091b,"C3","RET","",true,decoded
+10020920,10020920,"68 F0 0A 02 10","PUSH 0x10020af0","",false,decoded
+10020920,10020925,"E8 FF FB FE FF","CALL 0x10010529","",false,decoded
+10020920,1002092a,"59","POP ECX","",false,decoded
+10020920,1002092b,"C3","RET","",true,decoded
+10020930,10020930,"68 50 0B 02 10","PUSH 0x10020b50","",false,decoded
+10020930,10020935,"E8 EF FB FE FF","CALL 0x10010529","",false,decoded
+10020930,1002093a,"59","POP ECX","",false,decoded
+10020930,1002093b,"C3","RET","",true,decoded
+10020940,10020940,"68 B0 0B 02 10","PUSH 0x10020bb0","",false,decoded
+10020940,10020945,"E8 DF FB FE FF","CALL 0x10010529","",false,decoded
+10020940,1002094a,"59","POP ECX","",false,decoded
+10020940,1002094b,"C3","RET","",true,decoded
+10020950,10020950,"68 10 0C 02 10","PUSH 0x10020c10","",false,decoded
+10020950,10020955,"E8 CF FB FE FF","CALL 0x10010529","",false,decoded
+10020950,1002095a,"59","POP ECX","",false,decoded
+10020950,1002095b,"C3","RET","",true,decoded
+10020960,10020960,"68 70 0C 02 10","PUSH 0x10020c70","",false,decoded
+10020960,10020965,"E8 BF FB FE FF","CALL 0x10010529","",false,decoded
+10020960,1002096a,"59","POP ECX","",false,decoded
+10020960,1002096b,"C3","RET","",true,decoded
+10020970,10020970,"68 D0 0C 02 10","PUSH 0x10020cd0","",false,decoded
+10020970,10020975,"E8 AF FB FE FF","CALL 0x10010529","",false,decoded
+10020970,1002097a,"59","POP ECX","",false,decoded
+10020970,1002097b,"C3","RET","",true,decoded
+10020980,10020980,"68 30 0D 02 10","PUSH 0x10020d30","",false,decoded
+10020980,10020985,"E8 9F FB FE FF","CALL 0x10010529","",false,decoded
+10020980,1002098a,"59","POP ECX","",false,decoded
+10020980,1002098b,"C3","RET","",true,decoded
+10020990,10020990,"68 90 0D 02 10","PUSH 0x10020d90","",false,decoded
+10020990,10020995,"E8 8F FB FE FF","CALL 0x10010529","",false,decoded
+10020990,1002099a,"59","POP ECX","",false,decoded
+10020990,1002099b,"C3","RET","",true,decoded
+100209a0,100209a0,"68 F0 0D 02 10","PUSH 0x10020df0","",false,decoded
+100209a0,100209a5,"E8 7F FB FE FF","CALL 0x10010529","",false,decoded
+100209a0,100209aa,"59","POP ECX","",false,decoded
+100209a0,100209ab,"C3","RET","",true,decoded
+100209b0,100209b0,"68 50 0E 02 10","PUSH 0x10020e50","",false,decoded
+100209b0,100209b5,"E8 6F FB FE FF","CALL 0x10010529","",false,decoded
+100209b0,100209ba,"59","POP ECX","",false,decoded
+100209b0,100209bb,"C3","RET","",true,decoded
+100209c0,100209c0,"68 B0 0E 02 10","PUSH 0x10020eb0","",false,decoded
+100209c0,100209c5,"E8 5F FB FE FF","CALL 0x10010529","",false,decoded
+100209c0,100209ca,"59","POP ECX","",false,decoded
+100209c0,100209cb,"C3","RET","",true,decoded
+100209d0,100209d0,"68 10 0F 02 10","PUSH 0x10020f10","",false,decoded
+100209d0,100209d5,"E8 4F FB FE FF","CALL 0x10010529","",false,decoded
+100209d0,100209da,"59","POP ECX","",false,decoded
+100209d0,100209db,"C3","RET","",true,decoded
+100209e0,100209e0,"68 70 0F 02 10","PUSH 0x10020f70","",false,decoded
+100209e0,100209e5,"E8 3F FB FE FF","CALL 0x10010529","",false,decoded
+100209e0,100209ea,"59","POP ECX","",false,decoded
+100209e0,100209eb,"C3","RET","",true,decoded
+100209f0,100209f0,"E8 9B 96 FE FF","CALL 0x1000a090","",false,decoded
+100209f0,100209f5,"68 D0 0F 02 10","PUSH 0x10020fd0","",false,decoded
+100209f0,100209fa,"C7 05 28 C3 03 10 74 4C 02 10","MOV dword ptr [0x1003c328],0x10024c74","",false,decoded
+100209f0,10020a04,"E8 20 FB FE FF","CALL 0x10010529","",false,decoded
+100209f0,10020a09,"59","POP ECX","",false,decoded
+100209f0,10020a0a,"C3","RET","",true,decoded
+10020a10,10020a10,"68 30 10 02 10","PUSH 0x10021030","",false,decoded
+10020a10,10020a15,"E8 0F FB FE FF","CALL 0x10010529","",false,decoded
+10020a10,10020a1a,"59","POP ECX","",false,decoded
+10020a10,10020a1b,"C3","RET","",true,decoded
+10020a20,10020a20,"68 90 10 02 10","PUSH 0x10021090","",false,decoded
+10020a20,10020a25,"E8 FF FA FE FF","CALL 0x10010529","",false,decoded
+10020a20,10020a2a,"59","POP ECX","",false,decoded
+10020a20,10020a2b,"C3","RET","",true,decoded
+10020a30,10020a30,"68 F0 10 02 10","PUSH 0x100210f0","",false,decoded
+10020a30,10020a35,"E8 EF FA FE FF","CALL 0x10010529","",false,decoded
+10020a30,10020a3a,"59","POP ECX","",false,decoded
+10020a30,10020a3b,"C3","RET","",true,decoded
+10020a40,10020a40,"68 50 11 02 10","PUSH 0x10021150","",false,decoded
+10020a40,10020a45,"E8 DF FA FE FF","CALL 0x10010529","",false,decoded
+10020a40,10020a4a,"59","POP ECX","",false,decoded
+10020a40,10020a4b,"C3","RET","",true,decoded
+10020a50,10020a50,"68 B0 11 02 10","PUSH 0x100211b0","",false,decoded
+10020a50,10020a55,"E8 CF FA FE FF","CALL 0x10010529","",false,decoded
+10020a50,10020a5a,"59","POP ECX","",false,decoded
+10020a50,10020a5b,"C3","RET","",true,decoded
+10020a60,10020a60,"68 10 12 02 10","PUSH 0x10021210","",false,decoded
+10020a60,10020a65,"E8 BF FA FE FF","CALL 0x10010529","",false,decoded
+10020a60,10020a6a,"59","POP ECX","",false,decoded
+10020a60,10020a6b,"C3","RET","",true,decoded

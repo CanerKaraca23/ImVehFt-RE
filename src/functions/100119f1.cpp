@@ -64,13 +64,14 @@ static_assert(offsetof(_LocaleUpdate, ptd) == 0x08);
 static_assert(offsetof(_LocaleUpdate, updated) == 0x0c);
 static_assert(sizeof(_LocaleUpdate) == 0x10);
 using localeinfo_struct = _LocaleUpdate;
-using code = int (__cdecl)(int, wchar_t*, undefined1*, _LocaleUpdate*);
-struct _WhiteoutABI { unsigned int __thiscall call(FILE*); };
+using code = int (__cdecl *)(int, wchar_t*, undefined1*, _LocaleUpdate*);
+extern "C" std::uint32_t __cdecl __whiteout(void);
 extern std::uint32_t DAT_10029490;
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
 extern undefined DAT_10029450;
 extern undefined* DAT_1003c420;
 extern void* PTR_LAB_10029d5c;
-extern "C" int __cdecl __fileno(FILE*);
+int __cdecl __fileno(FILE*);
 extern "C" int __cdecl _isspace(int);
 extern "C" int __cdecl _isdigit(int);
 extern "C" int __cdecl _isleadbyte(int);
@@ -94,7 +95,7 @@ int __cdecl __input_l(FILE* _File, uchar* param_2, _locale_t _Locale, va_list _A
     int* piVar3;
     std::uint32_t uVar4;
     int iVar6;
-    code* pcVar7;
+    code pcVar7;
     std::uint32_t uVar8;
     int iVar9;
     undefined* puVar10;
@@ -167,7 +168,8 @@ int __cdecl __input_l(FILE* _File, uchar* param_2, _locale_t _Locale, va_list _A
         piVar3 = __errno();
         *piVar3 = 0x16;
         FUN_1001189f();
-        return -1;
+        local_1d0 = -1;
+        goto cleanup;
     }
 
     if ((_File->_flag & 0x40) == 0) {
@@ -207,7 +209,13 @@ LAB_10011b0d:
             iVar6 = _isspace((int)pvVar5);
             if (iVar6 != 0) {
                 local_190 = local_190 + -1;
-                uVar4 = reinterpret_cast<_WhiteoutABI*>(pvVar5)->call(local_1a8);
+                __asm {
+                    lea esi, local_190
+                    push local_1a8
+                    call __whiteout
+                    pop ecx
+                    mov uVar4, eax
+                }
                 if (uVar4 != 0xffffffff) __ungetc_nolock(uVar4, local_1a8);
                 do {
                     param_2 = param_2 + 1;
@@ -317,7 +325,13 @@ LAB_10011cb5:
                         local_190 = local_190 + 1;
                         local_198 = __inc(pvVar5, local_1a8);
                     } else {
-                        local_198 = reinterpret_cast<_WhiteoutABI*>(pvVar5)->call(local_1a8);
+                        __asm {
+                            lea esi, local_190
+                            push local_1a8
+                            call __whiteout
+                            pop ecx
+                            mov local_198, eax
+                        }
                     }
                     if (local_198 == 0xffffffff) goto LAB_10012985;
                 }
@@ -740,7 +754,7 @@ LAB_10012092:
                         iVar6 = (char)local_189 + -1;
                         pwVar16 = local_1c4;
                         puVar23 = local_1b4;
-                        pcVar7 = reinterpret_cast<code*>(DecodePointer(PTR_LAB_10029d5c));
+                        pcVar7 = reinterpret_cast<code>(DecodePointer(PTR_LAB_10029d5c));
                         (*pcVar7)(iVar6, pwVar16, puVar23, plVar24);
                     }
                 }
@@ -788,11 +802,11 @@ LAB_10012985:
             if (local_1d4 == 1) _free(local_1b4);
             if (local_198 == 0xffffffff) {
                 if ((local_1d0 == 0) && (local_1a9 == '\0')) local_1d0 = -1;
-                if (local_200.updated == 0) return local_1d0;
+                if (local_200.updated == 0) goto cleanup;
                 auto* locale_thread_data = reinterpret_cast<std::uint32_t*>(
                     reinterpret_cast<std::uintptr_t>(local_200.ptd) + 0x70);
                 *locale_thread_data &= 0xfffffffd;
-                return local_1d0;
+                goto cleanup;
             }
         }
         if (local_200.updated != 0) {
@@ -801,7 +815,7 @@ LAB_10012985:
             *locale_thread_data &= 0xfffffffd;
         }
     }
-    return local_1d0;
+    goto cleanup;
 
 LAB_1001258f:
     local_190 = local_190 + -1;
@@ -813,4 +827,10 @@ LAB_100125a8:
         else *local_1c4 = L'\0';
     }
     goto LAB_100128b0;
+
+cleanup:
+    __security_check_cookie(
+        local_8 ^ static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(&local_8) & 0xfffffffcU));
+    return local_1d0;
 }

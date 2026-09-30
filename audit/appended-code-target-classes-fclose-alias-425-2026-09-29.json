@@ -1,0 +1,2478 @@
+{
+  "scope": "Reclassifies the current appended-body diagnostic code-symbol set. Candidate and GTA addresses are resolved to preserved original entry/runtime VAs; import and CRT records remain explicitly unresolved for final-image integration. Does not apply COFF fixups.",
+  "symbol_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-code-link-resolution-fclose-alias-425-2026-09-29.json",
+  "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\entry-trampoline-feasibility-conservative-425-thunks-2026-09-29.json",
+  "candidate_entries": 705,
+  "game_exe": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\gta_sa.exe",
+  "game_image_base": "0x400000",
+  "unique_symbols": 161,
+  "occurrences": 297,
+  "unique_by_status": {
+    "callback-dispatch-original-va": 5,
+    "callback-helper-original-va": 95,
+    "candidate-entry-va": 5,
+    "external-game-text-va": 13,
+    "import-or-system-api": 21,
+    "static-crt-runtime": 22
+  },
+  "occurrences_by_status": {
+    "callback-dispatch-original-va": 5,
+    "callback-helper-original-va": 95,
+    "candidate-entry-va": 14,
+    "external-game-text-va": 17,
+    "import-or-system-api": 57,
+    "static-crt-runtime": 109
+  },
+  "unresolved_symbols": [
+    {
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "occurrences": 15,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_EnterCriticalSection@4",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetCPInfo@8",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetCurrentProcess@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetCurrentThreadId@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetLastError@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetStringTypeW@16",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_HeapAlloc@12",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_HeapSize@12",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_InitializeCriticalSectionAndSpinCount@8",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_InterlockedDecrement@4",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_IsValidCodePage@4",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_LCMapStringW@24",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_LeaveCriticalSection@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_MessageBoxA@16",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "user32:USER32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_MultiByteToWideChar@24",
+      "relocation_type": "REL32",
+      "occurrences": 6,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_Sleep@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_TerminateProcess@8",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "occurrences": 8,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_WideCharToMultiByte@32",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "__alldiv",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:lldiv.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__alloca_probe_16",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:alloca16.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__allrem",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:llrem.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__aulldiv",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:ulldiv.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__aullrem",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:ullrem.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__chkstk",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:chkstk.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__ftol2_sse",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:ftol2.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__strnicmp",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strnicmp.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_atexit",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:utility.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_fabs",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:fabs.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_fclose",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:fclose.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_fgets",
+      "relocation_type": "REL32",
+      "occurrences": 7,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:fgets.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_memcpy",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libvcruntime-without-exsup4:memcpy.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_memset",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libvcruntime-without-exsup4:memset.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_roundf",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:roundf.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_sprintf",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "i legacy_stdio_definitions:legacy_stdio_definitions.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "occurrences": 19,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strcat_s.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "occurrences": 30,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strcpy_s.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "occurrences": 11,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strncmp.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strncpy_s",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strncpy_s.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strrchr",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libvcruntime-without-exsup4:strrchr.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_terminate",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:terminate.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    }
+  ],
+  "rows": [
+    {
+      "symbol": "_FUN_727be0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x727be0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "_FUN_7ee180",
+      "relocation_type": "DIR32",
+      "occurrences": 2,
+      "status": "external-game-text-va",
+      "target_va": "0x7ee180",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "_FUN_7ee190",
+      "relocation_type": "DIR32",
+      "occurrences": 2,
+      "status": "external-game-text-va",
+      "target_va": "0x7ee190",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "_FUN_7f9fb0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x7f9fb0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "_FUN_7f9ff0",
+      "relocation_type": "DIR32",
+      "occurrences": 2,
+      "status": "external-game-text-va",
+      "target_va": "0x7f9ff0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAA0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-dispatch-original-va",
+      "target_va": "0x1000caa0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+      ],
+      "detail": "75-byte Ghidra-derived provider dispatcher; static overlay audit only."
+    },
+    {
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAF0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-dispatch-original-va",
+      "target_va": "0x1000caf0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+      ],
+      "detail": "75-byte Ghidra-derived provider dispatcher; static overlay audit only."
+    },
+    {
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB40",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-dispatch-original-va",
+      "target_va": "0x1000cb40",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+      ],
+      "detail": "75-byte Ghidra-derived provider dispatcher; static overlay audit only."
+    },
+    {
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB90",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-dispatch-original-va",
+      "target_va": "0x1000cb90",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+      ],
+      "detail": "75-byte Ghidra-derived provider dispatcher; static overlay audit only."
+    },
+    {
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CBE0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-dispatch-original-va",
+      "target_va": "0x1000cbe0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+      ],
+      "detail": "75-byte Ghidra-derived provider dispatcher; static overlay audit only."
+    },
+    {
+      "symbol": "_LAB_1000c640",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c640",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c650",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c650",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c660",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c660",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c670",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c670",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c680",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c680",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c690",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c690",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c6a0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c6a0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c6b0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c6b0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c6c0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c6c0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c6d0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c6d0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c6e0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c6e0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c6f0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c6f0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c700",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c700",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c710",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c710",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c720",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c720",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c730",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c730",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c740",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c740",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c750",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c750",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c760",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c760",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c770",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c770",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c780",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c780",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c790",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c790",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c7a0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c7a0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c7b0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c7b0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c7c0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c7c0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c7d0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c7d0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c7e0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c7e0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c7f0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c7f0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c800",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c800",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c810",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c810",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c820",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c820",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c830",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c830",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c840",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c840",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c850",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c850",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c860",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c860",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c870",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c870",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c880",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c880",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c890",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c890",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c8a0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c8a0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c8b0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c8b0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c8c0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c8c0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c8d0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c8d0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c8e0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c8e0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c8f0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c8f0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c900",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c900",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c910",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c910",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c920",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c920",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c930",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c930",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c940",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c940",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c950",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c950",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c960",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c960",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c970",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c970",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c980",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c980",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c990",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c990",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c9a0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c9a0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c9b0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c9b0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c9c0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c9c0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c9d0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c9d0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c9e0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c9e0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000c9f0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000c9f0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca00",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca00",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca10",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca10",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca20",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca20",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca30",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca30",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca40",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca40",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca50",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca50",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca60",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca60",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca70",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca70",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca80",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca80",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ca90",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ca90",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_jmp_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cc30",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cc30",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cc40",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cc40",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cc50",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cc50",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cc60",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cc60",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cc70",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cc70",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cc80",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cc80",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cc90",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cc90",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cca0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cca0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ccb0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ccb0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ccc0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ccc0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ccd0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ccd0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cce0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cce0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000ccf0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000ccf0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd00",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd00",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd10",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd10",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd20",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd20",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd30",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd30",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd40",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd40",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd50",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd50",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd60",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd60",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd70",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd70",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd80",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd80",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cd90",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cd90",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cda0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cda0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "_LAB_1000cdb0",
+      "relocation_type": "DIR32",
+      "occurrences": 1,
+      "status": "callback-helper-original-va",
+      "target_va": "0x1000cdb0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "x86_callback_entry_thunks.obj"
+      ],
+      "detail": "Address is a Ghidra-derived callback helper label; overlay and relocation audited separately."
+    },
+    {
+      "symbol": "?FID_conflict__memcpy@@YAXPAXPBXI@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x100111e0",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100111e0.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "?FUN_00730e60@@YAHI@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x730e60",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "?FUN_007ec9d0@@YAHIPAFH@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x7ec9d0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "?FUN_007ed2d0@@YAHIHPAHPAE@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x7ed2d0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "?FUN_007f3600@@YAHXZ",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x7f3600",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "?FUN_007f36a0@@YAXH@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x7f36a0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "?FUN_007f3730@@YAXHIH@Z",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "external-game-text-va",
+      "target_va": "0x7f3730",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "?FUN_007f3980@@YAXHH@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x7f3980",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "?__CxxThrowException_8@@YGXPAX0@Z",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001156b",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001156b.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "occurrences": 15,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_EnterCriticalSection@4",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_FID_conflict__sscanf",
+      "relocation_type": "REL32",
+      "occurrences": 9,
+      "status": "candidate-entry-va",
+      "target_va": "0x100103e4",
+      "candidate_placement_mode": "jmp-rel32-thunk",
+      "diagnostic_modules": [
+        "100103e4.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_FUN_0052cee0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "external-game-text-va",
+      "target_va": "0x52cee0",
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "renderware_address_providers.obj"
+      ],
+      "detail": "Address encoded in the symbol lies in installed GTA SA .text."
+    },
+    {
+      "symbol": "_GetCPInfo@8",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetCurrentProcess@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetCurrentThreadId@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetLastError@0",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_GetStringTypeW@16",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_HeapAlloc@12",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_HeapSize@12",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_IVF_LocaleUpdate_ctor_relocatable",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "candidate-entry-va",
+      "target_va": "0x10010b1a",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "10010b1a.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "_InitializeCriticalSectionAndSpinCount@8",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_InterlockedDecrement@4",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_IsValidCodePage@4",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_LCMapStringW@24",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_LeaveCriticalSection@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_MessageBoxA@16",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "user32:USER32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_MultiByteToWideChar@24",
+      "relocation_type": "REL32",
+      "occurrences": 6,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_Sleep@4",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_TerminateProcess@8",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "occurrences": 8,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "_WideCharToMultiByte@32",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "import-or-system-api",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "detail": "Requires original import/IAT and final loader integration; diagnostic thunk VA is not used."
+    },
+    {
+      "symbol": "___alloca_probe",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "candidate-entry-va",
+      "target_va": "0x1001b220",
+      "candidate_placement_mode": "body-at-entry",
+      "diagnostic_modules": [
+        "1001b220.obj"
+      ],
+      "detail": "Candidate entry remains at its original VA; placement routes to the in-place body or its five-byte thunk."
+    },
+    {
+      "symbol": "__alldiv",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:lldiv.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__alloca_probe_16",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:alloca16.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__allrem",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:llrem.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__aulldiv",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:ulldiv.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__aullrem",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:ullrem.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__chkstk",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:chkstk.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__ftol2_sse",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:ftol2.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "__strnicmp",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strnicmp.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_atexit",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libcmt:utility.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_fabs",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:fabs.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_fclose",
+      "relocation_type": "REL32",
+      "occurrences": 4,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:fclose.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_fgets",
+      "relocation_type": "REL32",
+      "occurrences": 7,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:fgets.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_memcpy",
+      "relocation_type": "REL32",
+      "occurrences": 2,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libvcruntime-without-exsup4:memcpy.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_memset",
+      "relocation_type": "REL32",
+      "occurrences": 5,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libvcruntime-without-exsup4:memset.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_roundf",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:roundf.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_sprintf",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "i legacy_stdio_definitions:legacy_stdio_definitions.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "occurrences": 19,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strcat_s.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "occurrences": 30,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strcpy_s.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "occurrences": 11,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strncmp.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strncpy_s",
+      "relocation_type": "REL32",
+      "occurrences": 1,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:strncpy_s.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_strrchr",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libvcruntime-without-exsup4:strrchr.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    },
+    {
+      "symbol": "_terminate",
+      "relocation_type": "REL32",
+      "occurrences": 3,
+      "status": "static-crt-runtime",
+      "target_va": null,
+      "candidate_placement_mode": null,
+      "diagnostic_modules": [
+        "libucrt:terminate.obj"
+      ],
+      "detail": "Static runtime code must be laid out with its own data/unwind/relocation closure."
+    }
+  ]
+}

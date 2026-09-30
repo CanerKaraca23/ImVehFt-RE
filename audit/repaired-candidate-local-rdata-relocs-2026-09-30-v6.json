@@ -1,0 +1,79 @@
+{
+  "scope": "Narrow repair of local-rdata relocations/helper placement in experimental v5; not game/runtime validation.",
+  "input_sha256": "A0513334C7DE0D5E174FE417E19B886EB6882EFF70C41A3DA34B098476F6B2F4",
+  "output_sha256": "041B0CD18AFF3F7872AA4BC8EA8D1BBA96181B98C8D231D08FC9BBDAED74E320",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "removed_stale_sites": [
+    "0x586a8",
+    "0x586a9",
+    "0x586ac"
+  ],
+  "added_final_local_rdata_sites": [
+    "0x5c6a0",
+    "0x5c818",
+    "0x5c81c"
+  ],
+  "local_data_fields": [
+    {
+      "site_rva": "0x5c6a0",
+      "value": "0x1001072a"
+    },
+    {
+      "site_rva": "0x5c818",
+      "value": "0x1005bb7b"
+    },
+    {
+      "site_rva": "0x5c81c",
+      "value": "0x1005bb7f"
+    }
+  ],
+  "filter_va": "0x1005bb7b",
+  "handler_va": "0x1005bb7f",
+  "abort_call_target_va": "0x1001705c",
+  "abort_rel32": -281395,
+  "relocation_sites": 6389,
+  "relocation_directory_bytes": 13416,
+  "sections": {
+    ".text": {
+      "rva": "0x1000",
+      "virtual_size": 131707,
+      "raw_size": 132096
+    },
+    ".rdata": {
+      "rva": "0x22000",
+      "virtual_size": 28484,
+      "raw_size": 28672
+    },
+    ".data": {
+      "rva": "0x29000",
+      "virtual_size": 83292,
+      "raw_size": 68096
+    },
+    ".rsrc": {
+      "rva": "0x3e000",
+      "virtual_size": 696,
+      "raw_size": 1024
+    },
+    ".reloc": {
+      "rva": "0x3f000",
+      "virtual_size": 13412,
+      "raw_size": 16384
+    },
+    ".xcode": {
+      "rva": "0x43000",
+      "virtual_size": 101243,
+      "raw_size": 101376
+    },
+    ".xrdata": {
+      "rva": "0x5c000",
+      "virtual_size": 3490,
+      "raw_size": 3584
+    },
+    ".xdata": {
+      "rva": "0x5d000",
+      "virtual_size": 56,
+      "raw_size": 512
+    }
+  },
+  "validation": "PE parser and relocation directory round-trip only; nonpreferred-base byte differential still required."
+}

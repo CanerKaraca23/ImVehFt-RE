@@ -1,0 +1,17 @@
+{
+    "candidate":  "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\pe-layout-probe\\ImVehFt-candidate-705-static-20260930-v8-seh-fix.asi",
+    "sha256":  "73A9A04DDEA5C38B092EB7D22C2932836F80505A28738ABA280EDD5C825C9CCC",
+    "preferred_base":  "0x10000000",
+    "mapped_base":  "0x68840000",
+    "relocation_delta":  "0x58840000",
+    "highlow_sites":  6389,
+    "mismatches":  0,
+    "mismatch_examples":  [
+
+                          ],
+    "imports_resolved":  false,
+    "dllmain_called":  false,
+    "gta_or_plugin_loader_started":  false,
+    "module_freed":  true,
+    "reservation_released":  true
+}

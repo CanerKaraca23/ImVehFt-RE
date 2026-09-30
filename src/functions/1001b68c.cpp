@@ -1,14 +1,11 @@
-#include <cstdint>
-
-extern "C" void LOCK();
-extern "C" void UNLOCK();
-
-void __stdcall FID_conflict__CallMemberFunction1(
-    std::uint32_t ,
-    void* UNRECOVERED_JUMPTABLE)
+extern "C" __declspec(naked) void __stdcall FID_conflict__CallMemberFunction1(
+    unsigned int,
+    void*)
 {
-    LOCK();
-    UNLOCK();
-
-    reinterpret_cast<void (*)()>(UNRECOVERED_JUMPTABLE)();
+    __asm {
+        pop eax
+        pop ecx
+        xchg dword ptr [esp], eax
+        jmp eax
+    }
 }

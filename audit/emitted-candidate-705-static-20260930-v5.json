@@ -1,0 +1,44 @@
+{
+  "scope": "New experimental PE32 candidate assembled from pinned reverse-engineering payloads; not runtime-tested.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_asi_sha256": "A0513334C7DE0D5E174FE417E19B886EB6882EFF70C41A3DA34B098476F6B2F4",
+  "candidate_file_bytes": 352768,
+  "section_count": 8,
+  "sections": {
+    ".xcode": {
+      "rva": "0x00043000",
+      "virtual_size": 101243,
+      "raw_offset": "0x0003C600",
+      "raw_size": 101376
+    },
+    ".xrdata": {
+      "rva": "0x0005C000",
+      "virtual_size": 3490,
+      "raw_offset": "0x00055200",
+      "raw_size": 3584
+    },
+    ".xdata": {
+      "rva": "0x0005D000",
+      "virtual_size": 56,
+      "raw_offset": "0x00056000",
+      "raw_size": 512
+    }
+  },
+  "text_sha256": "43D1DFAE4B0159E9ADD4D7E27B68817DEADF1EFD604278ACE3492FE33DB51729",
+  "xcode_sha256": "11B8ABC43F2B7DB2E585AF671ADBF9DA945A90AE75715FCBA536502689933478",
+  "rdata_sha256": "ED3AF1C6ECF7CF55CA73AA352BD1B5E8E6A6B2A681FD67AA6FB3B200C541F67E",
+  "data_sha256": "B4EC39562D6B7F01AF2AEE63B6DC21FAFBB48035C423E4E96AC41D2A9804943F",
+  "relocation_sha256": "05D9F764EF725989E7F1B82EA28D6F961911CF598205249E2DAC16F14E9C41FB",
+  "highlow_sites": 6389,
+  "highlow_site_set_matches_independent_union": true,
+  "original_relocation_sites_overwritten_by_entry_thunks": 64,
+  "thunk_overwritten_relocations_present_in_final_directory": false,
+  "independent_pe_parser_passed": true,
+  "checksum": 411703,
+  "limitations": [
+    "This is a reconstructed candidate, not the author's original source build.",
+    "Static PE parsing does not prove successful plugin-loader initialization or game behavior.",
+    "No LoadLibrary, GTA launch, or gameplay test was run by this emitter.",
+    "Original ASI was read-only input and was not modified."
+  ]
+}

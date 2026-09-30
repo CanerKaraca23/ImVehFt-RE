@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 
@@ -53,7 +54,7 @@ extern "C" int __cdecl strncmp(char*, char*, std::size_t);
 extern "C" void __fastcall FUN_10004a00(undefined4*);
 extern "C" void __stdcall FUN_10004000();
 extern "C" int __cdecl FID_conflict__sscanf(char*, char*, ...);
-struct FUN_10004ab0_this { void __thiscall invoke(undefined4); };
+extern "C" void FUN_10004ab0();
 
 using GetStringFn = std::uint8_t* (__cdecl*)(undefined4);
 using RegisterFn =
@@ -80,7 +81,7 @@ extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
         std::uint8_t* pbVar4;
         bool bVar6;
 
-        pbVar4 = reinterpret_cast<std::uint8_t*>(0x10024884);
+        pbVar4 = reinterpret_cast<std::uint8_t*>(IVF_IMAGE_ADDRESS_10024884);
         pbVar3 = _Str1;
 
         do
@@ -122,7 +123,7 @@ extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
         }
         else
         {
-            pbVar4 = reinterpret_cast<std::uint8_t*>(0x1002488c);
+            pbVar4 = reinterpret_cast<std::uint8_t*>(IVF_IMAGE_ADDRESS_1002488C);
             pbVar3 = _Str1;
 
             do
@@ -164,7 +165,7 @@ extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
             }
             else
             {
-                pbVar4 = reinterpret_cast<std::uint8_t*>(0x10024894);
+                pbVar4 = reinterpret_cast<std::uint8_t*>(IVF_IMAGE_ADDRESS_10024894);
                 pbVar3 = _Str1;
 
                 do
@@ -206,7 +207,7 @@ extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
                 }
                 else
                 {
-                    pbVar4 = reinterpret_cast<std::uint8_t*>(0x1002489c);
+                    pbVar4 = reinterpret_cast<std::uint8_t*>(IVF_IMAGE_ADDRESS_1002489C);
                     pbVar3 = _Str1;
 
                     do
@@ -248,7 +249,7 @@ extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
                     }
                     else
                     {
-                        pbVar4 = reinterpret_cast<std::uint8_t*>(0x100248a4);
+                        pbVar4 = reinterpret_cast<std::uint8_t*>(IVF_IMAGE_ADDRESS_100248A4);
                         pbVar3 = _Str1;
 
                         do
@@ -292,7 +293,7 @@ extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
                         }
                         else
                         {
-                            pbVar4 = reinterpret_cast<std::uint8_t*>(0x100248ac);
+                            pbVar4 = reinterpret_cast<std::uint8_t*>(IVF_IMAGE_ADDRESS_100248AC);
                             pbVar3 = _Str1;
 
                             do
@@ -429,7 +430,14 @@ extern "C" void __cdecl FUN_10004430(undefined4 param_1, int param_2)
 
                                             if (iVar2 == 0)
                                             {
-                                                reinterpret_cast<FUN_10004ab0_this*>(_Str1)->invoke(param_1);
+                                                void* light_entry = _Str1;
+                                                undefined4 callback_handle = param_1;
+                                                __asm {
+                                                    mov ecx, light_entry
+                                                    push callback_handle
+                                                    call FUN_10004ab0
+                                                    add esp, 4
+                                                }
                                             }
                                         }
                                     }

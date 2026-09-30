@@ -6,7 +6,7 @@ extern "C" int DAT_1003d540;
 extern "C" int* DAT_1003c520;
 
 extern "C" void __cdecl __SEH_prolog4();
-extern "C" void __cdecl __SEH_epilog4();
+extern "C" void __stdcall __SEH_epilog4(void);
 extern "C" void __cdecl __lock(int);
 extern "C" int __cdecl fclose(FILE*);
 extern "C" void __cdecl _free(void*);

@@ -1,0 +1,23 @@
+FUNCTION FUN_0072fb35 @ 0072fb35
+0072fb35  TEST EAX,EAX
+0072fb37  JLE 0x0072fb40
+0072fb39  MOV ECX,dword ptr [ESP + 0x4]
+0072fb3d  ADD EAX,ECX
+0072fb3f  RET
+0072fb40  XOR EAX,EAX
+0072fb42  RET
+
+DECOMPILED SOURCE
+
+int FUN_0072fb35(int param_1)
+
+{
+  int in_EAX;
+  
+  if (0 < in_EAX) {
+    return in_EAX + param_1;
+  }
+  return 0;
+}
+
+

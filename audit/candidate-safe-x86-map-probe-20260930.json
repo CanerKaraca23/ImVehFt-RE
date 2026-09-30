@@ -1,0 +1,11 @@
+{
+  "candidate": "build/pe-layout-probe/ImVehFt-candidate-705-static-20260930-v4.asi",
+  "candidate_sha256": "A0513334C7DE0D5E174FE417E19B886EB6882EFF70C41A3DA34B098476F6B2F4",
+  "probe": "Windows LoadLibraryExW with DONT_RESOLVE_DLL_REFERENCES (0x1), executed in a 32-bit Windows PowerShell process",
+  "result": "successfully mapped and then freed",
+  "dllmain_called": false,
+  "imports_resolved": false,
+  "gta_or_modloader_started": false,
+  "scope": "Confirms only that the x86 Windows loader can map the PE image without resolving imports or invoking DLL initialization. This is not a normal plugin load, dependency check, startup test, or gameplay validation.",
+  "note": "An initial probe from a 64-bit Python process returned Win32 error 193 because the candidate is PE32; the same no-resolve mapping probe succeeded from a 32-bit process."
+}

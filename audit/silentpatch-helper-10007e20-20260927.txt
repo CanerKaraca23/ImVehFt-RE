@@ -1,0 +1,182 @@
+FUNCTION FUN_10007e20 @ 10007e20
+10007e20  PUSH EBP
+10007e21  MOV EBP,ESP
+10007e23  PUSH -0x1
+10007e25  PUSH 0x10050b50
+10007e2a  MOV EAX,FS:[0x0]
+10007e30  PUSH EAX
+10007e31  MOV EAX,[0x10068014]
+10007e36  PUSH ECX
+10007e37  XOR EAX,EBP
+10007e39  PUSH EAX
+10007e3a  LEA EAX,[EBP + -0xc]
+10007e3d  MOV FS:[0x0],EAX
+10007e43  CALL 0x10007b70
+10007e48  MOVSX EAX,byte ptr [0x100689b8]
+10007e4f  SUB EAX,0x0
+10007e52  JZ 0x10007efe
+10007e58  SUB EAX,0x1
+10007e5b  JZ 0x10007ebc
+10007e5d  SUB EAX,0x1
+10007e60  JZ 0x10007e83
+10007e62  CMP dword ptr [EBP + 0xc],0x0
+10007e66  JZ 0x10007f30
+10007e6c  LEA ECX,[EBP + 0x8]
+10007e6f  CALL 0x10007d70
+10007e74  MOV ECX,dword ptr [EBP + -0xc]
+10007e77  MOV dword ptr FS:[0x0],ECX
+10007e7e  POP ECX
+10007e7f  MOV ESP,EBP
+10007e81  POP EBP
+10007e82  RET
+10007e83  MOV DL,byte ptr [EBP + 0x40]
+10007e86  LEA EAX,[EBP + 0x34]
+10007e89  MOVSX ECX,DL
+10007e8c  DEC ECX
+10007e8d  MOV dword ptr [EBP + -0x4],0xffffffff
+10007e94  NEG ECX
+10007e96  SBB ECX,ECX
+10007e98  NOT ECX
+10007e9a  AND ECX,EAX
+10007e9c  JNZ 0x10007e6f
+10007e9e  XOR EAX,EAX
+10007ea0  LEA ECX,[EBP + 0x34]
+10007ea3  TEST DL,DL
+10007ea5  SETNZ AL
+10007ea8  DEC EAX
+10007ea9  AND EAX,ECX
+10007eab  MOV EAX,dword ptr [EAX]
+10007ead  MOV ECX,dword ptr [EBP + -0xc]
+10007eb0  MOV dword ptr FS:[0x0],ECX
+10007eb7  POP ECX
+10007eb8  MOV ESP,EBP
+10007eba  POP EBP
+10007ebb  RET
+10007ebc  MOV DL,byte ptr [EBP + 0x30]
+10007ebf  LEA EAX,[EBP + 0x24]
+10007ec2  MOVSX ECX,DL
+10007ec5  DEC ECX
+10007ec6  MOV dword ptr [EBP + -0x4],0xffffffff
+10007ecd  NEG ECX
+10007ecf  SBB ECX,ECX
+10007ed1  NOT ECX
+10007ed3  AND ECX,EAX
+10007ed5  JNZ 0x10007e6f
+10007ed7  XOR EAX,EAX
+10007ed9  LEA ECX,[EBP + 0x24]
+10007edc  TEST DL,DL
+10007ede  SETNZ AL
+10007ee1  DEC EAX
+10007ee2  AND EAX,ECX
+10007ee4  MOV ECX,dword ptr [EAX]
+10007ee6  TEST ECX,ECX
+10007ee8  JZ 0x10007f30
+10007eea  CALL 0x10007c80
+10007eef  MOV ECX,dword ptr [EBP + -0xc]
+10007ef2  MOV dword ptr FS:[0x0],ECX
+10007ef9  POP ECX
+10007efa  MOV ESP,EBP
+10007efc  POP EBP
+10007efd  RET
+10007efe  MOV DL,byte ptr [EBP + 0x20]
+10007f01  LEA EAX,[EBP + 0x14]
+10007f04  MOVSX ECX,DL
+10007f07  DEC ECX
+10007f08  MOV dword ptr [EBP + -0x4],0xffffffff
+10007f0f  NEG ECX
+10007f11  SBB ECX,ECX
+10007f13  NOT ECX
+10007f15  AND ECX,EAX
+10007f17  JNZ 0x10007e6f
+10007f1d  XOR EAX,EAX
+10007f1f  LEA ECX,[EBP + 0x14]
+10007f22  TEST DL,DL
+10007f24  SETNZ AL
+10007f27  DEC EAX
+10007f28  AND EAX,ECX
+10007f2a  MOV ECX,dword ptr [EAX]
+10007f2c  TEST ECX,ECX
+10007f2e  JNZ 0x10007f41
+10007f30  XOR EAX,EAX
+10007f32  MOV ECX,dword ptr [EBP + -0xc]
+10007f35  MOV dword ptr FS:[0x0],ECX
+10007f3c  POP ECX
+10007f3d  MOV ESP,EBP
+10007f3f  POP EBP
+10007f40  RET
+10007f41  CALL 0x10007c50
+10007f46  MOV ECX,dword ptr [EBP + -0xc]
+10007f49  MOV dword ptr FS:[0x0],ECX
+10007f50  POP ECX
+10007f51  MOV ESP,EBP
+10007f53  POP EBP
+10007f54  RET
+
+DECOMPILED SOURCE
+
+uint __cdecl FUN_10007e20(undefined4 param_1,int param_2)
+
+{
+  uint uVar1;
+  undefined4 *puVar2;
+  char in_stack_0000001c;
+  char in_stack_0000002c;
+  char in_stack_0000003c;
+  void *local_10;
+  undefined1 *puStack_c;
+  undefined4 local_8;
+  
+  local_8 = 0xffffffff;
+  puStack_c = &LAB_10050b50;
+  local_10 = ExceptionList;
+  ExceptionList = &local_10;
+  FUN_10007b70();
+  if (DAT_100689b8 == '\0') {
+    local_8 = 0xffffffff;
+    puVar2 = (undefined4 *)(~-(uint)(in_stack_0000001c != '\x01') & (uint)&stack0x00000010);
+    if (puVar2 == (undefined4 *)0x0) {
+      uVar1 = *(uint *)((in_stack_0000001c != '\0') - 1 & (uint)&stack0x00000010);
+      if (uVar1 == 0) {
+        ExceptionList = local_10;
+        return 0;
+      }
+      uVar1 = FUN_10007c50(uVar1);
+      ExceptionList = local_10;
+      return uVar1;
+    }
+  }
+  else if (DAT_100689b8 == '\x01') {
+    local_8 = 0xffffffff;
+    puVar2 = (undefined4 *)(~-(uint)(in_stack_0000002c != '\x01') & (uint)&stack0x00000020);
+    if (puVar2 == (undefined4 *)0x0) {
+      uVar1 = *(uint *)((in_stack_0000002c != '\0') - 1 & (uint)&stack0x00000020);
+      if (uVar1 == 0) {
+        ExceptionList = local_10;
+        return 0;
+      }
+      uVar1 = FUN_10007c80(uVar1);
+      ExceptionList = local_10;
+      return uVar1;
+    }
+  }
+  else if (DAT_100689b8 == '\x02') {
+    local_8 = 0xffffffff;
+    puVar2 = (undefined4 *)(~-(uint)(in_stack_0000003c != '\x01') & (uint)&stack0x00000030);
+    if (puVar2 == (undefined4 *)0x0) {
+      ExceptionList = local_10;
+      return *(uint *)((in_stack_0000003c != '\0') - 1 & (uint)&stack0x00000030);
+    }
+  }
+  else {
+    if (param_2 == 0) {
+      ExceptionList = local_10;
+      return 0;
+    }
+    puVar2 = &param_1;
+  }
+  uVar1 = FUN_10007d70(puVar2);
+  ExceptionList = local_10;
+  return uVar1;
+}
+
+

@@ -1,0 +1,25 @@
+{
+  "scope": "In-place 5-byte E9 rel32 patch slots versus current linked candidate COMDAT ranges only; no PE modified.",
+  "candidate_count": 705,
+  "displaced_entries_requiring_trampolines": 705,
+  "candidate_comdat_count": 705,
+  "patch_body_intersection_pairs": 0,
+  "distinct_patch_slots_intersecting_candidate_code": 0,
+  "distinct_slots_intersecting_foreign_candidate_bodies": 0,
+  "distinct_slots_intersecting_own_candidate_bodies": 0,
+  "distinct_slots_without_candidate_comdat_overlap": 705,
+  "distinct_candidate_bodies_touched": 0,
+  "overlaps": [],
+  "limitations": [
+    "COFF COMDAT ranges are reconstructed from the public entry symbol offset and section size.",
+    "This does not inventory support-library code or supplemental hook-shim ranges; collision counts are a lower bound.",
+    "A next-entry fit report is not a proof of original function extent.",
+    "No trampoline bytes are emitted and no PE image is modified."
+  ],
+  "inputs": {
+    "trampoline_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\entry-trampoline-feasibility-current-xcode-20260928-4.json",
+    "trampoline_report_sha256": "e7f059c2000eb9d9082f721b229716b86ff28378a0ad6fd867ff3b152f030003",
+    "fit_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\original-entry-slot-fit-current-xcode-20260928-4.json",
+    "fit_report_sha256": "aee434cc77993aaf5bc74c541ce8ec7501d34f88cea36c74feaec4f89dba19b1"
+  }
+}

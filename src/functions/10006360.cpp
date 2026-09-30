@@ -1,17 +1,20 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
-extern std::int32_t* _DAT_00b74494;
-extern float _DAT_10024fa0;
+extern double _DAT_10024fa0;
 
 extern "C" std::int32_t __stdcall FUN_10009360();
 extern "C" long double __cdecl FUN_10010120(std::uint32_t, std::uint32_t);
 extern long double __cdecl FUN_0053cc70(std::uint32_t, std::uint32_t);
-extern void __cdecl FUN_0059b020(float);
 extern void __cdecl FUN_007f18b0(std::int32_t, std::int32_t, std::int32_t);
+using FUN_0059b020_t = void(__fastcall*)(std::int32_t, std::int32_t, float);
 
 extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
 {
+    const auto FUN_0059b020 = reinterpret_cast<FUN_0059b020_t>(
+        static_cast<std::uintptr_t>(0x0059b020));
+
     std::int32_t iVar1;
     std::int32_t iVar2;
     std::int32_t iVar3;
@@ -24,7 +27,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
     iVar2 =
         *reinterpret_cast<std::int32_t*>(
             *reinterpret_cast<std::int32_t*>(iVar1 + 0x48) +
-            ((param_1 - *_DAT_00b74494) / 0xa18) * 4) +
+            ((param_1 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
         iVar2;
 
     if ((iVar3 == 0) || (iVar3 == 2) || (iVar3 == 0xb) || (iVar3 == 1))
@@ -38,7 +41,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
             fVar4 = FUN_0053cc70(
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x10),
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x14));
-            FUN_0059b020(static_cast<float>(fVar4));
+            FUN_0059b020(iVar3 + 0x10, 0, static_cast<float>(fVar4));
 
             *reinterpret_cast<std::uint32_t*>(iVar3 + 0x40) =
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x40);
@@ -62,7 +65,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
             fVar4 = FUN_0053cc70(
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x10),
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x14));
-            FUN_0059b020(static_cast<float>(
+            FUN_0059b020(iVar3 + 0x10, 0, static_cast<float>(
                 fVar4 - static_cast<long double>(_DAT_10024fa0)));
 
             *reinterpret_cast<std::uint32_t*>(iVar3 + 0x40) =
@@ -87,7 +90,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
             fVar4 = FUN_0053cc70(
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x10),
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x14));
-            FUN_0059b020(static_cast<float>(fVar4));
+            FUN_0059b020(iVar3 + 0x10, 0, static_cast<float>(fVar4));
 
             *reinterpret_cast<std::uint32_t*>(iVar3 + 0x40) =
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x40);
@@ -111,7 +114,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
             fVar4 = FUN_0053cc70(
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x10),
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x14));
-            FUN_0059b020(static_cast<float>(
+            FUN_0059b020(iVar3 + 0x10, 0, static_cast<float>(
                 fVar4 - static_cast<long double>(_DAT_10024fa0)));
 
             *reinterpret_cast<std::uint32_t*>(iVar3 + 0x40) =
@@ -136,7 +139,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
             fVar4 = FUN_0053cc70(
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x10),
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x14));
-            FUN_0059b020(static_cast<float>(fVar4));
+            FUN_0059b020(iVar3 + 0x10, 0, static_cast<float>(fVar4));
 
             *reinterpret_cast<std::uint32_t*>(iVar3 + 0x40) =
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x40);
@@ -183,7 +186,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
             fVar4 = FUN_10010120(
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x10),
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x14));
-            FUN_0059b020(static_cast<float>(fVar4));
+            FUN_0059b020(iVar3 + 0x10, 0, static_cast<float>(fVar4));
 
             *reinterpret_cast<std::uint32_t*>(iVar3 + 0x40) =
                 *reinterpret_cast<std::uint32_t*>(iVar1 + 0x40);
@@ -214,7 +217,7 @@ extern "C" void __cdecl FUN_10006360(std::int32_t param_1)
             *reinterpret_cast<std::uint32_t*>(iVar2 + 0x14));
     }
 
-    FUN_0059b020(static_cast<float>(fVar4));
+    FUN_0059b020(iVar3 + 0x10, 0, static_cast<float>(fVar4));
 
     *reinterpret_cast<std::uint32_t*>(iVar3 + 0x40) =
         *reinterpret_cast<std::uint32_t*>(iVar2 + 0x40);

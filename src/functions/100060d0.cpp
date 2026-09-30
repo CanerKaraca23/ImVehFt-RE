@@ -1,16 +1,19 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
-extern std::int32_t* _DAT_00b74494;
 
 extern "C" std::int32_t __stdcall FUN_10009360();
 extern "C" void __cdecl FUN_10005b60(std::uint32_t);
 extern "C" void __cdecl FUN_10005ef0(std::uint32_t);
 extern "C" void __cdecl FUN_10005d30(std::uint32_t);
-extern "C" char (__cdecl* FUN_006c2130)(...);
+using FUN_006c2130_t = char(__cdecl*)(...);
 
 void __stdcall FUN_100060d0()
 {
+    const auto FUN_006c2130 = reinterpret_cast<FUN_006c2130_t>(
+        static_cast<std::uintptr_t>(0x006c2130));
+
     std::int32_t iVar4Resolved;
     std::int32_t unaff_ESI;
     __asm mov unaff_ESI, esi
@@ -144,7 +147,7 @@ void __stdcall FUN_100060d0()
                     static_cast<std::uintptr_t>(
                         *reinterpret_cast<std::int32_t*>(
                             static_cast<std::uintptr_t>(iVar7) + 0x48) +
-                        ((unaff_ESI - *_DAT_00b74494) / 0xA18) * 4)) +
+                        ((unaff_ESI - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xA18) * 4)) +
                     0x28) +
                 iVar4);
 

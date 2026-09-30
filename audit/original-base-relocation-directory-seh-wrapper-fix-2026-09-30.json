@@ -1,0 +1,12 @@
+{
+  "scope": "Exact original base-relocation directory bytes extracted from the pinned ASI; no PE bytes modified.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "directory_rva": "0x0003F000",
+  "encoded_directory_bytes": 9768,
+  "encoded_directory_sha256": "7B2F9349D20DAC24CB86666DF728B5C7835F1D892E5BF604B06C4C9DCB28E18A",
+  "final_highlow_sites": 4681,
+  "relocation_entries_including_padding": 4708,
+  "original_reloc_section_virtual_size": 16196,
+  "original_reloc_section_raw_size": 16384,
+  "raw_file_offset": "0x00038600"
+}

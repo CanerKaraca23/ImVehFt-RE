@@ -20,7 +20,7 @@ static_assert(sizeof(_iobuf) == 0x20);
 extern std::uint32_t _DAT_10039a40;
 extern "C" char* __cdecl __malloc_crt(std::size_t);
 
-void __cdecl __getbuf(FILE* _File)
+extern "C" void __cdecl __getbuf(FILE* _File)
 {
     _DAT_10039a40 = _DAT_10039a40 + 1;
 

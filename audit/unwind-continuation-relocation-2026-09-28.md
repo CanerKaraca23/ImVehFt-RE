@@ -1,0 +1,9 @@
+# RtlUnwind continuation relocation (2026-09-28)
+
+Rebuilt `_EH4_GlobalUnwind2` (`src/functions/10013aa2.cpp`) as an MSVC x86 naked helper matching the Ghidra instruction sequence while making the RtlUnwind target IP relocatable. Ghidra export `ghidra_exports/10013aa2.json` confirms the original sequence saves EBP/EBX/ESI/EDI, pushes arguments `(param_1, 0x10013ab6, param_2, NULL)` for stdcall `RtlUnwind`, then resumes at `0x10013ab6` to restore registers and return.
+
+The replacement preserves that register/stack sequence and uses a local `unwind_continuation` label. Targeted COFF disassembly matches the original 25-byte shape, with two expected relocations: DIR32 to the local continuation label and REL32 to `ImVehFt_Recovered_RtlUnwind@16`. The 705-object link map resolves the helper to `10013aa2.obj` and the thunk to `1001b2b2.obj`. Backup: `src/functions/10013aa2.cpp.pre-unwind-continuation-relocation-20260928.bak`.
+
+Fresh full-set checks: MSVC x86 `/O2 /W4 /WX /MT` 705/705 (`build/strict-all-post-unwind-continuation-relocation-20260928.json`), ReAgent objective 705 PASS / 0 FAIL / 0 UNKNOWN (`audit/objective-post-unwind-continuation-relocation-2026-09-28.json`), parity 705 GREEN / 0 YELLOW / 0 RED (`build/parity-post-unwind-continuation-relocation-20260928.json`), and a successful normal diagnostic link of all current objects (`build/link-probe/strict-704-historical-sdk/ImVehFt-unwind-continuation-diagnostic-not-ASI.dll`). Both 705-row source hash manifests are current.
+
+Inventory v21 has 18 occurrences / 17 unique original-image addresses (17 `.text`, one `.rdata`), one exact candidate entry and 16 remaining non-entry addresses (`audit/candidate-internal-image-address-literals-v21-2026-09-28.json`). This fixes one genuine interior-code relocation hazard, but other handler/interior/data references remain to classify. The resulting DLL is diagnostic only and has not been loaded in the game.

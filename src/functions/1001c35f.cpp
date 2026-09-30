@@ -44,11 +44,11 @@ static __declspec(naked) std::uint32_t __cdecl CallCftof2ThiscallAbi(
 extern "C" std::uint32_t DAT_10029490;
 extern "C" int* __cdecl FUN_1001dd12(
     std::uint32_t, std::uint32_t, int*, char*, std::size_t);
-extern "C" errno_t __cdecl __fptostr(char*, std::size_t, int, _strflt*);
+errno_t __cdecl __fptostr(char*, std::size_t, int, _strflt*);
 extern "C" void __stdcall FUN_1001189f(void);
 extern "C" int* __cdecl __errno(void);
 struct localeinfo_struct; // opaque Ghidra-signature pointer type; no fields accessed here
-errno_t __cdecl __cftof_l(
+extern "C" errno_t __cdecl __cftof_l(
     undefined4* param_1,
     undefined1* param_2,
     int param_3,

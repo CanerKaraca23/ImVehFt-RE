@@ -1,0 +1,5 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+00c979c8,".data","","00c979c8:?? 00h:type=undefined",""
+00c97a24,".data","","00c97a24:?? 00h:type=undefined",""
+00c97b10,".data","","00c97b10:?? 00h:type=undefined",""
+00c97b24,".data","","00c97b24:?? 00h:type=undefined",""

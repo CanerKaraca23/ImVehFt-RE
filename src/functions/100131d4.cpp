@@ -28,7 +28,7 @@ static_assert(sizeof(_iobuf) == 0x20);
 extern "C" int* __cdecl __errno();
 extern "C" void __stdcall FUN_1001189f();
 extern "C" void __cdecl __getbuf(FILE* _File);
-extern "C" int __cdecl __fileno(FILE* _File);
+int __cdecl __fileno(FILE* _File);
 extern "C" int __cdecl __read(int file_handle, void* buffer, unsigned int count);
 
 extern "C" std::uint8_t DAT_10029450;

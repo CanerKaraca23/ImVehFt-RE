@@ -1,6 +1,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <corecrt.h>
+extern "C++" void __cdecl __lock_file2(int, void*);
 extern "C" void __stdcall FUN_10013ebb();
 
 extern "C" int __cdecl flsall(int param_1)
@@ -17,7 +18,6 @@ extern "C" int __cdecl flsall(int param_1)
     extern void __cdecl __SEH_prolog4(...);
     extern void __stdcall __SEH_epilog4();
     extern void __cdecl __lock(int);
-    extern void __cdecl __lock_file2(int, void*);
     extern int __cdecl __fflush_nolock(CRT_FILE*);
     extern void __stdcall FUN_10013eea();
 

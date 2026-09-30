@@ -1,8 +1,7 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
-extern std::int32_t _DAT_00b74494;
-extern std::uint32_t _DAT_00b7cb84;
 extern std::int32_t DAT_1003bc18;
 
 
@@ -21,10 +20,18 @@ void __stdcall FUN_10005670()
     iVar3 = DAT_1003c248;
     iVar2 = FUN_10009360();
 
+    const std::int32_t vehicle_pool =
+        *reinterpret_cast<volatile std::int32_t*>(
+            static_cast<std::uintptr_t>(0x00b74494));
+    const std::int32_t vehicle_objects =
+        *reinterpret_cast<volatile std::int32_t*>(
+            static_cast<std::uintptr_t>(
+                static_cast<std::uint32_t>(vehicle_pool)));
+
     iVar3 =
         *reinterpret_cast<std::int32_t*>(
             *reinterpret_cast<std::int32_t*>(iVar2 + 0x48) +
-            ((in_EAX - _DAT_00b74494) / 0xA18) * 4) +
+            ((in_EAX - vehicle_objects) / 0xA18) * 4) +
         iVar3;
 
     if ((*reinterpret_cast<std::uint8_t*>(in_EAX + 0x42D) & 0x80) == 0)
@@ -134,7 +141,7 @@ void __stdcall FUN_10005670()
                     if (*reinterpret_cast<std::int8_t*>(iVar2 + 8) == -1)
                     {
                         *reinterpret_cast<std::uint32_t*>(iVar2 + 0x10) =
-                            _DAT_00b7cb84;
+                            IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84);
 
                         *reinterpret_cast<std::uint8_t*>(iVar2 + 8) = 0;
 
@@ -154,7 +161,7 @@ void __stdcall FUN_10005670()
                                      *reinterpret_cast<std::int32_t*>(iVar1 + 4) +
                                      *reinterpret_cast<std::int8_t*>(iVar2 + 8) * 4) +
                                  *reinterpret_cast<std::uint32_t*>(iVar2 + 0x10)) <=
-                             _DAT_00b7cb84)
+                             IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84))
                     {
                         cVar4 =
                             static_cast<std::int8_t>(
@@ -188,4 +195,3 @@ void __stdcall FUN_10005670()
         }
     }
 }
-

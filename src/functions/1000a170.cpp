@@ -1,7 +1,7 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
-extern void* BasicCallbackManager_7167791_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS__vftable;
-extern void __cdecl FUN_10010756(void*);
+extern "C" void __cdecl FUN_10010756(void*);
 
 struct FUN_1000a170_this {
     void* __thiscall FUN_1000a170(std::uint8_t param_1);
@@ -11,7 +11,7 @@ void* FUN_1000a170_this::FUN_1000a170(std::uint8_t param_1)
 {
     void* self = static_cast<void*>(this);
     *reinterpret_cast<void**>(self) =
-        BasicCallbackManager_7167791_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS__vftable;
+        reinterpret_cast<void*>(IVF_IMAGE_ADDRESS_10024E00);
 
     auto* object = reinterpret_cast<std::uint8_t*>(self);
 

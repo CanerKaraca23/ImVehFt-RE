@@ -3,6 +3,7 @@
 
 #include <cstddef>
 #include <corecrt.h>
+#include "locale_update_ctor_bridge.hpp"
 using longlong = std::int64_t;
 using ulonglong = std::uint64_t;
 using undefined = unsigned char;
@@ -10,14 +11,16 @@ using undefined1 = std::uint8_t;
 using undefined2 = std::uint16_t;
 using undefined4 = std::uint32_t;
 using undefined8 = std::uint64_t;
-using LocaleUpdateCtor = void(__thiscall*)(void* self, _locale_t locale);
-
 extern "C" void __cdecl __cropzeros_l(char* _Buf, _locale_t _Locale)
 {
     alignas(std::uint32_t) std::uint8_t local_storage[0x10];
 
-    // Ghidra 0x1001bb6e: ECX=local_storage, pushed _Locale, CALL 0x10010b1a.
-    reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(local_storage, _Locale);
+    // Preserve Ghidra's ECX=this / one-stack-argument __thiscall setup.
+    __asm {
+        lea ecx, local_storage
+        push _Locale
+        call IVF_LocaleUpdate_ctor_relocatable
+    }
 
     char* pcVar1;
     char* pcVar2;

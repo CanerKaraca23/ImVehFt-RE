@@ -1,0 +1,312 @@
+{
+  "scope": "Cross-reference of 148 planned 5-byte entry thunk windows against original .text HIGHLOW relocation ranges and direct branch targets in available Ghidra function exports; no PE bytes are changed.",
+  "inputs": {
+    "feasibility_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\entry-trampoline-feasibility-o1-manual-cookie-coff-body-exact-2026-09-29.json",
+    "feasibility_sha256": "A5B7B3516BB41CF093FA80E45506150A23319BEE18712336FD21519BC736C2AA",
+    "overlap_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\entry-thunk-relocation-overlap-o1-manual-cookie-coff-body-exact-2026-09-29.json",
+    "overlap_report_sha256": "DF58DA99B98CB730BEF19126234C96314A6C38E85940FFCDD5806C2484728011",
+    "ghidra_export_directory": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports",
+    "ghidra_export_count_with_assembly": 705
+  },
+  "summary": {
+    "thunk_windows": 148,
+    "thunk_windows_intersecting_highlow": 18,
+    "highlow_overlap_classes": {
+      "fully_overwritten": 2,
+      "partially_intersected": 16
+    },
+    "direct_branch_refs_into_thunk_interior": 0,
+    "ghidra_export_functions_scanned": 705
+  },
+  "limitations": [
+    "No direct CALL/JMP target in the exported assembly is not proof that indirect branches, function pointers, unexported code, or data references cannot enter the overwritten bytes.",
+    "Intersecting HIGHLOW entries must be reconciled by a final-image builder; this report does not prove that removing them is safe for any remaining bytes or alternate entry paths.",
+    "The Ghidra export assembly is evidence from the analyzed binary, not source-level or runtime proof."
+  ],
+  "overlaps": [
+    {
+      "relocation_site_va": "0x10004a04",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10004a00",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "FUN_10004a00",
+      "ghidra_assembly_first_5_instructions": [
+        "10004a00  PUSH EDI",
+        "10004a01  MOV EDI,ECX",
+        "10004a03  PUSH 0x1002495c",
+        "10004a08  PUSH ESI",
+        "10004a09  MOV dword ptr [EDI],EAX"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10005674",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10005670",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "FUN_10005670",
+      "ghidra_assembly_first_5_instructions": [
+        "10005670  PUSH ESI",
+        "10005671  PUSH EDI",
+        "10005672  MOV EDI,dword ptr [0x1003c248]",
+        "10005678  MOV ESI,EAX",
+        "1000567a  CALL 0x10009360"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x1001067b",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10010678",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__fsopen",
+      "ghidra_assembly_first_5_instructions": [
+        "10010678  PUSH 0xc",
+        "1001067a  PUSH 0x10028228",
+        "1001067f  CALL 0x10012e20",
+        "10010684  XOR EBX,EBX",
+        "10010686  MOV dword ptr [EBP + -0x1c],EBX"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10010f5c",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10010f59",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__CRT_INIT@12",
+      "ghidra_assembly_first_5_instructions": [
+        "10010f59  PUSH 0x8",
+        "10010f5b  PUSH 0x10028288",
+        "10010f60  CALL 0x10012e20",
+        "10010f65  MOV EAX,dword ptr [EBP + 0xc]",
+        "10010f68  CMP EAX,0x1"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10012c9f",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10012c9c",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "doexit",
+      "ghidra_assembly_first_5_instructions": [
+        "10012c9c  PUSH 0x20",
+        "10012c9e  PUSH 0x100282c8",
+        "10012ca3  CALL 0x10012e20",
+        "10012ca8  PUSH 0x8",
+        "10012caa  CALL 0x10017dab"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10012e21",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10012e20",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true,
+      "ghidra_function_name": "__SEH_prolog4",
+      "ghidra_assembly_first_5_instructions": [
+        "10012e20  PUSH 0x10012e90",
+        "10012e25  PUSH dword ptr FS:[0x0]",
+        "10012e2c  MOV EAX,dword ptr [ESP + 0x10]",
+        "10012e30  MOV dword ptr [ESP + 0x10],EBP",
+        "10012e34  LEA EBP,[ESP + 0x10]"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10014752",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001474f",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__setmbcp",
+      "ghidra_assembly_first_5_instructions": [
+        "1001474f  PUSH 0x14",
+        "10014751  PUSH 0x10028390",
+        "10014756  CALL 0x10012e20",
+        "1001475b  OR dword ptr [EBP + -0x20],0xffffffff",
+        "1001475f  CALL 0x10014df0"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10014c87",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10014c86",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true,
+      "ghidra_function_name": "__mtterm",
+      "ghidra_assembly_first_5_instructions": [
+        "10014c86  MOV EAX,[0x10029c0c]",
+        "10014c8b  CMP EAX,-0x1",
+        "10014c8e  JZ 0x10014ca6",
+        "10014c90  PUSH EAX",
+        "10014c91  PUSH dword ptr [0x10039a80]"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10014fab",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10014fa7",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__mtinit",
+      "ghidra_assembly_first_5_instructions": [
+        "10014fa7  MOV EDI,EDI",
+        "10014fa9  PUSH EDI",
+        "10014faa  PUSH 0x10022624",
+        "10014faf  CALL dword ptr [0x10022094]",
+        "10014fb5  MOV EDI,EAX"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10016642",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001663f",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__read",
+      "ghidra_assembly_first_5_instructions": [
+        "1001663f  PUSH 0x10",
+        "10016641  PUSH 0x10028420",
+        "10016646  CALL 0x10012e20",
+        "1001664b  MOV EBX,dword ptr [EBP + 0x8]",
+        "1001664e  CMP EBX,-0x2"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10016900",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x100168fe",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "FUN_100168fe",
+      "ghidra_assembly_first_5_instructions": [
+        "100168fe  CMP dword ptr [0x1003d550],0x0",
+        "10016905  JNZ 0x1001690c",
+        "10016907  CALL 0x100148e9",
+        "1001690c  PUSH ESI",
+        "1001690d  MOV ESI,dword ptr [0x100399f4]"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10016d32",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x10016d30",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__heap_term",
+      "ghidra_assembly_first_5_instructions": [
+        "10016d30  PUSH dword ptr [0x10039b90]",
+        "10016d36  CALL dword ptr [0x10022048]",
+        "10016d3c  AND dword ptr [0x10039b90],0x0",
+        "10016d43  RET"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x100172cf",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x100172cd",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "FUN_100172cd",
+      "ghidra_assembly_first_5_instructions": [
+        "100172cd  AND dword ptr [0x1003c410],0x0",
+        "100172d4  RET"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10017ed8",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10017ed5",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "_raise",
+      "ghidra_assembly_first_5_instructions": [
+        "10017ed5  PUSH 0x20",
+        "10017ed7  PUSH 0x100284a0",
+        "10017edc  CALL 0x10012e20",
+        "10017ee1  XOR EDI,EDI",
+        "10017ee3  MOV dword ptr [EBP + -0x1c],EDI"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x10018f6f",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10018f6c",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__NLG_Notify1",
+      "ghidra_assembly_first_5_instructions": [
+        "10018f6c  PUSH EBX",
+        "10018f6d  PUSH ECX",
+        "10018f6e  MOV EBX,0x10029e90",
+        "10018f73  JMP 0x10018f80"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x100191d0",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x100191cd",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "__alloc_osfhnd",
+      "ghidra_assembly_first_5_instructions": [
+        "100191cd  PUSH 0x18",
+        "100191cf  PUSH 0x10028540",
+        "100191d4  CALL 0x10012e20",
+        "100191d9  OR dword ptr [EBP + -0x1c],0xffffffff",
+        "100191dd  XOR EDI,EDI"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x1001b4b2",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x1001b4b0",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "FUN_1001b4b0",
+      "ghidra_assembly_first_5_instructions": [
+        "1001b4b0  CMP dword ptr [0x1003c40c],0x0",
+        "1001b4b7  JZ 0x1001b4eb",
+        "1001b4b9  SUB ESP,0x8",
+        "1001b4bc  STMXCSR dword ptr [ESP + 0x4]",
+        "1001b4c1  MOV EAX,dword ptr [ESP + 0x4]"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    },
+    {
+      "relocation_site_va": "0x1001ba42",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x1001ba40",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false,
+      "ghidra_function_name": "FUN_1001ba40",
+      "ghidra_assembly_first_5_instructions": [
+        "1001ba40  CMP dword ptr [0x1003c414],0x0",
+        "1001ba47  JZ 0x1001ba76",
+        "1001ba49  PUSH EBP",
+        "1001ba4a  MOV EBP,ESP",
+        "1001ba4c  SUB ESP,0x8"
+      ],
+      "direct_branch_refs_to_thunk_interior": []
+    }
+  ],
+  "direct_branch_refs": []
+}

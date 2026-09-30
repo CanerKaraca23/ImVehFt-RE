@@ -7,6 +7,7 @@ struct EHExceptionRecord
 };
 
 struct EHRegistrationNode;
+struct _CONTEXT;
 struct _s_FuncInfo;
 
 struct TranslatorGuardRN
@@ -22,8 +23,8 @@ struct TranslatorGuardRN
 
 enum _EXCEPTION_DISPOSITION : int;
 
-extern "C" void __cdecl ___InternalCxxFrameHandler(
-    EHExceptionRecord*, EHRegistrationNode*, void*, void*,
+std::uint32_t __cdecl ___InternalCxxFrameHandler(
+    EHExceptionRecord*, EHRegistrationNode*, _CONTEXT*, void*,
     _s_FuncInfo*, int, EHRegistrationNode*, unsigned char);
 
 extern "C" void __stdcall _UnwindNestedFrames(
@@ -32,6 +33,7 @@ extern "C" void __stdcall _UnwindNestedFrames(
 extern "C" int __cdecl _CallSETranslator(
     EHExceptionRecord*, EHRegistrationNode*, void*, void*,
     _s_FuncInfo*, int, EHRegistrationNode*);
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
 
 using TranslatorCallback = _EXCEPTION_DISPOSITION(__cdecl*)();
 
@@ -43,18 +45,26 @@ _EXCEPTION_DISPOSITION __cdecl TranslatorGuardHandler(
 {
     (void)param_4;
 
+    // The original validates the EH registration cookie at entry:
+    // *(param_2 + 8) ^ param_2. This is not an ordinary local GS cookie.
+    const auto registration_cookie =
+        *reinterpret_cast<const std::uint32_t*>(
+            reinterpret_cast<std::uintptr_t>(param_2) + 8u) ^
+        static_cast<std::uint32_t>(
+            reinterpret_cast<std::uintptr_t>(param_2));
+    __security_check_cookie(registration_cookie);
+
     if ((param_1->field_04 & 0x66u) != 0)
     {
         param_2->field_24 = 1;
 
-        // __security_check_cookie is compiler-injected at the function epilogue.
         return static_cast<_EXCEPTION_DISPOSITION>(1);
     }
 
     ___InternalCxxFrameHandler(
         param_1,
         param_2->field_10,
-        param_3,
+        reinterpret_cast<_CONTEXT*>(param_3),
         nullptr,
         param_2->field_0C,
         param_2->field_14,
@@ -79,6 +89,5 @@ _EXCEPTION_DISPOSITION __cdecl TranslatorGuardHandler(
         0,
         nullptr);
 
-    // __security_check_cookie is compiler-injected at the function epilogue.
     return local_8();
 }

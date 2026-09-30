@@ -1,8 +1,7 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
-extern std::int32_t* _DAT_00b74494;
-extern float _DAT_00c81300;
 
 extern "C" int __stdcall FUN_10009360();
 
@@ -46,10 +45,10 @@ void __cdecl FUN_10003340(
     const int entry =
         *reinterpret_cast<int*>(
             static_cast<std::uintptr_t>(tableBase) +
-            ((param_2 - *_DAT_00b74494) / 0xa18) * 4);
+            ((param_2 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4);
 
     const float adjustedValue =
-        _DAT_00c81300 +
+        IMVEHFT_GLOBAL_AT(float, 0x00c81300) +
         param_8 +
         static_cast<float>(
             *reinterpret_cast<std::uint8_t*>(

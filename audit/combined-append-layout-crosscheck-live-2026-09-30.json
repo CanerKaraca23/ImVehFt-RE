@@ -1,0 +1,72 @@
+{
+  "scope": "cross-plan placement/fixup-site consistency only; no fixup bytes or PE/ASI are emitted",
+  "pinned_original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_placement": {
+    "direct_body_candidates": 284,
+    "appended_root_candidates": 421
+  },
+  "code_layout_offsets": {
+    "bridge_and_root_payload_end": 96882,
+    "direct_api_thunk_range": [
+      96882,
+      96954
+    ],
+    "direct_local_xcode_start_end": [
+      96954,
+      101166
+    ],
+    "cross_object_helper_range": [
+      101166,
+      101243
+    ],
+    "final_code_virtual_size": 101243,
+    "final_code_raw_size": 101376
+  },
+  "data_layout": {
+    "appended_rdata_rva": "0x5c000",
+    "appended_data_rva": "0x5d000",
+    "rdata_size_after_late_literals": 3490
+  },
+  "fixups": {
+    "counts": {
+      "direct_body": 1213,
+      "direct_local_closure_and_api_thunks": 240,
+      "appended_roots_and_closures": 3085
+    },
+    "unique_combined_sites": 4538,
+    "overlap_counts": {
+      "direct_body/direct_local_closure_and_api_thunks": 0,
+      "direct_body/appended_roots_and_closures": 0,
+      "direct_local_closure_and_api_thunks/appended_roots_and_closures": 0
+    }
+  },
+  "highlow_relocations": {
+    "base": 6136,
+    "expanded": 6389,
+    "serialized_bytes": 13412,
+    "original_raw_capacity": 16384
+  },
+  "checks": {
+    "all_plans_pin_same_original_asi": true,
+    "root_payload_ends_where_direct_api_thunks_begin": true,
+    "direct_api_thunks_end_where_local_xcode_begins": true,
+    "direct_local_xcode_ranges_are_disjoint": true,
+    "cross_object_helpers_follow_direct_closure_without_overlap": true,
+    "final_code_virtual_and_raw_sizes_match": false,
+    "appended_rdata_and_data_rvas_agree": true,
+    "rdata_growth_includes_late_literal_sections": true,
+    "direct_body_fixup_sites_unique": true,
+    "direct_local_closure_and_api_thunks_fixup_sites_unique": true,
+    "appended_roots_and_closures_fixup_sites_unique": true,
+    "separately_planned_fixup_sets_do_not_overlap": true,
+    "expected_fixup_inventory_counts_match": true,
+    "expanded_highlow_count_and_capacity_reconcile": true,
+    "all_relocation_plans_report_signed_rel32_fit": true
+  },
+  "all_checks_pass": false,
+  "limitations": [
+    "A resolved site inventory does not prove every target's semantic identity, lifetime, or initialization.",
+    "No COFF field, original PE byte, section header, entry hook, or installer target is patched by this verifier.",
+    "The result is not a loadable ASI and provides no loader, startup, or in-game validation."
+  ]
+}

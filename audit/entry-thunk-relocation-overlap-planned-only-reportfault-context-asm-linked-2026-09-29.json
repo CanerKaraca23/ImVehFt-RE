@@ -1,0 +1,152 @@
+{
+  "scope": "Original .text HIGHLOW relocation DWORD ranges intersecting 5-byte E9 rel32 entry patch windows.",
+  "reference_pe": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "function_map": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\function-name-map.csv",
+  "function_map_sha256": "36CFE130FEACFBD419F2AD31795861DA58C5E28E161E516746CC478F402F8A51",
+  "feasibility_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\entry-trampoline-feasibility-reportfault-context-asm-linked-2026-09-29.json",
+  "thunk_entries_selected_from_feasibility": 147,
+  "image_base": "0x10000000",
+  "text_start": "0x10001000",
+  "text_end_exclusive": "0x1002127b",
+  "original_text_highlow_site_count": 3160,
+  "entry_count": 147,
+  "entry_thunk_size": 5,
+  "overlapping_relocation_count": 18,
+  "relocation_sites_to_remove_from_base_relocation_directory": 18,
+  "fully_overwritten_fixup_count": 2,
+  "partially_overwritten_fixup_count": 16,
+  "overlaps": [
+    {
+      "relocation_site_va": "0x10004a04",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10004a00",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10005674",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10005670",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001067b",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10010678",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10010f5c",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10010f59",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10012c9f",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10012c9c",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10012e21",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10012e20",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10014752",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001474f",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10014c87",
+      "relocation_site_offset_from_entry": 1,
+      "entry_va": "0x10014c86",
+      "overlap_bytes": 4,
+      "fixup_bytes_fully_overwritten": true
+    },
+    {
+      "relocation_site_va": "0x10014fab",
+      "relocation_site_offset_from_entry": 4,
+      "entry_va": "0x10014fa7",
+      "overlap_bytes": 1,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016642",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x1001663f",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016900",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x100168fe",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10016d32",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x10016d30",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x100172cf",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x100172cd",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10017ed8",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10017ed5",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x10018f6f",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x10018f6c",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x100191d0",
+      "relocation_site_offset_from_entry": 3,
+      "entry_va": "0x100191cd",
+      "overlap_bytes": 2,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001b4b2",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x1001b4b0",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    },
+    {
+      "relocation_site_va": "0x1001ba42",
+      "relocation_site_offset_from_entry": 2,
+      "entry_va": "0x1001ba40",
+      "overlap_bytes": 3,
+      "fixup_bytes_fully_overwritten": false
+    }
+  ],
+  "limitations": [
+    "This identifies relocation entries whose 4-byte patch field intersects a planned entry thunk; it does not emit or patch a PE.",
+    "It does not validate original instruction/control-flow boundaries, data references, startup/import behavior, or runtime semantics.",
+    "A combined-image builder must omit these original fixup records and correctly merge all remaining original and candidate relocation entries."
+  ]
+}

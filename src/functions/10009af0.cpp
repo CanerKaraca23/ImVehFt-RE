@@ -1,6 +1,5 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
-
-extern void* BasicCallbackManager_4459021_5487817_5488269_5488583_6393605_SimpleSuperManager_PatcherCALL1_vftable[];
 
 extern "C" void __cdecl FUN_10010756(void* param_1);
 
@@ -12,7 +11,7 @@ void* FUN_10009af0_this::FUN_10009af0(std::uint8_t param_1)
 {
     void* this_ptr = static_cast<void*>(this);
     *reinterpret_cast<void***>(this_ptr) =
-        BasicCallbackManager_4459021_5487817_5488269_5488583_6393605_SimpleSuperManager_PatcherCALL1_vftable;
+        reinterpret_cast<void**>(IVF_IMAGE_ADDRESS_10024C98);
 
     auto* member_28 = reinterpret_cast<void**>(
         reinterpret_cast<std::uint8_t*>(this_ptr) + 0x28);

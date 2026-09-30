@@ -5,9 +5,10 @@
 // Ghidra 12.1.3 instruction-for-instruction x86 reconstruction.
 // The EH prolog receives its frame size on the stack and its scope-table
 // address in EAX; a normal C++ call cannot express that custom entry ABI.
-extern "C" void __cdecl __EH_prolog3_catch(void);
+void __cdecl __EH_prolog3_catch(void);
 extern "C" void __cdecl __getptd(void);
 extern "C" void __cdecl _inconsistency(void);
+extern "C" void __cdecl IVF_EH_HANDLER_10020852(void);
 extern "C" void __stdcall FUN_10017e17(void);
 extern "C" void __cdecl terminate(void);
 
@@ -15,7 +16,7 @@ extern "C" __declspec(naked) void __stdcall FUN_1001d026(void)
 {
     __asm {
         push 4
-        mov eax, 10020852h
+        mov eax, OFFSET IVF_EH_HANDLER_10020852
         call __EH_prolog3_catch
         call __getptd
         cmp dword ptr [eax + 94h], 0

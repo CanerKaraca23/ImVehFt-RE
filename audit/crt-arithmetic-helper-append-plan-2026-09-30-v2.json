@@ -1,0 +1,175 @@
+{
+  "scope": "Unapplied placement and REL32 plan for nine static CRT arithmetic calls; sidecar tail only, not a PE/ASI.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_object_directory": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-10006360-fastcall-full-20260930",
+  "candidate_functions": 705,
+  "arithmetic_call_count": 9,
+  "calls_by_symbol": {
+    "__alldiv": 4,
+    "__allrem": 4,
+    "__aulldiv": 1
+  },
+  "arithmetic_helpers": {
+    "__alldiv": {
+      "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\crt-arithmetic-extract-20260930\\lldiv.obj",
+      "symbol": "__alldiv",
+      "object_sha256": "529252D62A4E2E098C7DB345342587AE6D4740AF5B31C168AA74440306F73BEA",
+      "code_bytes": 170,
+      "code_relocations": 0,
+      "body_sha256": "8964DCF0D769CB61DD4354FEAC00491AE8C1B34EB9627A4C5EC2D4350243D395",
+      "payload_offset": 88096
+    },
+    "__allrem": {
+      "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\crt-arithmetic-extract-20260930\\llrem.obj",
+      "symbol": "__allrem",
+      "object_sha256": "704E61D758BAE400FEE284053A5371C5E54757789DF694034B8474D885125524",
+      "code_bytes": 178,
+      "code_relocations": 0,
+      "body_sha256": "E1FCF7FC916461A2C414A1E217732D003803A01B8364A6ACB293366906FCC724",
+      "payload_offset": 88272
+    },
+    "__aulldiv": {
+      "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\crt-arithmetic-extract-20260930\\ulldiv.obj",
+      "symbol": "__aulldiv",
+      "object_sha256": "19D97CED289FF4FAC7B8E162EB3EDB5C1DE79AA1AA283FF292B7822DDB3BF1A8",
+      "code_bytes": 104,
+      "code_relocations": 0,
+      "body_sha256": "84D17E172FF5E6BCE23B7837CC15439649F685D00B3CDFF9CC07CAE79A0A88F2",
+      "payload_offset": 88464
+    }
+  },
+  "existing_api_thunk_offset": 87968,
+  "existing_api_thunk_bytes": 126,
+  "tail_payload_start_offset": 87968,
+  "tail_payload_bytes": 600,
+  "combined_appended_payload_bytes": 88568,
+  "appended_section_rva": "0x00043000",
+  "appended_section_raw_offset": "0x0003C600",
+  "file_aligned_appended_raw_bytes": 88576,
+  "provisional_appended_raw_end": "0x00052000",
+  "all_call_displacements_in_range": true,
+  "patches": [
+    {
+      "candidate_entry": "0x10014003",
+      "object_sha256": "C608D647B31AD3733212387CF796A2A2557E3FFBE36591C7819673FB8A5CFD0A",
+      "target_helper": "__aulldiv",
+      "relocation_site_offset": "0x3E",
+      "call_instruction_rva": "0x0004CA6D",
+      "relocation_field_rva": "0x0004CA6E",
+      "helper_payload_offset": 88464,
+      "helper_va": "0x10058990",
+      "rel32_displacement": 48926,
+      "rel32_displacement_u32": "0x0000BF1E",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__alldiv",
+      "relocation_site_offset": "0x335",
+      "call_instruction_rva": "0x00053874",
+      "relocation_field_rva": "0x00053875",
+      "helper_payload_offset": 88096,
+      "helper_va": "0x10058820",
+      "rel32_displacement": 20391,
+      "rel32_displacement_u32": "0x00004FA7",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__allrem",
+      "relocation_site_offset": "0x350",
+      "call_instruction_rva": "0x0005388F",
+      "relocation_field_rva": "0x00053890",
+      "helper_payload_offset": 88272,
+      "helper_va": "0x100588D0",
+      "rel32_displacement": 20540,
+      "rel32_displacement_u32": "0x0000503C",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__alldiv",
+      "relocation_site_offset": "0x369",
+      "call_instruction_rva": "0x000538A8",
+      "relocation_field_rva": "0x000538A9",
+      "helper_payload_offset": 88096,
+      "helper_va": "0x10058820",
+      "rel32_displacement": 20339,
+      "rel32_displacement_u32": "0x00004F73",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__allrem",
+      "relocation_site_offset": "0x388",
+      "call_instruction_rva": "0x000538C7",
+      "relocation_field_rva": "0x000538C8",
+      "helper_payload_offset": 88272,
+      "helper_va": "0x100588D0",
+      "rel32_displacement": 20484,
+      "rel32_displacement_u32": "0x00005004",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__alldiv",
+      "relocation_site_offset": "0x3A3",
+      "call_instruction_rva": "0x000538E2",
+      "relocation_field_rva": "0x000538E3",
+      "helper_payload_offset": 88096,
+      "helper_va": "0x10058820",
+      "rel32_displacement": 20281,
+      "rel32_displacement_u32": "0x00004F39",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__allrem",
+      "relocation_site_offset": "0x3B4",
+      "call_instruction_rva": "0x000538F3",
+      "relocation_field_rva": "0x000538F4",
+      "helper_payload_offset": 88272,
+      "helper_va": "0x100588D0",
+      "rel32_displacement": 20440,
+      "rel32_displacement_u32": "0x00004FD8",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__alldiv",
+      "relocation_site_offset": "0x3D4",
+      "call_instruction_rva": "0x00053913",
+      "relocation_field_rva": "0x00053914",
+      "helper_payload_offset": 88096,
+      "helper_va": "0x10058820",
+      "rel32_displacement": 20232,
+      "rel32_displacement_u32": "0x00004F08",
+      "expected_current_bytes": "E8 00 00 00 00"
+    },
+    {
+      "candidate_entry": "0x1001BEE6",
+      "object_sha256": "258406AB4A6B3834B13FF7F9528E45AC7C9E7881ACB972A237D37291BF006838",
+      "target_helper": "__allrem",
+      "relocation_site_offset": "0x3E6",
+      "call_instruction_rva": "0x00053925",
+      "relocation_field_rva": "0x00053926",
+      "helper_payload_offset": 88272,
+      "helper_va": "0x100588D0",
+      "rel32_displacement": 20390,
+      "rel32_displacement_u32": "0x00004FA6",
+      "expected_current_bytes": "E8 00 00 00 00"
+    }
+  ],
+  "limitations": [
+    "Patch plan and sidecar tail are not applied to candidate objects or any image.",
+    "Arithmetic implementations are extracted from MSVC 14.44 libcmt, not proven to be the original 2014 compiler runtime.",
+    "No full PE builder, loader validation, ASI output, or live GTA test is included."
+  ]
+}

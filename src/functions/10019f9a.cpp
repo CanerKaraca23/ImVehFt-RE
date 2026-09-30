@@ -34,7 +34,7 @@ static_assert(sizeof(_LocaleUpdate) == 0x10);
 extern "C" int __cdecl __crtGetStringTypeA_stat(
     localeinfo_struct*, unsigned long, char*, int, unsigned short*, int, int, int);
 
-BOOL __cdecl ___crtGetStringTypeA(
+extern "C" BOOL __cdecl ___crtGetStringTypeA(
     _locale_t _Plocinfo,
     DWORD _DWInfoType,
     LPCSTR _LpSrcStr,

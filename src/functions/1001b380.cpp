@@ -1,9 +1,6 @@
 #include <cstdint>
-#include <cstring>
-#include <intrin.h>
 
 extern "C" std::uint32_t DAT_1003c40c;
-
 extern "C" void __fastcall FUN_1001c5f0(void* param_1);
 extern "C" std::uint32_t __cdecl FUN_1001ca18(
     std::uint32_t param_1,
@@ -12,43 +9,40 @@ extern "C" std::uint32_t __cdecl FUN_1001b3d8(
     std::int32_t param_1,
     std::uint32_t param_2);
 
-extern "C" void __fastcall FUN_1001b380(void* param_1)
+#if !defined(_MSC_VER) || !defined(_M_IX86)
+#error "FUN_1001b380 requires the MSVC x86 x87 calling environment"
+#endif
+
+extern "C" __declspec(naked) void __fastcall FUN_1001b380(void*)
 {
-    std::uint16_t fpu_control_word;
-    double value;
-
-#if defined(_MSC_VER) && defined(_M_IX86)
     __asm
     {
-        fnstcw fpu_control_word
+        cmp dword ptr [DAT_1003c40c], 0
+        jz  L_fallback
+
+        sub esp, 8
+        stmxcsr dword ptr [esp + 4]
+        mov eax, dword ptr [esp + 4]
+        and eax, 0x7f80
+        cmp eax, 0x1f80
+        jnz L_restore_probe_stack
+
+        fnstcw word ptr [esp]
+        mov ax, word ptr [esp]
+        and ax, 0x7f
+        cmp ax, 0x7f
+
+    L_restore_probe_stack:
+        lea esp, [esp + 8]
+        jnz L_fallback
+        jmp FUN_1001c5f0
+
+    L_fallback:
+        sub esp, 0xc
+        fst qword ptr [esp]
+        call FUN_1001ca18
+        call FUN_1001b3d8
+        add esp, 0xc
+        ret
     }
-#else
-#error "FUN_1001b380 requires x86 inline assembly to access the incoming x87 state."
-#endif
-
-    if (DAT_1003c40c != 0 &&
-        ((_mm_getcsr() & 0x7f80u) == 0x1f80u) &&
-        ((fpu_control_word & 0x7fu) == 0x7fu))
-    {
-        FUN_1001c5f0(param_1);
-        return;
-    }
-
-#if defined(_MSC_VER) && defined(_M_IX86)
-    __asm
-    {
-        fstp value
-    }
-#endif
-
-    std::uint64_t bits;
-    std::memcpy(&bits, &value, sizeof(bits));
-
-    FUN_1001ca18(
-        static_cast<std::uint32_t>(bits),
-        static_cast<std::uint32_t>(bits >> 32));
-
-    FUN_1001b3d8(
-        static_cast<std::int32_t>(static_cast<std::uint32_t>(bits)),
-        static_cast<std::uint32_t>(bits >> 32));
 }

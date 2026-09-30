@@ -1,0 +1,319 @@
+{
+  "scope": "original PE .text HIGHLOW relocation source sites",
+  "site_count": 3160,
+  "source_owner_mapped_sites": 2826,
+  "source_owner_unmapped_sites": 334,
+  "candidate_owned_sites": 2826,
+  "candidate_owner_count": 501,
+  "ownerless_code_unit_counts": {
+    "DataDB": 134,
+    "InstructionDB": 200
+  },
+  "ownerless_data_top_symbols": [
+    {
+      "symbol": "(no symbol)",
+      "sites": 108
+    },
+    {
+      "symbol": "switchdataD_10006324",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10006344",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_100069c4",
+      "sites": 1
+    },
+    {
+      "symbol": "PTR_caseD_2_100069cc",
+      "sites": 1
+    },
+    {
+      "symbol": "PTR_LAB_1000a618",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10011268",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_100112e4",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10011350",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_100113f4",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10011480",
+      "sites": 1
+    },
+    {
+      "symbol": "PTR_caseD_0_1001149c",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_100114ec",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10016068",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10017378",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_100173f4",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10017460",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10017504",
+      "sites": 1
+    },
+    {
+      "symbol": "switchdataD_10017590",
+      "sites": 1
+    },
+    {
+      "symbol": "PTR_caseD_0_100175ac",
+      "sites": 1
+    }
+  ],
+  "ownerless_data_sites": 134,
+  "ownerless_data_sites_with_xrefs": 24,
+  "ownerless_data_sites_without_xrefs": 110,
+  "ownerless_data_switch_label_sites": 17,
+  "ownerless_data_ptr_case_label_sites": 8,
+  "ownerless_data_ptr_lab_label_sites": 1,
+  "ownerless_data_xref_source_functions": [
+    "100060d0",
+    "10006790",
+    "1000a560",
+    "100111e0",
+    "100154dc",
+    "100172f0",
+    "1001eb27"
+  ],
+  "site_target_section_counts": [
+    {
+      "site_section": ".text",
+      "target_section": ".data",
+      "count": 1949
+    },
+    {
+      "site_section": ".text",
+      "target_section": ".rdata",
+      "count": 818
+    },
+    {
+      "site_section": ".text",
+      "target_section": ".text",
+      "count": 390
+    },
+    {
+      "site_section": ".text",
+      "target_section": "<external-or-unmapped>",
+      "count": 3
+    }
+  ],
+  "top_source_owners": [
+    {
+      "entry": "",
+      "name": "",
+      "candidate": "no",
+      "sites": 334
+    },
+    {
+      "entry": "10002210",
+      "name": "FUN_10002210",
+      "candidate": "yes",
+      "sites": 115
+    },
+    {
+      "entry": "10008140",
+      "name": "FUN_10008140",
+      "candidate": "yes",
+      "sites": 105
+    },
+    {
+      "entry": "100076d0",
+      "name": "FUN_100076d0",
+      "candidate": "yes",
+      "sites": 59
+    },
+    {
+      "entry": "10003ba0",
+      "name": "FUN_10003ba0",
+      "candidate": "yes",
+      "sites": 52
+    },
+    {
+      "entry": "10014fa7",
+      "name": "__mtinit",
+      "candidate": "yes",
+      "sites": 41
+    },
+    {
+      "entry": "10004bb0",
+      "name": "FUN_10004bb0",
+      "candidate": "yes",
+      "sites": 34
+    },
+    {
+      "entry": "1001ae25",
+      "name": "___report_gsfailure",
+      "candidate": "yes",
+      "sites": 31
+    },
+    {
+      "entry": "100074d0",
+      "name": "FUN_100074d0",
+      "candidate": "yes",
+      "sites": 30
+    },
+    {
+      "entry": "1000c480",
+      "name": "FUN_1000c480",
+      "candidate": "yes",
+      "sites": 30
+    },
+    {
+      "entry": "1000cdc0",
+      "name": "FUN_1000cdc0",
+      "candidate": "yes",
+      "sites": 30
+    },
+    {
+      "entry": "10009120",
+      "name": "FUN_10009120",
+      "candidate": "yes",
+      "sites": 27
+    },
+    {
+      "entry": "1000a090",
+      "name": "FUN_1000a090",
+      "candidate": "yes",
+      "sites": 25
+    },
+    {
+      "entry": "10007030",
+      "name": "FUN_10007030",
+      "candidate": "yes",
+      "sites": 24
+    },
+    {
+      "entry": "1001aaba",
+      "name": "___crtMessageBoxW",
+      "candidate": "yes",
+      "sites": 23
+    },
+    {
+      "entry": "1000a350",
+      "name": "FUN_1000a350",
+      "candidate": "yes",
+      "sites": 22
+    },
+    {
+      "entry": "100046f0",
+      "name": "FUN_100046f0",
+      "candidate": "yes",
+      "sites": 21
+    },
+    {
+      "entry": "10009610",
+      "name": "FUN_10009610",
+      "candidate": "yes",
+      "sites": 20
+    },
+    {
+      "entry": "10006be0",
+      "name": "FUN_10006be0",
+      "candidate": "yes",
+      "sites": 19
+    },
+    {
+      "entry": "1001b2b8",
+      "name": "__cfltcvt_init",
+      "candidate": "yes",
+      "sites": 19
+    },
+    {
+      "entry": "1000d030",
+      "name": "FUN_1000d030",
+      "candidate": "yes",
+      "sites": 18
+    },
+    {
+      "entry": "1000d140",
+      "name": "FUN_1000d140",
+      "candidate": "yes",
+      "sites": 18
+    },
+    {
+      "entry": "100132f6",
+      "name": "__ioinit",
+      "candidate": "yes",
+      "sites": 18
+    },
+    {
+      "entry": "100182c1",
+      "name": "FUN_100182c1",
+      "candidate": "yes",
+      "sites": 18
+    },
+    {
+      "entry": "10003810",
+      "name": "FUN_10003810",
+      "candidate": "yes",
+      "sites": 17
+    },
+    {
+      "entry": "10009360",
+      "name": "FUN_10009360",
+      "candidate": "yes",
+      "sites": 17
+    },
+    {
+      "entry": "1000a680",
+      "name": "FUN_1000a680",
+      "candidate": "yes",
+      "sites": 17
+    },
+    {
+      "entry": "1000a740",
+      "name": "FUN_1000a740",
+      "candidate": "yes",
+      "sites": 17
+    },
+    {
+      "entry": "1000a940",
+      "name": "FUN_1000a940",
+      "candidate": "yes",
+      "sites": 17
+    },
+    {
+      "entry": "1000aa10",
+      "name": "FUN_1000aa10",
+      "candidate": "yes",
+      "sites": 17
+    }
+  ],
+  "limits": [
+    "Ownership means the relocation operand site is inside a Ghidra function body; it does not prove the reconstructed C++ emits a correct or position-independent equivalent.",
+    "Ownerless InstructionDB/DataDB classifications come from the current read-only Ghidra listing; data labels indicate likely table/constant storage but require xref/consumer analysis before being called a switch table.",
+    "This is an inventory and correlation report, not a relocation engine, production link, or loadable ASI."
+  ],
+  "csv": "audit/asi-text-highlow-site-owner-correlation-2026-09-27.csv"
+}

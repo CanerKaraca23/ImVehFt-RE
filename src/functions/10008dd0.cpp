@@ -1,7 +1,7 @@
 #include <cstdint>
 
 extern "C" void __cdecl FUN_10010756(void*);
-extern "C" void __stdcall FUN_1001074b(void*);
+extern "C" void __cdecl FUN_1001074b(void*);
 
 extern "C" void __cdecl FUN_10008dd0(std::uint32_t param_1, int param_2)
 {

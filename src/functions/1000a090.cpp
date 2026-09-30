@@ -1,30 +1,29 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
-extern void* BasicCallbackManager_0_0_0_0_cbResetDeviceManager_vftable;
-
-extern std::uint32_t _DAT_1003c32c;
-extern std::uint32_t _DAT_1003c330;
-extern std::uint32_t _DAT_1003c334;
-extern std::uint32_t _DAT_1003c338;
-extern std::uint32_t _DAT_1003c33c;
-extern std::uint32_t _DAT_1003c340;
-extern std::uint32_t _DAT_1003c344;
-extern std::uint32_t _DAT_1003c348;
-extern std::uint32_t _DAT_1003c34c;
-extern std::uint32_t _DAT_1003c350;
-extern std::uint32_t _DAT_1003c354;
-extern std::uint32_t _DAT_1003c358;
-extern std::uint32_t _DAT_1003c35c;
-extern std::uint32_t _DAT_1003c360;
-extern std::uint32_t _DAT_1003c364;
-extern std::uint32_t _DAT_1003c368;
-extern std::uint32_t DAT_1003c36c;
-extern std::uint32_t DAT_1003c370;
-extern std::uint32_t DAT_1003c374;
-extern std::uint32_t DAT_1003c37c;
-extern std::uint32_t DAT_1003c380;
-extern std::uint32_t DAT_1003c384;
-extern std::uint32_t DAT_1003c328;
+#define _DAT_1003c32c IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C32C)
+#define _DAT_1003c330 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C330)
+#define _DAT_1003c334 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C334)
+#define _DAT_1003c338 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C338)
+#define _DAT_1003c33c IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C33C)
+#define _DAT_1003c340 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C340)
+#define _DAT_1003c344 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C344)
+#define _DAT_1003c348 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C348)
+#define _DAT_1003c34c IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C34C)
+#define _DAT_1003c350 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C350)
+#define _DAT_1003c354 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C354)
+#define _DAT_1003c358 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C358)
+#define _DAT_1003c35c IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C35C)
+#define _DAT_1003c360 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C360)
+#define _DAT_1003c364 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C364)
+#define _DAT_1003c368 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C368)
+#define DAT_1003c36c IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C36C)
+#define DAT_1003c370 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C370)
+#define DAT_1003c374 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C374)
+#define DAT_1003c37c IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C37C)
+#define DAT_1003c380 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C380)
+#define DAT_1003c384 IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C384)
 
 std::uint32_t* __stdcall FUN_1000a090()
 {
@@ -51,8 +50,7 @@ std::uint32_t* __stdcall FUN_1000a090()
     DAT_1003c380 = 0;
     DAT_1003c384 = 0;
 
-    *reinterpret_cast<void**>(&DAT_1003c328) =
-        BasicCallbackManager_0_0_0_0_cbResetDeviceManager_vftable;
+    IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C328) = IVF_IMAGE_ADDRESS_10024C80;
 
-    return &DAT_1003c328;
+    return reinterpret_cast<std::uint32_t*>(IVF_IMAGE_ADDRESS_1003C328);
 }

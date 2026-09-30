@@ -1,0 +1,5362 @@
+{
+  "scope": "In-place 5-byte E9 rel32 patch slots versus current linked candidate COMDAT ranges only; no PE modified.",
+  "candidate_count": 705,
+  "displaced_entries_requiring_trampolines": 702,
+  "candidate_comdat_count": 705,
+  "patch_body_intersection_pairs": 667,
+  "distinct_patch_slots_intersecting_candidate_code": 666,
+  "distinct_slots_intersecting_foreign_candidate_bodies": 658,
+  "distinct_slots_intersecting_own_candidate_bodies": 8,
+  "distinct_slots_without_candidate_comdat_overlap": 36,
+  "distinct_candidate_bodies_touched": 359,
+  "overlaps": [
+    {
+      "patch_address": "0x10001010",
+      "target_va": "0x10001000",
+      "overlapped_body_address": "0x10001010",
+      "body_start": "0x10001000",
+      "body_end_exclusive": "0x10001025",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x10001040",
+      "target_va": "0x10001030",
+      "overlapped_body_address": "0x10001040",
+      "body_start": "0x10001030",
+      "body_end_exclusive": "0x10001352",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x10001350",
+      "target_va": "0x10001360",
+      "overlapped_body_address": "0x10001040",
+      "body_start": "0x10001030",
+      "body_end_exclusive": "0x10001352",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100014a0",
+      "target_va": "0x100014d0",
+      "overlapped_body_address": "0x10001430",
+      "body_start": "0x10001430",
+      "body_end_exclusive": "0x100014c8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100014c0",
+      "target_va": "0x100014f0",
+      "overlapped_body_address": "0x10001430",
+      "body_start": "0x10001430",
+      "body_end_exclusive": "0x100014c8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001520",
+      "target_va": "0x10001570",
+      "overlapped_body_address": "0x100014c0",
+      "body_start": "0x100014f0",
+      "body_end_exclusive": "0x10001563",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001590",
+      "target_va": "0x10001610",
+      "overlapped_body_address": "0x10001520",
+      "body_start": "0x10001570",
+      "body_end_exclusive": "0x10001606",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001630",
+      "target_va": "0x100016b0",
+      "overlapped_body_address": "0x10001590",
+      "body_start": "0x10001610",
+      "body_end_exclusive": "0x100016a5",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001730",
+      "target_va": "0x100017b0",
+      "overlapped_body_address": "0x10001630",
+      "body_start": "0x100016b0",
+      "body_end_exclusive": "0x100017a9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001770",
+      "target_va": "0x100017f0",
+      "overlapped_body_address": "0x10001630",
+      "body_start": "0x100016b0",
+      "body_end_exclusive": "0x100017a9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100018a0",
+      "target_va": "0x100018c0",
+      "overlapped_body_address": "0x10001770",
+      "body_start": "0x100017f0",
+      "body_end_exclusive": "0x100018b5",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001ad0",
+      "target_va": "0x10001b00",
+      "overlapped_body_address": "0x10001980",
+      "body_start": "0x10001980",
+      "body_end_exclusive": "0x10001afc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001b00",
+      "target_va": "0x10001b30",
+      "overlapped_body_address": "0x10001ad0",
+      "body_start": "0x10001b00",
+      "body_end_exclusive": "0x10001b2a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001b30",
+      "target_va": "0x10001b60",
+      "overlapped_body_address": "0x10001b00",
+      "body_start": "0x10001b30",
+      "body_end_exclusive": "0x10001b56",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001b90",
+      "target_va": "0x10001bc0",
+      "overlapped_body_address": "0x10001b30",
+      "body_start": "0x10001b60",
+      "body_end_exclusive": "0x10001bb6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001db0",
+      "target_va": "0x10001e40",
+      "overlapped_body_address": "0x10001b90",
+      "body_start": "0x10001bc0",
+      "body_end_exclusive": "0x10001e40",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001e80",
+      "target_va": "0x10001f00",
+      "overlapped_body_address": "0x10001db0",
+      "body_start": "0x10001e40",
+      "body_end_exclusive": "0x10001ee6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10001fb0",
+      "target_va": "0x10002020",
+      "overlapped_body_address": "0x10001e80",
+      "body_start": "0x10001f00",
+      "body_end_exclusive": "0x1000201e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10002210",
+      "target_va": "0x100022c0",
+      "overlapped_body_address": "0x10001fb0",
+      "body_start": "0x10002020",
+      "body_end_exclusive": "0x100022be",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003130",
+      "target_va": "0x10003360",
+      "overlapped_body_address": "0x10002210",
+      "body_start": "0x100022c0",
+      "body_end_exclusive": "0x10003355",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003200",
+      "target_va": "0x100033f0",
+      "overlapped_body_address": "0x10002210",
+      "body_start": "0x100022c0",
+      "body_end_exclusive": "0x10003355",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003340",
+      "target_va": "0x10003560",
+      "overlapped_body_address": "0x10002210",
+      "body_start": "0x100022c0",
+      "body_end_exclusive": "0x10003355",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003400",
+      "target_va": "0x10003620",
+      "overlapped_body_address": "0x10003200",
+      "body_start": "0x100033f0",
+      "body_end_exclusive": "0x1000355d",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003660",
+      "target_va": "0x100038e0",
+      "overlapped_body_address": "0x10003400",
+      "body_start": "0x10003620",
+      "body_end_exclusive": "0x100038b7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003810",
+      "target_va": "0x10003ad0",
+      "overlapped_body_address": "0x10003400",
+      "body_start": "0x10003620",
+      "body_end_exclusive": "0x100038b7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003ba0",
+      "target_va": "0x10003f90",
+      "overlapped_body_address": "0x10003810",
+      "body_start": "0x10003ad0",
+      "body_end_exclusive": "0x10003f6c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003e60",
+      "target_va": "0x10004200",
+      "overlapped_body_address": "0x10003810",
+      "body_start": "0x10003ad0",
+      "body_end_exclusive": "0x10003f6c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003f40",
+      "target_va": "0x10004320",
+      "overlapped_body_address": "0x10003810",
+      "body_start": "0x10003ad0",
+      "body_end_exclusive": "0x10003f6c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003fb0",
+      "target_va": "0x10004370",
+      "overlapped_body_address": "0x10003ba0",
+      "body_start": "0x10003f90",
+      "body_end_exclusive": "0x100041fb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10003fe0",
+      "target_va": "0x100043a0",
+      "overlapped_body_address": "0x10003ba0",
+      "body_start": "0x10003f90",
+      "body_end_exclusive": "0x100041fb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10004000",
+      "target_va": "0x100043c0",
+      "overlapped_body_address": "0x10003ba0",
+      "body_start": "0x10003f90",
+      "body_end_exclusive": "0x100041fb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100042c0",
+      "target_va": "0x10004880",
+      "overlapped_body_address": "0x10003e60",
+      "body_start": "0x10004200",
+      "body_end_exclusive": "0x10004313",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10004430",
+      "target_va": "0x100049e0",
+      "overlapped_body_address": "0x10004000",
+      "body_start": "0x100043c0",
+      "body_end_exclusive": "0x10004874",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100046f0",
+      "target_va": "0x10004c80",
+      "overlapped_body_address": "0x10004000",
+      "body_start": "0x100043c0",
+      "body_end_exclusive": "0x10004874",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10004a00",
+      "target_va": "0x10004fe0",
+      "overlapped_body_address": "0x10004430",
+      "body_start": "0x100049e0",
+      "body_end_exclusive": "0x10004c7f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10004a60",
+      "target_va": "0x10005060",
+      "overlapped_body_address": "0x10004430",
+      "body_start": "0x100049e0",
+      "body_end_exclusive": "0x10004c7f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10004ab0",
+      "target_va": "0x100050b0",
+      "overlapped_body_address": "0x10004430",
+      "body_start": "0x100049e0",
+      "body_end_exclusive": "0x10004c7f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10004bb0",
+      "target_va": "0x10005140",
+      "overlapped_body_address": "0x10004430",
+      "body_start": "0x100049e0",
+      "body_end_exclusive": "0x10004c7f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10005860",
+      "target_va": "0x10005ec0",
+      "overlapped_body_address": "0x100050e0",
+      "body_start": "0x100057a0",
+      "body_end_exclusive": "0x10005c75",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10005b60",
+      "target_va": "0x100061d0",
+      "overlapped_body_address": "0x100050e0",
+      "body_start": "0x100057a0",
+      "body_end_exclusive": "0x10005c75",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10005d30",
+      "target_va": "0x10006420",
+      "overlapped_body_address": "0x10005670",
+      "body_start": "0x10005c80",
+      "body_end_exclusive": "0x10005eb4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10005ef0",
+      "target_va": "0x10006620",
+      "overlapped_body_address": "0x10005860",
+      "body_start": "0x10005ec0",
+      "body_end_exclusive": "0x100061c5",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100060d0",
+      "target_va": "0x10006840",
+      "overlapped_body_address": "0x10005860",
+      "body_start": "0x10005ec0",
+      "body_end_exclusive": "0x100061c5",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10006360",
+      "target_va": "0x10006af0",
+      "overlapped_body_address": "0x10005b60",
+      "body_start": "0x100061d0",
+      "body_end_exclusive": "0x100063f3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10006790",
+      "target_va": "0x10006e60",
+      "overlapped_body_address": "0x10005ef0",
+      "body_start": "0x10006620",
+      "body_end_exclusive": "0x10006836",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100069e0",
+      "target_va": "0x10007140",
+      "overlapped_body_address": "0x100060d0",
+      "body_start": "0x10006840",
+      "body_end_exclusive": "0x10006aec",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10006a50",
+      "target_va": "0x100071b0",
+      "overlapped_body_address": "0x100060d0",
+      "body_start": "0x10006840",
+      "body_end_exclusive": "0x10006aec",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10006ad0",
+      "target_va": "0x10007230",
+      "overlapped_body_address": "0x100060d0",
+      "body_start": "0x10006840",
+      "body_end_exclusive": "0x10006aec",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10006be0",
+      "target_va": "0x10007320",
+      "overlapped_body_address": "0x10006360",
+      "body_start": "0x10006af0",
+      "body_end_exclusive": "0x10006e60",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10007030",
+      "target_va": "0x10007aa0",
+      "overlapped_body_address": "0x10006790",
+      "body_start": "0x10006e60",
+      "body_end_exclusive": "0x1000713c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008000",
+      "target_va": "0x10007f60",
+      "overlapped_body_address": "0x10008000",
+      "body_start": "0x10007f60",
+      "body_end_exclusive": "0x10008094",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x10008140",
+      "target_va": "0x100080a0",
+      "overlapped_body_address": "0x10008140",
+      "body_start": "0x100080a0",
+      "body_end_exclusive": "0x10008731",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x10008b70",
+      "target_va": "0x10008740",
+      "overlapped_body_address": "0x10008f10",
+      "body_start": "0x10008b50",
+      "body_end_exclusive": "0x10008bb1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008cb0",
+      "target_va": "0x10008900",
+      "overlapped_body_address": "0x10009060",
+      "body_start": "0x10008c50",
+      "body_end_exclusive": "0x10008cd1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008d20",
+      "target_va": "0x10008970",
+      "overlapped_body_address": "0x10009120",
+      "body_start": "0x10008ce0",
+      "body_end_exclusive": "0x10008f65",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008da0",
+      "target_va": "0x100089f0",
+      "overlapped_body_address": "0x10009120",
+      "body_start": "0x10008ce0",
+      "body_end_exclusive": "0x10008f65",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008dd0",
+      "target_va": "0x10008a20",
+      "overlapped_body_address": "0x10009120",
+      "body_start": "0x10008ce0",
+      "body_end_exclusive": "0x10008f65",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008e00",
+      "target_va": "0x10008a40",
+      "overlapped_body_address": "0x10009120",
+      "body_start": "0x10008ce0",
+      "body_end_exclusive": "0x10008f65",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008e40",
+      "target_va": "0x10008a80",
+      "overlapped_body_address": "0x10009120",
+      "body_start": "0x10008ce0",
+      "body_end_exclusive": "0x10008f65",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008eb0",
+      "target_va": "0x10008b00",
+      "overlapped_body_address": "0x10009120",
+      "body_start": "0x10008ce0",
+      "body_end_exclusive": "0x10008f65",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008f10",
+      "target_va": "0x10008b50",
+      "overlapped_body_address": "0x10009120",
+      "body_start": "0x10008ce0",
+      "body_end_exclusive": "0x10008f65",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10008fa0",
+      "target_va": "0x10008bc0",
+      "overlapped_body_address": "0x10009360",
+      "body_start": "0x10008f80",
+      "body_end_exclusive": "0x1000904e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009060",
+      "target_va": "0x10008c50",
+      "overlapped_body_address": "0x10009430",
+      "body_start": "0x10009050",
+      "body_end_exclusive": "0x100090d2",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009120",
+      "target_va": "0x10008ce0",
+      "overlapped_body_address": "0x100094d0",
+      "body_start": "0x100090e0",
+      "body_end_exclusive": "0x10009183",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009360",
+      "target_va": "0x10008f80",
+      "overlapped_body_address": "0x100096e0",
+      "body_start": "0x10009310",
+      "body_end_exclusive": "0x100093a4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009430",
+      "target_va": "0x10009050",
+      "overlapped_body_address": "0x10009790",
+      "body_start": "0x100093b0",
+      "body_end_exclusive": "0x10009520",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100094d0",
+      "target_va": "0x100090e0",
+      "overlapped_body_address": "0x10009790",
+      "body_start": "0x100093b0",
+      "body_end_exclusive": "0x10009520",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009580",
+      "target_va": "0x10009190",
+      "overlapped_body_address": "0x100099f0",
+      "body_start": "0x10009530",
+      "body_end_exclusive": "0x100095c3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100095f0",
+      "target_va": "0x10009200",
+      "overlapped_body_address": "0x10009a80",
+      "body_start": "0x100095d0",
+      "body_end_exclusive": "0x1000962c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009610",
+      "target_va": "0x10009220",
+      "overlapped_body_address": "0x10009a80",
+      "body_start": "0x100095d0",
+      "body_end_exclusive": "0x1000962c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100096e0",
+      "target_va": "0x10009310",
+      "overlapped_body_address": "0x10009b50",
+      "body_start": "0x100096a0",
+      "body_end_exclusive": "0x1000970a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009790",
+      "target_va": "0x100093b0",
+      "overlapped_body_address": "0x10009c10",
+      "body_start": "0x10009780",
+      "body_end_exclusive": "0x100097ea",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100099e0",
+      "target_va": "0x10009520",
+      "overlapped_body_address": "0x10009df0",
+      "body_start": "0x100099b0",
+      "body_end_exclusive": "0x10009a1a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100099f0",
+      "target_va": "0x10009530",
+      "overlapped_body_address": "0x10009df0",
+      "body_start": "0x100099b0",
+      "body_end_exclusive": "0x10009a1a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009a80",
+      "target_va": "0x100095d0",
+      "overlapped_body_address": "0x10009e50",
+      "body_start": "0x10009a20",
+      "body_end_exclusive": "0x10009a8a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009af0",
+      "target_va": "0x10009630",
+      "overlapped_body_address": "0x10009eb0",
+      "body_start": "0x10009a90",
+      "body_end_exclusive": "0x10009afa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009b50",
+      "target_va": "0x100096a0",
+      "overlapped_body_address": "0x10009f10",
+      "body_start": "0x10009b00",
+      "body_end_exclusive": "0x10009b6a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009bb0",
+      "target_va": "0x10009710",
+      "overlapped_body_address": "0x10009f70",
+      "body_start": "0x10009b70",
+      "body_end_exclusive": "0x10009bd9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009c10",
+      "target_va": "0x10009780",
+      "overlapped_body_address": "0x10009fd0",
+      "body_start": "0x10009be0",
+      "body_end_exclusive": "0x10009c4a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009c70",
+      "target_va": "0x100097f0",
+      "overlapped_body_address": "0x1000a030",
+      "body_start": "0x10009c50",
+      "body_end_exclusive": "0x10009cb9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009cd0",
+      "target_va": "0x10009860",
+      "overlapped_body_address": "0x1000a090",
+      "body_start": "0x10009cc0",
+      "body_end_exclusive": "0x10009dac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009d30",
+      "target_va": "0x100098d0",
+      "overlapped_body_address": "0x1000a090",
+      "body_start": "0x10009cc0",
+      "body_end_exclusive": "0x10009dac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009d90",
+      "target_va": "0x10009940",
+      "overlapped_body_address": "0x1000a090",
+      "body_start": "0x10009cc0",
+      "body_end_exclusive": "0x10009dac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009df0",
+      "target_va": "0x100099b0",
+      "overlapped_body_address": "0x1000a110",
+      "body_start": "0x10009db0",
+      "body_end_exclusive": "0x10009e19",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009e50",
+      "target_va": "0x10009a20",
+      "overlapped_body_address": "0x1000a170",
+      "body_start": "0x10009e20",
+      "body_end_exclusive": "0x10009e89",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009eb0",
+      "target_va": "0x10009a90",
+      "overlapped_body_address": "0x1000a1d0",
+      "body_start": "0x10009e90",
+      "body_end_exclusive": "0x10009efa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009f10",
+      "target_va": "0x10009b00",
+      "overlapped_body_address": "0x1000a230",
+      "body_start": "0x10009f00",
+      "body_end_exclusive": "0x10009f6a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009f70",
+      "target_va": "0x10009b70",
+      "overlapped_body_address": "0x1000a290",
+      "body_start": "0x10009f70",
+      "body_end_exclusive": "0x10009fd9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10009fd0",
+      "target_va": "0x10009be0",
+      "overlapped_body_address": "0x1000a290",
+      "body_start": "0x10009f70",
+      "body_end_exclusive": "0x10009fd9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a030",
+      "target_va": "0x10009c50",
+      "overlapped_body_address": "0x1000a2f0",
+      "body_start": "0x10009fe0",
+      "body_end_exclusive": "0x1000a049",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a090",
+      "target_va": "0x10009cc0",
+      "overlapped_body_address": "0x1000a350",
+      "body_start": "0x1000a050",
+      "body_end_exclusive": "0x1000a20c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a110",
+      "target_va": "0x10009db0",
+      "overlapped_body_address": "0x1000a350",
+      "body_start": "0x1000a050",
+      "body_end_exclusive": "0x1000a20c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a170",
+      "target_va": "0x10009e20",
+      "overlapped_body_address": "0x1000a350",
+      "body_start": "0x1000a050",
+      "body_end_exclusive": "0x1000a20c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a1d0",
+      "target_va": "0x10009e90",
+      "overlapped_body_address": "0x1000a350",
+      "body_start": "0x1000a050",
+      "body_end_exclusive": "0x1000a20c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a230",
+      "target_va": "0x10009f00",
+      "overlapped_body_address": "0x1000a4f0",
+      "body_start": "0x1000a210",
+      "body_end_exclusive": "0x1000a26f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a290",
+      "target_va": "0x10009f70",
+      "overlapped_body_address": "0x1000a680",
+      "body_start": "0x1000a280",
+      "body_end_exclusive": "0x1000a32c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a2f0",
+      "target_va": "0x10009fe0",
+      "overlapped_body_address": "0x1000a680",
+      "body_start": "0x1000a280",
+      "body_end_exclusive": "0x1000a32c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a350",
+      "target_va": "0x1000a050",
+      "overlapped_body_address": "0x1000a740",
+      "body_start": "0x1000a330",
+      "body_end_exclusive": "0x1000a3dc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a4f0",
+      "target_va": "0x1000a210",
+      "overlapped_body_address": "0x1000a8c0",
+      "body_start": "0x1000a490",
+      "body_end_exclusive": "0x1000a518",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a560",
+      "target_va": "0x1000a270",
+      "overlapped_body_address": "0x1000a940",
+      "body_start": "0x1000a520",
+      "body_end_exclusive": "0x1000a5db",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a680",
+      "target_va": "0x1000a280",
+      "overlapped_body_address": "0x1000aa10",
+      "body_start": "0x1000a5e0",
+      "body_end_exclusive": "0x1000a69d",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a740",
+      "target_va": "0x1000a330",
+      "overlapped_body_address": "0x1000ab60",
+      "body_start": "0x1000a730",
+      "body_end_exclusive": "0x1000a7e1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a800",
+      "target_va": "0x1000a3e0",
+      "overlapped_body_address": "0x1000ac20",
+      "body_start": "0x1000a7f0",
+      "body_end_exclusive": "0x1000a878",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a8c0",
+      "target_va": "0x1000a490",
+      "overlapped_body_address": "0x1000aca0",
+      "body_start": "0x1000a880",
+      "body_end_exclusive": "0x1000a92f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000a940",
+      "target_va": "0x1000a520",
+      "overlapped_body_address": "0x1000ad60",
+      "body_start": "0x1000a930",
+      "body_end_exclusive": "0x1000a9b8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000aa10",
+      "target_va": "0x1000a5e0",
+      "overlapped_body_address": "0x1000ade0",
+      "body_start": "0x1000a9c0",
+      "body_end_exclusive": "0x1000aa6f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000aae0",
+      "target_va": "0x1000a6a0",
+      "overlapped_body_address": "0x1000aea0",
+      "body_start": "0x1000aa70",
+      "body_end_exclusive": "0x1000aaf8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ab60",
+      "target_va": "0x1000a730",
+      "overlapped_body_address": "0x1000af20",
+      "body_start": "0x1000ab00",
+      "body_end_exclusive": "0x1000abb1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ac20",
+      "target_va": "0x1000a7f0",
+      "overlapped_body_address": "0x1000afe0",
+      "body_start": "0x1000abc0",
+      "body_end_exclusive": "0x1000ac48",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000aca0",
+      "target_va": "0x1000a880",
+      "overlapped_body_address": "0x1000b060",
+      "body_start": "0x1000ac50",
+      "body_end_exclusive": "0x1000ad00",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ad60",
+      "target_va": "0x1000a930",
+      "overlapped_body_address": "0x1000b120",
+      "body_start": "0x1000ad00",
+      "body_end_exclusive": "0x1000ad88",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ade0",
+      "target_va": "0x1000a9c0",
+      "overlapped_body_address": "0x1000b1a0",
+      "body_start": "0x1000ad90",
+      "body_end_exclusive": "0x1000ae43",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000aea0",
+      "target_va": "0x1000aa70",
+      "overlapped_body_address": "0x1000b260",
+      "body_start": "0x1000ae50",
+      "body_end_exclusive": "0x1000aed8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000af20",
+      "target_va": "0x1000ab00",
+      "overlapped_body_address": "0x1000b2e0",
+      "body_start": "0x1000aee0",
+      "body_end_exclusive": "0x1000af8a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000afe0",
+      "target_va": "0x1000abc0",
+      "overlapped_body_address": "0x1000b3a0",
+      "body_start": "0x1000af90",
+      "body_end_exclusive": "0x1000b041",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b060",
+      "target_va": "0x1000ac50",
+      "overlapped_body_address": "0x1000b460",
+      "body_start": "0x1000b050",
+      "body_end_exclusive": "0x1000b0d8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b120",
+      "target_va": "0x1000ad00",
+      "overlapped_body_address": "0x1000b4e0",
+      "body_start": "0x1000b0e0",
+      "body_end_exclusive": "0x1000b18d",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b1a0",
+      "target_va": "0x1000ad90",
+      "overlapped_body_address": "0x1000b5a0",
+      "body_start": "0x1000b190",
+      "body_end_exclusive": "0x1000b218",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b260",
+      "target_va": "0x1000ae50",
+      "overlapped_body_address": "0x1000b620",
+      "body_start": "0x1000b220",
+      "body_end_exclusive": "0x1000b2d1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b2e0",
+      "target_va": "0x1000aee0",
+      "overlapped_body_address": "0x1000b6e0",
+      "body_start": "0x1000b2e0",
+      "body_end_exclusive": "0x1000b368",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b3a0",
+      "target_va": "0x1000af90",
+      "overlapped_body_address": "0x1000b760",
+      "body_start": "0x1000b370",
+      "body_end_exclusive": "0x1000b421",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b460",
+      "target_va": "0x1000b050",
+      "overlapped_body_address": "0x1000b820",
+      "body_start": "0x1000b430",
+      "body_end_exclusive": "0x1000b4df",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b4e0",
+      "target_va": "0x1000b0e0",
+      "overlapped_body_address": "0x1000b8e0",
+      "body_start": "0x1000b4e0",
+      "body_end_exclusive": "0x1000b568",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b5a0",
+      "target_va": "0x1000b190",
+      "overlapped_body_address": "0x1000b960",
+      "body_start": "0x1000b570",
+      "body_end_exclusive": "0x1000b61f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b620",
+      "target_va": "0x1000b220",
+      "overlapped_body_address": "0x1000ba20",
+      "body_start": "0x1000b620",
+      "body_end_exclusive": "0x1000b6cf",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b6e0",
+      "target_va": "0x1000b2e0",
+      "overlapped_body_address": "0x1000bae0",
+      "body_start": "0x1000b6d0",
+      "body_end_exclusive": "0x1000b758",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b760",
+      "target_va": "0x1000b370",
+      "overlapped_body_address": "0x1000bb60",
+      "body_start": "0x1000b760",
+      "body_end_exclusive": "0x1000b7e8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b820",
+      "target_va": "0x1000b430",
+      "overlapped_body_address": "0x1000bbe0",
+      "body_start": "0x1000b7f0",
+      "body_end_exclusive": "0x1000b8a1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b8e0",
+      "target_va": "0x1000b4e0",
+      "overlapped_body_address": "0x1000bca0",
+      "body_start": "0x1000b8b0",
+      "body_end_exclusive": "0x1000b938",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000b960",
+      "target_va": "0x1000b570",
+      "overlapped_body_address": "0x1000bd20",
+      "body_start": "0x1000b940",
+      "body_end_exclusive": "0x1000b9f1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ba20",
+      "target_va": "0x1000b620",
+      "overlapped_body_address": "0x1000bde0",
+      "body_start": "0x1000ba00",
+      "body_end_exclusive": "0x1000ba88",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bae0",
+      "target_va": "0x1000b6d0",
+      "overlapped_body_address": "0x1000be60",
+      "body_start": "0x1000ba90",
+      "body_end_exclusive": "0x1000bb41",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bb60",
+      "target_va": "0x1000b760",
+      "overlapped_body_address": "0x1000bf20",
+      "body_start": "0x1000bb50",
+      "body_end_exclusive": "0x1000bbd8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bbe0",
+      "target_va": "0x1000b7f0",
+      "overlapped_body_address": "0x1000bfa0",
+      "body_start": "0x1000bbe0",
+      "body_end_exclusive": "0x1000bc91",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bca0",
+      "target_va": "0x1000b8b0",
+      "overlapped_body_address": "0x1000c060",
+      "body_start": "0x1000bca0",
+      "body_end_exclusive": "0x1000bd28",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bd20",
+      "target_va": "0x1000b940",
+      "overlapped_body_address": "0x1000c060",
+      "body_start": "0x1000bca0",
+      "body_end_exclusive": "0x1000bd28",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bde0",
+      "target_va": "0x1000ba00",
+      "overlapped_body_address": "0x1000c0e0",
+      "body_start": "0x1000bd30",
+      "body_end_exclusive": "0x1000bde1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000be60",
+      "target_va": "0x1000ba90",
+      "overlapped_body_address": "0x1000c1a0",
+      "body_start": "0x1000bdf0",
+      "body_end_exclusive": "0x1000be78",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bf20",
+      "target_va": "0x1000bb50",
+      "overlapped_body_address": "0x1000c220",
+      "body_start": "0x1000be80",
+      "body_end_exclusive": "0x1000bf31",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000bfa0",
+      "target_va": "0x1000bbe0",
+      "overlapped_body_address": "0x1000c2e0",
+      "body_start": "0x1000bf40",
+      "body_end_exclusive": "0x1000bfc8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000c060",
+      "target_va": "0x1000bca0",
+      "overlapped_body_address": "0x1000c360",
+      "body_start": "0x1000bfd0",
+      "body_end_exclusive": "0x1000c081",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000c0e0",
+      "target_va": "0x1000bd30",
+      "overlapped_body_address": "0x1000c420",
+      "body_start": "0x1000c090",
+      "body_end_exclusive": "0x1000c0e9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000c2e0",
+      "target_va": "0x1000bf40",
+      "overlapped_body_address": "0x1000cdc0",
+      "body_start": "0x1000c2c0",
+      "body_end_exclusive": "0x1000c461",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000c360",
+      "target_va": "0x1000bfd0",
+      "overlapped_body_address": "0x1000cdc0",
+      "body_start": "0x1000c2c0",
+      "body_end_exclusive": "0x1000c461",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000c420",
+      "target_va": "0x1000c090",
+      "overlapped_body_address": "0x1000cdc0",
+      "body_start": "0x1000c2c0",
+      "body_end_exclusive": "0x1000c461",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000c480",
+      "target_va": "0x1000c0f0",
+      "overlapped_body_address": "0x1000cf80",
+      "body_start": "0x1000c470",
+      "body_end_exclusive": "0x1000c4c5",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000cdc0",
+      "target_va": "0x1000c2c0",
+      "overlapped_body_address": "0x1000d880",
+      "body_start": "0x1000cdc0",
+      "body_end_exclusive": "0x1000ce16",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000cf80",
+      "target_va": "0x1000c470",
+      "overlapped_body_address": "0x1000da00",
+      "body_start": "0x1000cf40",
+      "body_end_exclusive": "0x1000cf96",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000cfe0",
+      "target_va": "0x1000c4d0",
+      "overlapped_body_address": "0x1000da60",
+      "body_start": "0x1000cfa0",
+      "body_end_exclusive": "0x1000cff6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d030",
+      "target_va": "0x1000c540",
+      "overlapped_body_address": "0x1000dac0",
+      "body_start": "0x1000d000",
+      "body_end_exclusive": "0x1000d056",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d140",
+      "target_va": "0x1000c650",
+      "overlapped_body_address": "0x1000dbe0",
+      "body_start": "0x1000d120",
+      "body_end_exclusive": "0x1000d176",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d250",
+      "target_va": "0x1000c750",
+      "overlapped_body_address": "0x1000dd00",
+      "body_start": "0x1000d240",
+      "body_end_exclusive": "0x1000d296",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d300",
+      "target_va": "0x1000c810",
+      "overlapped_body_address": "0x1000ddc0",
+      "body_start": "0x1000d300",
+      "body_end_exclusive": "0x1000d356",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d380",
+      "target_va": "0x1000c8a0",
+      "overlapped_body_address": "0x1000de20",
+      "body_start": "0x1000d360",
+      "body_end_exclusive": "0x1000d3b6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d400",
+      "target_va": "0x1000c940",
+      "overlapped_body_address": "0x1000de80",
+      "body_start": "0x1000d3c0",
+      "body_end_exclusive": "0x1000d416",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d460",
+      "target_va": "0x1000c9b0",
+      "overlapped_body_address": "0x1000dee0",
+      "body_start": "0x1000d420",
+      "body_end_exclusive": "0x1000d476",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d4c0",
+      "target_va": "0x1000ca10",
+      "overlapped_body_address": "0x1000df40",
+      "body_start": "0x1000d480",
+      "body_end_exclusive": "0x1000d4d6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d520",
+      "target_va": "0x1000ca70",
+      "overlapped_body_address": "0x1000dfa0",
+      "body_start": "0x1000d4e0",
+      "body_end_exclusive": "0x1000d536",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d580",
+      "target_va": "0x1000cad0",
+      "overlapped_body_address": "0x1000e000",
+      "body_start": "0x1000d540",
+      "body_end_exclusive": "0x1000d596",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d5e0",
+      "target_va": "0x1000cb30",
+      "overlapped_body_address": "0x1000e060",
+      "body_start": "0x1000d5a0",
+      "body_end_exclusive": "0x1000d5f6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d640",
+      "target_va": "0x1000cb90",
+      "overlapped_body_address": "0x1000e0c0",
+      "body_start": "0x1000d600",
+      "body_end_exclusive": "0x1000d656",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d6a0",
+      "target_va": "0x1000cbf0",
+      "overlapped_body_address": "0x1000e120",
+      "body_start": "0x1000d660",
+      "body_end_exclusive": "0x1000d6b6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d700",
+      "target_va": "0x1000cc50",
+      "overlapped_body_address": "0x1000e180",
+      "body_start": "0x1000d6c0",
+      "body_end_exclusive": "0x1000d716",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d760",
+      "target_va": "0x1000cca0",
+      "overlapped_body_address": "0x1000e1e0",
+      "body_start": "0x1000d720",
+      "body_end_exclusive": "0x1000d776",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d7c0",
+      "target_va": "0x1000cd00",
+      "overlapped_body_address": "0x1000e240",
+      "body_start": "0x1000d780",
+      "body_end_exclusive": "0x1000d7d6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d820",
+      "target_va": "0x1000cd60",
+      "overlapped_body_address": "0x1000e2a0",
+      "body_start": "0x1000d7e0",
+      "body_end_exclusive": "0x1000d836",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d880",
+      "target_va": "0x1000cdc0",
+      "overlapped_body_address": "0x1000e300",
+      "body_start": "0x1000d840",
+      "body_end_exclusive": "0x1000d896",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d8e0",
+      "target_va": "0x1000ce20",
+      "overlapped_body_address": "0x1000e360",
+      "body_start": "0x1000d8a0",
+      "body_end_exclusive": "0x1000d8f6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d940",
+      "target_va": "0x1000ce80",
+      "overlapped_body_address": "0x1000e3c0",
+      "body_start": "0x1000d900",
+      "body_end_exclusive": "0x1000d956",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000d9a0",
+      "target_va": "0x1000cee0",
+      "overlapped_body_address": "0x1000e420",
+      "body_start": "0x1000d960",
+      "body_end_exclusive": "0x1000d9b6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000da00",
+      "target_va": "0x1000cf40",
+      "overlapped_body_address": "0x1000e480",
+      "body_start": "0x1000d9c0",
+      "body_end_exclusive": "0x1000da16",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000da60",
+      "target_va": "0x1000cfa0",
+      "overlapped_body_address": "0x1000e4e0",
+      "body_start": "0x1000da20",
+      "body_end_exclusive": "0x1000da76",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dac0",
+      "target_va": "0x1000d000",
+      "overlapped_body_address": "0x1000e540",
+      "body_start": "0x1000da80",
+      "body_end_exclusive": "0x1000dad6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000db20",
+      "target_va": "0x1000d060",
+      "overlapped_body_address": "0x1000e5a0",
+      "body_start": "0x1000dae0",
+      "body_end_exclusive": "0x1000db36",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000db80",
+      "target_va": "0x1000d0c0",
+      "overlapped_body_address": "0x1000e600",
+      "body_start": "0x1000db40",
+      "body_end_exclusive": "0x1000db96",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dbe0",
+      "target_va": "0x1000d120",
+      "overlapped_body_address": "0x1000e660",
+      "body_start": "0x1000dba0",
+      "body_end_exclusive": "0x1000dbee",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dc40",
+      "target_va": "0x1000d180",
+      "overlapped_body_address": "0x1000e6c0",
+      "body_start": "0x1000dbf0",
+      "body_end_exclusive": "0x1000dc46",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dca0",
+      "target_va": "0x1000d1e0",
+      "overlapped_body_address": "0x1000e720",
+      "body_start": "0x1000dc50",
+      "body_end_exclusive": "0x1000dca6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dd00",
+      "target_va": "0x1000d240",
+      "overlapped_body_address": "0x1000e780",
+      "body_start": "0x1000dcb0",
+      "body_end_exclusive": "0x1000dd06",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dd60",
+      "target_va": "0x1000d2a0",
+      "overlapped_body_address": "0x1000e7e0",
+      "body_start": "0x1000dd10",
+      "body_end_exclusive": "0x1000dd66",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ddc0",
+      "target_va": "0x1000d300",
+      "overlapped_body_address": "0x1000e840",
+      "body_start": "0x1000dd70",
+      "body_end_exclusive": "0x1000ddc6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000de20",
+      "target_va": "0x1000d360",
+      "overlapped_body_address": "0x1000e8a0",
+      "body_start": "0x1000ddd0",
+      "body_end_exclusive": "0x1000de26",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000de80",
+      "target_va": "0x1000d3c0",
+      "overlapped_body_address": "0x1000e900",
+      "body_start": "0x1000de30",
+      "body_end_exclusive": "0x1000de86",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dee0",
+      "target_va": "0x1000d420",
+      "overlapped_body_address": "0x1000e960",
+      "body_start": "0x1000de90",
+      "body_end_exclusive": "0x1000dee6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000df40",
+      "target_va": "0x1000d480",
+      "overlapped_body_address": "0x1000e9c0",
+      "body_start": "0x1000def0",
+      "body_end_exclusive": "0x1000df46",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000dfa0",
+      "target_va": "0x1000d4e0",
+      "overlapped_body_address": "0x1000ea20",
+      "body_start": "0x1000df50",
+      "body_end_exclusive": "0x1000dfa6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e000",
+      "target_va": "0x1000d540",
+      "overlapped_body_address": "0x1000ea80",
+      "body_start": "0x1000dfb0",
+      "body_end_exclusive": "0x1000e006",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e060",
+      "target_va": "0x1000d5a0",
+      "overlapped_body_address": "0x1000eae0",
+      "body_start": "0x1000e010",
+      "body_end_exclusive": "0x1000e066",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e0c0",
+      "target_va": "0x1000d600",
+      "overlapped_body_address": "0x1000eb40",
+      "body_start": "0x1000e070",
+      "body_end_exclusive": "0x1000e0c6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e120",
+      "target_va": "0x1000d660",
+      "overlapped_body_address": "0x1000eba0",
+      "body_start": "0x1000e0d0",
+      "body_end_exclusive": "0x1000e126",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e180",
+      "target_va": "0x1000d6c0",
+      "overlapped_body_address": "0x1000ec00",
+      "body_start": "0x1000e130",
+      "body_end_exclusive": "0x1000e186",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e1e0",
+      "target_va": "0x1000d720",
+      "overlapped_body_address": "0x1000ec60",
+      "body_start": "0x1000e190",
+      "body_end_exclusive": "0x1000e1e6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e240",
+      "target_va": "0x1000d780",
+      "overlapped_body_address": "0x1000ecc0",
+      "body_start": "0x1000e1f0",
+      "body_end_exclusive": "0x1000e246",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e2a0",
+      "target_va": "0x1000d7e0",
+      "overlapped_body_address": "0x1000ed20",
+      "body_start": "0x1000e250",
+      "body_end_exclusive": "0x1000e2a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e300",
+      "target_va": "0x1000d840",
+      "overlapped_body_address": "0x1000ed80",
+      "body_start": "0x1000e2b0",
+      "body_end_exclusive": "0x1000e306",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e360",
+      "target_va": "0x1000d8a0",
+      "overlapped_body_address": "0x1000ede0",
+      "body_start": "0x1000e310",
+      "body_end_exclusive": "0x1000e366",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e3c0",
+      "target_va": "0x1000d900",
+      "overlapped_body_address": "0x1000ee40",
+      "body_start": "0x1000e370",
+      "body_end_exclusive": "0x1000e3c6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e420",
+      "target_va": "0x1000d960",
+      "overlapped_body_address": "0x1000eea0",
+      "body_start": "0x1000e3d0",
+      "body_end_exclusive": "0x1000e426",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e480",
+      "target_va": "0x1000d9c0",
+      "overlapped_body_address": "0x1000ef00",
+      "body_start": "0x1000e430",
+      "body_end_exclusive": "0x1000e486",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e4e0",
+      "target_va": "0x1000da20",
+      "overlapped_body_address": "0x1000ef60",
+      "body_start": "0x1000e490",
+      "body_end_exclusive": "0x1000e4e6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e540",
+      "target_va": "0x1000da80",
+      "overlapped_body_address": "0x1000efc0",
+      "body_start": "0x1000e4f0",
+      "body_end_exclusive": "0x1000e546",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e5a0",
+      "target_va": "0x1000dae0",
+      "overlapped_body_address": "0x1000f020",
+      "body_start": "0x1000e550",
+      "body_end_exclusive": "0x1000e5a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e600",
+      "target_va": "0x1000db40",
+      "overlapped_body_address": "0x1000f080",
+      "body_start": "0x1000e5b0",
+      "body_end_exclusive": "0x1000e606",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e660",
+      "target_va": "0x1000dba0",
+      "overlapped_body_address": "0x1000f0e0",
+      "body_start": "0x1000e610",
+      "body_end_exclusive": "0x1000e666",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e6c0",
+      "target_va": "0x1000dbf0",
+      "overlapped_body_address": "0x1000f140",
+      "body_start": "0x1000e670",
+      "body_end_exclusive": "0x1000e6c6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e720",
+      "target_va": "0x1000dc50",
+      "overlapped_body_address": "0x1000f1a0",
+      "body_start": "0x1000e6d0",
+      "body_end_exclusive": "0x1000e726",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e780",
+      "target_va": "0x1000dcb0",
+      "overlapped_body_address": "0x1000f200",
+      "body_start": "0x1000e730",
+      "body_end_exclusive": "0x1000e786",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e7e0",
+      "target_va": "0x1000dd10",
+      "overlapped_body_address": "0x1000f260",
+      "body_start": "0x1000e790",
+      "body_end_exclusive": "0x1000e7e6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e840",
+      "target_va": "0x1000dd70",
+      "overlapped_body_address": "0x1000f2c0",
+      "body_start": "0x1000e7f0",
+      "body_end_exclusive": "0x1000e846",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e8a0",
+      "target_va": "0x1000ddd0",
+      "overlapped_body_address": "0x1000f320",
+      "body_start": "0x1000e850",
+      "body_end_exclusive": "0x1000e8a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e900",
+      "target_va": "0x1000de30",
+      "overlapped_body_address": "0x1000f380",
+      "body_start": "0x1000e8b0",
+      "body_end_exclusive": "0x1000e906",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e960",
+      "target_va": "0x1000de90",
+      "overlapped_body_address": "0x1000f3e0",
+      "body_start": "0x1000e910",
+      "body_end_exclusive": "0x1000e966",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000e9c0",
+      "target_va": "0x1000def0",
+      "overlapped_body_address": "0x1000f440",
+      "body_start": "0x1000e970",
+      "body_end_exclusive": "0x1000e9c6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ea20",
+      "target_va": "0x1000df50",
+      "overlapped_body_address": "0x1000f4a0",
+      "body_start": "0x1000e9d0",
+      "body_end_exclusive": "0x1000ea30",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ea80",
+      "target_va": "0x1000dfb0",
+      "overlapped_body_address": "0x1000f520",
+      "body_start": "0x1000ea30",
+      "body_end_exclusive": "0x1000ea90",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000eae0",
+      "target_va": "0x1000e010",
+      "overlapped_body_address": "0x1000f5a0",
+      "body_start": "0x1000ea90",
+      "body_end_exclusive": "0x1000eaf0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000eb40",
+      "target_va": "0x1000e070",
+      "overlapped_body_address": "0x1000f620",
+      "body_start": "0x1000eaf0",
+      "body_end_exclusive": "0x1000eb50",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000eba0",
+      "target_va": "0x1000e0d0",
+      "overlapped_body_address": "0x1000f6a0",
+      "body_start": "0x1000eb50",
+      "body_end_exclusive": "0x1000ebb0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ec00",
+      "target_va": "0x1000e130",
+      "overlapped_body_address": "0x1000f720",
+      "body_start": "0x1000ebb0",
+      "body_end_exclusive": "0x1000ec16",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ec60",
+      "target_va": "0x1000e190",
+      "overlapped_body_address": "0x1000f7a0",
+      "body_start": "0x1000ec20",
+      "body_end_exclusive": "0x1000ec80",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ecc0",
+      "target_va": "0x1000e1f0",
+      "overlapped_body_address": "0x1000f820",
+      "body_start": "0x1000ec80",
+      "body_end_exclusive": "0x1000ece0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ed20",
+      "target_va": "0x1000e250",
+      "overlapped_body_address": "0x1000f8a0",
+      "body_start": "0x1000ece0",
+      "body_end_exclusive": "0x1000ed40",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ed80",
+      "target_va": "0x1000e2b0",
+      "overlapped_body_address": "0x1000f920",
+      "body_start": "0x1000ed40",
+      "body_end_exclusive": "0x1000eda0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ede0",
+      "target_va": "0x1000e310",
+      "overlapped_body_address": "0x1000f9a0",
+      "body_start": "0x1000eda0",
+      "body_end_exclusive": "0x1000ee00",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ee40",
+      "target_va": "0x1000e370",
+      "overlapped_body_address": "0x1000fa20",
+      "body_start": "0x1000ee00",
+      "body_end_exclusive": "0x1000ee60",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000eea0",
+      "target_va": "0x1000e3d0",
+      "overlapped_body_address": "0x1000faa0",
+      "body_start": "0x1000ee60",
+      "body_end_exclusive": "0x1000eec0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ef00",
+      "target_va": "0x1000e430",
+      "overlapped_body_address": "0x1000fb20",
+      "body_start": "0x1000eec0",
+      "body_end_exclusive": "0x1000ef1b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ef60",
+      "target_va": "0x1000e490",
+      "overlapped_body_address": "0x1000fba0",
+      "body_start": "0x1000ef20",
+      "body_end_exclusive": "0x1000ef80",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000efc0",
+      "target_va": "0x1000e4f0",
+      "overlapped_body_address": "0x1000fc20",
+      "body_start": "0x1000ef80",
+      "body_end_exclusive": "0x1000efe4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f020",
+      "target_va": "0x1000e550",
+      "overlapped_body_address": "0x1000fca0",
+      "body_start": "0x1000eff0",
+      "body_end_exclusive": "0x1000f050",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f080",
+      "target_va": "0x1000e5b0",
+      "overlapped_body_address": "0x1000fd20",
+      "body_start": "0x1000f050",
+      "body_end_exclusive": "0x1000f0b6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f0e0",
+      "target_va": "0x1000e610",
+      "overlapped_body_address": "0x1000fda0",
+      "body_start": "0x1000f0c0",
+      "body_end_exclusive": "0x1000f120",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f140",
+      "target_va": "0x1000e670",
+      "overlapped_body_address": "0x1000fe20",
+      "body_start": "0x1000f120",
+      "body_end_exclusive": "0x1000f180",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f1a0",
+      "target_va": "0x1000e6d0",
+      "overlapped_body_address": "0x1000fea0",
+      "body_start": "0x1000f180",
+      "body_end_exclusive": "0x1000f1e0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f200",
+      "target_va": "0x1000e730",
+      "overlapped_body_address": "0x1000ff20",
+      "body_start": "0x1000f1e0",
+      "body_end_exclusive": "0x1000f240",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f260",
+      "target_va": "0x1000e790",
+      "overlapped_body_address": "0x1000ffa0",
+      "body_start": "0x1000f240",
+      "body_end_exclusive": "0x1000f29b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f2c0",
+      "target_va": "0x1000e7f0",
+      "overlapped_body_address": "0x10010020",
+      "body_start": "0x1000f2a0",
+      "body_end_exclusive": "0x1000f300",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f320",
+      "target_va": "0x1000e850",
+      "overlapped_body_address": "0x100100a0",
+      "body_start": "0x1000f300",
+      "body_end_exclusive": "0x1000f360",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f380",
+      "target_va": "0x1000e8b0",
+      "overlapped_body_address": "0x10010140",
+      "body_start": "0x1000f380",
+      "body_end_exclusive": "0x1000f3b0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f3e0",
+      "target_va": "0x1000e910",
+      "overlapped_body_address": "0x100101a5",
+      "body_start": "0x1000f3e0",
+      "body_end_exclusive": "0x1000f3f8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f440",
+      "target_va": "0x1000e970",
+      "overlapped_body_address": "0x100101f2",
+      "body_start": "0x1000f430",
+      "body_end_exclusive": "0x1000f448",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f4a0",
+      "target_va": "0x1000e9d0",
+      "overlapped_body_address": "0x10010258",
+      "body_start": "0x1000f4a0",
+      "body_end_exclusive": "0x1000f4ad",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f520",
+      "target_va": "0x1000ea30",
+      "overlapped_body_address": "0x100102c3",
+      "body_start": "0x1000f520",
+      "body_end_exclusive": "0x1000f545",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f5a0",
+      "target_va": "0x1000ea90",
+      "overlapped_body_address": "0x1001032a",
+      "body_start": "0x1000f5a0",
+      "body_end_exclusive": "0x1000f5c4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f620",
+      "target_va": "0x1000eaf0",
+      "overlapped_body_address": "0x10010376",
+      "body_start": "0x1000f600",
+      "body_end_exclusive": "0x1000f6b4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f6a0",
+      "target_va": "0x1000eb50",
+      "overlapped_body_address": "0x10010376",
+      "body_start": "0x1000f600",
+      "body_end_exclusive": "0x1000f6b4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f720",
+      "target_va": "0x1000ebb0",
+      "overlapped_body_address": "0x10010406",
+      "body_start": "0x1000f6e0",
+      "body_end_exclusive": "0x1000f791",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f7a0",
+      "target_va": "0x1000ec20",
+      "overlapped_body_address": "0x100104ed",
+      "body_start": "0x1000f7a0",
+      "body_end_exclusive": "0x1000f7bd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f820",
+      "target_va": "0x1000ec80",
+      "overlapped_body_address": "0x10010540",
+      "body_start": "0x1000f7f0",
+      "body_end_exclusive": "0x1000f926",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f8a0",
+      "target_va": "0x1000ece0",
+      "overlapped_body_address": "0x10010540",
+      "body_start": "0x1000f7f0",
+      "body_end_exclusive": "0x1000f926",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f920",
+      "target_va": "0x1000ed40",
+      "overlapped_body_address": "0x10010540",
+      "body_start": "0x1000f7f0",
+      "body_end_exclusive": "0x1000f926",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000f9a0",
+      "target_va": "0x1000eda0",
+      "overlapped_body_address": "0x10010678",
+      "body_start": "0x1000f940",
+      "body_end_exclusive": "0x1000f9f6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fa20",
+      "target_va": "0x1000ee00",
+      "overlapped_body_address": "0x10010734",
+      "body_start": "0x1000fa10",
+      "body_end_exclusive": "0x1000fa23",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000faa0",
+      "target_va": "0x1000ee60",
+      "overlapped_body_address": "0x100107b2",
+      "body_start": "0x1000faa0",
+      "body_end_exclusive": "0x1000fb1b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fb20",
+      "target_va": "0x1000eec0",
+      "overlapped_body_address": "0x1001081f",
+      "body_start": "0x1000fb20",
+      "body_end_exclusive": "0x1000fb6d",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fba0",
+      "target_va": "0x1000ef20",
+      "overlapped_body_address": "0x10010893",
+      "body_start": "0x1000fb80",
+      "body_end_exclusive": "0x1000fc24",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fc20",
+      "target_va": "0x1000ef80",
+      "overlapped_body_address": "0x10010893",
+      "body_start": "0x1000fb80",
+      "body_end_exclusive": "0x1000fc24",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fca0",
+      "target_va": "0x1000eff0",
+      "overlapped_body_address": "0x10010913",
+      "body_start": "0x1000fc30",
+      "body_end_exclusive": "0x1000fd18",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fd20",
+      "target_va": "0x1000f050",
+      "overlapped_body_address": "0x10010a11",
+      "body_start": "0x1000fd20",
+      "body_end_exclusive": "0x1000fd30",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fda0",
+      "target_va": "0x1000f0c0",
+      "overlapped_body_address": "0x10010a80",
+      "body_start": "0x1000fda0",
+      "body_end_exclusive": "0x1000fdf2",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fe20",
+      "target_va": "0x1000f120",
+      "overlapped_body_address": "0x10010aad",
+      "body_start": "0x1000fe00",
+      "body_end_exclusive": "0x1000fe73",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000fea0",
+      "target_va": "0x1000f180",
+      "overlapped_body_address": "0x10010b1a",
+      "body_start": "0x1000fe80",
+      "body_end_exclusive": "0x1000ff04",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1000ffa0",
+      "target_va": "0x1000f240",
+      "overlapped_body_address": "0x10010ba1",
+      "body_start": "0x1000ffa0",
+      "body_end_exclusive": "0x100100a1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010020",
+      "target_va": "0x1000f2a0",
+      "overlapped_body_address": "0x10010ba1",
+      "body_start": "0x1000ffa0",
+      "body_end_exclusive": "0x100100a1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100100a0",
+      "target_va": "0x1000f300",
+      "overlapped_body_address": "0x10010ba1",
+      "body_start": "0x1000ffa0",
+      "body_end_exclusive": "0x100100a1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010120",
+      "target_va": "0x1000f360",
+      "overlapped_body_address": "0x10010c83",
+      "body_start": "0x100100c0",
+      "body_end_exclusive": "0x10010123",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010140",
+      "target_va": "0x1000f380",
+      "overlapped_body_address": "0x10010cd6",
+      "body_start": "0x10010130",
+      "body_end_exclusive": "0x10010220",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010170",
+      "target_va": "0x1000f3b0",
+      "overlapped_body_address": "0x10010cd6",
+      "body_start": "0x10010130",
+      "body_end_exclusive": "0x10010220",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010180",
+      "target_va": "0x1000f3c0",
+      "overlapped_body_address": "0x10010cd6",
+      "body_start": "0x10010130",
+      "body_end_exclusive": "0x10010220",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100101a5",
+      "target_va": "0x1000f3e0",
+      "overlapped_body_address": "0x10010cd6",
+      "body_start": "0x10010130",
+      "body_end_exclusive": "0x10010220",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100101c2",
+      "target_va": "0x1000f400",
+      "overlapped_body_address": "0x10010cd6",
+      "body_start": "0x10010130",
+      "body_end_exclusive": "0x10010220",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100101f2",
+      "target_va": "0x1000f430",
+      "overlapped_body_address": "0x10010cd6",
+      "body_start": "0x10010130",
+      "body_end_exclusive": "0x10010220",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001020f",
+      "target_va": "0x1000f450",
+      "overlapped_body_address": "0x10010cd6",
+      "body_start": "0x10010130",
+      "body_end_exclusive": "0x10010220",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010230",
+      "target_va": "0x1000f470",
+      "overlapped_body_address": "0x10010d8b",
+      "body_start": "0x10010220",
+      "body_end_exclusive": "0x100102fa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001023b",
+      "target_va": "0x1000f480",
+      "overlapped_body_address": "0x10010d8b",
+      "body_start": "0x10010220",
+      "body_end_exclusive": "0x100102fa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010258",
+      "target_va": "0x1000f4a0",
+      "overlapped_body_address": "0x10010d8b",
+      "body_start": "0x10010220",
+      "body_end_exclusive": "0x100102fa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010265",
+      "target_va": "0x1000f4b0",
+      "overlapped_body_address": "0x10010d8b",
+      "body_start": "0x10010220",
+      "body_end_exclusive": "0x100102fa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100102a5",
+      "target_va": "0x1000f4f0",
+      "overlapped_body_address": "0x10010d8b",
+      "body_start": "0x10010220",
+      "body_end_exclusive": "0x100102fa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100102c3",
+      "target_va": "0x1000f520",
+      "overlapped_body_address": "0x10010d8b",
+      "body_start": "0x10010220",
+      "body_end_exclusive": "0x100102fa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100102ea",
+      "target_va": "0x1000f550",
+      "overlapped_body_address": "0x10010d8b",
+      "body_start": "0x10010220",
+      "body_end_exclusive": "0x100102fa",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001031f",
+      "target_va": "0x1000f590",
+      "overlapped_body_address": "0x10010e4b",
+      "body_start": "0x10010300",
+      "body_end_exclusive": "0x100103b1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001032a",
+      "target_va": "0x1000f5a0",
+      "overlapped_body_address": "0x10010e4b",
+      "body_start": "0x10010300",
+      "body_end_exclusive": "0x100103b1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010351",
+      "target_va": "0x1000f5d0",
+      "overlapped_body_address": "0x10010e4b",
+      "body_start": "0x10010300",
+      "body_end_exclusive": "0x100103b1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010376",
+      "target_va": "0x1000f600",
+      "overlapped_body_address": "0x10010e4b",
+      "body_start": "0x10010300",
+      "body_end_exclusive": "0x100103b1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100103e4",
+      "target_va": "0x1000f6c0",
+      "overlapped_body_address": "0x10010ed0",
+      "body_start": "0x100103c0",
+      "body_end_exclusive": "0x10010460",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010406",
+      "target_va": "0x1000f6e0",
+      "overlapped_body_address": "0x10010ed0",
+      "body_start": "0x100103c0",
+      "body_end_exclusive": "0x10010460",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100104ed",
+      "target_va": "0x1000f7a0",
+      "overlapped_body_address": "0x10010f59",
+      "body_start": "0x10010460",
+      "body_end_exclusive": "0x100105e4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010523",
+      "target_va": "0x1000f7c0",
+      "overlapped_body_address": "0x10010f59",
+      "body_start": "0x10010460",
+      "body_end_exclusive": "0x100105e4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010529",
+      "target_va": "0x1000f7d0",
+      "overlapped_body_address": "0x10010f59",
+      "body_start": "0x10010460",
+      "body_end_exclusive": "0x100105e4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010540",
+      "target_va": "0x1000f7f0",
+      "overlapped_body_address": "0x10010f59",
+      "body_start": "0x10010460",
+      "body_end_exclusive": "0x100105e4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010670",
+      "target_va": "0x1000f930",
+      "overlapped_body_address": "0x100110bd",
+      "body_start": "0x10010610",
+      "body_end_exclusive": "0x100106e2",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010678",
+      "target_va": "0x1000f940",
+      "overlapped_body_address": "0x100110bd",
+      "body_start": "0x10010610",
+      "body_end_exclusive": "0x100106e2",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001072a",
+      "target_va": "0x1000fa00",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010734",
+      "target_va": "0x1000fa10",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001074b",
+      "target_va": "0x1000fa30",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010756",
+      "target_va": "0x1000fa40",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010761",
+      "target_va": "0x1000fa50",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010771",
+      "target_va": "0x1000fa60",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010792",
+      "target_va": "0x1000fa80",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100107b2",
+      "target_va": "0x1000faa0",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001081f",
+      "target_va": "0x1000fb20",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001088b",
+      "target_va": "0x1000fb70",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010893",
+      "target_va": "0x1000fb80",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010913",
+      "target_va": "0x1000fc30",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010a11",
+      "target_va": "0x1000fd20",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010a19",
+      "target_va": "0x1000fd30",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010a80",
+      "target_va": "0x1000fda0",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010aad",
+      "target_va": "0x1000fe00",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010b1a",
+      "target_va": "0x1000fe80",
+      "overlapped_body_address": "0x100111e0",
+      "body_start": "0x10010710",
+      "body_end_exclusive": "0x10010b2c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010ba1",
+      "target_va": "0x1000ffa0",
+      "overlapped_body_address": "0x1001156b",
+      "body_start": "0x10010b60",
+      "body_end_exclusive": "0x10010bcb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010c83",
+      "target_va": "0x100100c0",
+      "overlapped_body_address": "0x10011650",
+      "body_start": "0x10010c70",
+      "body_end_exclusive": "0x10010ce3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010cd6",
+      "target_va": "0x10010130",
+      "overlapped_body_address": "0x10011650",
+      "body_start": "0x10010c70",
+      "body_end_exclusive": "0x10010ce3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010d8b",
+      "target_va": "0x10010220",
+      "overlapped_body_address": "0x10011724",
+      "body_start": "0x10010d40",
+      "body_end_exclusive": "0x10010ddb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010e4b",
+      "target_va": "0x10010300",
+      "overlapped_body_address": "0x1001189f",
+      "body_start": "0x10010e40",
+      "body_end_exclusive": "0x10010e50",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010ed0",
+      "target_va": "0x100103c0",
+      "overlapped_body_address": "0x1001193a",
+      "body_start": "0x10010ed0",
+      "body_end_exclusive": "0x10010f60",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10010f59",
+      "target_va": "0x10010460",
+      "overlapped_body_address": "0x1001193a",
+      "body_start": "0x10010ed0",
+      "body_end_exclusive": "0x10010f60",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011032",
+      "target_va": "0x100105f0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100110bd",
+      "target_va": "0x10010610",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100111b3",
+      "target_va": "0x100106f0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100111e0",
+      "target_va": "0x10010710",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011541",
+      "target_va": "0x10010b30",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001156b",
+      "target_va": "0x10010b60",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100115b7",
+      "target_va": "0x10010bd0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011650",
+      "target_va": "0x10010c70",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100116db",
+      "target_va": "0x10010cf0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011715",
+      "target_va": "0x10010d30",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011724",
+      "target_va": "0x10010d40",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001184d",
+      "target_va": "0x10010de0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011872",
+      "target_va": "0x10010e10",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001189f",
+      "target_va": "0x10010e40",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100118af",
+      "target_va": "0x10010e50",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100118f1",
+      "target_va": "0x10010e90",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011904",
+      "target_va": "0x10010ea0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011917",
+      "target_va": "0x10010eb0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001193a",
+      "target_va": "0x10010ed0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10011991",
+      "target_va": "0x10010f60",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100119b1",
+      "target_va": "0x10010f90",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100119c7",
+      "target_va": "0x10010fb0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100119f1",
+      "target_va": "0x10010fe0",
+      "overlapped_body_address": "0x100119f1",
+      "body_start": "0x10010fe0",
+      "body_end_exclusive": "0x100123e7",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x100129f5",
+      "target_va": "0x10012430",
+      "overlapped_body_address": "0x10012e90",
+      "body_start": "0x10012930",
+      "body_end_exclusive": "0x10012a79",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012a3a",
+      "target_va": "0x10012480",
+      "overlapped_body_address": "0x10012e90",
+      "body_start": "0x10012930",
+      "body_end_exclusive": "0x10012a79",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012ad4",
+      "target_va": "0x10012530",
+      "overlapped_body_address": "0x10013137",
+      "body_start": "0x10012ad0",
+      "body_end_exclusive": "0x10012aff",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012b26",
+      "target_va": "0x10012580",
+      "overlapped_body_address": "0x10013169",
+      "body_start": "0x10012b00",
+      "body_end_exclusive": "0x10012b37",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012b59",
+      "target_va": "0x100125b0",
+      "overlapped_body_address": "0x100131a5",
+      "body_start": "0x10012b40",
+      "body_end_exclusive": "0x10012b6b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012b84",
+      "target_va": "0x100125e0",
+      "overlapped_body_address": "0x100131d4",
+      "body_start": "0x10012b70",
+      "body_end_exclusive": "0x10012ca8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012b9c",
+      "target_va": "0x10012600",
+      "overlapped_body_address": "0x100131d4",
+      "body_start": "0x10012b70",
+      "body_end_exclusive": "0x10012ca8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012ba5",
+      "target_va": "0x10012610",
+      "overlapped_body_address": "0x100131d4",
+      "body_start": "0x10012b70",
+      "body_end_exclusive": "0x10012ca8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012bae",
+      "target_va": "0x10012620",
+      "overlapped_body_address": "0x100131d4",
+      "body_start": "0x10012b70",
+      "body_end_exclusive": "0x10012ca8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012be1",
+      "target_va": "0x10012650",
+      "overlapped_body_address": "0x100131d4",
+      "body_start": "0x10012b70",
+      "body_end_exclusive": "0x10012ca8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012c05",
+      "target_va": "0x10012680",
+      "overlapped_body_address": "0x100131d4",
+      "body_start": "0x10012b70",
+      "body_end_exclusive": "0x10012ca8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012c9c",
+      "target_va": "0x10012720",
+      "overlapped_body_address": "0x100131d4",
+      "body_start": "0x10012b70",
+      "body_end_exclusive": "0x10012ca8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012dc7",
+      "target_va": "0x10012860",
+      "overlapped_body_address": "0x100132f6",
+      "body_start": "0x10012cb0",
+      "body_end_exclusive": "0x10012f45",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012ddc",
+      "target_va": "0x10012870",
+      "overlapped_body_address": "0x100132f6",
+      "body_start": "0x10012cb0",
+      "body_end_exclusive": "0x10012f45",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012df2",
+      "target_va": "0x10012890",
+      "overlapped_body_address": "0x100132f6",
+      "body_start": "0x10012cb0",
+      "body_end_exclusive": "0x10012f45",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012e01",
+      "target_va": "0x100128a0",
+      "overlapped_body_address": "0x100132f6",
+      "body_start": "0x10012cb0",
+      "body_end_exclusive": "0x10012f45",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012e20",
+      "target_va": "0x100128c0",
+      "overlapped_body_address": "0x100132f6",
+      "body_start": "0x10012cb0",
+      "body_end_exclusive": "0x10012f45",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012e65",
+      "target_va": "0x10012910",
+      "overlapped_body_address": "0x100132f6",
+      "body_start": "0x10012cb0",
+      "body_end_exclusive": "0x10012f45",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10012e90",
+      "target_va": "0x10012930",
+      "overlapped_body_address": "0x100132f6",
+      "body_start": "0x10012cb0",
+      "body_end_exclusive": "0x10012f45",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001301f",
+      "target_va": "0x10012a80",
+      "overlapped_body_address": "0x100135b4",
+      "body_start": "0x10012fd0",
+      "body_end_exclusive": "0x10013278",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100130f6",
+      "target_va": "0x10012a90",
+      "overlapped_body_address": "0x100135b4",
+      "body_start": "0x10012fd0",
+      "body_end_exclusive": "0x10013278",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013137",
+      "target_va": "0x10012ad0",
+      "overlapped_body_address": "0x100135b4",
+      "body_start": "0x10012fd0",
+      "body_end_exclusive": "0x10013278",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013169",
+      "target_va": "0x10012b00",
+      "overlapped_body_address": "0x100135b4",
+      "body_start": "0x10012fd0",
+      "body_end_exclusive": "0x10013278",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100131a5",
+      "target_va": "0x10012b40",
+      "overlapped_body_address": "0x100135b4",
+      "body_start": "0x10012fd0",
+      "body_end_exclusive": "0x10013278",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100131d4",
+      "target_va": "0x10012b70",
+      "overlapped_body_address": "0x100135b4",
+      "body_start": "0x10012fd0",
+      "body_end_exclusive": "0x10013278",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100132f6",
+      "target_va": "0x10012cb0",
+      "overlapped_body_address": "0x1001384b",
+      "body_start": "0x10013280",
+      "body_end_exclusive": "0x1001338f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001353b",
+      "target_va": "0x10012f50",
+      "overlapped_body_address": "0x10013ad2",
+      "body_start": "0x100134e0",
+      "body_end_exclusive": "0x10013549",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001358e",
+      "target_va": "0x10012fb0",
+      "overlapped_body_address": "0x10013b50",
+      "body_start": "0x10013560",
+      "body_end_exclusive": "0x10013619",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100135b4",
+      "target_va": "0x10012fd0",
+      "overlapped_body_address": "0x10013b50",
+      "body_start": "0x10013560",
+      "body_end_exclusive": "0x10013619",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001384b",
+      "target_va": "0x10013280",
+      "overlapped_body_address": "0x10013d69",
+      "body_start": "0x100137e0",
+      "body_end_exclusive": "0x1001384e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013975",
+      "target_va": "0x10013390",
+      "overlapped_body_address": "0x10013ebb",
+      "body_start": "0x10013960",
+      "body_end_exclusive": "0x10013979",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013980",
+      "target_va": "0x100133a0",
+      "overlapped_body_address": "0x10013eea",
+      "body_start": "0x10013980",
+      "body_end_exclusive": "0x10013989",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013a56",
+      "target_va": "0x10013440",
+      "overlapped_body_address": "0x10013f33",
+      "body_start": "0x100139e0",
+      "body_end_exclusive": "0x10013a76",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013a72",
+      "target_va": "0x10013460",
+      "overlapped_body_address": "0x10013f33",
+      "body_start": "0x100139e0",
+      "body_end_exclusive": "0x10013a76",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013a89",
+      "target_va": "0x10013480",
+      "overlapped_body_address": "0x10013fcf",
+      "body_start": "0x10013a80",
+      "body_end_exclusive": "0x10013abb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013aa2",
+      "target_va": "0x100134a0",
+      "overlapped_body_address": "0x10013fcf",
+      "body_start": "0x10013a80",
+      "body_end_exclusive": "0x10013abb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013ad2",
+      "target_va": "0x100134e0",
+      "overlapped_body_address": "0x10014003",
+      "body_start": "0x10013ac0",
+      "body_end_exclusive": "0x10013c56",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013b39",
+      "target_va": "0x10013550",
+      "overlapped_body_address": "0x10014003",
+      "body_start": "0x10013ac0",
+      "body_end_exclusive": "0x10013c56",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013b50",
+      "target_va": "0x10013560",
+      "overlapped_body_address": "0x10014003",
+      "body_start": "0x10013ac0",
+      "body_end_exclusive": "0x10013c56",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013bd8",
+      "target_va": "0x10013620",
+      "overlapped_body_address": "0x10014003",
+      "body_start": "0x10013ac0",
+      "body_end_exclusive": "0x10013c56",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013c74",
+      "target_va": "0x100136d0",
+      "overlapped_body_address": "0x1001415a",
+      "body_start": "0x10013c60",
+      "body_end_exclusive": "0x10013d3e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013d30",
+      "target_va": "0x10013790",
+      "overlapped_body_address": "0x1001415a",
+      "body_start": "0x10013c60",
+      "body_end_exclusive": "0x10013d3e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013d38",
+      "target_va": "0x100137a0",
+      "overlapped_body_address": "0x1001415a",
+      "body_start": "0x10013c60",
+      "body_end_exclusive": "0x10013d3e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013d69",
+      "target_va": "0x100137e0",
+      "overlapped_body_address": "0x10014223",
+      "body_start": "0x10013d60",
+      "body_end_exclusive": "0x10013d9e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013dd1",
+      "target_va": "0x10013850",
+      "overlapped_body_address": "0x10014252",
+      "body_start": "0x10013da0",
+      "body_end_exclusive": "0x10013e23",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013e19",
+      "target_va": "0x100138a0",
+      "overlapped_body_address": "0x10014252",
+      "body_start": "0x10013da0",
+      "body_end_exclusive": "0x10013e23",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013ebb",
+      "target_va": "0x10013960",
+      "overlapped_body_address": "0x100142b6",
+      "body_start": "0x10013e30",
+      "body_end_exclusive": "0x10014000",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013eea",
+      "target_va": "0x10013980",
+      "overlapped_body_address": "0x100142b6",
+      "body_start": "0x10013e30",
+      "body_end_exclusive": "0x10014000",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013ef3",
+      "target_va": "0x10013990",
+      "overlapped_body_address": "0x100142b6",
+      "body_start": "0x10013e30",
+      "body_end_exclusive": "0x10014000",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013efc",
+      "target_va": "0x100139a0",
+      "overlapped_body_address": "0x100142b6",
+      "body_start": "0x10013e30",
+      "body_end_exclusive": "0x10014000",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013f0b",
+      "target_va": "0x100139b0",
+      "overlapped_body_address": "0x100142b6",
+      "body_start": "0x10013e30",
+      "body_end_exclusive": "0x10014000",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013f33",
+      "target_va": "0x100139e0",
+      "overlapped_body_address": "0x100142b6",
+      "body_start": "0x10013e30",
+      "body_end_exclusive": "0x10014000",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10013fcf",
+      "target_va": "0x10013a80",
+      "overlapped_body_address": "0x100142b6",
+      "body_start": "0x10013e30",
+      "body_end_exclusive": "0x10014000",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014003",
+      "target_va": "0x10013ac0",
+      "overlapped_body_address": "0x10014446",
+      "body_start": "0x10014000",
+      "body_end_exclusive": "0x10014092",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001415a",
+      "target_va": "0x10013c60",
+      "overlapped_body_address": "0x10014566",
+      "body_start": "0x10014130",
+      "body_end_exclusive": "0x10014386",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014206",
+      "target_va": "0x10013d40",
+      "overlapped_body_address": "0x10014566",
+      "body_start": "0x10014130",
+      "body_end_exclusive": "0x10014386",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014223",
+      "target_va": "0x10013d60",
+      "overlapped_body_address": "0x10014566",
+      "body_start": "0x10014130",
+      "body_end_exclusive": "0x10014386",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014252",
+      "target_va": "0x10013da0",
+      "overlapped_body_address": "0x10014566",
+      "body_start": "0x10014130",
+      "body_end_exclusive": "0x10014386",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100142b6",
+      "target_va": "0x10013e30",
+      "overlapped_body_address": "0x10014566",
+      "body_start": "0x10014130",
+      "body_end_exclusive": "0x10014386",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014446",
+      "target_va": "0x10014000",
+      "overlapped_body_address": "0x1001474f",
+      "body_start": "0x10014390",
+      "body_end_exclusive": "0x10014574",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100144e1",
+      "target_va": "0x100140a0",
+      "overlapped_body_address": "0x1001474f",
+      "body_start": "0x10014390",
+      "body_end_exclusive": "0x10014574",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100144ea",
+      "target_va": "0x100140b0",
+      "overlapped_body_address": "0x1001474f",
+      "body_start": "0x10014390",
+      "body_end_exclusive": "0x10014574",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014566",
+      "target_va": "0x10014130",
+      "overlapped_body_address": "0x1001474f",
+      "body_start": "0x10014390",
+      "body_end_exclusive": "0x10014574",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001474f",
+      "target_va": "0x10014390",
+      "overlapped_body_address": "0x10014a2f",
+      "body_start": "0x100146c0",
+      "body_end_exclusive": "0x10014811",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100148b0",
+      "target_va": "0x10014580",
+      "overlapped_body_address": "0x10014bc7",
+      "body_start": "0x10014870",
+      "body_end_exclusive": "0x100148c0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100148e9",
+      "target_va": "0x10014590",
+      "overlapped_body_address": "0x10014c52",
+      "body_start": "0x100148e0",
+      "body_end_exclusive": "0x10014910",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014907",
+      "target_va": "0x100145b0",
+      "overlapped_body_address": "0x10014c52",
+      "body_start": "0x100148e0",
+      "body_end_exclusive": "0x10014910",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014996",
+      "target_va": "0x10014630",
+      "overlapped_body_address": "0x10014cc3",
+      "body_start": "0x10014960",
+      "body_end_exclusive": "0x100149fb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014a2f",
+      "target_va": "0x100146c0",
+      "overlapped_body_address": "0x10014d77",
+      "body_start": "0x10014a20",
+      "body_end_exclusive": "0x10014aad",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014b7a",
+      "target_va": "0x10014820",
+      "overlapped_body_address": "0x10014e0a",
+      "body_start": "0x10014ad0",
+      "body_end_exclusive": "0x10014bf1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014bc7",
+      "target_va": "0x10014870",
+      "overlapped_body_address": "0x10014e0a",
+      "body_start": "0x10014ad0",
+      "body_end_exclusive": "0x10014bf1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014c34",
+      "target_va": "0x100148c0",
+      "overlapped_body_address": "0x10014f39",
+      "body_start": "0x10014c20",
+      "body_end_exclusive": "0x10014c8f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014c40",
+      "target_va": "0x100148d0",
+      "overlapped_body_address": "0x10014f39",
+      "body_start": "0x10014c20",
+      "body_end_exclusive": "0x10014c8f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014c52",
+      "target_va": "0x100148e0",
+      "overlapped_body_address": "0x10014f39",
+      "body_start": "0x10014c20",
+      "body_end_exclusive": "0x10014c8f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014c86",
+      "target_va": "0x10014910",
+      "overlapped_body_address": "0x10014f39",
+      "body_start": "0x10014c20",
+      "body_end_exclusive": "0x10014c8f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014cc3",
+      "target_va": "0x10014960",
+      "overlapped_body_address": "0x10014fa7",
+      "body_start": "0x10014c90",
+      "body_end_exclusive": "0x10014e14",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014d65",
+      "target_va": "0x10014a00",
+      "overlapped_body_address": "0x10014fa7",
+      "body_start": "0x10014c90",
+      "body_end_exclusive": "0x10014e14",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014d6e",
+      "target_va": "0x10014a10",
+      "overlapped_body_address": "0x10014fa7",
+      "body_start": "0x10014c90",
+      "body_end_exclusive": "0x10014e14",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014d77",
+      "target_va": "0x10014a20",
+      "overlapped_body_address": "0x10014fa7",
+      "body_start": "0x10014c90",
+      "body_end_exclusive": "0x10014e14",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014df0",
+      "target_va": "0x10014ab0",
+      "overlapped_body_address": "0x10014fa7",
+      "body_start": "0x10014c90",
+      "body_end_exclusive": "0x10014e14",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014e0a",
+      "target_va": "0x10014ad0",
+      "overlapped_body_address": "0x10014fa7",
+      "body_start": "0x10014c90",
+      "body_end_exclusive": "0x10014e14",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014f24",
+      "target_va": "0x10014c00",
+      "overlapped_body_address": "0x10015122",
+      "body_start": "0x10014e30",
+      "body_end_exclusive": "0x10014f4f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014f30",
+      "target_va": "0x10014c10",
+      "overlapped_body_address": "0x10015122",
+      "body_start": "0x10014e30",
+      "body_end_exclusive": "0x10014f4f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014f39",
+      "target_va": "0x10014c20",
+      "overlapped_body_address": "0x10015122",
+      "body_start": "0x10014e30",
+      "body_end_exclusive": "0x10014f4f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10014fa7",
+      "target_va": "0x10014c90",
+      "overlapped_body_address": "0x10015270",
+      "body_start": "0x10014f80",
+      "body_end_exclusive": "0x10015038",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10015122",
+      "target_va": "0x10014e30",
+      "overlapped_body_address": "0x100152d1",
+      "body_start": "0x10015040",
+      "body_end_exclusive": "0x100151af",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10015237",
+      "target_va": "0x10014f50",
+      "overlapped_body_address": "0x10015468",
+      "body_start": "0x100151f0",
+      "body_end_exclusive": "0x10015264",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10015270",
+      "target_va": "0x10014f80",
+      "overlapped_body_address": "0x100154dc",
+      "body_start": "0x10015270",
+      "body_end_exclusive": "0x10015fcc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100152d1",
+      "target_va": "0x10015040",
+      "overlapped_body_address": "0x100154dc",
+      "body_start": "0x10015270",
+      "body_end_exclusive": "0x10015fcc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10015435",
+      "target_va": "0x100151b0",
+      "overlapped_body_address": "0x100154dc",
+      "body_start": "0x10015270",
+      "body_end_exclusive": "0x10015fcc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10015468",
+      "target_va": "0x100151f0",
+      "overlapped_body_address": "0x100154dc",
+      "body_start": "0x10015270",
+      "body_end_exclusive": "0x10015fcc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100154dc",
+      "target_va": "0x10015270",
+      "overlapped_body_address": "0x100154dc",
+      "body_start": "0x10015270",
+      "body_end_exclusive": "0x10015fcc",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x10016088",
+      "target_va": "0x10015fd0",
+      "overlapped_body_address": "0x10016088",
+      "body_start": "0x10015fd0",
+      "body_end_exclusive": "0x10016613",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x1001663f",
+      "target_va": "0x10016620",
+      "overlapped_body_address": "0x1001663f",
+      "body_start": "0x10016620",
+      "body_end_exclusive": "0x10016740",
+      "same_candidate": true
+    },
+    {
+      "patch_address": "0x1001672d",
+      "target_va": "0x10016740",
+      "overlapped_body_address": "0x1001663f",
+      "body_start": "0x10016620",
+      "body_end_exclusive": "0x10016740",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016740",
+      "target_va": "0x10016750",
+      "overlapped_body_address": "0x1001672d",
+      "body_start": "0x10016740",
+      "body_end_exclusive": "0x10016750",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100167ba",
+      "target_va": "0x10016800",
+      "overlapped_body_address": "0x10016740",
+      "body_start": "0x10016750",
+      "body_end_exclusive": "0x100167f3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016846",
+      "target_va": "0x10016870",
+      "overlapped_body_address": "0x100167ba",
+      "body_start": "0x10016800",
+      "body_end_exclusive": "0x10016870",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100168fe",
+      "target_va": "0x100169b0",
+      "overlapped_body_address": "0x10016846",
+      "body_start": "0x10016870",
+      "body_end_exclusive": "0x100169af",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100169da",
+      "target_va": "0x10016ab0",
+      "overlapped_body_address": "0x100168fe",
+      "body_start": "0x100169b0",
+      "body_end_exclusive": "0x10016ab0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016b74",
+      "target_va": "0x10016c90",
+      "overlapped_body_address": "0x100169da",
+      "body_start": "0x10016ab0",
+      "body_end_exclusive": "0x10016c84",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016c2f",
+      "target_va": "0x10016d60",
+      "overlapped_body_address": "0x100169da",
+      "body_start": "0x10016ab0",
+      "body_end_exclusive": "0x10016c84",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016cc6",
+      "target_va": "0x10016e10",
+      "overlapped_body_address": "0x10016b74",
+      "body_start": "0x10016c90",
+      "body_end_exclusive": "0x10016d54",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016cec",
+      "target_va": "0x10016e20",
+      "overlapped_body_address": "0x10016b74",
+      "body_start": "0x10016c90",
+      "body_end_exclusive": "0x10016d54",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016d12",
+      "target_va": "0x10016e30",
+      "overlapped_body_address": "0x10016b74",
+      "body_start": "0x10016c90",
+      "body_end_exclusive": "0x10016d54",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016d30",
+      "target_va": "0x10016e50",
+      "overlapped_body_address": "0x10016b74",
+      "body_start": "0x10016c90",
+      "body_end_exclusive": "0x10016d54",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016d44",
+      "target_va": "0x10016e70",
+      "overlapped_body_address": "0x10016b74",
+      "body_start": "0x10016c90",
+      "body_end_exclusive": "0x10016d54",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016e8e",
+      "target_va": "0x100170b0",
+      "overlapped_body_address": "0x10016d44",
+      "body_start": "0x10016e70",
+      "body_end_exclusive": "0x100170a8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016eae",
+      "target_va": "0x100170d0",
+      "overlapped_body_address": "0x10016d44",
+      "body_start": "0x10016e70",
+      "body_end_exclusive": "0x100170a8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10016f49",
+      "target_va": "0x100171a0",
+      "overlapped_body_address": "0x10016d44",
+      "body_start": "0x10016e70",
+      "body_end_exclusive": "0x100170a8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001705c",
+      "target_va": "0x10017520",
+      "overlapped_body_address": "0x10016d44",
+      "body_start": "0x10016e70",
+      "body_end_exclusive": "0x100170a8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001708f",
+      "target_va": "0x10017560",
+      "overlapped_body_address": "0x10016d44",
+      "body_start": "0x10016e70",
+      "body_end_exclusive": "0x100170a8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100170b0",
+      "target_va": "0x10017580",
+      "overlapped_body_address": "0x10016e8e",
+      "body_start": "0x100170b0",
+      "body_end_exclusive": "0x100170ca",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100170d6",
+      "target_va": "0x100175a0",
+      "overlapped_body_address": "0x10016eae",
+      "body_start": "0x100170d0",
+      "body_end_exclusive": "0x10017195",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017285",
+      "target_va": "0x100177b0",
+      "overlapped_body_address": "0x10016f49",
+      "body_start": "0x100171a0",
+      "body_end_exclusive": "0x10017515",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100172be",
+      "target_va": "0x100177f0",
+      "overlapped_body_address": "0x10016f49",
+      "body_start": "0x100171a0",
+      "body_end_exclusive": "0x10017515",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100172cd",
+      "target_va": "0x10017800",
+      "overlapped_body_address": "0x10016f49",
+      "body_start": "0x100171a0",
+      "body_end_exclusive": "0x10017515",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100172d5",
+      "target_va": "0x10017810",
+      "overlapped_body_address": "0x10016f49",
+      "body_start": "0x100171a0",
+      "body_end_exclusive": "0x10017515",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100172f0",
+      "target_va": "0x10017820",
+      "overlapped_body_address": "0x10016f49",
+      "body_start": "0x100171a0",
+      "body_end_exclusive": "0x10017515",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017651",
+      "target_va": "0x10017c20",
+      "overlapped_body_address": "0x100170d6",
+      "body_start": "0x100175a0",
+      "body_end_exclusive": "0x100177a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100176a2",
+      "target_va": "0x10017c90",
+      "overlapped_body_address": "0x100170d6",
+      "body_start": "0x100175a0",
+      "body_end_exclusive": "0x100177a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100176d0",
+      "target_va": "0x10017cc0",
+      "overlapped_body_address": "0x100170d6",
+      "body_start": "0x100175a0",
+      "body_end_exclusive": "0x100177a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017726",
+      "target_va": "0x10017d30",
+      "overlapped_body_address": "0x100170d6",
+      "body_start": "0x100175a0",
+      "body_end_exclusive": "0x100177a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017756",
+      "target_va": "0x10017d60",
+      "overlapped_body_address": "0x100170d6",
+      "body_start": "0x100175a0",
+      "body_end_exclusive": "0x100177a6",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100177d5",
+      "target_va": "0x10017e00",
+      "overlapped_body_address": "0x10017285",
+      "body_start": "0x100177b0",
+      "body_end_exclusive": "0x100177ee",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100178b8",
+      "target_va": "0x10017f00",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100179ce",
+      "target_va": "0x100180a0",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100179e8",
+      "target_va": "0x100180c0",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017a20",
+      "target_va": "0x10018100",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017a33",
+      "target_va": "0x10018110",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017a60",
+      "target_va": "0x10018130",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017a94",
+      "target_va": "0x10018180",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017b16",
+      "target_va": "0x10018200",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017bc3",
+      "target_va": "0x10018290",
+      "overlapped_body_address": "0x100172f0",
+      "body_start": "0x10017820",
+      "body_end_exclusive": "0x10017c20",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017c31",
+      "target_va": "0x10018300",
+      "overlapped_body_address": "0x10017651",
+      "body_start": "0x10017c20",
+      "body_end_exclusive": "0x10017c8b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017c7b",
+      "target_va": "0x10018360",
+      "overlapped_body_address": "0x10017651",
+      "body_start": "0x10017c20",
+      "body_end_exclusive": "0x10017c8b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017cd2",
+      "target_va": "0x100183c0",
+      "overlapped_body_address": "0x100176d0",
+      "body_start": "0x10017cc0",
+      "body_end_exclusive": "0x10017d30",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017ce9",
+      "target_va": "0x100183e0",
+      "overlapped_body_address": "0x100176d0",
+      "body_start": "0x10017cc0",
+      "body_end_exclusive": "0x10017d30",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017da2",
+      "target_va": "0x100184b0",
+      "overlapped_body_address": "0x10017756",
+      "body_start": "0x10017d60",
+      "body_end_exclusive": "0x10017dcb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017dab",
+      "target_va": "0x100184c0",
+      "overlapped_body_address": "0x10017756",
+      "body_start": "0x10017d60",
+      "body_end_exclusive": "0x10017dcb",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017dde",
+      "target_va": "0x10018500",
+      "overlapped_body_address": "0x100177a7",
+      "body_start": "0x10017dd0",
+      "body_end_exclusive": "0x10017df9",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017e17",
+      "target_va": "0x10018550",
+      "overlapped_body_address": "0x100177d5",
+      "body_start": "0x10017e00",
+      "body_end_exclusive": "0x10017efc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017e2a",
+      "target_va": "0x10018570",
+      "overlapped_body_address": "0x100177d5",
+      "body_start": "0x10017e00",
+      "body_end_exclusive": "0x10017efc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017e62",
+      "target_va": "0x10018590",
+      "overlapped_body_address": "0x100177d5",
+      "body_start": "0x10017e00",
+      "body_end_exclusive": "0x10017efc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017e73",
+      "target_va": "0x100185a0",
+      "overlapped_body_address": "0x100177d5",
+      "body_start": "0x10017e00",
+      "body_end_exclusive": "0x10017efc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017e91",
+      "target_va": "0x100185c0",
+      "overlapped_body_address": "0x100177d5",
+      "body_start": "0x10017e00",
+      "body_end_exclusive": "0x10017efc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017ec8",
+      "target_va": "0x10018600",
+      "overlapped_body_address": "0x100177d5",
+      "body_start": "0x10017e00",
+      "body_end_exclusive": "0x10017efc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10017ed5",
+      "target_va": "0x10018610",
+      "overlapped_body_address": "0x100177d5",
+      "body_start": "0x10017e00",
+      "body_end_exclusive": "0x10017efc",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001803c",
+      "target_va": "0x10018810",
+      "overlapped_body_address": "0x100178b8",
+      "body_start": "0x10017f00",
+      "body_end_exclusive": "0x10018093",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10018078",
+      "target_va": "0x10018830",
+      "overlapped_body_address": "0x100178b8",
+      "body_start": "0x10017f00",
+      "body_end_exclusive": "0x10018093",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10018090",
+      "target_va": "0x10018840",
+      "overlapped_body_address": "0x100178b8",
+      "body_start": "0x10017f00",
+      "body_end_exclusive": "0x10018093",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100180d0",
+      "target_va": "0x10018870",
+      "overlapped_body_address": "0x100179e8",
+      "body_start": "0x100180c0",
+      "body_end_exclusive": "0x100180f8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10018120",
+      "target_va": "0x100188c0",
+      "overlapped_body_address": "0x10017a33",
+      "body_start": "0x10018110",
+      "body_end_exclusive": "0x1001812e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100181dc",
+      "target_va": "0x10018930",
+      "overlapped_body_address": "0x10017a94",
+      "body_start": "0x10018180",
+      "body_end_exclusive": "0x100181f4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001826f",
+      "target_va": "0x100189c0",
+      "overlapped_body_address": "0x10017b16",
+      "body_start": "0x10018200",
+      "body_end_exclusive": "0x1001828a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10018278",
+      "target_va": "0x100189d0",
+      "overlapped_body_address": "0x10017b16",
+      "body_start": "0x10018200",
+      "body_end_exclusive": "0x1001828a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100182c1",
+      "target_va": "0x10018a30",
+      "overlapped_body_address": "0x10017bc3",
+      "body_start": "0x10018290",
+      "body_end_exclusive": "0x100182ff",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100189f5",
+      "target_va": "0x10019230",
+      "overlapped_body_address": "0x10018278",
+      "body_start": "0x100189d0",
+      "body_end_exclusive": "0x10018a2e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001929f",
+      "target_va": "0x10019d10",
+      "overlapped_body_address": "0x100189f5",
+      "body_start": "0x10019230",
+      "body_end_exclusive": "0x100192c1",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001935d",
+      "target_va": "0x10019d20",
+      "overlapped_body_address": "0x10018ad9",
+      "body_start": "0x10019330",
+      "body_end_exclusive": "0x100195ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019366",
+      "target_va": "0x10019d30",
+      "overlapped_body_address": "0x10018ad9",
+      "body_start": "0x10019330",
+      "body_end_exclusive": "0x100195ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019a63",
+      "target_va": "0x1001a370",
+      "overlapped_body_address": "0x1001909e",
+      "body_start": "0x10019a20",
+      "body_end_exclusive": "0x10019a8b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019b2f",
+      "target_va": "0x1001a440",
+      "overlapped_body_address": "0x100191a6",
+      "body_start": "0x10019b10",
+      "body_end_exclusive": "0x10019b33",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019c08",
+      "target_va": "0x1001a530",
+      "overlapped_body_address": "0x100191cd",
+      "body_start": "0x10019b40",
+      "body_end_exclusive": "0x10019d03",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019c10",
+      "target_va": "0x1001a540",
+      "overlapped_body_address": "0x100191cd",
+      "body_start": "0x10019b40",
+      "body_end_exclusive": "0x10019d03",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019c66",
+      "target_va": "0x1001a5a0",
+      "overlapped_body_address": "0x100191cd",
+      "body_start": "0x10019b40",
+      "body_end_exclusive": "0x10019d03",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019c86",
+      "target_va": "0x1001a5c0",
+      "overlapped_body_address": "0x100191cd",
+      "body_start": "0x10019b40",
+      "body_end_exclusive": "0x10019d03",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019e6d",
+      "target_va": "0x1001a7f0",
+      "overlapped_body_address": "0x10019366",
+      "body_start": "0x10019d30",
+      "body_end_exclusive": "0x1001a368",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019eb3",
+      "target_va": "0x1001a840",
+      "overlapped_body_address": "0x10019366",
+      "body_start": "0x10019d30",
+      "body_end_exclusive": "0x1001a368",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019f9a",
+      "target_va": "0x1001a950",
+      "overlapped_body_address": "0x10019366",
+      "body_start": "0x10019d30",
+      "body_end_exclusive": "0x1001a368",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10019fda",
+      "target_va": "0x1001a9c0",
+      "overlapped_body_address": "0x10019366",
+      "body_start": "0x10019d30",
+      "body_end_exclusive": "0x1001a368",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a351",
+      "target_va": "0x1001ad40",
+      "overlapped_body_address": "0x10019366",
+      "body_start": "0x10019d30",
+      "body_end_exclusive": "0x1001a368",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a3ba",
+      "target_va": "0x1001adb0",
+      "overlapped_body_address": "0x10019a63",
+      "body_start": "0x1001a370",
+      "body_end_exclusive": "0x1001a43c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a4b8",
+      "target_va": "0x1001aed0",
+      "overlapped_body_address": "0x10019b37",
+      "body_start": "0x1001a450",
+      "body_end_exclusive": "0x1001a52e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a570",
+      "target_va": "0x1001afb0",
+      "overlapped_body_address": "0x10019c10",
+      "body_start": "0x1001a540",
+      "body_end_exclusive": "0x1001a591",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a5c0",
+      "target_va": "0x1001b040",
+      "overlapped_body_address": "0x10019c86",
+      "body_start": "0x1001a5c0",
+      "body_end_exclusive": "0x1001a7f0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a600",
+      "target_va": "0x1001b0c0",
+      "overlapped_body_address": "0x10019c86",
+      "body_start": "0x1001a5c0",
+      "body_end_exclusive": "0x1001a7f0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a685",
+      "target_va": "0x1001b150",
+      "overlapped_body_address": "0x10019c86",
+      "body_start": "0x1001a5c0",
+      "body_end_exclusive": "0x1001a7f0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a765",
+      "target_va": "0x1001b250",
+      "overlapped_body_address": "0x10019c86",
+      "body_start": "0x1001a5c0",
+      "body_end_exclusive": "0x1001a7f0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a76f",
+      "target_va": "0x1001b260",
+      "overlapped_body_address": "0x10019c86",
+      "body_start": "0x1001a5c0",
+      "body_end_exclusive": "0x1001a7f0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a785",
+      "target_va": "0x1001b280",
+      "overlapped_body_address": "0x10019c86",
+      "body_start": "0x1001a5c0",
+      "body_end_exclusive": "0x1001a7f0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a8da",
+      "target_va": "0x1001b430",
+      "overlapped_body_address": "0x10019eb3",
+      "body_start": "0x1001a840",
+      "body_end_exclusive": "0x1001a946",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a900",
+      "target_va": "0x1001b450",
+      "overlapped_body_address": "0x10019eb3",
+      "body_start": "0x1001a840",
+      "body_end_exclusive": "0x1001a946",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001a995",
+      "target_va": "0x1001b520",
+      "overlapped_body_address": "0x10019f9a",
+      "body_start": "0x1001a950",
+      "body_end_exclusive": "0x1001a9b8",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001aa4f",
+      "target_va": "0x1001b640",
+      "overlapped_body_address": "0x10019fda",
+      "body_start": "0x1001a9c0",
+      "body_end_exclusive": "0x1001ad32",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001aaa2",
+      "target_va": "0x1001b6a0",
+      "overlapped_body_address": "0x10019fda",
+      "body_start": "0x1001a9c0",
+      "body_end_exclusive": "0x1001ad32",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001aaba",
+      "target_va": "0x1001b6c0",
+      "overlapped_body_address": "0x10019fda",
+      "body_start": "0x1001a9c0",
+      "body_end_exclusive": "0x1001ad32",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ac26",
+      "target_va": "0x1001b870",
+      "overlapped_body_address": "0x10019fda",
+      "body_start": "0x1001a9c0",
+      "body_end_exclusive": "0x1001ad32",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ac9b",
+      "target_va": "0x1001b900",
+      "overlapped_body_address": "0x10019fda",
+      "body_start": "0x1001a9c0",
+      "body_end_exclusive": "0x1001ad32",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ad68",
+      "target_va": "0x1001ba10",
+      "overlapped_body_address": "0x1001a351",
+      "body_start": "0x1001ad40",
+      "body_end_exclusive": "0x1001adaf",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ad83",
+      "target_va": "0x1001ba30",
+      "overlapped_body_address": "0x1001a351",
+      "body_start": "0x1001ad40",
+      "body_end_exclusive": "0x1001adaf",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ade6",
+      "target_va": "0x1001baa0",
+      "overlapped_body_address": "0x1001a3ba",
+      "body_start": "0x1001adb0",
+      "body_end_exclusive": "0x1001aec4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ae25",
+      "target_va": "0x1001bae0",
+      "overlapped_body_address": "0x1001a3ba",
+      "body_start": "0x1001adb0",
+      "body_end_exclusive": "0x1001aec4",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001af34",
+      "target_va": "0x1001bd00",
+      "overlapped_body_address": "0x1001a4b8",
+      "body_start": "0x1001aed0",
+      "body_end_exclusive": "0x1001afa2",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b0ea",
+      "target_va": "0x1001bf60",
+      "overlapped_body_address": "0x1001a600",
+      "body_start": "0x1001b0c0",
+      "body_end_exclusive": "0x1001b14f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b1a5",
+      "target_va": "0x1001c020",
+      "overlapped_body_address": "0x1001a685",
+      "body_start": "0x1001b150",
+      "body_end_exclusive": "0x1001b24c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b1d2",
+      "target_va": "0x1001c050",
+      "overlapped_body_address": "0x1001a685",
+      "body_start": "0x1001b150",
+      "body_end_exclusive": "0x1001b24c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b220",
+      "target_va": "0x1001c0a0",
+      "overlapped_body_address": "0x1001a685",
+      "body_start": "0x1001b150",
+      "body_end_exclusive": "0x1001b24c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b250",
+      "target_va": "0x1001c0d0",
+      "overlapped_body_address": "0x1001a765",
+      "body_start": "0x1001b250",
+      "body_end_exclusive": "0x1001b25a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b266",
+      "target_va": "0x1001c0f0",
+      "overlapped_body_address": "0x1001a76f",
+      "body_start": "0x1001b260",
+      "body_end_exclusive": "0x1001b275",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b27c",
+      "target_va": "0x1001c110",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b29b",
+      "target_va": "0x1001c130",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b2b2",
+      "target_va": "0x1001c150",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b2b8",
+      "target_va": "0x1001c160",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b318",
+      "target_va": "0x1001c1d0",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b380",
+      "target_va": "0x1001c1f0",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b3cf",
+      "target_va": "0x1001c240",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b3d8",
+      "target_va": "0x1001c2f0",
+      "overlapped_body_address": "0x1001a785",
+      "body_start": "0x1001b280",
+      "body_end_exclusive": "0x1001b423",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b4b0",
+      "target_va": "0x1001c390",
+      "overlapped_body_address": "0x1001a900",
+      "body_start": "0x1001b450",
+      "body_end_exclusive": "0x1001b513",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b4ff",
+      "target_va": "0x1001c3f0",
+      "overlapped_body_address": "0x1001a900",
+      "body_start": "0x1001b450",
+      "body_end_exclusive": "0x1001b513",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b508",
+      "target_va": "0x1001c400",
+      "overlapped_body_address": "0x1001a900",
+      "body_start": "0x1001b450",
+      "body_end_exclusive": "0x1001b513",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b5a0",
+      "target_va": "0x1001c4a0",
+      "overlapped_body_address": "0x1001a995",
+      "body_start": "0x1001b520",
+      "body_end_exclusive": "0x1001b63a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b5bd",
+      "target_va": "0x1001c4c0",
+      "overlapped_body_address": "0x1001a995",
+      "body_start": "0x1001b520",
+      "body_end_exclusive": "0x1001b63a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b65a",
+      "target_va": "0x1001c570",
+      "overlapped_body_address": "0x1001aa4f",
+      "body_start": "0x1001b640",
+      "body_end_exclusive": "0x1001b698",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b68c",
+      "target_va": "0x1001c5a0",
+      "overlapped_body_address": "0x1001aa4f",
+      "body_start": "0x1001b640",
+      "body_end_exclusive": "0x1001b698",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b693",
+      "target_va": "0x1001c5b0",
+      "overlapped_body_address": "0x1001aa4f",
+      "body_start": "0x1001b640",
+      "body_end_exclusive": "0x1001b698",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b6e7",
+      "target_va": "0x1001c610",
+      "overlapped_body_address": "0x1001aaba",
+      "body_start": "0x1001b6c0",
+      "body_end_exclusive": "0x1001b86c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b71d",
+      "target_va": "0x1001c650",
+      "overlapped_body_address": "0x1001aaba",
+      "body_start": "0x1001b6c0",
+      "body_end_exclusive": "0x1001b86c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b750",
+      "target_va": "0x1001c6a0",
+      "overlapped_body_address": "0x1001aaba",
+      "body_start": "0x1001b6c0",
+      "body_end_exclusive": "0x1001b86c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b827",
+      "target_va": "0x1001c780",
+      "overlapped_body_address": "0x1001aaba",
+      "body_start": "0x1001b6c0",
+      "body_end_exclusive": "0x1001b86c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b8c6",
+      "target_va": "0x1001c7f0",
+      "overlapped_body_address": "0x1001ac26",
+      "body_start": "0x1001b870",
+      "body_end_exclusive": "0x1001b8f3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b939",
+      "target_va": "0x1001c880",
+      "overlapped_body_address": "0x1001ac9b",
+      "body_start": "0x1001b900",
+      "body_end_exclusive": "0x1001ba07",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b965",
+      "target_va": "0x1001c8b0",
+      "overlapped_body_address": "0x1001ac9b",
+      "body_start": "0x1001b900",
+      "body_end_exclusive": "0x1001ba07",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b98c",
+      "target_va": "0x1001c8e0",
+      "overlapped_body_address": "0x1001ac9b",
+      "body_start": "0x1001b900",
+      "body_end_exclusive": "0x1001ba07",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001b9de",
+      "target_va": "0x1001c920",
+      "overlapped_body_address": "0x1001ac9b",
+      "body_start": "0x1001b900",
+      "body_end_exclusive": "0x1001ba07",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ba40",
+      "target_va": "0x1001c960",
+      "overlapped_body_address": "0x1001ad83",
+      "body_start": "0x1001ba30",
+      "body_end_exclusive": "0x1001ba9e",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001baeb",
+      "target_va": "0x1001ca20",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bb5f",
+      "target_va": "0x1001cac0",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bbe1",
+      "target_va": "0x1001cb60",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bbfd",
+      "target_va": "0x1001cc00",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bc3f",
+      "target_va": "0x1001cc50",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bc59",
+      "target_va": "0x1001cc70",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bc78",
+      "target_va": "0x1001cca0",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bc8b",
+      "target_va": "0x1001ccb0",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bc9e",
+      "target_va": "0x1001ccc0",
+      "overlapped_body_address": "0x1001ae25",
+      "body_start": "0x1001bae0",
+      "body_end_exclusive": "0x1001bcfd",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bdff",
+      "target_va": "0x1001cce0",
+      "overlapped_body_address": "0x1001af34",
+      "body_start": "0x1001bd00",
+      "body_end_exclusive": "0x1001bf53",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bec6",
+      "target_va": "0x1001cdd0",
+      "overlapped_body_address": "0x1001af34",
+      "body_start": "0x1001bd00",
+      "body_end_exclusive": "0x1001bf53",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001bee6",
+      "target_va": "0x1001cdf0",
+      "overlapped_body_address": "0x1001af34",
+      "body_start": "0x1001bd00",
+      "body_end_exclusive": "0x1001bf53",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c25c",
+      "target_va": "0x1001d270",
+      "overlapped_body_address": "0x1001b3cf",
+      "body_start": "0x1001c240",
+      "body_end_exclusive": "0x1001c2e3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c35f",
+      "target_va": "0x1001d290",
+      "overlapped_body_address": "0x1001b3d8",
+      "body_start": "0x1001c2f0",
+      "body_end_exclusive": "0x1001c38a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c420",
+      "target_va": "0x1001d380",
+      "overlapped_body_address": "0x1001b508",
+      "body_start": "0x1001c400",
+      "body_end_exclusive": "0x1001c49a",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c50d",
+      "target_va": "0x1001d4b0",
+      "overlapped_body_address": "0x1001b5bd",
+      "body_start": "0x1001c4c0",
+      "body_end_exclusive": "0x1001c566",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c595",
+      "target_va": "0x1001d550",
+      "overlapped_body_address": "0x1001b65a",
+      "body_start": "0x1001c570",
+      "body_end_exclusive": "0x1001c59d",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c5b8",
+      "target_va": "0x1001d580",
+      "overlapped_body_address": "0x1001b693",
+      "body_start": "0x1001c5b0",
+      "body_end_exclusive": "0x1001c606",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c5f0",
+      "target_va": "0x1001d5b0",
+      "overlapped_body_address": "0x1001b693",
+      "body_start": "0x1001c5b0",
+      "body_end_exclusive": "0x1001c606",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c60e",
+      "target_va": "0x1001d5d0",
+      "overlapped_body_address": "0x1001b6e7",
+      "body_start": "0x1001c610",
+      "body_end_exclusive": "0x1001c648",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c9a5",
+      "target_va": "0x1001d7a0",
+      "overlapped_body_address": "0x1001ba40",
+      "body_start": "0x1001c960",
+      "body_end_exclusive": "0x1001ca17",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c9bc",
+      "target_va": "0x1001d7c0",
+      "overlapped_body_address": "0x1001ba40",
+      "body_start": "0x1001c960",
+      "body_end_exclusive": "0x1001ca17",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001c9d5",
+      "target_va": "0x1001d7e0",
+      "overlapped_body_address": "0x1001ba40",
+      "body_start": "0x1001c960",
+      "body_end_exclusive": "0x1001ca17",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ca3b",
+      "target_va": "0x1001d850",
+      "overlapped_body_address": "0x1001baeb",
+      "body_start": "0x1001ca20",
+      "body_end_exclusive": "0x1001cabe",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cb20",
+      "target_va": "0x1001d880",
+      "overlapped_body_address": "0x1001bb5f",
+      "body_start": "0x1001cac0",
+      "body_end_exclusive": "0x1001cb55",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cb37",
+      "target_va": "0x1001d8b0",
+      "overlapped_body_address": "0x1001bb5f",
+      "body_start": "0x1001cac0",
+      "body_end_exclusive": "0x1001cb55",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cb80",
+      "target_va": "0x1001d8f0",
+      "overlapped_body_address": "0x1001bbe1",
+      "body_start": "0x1001cb60",
+      "body_end_exclusive": "0x1001cbb7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cb9e",
+      "target_va": "0x1001d910",
+      "overlapped_body_address": "0x1001bbe1",
+      "body_start": "0x1001cb60",
+      "body_end_exclusive": "0x1001cbb7",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cd37",
+      "target_va": "0x1001daa0",
+      "overlapped_body_address": "0x1001bdff",
+      "body_start": "0x1001cce0",
+      "body_end_exclusive": "0x1001cdcf",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cd5e",
+      "target_va": "0x1001dad0",
+      "overlapped_body_address": "0x1001bdff",
+      "body_start": "0x1001cce0",
+      "body_end_exclusive": "0x1001cdcf",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cdbd",
+      "target_va": "0x1001db60",
+      "overlapped_body_address": "0x1001bdff",
+      "body_start": "0x1001cce0",
+      "body_end_exclusive": "0x1001cdcf",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ce0c",
+      "target_va": "0x1001dbb0",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cece",
+      "target_va": "0x1001dc30",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cf2d",
+      "target_va": "0x1001dc50",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cf82",
+      "target_va": "0x1001dc80",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001cfab",
+      "target_va": "0x10037493",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d026",
+      "target_va": "0x1001dd40",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d057",
+      "target_va": "0x1001dd80",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d06f",
+      "target_va": "0x1001dda0",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d195",
+      "target_va": "0x1001df40",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d20b",
+      "target_va": "0x1001dfd0",
+      "overlapped_body_address": "0x1001bee6",
+      "body_start": "0x1001cdf0",
+      "body_end_exclusive": "0x1001d268",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d38a",
+      "target_va": "0x1001e190",
+      "overlapped_body_address": "0x1001c420",
+      "body_start": "0x1001d380",
+      "body_end_exclusive": "0x1001d4ad",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d41c",
+      "target_va": "0x1001e1f0",
+      "overlapped_body_address": "0x1001c420",
+      "body_start": "0x1001d380",
+      "body_end_exclusive": "0x1001d4ad",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d48a",
+      "target_va": "0x1001e260",
+      "overlapped_body_address": "0x1001c420",
+      "body_start": "0x1001d380",
+      "body_end_exclusive": "0x1001d4ad",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d591",
+      "target_va": "0x1001e390",
+      "overlapped_body_address": "0x1001c5b8",
+      "body_start": "0x1001d580",
+      "body_end_exclusive": "0x1001d5ab",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d906",
+      "target_va": "0x1001e7a0",
+      "overlapped_body_address": "0x1001cb80",
+      "body_start": "0x1001d8f0",
+      "body_end_exclusive": "0x1001d908",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001d923",
+      "target_va": "0x1001e7c0",
+      "overlapped_body_address": "0x1001cb9e",
+      "body_start": "0x1001d910",
+      "body_end_exclusive": "0x1001da9b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001da10",
+      "target_va": "0x1001e8a0",
+      "overlapped_body_address": "0x1001cb9e",
+      "body_start": "0x1001d910",
+      "body_end_exclusive": "0x1001da9b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001da5c",
+      "target_va": "0x1001e8d0",
+      "overlapped_body_address": "0x1001cb9e",
+      "body_start": "0x1001d910",
+      "body_end_exclusive": "0x1001da9b",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001db04",
+      "target_va": "0x1001e9b0",
+      "overlapped_body_address": "0x1001cd5e",
+      "body_start": "0x1001dad0",
+      "body_end_exclusive": "0x1001db58",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001dbac",
+      "target_va": "0x1001ea90",
+      "overlapped_body_address": "0x1001cdbd",
+      "body_start": "0x1001db60",
+      "body_end_exclusive": "0x1001dbb0",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001dbac",
+      "target_va": "0x1001ea90",
+      "overlapped_body_address": "0x1001ce0c",
+      "body_start": "0x1001dbb0",
+      "body_end_exclusive": "0x1001dc23",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001dc5f",
+      "target_va": "0x1001eb70",
+      "overlapped_body_address": "0x1001cf2d",
+      "body_start": "0x1001dc50",
+      "body_end_exclusive": "0x1001dc78",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001dda0",
+      "target_va": "0x1001ed20",
+      "overlapped_body_address": "0x1001d06f",
+      "body_start": "0x1001dda0",
+      "body_end_exclusive": "0x1001de33",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001e03d",
+      "target_va": "0x1001f000",
+      "overlapped_body_address": "0x1001d20b",
+      "body_start": "0x1001dfd0",
+      "body_end_exclusive": "0x1001e184",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001e073",
+      "target_va": "0x1001f040",
+      "overlapped_body_address": "0x1001d20b",
+      "body_start": "0x1001dfd0",
+      "body_end_exclusive": "0x1001e184",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001e085",
+      "target_va": "0x1001f050",
+      "overlapped_body_address": "0x1001d20b",
+      "body_start": "0x1001dfd0",
+      "body_end_exclusive": "0x1001e184",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001e5d6",
+      "target_va": "0x1001f5c0",
+      "overlapped_body_address": "0x1001d591",
+      "body_start": "0x1001e390",
+      "body_end_exclusive": "0x1001e79f",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001eb27",
+      "target_va": "0x1001fb40",
+      "overlapped_body_address": "0x1001dbac",
+      "body_start": "0x1001ea90",
+      "body_end_exclusive": "0x1001eb69",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001f203",
+      "target_va": "0x10020610",
+      "overlapped_body_address": "0x1001e085",
+      "body_start": "0x1001f050",
+      "body_end_exclusive": "0x1001f5b3",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001fafb",
+      "target_va": "0x10021580",
+      "overlapped_body_address": "0x1001e5d6",
+      "body_start": "0x1001f5c0",
+      "body_end_exclusive": "0x1001fb36",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001fb89",
+      "target_va": "0x10021620",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001fc29",
+      "target_va": "0x100216c0",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1001ff3b",
+      "target_va": "0x100219e0",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020217",
+      "target_va": "0x10021d20",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1002023a",
+      "target_va": "0x10021d50",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1002041e",
+      "target_va": "0x10022080",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1002044b",
+      "target_va": "0x100220b0",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1002044e",
+      "target_va": "0x100220c0",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1002045e",
+      "target_va": "0x100220d0",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1002046f",
+      "target_va": "0x100220f0",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x1002049a",
+      "target_va": "0x10022120",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100204f2",
+      "target_va": "0x10022180",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020564",
+      "target_va": "0x100221b0",
+      "overlapped_body_address": "0x1001eb27",
+      "body_start": "0x1001fb40",
+      "body_end_exclusive": "0x100205ac",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020748",
+      "target_va": "0x10022330",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020775",
+      "target_va": "0x10022370",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020840",
+      "target_va": "0x10022470",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020870",
+      "target_va": "0x10022480",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020a70",
+      "target_va": "0x10022500",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020a80",
+      "target_va": "0x10022510",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020a90",
+      "target_va": "0x10022520",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020af0",
+      "target_va": "0x10022590",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020b50",
+      "target_va": "0x10022600",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020bb0",
+      "target_va": "0x10022670",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020c10",
+      "target_va": "0x100226e0",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020c70",
+      "target_va": "0x10022750",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020cd0",
+      "target_va": "0x100227c0",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020d30",
+      "target_va": "0x10022830",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020d90",
+      "target_va": "0x100228a0",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020df0",
+      "target_va": "0x10022910",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020e50",
+      "target_va": "0x10022980",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020eb0",
+      "target_va": "0x100229f0",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020f10",
+      "target_va": "0x10022a60",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020f70",
+      "target_va": "0x10022ad0",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10020fd0",
+      "target_va": "0x10022b40",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10021030",
+      "target_va": "0x10022bb0",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10021090",
+      "target_va": "0x10022c20",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100210f0",
+      "target_va": "0x10022c90",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10021150",
+      "target_va": "0x10022d00",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x100211b0",
+      "target_va": "0x10022d70",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10021210",
+      "target_va": "0x10022de0",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    },
+    {
+      "patch_address": "0x10021267",
+      "target_va": "0x10022e50",
+      "overlapped_body_address": "0x1001f203",
+      "body_start": "0x10020610",
+      "body_end_exclusive": "0x1002152c",
+      "same_candidate": false
+    }
+  ],
+  "limitations": [
+    "COFF COMDAT ranges are reconstructed from the public entry symbol offset and section size.",
+    "This does not inventory support-library code or supplemental hook-shim ranges; collision counts are a lower bound.",
+    "A next-entry fit report is not a proof of original function extent.",
+    "No trampoline bytes are emitted and no PE image is modified."
+  ],
+  "inputs": {
+    "trampoline_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\entry-trampoline-feasibility-current-source-live-20260928-3-current-map.json",
+    "trampoline_report_sha256": "113526aa4f58931be2aeae648c733fbec93155b70aa305f43e9ed7bbecee3b8f",
+    "fit_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\original-entry-slot-fit-current-source-live-20260928-3.json",
+    "fit_report_sha256": "6a90a1145800ab6ce148b736a6d74256245f4535aab477de5689f0f6fb7dfaa6"
+  }
+}

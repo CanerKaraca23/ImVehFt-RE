@@ -1,15 +1,13 @@
 #include <cstdint>
 
-extern std::uint32_t extraout_ECX;
-
-extern "C" void __stdcall FUN_100101c2(char* message);
+extern "C" [[noreturn]] void __stdcall FUN_100101c2(char* message);
 extern "C" int __fastcall FUN_1000d400(std::uint32_t count);
 extern void __cdecl FID_conflict__memcpy(
     void* destination,
     const void* source,
     std::uint32_t size
 );
-extern void __cdecl FUN_10010756(void* pointer);
+extern "C" void __cdecl FUN_10010756(void* pointer);
 
 void __stdcall FUN_1000d380(std::uint32_t param_1)
 {
@@ -26,7 +24,6 @@ void __stdcall FUN_1000d380(std::uint32_t param_1)
     if (0x3fffffffU < param_1)
     {
         FUN_100101c2(const_cast<char*>("vector<T> too long"));
-        uVar3 = extraout_ECX;
     }
 
     if (static_cast<std::uint32_t>(

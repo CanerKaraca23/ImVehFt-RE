@@ -1,0 +1,855 @@
+{
+  "scope": "Static interval-overlap check of the callback helper spans against every modified span in the conservative 705-entry plan; not a PE patch or execution test.",
+  "plan_entries": 705,
+  "candidate_modified_spans": 705,
+  "callback_helpers": 100,
+  "helper_bytes": 900,
+  "helper_counts_by_size": {
+    "5": 70,
+    "7": 25,
+    "75": 5
+  },
+  "helper_helper_overlaps": [],
+  "helper_candidate_overlaps": [],
+  "original_text_highlow_intersections": [
+    {
+      "helper": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAA0",
+      "helper_start": "0x1000caa0",
+      "site": "0x1000caa3",
+      "offset": 3,
+      "site_inside_helper": true
+    },
+    {
+      "helper": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAF0",
+      "helper_start": "0x1000caf0",
+      "site": "0x1000caf3",
+      "offset": 3,
+      "site_inside_helper": true
+    },
+    {
+      "helper": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB40",
+      "helper_start": "0x1000cb40",
+      "site": "0x1000cb43",
+      "offset": 3,
+      "site_inside_helper": true
+    },
+    {
+      "helper": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB90",
+      "helper_start": "0x1000cb90",
+      "site": "0x1000cb93",
+      "offset": 3,
+      "site_inside_helper": true
+    },
+    {
+      "helper": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CBE0",
+      "helper_start": "0x1000cbe0",
+      "site": "0x1000cbe3",
+      "offset": 3,
+      "site_inside_helper": true
+    }
+  ],
+  "original_text_highlow_intersections_preserved_in_place": true,
+  "pass": true,
+  "helpers": [
+    {
+      "address": 268486208,
+      "size": 5,
+      "name": "LAB_1000C640",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c640",
+      "end_exclusive": "0x1000c645"
+    },
+    {
+      "address": 268486224,
+      "size": 5,
+      "name": "LAB_1000C650",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c650",
+      "end_exclusive": "0x1000c655"
+    },
+    {
+      "address": 268486240,
+      "size": 5,
+      "name": "LAB_1000C660",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c660",
+      "end_exclusive": "0x1000c665"
+    },
+    {
+      "address": 268486256,
+      "size": 5,
+      "name": "LAB_1000C670",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c670",
+      "end_exclusive": "0x1000c675"
+    },
+    {
+      "address": 268486272,
+      "size": 5,
+      "name": "LAB_1000C680",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c680",
+      "end_exclusive": "0x1000c685"
+    },
+    {
+      "address": 268486288,
+      "size": 5,
+      "name": "LAB_1000C690",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c690",
+      "end_exclusive": "0x1000c695"
+    },
+    {
+      "address": 268486304,
+      "size": 5,
+      "name": "LAB_1000C6A0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c6a0",
+      "end_exclusive": "0x1000c6a5"
+    },
+    {
+      "address": 268486320,
+      "size": 5,
+      "name": "LAB_1000C6B0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c6b0",
+      "end_exclusive": "0x1000c6b5"
+    },
+    {
+      "address": 268486336,
+      "size": 5,
+      "name": "LAB_1000C6C0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c6c0",
+      "end_exclusive": "0x1000c6c5"
+    },
+    {
+      "address": 268486352,
+      "size": 5,
+      "name": "LAB_1000C6D0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c6d0",
+      "end_exclusive": "0x1000c6d5"
+    },
+    {
+      "address": 268486368,
+      "size": 5,
+      "name": "LAB_1000C6E0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c6e0",
+      "end_exclusive": "0x1000c6e5"
+    },
+    {
+      "address": 268486384,
+      "size": 5,
+      "name": "LAB_1000C6F0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c6f0",
+      "end_exclusive": "0x1000c6f5"
+    },
+    {
+      "address": 268486400,
+      "size": 5,
+      "name": "LAB_1000C700",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c700",
+      "end_exclusive": "0x1000c705"
+    },
+    {
+      "address": 268486416,
+      "size": 5,
+      "name": "LAB_1000C710",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c710",
+      "end_exclusive": "0x1000c715"
+    },
+    {
+      "address": 268486432,
+      "size": 5,
+      "name": "LAB_1000C720",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c720",
+      "end_exclusive": "0x1000c725"
+    },
+    {
+      "address": 268486448,
+      "size": 5,
+      "name": "LAB_1000C730",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c730",
+      "end_exclusive": "0x1000c735"
+    },
+    {
+      "address": 268486464,
+      "size": 5,
+      "name": "LAB_1000C740",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c740",
+      "end_exclusive": "0x1000c745"
+    },
+    {
+      "address": 268486480,
+      "size": 5,
+      "name": "LAB_1000C750",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c750",
+      "end_exclusive": "0x1000c755"
+    },
+    {
+      "address": 268486496,
+      "size": 5,
+      "name": "LAB_1000C760",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c760",
+      "end_exclusive": "0x1000c765"
+    },
+    {
+      "address": 268486512,
+      "size": 5,
+      "name": "LAB_1000C770",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c770",
+      "end_exclusive": "0x1000c775"
+    },
+    {
+      "address": 268486528,
+      "size": 5,
+      "name": "LAB_1000C780",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c780",
+      "end_exclusive": "0x1000c785"
+    },
+    {
+      "address": 268486544,
+      "size": 5,
+      "name": "LAB_1000C790",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c790",
+      "end_exclusive": "0x1000c795"
+    },
+    {
+      "address": 268486560,
+      "size": 5,
+      "name": "LAB_1000C7A0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c7a0",
+      "end_exclusive": "0x1000c7a5"
+    },
+    {
+      "address": 268486576,
+      "size": 5,
+      "name": "LAB_1000C7B0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c7b0",
+      "end_exclusive": "0x1000c7b5"
+    },
+    {
+      "address": 268486592,
+      "size": 5,
+      "name": "LAB_1000C7C0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c7c0",
+      "end_exclusive": "0x1000c7c5"
+    },
+    {
+      "address": 268486608,
+      "size": 5,
+      "name": "LAB_1000C7D0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c7d0",
+      "end_exclusive": "0x1000c7d5"
+    },
+    {
+      "address": 268486624,
+      "size": 5,
+      "name": "LAB_1000C7E0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c7e0",
+      "end_exclusive": "0x1000c7e5"
+    },
+    {
+      "address": 268486640,
+      "size": 5,
+      "name": "LAB_1000C7F0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c7f0",
+      "end_exclusive": "0x1000c7f5"
+    },
+    {
+      "address": 268486656,
+      "size": 5,
+      "name": "LAB_1000C800",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c800",
+      "end_exclusive": "0x1000c805"
+    },
+    {
+      "address": 268486672,
+      "size": 5,
+      "name": "LAB_1000C810",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c810",
+      "end_exclusive": "0x1000c815"
+    },
+    {
+      "address": 268486688,
+      "size": 5,
+      "name": "LAB_1000C820",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c820",
+      "end_exclusive": "0x1000c825"
+    },
+    {
+      "address": 268486704,
+      "size": 5,
+      "name": "LAB_1000C830",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c830",
+      "end_exclusive": "0x1000c835"
+    },
+    {
+      "address": 268486720,
+      "size": 5,
+      "name": "LAB_1000C840",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c840",
+      "end_exclusive": "0x1000c845"
+    },
+    {
+      "address": 268486736,
+      "size": 5,
+      "name": "LAB_1000C850",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c850",
+      "end_exclusive": "0x1000c855"
+    },
+    {
+      "address": 268486752,
+      "size": 5,
+      "name": "LAB_1000C860",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c860",
+      "end_exclusive": "0x1000c865"
+    },
+    {
+      "address": 268486768,
+      "size": 5,
+      "name": "LAB_1000C870",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c870",
+      "end_exclusive": "0x1000c875"
+    },
+    {
+      "address": 268486784,
+      "size": 5,
+      "name": "LAB_1000C880",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c880",
+      "end_exclusive": "0x1000c885"
+    },
+    {
+      "address": 268486800,
+      "size": 5,
+      "name": "LAB_1000C890",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c890",
+      "end_exclusive": "0x1000c895"
+    },
+    {
+      "address": 268486816,
+      "size": 5,
+      "name": "LAB_1000C8A0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c8a0",
+      "end_exclusive": "0x1000c8a5"
+    },
+    {
+      "address": 268486832,
+      "size": 5,
+      "name": "LAB_1000C8B0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c8b0",
+      "end_exclusive": "0x1000c8b5"
+    },
+    {
+      "address": 268486848,
+      "size": 5,
+      "name": "LAB_1000C8C0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c8c0",
+      "end_exclusive": "0x1000c8c5"
+    },
+    {
+      "address": 268486864,
+      "size": 5,
+      "name": "LAB_1000C8D0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c8d0",
+      "end_exclusive": "0x1000c8d5"
+    },
+    {
+      "address": 268486880,
+      "size": 5,
+      "name": "LAB_1000C8E0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c8e0",
+      "end_exclusive": "0x1000c8e5"
+    },
+    {
+      "address": 268486896,
+      "size": 5,
+      "name": "LAB_1000C8F0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c8f0",
+      "end_exclusive": "0x1000c8f5"
+    },
+    {
+      "address": 268486912,
+      "size": 5,
+      "name": "LAB_1000C900",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c900",
+      "end_exclusive": "0x1000c905"
+    },
+    {
+      "address": 268486928,
+      "size": 5,
+      "name": "LAB_1000C910",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c910",
+      "end_exclusive": "0x1000c915"
+    },
+    {
+      "address": 268486944,
+      "size": 5,
+      "name": "LAB_1000C920",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c920",
+      "end_exclusive": "0x1000c925"
+    },
+    {
+      "address": 268486960,
+      "size": 5,
+      "name": "LAB_1000C930",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c930",
+      "end_exclusive": "0x1000c935"
+    },
+    {
+      "address": 268486976,
+      "size": 5,
+      "name": "LAB_1000C940",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c940",
+      "end_exclusive": "0x1000c945"
+    },
+    {
+      "address": 268486992,
+      "size": 5,
+      "name": "LAB_1000C950",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c950",
+      "end_exclusive": "0x1000c955"
+    },
+    {
+      "address": 268487008,
+      "size": 5,
+      "name": "LAB_1000C960",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c960",
+      "end_exclusive": "0x1000c965"
+    },
+    {
+      "address": 268487024,
+      "size": 5,
+      "name": "LAB_1000C970",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c970",
+      "end_exclusive": "0x1000c975"
+    },
+    {
+      "address": 268487040,
+      "size": 5,
+      "name": "LAB_1000C980",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c980",
+      "end_exclusive": "0x1000c985"
+    },
+    {
+      "address": 268487056,
+      "size": 5,
+      "name": "LAB_1000C990",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c990",
+      "end_exclusive": "0x1000c995"
+    },
+    {
+      "address": 268487072,
+      "size": 5,
+      "name": "LAB_1000C9A0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c9a0",
+      "end_exclusive": "0x1000c9a5"
+    },
+    {
+      "address": 268487088,
+      "size": 5,
+      "name": "LAB_1000C9B0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c9b0",
+      "end_exclusive": "0x1000c9b5"
+    },
+    {
+      "address": 268487104,
+      "size": 5,
+      "name": "LAB_1000C9C0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c9c0",
+      "end_exclusive": "0x1000c9c5"
+    },
+    {
+      "address": 268487120,
+      "size": 5,
+      "name": "LAB_1000C9D0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c9d0",
+      "end_exclusive": "0x1000c9d5"
+    },
+    {
+      "address": 268487136,
+      "size": 5,
+      "name": "LAB_1000C9E0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c9e0",
+      "end_exclusive": "0x1000c9e5"
+    },
+    {
+      "address": 268487152,
+      "size": 5,
+      "name": "LAB_1000C9F0",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000c9f0",
+      "end_exclusive": "0x1000c9f5"
+    },
+    {
+      "address": 268487168,
+      "size": 5,
+      "name": "LAB_1000CA00",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca00",
+      "end_exclusive": "0x1000ca05"
+    },
+    {
+      "address": 268487184,
+      "size": 5,
+      "name": "LAB_1000CA10",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca10",
+      "end_exclusive": "0x1000ca15"
+    },
+    {
+      "address": 268487200,
+      "size": 5,
+      "name": "LAB_1000CA20",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca20",
+      "end_exclusive": "0x1000ca25"
+    },
+    {
+      "address": 268487216,
+      "size": 5,
+      "name": "LAB_1000CA30",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca30",
+      "end_exclusive": "0x1000ca35"
+    },
+    {
+      "address": 268487232,
+      "size": 5,
+      "name": "LAB_1000CA40",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca40",
+      "end_exclusive": "0x1000ca45"
+    },
+    {
+      "address": 268487248,
+      "size": 5,
+      "name": "LAB_1000CA50",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca50",
+      "end_exclusive": "0x1000ca55"
+    },
+    {
+      "address": 268487264,
+      "size": 5,
+      "name": "LAB_1000CA60",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca60",
+      "end_exclusive": "0x1000ca65"
+    },
+    {
+      "address": 268487280,
+      "size": 5,
+      "name": "LAB_1000CA70",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca70",
+      "end_exclusive": "0x1000ca75"
+    },
+    {
+      "address": 268487296,
+      "size": 5,
+      "name": "LAB_1000CA80",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca80",
+      "end_exclusive": "0x1000ca85"
+    },
+    {
+      "address": 268487312,
+      "size": 5,
+      "name": "LAB_1000CA90",
+      "evidence": "audit/candidate-callback-jmp-thunks-v2-2026-09-27.csv",
+      "start": "0x1000ca90",
+      "end_exclusive": "0x1000ca95"
+    },
+    {
+      "address": 268487728,
+      "size": 7,
+      "name": "_LAB_1000cc30",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cc30",
+      "end_exclusive": "0x1000cc37"
+    },
+    {
+      "address": 268487744,
+      "size": 7,
+      "name": "_LAB_1000cc40",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cc40",
+      "end_exclusive": "0x1000cc47"
+    },
+    {
+      "address": 268487760,
+      "size": 7,
+      "name": "_LAB_1000cc50",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cc50",
+      "end_exclusive": "0x1000cc57"
+    },
+    {
+      "address": 268487776,
+      "size": 7,
+      "name": "_LAB_1000cc60",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cc60",
+      "end_exclusive": "0x1000cc67"
+    },
+    {
+      "address": 268487792,
+      "size": 7,
+      "name": "_LAB_1000cc70",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cc70",
+      "end_exclusive": "0x1000cc77"
+    },
+    {
+      "address": 268487808,
+      "size": 7,
+      "name": "_LAB_1000cc80",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cc80",
+      "end_exclusive": "0x1000cc87"
+    },
+    {
+      "address": 268487824,
+      "size": 7,
+      "name": "_LAB_1000cc90",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cc90",
+      "end_exclusive": "0x1000cc97"
+    },
+    {
+      "address": 268487840,
+      "size": 7,
+      "name": "_LAB_1000cca0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cca0",
+      "end_exclusive": "0x1000cca7"
+    },
+    {
+      "address": 268487856,
+      "size": 7,
+      "name": "_LAB_1000ccb0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000ccb0",
+      "end_exclusive": "0x1000ccb7"
+    },
+    {
+      "address": 268487872,
+      "size": 7,
+      "name": "_LAB_1000ccc0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000ccc0",
+      "end_exclusive": "0x1000ccc7"
+    },
+    {
+      "address": 268487888,
+      "size": 7,
+      "name": "_LAB_1000ccd0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000ccd0",
+      "end_exclusive": "0x1000ccd7"
+    },
+    {
+      "address": 268487904,
+      "size": 7,
+      "name": "_LAB_1000cce0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cce0",
+      "end_exclusive": "0x1000cce7"
+    },
+    {
+      "address": 268487920,
+      "size": 7,
+      "name": "_LAB_1000ccf0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000ccf0",
+      "end_exclusive": "0x1000ccf7"
+    },
+    {
+      "address": 268487936,
+      "size": 7,
+      "name": "_LAB_1000cd00",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd00",
+      "end_exclusive": "0x1000cd07"
+    },
+    {
+      "address": 268487952,
+      "size": 7,
+      "name": "_LAB_1000cd10",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd10",
+      "end_exclusive": "0x1000cd17"
+    },
+    {
+      "address": 268487968,
+      "size": 7,
+      "name": "_LAB_1000cd20",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd20",
+      "end_exclusive": "0x1000cd27"
+    },
+    {
+      "address": 268487984,
+      "size": 7,
+      "name": "_LAB_1000cd30",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd30",
+      "end_exclusive": "0x1000cd37"
+    },
+    {
+      "address": 268488000,
+      "size": 7,
+      "name": "_LAB_1000cd40",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd40",
+      "end_exclusive": "0x1000cd47"
+    },
+    {
+      "address": 268488016,
+      "size": 7,
+      "name": "_LAB_1000cd50",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd50",
+      "end_exclusive": "0x1000cd57"
+    },
+    {
+      "address": 268488032,
+      "size": 7,
+      "name": "_LAB_1000cd60",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd60",
+      "end_exclusive": "0x1000cd67"
+    },
+    {
+      "address": 268488048,
+      "size": 7,
+      "name": "_LAB_1000cd70",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd70",
+      "end_exclusive": "0x1000cd77"
+    },
+    {
+      "address": 268488064,
+      "size": 7,
+      "name": "_LAB_1000cd80",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd80",
+      "end_exclusive": "0x1000cd87"
+    },
+    {
+      "address": 268488080,
+      "size": 7,
+      "name": "_LAB_1000cd90",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cd90",
+      "end_exclusive": "0x1000cd97"
+    },
+    {
+      "address": 268488096,
+      "size": 7,
+      "name": "_LAB_1000cda0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cda0",
+      "end_exclusive": "0x1000cda7"
+    },
+    {
+      "address": 268488112,
+      "size": 7,
+      "name": "_LAB_1000cdb0",
+      "evidence": "scripts/verify-callback-entry-thunks.py",
+      "start": "0x1000cdb0",
+      "end_exclusive": "0x1000cdb7"
+    },
+    {
+      "address": 268487328,
+      "size": 75,
+      "name": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAA0",
+      "evidence": "scripts/reloc_local_code_stubs.py: dynamic dispatcher bodies",
+      "start": "0x1000caa0",
+      "end_exclusive": "0x1000caeb"
+    },
+    {
+      "address": 268487408,
+      "size": 75,
+      "name": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAF0",
+      "evidence": "scripts/reloc_local_code_stubs.py: dynamic dispatcher bodies",
+      "start": "0x1000caf0",
+      "end_exclusive": "0x1000cb3b"
+    },
+    {
+      "address": 268487488,
+      "size": 75,
+      "name": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB40",
+      "evidence": "scripts/reloc_local_code_stubs.py: dynamic dispatcher bodies",
+      "start": "0x1000cb40",
+      "end_exclusive": "0x1000cb8b"
+    },
+    {
+      "address": 268487568,
+      "size": 75,
+      "name": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB90",
+      "evidence": "scripts/reloc_local_code_stubs.py: dynamic dispatcher bodies",
+      "start": "0x1000cb90",
+      "end_exclusive": "0x1000cbdb"
+    },
+    {
+      "address": 268487648,
+      "size": 75,
+      "name": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CBE0",
+      "evidence": "scripts/reloc_local_code_stubs.py: dynamic dispatcher bodies",
+      "start": "0x1000cbe0",
+      "end_exclusive": "0x1000cc2b"
+    }
+  ]
+}

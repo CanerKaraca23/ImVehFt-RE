@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 #include <windows.h>
 
@@ -32,7 +33,7 @@ extern "C" LONG* __cdecl ___removelocaleref(LONG* param_1)
             if (reinterpret_cast<void*>(
                     static_cast<std::uintptr_t>(entry[-2])) !=
                     reinterpret_cast<void*>(
-                        static_cast<std::uintptr_t>(0x100299C4u)) &&
+                        static_cast<std::uintptr_t>(IVF_IMAGE_ADDRESS_100299C4)) &&
                 entry[0] != 0)
             {
                 InterlockedDecrement(reinterpret_cast<LONG*>(

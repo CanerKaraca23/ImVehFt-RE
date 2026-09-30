@@ -1,0 +1,63 @@
+address,section,exact_function_entry,source,line,literal,source_line
+0x10016740,.text,_memset,src/functions/100042c0.cpp,67,0x10016740,0x10016740)(
+0x10003FE0,.text,FUN_10003fe0,src/functions/10006790.cpp,36,0x10003fe0,"0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 1);"
+0x10003FB0,.text,FUN_10003fb0,src/functions/10006790.cpp,39,0x10003fb0,"0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 1);"
+0x10003FE0,.text,FUN_10003fe0,src/functions/10006790.cpp,49,0x10003fe0,"0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 0);"
+0x10003FB0,.text,FUN_10003fb0,src/functions/10006790.cpp,52,0x10003fb0,"0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 0);"
+0x100073F0,.text,FUN_100073f0,src/functions/10006be0.cpp,442,0x100073f0,0x100073f0)(
+0x100102C3,.text,exception,src/functions/1000d400.cpp,33,0x100102c3,"static_cast<std::uintptr_t>(0x100102c3))(local_14, &local_8);"
+0x10010351,.text,exception,src/functions/100101a5.cpp,12,0x10010351,"static_cast<std::uintptr_t>(0x10010351))(this, param_1);"
+0x100102C3,.text,exception,src/functions/100101c2.cpp,16,0x100102c3,"reinterpret_cast<ExceptionCtorFn>(static_cast<std::uintptr_t>(0x100102c3))(local_10, &param_1);"
+0x10010351,.text,exception,src/functions/100101f2.cpp,12,0x10010351,"static_cast<std::uintptr_t>(0x10010351))(this, param_1);"
+0x100116DB,.text,_free,src/functions/100102a5.cpp,20,0x100116db,reinterpret_cast<FreeFn>(static_cast<std::uintptr_t>(0x100116db))(this->what);
+0x10010265,.text,_Copy_str,src/functions/100102c3.cpp,23,0x10010265,reinterpret_cast<CopyStrFn>(static_cast<std::uintptr_t>(0x10010265))(
+0x100102A5,.text,_Tidy,src/functions/100102ea.cpp,21,0x100102a5,reinterpret_cast<TidyFn>(static_cast<std::uintptr_t>(0x100102a5))(this);
+0x10010265,.text,_Copy_str,src/functions/100102ea.cpp,30,0x10010265,reinterpret_cast<CopyStrFn>(static_cast<std::uintptr_t>(0x10010265))(
+0x100102A5,.text,_Tidy,src/functions/1001031f.cpp,10,0x100102a5,reinterpret_cast<TidyFn>(static_cast<std::uintptr_t>(0x100102a5))(param_1);
+0x100102A5,.text,_Tidy,src/functions/1001032a.cpp,14,0x100102a5,reinterpret_cast<TidyFn>(static_cast<std::uintptr_t>(0x100102a5))(this_);
+0x100102EA,.text,operator=,src/functions/10010351.cpp,24,0x100102ea,"reinterpret_cast<AssignFn>(static_cast<std::uintptr_t>(0x100102ea))(this, other);"
+0x100119F1,.text,__input_l,src/functions/100103e4.cpp,24,0x100119f1,"reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x100119f1U)),"
+0x10010684,.text,,src/functions/10010678.cpp,31,0x10010684,uStack_c = 0x10010684;
+0x10013AD2,.text,_Type_info_dtor,src/functions/10010761.cpp,14,0x10013ad2,reinterpret_cast<TypeInfoDtorFn>(static_cast<std::uintptr_t>(0x10013ad2))(this);
+0x10010761,.text,~type_info,src/functions/10010771.cpp,12,0x10010761,reinterpret_cast<DestructorFn>(static_cast<std::uintptr_t>(0x10010761))(this);
+0x10010756,.text,FUN_10010756,src/functions/10010771.cpp,17,0x10010756,reinterpret_cast<FreeFn>(static_cast<std::uintptr_t>(0x10010756))(this);
+0x10013B50,.text,_strcmp,src/functions/10010792.cpp,14,0x10013b50,"return reinterpret_cast<StrCmpFn>(static_cast<std::uintptr_t>(0x10013b50))(left, right) == 0;"
+0x1001023B,.text,FUN_1001023b,src/functions/10010893.cpp,45,0x1001023b,reinterpret_cast<BadAllocInitFn>(static_cast<std::uintptr_t>(0x1001023b))(
+0x10010351,.text,exception,src/functions/10010893.cpp,55,0x10010351,reinterpret_cast<BadAllocCopyCtorFn>(static_cast<std::uintptr_t>(0x10010351))(
+0x10012ED9,.text,,src/functions/10012e90.cpp,67,0x10012ed9,const std::uint32_t handler_address = 0x10012ed9u;
+0x10013AB6,.text,,src/functions/10013aa2.cpp,17,0x10013AB6,"reinterpret_cast<PVOID>(0x10013AB6),"
+0x1001189F,.text,FUN_1001189f,src/functions/10014003.cpp,194,0x1001189f,reinterpret_cast<void (__cdecl*)()>(0x1001189f)();
+0x10014C49,.text,,src/functions/10014fa7.cpp,51,0x10014c49,DAT_10039a74 = reinterpret_cast<FARPROC>(0x10014c49);
+0x100169E7,.text,,src/functions/100169da.cpp,42,0x100169e7,// Entry-register inputs confirmed by x86 instructions 0x100169e7 and 0x100169e9.
+0x100169E9,.text,,src/functions/100169da.cpp,42,0x100169e9,// Entry-register inputs confirmed by x86 instructions 0x100169e7 and 0x100169e9.
+0x10012E20,.text,__SEH_prolog4,src/functions/10017dde.cpp,18,0x10012e20,reinterpret_cast<seh_prolog_function>(0x10012e20)();
+0x10014DF0,.text,__getptd,src/functions/10017dde.cpp,21,0x10014df0,reinterpret_cast<getptd_function>(0x10014df0)();
+0x1001705C,.text,_abort,src/functions/10017dde.cpp,27,0x1001705c,reinterpret_cast<abort_function>(0x1001705c)();
+0x10018A01,.text,,src/functions/100189f5.cpp,36,0x10018a01,uStack_c = 0x10018a01u;
+0x10018E78,.text,,src/functions/10018e60.cpp,13,0x10018e78,"RtlUnwind(param_1, (PVOID)0x10018e78, (PEXCEPTION_RECORD)0x0, (PVOID)0x0);"
+0x10018E80,.text,,src/functions/10018ec5.cpp,28,0x10018e80,reinterpret_cast<void*>(0x10018e80)
+0x1001A7D8,.text,,src/functions/1001a785.cpp,81,0x1001a7d8,"// Ghidra 0x1001a7d8: ECX=&local_14, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001a785.cpp,81,0x10010b1a,"// Ghidra 0x1001a7d8: ECX=&local_14, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001a785.cpp,82,0x10010b1a,"reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(&local_14, _Locale);"
+0x1001AA5D,.text,,src/functions/1001aa4f.cpp,19,0x1001aa5d,"// Ghidra 0x1001aa5d: ECX=update, pushed param_1, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001aa4f.cpp,19,0x10010b1a,"// Ghidra 0x1001aa5d: ECX=update, pushed param_1, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001aa4f.cpp,20,0x10010b1a,"reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(update, param_1);"
+0x1001B6BE,.text,,src/functions/1001b693.cpp,22,0x1001b6be,"reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x1001b6beu)),"
+0x1001B7FB,.text,,src/functions/1001b750.cpp,51,0x1001B7FB,*reinterpret_cast<undefined4*>(param_2) = 0x1001B7FB;
+0x1001B827,.text,TranslatorGuardHandler,src/functions/1001b750.cpp,56,0x1001B827,local_28 = reinterpret_cast<code*>(0x1001B827u);
+0x1001BB6E,.text,,src/functions/1001bb5f.cpp,19,0x1001bb6e,"// Ghidra 0x1001bb6e: ECX=local_storage, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001bb5f.cpp,19,0x10010b1a,"// Ghidra 0x1001bb6e: ECX=local_storage, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001bb5f.cpp,20,0x10010b1a,"reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(local_storage, _Locale);"
+0x1001BAEB,.text,__forcdecpt_l,src/functions/1001bc78.cpp,8,0x1001baeb,reinterpret_cast<ForceDecimalPointLocale>(0x1001baeb)(
+0x1001BDFF,.text,__cftoe_l,src/functions/1001bec6.cpp,24,0x1001bdff,return reinterpret_cast<CftoeLocale>(0x1001bdff)(
+0x1001BF29,.text,,src/functions/1001bee6.cpp,103,0x1001bf29,iVar14 = 0x1001bf29;
+0x1001BF29,.text,,src/functions/1001bee6.cpp,121,0x1001bf29,iVar14 = 0x1001bf29;
+0x1001C5F0,.text,FUN_1001c5f0,src/functions/1001c5f0.cpp,5,0x1001c5f0,// Ghidra 12.1.3 export: 0x1001c5f0..0x1001c607 (24 bytes).
+0x1001C607,.text,,src/functions/1001c5f0.cpp,5,0x1001c607,// Ghidra 12.1.3 export: 0x1001c5f0..0x1001c607 (24 bytes).
+0x10010351,.text,exception,src/functions/1001d906.cpp,11,0x10010351,"reinterpret_cast<ExceptionCopyConstructor>(0x10010351)(self, param_1);"
+0x1001F712,.text,,src/functions/1001f203.cpp,58,0x1001f712,"/* WARNING: Removing unreachable block (ram,0x1001f712) */"
+0x1001F71C,.text,,src/functions/1001f203.cpp,60,0x1001f71c,"/* WARNING: Removing unreachable block (ram,0x1001f71c) */"
+0x1001F721,.text,,src/functions/1001f203.cpp,62,0x1001f721,"/* WARNING: Removing unreachable block (ram,0x1001f721) */"
+0x10020870,.text,FUN_10020870,src/functions/10020870.cpp,34,0x10020870,// Ghidra disassembly at 0x10020870 calls the CRT constructor at 0x100102c3
+0x100102C3,.text,exception,src/functions/10020870.cpp,34,0x100102c3,// Ghidra disassembly at 0x10020870 calls the CRT constructor at 0x100102c3
+0x100102C3,.text,exception,src/functions/10020870.cpp,36,0x100102c3,"reinterpret_cast<ExceptionCtor>(0x100102c3)(exception_object, &message);"

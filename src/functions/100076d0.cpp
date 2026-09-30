@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 struct RwTexture;
 
@@ -20,8 +21,6 @@ extern std::int32_t DAT_1003c250;
 extern std::int32_t DAT_1003c254;
 extern std::int32_t _DAT_1003bc00;
 
-extern std::int32_t* _DAT_00b74494;
-extern std::int32_t* _DAT_00c8800c;
 
 extern std::int32_t DAT_1003bc78;
 extern char DAT_1003aef0;
@@ -45,12 +44,15 @@ using TextureCallback = void(__cdecl*)(int*, std::int32_t);
 using TextureLookup = std::int32_t(__cdecl*)(std::int32_t, const char*);
 using PaletteLookup = std::uint8_t*(__cdecl*)(std::int32_t);
 
-extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
+static int* __cdecl FUN_100076d0_impl(
+    int* param_1,
+    int* param_2,
+    volatile std::int32_t* entry_vehicle_record_slot)
 {
     char local_34[32];
     std::int32_t local_14;
     float local_10;
-    std::int32_t local_c = 0;
+    std::int32_t local_c;
     std::int32_t local_8;
 
     std::uint32_t* puVar1;
@@ -100,8 +102,9 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
             *reinterpret_cast<std::int32_t*>(
                 *reinterpret_cast<std::int32_t*>(
                     static_cast<std::uintptr_t>(iVar10) + 0x48) +
-                ((iVar12 - *_DAT_00b74494) / 0xa18) * 4) +
+                ((iVar12 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
             iVar16;
+        *entry_vehicle_record_slot = local_c;
     }
 
     local_14 = *param_1;
@@ -111,7 +114,7 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
 
     local_8 =
         *reinterpret_cast<std::int32_t*>(
-            *_DAT_00c8800c +
+            *IMVEHFT_GLOBAL_AT(std::int32_t*, 0x00c8800c) +
             *reinterpret_cast<std::int16_t*>(
                 *reinterpret_cast<std::int32_t*>(
                     DAT_1003759c + DAT_1003aef4 * 4) + 10) *
@@ -351,45 +354,25 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
                             _DAT_1003c208[DAT_1003bc78]);
                     }
                     else if (DAT_1003aef1 == '\0' &&
-                             DAT_1003c1fc != 0 &&
-                             *reinterpret_cast<char*>(
-                                 static_cast<std::uintptr_t>(local_c) +
-                                 0x20) != '\0')
+                             DAT_1003c1fc != 0)
                     {
-                        iVar12 = strncmp(
-                            reinterpret_cast<const char*>(
-                                static_cast<std::uintptr_t>(*param_1) +
-                                0x10),
-                            "plateback1",
-                            10);
-
-                        if (iVar12 == 0)
+                        std::uintptr_t local_c_snapshot;
+                        __asm
                         {
-                            WRITE_SLOT(param_1);
-                            *param_1 = DAT_1003bd9c;
-
-                            piVar2 = param_1 + 3;
-                            WRITE_SLOT(piVar2);
-                            *piVar2 = _DAT_10024f94;
+                            mov eax, entry_vehicle_record_slot
+                            mov eax, dword ptr [eax]
+                            mov local_c_snapshot, eax
                         }
-                        else
+
+                        if (*reinterpret_cast<char*>(
+                                local_c_snapshot + 0x20) != '\0')
                         {
                             iVar12 = strncmp(
                                 reinterpret_cast<const char*>(
                                     static_cast<std::uintptr_t>(*param_1) +
                                     0x10),
-                                "plateback2",
+                                "plateback1",
                                 10);
-
-                            if (iVar12 != 0)
-                            {
-                                iVar12 = strncmp(
-                                    reinterpret_cast<const char*>(
-                                        static_cast<std::uintptr_t>(
-                                            *param_1) + 0x10),
-                                    "plateback3",
-                                    10);
-                            }
 
                             if (iVar12 == 0)
                             {
@@ -399,6 +382,35 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
                                 piVar2 = param_1 + 3;
                                 WRITE_SLOT(piVar2);
                                 *piVar2 = _DAT_10024f94;
+                            }
+                            else
+                            {
+                                iVar12 = strncmp(
+                                    reinterpret_cast<const char*>(
+                                        static_cast<std::uintptr_t>(*param_1) +
+                                        0x10),
+                                    "plateback2",
+                                    10);
+
+                                if (iVar12 != 0)
+                                {
+                                    iVar12 = strncmp(
+                                        reinterpret_cast<const char*>(
+                                            static_cast<std::uintptr_t>(
+                                                *param_1) + 0x10),
+                                        "plateback3",
+                                        10);
+                                }
+
+                                if (iVar12 == 0)
+                                {
+                                    WRITE_SLOT(param_1);
+                                    *param_1 = DAT_1003bd9c;
+
+                                    piVar2 = param_1 + 3;
+                                    WRITE_SLOT(piVar2);
+                                    *piVar2 = _DAT_10024f94;
+                                }
                             }
                         }
                     }
@@ -511,7 +523,7 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
                     *reinterpret_cast<std::int32_t*>(
                         *reinterpret_cast<std::int32_t*>(
                             static_cast<std::uintptr_t>(iVar18) + 0x48) +
-                        ((iVar12 - *_DAT_00b74494) / 0xa18) * 4) +
+                        ((iVar12 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
                     0x28 + local_14) +
                 0x350) == 0)
         {
@@ -530,14 +542,20 @@ extern "C" int* __cdecl FUN_100076d0(int* param_1, int* param_2)
                 return param_1;
         }
 
+        *entry_vehicle_record_slot = local_c;
+
         iVar12 = FUN_10009360();
 
         iVar12 =
             *reinterpret_cast<std::int32_t*>(
                 *reinterpret_cast<std::int32_t*>(
-                    static_cast<std::uintptr_t>(iVar12) + 0x48) +
-                ((iVar16 - *_DAT_00b74494) / 0xa18) * 4) +
+                static_cast<std::uintptr_t>(iVar12) + 0x48) +
+                ((iVar16 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
             0x28 + iVar10;
+
+        iVar12 = *reinterpret_cast<std::int32_t*>(
+            static_cast<std::uintptr_t>(iVar12));
+        iVar12 = iVar12 + 0x354 + local_c * 0x14;
 
         piVar2 = param_1 + 1;
         WRITE_SLOT(piVar2);
@@ -818,33 +836,43 @@ WRITE_PALETTE:
     puVar1 = reinterpret_cast<std::uint32_t*>(param_1 + 1);
     WRITE_SLOT(puVar1);
 
-    if (DAT_1003c1fc != 0 &&
-        *reinterpret_cast<std::int32_t*>(
-            static_cast<std::uintptr_t>(local_c) + 0x30) != 0 &&
-        iVar12 < static_cast<std::int32_t>(
-            *reinterpret_cast<std::uint8_t*>(
-                static_cast<std::uintptr_t>(local_c) + 0x2c)))
+    if (DAT_1003c1fc != 0)
     {
-        iVar16 =
-            *reinterpret_cast<std::int32_t*>(
-                static_cast<std::uintptr_t>(local_c) + 0x30) +
-            iVar12 * 4;
+        std::uintptr_t local_c_snapshot;
+        __asm
+        {
+            mov eax, entry_vehicle_record_slot
+            mov eax, dword ptr [eax]
+            mov local_c_snapshot, eax
+        }
 
-        *reinterpret_cast<std::uint8_t*>(puVar1) =
+        if (*reinterpret_cast<std::int32_t*>(
+                local_c_snapshot + 0x30) != 0 &&
+            iVar12 < static_cast<std::int32_t>(
+                *reinterpret_cast<std::uint8_t*>(
+                    local_c_snapshot + 0x2c)))
+        {
+            iVar16 =
+                *reinterpret_cast<std::int32_t*>(
+                    local_c_snapshot + 0x30) +
+                iVar12 * 4;
+
+            *reinterpret_cast<std::uint8_t*>(puVar1) =
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(iVar16));
+
             *reinterpret_cast<std::uint8_t*>(
-                static_cast<std::uintptr_t>(iVar16));
+                reinterpret_cast<std::uint8_t*>(param_1) + 5) =
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(iVar16) + 1);
 
-        *reinterpret_cast<std::uint8_t*>(
-            reinterpret_cast<std::uint8_t*>(param_1) + 5) =
             *reinterpret_cast<std::uint8_t*>(
-                static_cast<std::uintptr_t>(iVar16) + 1);
+                reinterpret_cast<std::uint8_t*>(param_1) + 6) =
+                *reinterpret_cast<std::uint8_t*>(
+                    static_cast<std::uintptr_t>(iVar16) + 2);
 
-        *reinterpret_cast<std::uint8_t*>(
-            reinterpret_cast<std::uint8_t*>(param_1) + 6) =
-            *reinterpret_cast<std::uint8_t*>(
-                static_cast<std::uintptr_t>(iVar16) + 2);
-
-        return param_1;
+            return param_1;
+        }
     }
 
     puVar17 = palette_lookup(iVar12);
@@ -872,3 +900,28 @@ WRITE_PALETTE:
 
 #undef WRITE_SLOT
 }
+
+#if defined(_MSC_VER) && defined(_M_IX86)
+extern "C" __declspec(naked) int* __cdecl FUN_100076d0(int*, int*)
+{
+    __asm
+    {
+        push ebp
+        mov ebp, esp
+        sub esp, 30h
+        push edi
+        lea eax, [ebp - 8]
+        push eax
+        push dword ptr [ebp + 0ch]
+        push dword ptr [ebp + 08h]
+        call FUN_100076d0_impl
+        add esp, 0ch
+        pop edi
+        mov esp, ebp
+        pop ebp
+        ret
+    }
+}
+#else
+#error "FUN_100076d0 requires an MSVC x86 entry shim to preserve the target stack slot"
+#endif

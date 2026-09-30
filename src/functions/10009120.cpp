@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
 using HMODULE = void*;
@@ -10,13 +11,13 @@ extern "C" BOOL __stdcall VirtualProtect(void*, DWORD, DWORD, DWORD*);
 extern "C" std::uint32_t __stdcall FUN_10009120()
 {
     volatile auto& DAT_1003c3f4 =
-        *reinterpret_cast<volatile std::uint16_t*>(0x1003c3f4u);
+        *reinterpret_cast<volatile std::uint16_t*>(IVF_IMAGE_ADDRESS_1003C3F4);
     volatile auto& DAT_1003c3f6 =
-        *reinterpret_cast<volatile std::uint16_t*>(0x1003c3f6u);
+        *reinterpret_cast<volatile std::uint16_t*>(IVF_IMAGE_ADDRESS_1003C3F6);
     volatile auto& DAT_1003c3f8 =
-        *reinterpret_cast<volatile std::uint8_t*>(0x1003c3f8u);
+        *reinterpret_cast<volatile std::uint8_t*>(IVF_IMAGE_ADDRESS_1003C3F8);
     volatile auto& DAT_1003c3f9 =
-        *reinterpret_cast<volatile std::uint8_t*>(0x1003c3f9u);
+        *reinterpret_cast<volatile std::uint8_t*>(IVF_IMAGE_ADDRESS_1003C3F9);
 
     DAT_1003c3f6 = 0;
     DAT_1003c3f8 = 0;

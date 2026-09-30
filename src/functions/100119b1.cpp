@@ -25,7 +25,7 @@ static_assert(offsetof(_iobuf, _cnt) == 0x04);
 static_assert(offsetof(_iobuf, _base) == 0x08);
 static_assert(offsetof(_iobuf, _flag) == 0x0c);
 static_assert(sizeof(_iobuf) == 0x20);
-extern "C" unsigned int __cdecl __filbuf(FILE* stream);
+int __cdecl __filbuf(FILE* stream);
 
 extern "C" unsigned int __fastcall __inc(
     std::uint32_t ,

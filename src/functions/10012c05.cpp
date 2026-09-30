@@ -1,14 +1,16 @@
 #include <cstdint>
 
 extern "C" using Initializer = void(__cdecl*)();
-extern "C" using RuntimeFunction = void(__cdecl*)(int, int, int);
+// The original pushes three arguments and performs no caller cleanup after
+// CALL [DAT_1003d554], so the callback uses callee-cleanup (__stdcall).
+extern "C" using RuntimeFunction = void(__stdcall*)(int, int, int);
 extern "C" using FpmathFunction = void(__cdecl*)(int);
 
 extern "C" int __cdecl __IsNonwritableInCurrentImage(std::uint8_t* address);
-extern "C" void __cdecl __initp_misc_cfltcvt_tab();
+extern "C" void __stdcall __initp_misc_cfltcvt_tab();
 extern "C" int __cdecl __initterm_e(std::uint32_t* begin, std::uint32_t* end);
 extern "C" int __cdecl _atexit(void(__cdecl* function)());
-extern "C" void __stdcall FUN_10020870();
+extern "C" void __stdcall FUN_10016cec();
 
 extern "C" FpmathFunction PTR___fpmath_10025004;
 extern "C" std::uint32_t DAT_100221b8[];
@@ -32,7 +34,7 @@ extern "C" int __cdecl __cinit(int param_1)
 
     if (result == 0)
     {
-        _atexit(reinterpret_cast<void(__cdecl*)()>(FUN_10020870));
+        _atexit(reinterpret_cast<void(__cdecl*)()>(FUN_10016cec));
 
         std::uint32_t* initializer = DAT_10022154;
         do

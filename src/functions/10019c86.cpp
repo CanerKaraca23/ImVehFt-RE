@@ -2,6 +2,9 @@
 #include <cstdint>
 #include <malloc.h>
 
+extern "C" std::uint32_t DAT_10029490;
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
+
 #include <corecrt.h>
 using longlong = std::int64_t;
 using ulonglong = std::uint64_t;
@@ -32,7 +35,7 @@ static_assert(offsetof(pthreadlocinfo, lc_codepage) == 0x04);
 static_assert(offsetof(localeinfo_struct, mbcinfo) == 0x04);
 extern "C" void __cdecl __freea(void*);
 
-int __cdecl __crtLCMapStringA_stat(
+extern "C" int __cdecl __crtLCMapStringA_stat(
     localeinfo_struct* param_1,
     unsigned long param_2,
     unsigned long param_3,
@@ -43,6 +46,8 @@ int __cdecl __crtLCMapStringA_stat(
     int param_8,
     int param_9)
 {
+    std::uintptr_t stack_cookie = DAT_10029490 ^
+        reinterpret_cast<std::uintptr_t>(&stack_cookie);
     unsigned int uVar1;
     bool bVar2;
     char* pcVar3;
@@ -96,7 +101,7 @@ int __cdecl __crtLCMapStringA_stat(
         0);
 
     if (cchWideChar == 0)
-        return 0;
+        goto check_and_return;
 
     if ((static_cast<int>(cchWideChar) < 1) ||
         (0xffffffe0u / cchWideChar < 2))
@@ -138,7 +143,7 @@ int __cdecl __crtLCMapStringA_stat(
     }
 
     if (local_10 == nullptr)
-        return 0;
+        goto check_and_return;
 
     iVar6 = MultiByteToWideChar(
         param_8,
@@ -247,5 +252,9 @@ int __cdecl __crtLCMapStringA_stat(
 
 LAB_10019e4f:
     __freea(const_cast<LPWSTR>(local_10));
+
+check_and_return:
+    __security_check_cookie(
+        stack_cookie ^ reinterpret_cast<std::uintptr_t>(&stack_cookie));
     return local_c;
 }

@@ -1,0 +1,47 @@
+address,symbol,section,offset,storage_class,initial_bytes,link_diagnostic_count
+0x10024208,_PTR_DAT_10024208,.rdata,0x2208,raw-backed,98 A3 03 10 F0 A3 03 10 43 00 4F 00 4E 00 4F 00,1
+0x10029C08,_PTR_DAT_10029C08,.data,0xC08,raw-backed,30 9B 02 10 FF FF FF FF FF FF FF FF 00 00 00 00,1
+0x10029BF8,_PTR_DAT_10029bf8,.data,0xBF8,raw-backed,28 3A 02 10 B0 3E 02 10 30 40 02 10 C8 99 02 10,3
+0x10029EA8,_PTR_DAT_10029ea8,.data,0xEA8,raw-backed,A0 9E 02 10 74 A3 03 10 74 A3 03 10 74 A3 03 10,1
+0x10029EAC,_PTR_DAT_10029eac,.data,0xEAC,raw-backed,74 A3 03 10 74 A3 03 10 74 A3 03 10 74 A3 03 10,1
+0x10029EB0,_PTR_DAT_10029eb0,.data,0xEB0,raw-backed,74 A3 03 10 74 A3 03 10 74 A3 03 10 74 A3 03 10,1
+0x10029ED8,_PTR_DAT_10029ed8,.data,0xED8,raw-backed,A4 9E 02 10 78 A3 03 10 78 A3 03 10 78 A3 03 10,1
+0x10029EDC,_PTR_DAT_10029edc,.data,0xEDC,raw-backed,78 A3 03 10 78 A3 03 10 78 A3 03 10 78 A3 03 10,1
+0x10029D40,_PTR_LAB_10029d40,.data,0xD40,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10,2
+0x10029D44,_PTR_LAB_10029d44,.data,0xD44,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10,1
+0x10029D48,_PTR_LAB_10029d48,.data,0xD48,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10,1
+0x10029D4C,_PTR_LAB_10029d4c,.data,0xD4C,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10,1
+0x10029D50,_PTR_LAB_10029d50,.data,0xD50,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10,1
+0x10029D54,_PTR_LAB_10029d54,.data,0xD54,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10,1
+0x10029D58,_PTR_LAB_10029d58,.data,0xD58,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 2B AF 01 10,1
+0x10029D5C,_PTR_LAB_10029d5c,.data,0xD5C,raw-backed,2B AF 01 10 2B AF 01 10 2B AF 01 10 00 00 00 00,1
+0x10029D60,_PTR_LAB_10029d60,.data,0xD60,raw-backed,2B AF 01 10 2B AF 01 10 00 00 00 00 00 00 00 00,1
+0x10029D64,_PTR_LAB_10029d64,.data,0xD64,raw-backed,2B AF 01 10 00 00 00 00 00 00 00 00 00 00 00 00,1
+0x10025004,_PTR___fpmath_10025004,.rdata,0x3004,raw-backed,18 B3 01 10 65 2B 30 30 30 00 00 00 00 00 00 00,1
+0x10037588,_PTR_s__dirt_10037588,.data,0xE588,raw-backed,8C 43 02 10 88 43 02 10 E8 E3 B4 00 F0 E3 B4 00,1
+0x10023094,_UNK_10023094,.rdata,0x1094,raw-backed,30 30 02 10 08 00 00 00 D8 2F 02 10 09 00 00 00,1
+0x10039A10,__DAT_10039a10,.data,0x10A10,virtual-zero-fill,,1
+0x10039A14,__DAT_10039a14,.data,0x10A14,virtual-zero-fill,,1
+0x10039A2C,__DAT_10039a2c,.data,0x10A2C,virtual-zero-fill,,1
+0x10039DD2,__DAT_10039dd2,.data,0x10DD2,virtual-zero-fill,,1
+0x1003A330,__DAT_1003a330,.data,0x11330,virtual-zero-fill,,1
+0x1003A398,__DAT_1003a398,.data,0x11398,virtual-zero-fill,,1
+0x1003A39C,__DAT_1003a39c,.data,0x1139C,virtual-zero-fill,,1
+0x1003A3A4,__DAT_1003a3a4,.data,0x113A4,virtual-zero-fill,,1
+0x1003A3F0,__DAT_1003a3f0,.data,0x113F0,virtual-zero-fill,,1
+0x1003A47C,__DAT_1003a47c,.data,0x1147C,virtual-zero-fill,,1
+0x1003A480,__DAT_1003a480,.data,0x11480,virtual-zero-fill,,1
+0x1003A484,__DAT_1003a484,.data,0x11484,virtual-zero-fill,,1
+0x1003A488,__DAT_1003a488,.data,0x11488,virtual-zero-fill,,1
+0x1003A48C,__DAT_1003a48c,.data,0x1148C,virtual-zero-fill,,1
+0x1003A490,__DAT_1003a490,.data,0x11490,virtual-zero-fill,,1
+0x1003A494,__DAT_1003a494,.data,0x11494,virtual-zero-fill,,1
+0x1003A498,__DAT_1003a498,.data,0x11498,virtual-zero-fill,,1
+0x1003A49C,__DAT_1003a49c,.data,0x1149C,virtual-zero-fill,,1
+0x1003A4A0,__DAT_1003a4a0,.data,0x114A0,virtual-zero-fill,,1
+0x1003A4A4,__DAT_1003a4a4,.data,0x114A4,virtual-zero-fill,,1
+0x1003A4AC,__DAT_1003a4ac,.data,0x114AC,virtual-zero-fill,,1
+0x1003A4B0,__DAT_1003a4b0,.data,0x114B0,virtual-zero-fill,,1
+0x1003A4B4,__DAT_1003a4b4,.data,0x114B4,virtual-zero-fill,,1
+0x1003A4B8,__DAT_1003a4b8,.data,0x114B8,virtual-zero-fill,,1
+0x1003D544,__DAT_1003d544,.data,0x14544,virtual-zero-fill,,1

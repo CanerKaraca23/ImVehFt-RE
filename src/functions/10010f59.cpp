@@ -1,177 +1,148 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
-struct _tiddata;
-using _ptiddata = _tiddata*;
-using pthreadlocinfo = void*;
-
-extern "C"
-{
-    void __cdecl __SEH_prolog4(...);
-    void __cdecl __SEH_epilog4(...);
-    int __cdecl __heap_init();
-    int __cdecl __mtinit();
-    void __cdecl __RTC_Initialize();
-    char* __cdecl GetCommandLineA();
-    char* __cdecl ___crtGetEnvironmentStringsA();
-    int __cdecl __ioinit();
-    int __cdecl __setargv();
-    int __stdcall FUN_100168fe();
+extern "C" {
+    void __cdecl __SEH_prolog4(std::uint32_t scope_table, int frame_size);
+    void __stdcall __SEH_epilog4(void);
+    int __cdecl __heap_init(void);
+    int __cdecl __mtinit(void);
+    void __stdcall __RTC_Initialize(void);
+    char* __cdecl ___crtGetEnvironmentStringsA(void);
+    int __cdecl __ioinit(void);
+    int __cdecl __setargv(void);
+    int __stdcall FUN_100168fe(void);
     int __cdecl __cinit(int);
-    void __cdecl __ioterm();
-    void __cdecl __mtterm();
-    void __cdecl __heap_term();
-    void __cdecl __cexit();
-    void __stdcall FUN_10011032();
-    void __cdecl ___set_flsgetvalue();
-    _ptiddata __cdecl __calloc_crt(std::uint32_t, std::uint32_t);
-    void* __stdcall DecodePointer(void*);
-    void __cdecl __initptd(_ptiddata, pthreadlocinfo);
-    std::uint32_t __stdcall GetCurrentThreadId();
+    void __cdecl __ioterm(void);
+    void __cdecl __mtterm(void);
+    void __cdecl __heap_term(void);
+    void __cdecl __cexit(void);
+    void __stdcall FUN_10011032(void);
+    void* __stdcall ___set_flsgetvalue(void);
+    void* __cdecl __calloc_crt(std::uint32_t, std::uint32_t);
+    void __cdecl __initptd(void*, void*);
     void __cdecl _free(void*);
-    void __cdecl __freeptd(_ptiddata);
+    void __cdecl __freeptd(void*);
 }
 
-using InitializePtdFunction = int (__cdecl *)(std::uint32_t, _ptiddata);
-
-extern int DAT_100399f0;
-extern int DAT_10039a38;
-extern char* DAT_1003d558;
-extern char* DAT_100399f4;
-extern void* DAT_10039a7c;
-extern std::uint32_t DAT_10029c0c;
-
-struct _tiddata
+extern "C" __declspec(naked) std::uint32_t __stdcall __CRT_INIT_12(
+    std::uint32_t,
+    int,
+    int)
 {
-    std::uint32_t _tid;
-    std::uint32_t _thandle;
-};
-
-std::uint32_t __stdcall __CRT_INIT_12(
-    std::uint32_t param_1,
-    int param_2,
-    int param_3)
-{
-    int init_result = 0;
-    int result = 0;
-    _ptiddata ptd = nullptr;
-    void* decodedPointer = nullptr;
-    InitializePtdFunction initializePtd = nullptr;
-
-    (void)param_1;
-    __SEH_prolog4();
-
-    if (param_2 == 1)
-    {
-        init_result = __heap_init();
-
-        if (init_result != 0)
-        {
-            init_result = __mtinit();
-
-            if (init_result != 0)
-            {
-                __RTC_Initialize();
-
-                DAT_1003d558 = GetCommandLineA();
-                DAT_100399f4 = ___crtGetEnvironmentStringsA();
-
-                init_result = __ioinit();
-
-                if (init_result >= 0)
-                {
-                    init_result = __setargv();
-
-                    if (init_result >= 0)
-                    {
-                        init_result = FUN_100168fe();
-
-                        if (init_result >= 0)
-                        {
-                            init_result = __cinit(0);
-
-                            if (init_result == 0)
-                            {
-                                DAT_100399f0 = DAT_100399f0 + 1;
-                                result = 1;
-                                goto finish;
-                            }
-                        }
-                    }
-
-                    __ioterm();
-                }
-            }
-
-            __mtterm();
-        }
-
-        __heap_term();
+    __asm {
+        push 8
+        push OFFSET IVF_RELOC_TARGET_10028288
+        call __SEH_prolog4
+        mov eax, dword ptr [ebp + 0Ch]
+        cmp eax, 1
+        jne crt_non_attach
+        call __heap_init
+        test eax, eax
+        jne crt_heap_initialized
+    crt_return_false:
+        xor eax, eax
+        jmp crt_epilog
+    crt_heap_initialized:
+        call __mtinit
+        test eax, eax
+        jne crt_runtime_ready
+    crt_heap_cleanup:
+        call __heap_term
+        jmp crt_return_false
+    crt_runtime_ready:
+        call __RTC_Initialize
+        call dword ptr [IVF_RELOC_TARGET_10022068]
+        mov dword ptr [IVF_RELOC_TARGET_1003D558], eax
+        call ___crtGetEnvironmentStringsA
+        mov dword ptr [IVF_RELOC_TARGET_100399F4], eax
+        call __ioinit
+        test eax, eax
+        jns crt_io_ready
+    crt_mt_cleanup:
+        call __mtterm
+        jmp crt_heap_cleanup
+    crt_io_ready:
+        call __setargv
+        test eax, eax
+        js crt_init_cleanup
+        call FUN_100168fe
+        test eax, eax
+        js crt_init_cleanup
+        push 0
+        call __cinit
+        pop ecx
+        test eax, eax
+        jnz crt_init_cleanup
+        inc dword ptr [IVF_RELOC_TARGET_100399F0]
+        jmp crt_return_true
+    crt_init_cleanup:
+        call __ioterm
+        jmp crt_mt_cleanup
+    crt_non_attach:
+        xor edi, edi
+        cmp eax, edi
+        jne crt_thread_event
+        cmp dword ptr [IVF_RELOC_TARGET_100399F0], edi
+        jle crt_return_false
+        dec dword ptr [IVF_RELOC_TARGET_100399F0]
+        mov dword ptr [ebp - 4], edi
+        cmp dword ptr [IVF_RELOC_TARGET_10039A38], edi
+        jne crt_detach_cleanup
+        call __cexit
+    crt_detach_cleanup:
+        cmp dword ptr [ebp + 10h], edi
+        jne crt_detach_finish
+        call __ioterm
+        call __mtterm
+        call __heap_term
+    crt_detach_finish:
+        mov dword ptr [ebp - 4], 0FFFFFFFEh
+        call FUN_10011032
+        jmp crt_return_true
+    crt_thread_event:
+        cmp eax, 2
+        jne crt_thread_detach
+        call ___set_flsgetvalue
+        push 214h
+        push 1
+        call __calloc_crt
+        pop ecx
+        pop ecx
+        mov esi, eax
+        cmp esi, edi
+        je crt_return_false
+        push esi
+        push dword ptr [IVF_RELOC_TARGET_10029C0C]
+        push dword ptr [IVF_RELOC_TARGET_10039A7C]
+        call dword ptr [IVF_RELOC_TARGET_10022060]
+        call eax
+        test eax, eax
+        je crt_free_thread_data
+        push edi
+        push esi
+        call __initptd
+        pop ecx
+        pop ecx
+        call dword ptr [IVF_RELOC_TARGET_10022064]
+        mov dword ptr [esi], eax
+        or dword ptr [esi + 4], 0FFFFFFFFh
+        jmp crt_return_true
+    crt_free_thread_data:
+        push esi
+        call _free
+        pop ecx
+        jmp crt_return_false
+    crt_thread_detach:
+        cmp eax, 3
+        jne crt_return_true
+        push edi
+        call __freeptd
+        pop ecx
+    crt_return_true:
+        xor eax, eax
+        inc eax
+    crt_epilog:
+        call __SEH_epilog4
+        ret 0Ch
     }
-    else if (param_2 == 0)
-    {
-        if (DAT_100399f0 > 0)
-        {
-            DAT_100399f0 = DAT_100399f0 - 1;
-
-            if (DAT_10039a38 == 0)
-            {
-                __cexit();
-            }
-
-            if (param_3 == 0)
-            {
-                __ioterm();
-                __mtterm();
-                __heap_term();
-            }
-
-            FUN_10011032();
-            result = 1;
-            goto finish;
-        }
-    }
-    else
-    {
-        if (param_2 != 2)
-        {
-            if (param_2 != 3)
-            {
-                result = 1;
-                goto finish;
-            }
-
-            __freeptd(nullptr);
-            result = 1;
-            goto finish;
-        }
-
-        ___set_flsgetvalue();
-
-        ptd = __calloc_crt(1, 0x214);
-
-        if (ptd != nullptr)
-        {
-            decodedPointer = DecodePointer(DAT_10039a7c);
-            initializePtd =
-                reinterpret_cast<InitializePtdFunction>(decodedPointer);
-
-            init_result = (*initializePtd)(DAT_10029c0c, ptd);
-
-            if (init_result != 0)
-            {
-                __initptd(ptd, nullptr);
-
-                ptd->_tid = GetCurrentThreadId();
-                ptd->_thandle = 0xffffffffu;
-                result = 1;
-                goto finish;
-            }
-
-            _free(ptd);
-        }
-    }
-
-finish:
-    __SEH_epilog4();
-    return static_cast<std::uint32_t>(result);
 }

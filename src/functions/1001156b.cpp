@@ -4,13 +4,13 @@
 #include <stdio.h>
 extern unsigned long DAT_1002226c[8];
 
-extern "C" __declspec(noreturn) void __stdcall RaiseException(
+extern "C" void __stdcall RaiseException(
     unsigned long,
     unsigned long,
     unsigned long,
     unsigned long*);
 
-extern "C" __declspec(noreturn) void __stdcall __CxxThrowException_8(
+extern "C" void __stdcall __CxxThrowException_8(
     unsigned long param_1,
     unsigned char* param_2)
 {

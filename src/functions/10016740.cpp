@@ -2,7 +2,7 @@
 #include <cstdint>
 
 extern "C" int DAT_1003c414;
-extern "C" void* __cdecl __VEC_memzero(void* destination, std::size_t size);
+extern "C" void* __fastcall __VEC_memzero(void* destination, std::size_t size);
 
 extern "C" void* __cdecl _memset(
     void* _Dst,

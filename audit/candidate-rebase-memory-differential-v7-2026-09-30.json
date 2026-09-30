@@ -1,0 +1,17 @@
+{
+    "candidate":  "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\pe-layout-probe\\ImVehFt-candidate-705-static-20260930-v7.asi",
+    "sha256":  "041B0CD18AFF3F7872AA4BC8EA8D1BBA96181B98C8D231D08FC9BBDAED74E320",
+    "preferred_base":  "0x10000000",
+    "mapped_base":  "0x692D0000",
+    "relocation_delta":  "0x592D0000",
+    "highlow_sites":  6389,
+    "mismatches":  0,
+    "mismatch_examples":  [
+
+                          ],
+    "imports_resolved":  false,
+    "dllmain_called":  false,
+    "gta_or_plugin_loader_started":  false,
+    "module_freed":  true,
+    "reservation_released":  true
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "Byte-level final-PE check of all inventoried code/data fixups; not semantic/runtime/game proof.",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_sha256": "041B0CD18AFF3F7872AA4BC8EA8D1BBA96181B98C8D231D08FC9BBDAED74E320",
+  "direct_text_sha256_matches_manifest": true,
+  "fixup_inventories": [
+    {
+      "inventory": "inplace-direct-body",
+      "fields": 1565,
+      "mismatches": 0
+    },
+    {
+      "inventory": "appended-root-and-support",
+      "fields": 3085,
+      "mismatches": 0
+    },
+    {
+      "inventory": "direct-local-closure",
+      "fields": 155,
+      "mismatches": 0
+    },
+    {
+      "inventory": "late-local-rdata",
+      "fields": 3,
+      "mismatches": 0
+    }
+  ],
+  "unique_fixup_fields_checked": 4808,
+  "field_value_mismatches": 0,
+  "local_terminate_helpers_match_expected_bytes": true,
+  "all_input_fixup_manifests_report_rederived_addends_and_values": true,
+  "limitations": [
+    "Static fixup target values do not prove semantic correctness of all targets.",
+    "Imports, CRT/DllMain execution, plugin loading, GTA, and gameplay were not tested."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Name-and-DLL crosswalk for direct external API code symbols in the appended-candidate set. Matching an original IAT slot does not resolve the REL32 code call; a code thunk and final-image relocation are still required.",
+  "original_asi": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "classification_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-local-closure-code-target-classes-ghidra-positive-2026-09-30.json",
+  "classification_report_sha256": "1EAA042147D1AEDFCD07035CD8B2EA641ECCAFB2E2E0A833375D4CE9CBFF38EE",
+  "original_imported_function_count": 82,
+  "candidate_direct_api_symbol_count": 1,
+  "exact_original_iat_match_count": 1,
+  "reference_occurrences": 3,
+  "unmatched_or_ambiguous": [],
+  "limitations": [
+    "No executable call thunk is emitted by this audit.",
+    "No candidate COFF REL32 fixup is applied.",
+    "The pinned IAT addresses require the original image layout and loader state.",
+    "No production PE/ASI or GTA runtime test is performed."
+  ],
+  "imports": [
+    {
+      "coff_code_symbol": "_DecodePointer@4",
+      "api_name": "decodepointer",
+      "reference_occurrences": 3,
+      "diagnostic_provider_dlls": [
+        "kernel32:KERNEL32.dll"
+      ],
+      "original_iat_matches_by_name": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "DecodePointer",
+          "iat_va": "0x10022060"
+        }
+      ],
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "DecodePointer",
+          "iat_va": "0x10022060"
+        }
+      ],
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022060",
+      "requires_rel32_compatible_call_thunk": true
+    }
+  ]
+}

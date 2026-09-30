@@ -34,6 +34,9 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
     volatile std::uint8_t& dat_aedf =
         *reinterpret_cast<volatile std::uint8_t*>(
             reinterpret_cast<volatile std::uint8_t*>(&DAT_1003aedc) + 3);
+    volatile std::uint8_t& dat_aee1 =
+        *reinterpret_cast<volatile std::uint8_t*>(
+            reinterpret_cast<volatile std::uint8_t*>(&DAT_1003aee0) + 1);
     volatile std::uint8_t& dat_aee3 =
         *reinterpret_cast<volatile std::uint8_t*>(
             reinterpret_cast<volatile std::uint8_t*>(&DAT_1003aee0) + 3);
@@ -107,10 +110,12 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
 
         __asm
         {
+            mov ecx, param_1
+            add ecx, 05a0h
+            xor edx, edx
             push 1
             mov eax, 0x006c2130
             call eax
-            add esp, 4
             mov eax_value, al
             mov edx_value, edx
         }
@@ -141,10 +146,12 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
 
         __asm
         {
+            mov ecx, param_1
+            add ecx, 05a0h
+            xor edx, edx
             push 0
             mov eax, 0x006c2130
             call eax
-            add esp, 4
             mov eax_value, al
             mov edx_value, edx
         }
@@ -186,10 +193,12 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
 
         __asm
         {
+            mov ecx, param_1
+            add ecx, 05a0h
+            xor edx, edx
             push 2
             mov eax, 0x006c2130
             call eax
-            add esp, 4
             mov eax_value, al
             mov edx_value, edx
         }
@@ -198,6 +207,7 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
         {
             DAT_1003aedc =
                 (2u << 24) | (DAT_1003aedc & 0x00ffffffu);
+            dat_aee1 = 2;
             DAT_1003aee0 =
                 (DAT_1003aee0 & 0x00ffffffu) | 0x02000000u;
             DAT_1003aee8 =
@@ -223,10 +233,12 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
 
         __asm
         {
+            mov ecx, param_1
+            add ecx, 05a0h
+            xor edx, edx
             push 3
             mov eax, 0x006c2130
             call eax
-            add esp, 4
             mov eax_value, al
             mov edx_value, edx
         }
@@ -267,6 +279,8 @@ int __cdecl FUN_100074d0(std::int32_t param_1)
                 static_cast<std::uint32_t>(param_1)) + 0x4b0);
 
     DAT_1003c1fc = param_1;
+
+    __asm fld dword ptr [DAT_1003c1ec]
 
     const std::uint64_t hash =
         FUN_1001ba40(

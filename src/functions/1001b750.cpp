@@ -13,6 +13,10 @@ using undefined8 = std::uint64_t;
 struct EHExceptionRecord { std::uint32_t ExceptionCode; };
 struct EHRegistrationNode;
 struct _s_FuncInfo;
+struct TranslatorGuardRN;
+enum _EXCEPTION_DISPOSITION : int;
+_EXCEPTION_DISPOSITION __cdecl TranslatorGuardHandler(
+    EHExceptionRecord*, TranslatorGuardRN*, void*, void*);
 typedef void (__cdecl code)(std::uint32_t, void*);
 struct _ptiddata
 {
@@ -23,81 +27,87 @@ static_assert(offsetof(_ptiddata, _translator) == 0x80);
 extern "C" _ptiddata* __cdecl __getptd(void);
 extern std::uint32_t DAT_10029490;
 
-int __cdecl _CallSETranslator(
-    EHExceptionRecord* param_1,
-    EHRegistrationNode* param_2,
-    void* param_3,
-    void* ,
-    _s_FuncInfo* param_5,
-    int param_6,
-    EHRegistrationNode* param_7)
+extern "C" __declspec(naked) int __cdecl _CallSETranslator(
+    EHExceptionRecord*, EHRegistrationNode*, void*, void*,
+    _s_FuncInfo*, int, EHRegistrationNode*)
 {
-    int local_3c;
-    EHExceptionRecord* local_38;
-    void* local_34;
-    code* local_30;
-    undefined4* local_2c;
-    code* local_28;
-    uint local_24;
-    _s_FuncInfo* local_20;
-    EHRegistrationNode* local_1c;
-    int local_18;
-    EHRegistrationNode* local_14;
-    int local_8;
+    __asm {
+        mov edi, edi
+        push ebp
+        mov ebp, esp
+        sub esp, 38h
+        push ebx
+        cmp dword ptr [ebp+8], 123h
+        jne translator_normal_path
+        mov eax, OFFSET translator_exception_chain_restore
+        mov ecx, dword ptr [ebp+0Ch]
+        mov dword ptr [ecx], eax
+        xor eax, eax
+        inc eax
+        jmp translator_return
 
+    translator_normal_path:
+        and dword ptr [ebp-28h], 0
+        mov dword ptr [ebp-24h], OFFSET TranslatorGuardHandler
+        mov eax, dword ptr [DAT_10029490]
+        lea ecx, [ebp-28h]
+        xor eax, ecx
+        mov dword ptr [ebp-20h], eax
+        mov eax, dword ptr [ebp+18h]
+        mov dword ptr [ebp-1Ch], eax
+        mov eax, dword ptr [ebp+0Ch]
+        mov dword ptr [ebp-18h], eax
+        mov eax, dword ptr [ebp+1Ch]
+        mov dword ptr [ebp-14h], eax
+        mov eax, dword ptr [ebp+20h]
+        mov dword ptr [ebp-10h], eax
+        and dword ptr [ebp-0Ch], 0
+        and dword ptr [ebp-08h], 0
+        and dword ptr [ebp-04h], 0
+        mov dword ptr [ebp-0Ch], esp
+        mov dword ptr [ebp-08h], ebp
+        mov eax, fs:[0]
+        mov dword ptr [ebp-28h], eax
+        lea eax, [ebp-28h]
+        mov fs:[0], eax
+        mov dword ptr [ebp-38h], 1
+        mov eax, dword ptr [ebp+8]
+        mov dword ptr [ebp-34h], eax
+        mov eax, dword ptr [ebp+10h]
+        mov dword ptr [ebp-30h], eax
+        call __getptd
+        mov eax, dword ptr [eax+80h]
+        mov dword ptr [ebp-2Ch], eax
+        lea eax, [ebp-34h]
+        push eax
+        mov eax, dword ptr [ebp+8]
+        push dword ptr [eax]
+        call dword ptr [ebp-2Ch]
+        pop ecx
+        pop ecx
+        and dword ptr [ebp-38h], 0
 
-    if (param_1 == reinterpret_cast<EHExceptionRecord*>(0x123))
-    {
-        *reinterpret_cast<undefined4*>(param_2) = 0x1001B7FB;
-        local_3c = 1;
+    translator_exception_chain_restore:
+        cmp dword ptr [ebp-04h], 0
+        jz translator_restore_fs_link
+        mov ebx, fs:[0]
+        mov eax, dword ptr [ebx]
+        mov ebx, dword ptr [ebp-28h]
+        mov dword ptr [ebx], eax
+        mov fs:[0], ebx
+        jmp translator_return_value
+
+    translator_restore_fs_link:
+        mov eax, dword ptr [ebp-28h]
+        mov fs:[0], eax
+
+    translator_return_value:
+        mov eax, dword ptr [ebp-38h]
+
+    translator_return:
+        pop ebx
+        mov esp, ebp
+        pop ebp
+        ret
     }
-    else
-    {
-        local_28 = reinterpret_cast<code*>(0x1001B827u);
-        local_24 = DAT_10029490 ^
-                   static_cast<uint>(
-                       reinterpret_cast<uintptr_t>(&local_2c));
-        local_20 = param_5;
-        local_1c = param_2;
-        local_18 = param_6;
-        local_14 = param_7;
-        local_8 = 0;
-
-        __asm {
-            mov eax, fs:[0]
-            mov local_2c, eax
-        }
-        __asm {
-            lea eax, local_2c
-            mov fs:[0], eax
-        }
-
-        local_38 = param_1;
-        local_34 = param_3;
-
-        _ptiddata* p_Var1 = __getptd();
-        local_30 = p_Var1->_translator;
-
-        (*local_30)(
-            *reinterpret_cast<undefined4*>(param_1),
-            &local_38);
-
-        local_3c = 0;
-
-        if (local_8 != 0)
-        {
-            __asm {
-                mov eax, fs:[0]
-                mov edx, local_2c
-                mov dword ptr [edx], eax
-            }
-        }
-
-        __asm {
-            mov eax, local_2c
-            mov fs:[0], eax
-        }
-    }
-
-    return local_3c;
 }

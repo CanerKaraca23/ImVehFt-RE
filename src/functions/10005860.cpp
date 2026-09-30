@@ -1,9 +1,7 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
-extern char DAT_00c7c728;
-extern std::uint8_t DAT_00b6f081;
-extern std::int32_t* _DAT_00b74494;
 
 using Predicate2180 = char(__thiscall*)(void*, std::uint8_t);
 using Predicate2230 = char(__thiscall*)(void*, std::uint8_t);
@@ -23,7 +21,7 @@ extern "C" void __cdecl FUN_10007030(
 
 extern void __stdcall FUN_10005670();
 
-extern "C" void __cdecl FUN_10006be0(
+extern "C" void __cdecl FUN_10006be0_call_bridge(
     std::int32_t,
     std::int32_t,
     std::int32_t,
@@ -34,7 +32,9 @@ extern "C" void __cdecl FUN_10006be0(
     float,
     char,
     float,
-    char);
+    char,
+    float,
+    std::uint32_t);
 
 extern void __stdcall FUN_100060d0();
 
@@ -42,12 +42,13 @@ extern "C" void __cdecl FUN_10005860(int param_1)
 {
     int iVar7 = DAT_1003c248;
 
-    if (DAT_00c7c728 == '\0') {
-        int iVar8 = (unsigned int)DAT_00b6f081 * 0x238 + 0x00B6F338;
+    if (IMVEHFT_GLOBAL_AT(char, 0x00c7c728) == '\0') {
+        int iVar8 = static_cast<unsigned int>(
+            IMVEHFT_GLOBAL_AT(std::uint8_t, 0x00b6f081)) * 0x238 + 0x00B6F338;
         int iVar6 = FUN_10009360();
 
         iVar7 = *(int *)(*(int *)(iVar6 + 0x48) +
-            ((param_1 - *_DAT_00b74494) / 0xA18) * 4) + iVar7;
+            ((param_1 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xA18) * 4) + iVar7;
 
         iVar6 = *(int *)(iVar7 + 0x28);
 
@@ -60,7 +61,7 @@ extern "C" void __cdecl FUN_10005860(int param_1)
             do {
                 local_14 = (int *)(puVar10 - 5);
 
-                if (*(char *)(puVar10[8] + 4 + iVar7) == '\1') {
+                if (*(char *)(static_cast<std::int8_t>(puVar10[8]) + 4 + iVar7) == '\1') {
                     unsigned char bVar1;
                     unsigned char bVar2;
                     unsigned char bVar3;
@@ -165,7 +166,7 @@ extern "C" void __cdecl FUN_10005860(int param_1)
                                 goto LAB_10005B23;
 
                             int iVar4 = *(int *)(iVar9 + 0x360 + iVar6);
-                            FUN_10006be0(
+                            FUN_10006be0_call_bridge(
                                 *(int *)(iVar9 + 0x354 + iVar6),
                                 iVar8,
                                 (char)local_18 + '\x1E',
@@ -176,7 +177,9 @@ extern "C" void __cdecl FUN_10005860(int param_1)
                                 *(float *)(iVar4 + 0x0C),
                                 '\1',
                                 *(float *)(iVar4 + 0x10),
-                                *(char *)(iVar4 + 1));
+                                *(char *)(iVar4 + 1),
+                                *(float *)(iVar4 + 0x14),
+                                static_cast<std::uint32_t>(param_1));
                         } else if ((unsigned char)(cVar5 - 2U) < 3) {
                             cVar5 = reinterpret_cast<Predicate2230>(0x006C2230)(reinterpret_cast<void*>(static_cast<std::uintptr_t>(param_1) + 0x5a0u), 
                                 *(unsigned char *)((char *)local_14 + 5));
@@ -190,7 +193,7 @@ extern "C" void __cdecl FUN_10005860(int param_1)
                             }
 
                             int iVar4 = *(int *)(iVar9 + 0x360 + iVar6);
-                            FUN_10006be0(
+                            FUN_10006be0_call_bridge(
                                 *(int *)(iVar9 + 0x354 + iVar6),
                                 iVar8,
                                 (char)local_18 + '\x1E',
@@ -201,10 +204,12 @@ extern "C" void __cdecl FUN_10005860(int param_1)
                                 *(float *)(iVar4 + 0x0C),
                                 '\1',
                                 *(float *)(iVar4 + 0x10),
-                                *(char *)(iVar4 + 1));
+                                *(char *)(iVar4 + 1),
+                                *(float *)(iVar4 + 0x14),
+                                static_cast<std::uint32_t>(param_1));
                         } else {
                             int iVar4 = *(int *)(iVar9 + 0x360 + iVar6);
-                            FUN_10006be0(
+                            FUN_10006be0_call_bridge(
                                 *(int *)(iVar9 + 0x354 + iVar6),
                                 iVar8,
                                 (char)local_18 + '\x1E',
@@ -215,7 +220,9 @@ extern "C" void __cdecl FUN_10005860(int param_1)
                                 *(float *)(iVar4 + 0x0C),
                                 '\0',
                                 *(float *)(iVar4 + 0x10),
-                                *(char *)(iVar4 + 1));
+                                *(char *)(iVar4 + 1),
+                                *(float *)(iVar4 + 0x14),
+                                static_cast<std::uint32_t>(param_1));
                         }
                     }
 

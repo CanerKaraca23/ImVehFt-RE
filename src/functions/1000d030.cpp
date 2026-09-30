@@ -1,9 +1,9 @@
 #include <cstdint>
 #include <cstdlib>
 #include <windows.h>
+#include "gta_sa_address_access.hpp"
 
 extern std::uint32_t _DAT_1003c3fc;
-extern std::uint8_t* _DAT_00b74494;
 extern HANDLE DAT_1003c3e8;
 extern int* DAT_1003c3ec;
 
@@ -28,7 +28,8 @@ void __stdcall FUN_1000d030()
     if (*reinterpret_cast<int*>(iVar2 + 0x40) != 0)
         return;
 
-    iVar1 = *reinterpret_cast<int*>(_DAT_00b74494 + 8);
+    iVar1 = *reinterpret_cast<int*>(
+        IMVEHFT_VEHICLE_POOL_POINTER_B74494 + 8);
     iVar6 = *reinterpret_cast<int*>(iVar2 + 0x44) * iVar1;
 
     if ((_DAT_1003c3fc & 1u) == 0)

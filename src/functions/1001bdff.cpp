@@ -30,7 +30,7 @@ extern "C" int* __cdecl FUN_1001dd12(
 extern "C" int* __cdecl __errno();
 extern "C" void __stdcall FUN_1001189f();
 
-extern "C" errno_t __cdecl __fptostr(
+errno_t __cdecl __fptostr(
     char*,
     std::size_t,
     int,
@@ -45,7 +45,7 @@ extern "C" int __cdecl FUN_1001bc9e(
     localeinfo_struct*);
 
 
-void __cdecl __cftoe_l(
+extern "C" void __cdecl __cftoe_l(
     std::uint32_t* param_1,
     std::uint8_t* param_2,
     std::uint32_t param_3,

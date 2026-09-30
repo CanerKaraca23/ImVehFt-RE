@@ -1,6 +1,6 @@
 #include <cstdint>
 
-__declspec(naked) std::uint32_t __fastcall __fload_withFB(std::uint32_t, int)
+extern "C" __declspec(naked) std::uint32_t __fastcall __fload_withFB(std::uint32_t, int)
 {
     __asm
     {

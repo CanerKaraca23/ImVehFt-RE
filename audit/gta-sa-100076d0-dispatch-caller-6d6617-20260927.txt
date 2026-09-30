@@ -1,0 +1,143 @@
+FUNCTION FUN_006d64f0 @ 006d64f0
+006d64f0  PUSH ESI
+006d64f1  MOV ESI,ECX
+006d64f3  MOVSX EAX,word ptr [ESI + 0x22]
+006d64f7  MOV ECX,dword ptr [0x00c97b24]
+006d64fd  PUSH EDI
+006d64fe  MOV EDI,dword ptr [EAX*0x4 + 0xa9b0c8]
+006d6505  PUSH 0x1
+006d6507  PUSH 0x14
+006d6509  CALL dword ptr [ECX + 0x20]
+006d650c  MOV EAX,dword ptr [ESI + 0x590]
+006d6512  ADD ESP,0x8
+006d6515  TEST EAX,EAX
+006d6517  JNZ 0x006d6521
+006d6519  PUSH EDI
+006d651a  MOV ECX,ESI
+006d651c  CALL 0x006a2f00
+006d6521  MOV AX,word ptr [ESI + 0x59a]
+006d6528  TEST AX,AX
+006d652b  JL 0x006d65e4
+006d6531  MOVSX EAX,AX
+006d6534  LEA EDX,[EAX + EAX*0x4]
+006d6537  CMP byte ptr [EDX*0x4 + 0x946750],0x1
+006d653f  JNZ 0x006d65d2
+006d6545  MOV EAX,dword ptr [ESI + 0x59c]
+006d654b  TEST EAX,EAX
+006d654d  JZ 0x006d6569
+006d654f  MOVSX EAX,word ptr [ESI + 0x598]
+006d6556  PUSH EAX
+006d6557  MOV dword ptr [ESI + 0x59c],0x0
+006d6561  CALL 0x00731a30
+006d6566  ADD ESP,0x4
+006d6569  MOV CX,word ptr [ESI + 0x59a]
+006d6570  MOVSX EDX,CX
+006d6573  PUSH EDX
+006d6574  MOV word ptr [ESI + 0x598],CX
+006d657b  MOV word ptr [ESI + 0x59a],0xffff
+006d6584  CALL 0x00731a00
+006d6589  MOVSX EAX,word ptr [ESI + 0x598]
+006d6590  MOV ECX,dword ptr [0x00c8800c]
+006d6596  MOV EDX,dword ptr [ECX + 0x4]
+006d6599  ADD ESP,0x4
+006d659c  TEST byte ptr [EAX + EDX*0x1],0x80
+006d65a0  JZ 0x006d65a6
+006d65a2  XOR EAX,EAX
+006d65a4  JMP 0x006d65ae
+006d65a6  MOV ECX,dword ptr [ECX]
+006d65a8  LEA EAX,[EAX + EAX*0x2]
+006d65ab  LEA EAX,[ECX + EAX*0x4]
+006d65ae  MOV EAX,dword ptr [EAX]
+006d65b0  PUSH EAX
+006d65b1  CALL 0x00734940
+006d65b6  MOV dword ptr [ESI + 0x59c],EAX
+006d65bc  MOV AL,byte ptr [ESI + 0x42f]
+006d65c2  ADD ESP,0x4
+006d65c5  TEST AL,0x4
+006d65c7  JNZ 0x006d65eb
+006d65c9  MOV byte ptr [ESI + 0x434],0x1
+006d65d0  JMP 0x006d65eb
+006d65d2  ADD EAX,0x4e20
+006d65d7  PUSH 0x8
+006d65d9  PUSH EAX
+006d65da  CALL 0x004087e0
+006d65df  ADD ESP,0x8
+006d65e2  JMP 0x006d65eb
+006d65e4  AND byte ptr [ESI + 0x42f],0xfb
+006d65eb  XOR EDX,EDX
+006d65ed  MOV DL,byte ptr [ESI + 0x437]
+006d65f3  XOR EAX,EAX
+006d65f5  MOV AL,byte ptr [ESI + 0x436]
+006d65fb  XOR ECX,ECX
+006d65fd  MOV CL,byte ptr [ESI + 0x435]
+006d6603  PUSH EDX
+006d6604  XOR EDX,EDX
+006d6606  MOV DL,byte ptr [ESI + 0x434]
+006d660c  PUSH EAX
+006d660d  PUSH ECX
+006d660e  MOV ECX,EDI
+006d6610  PUSH EDX
+006d6611  CALL 0x004c84b0
+006d6616  PUSH ESI
+006d6617  CALL 0x004c8c90
+006d661c  MOV EAX,dword ptr [ESI + 0x59c]
+006d6622  MOV [0x00b4e47c],EAX
+006d6627  MOV ECX,dword ptr [ESI + 0x18]
+006d662a  PUSH ECX
+006d662b  CALL 0x004c8430
+006d6630  ADD ESP,0x8
+006d6633  POP EDI
+006d6634  POP ESI
+006d6635  RET
+
+DECOMPILED SOURCE
+
+void __fastcall FUN_006d64f0(int param_1)
+
+{
+  short sVar1;
+  undefined4 *puVar2;
+  undefined4 uVar3;
+  
+  uVar3 = (&DAT_00a9b0c8)[*(short *)(param_1 + 0x22)];
+  (**(code **)(DAT_00c97b24 + 0x20))(0x14,1);
+  if (*(int *)(param_1 + 0x590) == 0) {
+    FUN_006a2f00(uVar3);
+  }
+  sVar1 = *(short *)(param_1 + 0x59a);
+  if (sVar1 < 0) {
+    *(byte *)(param_1 + 0x42f) = *(byte *)(param_1 + 0x42f) & 0xfb;
+  }
+  else if ((&DAT_00946750)[sVar1 * 0x14] == '\x01') {
+    if (*(int *)(param_1 + 0x59c) != 0) {
+      *(undefined4 *)(param_1 + 0x59c) = 0;
+      FUN_00731a30((int)*(short *)(param_1 + 0x598));
+    }
+    sVar1 = *(short *)(param_1 + 0x59a);
+    *(short *)(param_1 + 0x598) = sVar1;
+    *(undefined2 *)(param_1 + 0x59a) = 0xffff;
+    FUN_00731a00((int)sVar1);
+    if ((*(byte *)((int)*(short *)(param_1 + 0x598) + DAT_00c8800c[1]) & 0x80) == 0) {
+      puVar2 = (undefined4 *)(*DAT_00c8800c + *(short *)(param_1 + 0x598) * 0xc);
+    }
+    else {
+      puVar2 = (undefined4 *)0x0;
+    }
+    uVar3 = FUN_00734940(*puVar2);
+    *(undefined4 *)(param_1 + 0x59c) = uVar3;
+    if ((*(byte *)(param_1 + 0x42f) & 4) == 0) {
+      *(undefined1 *)(param_1 + 0x434) = 1;
+    }
+  }
+  else {
+    FUN_004087e0(sVar1 + 20000,8);
+  }
+  FUN_004c84b0(*(undefined1 *)(param_1 + 0x434),*(undefined1 *)(param_1 + 0x435),
+               *(undefined1 *)(param_1 + 0x436),*(undefined1 *)(param_1 + 0x437));
+  FUN_004c8c90(param_1);
+  DAT_00b4e47c = *(undefined4 *)(param_1 + 0x59c);
+  FUN_004c8430(*(undefined4 *)(param_1 + 0x18));
+  return;
+}
+
+

@@ -1,9 +1,9 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 using Callback = void(__cdecl*)();
 using RegisterContext = std::uint32_t*;
 
-extern std::uint32_t* _DAT_00c1703c;
 
 extern "C" std::int32_t __stdcall FUN_10009360();
 extern void __stdcall FUN_10009a80();
@@ -27,7 +27,8 @@ void __stdcall FUN_100099f0(void)
         FUN_10009a80();
 
         reinterpret_cast<void(__cdecl*)(std::uint32_t*)>(
-            0x007EE180)(_DAT_00c1703c);
+            0x007EE180)(reinterpret_cast<std::uint32_t*>(
+                IMVEHFT_GLOBAL_AT(std::uintptr_t, 0x00c1703c)));
 
         state = FUN_10009360();
 
@@ -39,14 +40,16 @@ void __stdcall FUN_100099f0(void)
         reinterpret_cast<void(__cdecl*)(std::uint32_t, std::uint32_t, std::uint32_t)>(
             0x007FAF50)(
                 *reinterpret_cast<std::uint32_t*>(
-                    reinterpret_cast<std::uint8_t*>(_DAT_00c1703c) + 0x60),
+                    reinterpret_cast<std::uint8_t*>(
+                        IMVEHFT_GLOBAL_AT(std::uintptr_t, 0x00c1703c)) + 0x60),
                 0,
                 0);
 
         reinterpret_cast<void(__cdecl*)()>(0x007FB110)();
 
         reinterpret_cast<void(__cdecl*)(std::uint32_t*)>(
-            0x007EE190)(_DAT_00c1703c);
+            0x007EE190)(reinterpret_cast<std::uint32_t*>(
+                IMVEHFT_GLOBAL_AT(std::uintptr_t, 0x00c1703c)));
     }
 
     std::uint32_t* end = reinterpret_cast<std::uint32_t*>(in_EAX[1]);

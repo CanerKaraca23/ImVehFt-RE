@@ -2,13 +2,13 @@
 
 using Address32 = std::uint32_t;
 
-extern "C" char __cdecl ___BuildCatchObjectHelper(
+char __cdecl ___BuildCatchObjectHelper(
     std::int32_t,
     std::int32_t*,
     std::uint32_t*,
     std::uint8_t*);
 
-extern "C" std::int32_t __cdecl ___AdjustPointer(
+std::int32_t __cdecl ___AdjustPointer(
     std::int32_t,
     std::int32_t*);
 

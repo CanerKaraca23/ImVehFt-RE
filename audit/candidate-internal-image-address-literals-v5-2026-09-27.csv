@@ -1,0 +1,167 @@
+address,section,exact_function_entry,source,line,literal,source_line
+0x10016740,.text,_memset,src/functions/100042c0.cpp,67,0x10016740,0x10016740)(
+0x10003FE0,.text,FUN_10003fe0,src/functions/10006790.cpp,36,0x10003fe0,"0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 1);"
+0x10003FB0,.text,FUN_10003fb0,src/functions/10006790.cpp,39,0x10003fb0,"0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 1);"
+0x10003FE0,.text,FUN_10003fe0,src/functions/10006790.cpp,49,0x10003fe0,"0x7f1200)(uVar1, reinterpret_cast<void*>(0x10003fe0), 0);"
+0x10003FB0,.text,FUN_10003fb0,src/functions/10006790.cpp,52,0x10003fb0,"0x7f0dc0)(uVar1, reinterpret_cast<void*>(0x10003fb0), 0);"
+0x100073F0,.text,FUN_100073f0,src/functions/10006be0.cpp,442,0x100073f0,0x100073f0)(
+0x10009610,.text,FUN_10009610,src/functions/10009790.cpp,10,0x10009610,static_cast<std::uintptr_t>(0x10009610));
+0x100098E0,.text,,src/functions/10009790.cpp,12,0x100098e0,"update(reinterpret_cast<void*>(0x100098e0), iVar1, 0);"
+0x100098F0,.text,,src/functions/10009790.cpp,13,0x100098f0,"update(reinterpret_cast<void*>(0x100098f0), iVar1, 1);"
+0x10009900,.text,,src/functions/10009790.cpp,14,0x10009900,"update(reinterpret_cast<void*>(0x10009900), iVar1, 2);"
+0x10009910,.text,,src/functions/10009790.cpp,15,0x10009910,"update(reinterpret_cast<void*>(0x10009910), iVar1, 3);"
+0x10009920,.text,,src/functions/10009790.cpp,16,0x10009920,"update(reinterpret_cast<void*>(0x10009920), iVar1, 4);"
+0x10009930,.text,,src/functions/10009790.cpp,17,0x10009930,"update(reinterpret_cast<void*>(0x10009930), iVar1, 5);"
+0x10009940,.text,,src/functions/10009790.cpp,18,0x10009940,"update(reinterpret_cast<void*>(0x10009940), iVar1, 6);"
+0x10009950,.text,,src/functions/10009790.cpp,19,0x10009950,"update(reinterpret_cast<void*>(0x10009950), iVar1, 7);"
+0x10009960,.text,,src/functions/10009790.cpp,20,0x10009960,"update(reinterpret_cast<void*>(0x10009960), iVar1, 8);"
+0x10009970,.text,,src/functions/10009790.cpp,21,0x10009970,"update(reinterpret_cast<void*>(0x10009970), iVar1, 9);"
+0x10009980,.text,,src/functions/10009790.cpp,22,0x10009980,"update(reinterpret_cast<void*>(0x10009980), iVar1, 10);"
+0x10009990,.text,,src/functions/10009790.cpp,23,0x10009990,"update(reinterpret_cast<void*>(0x10009990), iVar1, 0xB);"
+0x100099A0,.text,,src/functions/10009790.cpp,24,0x100099a0,"update(reinterpret_cast<void*>(0x100099a0), iVar1, 0xC);"
+0x100099B0,.text,,src/functions/10009790.cpp,25,0x100099b0,"update(reinterpret_cast<void*>(0x100099b0), iVar1, 0xD);"
+0x100099C0,.text,,src/functions/10009790.cpp,26,0x100099c0,"update(reinterpret_cast<void*>(0x100099c0), iVar1, 0xE);"
+0x100099D0,.text,,src/functions/10009790.cpp,27,0x100099d0,"update(reinterpret_cast<void*>(0x100099d0), iVar1, 0xF);"
+0x1000C640,.text,,src/functions/1000a8c0.cpp,42,0x1000c640,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c640u};"
+0x1000C650,.text,,src/functions/1000a8c0.cpp,43,0x1000c650,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c650u};"
+0x1000C660,.text,,src/functions/1000a8c0.cpp,44,0x1000c660,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c660u};"
+0x1000C670,.text,,src/functions/1000a8c0.cpp,45,0x1000c670,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c670u};"
+0x1000C680,.text,,src/functions/1000a8c0.cpp,46,0x1000c680,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c680u};"
+0x1000C690,.text,,src/functions/1000aae0.cpp,42,0x1000c690,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c690u};"
+0x1000C6A0,.text,,src/functions/1000aae0.cpp,43,0x1000c6a0,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c6a0u};"
+0x1000C6B0,.text,,src/functions/1000aae0.cpp,44,0x1000c6b0,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c6b0u};"
+0x1000C6C0,.text,,src/functions/1000aae0.cpp,45,0x1000c6c0,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c6c0u};"
+0x1000C6D0,.text,,src/functions/1000aae0.cpp,46,0x1000c6d0,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c6d0u};"
+0x1000C6E0,.text,,src/functions/1000ac20.cpp,70,0x1000c6e0,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c6e0u};"
+0x1000C6F0,.text,,src/functions/1000ac20.cpp,71,0x1000c6f0,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c6f0u};"
+0x1000C700,.text,,src/functions/1000ac20.cpp,72,0x1000c700,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c700u};"
+0x1000C710,.text,,src/functions/1000ac20.cpp,73,0x1000c710,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c710u};"
+0x1000C720,.text,,src/functions/1000ac20.cpp,74,0x1000c720,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c720u};"
+0x1000C730,.text,,src/functions/1000ad60.cpp,40,0x1000c730,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c730u};"
+0x1000C740,.text,,src/functions/1000ad60.cpp,41,0x1000c740,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c740u};"
+0x1000C750,.text,,src/functions/1000ad60.cpp,42,0x1000c750,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c750u};"
+0x1000C760,.text,,src/functions/1000ad60.cpp,43,0x1000c760,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c760u};"
+0x1000C770,.text,,src/functions/1000ad60.cpp,44,0x1000c770,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c770u};"
+0x1000C780,.text,,src/functions/1000aea0.cpp,46,0x1000c780,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c780u};"
+0x1000C790,.text,,src/functions/1000aea0.cpp,47,0x1000c790,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c790u};"
+0x1000C7A0,.text,,src/functions/1000aea0.cpp,48,0x1000c7a0,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c7a0u};"
+0x1000C7B0,.text,,src/functions/1000aea0.cpp,49,0x1000c7b0,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c7b0u};"
+0x1000C7C0,.text,,src/functions/1000aea0.cpp,50,0x1000c7c0,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c7c0u};"
+0x1000C7D0,.text,,src/functions/1000afe0.cpp,74,0x1000c7d0,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c7d0u};"
+0x1000C7E0,.text,,src/functions/1000afe0.cpp,75,0x1000c7e0,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c7e0u};"
+0x1000C7F0,.text,,src/functions/1000afe0.cpp,76,0x1000c7f0,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c7f0u};"
+0x1000C800,.text,,src/functions/1000afe0.cpp,77,0x1000c800,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c800u};"
+0x1000C810,.text,,src/functions/1000afe0.cpp,78,0x1000c810,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c810u};"
+0x1000C820,.text,,src/functions/1000b120.cpp,54,0x1000c820,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c820u};"
+0x1000C830,.text,,src/functions/1000b120.cpp,55,0x1000c830,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c830u};"
+0x1000C840,.text,,src/functions/1000b120.cpp,56,0x1000c840,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c840u};"
+0x1000C850,.text,,src/functions/1000b120.cpp,57,0x1000c850,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c850u};"
+0x1000C860,.text,,src/functions/1000b120.cpp,58,0x1000c860,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c860u};"
+0x1000C870,.text,,src/functions/1000b260.cpp,52,0x1000c870,"FUN_1000cdc0_PatchPair patch_1{static_cast<std::uint32_t>(param_1), 0x1000c870u};"
+0x1000C880,.text,,src/functions/1000b260.cpp,53,0x1000c880,"FUN_1000cdc0_PatchPair patch_2{static_cast<std::uint32_t>(param_2), 0x1000c880u};"
+0x1000C890,.text,,src/functions/1000b260.cpp,54,0x1000c890,"FUN_1000cdc0_PatchPair patch_3{static_cast<std::uint32_t>(param_3), 0x1000c890u};"
+0x1000C8A0,.text,,src/functions/1000b260.cpp,55,0x1000c8a0,"FUN_1000cdc0_PatchPair patch_4{static_cast<std::uint32_t>(param_4), 0x1000c8a0u};"
+0x1000C8B0,.text,,src/functions/1000b260.cpp,56,0x1000c8b0,"FUN_1000cdc0_PatchPair patch_5{static_cast<std::uint32_t>(param_5), 0x1000c8b0u};"
+0x1000C8C0,.text,,src/functions/1000b460.cpp,42,0x1000c8c0,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c8c0u};"
+0x1000C8D0,.text,,src/functions/1000b460.cpp,43,0x1000c8d0,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c8d0u};"
+0x1000C8E0,.text,,src/functions/1000b460.cpp,44,0x1000c8e0,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c8e0u};"
+0x1000C8F0,.text,,src/functions/1000b460.cpp,45,0x1000c8f0,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c8f0u};"
+0x1000C900,.text,,src/functions/1000b460.cpp,46,0x1000c900,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c900u};"
+0x1000C910,.text,,src/functions/1000b5a0.cpp,42,0x1000c910,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c910u};"
+0x1000C920,.text,,src/functions/1000b5a0.cpp,43,0x1000c920,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c920u};"
+0x1000C930,.text,,src/functions/1000b5a0.cpp,44,0x1000c930,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c930u};"
+0x1000C940,.text,,src/functions/1000b5a0.cpp,45,0x1000c940,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c940u};"
+0x1000C950,.text,,src/functions/1000b5a0.cpp,46,0x1000c950,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c950u};"
+0x1000C960,.text,,src/functions/1000b6e0.cpp,54,0x1000c960,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c960u};"
+0x1000C970,.text,,src/functions/1000b6e0.cpp,55,0x1000c970,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c970u};"
+0x1000C980,.text,,src/functions/1000b6e0.cpp,56,0x1000c980,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c980u};"
+0x1000C990,.text,,src/functions/1000b6e0.cpp,57,0x1000c990,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c990u};"
+0x1000C9A0,.text,,src/functions/1000b6e0.cpp,58,0x1000c9a0,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c9a0u};"
+0x1000C9B0,.text,,src/functions/1000b8e0.cpp,54,0x1000c9b0,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c9b0u};"
+0x1000C9C0,.text,,src/functions/1000b8e0.cpp,55,0x1000c9c0,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c9c0u};"
+0x1000C9D0,.text,,src/functions/1000b8e0.cpp,56,0x1000c9d0,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c9d0u};"
+0x1000C9E0,.text,,src/functions/1000b8e0.cpp,57,0x1000c9e0,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c9e0u};"
+0x1000C9F0,.text,,src/functions/1000b8e0.cpp,58,0x1000c9f0,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c9f0u};"
+0x1000CA00,.text,,src/functions/1000bae0.cpp,63,0x1000ca00,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000ca00u};"
+0x1000CA10,.text,,src/functions/1000bae0.cpp,64,0x1000ca10,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000ca10u};"
+0x1000CA20,.text,,src/functions/1000bae0.cpp,65,0x1000ca20,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000ca20u};"
+0x1000CA30,.text,,src/functions/1000bae0.cpp,66,0x1000ca30,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000ca30u};"
+0x1000CA40,.text,,src/functions/1000bae0.cpp,67,0x1000ca40,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000ca40u};"
+0x1000CA50,.text,,src/functions/1000bb60.cpp,54,0x1000ca50,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000ca50u};"
+0x1000CA60,.text,,src/functions/1000bb60.cpp,55,0x1000ca60,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000ca60u};"
+0x1000CA70,.text,,src/functions/1000bb60.cpp,56,0x1000ca70,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000ca70u};"
+0x1000CA80,.text,,src/functions/1000bb60.cpp,57,0x1000ca80,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000ca80u};"
+0x1000CA90,.text,,src/functions/1000bb60.cpp,58,0x1000ca90,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000ca90u};"
+0x1000CC30,.text,,src/functions/1000bde0.cpp,54,0x1000cc30,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000cc30u};"
+0x1000CC40,.text,,src/functions/1000bde0.cpp,55,0x1000cc40,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000cc40u};"
+0x1000CC50,.text,,src/functions/1000bde0.cpp,56,0x1000cc50,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000cc50u};"
+0x1000CC60,.text,,src/functions/1000bde0.cpp,57,0x1000cc60,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000cc60u};"
+0x1000CC70,.text,,src/functions/1000bde0.cpp,58,0x1000cc70,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000cc70u};"
+0x1000CC80,.text,,src/functions/1000bf20.cpp,73,0x1000cc80,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000cc80u};"
+0x1000CC90,.text,,src/functions/1000bf20.cpp,74,0x1000cc90,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000cc90u};"
+0x1000CCA0,.text,,src/functions/1000bf20.cpp,75,0x1000cca0,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000cca0u};"
+0x1000CCB0,.text,,src/functions/1000bf20.cpp,76,0x1000ccb0,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000ccb0u};"
+0x1000CCC0,.text,,src/functions/1000bf20.cpp,77,0x1000ccc0,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000ccc0u};"
+0x1000CCD0,.text,,src/functions/1000c060.cpp,40,0x1000ccd0,"FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000ccd0u};"
+0x1000CCE0,.text,,src/functions/1000c060.cpp,41,0x1000cce0,"FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000cce0u};"
+0x1000CCF0,.text,,src/functions/1000c060.cpp,42,0x1000ccf0,"FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000ccf0u};"
+0x1000CD00,.text,,src/functions/1000c060.cpp,43,0x1000cd00,"FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000cd00u};"
+0x1000CD10,.text,,src/functions/1000c060.cpp,44,0x1000cd10,"FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000cd10u};"
+0x10009430,.text,FUN_10009430,src/functions/1000c420.cpp,38,0x10009430,"uVar1 = reinterpret_cast<MappingEnsureFn>(static_cast<std::uintptr_t>(0x10009430))(&DAT_1003c3e8, '\0');"
+0x10009430,.text,FUN_10009430,src/functions/1000cf80.cpp,29,0x10009430,"uVar1 = reinterpret_cast<MappingEnsureFn>(static_cast<std::uintptr_t>(0x10009430))(&DAT_1003c3e8, '\0');"
+0x100102C3,.text,exception,src/functions/1000d400.cpp,33,0x100102c3,"static_cast<std::uintptr_t>(0x100102c3))(local_14, &local_8);"
+0x10010351,.text,exception,src/functions/100101a5.cpp,12,0x10010351,"static_cast<std::uintptr_t>(0x10010351))(this, param_1);"
+0x100102C3,.text,exception,src/functions/100101c2.cpp,16,0x100102c3,"reinterpret_cast<ExceptionCtorFn>(static_cast<std::uintptr_t>(0x100102c3))(local_10, &param_1);"
+0x10010351,.text,exception,src/functions/100101f2.cpp,12,0x10010351,"static_cast<std::uintptr_t>(0x10010351))(this, param_1);"
+0x100116DB,.text,_free,src/functions/100102a5.cpp,20,0x100116db,reinterpret_cast<FreeFn>(static_cast<std::uintptr_t>(0x100116db))(this->what);
+0x10010265,.text,_Copy_str,src/functions/100102c3.cpp,23,0x10010265,reinterpret_cast<CopyStrFn>(static_cast<std::uintptr_t>(0x10010265))(
+0x100102A5,.text,_Tidy,src/functions/100102ea.cpp,21,0x100102a5,reinterpret_cast<TidyFn>(static_cast<std::uintptr_t>(0x100102a5))(this);
+0x10010265,.text,_Copy_str,src/functions/100102ea.cpp,30,0x10010265,reinterpret_cast<CopyStrFn>(static_cast<std::uintptr_t>(0x10010265))(
+0x100102A5,.text,_Tidy,src/functions/1001031f.cpp,10,0x100102a5,reinterpret_cast<TidyFn>(static_cast<std::uintptr_t>(0x100102a5))(param_1);
+0x100102A5,.text,_Tidy,src/functions/1001032a.cpp,14,0x100102a5,reinterpret_cast<TidyFn>(static_cast<std::uintptr_t>(0x100102a5))(this_);
+0x100102EA,.text,operator=,src/functions/10010351.cpp,24,0x100102ea,"reinterpret_cast<AssignFn>(static_cast<std::uintptr_t>(0x100102ea))(this, other);"
+0x100119F1,.text,__input_l,src/functions/100103e4.cpp,24,0x100119f1,"reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x100119f1U)),"
+0x10010684,.text,,src/functions/10010678.cpp,31,0x10010684,uStack_c = 0x10010684;
+0x10013AD2,.text,_Type_info_dtor,src/functions/10010761.cpp,14,0x10013ad2,reinterpret_cast<TypeInfoDtorFn>(static_cast<std::uintptr_t>(0x10013ad2))(this);
+0x10010761,.text,~type_info,src/functions/10010771.cpp,12,0x10010761,reinterpret_cast<DestructorFn>(static_cast<std::uintptr_t>(0x10010761))(this);
+0x10010756,.text,FUN_10010756,src/functions/10010771.cpp,17,0x10010756,reinterpret_cast<FreeFn>(static_cast<std::uintptr_t>(0x10010756))(this);
+0x10013B50,.text,_strcmp,src/functions/10010792.cpp,14,0x10013b50,"return reinterpret_cast<StrCmpFn>(static_cast<std::uintptr_t>(0x10013b50))(left, right) == 0;"
+0x1001023B,.text,FUN_1001023b,src/functions/10010893.cpp,45,0x1001023b,reinterpret_cast<BadAllocInitFn>(static_cast<std::uintptr_t>(0x1001023b))(
+0x10010351,.text,exception,src/functions/10010893.cpp,55,0x10010351,reinterpret_cast<BadAllocCopyCtorFn>(static_cast<std::uintptr_t>(0x10010351))(
+0x10012ED9,.text,,src/functions/10012e90.cpp,67,0x10012ed9,const std::uint32_t handler_address = 0x10012ed9u;
+0x10013AB6,.text,,src/functions/10013aa2.cpp,17,0x10013AB6,"reinterpret_cast<PVOID>(0x10013AB6),"
+0x1001189F,.text,FUN_1001189f,src/functions/10014003.cpp,194,0x1001189f,reinterpret_cast<void (__cdecl*)()>(0x1001189f)();
+0x10014C49,.text,,src/functions/10014fa7.cpp,51,0x10014c49,DAT_10039a74 = reinterpret_cast<FARPROC>(0x10014c49);
+0x100169E7,.text,,src/functions/100169da.cpp,42,0x100169e7,// Entry-register inputs confirmed by x86 instructions 0x100169e7 and 0x100169e9.
+0x100169E9,.text,,src/functions/100169da.cpp,42,0x100169e9,// Entry-register inputs confirmed by x86 instructions 0x100169e7 and 0x100169e9.
+0x10012E20,.text,__SEH_prolog4,src/functions/10017dde.cpp,18,0x10012e20,reinterpret_cast<seh_prolog_function>(0x10012e20)();
+0x10014DF0,.text,__getptd,src/functions/10017dde.cpp,21,0x10014df0,reinterpret_cast<getptd_function>(0x10014df0)();
+0x1001705C,.text,_abort,src/functions/10017dde.cpp,27,0x1001705c,reinterpret_cast<abort_function>(0x1001705c)();
+0x10018A01,.text,,src/functions/100189f5.cpp,36,0x10018a01,uStack_c = 0x10018a01u;
+0x10018E78,.text,,src/functions/10018e60.cpp,13,0x10018e78,"RtlUnwind(param_1, (PVOID)0x10018e78, (PEXCEPTION_RECORD)0x0, (PVOID)0x0);"
+0x10018E80,.text,,src/functions/10018ec5.cpp,28,0x10018e80,reinterpret_cast<void*>(0x10018e80)
+0x1001A7D8,.text,,src/functions/1001a785.cpp,81,0x1001a7d8,"// Ghidra 0x1001a7d8: ECX=&local_14, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001a785.cpp,81,0x10010b1a,"// Ghidra 0x1001a7d8: ECX=&local_14, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001a785.cpp,82,0x10010b1a,"reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(&local_14, _Locale);"
+0x1001AA5D,.text,,src/functions/1001aa4f.cpp,19,0x1001aa5d,"// Ghidra 0x1001aa5d: ECX=update, pushed param_1, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001aa4f.cpp,19,0x10010b1a,"// Ghidra 0x1001aa5d: ECX=update, pushed param_1, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001aa4f.cpp,20,0x10010b1a,"reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(update, param_1);"
+0x1001B6BE,.text,,src/functions/1001b693.cpp,22,0x1001b6be,"reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x1001b6beu)),"
+0x1001B7FB,.text,,src/functions/1001b750.cpp,51,0x1001B7FB,*reinterpret_cast<undefined4*>(param_2) = 0x1001B7FB;
+0x1001B827,.text,TranslatorGuardHandler,src/functions/1001b750.cpp,56,0x1001B827,local_28 = reinterpret_cast<code*>(0x1001B827u);
+0x1001BB6E,.text,,src/functions/1001bb5f.cpp,19,0x1001bb6e,"// Ghidra 0x1001bb6e: ECX=local_storage, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001bb5f.cpp,19,0x10010b1a,"// Ghidra 0x1001bb6e: ECX=local_storage, pushed _Locale, CALL 0x10010b1a."
+0x10010B1A,.text,_LocaleUpdate,src/functions/1001bb5f.cpp,20,0x10010b1a,"reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(local_storage, _Locale);"
+0x1001BAEB,.text,__forcdecpt_l,src/functions/1001bc78.cpp,8,0x1001baeb,reinterpret_cast<ForceDecimalPointLocale>(0x1001baeb)(
+0x1001BDFF,.text,__cftoe_l,src/functions/1001bec6.cpp,24,0x1001bdff,return reinterpret_cast<CftoeLocale>(0x1001bdff)(
+0x1001BF29,.text,,src/functions/1001bee6.cpp,103,0x1001bf29,iVar14 = 0x1001bf29;
+0x1001BF29,.text,,src/functions/1001bee6.cpp,121,0x1001bf29,iVar14 = 0x1001bf29;
+0x1001C5F0,.text,FUN_1001c5f0,src/functions/1001c5f0.cpp,5,0x1001c5f0,// Ghidra 12.1.3 export: 0x1001c5f0..0x1001c607 (24 bytes).
+0x1001C607,.text,,src/functions/1001c5f0.cpp,5,0x1001c607,// Ghidra 12.1.3 export: 0x1001c5f0..0x1001c607 (24 bytes).
+0x10010351,.text,exception,src/functions/1001d906.cpp,11,0x10010351,"reinterpret_cast<ExceptionCopyConstructor>(0x10010351)(self, param_1);"
+0x1001F712,.text,,src/functions/1001f203.cpp,58,0x1001f712,"/* WARNING: Removing unreachable block (ram,0x1001f712) */"
+0x1001F71C,.text,,src/functions/1001f203.cpp,60,0x1001f71c,"/* WARNING: Removing unreachable block (ram,0x1001f71c) */"
+0x1001F721,.text,,src/functions/1001f203.cpp,62,0x1001f721,"/* WARNING: Removing unreachable block (ram,0x1001f721) */"
+0x10020870,.text,FUN_10020870,src/functions/10020870.cpp,34,0x10020870,// Ghidra disassembly at 0x10020870 calls the CRT constructor at 0x100102c3
+0x100102C3,.text,exception,src/functions/10020870.cpp,34,0x100102c3,// Ghidra disassembly at 0x10020870 calls the CRT constructor at 0x100102c3
+0x100102C3,.text,exception,src/functions/10020870.cpp,36,0x100102c3,"reinterpret_cast<ExceptionCtor>(0x100102c3)(exception_object, &message);"

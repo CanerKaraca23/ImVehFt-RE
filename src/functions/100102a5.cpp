@@ -1,6 +1,8 @@
 #include <cstddef>
 #include <cstdint>
 
+extern "C" void __cdecl _free(void* memory);
+
 struct ExceptionStorage
 {
     void __thiscall tidy();
@@ -16,8 +18,7 @@ void ExceptionStorage::tidy()
 {
     if (this->do_free != 0)
     {
-        using FreeFn = void (__cdecl*)(void*);
-        reinterpret_cast<FreeFn>(static_cast<std::uintptr_t>(0x100116db))(this->what);
+        _free(this->what);
     }
 
     this->what = nullptr;

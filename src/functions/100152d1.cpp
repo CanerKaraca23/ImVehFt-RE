@@ -26,7 +26,7 @@ static_assert(offsetof(_iobuf, _flag) == 0x0c);
 static_assert(sizeof(_iobuf) == 0x20);
 using undefined = unsigned char;
 
-extern "C" int __cdecl __fileno(FILE* _File);
+int __cdecl __fileno(FILE* _File);
 extern "C" int* __cdecl __errno();
 extern "C" undefined** __stdcall FUN_1001301f();
 extern "C" int __cdecl __isatty(int _FileHandle);

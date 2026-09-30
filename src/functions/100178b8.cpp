@@ -23,15 +23,22 @@ struct localeinfo_struct
 struct _LocaleUpdate
 {
     localeinfo_struct* locinfo;
+    void* mbcinfo;
     struct cleanup_state
     {
         std::uint8_t reserved[0x70];
         DWORD flags;
     }* local_c;
     char local_8;
+    std::uint8_t reserved_0d[3];
 
-    _LocaleUpdate(localeinfo_struct* locale_info, _locale_t locale);
+    _LocaleUpdate(_locale_t locale);
 };
+static_assert(offsetof(_LocaleUpdate, locinfo) == 0x00);
+static_assert(offsetof(_LocaleUpdate, mbcinfo) == 0x04);
+static_assert(offsetof(_LocaleUpdate, local_c) == 0x08);
+static_assert(offsetof(_LocaleUpdate, local_8) == 0x0c);
+static_assert(sizeof(_LocaleUpdate) == 0x10);
 
 extern "C" int __cdecl __isleadbyte_l(
     unsigned int c,
@@ -47,7 +54,7 @@ extern "C" int __stdcall MultiByteToWideChar(
 
 extern "C" int* __cdecl __errno();
 
-int __cdecl __mbtowc_l(
+extern "C" int __cdecl __mbtowc_l(
     wchar_t* _DstCh,
     char* _SrcCh,
     std::size_t _SrcSizeInBytes,
@@ -57,8 +64,7 @@ int __cdecl __mbtowc_l(
     {
         if (*_SrcCh != '\0')
         {
-            localeinfo_struct local_info;
-            _LocaleUpdate local_14(&local_info, _Locale);
+            _LocaleUpdate local_14(_Locale);
 
             if (local_14.locinfo->lc_category[0].wlocale != nullptr)
             {

@@ -16,7 +16,7 @@ extern "C" unsigned long* __cdecl ___doserrno(void);
 extern "C" int __cdecl __setmode_nolock(int, int);
 extern "C" int __cdecl __write_nolock(int, void*, unsigned int);
 extern "C" long long __cdecl __lseeki64_nolock(int, long long, int);
-int __cdecl __chsize_nolock(int _FileHandle, long long _Size)
+extern "C" int __cdecl __chsize_nolock(int _FileHandle, long long _Size)
 {
     int iVar1;
     HANDLE pvVar2;

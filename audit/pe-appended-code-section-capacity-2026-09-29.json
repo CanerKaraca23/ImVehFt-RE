@@ -1,0 +1,78 @@
+{
+  "scope": "read-only capacity estimate for appending one executable section; does not patch or validate a PE",
+  "reference_path": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "image_bytes": 247296,
+  "section_count": 5,
+  "sections": [
+    {
+      "name": ".text",
+      "rva": "0x00001000",
+      "virtual_size": 131707,
+      "raw_size": 132096,
+      "raw_offset": "0x00000400"
+    },
+    {
+      "name": ".rdata",
+      "rva": "0x00022000",
+      "virtual_size": 28484,
+      "raw_size": 28672,
+      "raw_offset": "0x00020800"
+    },
+    {
+      "name": ".data",
+      "rva": "0x00029000",
+      "virtual_size": 83292,
+      "raw_size": 68096,
+      "raw_offset": "0x00027800"
+    },
+    {
+      "name": ".rsrc",
+      "rva": "0x0003E000",
+      "virtual_size": 696,
+      "raw_size": 1024,
+      "raw_offset": "0x00038200"
+    },
+    {
+      "name": ".reloc",
+      "rva": "0x0003F000",
+      "virtual_size": 16196,
+      "raw_size": 16384,
+      "raw_offset": "0x00038600"
+    }
+  ],
+  "section_alignment": 4096,
+  "file_alignment": 512,
+  "size_of_headers": 1024,
+  "section_table_end": 680,
+  "header_slack_before_first_raw_section": 344,
+  "additional_40_byte_section_headers_that_fit": 8,
+  "size_of_image_before": 274432,
+  "highest_raw_section_end": 247296,
+  "overlay_bytes_after_last_raw_section": 0,
+  "security_directory_file_offset": 0,
+  "security_directory_size": 0,
+  "packing_unplaced_entry_count": 2,
+  "packing_unplaced_entries": [
+    {
+      "address": "0x1001f203",
+      "size": 4108
+    },
+    {
+      "address": "0x1001eb27",
+      "size": 2640
+    }
+  ],
+  "combined_candidate_body_bytes_required": 6748,
+  "aligned_new_section_raw_size": 7168,
+  "estimated_appended_raw_offset": 247296,
+  "estimated_appended_section_rva": "0x00043000",
+  "estimated_size_of_image_after": "0x00045000",
+  "one_new_section_header_fits": true,
+  "capacity_estimate_succeeded": true,
+  "limitations": [
+    "An available header slot and appended raw range do not prove a loader-valid section-table edit.",
+    "The moved functions still need code/data reference, COFF relocation, base-relocation, import, and calling-convention reconciliation.",
+    "No bytes, checksum, data directories, or PE fields are modified by this audit."
+  ]
+}

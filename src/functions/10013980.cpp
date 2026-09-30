@@ -1,12 +1,54 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
-extern "C" void* ExceptionList;
+#pragma comment(linker, "/alternatename:__local_unwind4=___local_unwind4")
+
 extern "C" std::uint32_t DAT_10029490;
 
 extern "C" void __stdcall __NLG_Notify(unsigned long);
 extern "C" void __stdcall FUN_10018f94();
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
+extern "C" void __cdecl __local_unwind4(
+    std::uint32_t* param_1,
+    int param_2,
+    std::uint32_t param_3);
 
-void __cdecl __local_unwind4(
+using UnwindHandler = std::uint32_t (__cdecl*)(void*, void*, void*, void*);
+
+__declspec(naked) static std::uint32_t __cdecl imvehft_unwind_handler4(
+    void*,
+    void*,
+    void*,
+    void*)
+{
+    __asm
+    {
+        mov ecx, dword ptr [esp + 4]
+        test dword ptr [ecx + 4], 6
+        mov eax, 1
+        jz handler_done
+        mov eax, dword ptr [esp + 8]
+        mov ecx, dword ptr [eax + 8]
+        xor ecx, eax
+        call __security_check_cookie
+        push ebp
+        mov ebp, dword ptr [eax + 18h]
+        push dword ptr [eax + 0Ch]
+        push dword ptr [eax + 10h]
+        push dword ptr [eax + 14h]
+        call __local_unwind4
+        add esp, 0Ch
+        pop ebp
+        mov eax, dword ptr [esp + 8]
+        mov edx, dword ptr [esp + 10h]
+        mov dword ptr [edx], eax
+        mov eax, 3
+    handler_done:
+        ret
+    }
+}
+
+extern "C" void __cdecl __local_unwind4(
     std::uint32_t* param_1,
     int param_2,
     std::uint32_t param_3)
@@ -14,19 +56,19 @@ void __cdecl __local_unwind4(
     struct RegistrationRecord
     {
         void* previous;
-        void* handler;
+        UnwindHandler handler;
         std::uint32_t cookie;
     };
 
     RegistrationRecord registration{
-        ExceptionList,
-        reinterpret_cast<void*>(0x10013A10u),
+        IMVEHFT_READ_EXCEPTION_LIST(),
+        &imvehft_unwind_handler4,
         DAT_10029490 ^
             static_cast<std::uint32_t>(
                 reinterpret_cast<std::uintptr_t>(&registration))
     };
 
-    ExceptionList = &registration;
+    IMVEHFT_WRITE_EXCEPTION_LIST(&registration);
 
     while (true)
     {
@@ -59,5 +101,5 @@ void __cdecl __local_unwind4(
         }
     }
 
-    ExceptionList = registration.previous;
+    IMVEHFT_WRITE_EXCEPTION_LIST(registration.previous);
 }

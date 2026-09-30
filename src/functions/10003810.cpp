@@ -27,11 +27,8 @@ extern "C" void __cdecl FUN_10003810(char* param_1)
     extern unsigned int DAT_10024650;
 
 
-    extern void* __cdecl fopen(char*, char*);
-    extern char* __cdecl fgets(char*, int, void*);
     extern int __cdecl FID_conflict__sscanf(const char*, const char*, ...);
     extern void* __cdecl FID_conflict__memcpy(void*, const void*, unsigned int);
-    extern int __cdecl fclose(void*);
 
     char local_4e0[512];
     char local_2e0[512];
@@ -48,13 +45,14 @@ extern "C" void __cdecl FUN_10003810(char* param_1)
     unsigned int local_18;
     unsigned int local_14;
     unsigned int local_28;
-    void* local_10;
+    FILE* local_10;
     int local_c;
     unsigned int local_8;
 
     FUN_100014c0((char*)"Reading eml file %s");
 
-    local_10 = fopen(param_1, (char*)"rt");
+#pragma warning(suppress:4996)
+    local_10 = fopen(param_1, "rt");
 
     do
     {

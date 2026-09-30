@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <corecrt.h>
 #include <stdio.h>
-extern "C" void __cdecl __NLG_Notify(int);
+extern "C" void __stdcall __NLG_Notify(int);
 
 extern "C" __declspec(naked) void __fastcall _EH4_TransferToHandler(
     void* ,

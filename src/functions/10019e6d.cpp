@@ -16,7 +16,7 @@ static_assert(offsetof(_LocaleUpdate, updated) == 0x0c);
 static_assert(sizeof(_LocaleUpdate) == 0x10);
 extern "C" int __cdecl __crtLCMapStringA_stat(localeinfo_struct*, unsigned long, unsigned long, char*, int, char*, int, int, int);
 
-int __cdecl ___crtLCMapStringA(
+extern "C" int __cdecl ___crtLCMapStringA(
     _locale_t _Plocinfo,
     LPCWSTR _LocaleName,
     DWORD _DwMapFlag,

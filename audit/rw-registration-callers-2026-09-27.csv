@@ -1,0 +1,6 @@
+target,reference_from,reference_type,caller_entry,caller_name,decompile_status
+007f3bb0,00748fa6,UNCONDITIONAL_CALL,00748f70,"FUN_00748f70",decompiled
+007fb0b0,004c9ac5,UNCONDITIONAL_CALL,004c9ab0,"FUN_004c9ab0",decompiled
+007f1260,0072fac6,UNCONDITIONAL_CALL,0072fab0,"FUN_0072fab0",decompiled
+007f1260,00732e66,UNCONDITIONAL_CALL,00732e30,"FUN_00732e30",decompiled
+007f1260,007c4633,UNCONDITIONAL_CALL,007c4600,"FUN_007c4600",decompiled

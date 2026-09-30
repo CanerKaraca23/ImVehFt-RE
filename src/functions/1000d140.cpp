@@ -9,18 +9,19 @@ extern "C" int __stdcall FUN_10009360();
 extern "C" void __stdcall FUN_100094d0();
 #include <cstdint>
 
+extern "C" int __cdecl _atexit(void (__cdecl*)());
+extern "C" void* __stdcall OpenFileMappingA(
+    std::uint32_t, int, const char*);
+extern "C" void* __stdcall MapViewOfFile(
+    void*, std::uint32_t, std::uint32_t, std::uint32_t, std::uint32_t);
+extern "C" int __stdcall HeapFree(void*, std::uint32_t, void*);
+
 void __stdcall FUN_1000d140()
 {
     using HANDLE = void*;
     using LPVOID = void*;
     using DWORD = std::uint32_t;
     using BOOL = int;
-
-    extern int __cdecl _atexit(void (__cdecl*)());
-    extern HANDLE __stdcall OpenFileMappingA(DWORD, BOOL, const char*);
-    extern LPVOID __stdcall MapViewOfFile(
-        HANDLE, DWORD, DWORD, DWORD, DWORD);
-    extern BOOL __stdcall HeapFree(HANDLE, DWORD, LPVOID);
 
     extern int DAT_1003c3fc;
     extern HANDLE DAT_1003c3e8;

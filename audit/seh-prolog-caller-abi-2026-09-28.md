@@ -1,0 +1,9 @@
+# `__SEH_prolog4` caller ABI correction (2026-09-28)
+
+Ghidra export `ghidra_exports/10017dde.json` shows `terminate` entering the prolog with `PUSH 8`, `PUSH 0x10028460`, then `CALL 0x10012e20`. On x86 cdecl this is `(scope_table, frame_size=8)`. The naked helper at `0x10012e20` reads `[ESP+0x10]` after saving the handler and FS chain, which is the second argument/frame size. The candidate source had incorrectly called the helper through a zero-argument function pointer to the preferred VA; that omitted both arguments and could make the helper allocate using unrelated caller-stack contents.
+
+Corrected `src/functions/10012e20.cpp` to declare the two ABI parameters (the naked assembly reads them from the stack), and `src/functions/10017dde.cpp` now calls the candidate C++ symbol with `(0x10028460, 8)`. Both files have adjacent `.pre-seh-prolog-abi-20260928.bak` backups. The diagnostic link map confirms `?__SEH_prolog4@@YAXIH@Z` resolves to `10012e20.obj`.
+
+Fresh final gates: MSVC x86 `/O2 /W4 /WX /MT` 705/705 (`build/strict-all-post-seh-prolog-abi-final-20260928.json`), ReAgent objective 705 PASS / 0 FAIL / 0 UNKNOWN (`audit/objective-post-seh-prolog-abi-final-2026-09-28.json`), parity 705 GREEN / 0 YELLOW / 0 RED (`build/parity-post-seh-prolog-abi-final-20260928.json`), and all-705-object normal diagnostic link succeeds (`build/link-probe/strict-704-historical-sdk/ImVehFt-seh-prolog-abi-diagnostic-not-ASI.dll`). Both 705-row hash manifests independently match the current sources.
+
+The literal inventory now records the scope-table address `0x10028460` as one `.rdata` use; that table pointer still needs relocation-aware treatment. The helper also embeds the original handler address in inline assembly. `__cftoe_l`'s return-type mismatch and remaining interior-code/data literals are not resolved by this pass. No production `.asi` or gameplay validation is established.

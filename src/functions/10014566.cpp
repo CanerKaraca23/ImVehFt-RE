@@ -41,8 +41,6 @@ extern "C" BOOL __stdcall GetCPInfo(std::uint32_t, _cpinfo*);
 extern "C" void* __cdecl _memset(void*, int, std::size_t);
 extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
 
-extern int extraout_ECX;                  // Unresolved decompiler register value.
-extern std::uint32_t extraout_EDX;       // Unresolved decompiler register value.
 
 extern "C" std::uint32_t __cdecl
 __setmbcp_nolock(std::uint32_t param_1, int param_2)
@@ -99,15 +97,14 @@ __setmbcp_nolock(std::uint32_t param_1, int param_2)
                     system_code_page;
                 *reinterpret_cast<std::uint32_t*>(param_2 + 0x08) = 1;
                 *reinterpret_cast<int*>(param_2 + 0x0C) =
-                    CPtoLCID(static_cast<int>(param_1));
+                    CPtoLCID(static_cast<int>(system_code_page));
 
                 auto* destination =
                     reinterpret_cast<std::uint16_t*>(param_2 + 0x10);
 
-                // The source offset is unresolved in the supplied decompilation.
                 auto* source = reinterpret_cast<std::uint16_t*>(
                     reinterpret_cast<BYTE*>(DAT_100298d0) +
-                    0x04 + extraout_ECX);
+                    0x04 + table_index * 0x30);
 
                 for (int count = 6; count != 0; --count)
                     *destination++ = *source++;
@@ -174,11 +171,10 @@ __setmbcp_nolock(std::uint32_t param_1, int param_2)
                     *mbctype++ |= 8;
 
                 *reinterpret_cast<int*>(param_2 + 0x0C) =
-                    CPtoLCID(static_cast<int>(param_1));
+                    CPtoLCID(static_cast<int>(system_code_page));
 
-                // Unresolved decompiler register value.
                 *reinterpret_cast<std::uint32_t*>(param_2 + 0x08) =
-                    extraout_EDX;
+                    1;
             }
 
             *reinterpret_cast<std::uint32_t*>(param_2 + 0x10) = 0;

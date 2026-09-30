@@ -1,9 +1,11 @@
 #include <cstdint>
-
-extern std::uint16_t DAT_00B4E478;
+#include "gta_sa_address_access.hpp"
 
 extern "C" std::uint32_t __fastcall FUN_10008b70(std::int32_t param_1)
 {
+    std::uint16_t& DAT_00B4E478 =
+        IMVEHFT_GLOBAL_AT(std::uint16_t, 0x00b4e478);
+
     using GetContextFn = std::uint32_t (__cdecl*)();
     using SetValueFn = void (__cdecl*)(std::uint32_t, std::int32_t);
     using GetIndexFn = std::int32_t (__cdecl*)();

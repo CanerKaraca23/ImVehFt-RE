@@ -1,18 +1,15 @@
 #include <cstddef>
 #include <cstdint>
+#include "imvehft_image_aliases.hpp"
 
 extern "C" void* __cdecl FUN_10010893(std::size_t size);
 
-struct ExceptionAbi
-{
-    void construct(const void* source);
-};
+struct ExceptionStorage { void* __thiscall construct(char** message); };
 
 extern "C" [[noreturn]] void __stdcall __CxxThrowException_8(
     void* exception_object,
     const void* throw_info);
 
-extern void** std_bad_alloc_vftable;
 extern std::uint8_t DAT_10028608;
 
 extern "C" void* __stdcall FUN_10001430(
@@ -43,8 +40,9 @@ extern "C" void* __stdcall FUN_10001430(
     void* local_10[3];
     param_1 = nullptr;
 
-    reinterpret_cast<ExceptionAbi*>(local_10)->construct(&param_1);
-    local_10[0] = std_bad_alloc_vftable;
+    reinterpret_cast<ExceptionStorage*>(local_10)->construct(&param_1);
+    local_10[0] = reinterpret_cast<void*>(
+        static_cast<std::uintptr_t>(IVF_IMAGE_ADDRESS_10022250));
 
     __CxxThrowException_8(local_10, &DAT_10028608);
 }

@@ -1,0 +1,157 @@
+{
+  "scope": "Name-based import-slot crosswalk for __imp_* COFF symbols referenced by the 147 thunk bodies.",
+  "pinned_original_asi": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "symbol_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-local-closure-symbol-delta-2026-09-30.json",
+  "symbol_report_sha256": "A1D50E9AC26D753FD28FA3357DDF216640A0AB8F4BB5409B9ACF8E5D0001BDB6",
+  "original_imported_function_count": 82,
+  "candidate_import_symbol_count": 6,
+  "matched_candidate_import_symbols": 6,
+  "candidate_symbols_absent_from_original_iat": [],
+  "candidate_symbols_with_dll_mismatch_or_unknown": [],
+  "limitations": [
+    "This joins diagnostic import-provider DLL identity and API name to the original PE import table; ordinals and forwarded imports are not present in the candidate subset checked here.",
+    "The IAT slot VAs are from the original image and are the relevant fixed-address targets; this does not patch the appended body.",
+    "Non-import external aliases, CRT code/data, base-relocation generation, and loader/runtime behavior are not covered."
+  ],
+  "imports": [
+    {
+      "coff_import_symbol": "__imp__CloseHandle@4",
+      "api_name": "closehandle",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 2,
+      "diagnostic_provider": "kernel32:KERNEL32.dll",
+      "original_iat_matches_by_name": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "CloseHandle",
+          "iat_va": "0x10022054"
+        }
+      ],
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "CloseHandle",
+          "iat_va": "0x10022054"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__CreateFileA@28",
+      "api_name": "createfilea",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 3,
+      "diagnostic_provider": "kernel32:KERNEL32.dll",
+      "original_iat_matches_by_name": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "CreateFileA",
+          "iat_va": "0x10022120"
+        }
+      ],
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "CreateFileA",
+          "iat_va": "0x10022120"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetFileType@4",
+      "api_name": "getfiletype",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "diagnostic_provider": "kernel32:KERNEL32.dll",
+      "original_iat_matches_by_name": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetFileType",
+          "iat_va": "0x100220AC"
+        }
+      ],
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetFileType",
+          "iat_va": "0x100220AC"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetKeyState@4",
+      "api_name": "getkeystate",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "diagnostic_provider": "user32:USER32.dll",
+      "original_iat_matches_by_name": [
+        {
+          "dll": "USER32.dll",
+          "name": "GetKeyState",
+          "iat_va": "0x10022140"
+        }
+      ],
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "USER32.dll",
+          "name": "GetKeyState",
+          "iat_va": "0x10022140"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__GetLastError@0",
+      "api_name": "getlasterror",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 3,
+      "diagnostic_provider": "kernel32:KERNEL32.dll",
+      "original_iat_matches_by_name": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetLastError",
+          "iat_va": "0x10022070"
+        }
+      ],
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetLastError",
+          "iat_va": "0x10022070"
+        }
+      ]
+    },
+    {
+      "coff_import_symbol": "__imp__TlsAlloc@0",
+      "api_name": "tlsalloc",
+      "relocation_types": [
+        "DIR32"
+      ],
+      "reference_occurrences": 1,
+      "diagnostic_provider": "kernel32:KERNEL32.dll",
+      "original_iat_matches_by_name": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsAlloc",
+          "iat_va": "0x100220D0"
+        }
+      ],
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsAlloc",
+          "iat_va": "0x100220D0"
+        }
+      ]
+    }
+  ]
+}

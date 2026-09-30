@@ -1,0 +1,936 @@
+{
+  "scope": "Exact site coverage join for relocations in the 284 direct-body .xcode sections; no target values or PE bytes are written.",
+  "inputs": {
+    "pinned_original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+    "object_directory": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-ghidra-positive-20260930",
+    "raw_object_inventory": "audit/inplace-candidate-relocations-ghidra-positive-2026-09-30.json",
+    "body_fixup_inventory": "audit/inplace-candidate-function-symbol-fixups-ghidra-positive-2026-09-30-v6.json",
+    "executable_target_inventory": "audit/inplace-direct-executable-targets-ghidra-positive-2026-09-30.json"
+  },
+  "counts": {
+    "direct_body_count": 284,
+    "raw_relocation_sites": 1565,
+    "raw_relocations_by_type": {
+      "DIR32": 800,
+      "REL32": 765
+    },
+    "accounted_unique_sites": 1463,
+    "accounted_raw_sites": 1463,
+    "uncovered_raw_sites": 102,
+    "uncovered_by_type": {
+      "DIR32": 102
+    },
+    "stale_accounted_sites": 0,
+    "object_hash_mismatches": 0
+  },
+  "uncovered_target_symbol_counts": {
+    "__imp__VirtualProtect@16": 5,
+    "??_C@_0P@GNAEKEFP@GTA_PLUGIN_SDK@": 5,
+    "__imp__OpenFileMappingA@12": 4,
+    "__imp__CloseHandle@4": 4,
+    "__imp__MapViewOfFile@20": 3,
+    "??_C@_09MIILECCM@Finished?4@": 2,
+    "??_C@_0L@CNLPMEGB@movspoiler@": 2,
+    "??_C@_05BAGILKKI@extra@": 2,
+    "__imp__DecodePointer@4": 2,
+    "__imp__GetLastError@0": 2,
+    "??_C@_01EEMJAFIK@?6@": 1,
+    "??_C@_0CL@FJKDKKCB@____LOADED_TEXTURE?5?$CFs?0?5TEXTURES@": 1,
+    "??_C@_08HDDGKGPN@IVF_Logo@": 1,
+    "??_C@_0CL@IEHEEHFA@____UNLOADED_TEXTURE?5?$CFs?0?5TEXTUR@": 1,
+    "??_C@_0BN@IEGBGGLM@ImVehFt?2effect?2dirt_layer?4fx@": 1,
+    "??_C@_06FLIKLIIL@ps_2_0@": 1,
+    "??_C@_0DP@LKBPLIGP@ImVehFtDecals?3?3Initialise?3?5D3DX@": 1,
+    "??_C@_0DJ@GCEHPCPI@ImVehFtDecals?3?3Initialise?3?5Fail@": 1,
+    "??_C@_0EE@CFBECIIG@This?5file?5was?5created?5by?5ImVehF@": 1,
+    "??_C@_0BH@JIKJOGAB@Reading?5ImVehFt?4ini?4?4?4@": 1,
+    "??_C@_0BE@FAMLMIHH@ImVehFt?2ImVehFt?4ini@": 1,
+    "??_C@_08JKKCLLEL@SAMP_fix@": 1,
+    "??_C@_04KLKHHPIG@MAIN@": 1,
+    "??_C@_0BD@IHHMDHN@disable_beam_shape@": 1,
+    "??_C@_0BB@KJMAMJPA@turnlights_delay@": 1,
+    "??_C@_07CPMGCCII@key_fog@": 1,
+    "??_C@_07DBEDOPMC@CONTROL@": 1,
+    "??_C@_0M@HCCEOLIE@key_turnl_l@": 1,
+    "??_C@_0M@KGGFNEFL@key_turnl_r@": 1,
+    "??_C@_0M@FGBMJLFO@key_turnl_2@": 1,
+    "??_C@_0M@GECKPJNM@key_turnl_0@": 1,
+    "??_C@_0O@FLNGLCEH@key_headlight@": 1,
+    "??_C@_0CB@CNKCNDNI@Making?5ImVehFt?5memory?5patches?4?4@": 1,
+    "??_C@_0BO@LINNBLDB@Registering?5vehicle?5plugin?4?4?4@": 1,
+    "??_C@_0CI@KOLLOMHB@Finished?5?$CIregistered?5vehicle?5pl@": 1,
+    "??_C@_05OMDFDMJM@?5ZAZ?5@": 1,
+    "??_C@_08OMKAPGEK@movsteer@": 1,
+    "??_C@_02NJPGOMH@?$CFf@": 1,
+    "??_C@_08MHMAJIPH@light_em@": 1,
+    "__imp__UnmapViewOfFile@4": 1,
+    "__imp__HeapDestroy@4": 1,
+    "??_C@_0L@BHLAADHH@Plugin?5SDK@": 1,
+    "??_C@_0CG@JFNPIFDB@Fatal?5error?5on?5ControllerBlockM@": 1,
+    "__imp__MessageBoxA@16": 1,
+    "__imp__ExitProcess@4": 1,
+    "??_C@_0BE@GGPGENIG@Unknown?5Plugin?5Name@": 1,
+    "?BasicCallbackManager_5499395_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_6018937_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_5487649_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_7638267_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_7638537_7638600_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_5499265_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_5810733_0_0_0_0_SimpleSuperManager_PatcherJMP1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_5500065_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_4625275_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_5498111_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_6027355_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_5497491_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_7220533_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable@@3PAXA": 1,
+    "?BasicCallbackManager_6193234_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable@@3PAXA": 1,
+    "__imp__HeapAlloc@12": 1,
+    "??_C@_07CPJNBGJD@DK22Pac@": 1,
+    "??_C@_0M@LLNLOOFE@ImVehFt?4asi@": 1,
+    "??_C@_07MLNFFMO@ImVehFt@": 1,
+    "??_C@_05FGPGKOKF@2?40?42@": 1,
+    "??_C@_0BC@EOODALEL@Unknown?5exception@": 1,
+    "??_C@_03LJKLCHEC@ccs@": 1,
+    "??_C@_05EGJIMALK@UTF?98@": 1,
+    "??_C@_08NBDJLNFA@UTF?916LE@": 1,
+    "??_C@_07JNMBHMBK@UNICODE@": 1,
+    "__imp__TlsGetValue@4": 1,
+    "__imp__TlsSetValue@8": 1,
+    "__imp__HeapCreate@12": 1,
+    "?sopen_scope_table@@3UEH4ScopeTable@@B": 1,
+    "__imp__SetStdHandle@8": 1,
+    "__imp__SetFilePointer@16": 1,
+    "__imp__WriteConsoleW@20": 1,
+    "??_C@_1BA@BALFACEM@?$AAC?$AAO?$AAN?$AAO?$AAU?$AAT?$AA$@": 1,
+    "__imp__CreateFileW@28": 1,
+    "__imp__RtlUnwind": 1,
+    "_CallCatchBlock_scope_table_experiment": 1
+  },
+  "uncovered_sites": [
+    {
+      "owner_entry_va": "0x100014c0",
+      "site": 67,
+      "type": "DIR32",
+      "target_symbol": "??_C@_01EEMJAFIK@?6@",
+      "target_value": 0,
+      "target_section": 4
+    },
+    {
+      "owner_entry_va": "0x10001630",
+      "site": 6,
+      "type": "DIR32",
+      "target_symbol": "__imp__VirtualProtect@16",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10001630",
+      "site": 54,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0CL@FJKDKKCB@____LOADED_TEXTURE?5?$CFs?0?5TEXTURES@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x10001630",
+      "site": 73,
+      "type": "DIR32",
+      "target_symbol": "??_C@_08HDDGKGPN@IVF_Logo@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10001730",
+      "site": 27,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0CL@IEHEEHFA@____UNLOADED_TEXTURE?5?$CFs?0?5TEXTUR@",
+      "target_value": 0,
+      "target_section": 4
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "site": 77,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BN@IEGBGGLM@ImVehFt?2effect?2dirt_layer?4fx@",
+      "target_value": 0,
+      "target_section": 4
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "site": 106,
+      "type": "DIR32",
+      "target_symbol": "??_C@_06FLIKLIIL@ps_2_0@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "site": 173,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0DP@LKBPLIGP@ImVehFtDecals?3?3Initialise?3?5D3DX@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "site": 220,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0DJ@GCEHPCPI@ImVehFtDecals?3?3Initialise?3?5Fail@",
+      "target_value": 0,
+      "target_section": 7
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 8,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0EE@CFBECIIG@This?5file?5was?5created?5by?5ImVehF@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 20,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BH@JIKJOGAB@Reading?5ImVehFt?4ini?4?4?4@",
+      "target_value": 0,
+      "target_section": 7
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 53,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BE@FAMLMIHH@ImVehFt?2ImVehFt?4ini@",
+      "target_value": 0,
+      "target_section": 8
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 72,
+      "type": "DIR32",
+      "target_symbol": "??_C@_08JKKCLLEL@SAMP_fix@",
+      "target_value": 0,
+      "target_section": 9
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 77,
+      "type": "DIR32",
+      "target_symbol": "??_C@_04KLKHHPIG@MAIN@",
+      "target_value": 0,
+      "target_section": 10
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 131,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BD@IHHMDHN@disable_beam_shape@",
+      "target_value": 0,
+      "target_section": 11
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 188,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BB@KJMAMJPA@turnlights_delay@",
+      "target_value": 0,
+      "target_section": 12
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 243,
+      "type": "DIR32",
+      "target_symbol": "??_C@_07CPMGCCII@key_fog@",
+      "target_value": 0,
+      "target_section": 13
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 248,
+      "type": "DIR32",
+      "target_symbol": "??_C@_07DBEDOPMC@CONTROL@",
+      "target_value": 0,
+      "target_section": 14
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 298,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0M@HCCEOLIE@key_turnl_l@",
+      "target_value": 0,
+      "target_section": 15
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 348,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0M@KGGFNEFL@key_turnl_r@",
+      "target_value": 0,
+      "target_section": 16
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 398,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0M@FGBMJLFO@key_turnl_2@",
+      "target_value": 0,
+      "target_section": 17
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 448,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0M@GECKPJNM@key_turnl_0@",
+      "target_value": 0,
+      "target_section": 18
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 491,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0O@FLNGLCEH@key_headlight@",
+      "target_value": 0,
+      "target_section": 19
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 502,
+      "type": "DIR32",
+      "target_symbol": "??_C@_09MIILECCM@Finished?4@",
+      "target_value": 0,
+      "target_section": 20
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 519,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0CB@CNKCNDNI@Making?5ImVehFt?5memory?5patches?4?4@",
+      "target_value": 0,
+      "target_section": 21
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 3536,
+      "type": "DIR32",
+      "target_symbol": "??_C@_09MIILECCM@Finished?4@",
+      "target_value": 0,
+      "target_section": 20
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 3570,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BO@LINNBLDB@Registering?5vehicle?5plugin?4?4?4@",
+      "target_value": 0,
+      "target_section": 22
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "site": 3597,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0CI@KOLLOMHB@Finished?5?$CIregistered?5vehicle?5pl@",
+      "target_value": 0,
+      "target_section": 23
+    },
+    {
+      "owner_entry_va": "0x10003f40",
+      "site": 8,
+      "type": "DIR32",
+      "target_symbol": "??_C@_05OMDFDMJM@?5ZAZ?5@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "site": 416,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0L@CNLPMEGB@movspoiler@",
+      "target_value": 0,
+      "target_section": 4
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "site": 482,
+      "type": "DIR32",
+      "target_symbol": "??_C@_05BAGILKKI@extra@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "site": 544,
+      "type": "DIR32",
+      "target_symbol": "??_C@_08OMKAPGEK@movsteer@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "site": 584,
+      "type": "DIR32",
+      "target_symbol": "??_C@_02NJPGOMH@?$CFf@",
+      "target_value": 0,
+      "target_section": 7
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "site": 610,
+      "type": "DIR32",
+      "target_symbol": "??_C@_08MHMAJIPH@light_em@",
+      "target_value": 0,
+      "target_section": 8
+    },
+    {
+      "owner_entry_va": "0x10008cb0",
+      "site": 9,
+      "type": "DIR32",
+      "target_symbol": "??_C@_05BAGILKKI@extra@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10008cb0",
+      "site": 38,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0L@CNLPMEGB@movspoiler@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x10008eb0",
+      "site": 20,
+      "type": "DIR32",
+      "target_symbol": "__imp__VirtualProtect@16",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10008eb0",
+      "site": 46,
+      "type": "DIR32",
+      "target_symbol": "__imp__VirtualProtect@16",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10008fa0",
+      "site": 22,
+      "type": "DIR32",
+      "target_symbol": "__imp__VirtualProtect@16",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009060",
+      "site": 22,
+      "type": "DIR32",
+      "target_symbol": "__imp__VirtualProtect@16",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009360",
+      "site": 76,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0P@GNAEKEFP@GTA_PLUGIN_SDK@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10009360",
+      "site": 84,
+      "type": "DIR32",
+      "target_symbol": "__imp__OpenFileMappingA@12",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009360",
+      "site": 118,
+      "type": "DIR32",
+      "target_symbol": "__imp__MapViewOfFile@20",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009430",
+      "site": 30,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0P@GNAEKEFP@GTA_PLUGIN_SDK@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10009430",
+      "site": 38,
+      "type": "DIR32",
+      "target_symbol": "__imp__OpenFileMappingA@12",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009430",
+      "site": 62,
+      "type": "DIR32",
+      "target_symbol": "__imp__MapViewOfFile@20",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009580",
+      "site": 21,
+      "type": "DIR32",
+      "target_symbol": "__imp__UnmapViewOfFile@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009580",
+      "site": 43,
+      "type": "DIR32",
+      "target_symbol": "__imp__CloseHandle@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009580",
+      "site": 48,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0P@GNAEKEFP@GTA_PLUGIN_SDK@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10009580",
+      "site": 71,
+      "type": "DIR32",
+      "target_symbol": "__imp__OpenFileMappingA@12",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009580",
+      "site": 82,
+      "type": "DIR32",
+      "target_symbol": "__imp__CloseHandle@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009580",
+      "site": 91,
+      "type": "DIR32",
+      "target_symbol": "__imp__HeapDestroy@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x100095f0",
+      "site": 3,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0L@BHLAADHH@Plugin?5SDK@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x100095f0",
+      "site": 8,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0CG@JFNPIFDB@Fatal?5error?5on?5ControllerBlockM@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x100095f0",
+      "site": 16,
+      "type": "DIR32",
+      "target_symbol": "__imp__MessageBoxA@16",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x100095f0",
+      "site": 27,
+      "type": "DIR32",
+      "target_symbol": "__imp__ExitProcess@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x100096e0",
+      "site": 8,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BE@GGPGENIG@Unknown?5Plugin?5Name@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10009b50",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_5499395_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009bb0",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_6018937_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009c10",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_5487649_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009c70",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_7638267_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009cd0",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_7638537_7638600_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009d30",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_5499265_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009d90",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_5810733_0_0_0_0_SimpleSuperManager_PatcherJMP1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009df0",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_5500065_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009e50",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_4625275_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009eb0",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_5498111_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009f10",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_6027355_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10009fd0",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_5497491_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1000a1d0",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_7220533_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1000a230",
+      "site": 1,
+      "type": "DIR32",
+      "target_symbol": "?BasicCallbackManager_6193234_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable@@3PAXA",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 75,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0P@GNAEKEFP@GTA_PLUGIN_SDK@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 83,
+      "type": "DIR32",
+      "target_symbol": "__imp__OpenFileMappingA@12",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 113,
+      "type": "DIR32",
+      "target_symbol": "__imp__MapViewOfFile@20",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 195,
+      "type": "DIR32",
+      "target_symbol": "__imp__HeapAlloc@12",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 202,
+      "type": "DIR32",
+      "target_symbol": "??_C@_07CPJNBGJD@DK22Pac@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 227,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0M@LLNLOOFE@ImVehFt?4asi@",
+      "target_value": 0,
+      "target_section": 7
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 250,
+      "type": "DIR32",
+      "target_symbol": "??_C@_07MLNFFMO@ImVehFt@",
+      "target_value": 0,
+      "target_section": 8
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "site": 273,
+      "type": "DIR32",
+      "target_symbol": "??_C@_05FGPGKOKF@2?40?42@",
+      "target_value": 0,
+      "target_section": 9
+    },
+    {
+      "owner_entry_va": "0x1000d140",
+      "site": 94,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0P@GNAEKEFP@GTA_PLUGIN_SDK@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x10010258",
+      "site": 8,
+      "type": "DIR32",
+      "target_symbol": "??_C@_0BC@EOODALEL@Unknown?5exception@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x100119f1",
+      "site": 2672,
+      "type": "DIR32",
+      "target_symbol": "__imp__DecodePointer@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x100135b4",
+      "site": 359,
+      "type": "DIR32",
+      "target_symbol": "??_C@_03LJKLCHEC@ccs@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x100135b4",
+      "site": 410,
+      "type": "DIR32",
+      "target_symbol": "??_C@_05EGJIMALK@UTF?98@",
+      "target_value": 0,
+      "target_section": 6
+    },
+    {
+      "owner_entry_va": "0x100135b4",
+      "site": 441,
+      "type": "DIR32",
+      "target_symbol": "??_C@_08NBDJLNFA@UTF?916LE@",
+      "target_value": 0,
+      "target_section": 7
+    },
+    {
+      "owner_entry_va": "0x100135b4",
+      "site": 472,
+      "type": "DIR32",
+      "target_symbol": "??_C@_07JNMBHMBK@UNICODE@",
+      "target_value": 0,
+      "target_section": 8
+    },
+    {
+      "owner_entry_va": "0x10013bd8",
+      "site": 83,
+      "type": "DIR32",
+      "target_symbol": "__imp__CloseHandle@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10013bd8",
+      "site": 93,
+      "type": "DIR32",
+      "target_symbol": "__imp__GetLastError@0",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10014c52",
+      "site": 9,
+      "type": "DIR32",
+      "target_symbol": "__imp__TlsGetValue@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10014c52",
+      "site": 27,
+      "type": "DIR32",
+      "target_symbol": "__imp__DecodePointer@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10014c52",
+      "site": 42,
+      "type": "DIR32",
+      "target_symbol": "__imp__TlsSetValue@8",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x10016d12",
+      "site": 11,
+      "type": "DIR32",
+      "target_symbol": "__imp__HeapCreate@12",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x100189f5",
+      "site": 3,
+      "type": "DIR32",
+      "target_symbol": "?sopen_scope_table@@3UEH4ScopeTable@@B",
+      "target_value": 0,
+      "target_section": 4
+    },
+    {
+      "owner_entry_va": "0x10019018",
+      "site": 90,
+      "type": "DIR32",
+      "target_symbol": "__imp__SetStdHandle@8",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1001a600",
+      "site": 58,
+      "type": "DIR32",
+      "target_symbol": "__imp__SetFilePointer@16",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1001a600",
+      "site": 70,
+      "type": "DIR32",
+      "target_symbol": "__imp__GetLastError@0",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1001b1d2",
+      "site": 44,
+      "type": "DIR32",
+      "target_symbol": "__imp__WriteConsoleW@20",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1001b27c",
+      "site": 15,
+      "type": "DIR32",
+      "target_symbol": "??_C@_1BA@BALFACEM@?$AAC?$AAO?$AAN?$AAO?$AAU?$AAT?$AA$@",
+      "target_value": 0,
+      "target_section": 5
+    },
+    {
+      "owner_entry_va": "0x1001b27c",
+      "site": 21,
+      "type": "DIR32",
+      "target_symbol": "__imp__CreateFileW@28",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1001b29b",
+      "site": 18,
+      "type": "DIR32",
+      "target_symbol": "__imp__CloseHandle@4",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1001b2b2",
+      "site": 2,
+      "type": "DIR32",
+      "target_symbol": "__imp__RtlUnwind",
+      "target_value": 0,
+      "target_section": 0
+    },
+    {
+      "owner_entry_va": "0x1001d06f",
+      "site": 3,
+      "type": "DIR32",
+      "target_symbol": "_CallCatchBlock_scope_table_experiment",
+      "target_value": 0,
+      "target_section": 6
+    }
+  ],
+  "stale_accounted_sites": [],
+  "object_hash_mismatch_entries": [],
+  "all_source_hashes_match": true,
+  "all_raw_sites_accounted": false,
+  "limitations": [
+    "A covered relocation site is not proof that its target identity or initialization is correct.",
+    "Uncovered DIR32 fields remain unresolved and have not been applied.",
+    "This is not a PE/ASI emitter and gives no loader or game validation."
+  ]
+}

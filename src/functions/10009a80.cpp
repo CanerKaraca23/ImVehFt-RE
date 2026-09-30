@@ -1,6 +1,6 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
-extern std::uint32_t _DAT_00c1703c;
 extern "C" std::int32_t __stdcall FUN_10009360();
 
 void __stdcall FUN_10009a80(void)
@@ -8,7 +8,7 @@ void __stdcall FUN_10009a80(void)
     const std::int32_t state = FUN_10009360();
 
     const auto global_base =
-        static_cast<std::uintptr_t>(_DAT_00c1703c);
+        IMVEHFT_GLOBAL_AT(std::uintptr_t, 0x00c1703c);
 
     const std::int32_t object =
         *reinterpret_cast<std::int32_t*>(global_base + 0x60);

@@ -1,0 +1,769 @@
+{
+  "scope": "Heuristic capacity/contiguous-gap simulation only; no bytes or relocations are changed.",
+  "reference_pe": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "feasibility_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\entry-trampoline-feasibility-o1-x87-frame-coff-exact-2026-09-29.json",
+  "text_start": "0x10001000",
+  "text_virtual_size": 131707,
+  "text_raw_size": 132096,
+  "entry_count": 705,
+  "candidate_body_bytes": 114707,
+  "candidate_body_bytes_plus_5_byte_thunks": 115447,
+  "direct_entries": 557,
+  "thunk_entries": 148,
+  "oversized_bodies_placed_in_remaining_gaps": 146,
+  "oversized_bodies_unplaced": 2,
+  "largest_unplaced": {
+    "entry": "0x1001f203",
+    "size": 4108
+  },
+  "max_remaining_gap": 2333,
+  "remaining_free_bytes": 23008,
+  "placements": [
+    {
+      "entry": "0x10016088",
+      "planned_va": "0x1001eb2c",
+      "size": 1465
+    },
+    {
+      "entry": "0x1001e5d6",
+      "planned_va": "0x100182e1",
+      "size": 1459
+    },
+    {
+      "entry": "0x1001e085",
+      "planned_va": "0x1001608d",
+      "size": 1380
+    },
+    {
+      "entry": "0x1001bee6",
+      "planned_va": "0x10004bba",
+      "size": 1070
+    },
+    {
+      "entry": "0x10003810",
+      "planned_va": "0x1001e08a",
+      "size": 1043
+    },
+    {
+      "entry": "0x100111e0",
+      "planned_va": "0x10006c26",
+      "size": 1017
+    },
+    {
+      "entry": "0x1001d591",
+      "planned_va": "0x10008766",
+      "size": 986
+    },
+    {
+      "entry": "0x100172f0",
+      "planned_va": "0x1001e5db",
+      "size": 984
+    },
+    {
+      "entry": "0x10004000",
+      "planned_va": "0x1001f208",
+      "size": 980
+    },
+    {
+      "entry": "0x10016f49",
+      "planned_va": "0x1001d596",
+      "size": 861
+    },
+    {
+      "entry": "0x100074d0",
+      "planned_va": "0x100111e5",
+      "size": 834
+    },
+    {
+      "entry": "0x1001ff3b",
+      "planned_va": "0x100172f5",
+      "size": 792
+    },
+    {
+      "entry": "0x1002023a",
+      "planned_va": "0x1001ff40",
+      "size": 719
+    },
+    {
+      "entry": "0x10003400",
+      "planned_va": "0x10004005",
+      "size": 684
+    },
+    {
+      "entry": "0x10006790",
+      "planned_va": "0x1001beeb",
+      "size": 683
+    },
+    {
+      "entry": "0x100132f6",
+      "planned_va": "0x10003815",
+      "size": 630
+    },
+    {
+      "entry": "0x10001fb0",
+      "planned_va": "0x1000705e",
+      "size": 612
+    },
+    {
+      "entry": "0x1001af34",
+      "planned_va": "0x10001fb5",
+      "size": 603
+    },
+    {
+      "entry": "0x10001b90",
+      "planned_va": "0x100132fb",
+      "size": 554
+    },
+    {
+      "entry": "0x10018ad9",
+      "planned_va": "0x10006795",
+      "size": 552
+    },
+    {
+      "entry": "0x1001ae25",
+      "planned_va": "0x10001b95",
+      "size": 536
+    },
+    {
+      "entry": "0x10014566",
+      "planned_va": "0x100127d0",
+      "size": 532
+    },
+    {
+      "entry": "0x10005670",
+      "planned_va": "0x10003405",
+      "size": 529
+    },
+    {
+      "entry": "0x10005b60",
+      "planned_va": "0x1001f5dc",
+      "size": 521
+    },
+    {
+      "entry": "0x10005ef0",
+      "planned_va": "0x100074d5",
+      "size": 505
+    },
+    {
+      "entry": "0x10019c86",
+      "planned_va": "0x10005675",
+      "size": 488
+    },
+    {
+      "entry": "0x10005d30",
+      "planned_va": "0x1002023f",
+      "size": 479
+    },
+    {
+      "entry": "0x100169da",
+      "planned_va": "0x10005ef5",
+      "size": 466
+    },
+    {
+      "entry": "0x10017ed5",
+      "planned_va": "0x1001c7c7",
+      "size": 461
+    },
+    {
+      "entry": "0x100170d6",
+      "planned_va": "0x10005b65",
+      "size": 457
+    },
+    {
+      "entry": "0x10012e90",
+      "planned_va": "0x10019c8b",
+      "size": 454
+    },
+    {
+      "entry": "0x10003660",
+      "planned_va": "0x1001456b",
+      "size": 450
+    },
+    {
+      "entry": "0x10008b70",
+      "planned_va": "0x10018ade",
+      "size": 446
+    },
+    {
+      "entry": "0x100142b6",
+      "planned_va": "0x10015ee8",
+      "size": 406
+    },
+    {
+      "entry": "0x1001474f",
+      "planned_va": "0x100169df",
+      "size": 402
+    },
+    {
+      "entry": "0x10018cf7",
+      "planned_va": "0x100208c7",
+      "size": 396
+    },
+    {
+      "entry": "0x1001a995",
+      "planned_va": "0x100142bb",
+      "size": 395
+    },
+    {
+      "entry": "0x100191cd",
+      "planned_va": "0x10012e95",
+      "size": 391
+    },
+    {
+      "entry": "0x10014fa7",
+      "planned_va": "0x100170db",
+      "size": 383
+    },
+    {
+      "entry": "0x1001aaba",
+      "planned_va": "0x10003665",
+      "size": 382
+    },
+    {
+      "entry": "0x1001a785",
+      "planned_va": "0x1001e9b3",
+      "size": 372
+    },
+    {
+      "entry": "0x10014003",
+      "planned_va": "0x1001aabf",
+      "size": 355
+    },
+    {
+      "entry": "0x10003200",
+      "planned_va": "0x10014754",
+      "size": 347
+    },
+    {
+      "entry": "0x10010f59",
+      "planned_va": "0x1001bcbe",
+      "size": 316
+    },
+    {
+      "entry": "0x10012c9c",
+      "planned_va": "0x1001e49d",
+      "size": 303
+    },
+    {
+      "entry": "0x100131d4",
+      "planned_va": "0x10005544",
+      "size": 299
+    },
+    {
+      "entry": "0x1001d48a",
+      "planned_va": "0x10012ca1",
+      "size": 294
+    },
+    {
+      "entry": "0x100178b8",
+      "planned_va": "0x100072c2",
+      "size": 288
+    },
+    {
+      "entry": "0x10019eb3",
+      "planned_va": "0x1001ae2a",
+      "size": 266
+    },
+    {
+      "entry": "0x10003e60",
+      "planned_va": "0x1000302f",
+      "size": 256
+    },
+    {
+      "entry": "0x1001c420",
+      "planned_va": "0x1001d48f",
+      "size": 252
+    },
+    {
+      "entry": "0x1001dda0",
+      "planned_va": "0x10016f4e",
+      "size": 250
+    },
+    {
+      "entry": "0x1001663f",
+      "planned_va": "0x10004abe",
+      "size": 242
+    },
+    {
+      "entry": "0x10013b50",
+      "planned_va": "0x10004fe8",
+      "size": 234
+    },
+    {
+      "entry": "0x100168fe",
+      "planned_va": "0x100098fe",
+      "size": 225
+    },
+    {
+      "entry": "0x1001b750",
+      "planned_va": "0x10003e65",
+      "size": 217
+    },
+    {
+      "entry": "0x1001ac9b",
+      "planned_va": "0x10016903",
+      "size": 215
+    },
+    {
+      "entry": "0x10020775",
+      "planned_va": "0x10010f5e",
+      "size": 212
+    },
+    {
+      "entry": "0x10016846",
+      "planned_va": "0x1001b755",
+      "size": 210
+    },
+    {
+      "entry": "0x1001a900",
+      "planned_va": "0x10013025",
+      "size": 207
+    },
+    {
+      "entry": "0x1001c35f",
+      "planned_va": "0x100191d2",
+      "size": 203
+    },
+    {
+      "entry": "0x10015270",
+      "planned_va": "0x1001c196",
+      "size": 193
+    },
+    {
+      "entry": "0x1001b0ea",
+      "planned_va": "0x1002077a",
+      "size": 190
+    },
+    {
+      "entry": "0x1001ba40",
+      "planned_va": "0x1001ca65",
+      "size": 183
+    },
+    {
+      "entry": "0x10010678",
+      "planned_va": "0x1001b0ef",
+      "size": 182
+    },
+    {
+      "entry": "0x1001415a",
+      "planned_va": "0x100192a8",
+      "size": 181
+    },
+    {
+      "entry": "0x1001dbac",
+      "planned_va": "0x1001a99a",
+      "size": 181
+    },
+    {
+      "entry": "0x1000d250",
+      "planned_va": "0x10003dae",
+      "size": 177
+    },
+    {
+      "entry": "0x10016eae",
+      "planned_va": "0x1001067d",
+      "size": 173
+    },
+    {
+      "entry": "0x1001b5bd",
+      "planned_va": "0x1001ba45",
+      "size": 166
+    },
+    {
+      "entry": "0x1001b3cf",
+      "planned_va": "0x1001415f",
+      "size": 163
+    },
+    {
+      "entry": "0x1001dd12",
+      "planned_va": "0x100199bb",
+      "size": 163
+    },
+    {
+      "entry": "0x1001b508",
+      "planned_va": "0x1000d255",
+      "size": 154
+    },
+    {
+      "entry": "0x1000d380",
+      "planned_va": "0x1001dbb1",
+      "size": 153
+    },
+    {
+      "entry": "0x1001fafb",
+      "planned_va": "0x100117b5",
+      "size": 152
+    },
+    {
+      "entry": "0x10016740",
+      "planned_va": "0x10016eb3",
+      "size": 150
+    },
+    {
+      "entry": "0x10010ed0",
+      "planned_va": "0x1001a905",
+      "size": 144
+    },
+    {
+      "entry": "0x10010e4b",
+      "planned_va": "0x1001dd17",
+      "size": 136
+    },
+    {
+      "entry": "0x1001b8c6",
+      "planned_va": "0x1001fb00",
+      "size": 135
+    },
+    {
+      "entry": "0x1000a8c0",
+      "planned_va": "0x1001b50d",
+      "size": 134
+    },
+    {
+      "entry": "0x1000aae0",
+      "planned_va": "0x1001d102",
+      "size": 134
+    },
+    {
+      "entry": "0x1000ac20",
+      "planned_va": "0x1001b5c2",
+      "size": 134
+    },
+    {
+      "entry": "0x1000ad60",
+      "planned_va": "0x1001684b",
+      "size": 134
+    },
+    {
+      "entry": "0x1000aea0",
+      "planned_va": "0x1001c364",
+      "size": 134
+    },
+    {
+      "entry": "0x1000afe0",
+      "planned_va": "0x1001aca0",
+      "size": 134
+    },
+    {
+      "entry": "0x1000b120",
+      "planned_va": "0x100066c6",
+      "size": 134
+    },
+    {
+      "entry": "0x1000b260",
+      "planned_va": "0x1001dda5",
+      "size": 134
+    },
+    {
+      "entry": "0x1000b460",
+      "planned_va": "0x10019eb8",
+      "size": 134
+    },
+    {
+      "entry": "0x1000b5a0",
+      "planned_va": "0x1001c277",
+      "size": 134
+    },
+    {
+      "entry": "0x1000b6e0",
+      "planned_va": "0x1001c425",
+      "size": 134
+    },
+    {
+      "entry": "0x1000b8e0",
+      "planned_va": "0x10016644",
+      "size": 134
+    },
+    {
+      "entry": "0x1000bae0",
+      "planned_va": "0x100178bd",
+      "size": 134
+    },
+    {
+      "entry": "0x1000bb60",
+      "planned_va": "0x10017943",
+      "size": 134
+    },
+    {
+      "entry": "0x1000bca0",
+      "planned_va": "0x10003a8b",
+      "size": 134
+    },
+    {
+      "entry": "0x1000bde0",
+      "planned_va": "0x10003b11",
+      "size": 134
+    },
+    {
+      "entry": "0x1000bf20",
+      "planned_va": "0x1000a567",
+      "size": 134
+    },
+    {
+      "entry": "0x1000c060",
+      "planned_va": "0x1000a5ed",
+      "size": 134
+    },
+    {
+      "entry": "0x1000c1a0",
+      "planned_va": "0x100131d9",
+      "size": 134
+    },
+    {
+      "entry": "0x1000c2e0",
+      "planned_va": "0x1001325f",
+      "size": 134
+    },
+    {
+      "entry": "0x1001d195",
+      "planned_va": "0x1000181b",
+      "size": 133
+    },
+    {
+      "entry": "0x1001bb5f",
+      "planned_va": "0x10010ed5",
+      "size": 132
+    },
+    {
+      "entry": "0x1001cfab",
+      "planned_va": "0x10013b55",
+      "size": 131
+    },
+    {
+      "entry": "0x1000d300",
+      "planned_va": "0x1001f0e5",
+      "size": 130
+    },
+    {
+      "entry": "0x10010893",
+      "planned_va": "0x1001f167",
+      "size": 129
+    },
+    {
+      "entry": "0x100144ea",
+      "planned_va": "0x10010e50",
+      "size": 126
+    },
+    {
+      "entry": "0x10014d77",
+      "planned_va": "0x10003205",
+      "size": 126
+    },
+    {
+      "entry": "0x1001193a",
+      "planned_va": "0x10011049",
+      "size": 116
+    },
+    {
+      "entry": "0x10001430",
+      "planned_va": "0x10014d7c",
+      "size": 114
+    },
+    {
+      "entry": "0x100107b2",
+      "planned_va": "0x100206d8",
+      "size": 111
+    },
+    {
+      "entry": "0x10004a00",
+      "planned_va": "0x100107b7",
+      "size": 102
+    },
+    {
+      "entry": "0x1000cfe0",
+      "planned_va": "0x10001435",
+      "size": 100
+    },
+    {
+      "entry": "0x1001de80",
+      "planned_va": "0x1001c2fd",
+      "size": 98
+    },
+    {
+      "entry": "0x1001a5c0",
+      "planned_va": "0x100031a2",
+      "size": 93
+    },
+    {
+      "entry": "0x1001a570",
+      "planned_va": "0x10004a05",
+      "size": 91
+    },
+    {
+      "entry": "0x100176d0",
+      "planned_va": "0x10018181",
+      "size": 89
+    },
+    {
+      "entry": "0x1001b4b0",
+      "planned_va": "0x10015275",
+      "size": 89
+    },
+    {
+      "entry": "0x1001b693",
+      "planned_va": "0x10005b08",
+      "size": 86
+    },
+    {
+      "entry": "0x1001353b",
+      "planned_va": "0x10013a02",
+      "size": 84
+    },
+    {
+      "entry": "0x10017651",
+      "planned_va": "0x1001b32c",
+      "size": 84
+    },
+    {
+      "entry": "0x10017756",
+      "planned_va": "0x1001ce79",
+      "size": 84
+    },
+    {
+      "entry": "0x1001cdbd",
+      "planned_va": "0x100176d5",
+      "size": 80
+    },
+    {
+      "entry": "0x1001bbe1",
+      "planned_va": "0x10017656",
+      "size": 76
+    },
+    {
+      "entry": "0x1001cb20",
+      "planned_va": "0x10003616",
+      "size": 72
+    },
+    {
+      "entry": "0x10012e20",
+      "planned_va": "0x1001b4b5",
+      "size": 71
+    },
+    {
+      "entry": "0x10014c86",
+      "planned_va": "0x1001cdc2",
+      "size": 71
+    },
+    {
+      "entry": "0x10019f9a",
+      "planned_va": "0x10001f6f",
+      "size": 65
+    },
+    {
+      "entry": "0x10010a80",
+      "planned_va": "0x10001940",
+      "size": 64
+    },
+    {
+      "entry": "0x10020748",
+      "planned_va": "0x10006ba4",
+      "size": 60
+    },
+    {
+      "entry": "0x10014223",
+      "planned_va": "0x10001e45",
+      "size": 59
+    },
+    {
+      "entry": "0x1001b6e7",
+      "planned_va": "0x10014c8b",
+      "size": 56
+    },
+    {
+      "entry": "0x1001e03d",
+      "planned_va": "0x10019f9f",
+      "size": 56
+    },
+    {
+      "entry": "0x10013d38",
+      "planned_va": "0x1001b892",
+      "size": 51
+    },
+    {
+      "entry": "0x100102a5",
+      "planned_va": "0x100094af",
+      "size": 33
+    },
+    {
+      "entry": "0x1001bc59",
+      "planned_va": "0x1000a71f",
+      "size": 33
+    },
+    {
+      "entry": "0x100119b1",
+      "planned_va": "0x100013c4",
+      "size": 28
+    },
+    {
+      "entry": "0x1001c9bc",
+      "planned_va": "0x1000d746",
+      "size": 26
+    },
+    {
+      "entry": "0x10016d30",
+      "planned_va": "0x10001339",
+      "size": 23
+    },
+    {
+      "entry": "0x10018f6c",
+      "planned_va": "0x1000161b",
+      "size": 21
+    },
+    {
+      "entry": "0x1001088b",
+      "planned_va": "0x10001511",
+      "size": 15
+    },
+    {
+      "entry": "0x10010a11",
+      "planned_va": "0x100042b1",
+      "size": 15
+    },
+    {
+      "entry": "0x10013d30",
+      "planned_va": "0x100049f1",
+      "size": 15
+    },
+    {
+      "entry": "0x1001074b",
+      "planned_va": "0x10001033",
+      "size": 13
+    },
+    {
+      "entry": "0x100172cd",
+      "planned_va": "0x10003f75",
+      "size": 11
+    },
+    {
+      "entry": "0x10010670",
+      "planned_va": "0x10001726",
+      "size": 10
+    },
+    {
+      "entry": "0x10019b2f",
+      "planned_va": "0x10008dc6",
+      "size": 10
+    },
+    {
+      "entry": "0x10019c08",
+      "planned_va": "0x10008e36",
+      "size": 10
+    }
+  ],
+  "unplaced": [
+    {
+      "address": "0x1001f203",
+      "size": 4108
+    },
+    {
+      "address": "0x1001eb27",
+      "size": 2640
+    }
+  ],
+  "limitations": [
+    "Direct-fit functions are held at their original entries; only their trailing slack is reused.",
+    "Oversized functions are tried largest-first in the smallest available contiguous gap; this is a heuristic, not an exhaustive global allocator.",
+    "No interior code/data references, instruction boundaries, base relocations, COFF relocations, imports, startup, or runtime behavior are validated.",
+    "A packing success would be capacity evidence only, not proof of a correct or loadable PE/ASI."
+  ]
+}

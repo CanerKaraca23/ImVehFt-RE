@@ -3,8 +3,8 @@
 
 using PVOID = void*;
 
-extern "C" PVOID __cdecl DecodePointer(PVOID pointer);
-extern "C" PVOID __cdecl EncodePointer(PVOID pointer);
+extern "C" PVOID __stdcall DecodePointer(PVOID pointer);
+extern "C" PVOID __stdcall EncodePointer(PVOID pointer);
 extern "C" std::size_t __cdecl __msize(PVOID memory);
 extern "C" PVOID __cdecl __realloc_crt(PVOID memory, std::size_t size);
 

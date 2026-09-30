@@ -1,7 +1,7 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
-extern std::int32_t* _DAT_00b74494;
 extern std::uint32_t _DAT_10025000;
 
 extern "C" std::int32_t __stdcall FUN_10009360();
@@ -27,7 +27,7 @@ extern "C" void __cdecl FUN_10003130(
     const std::int32_t context = FUN_10009360();
 
     const std::int32_t index =
-        (param_1 - *_DAT_00b74494) / 0xa18;
+        (param_1 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18;
 
     const std::int32_t entry_array =
         *reinterpret_cast<std::int32_t*>(

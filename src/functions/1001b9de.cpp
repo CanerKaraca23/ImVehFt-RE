@@ -1,9 +1,9 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 struct EHRegistrationNode;
 struct _s_FuncInfo;
 
-extern "C" void* ExceptionList;
 extern "C" std::uint32_t DAT_10029490;
 
 extern "C" void __cdecl CatchGuardHandler();
@@ -36,11 +36,11 @@ extern "C" void* __cdecl _CallCatchBlock2(
     local_18 = CatchGuardHandler;
     local_c = param_1;
 
-    local_1c = ExceptionList;
-    ExceptionList = &local_1c;
+    local_1c = IMVEHFT_READ_EXCEPTION_LIST();
+    IMVEHFT_WRITE_EXCEPTION_LIST(&local_1c);
 
     result = __CallSettingFrame_12(param_3, param_1, param_5);
 
-    ExceptionList = local_1c;
+    IMVEHFT_WRITE_EXCEPTION_LIST(local_1c);
     return result;
 }

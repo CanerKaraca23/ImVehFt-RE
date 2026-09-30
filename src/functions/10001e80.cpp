@@ -1,12 +1,12 @@
 #include <cstddef>
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern std::uint32_t DAT_1003bd98;
 extern char DAT_1003a6c8[0x200];
 extern char DAT_1003a8c8[];
 extern char DAT_10024424[];
 extern std::uint32_t DAT_1003bbb0;
-extern int** _DAT_00c97c28;
 
 extern "C" std::uint32_t __cdecl FUN_007ee4f0();
 extern "C" std::uint32_t __cdecl FUN_007f0410();
@@ -92,7 +92,8 @@ extern "C" void __stdcall FUN_10001e80()
                 local_8);
     }
 
-    piVar3 = *_DAT_00c97c28;
+    piVar3 = reinterpret_cast<int*>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97c28));
 
     if (iVar2 < 0)
     {
@@ -104,7 +105,8 @@ extern "C" void __stdcall FUN_10001e80()
         return;
     }
 
-    iVar2 = reinterpret_cast<int>(*_DAT_00c97c28);
+    iVar2 = reinterpret_cast<int>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97c28));
 
     uVar1 =
         reinterpret_cast<std::uint32_t (__thiscall*)(int*, std::uint32_t*)>(

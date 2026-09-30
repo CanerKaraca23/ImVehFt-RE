@@ -1,6 +1,6 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
-extern std::uint32_t BasicCallbackManager_0_0_0_0_0_cbResetDeviceManager_vftable[];
 extern "C" void __cdecl FUN_10010756(void*);
 
 struct FUN_1000a030_this {
@@ -25,9 +25,7 @@ void* FUN_1000a030_this::FUN_1000a030(std::uint8_t param_1)
 
     auto* object = reinterpret_cast<Object*>(self);
 
-    object->vftable = static_cast<std::uint32_t>(
-        reinterpret_cast<std::uintptr_t>(
-            BasicCallbackManager_0_0_0_0_0_cbResetDeviceManager_vftable));
+    object->vftable = IVF_IMAGE_ADDRESS_10024C80;
 
     if (object->field_54 != 0)
     {

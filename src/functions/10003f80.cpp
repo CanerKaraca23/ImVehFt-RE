@@ -1,12 +1,21 @@
-#include <cstdint>
+extern "C" void __cdecl FUN_10003fb0(unsigned int, unsigned int);
+extern "C" void __cdecl FUN_10003fe0(int, int);
 
-using UnresolvedVoidStdcallFunction = void (__stdcall*)();
-
-extern "C" void __stdcall FUN_10003f80()
+extern "C" __declspec(naked) void __stdcall FUN_10003f80()
 {
-    reinterpret_cast<UnresolvedVoidStdcallFunction>(
-        static_cast<std::uintptr_t>(0x7F1200u))();
-
-    reinterpret_cast<UnresolvedVoidStdcallFunction>(
-        static_cast<std::uintptr_t>(0x7F0DC0u))();
+    __asm {
+        push edi
+        push OFFSET FUN_10003fe0
+        push esi
+        mov eax, 07F1200h
+        call eax
+        push edi
+        push OFFSET FUN_10003fb0
+        push esi
+        mov ecx, 07F0DC0h
+        call ecx
+        add esp, 18h
+        mov eax, esi
+        ret
+    }
 }

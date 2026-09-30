@@ -1,4 +1,5 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 #pragma pack(push, 1)
 struct FUN_10001350_Node
@@ -14,7 +15,6 @@ struct FUN_10001350_Node
 #pragma pack(pop)
 
 extern "C" std::uint32_t DAT_1003c25c;
-extern "C" std::uint32_t DAT_00A9B0C8[];
 
 extern "C" void __stdcall FUN_10001350()
 {
@@ -33,7 +33,10 @@ extern "C" void __stdcall FUN_10001350()
 
             auto* object =
                 reinterpret_cast<std::uint8_t*>(
-                    static_cast<std::uintptr_t>(DAT_00A9B0C8[index]));
+                    static_cast<std::uintptr_t>(
+                        IMVEHFT_GLOBAL_AT(
+                            std::uint32_t,
+                            0x00A9B0C8 + index * sizeof(std::uint32_t))));
 
             const std::uint8_t flag = node->flag;
             object[0x2D0] = flag;

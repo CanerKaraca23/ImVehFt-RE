@@ -1,0 +1,43 @@
+{
+  "scope": "Static startup/import contract comparison only; does not invoke DllMain or GTA.",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_sha256": "73A9A04DDEA5C38B092EB7D22C2932836F80505A28738ABA280EDD5C825C9CCC",
+  "entrypoint_rva": "0x111b3",
+  "entrypoint_function_size": 35,
+  "entrypoint_body_bytes_equal": true,
+  "entrypoint_cookie_call_target": "0x10016eae",
+  "entrypoint_dllmain_crt_call_target": "0x100110bd",
+  "startup_thunks": [
+    {
+      "entry_va": "0x10001db0",
+      "target_va": "0x100439b0",
+      "body_size": 149,
+      "target_in_xcode": true,
+      "candidate_body_sha256": "50BA6A5CBF03160E9CF0AF5279B1AB2B015718FBA81A41E6438729329F227291"
+    },
+    {
+      "entry_va": "0x10010f59",
+      "target_va": "0x1004b240",
+      "body_size": 316,
+      "target_in_xcode": true,
+      "candidate_body_sha256": "C020B508C5BFD498E97142ACE5E0C013F13B1A6DC246DFE4FBC2713FA2523EA3"
+    },
+    {
+      "entry_va": "0x100110bd",
+      "target_va": "0x1004b3a0",
+      "body_size": 207,
+      "target_in_xcode": true,
+      "candidate_body_sha256": "426E38ABB3ED27BDF248C289A3900E2E2A93511425C2A58FEE2C78F193322712"
+    }
+  ],
+  "imports_equal": true,
+  "import_symbol_count": 82,
+  "nonrelocation_data_directories_equal": true,
+  "dll_characteristics_equal": true,
+  "limitations": [
+    "No imports were resolved.",
+    "DllMain/CRT initialization was not run.",
+    "No plugin loader, GTA process, or gameplay test was performed.",
+    "Static thunk targets do not establish semantic or ABI correctness of moved startup functions."
+  ]
+}

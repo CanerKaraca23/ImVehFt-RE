@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 #include <windows.h>
 
@@ -43,10 +44,8 @@ extern "C" void __stdcall FUN_10014D65();
 extern "C" void __stdcall FUN_10014D6E();
 extern "C" void __cdecl ___addlocaleref(LONG*);
 
-extern "C" void __cdecl __initptd(_ptiddata _Ptd, pthreadlocinfo _Locale)
+extern "C" void __cdecl __initptd_body(_ptiddata _Ptd, pthreadlocinfo _Locale)
 {
-    __SEH_prolog4(0x100283d0, 0x08);
-
     GetModuleHandleW(L"KERNEL32.DLL");
 
     _Ptd->_pxcptacttab = &DAT_10022770;
@@ -73,6 +72,26 @@ extern "C" void __cdecl __initptd(_ptiddata _Ptd, pthreadlocinfo _Locale)
 
     ___addlocaleref(&_Ptd->ptlocinfo->refcount);
     FUN_10014D6E();
+}
 
-    __SEH_epilog4();
+// __SEH_prolog4 is an in-function MSVC frame prolog, not an ordinary C call:
+// its unusual RET intentionally transfers into the caller with the frame active.
+// A normal C++ caller adds register saves/argument cleanup that shift the frame.
+extern "C" __declspec(naked) void __cdecl __initptd(
+    _ptiddata,
+    pthreadlocinfo)
+{
+    __asm {
+        push 08h
+        push OFFSET IVF_RELOC_TARGET_100283D0
+        call __SEH_prolog4
+
+        push dword ptr [ebp + 0Ch]
+        push dword ptr [ebp + 08h]
+        call __initptd_body
+        add esp, 8
+
+        call __SEH_epilog4
+        ret
+    }
 }

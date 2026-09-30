@@ -1,0 +1,2 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+1002205c,".rdata","PTR_EncodePointer_1002205c[Label,DEFAULT,primary]","1002205c:addr 00028ace:type=pointer","10014c42:READ@10014c40:FUN_10014c40|1001ab1b:READ@1001aaba:___crtMessageBoxW|1001048d:READ@10010406:__onexit_nolock|1001049b:READ@10010406:__onexit_nolock|10015078:READ@10014fa7:__mtinit|10017a3f:READ@10017a33:__initp_misc_cfltcvt_tab|10017e67:READ@10017e62:FUN_10017e62|100104cd:READ"

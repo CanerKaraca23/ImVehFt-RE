@@ -25,6 +25,45 @@ extern "C" int __cdecl strcat_s(char*, std::size_t, const char*);
 extern "C" UINT __stdcall GetPrivateProfileIntA(LPCSTR, LPCSTR, int, LPCSTR);
 extern "C" BOOL __stdcall VirtualProtect(LPVOID, std::size_t, DWORD, LPDWORD);
 
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003030();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003060();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003080();
+extern "C" void __cdecl IVF_INSTALL_TARGET_100031E0();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003340();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003400();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003660();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003E40();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10003F40();
+extern "C" void __cdecl IVF_INSTALL_TARGET_100042C0();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10004B10();
+extern "C" void __cdecl IVF_INSTALL_TARGET_100050E0();
+extern "C" void __cdecl IVF_INSTALL_TARGET_100074D0();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10007F50();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10007F70();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10007F90();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10008140();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10008780();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10008830();
+extern "C" void __cdecl IVF_INSTALL_TARGET_10008940();
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003AEF1;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003A6C7;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003AED8;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003BC70;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003BC04;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003BC24;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003BC0C;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003BBBC;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003B6FC;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003BC74;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003C248;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003A6C8;
+extern "C" std::uint8_t IVF_RELOC_TARGET_1003A8C8;
+
+#define REL32(opcode_address, target) \
+    static_cast<std::uint32_t>( \
+        reinterpret_cast<std::uintptr_t>(target) - \
+        (static_cast<std::uintptr_t>(opcode_address) + 5u))
+
 void __stdcall FUN_10002210(void)
 {
     DWORD local_14;
@@ -32,21 +71,21 @@ void __stdcall FUN_10002210(void)
     DWORD local_c;
     DWORD local_8;
 
-    volatile auto& samp_fix = *reinterpret_cast<volatile std::uint8_t*>(0x1003AEF1);
-    volatile auto& disable_beam_shape = *reinterpret_cast<volatile std::uint8_t*>(0x1003A6C7);
-    volatile auto& turnlights_delay = *reinterpret_cast<volatile std::uint32_t*>(0x1003AED8);
-    volatile auto& turnlights_delay_twice = *reinterpret_cast<volatile std::uint32_t*>(0x1003BC70);
-    volatile auto& key_fog = *reinterpret_cast<volatile std::uint32_t*>(0x1003BC04);
-    volatile auto& key_turnl_l = *reinterpret_cast<volatile std::uint32_t*>(0x1003BC24);
-    volatile auto& key_turnl_r = *reinterpret_cast<volatile std::uint32_t*>(0x1003BC0C);
-    volatile auto& key_turnl_2 = *reinterpret_cast<volatile std::uint32_t*>(0x1003BBBC);
-    volatile auto& key_turnl_0 = *reinterpret_cast<volatile std::uint32_t*>(0x1003B6FC);
-    volatile auto& key_headlight = *reinterpret_cast<volatile std::uint32_t*>(0x1003BC74);
+    volatile auto& samp_fix = *reinterpret_cast<volatile std::uint8_t*>(&IVF_RELOC_TARGET_1003AEF1);
+    volatile auto& disable_beam_shape = *reinterpret_cast<volatile std::uint8_t*>(&IVF_RELOC_TARGET_1003A6C7);
+    volatile auto& turnlights_delay = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003AED8);
+    volatile auto& turnlights_delay_twice = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003BC70);
+    volatile auto& key_fog = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003BC04);
+    volatile auto& key_turnl_l = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003BC24);
+    volatile auto& key_turnl_r = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003BC0C);
+    volatile auto& key_turnl_2 = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003BBBC);
+    volatile auto& key_turnl_0 = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003B6FC);
+    volatile auto& key_headlight = *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003BC74);
     volatile auto& registered_vehicle_plugin =
-        *reinterpret_cast<volatile std::uint32_t*>(0x1003C248);
+        *reinterpret_cast<volatile std::uint32_t*>(&IVF_RELOC_TARGET_1003C248);
 
-    auto* ini_path = reinterpret_cast<char*>(0x1003A6C8);
-    auto* base_path = reinterpret_cast<const char*>(0x1003A8C8);
+    auto* ini_path = reinterpret_cast<char*>(&IVF_RELOC_TARGET_1003A6C8);
+    auto* base_path = reinterpret_cast<const char*>(&IVF_RELOC_TARGET_1003A8C8);
 
     FUN_100014c0(const_cast<char*>(
         "This file was created by ImVehFt.asi\n"
@@ -115,7 +154,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006D6617, 1, local_14, &local_10);
     VP(0x006D6618, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006D6618) = 0x0F930EB4;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006D6618) =
+        REL32(0x006D6617, &IVF_INSTALL_TARGET_100074D0);
     VP(0x006D6618, 4, local_14, &local_10);
 
     local_8 = 0xE8;
@@ -124,7 +164,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x005B8FFD, 1, local_14, &local_10);
     VP(0x005B8FFE, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x005B8FFE) = 0x0FA4F13E;
+    *reinterpret_cast<volatile std::uint32_t*>(0x005B8FFE) =
+        REL32(0x005B8FFD, &IVF_INSTALL_TARGET_10008140);
     VP(0x005B8FFE, 4, local_14, &local_10);
 
     local_8 = 0xE8;
@@ -133,7 +174,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006D6494, 1, local_14, &local_10);
     VP(0x006D6495, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006D6495) = 0x0F92EC47;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006D6495) =
+        REL32(0x006D6494, &IVF_INSTALL_TARGET_100050E0);
     VP(0x006D6495, 4, local_14, &local_10);
 
     local_8 = 0xE8;
@@ -142,7 +184,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x0053BFCC, 1, local_14, &local_10);
     VP(0x0053BFCD, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x0053BFCD) = 0x0FAC8B3F;
+    *reinterpret_cast<volatile std::uint32_t*>(0x0053BFCD) =
+        REL32(0x0053BFCC, &IVF_INSTALL_TARGET_10004B10);
     VP(0x0053BFCD, 4, local_14, &local_10);
 
     local_8 = 0xE8;
@@ -151,7 +194,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006D6A58, 1, local_14, &local_10);
     VP(0x006D6A59, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006D6A59) = 0x0F92D863;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006D6A59) =
+        REL32(0x006D6A58, &IVF_INSTALL_TARGET_100042C0);
     VP(0x006D6A59, 4, local_14, &local_10);
 
     FUN_1000a560(3);
@@ -162,7 +206,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x005D5BC7, 1, local_14, &local_10);
     VP(0x005D5BC8, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x005D5BC8) = 0x0FA32BB4;
+    *reinterpret_cast<volatile std::uint32_t*>(0x005D5BC8) =
+        REL32(0x005D5BC7, &IVF_INSTALL_TARGET_10008780);
     VP(0x005D5BC8, 4, local_14, &local_10);
 
     local_8 = 0xE9;
@@ -171,7 +216,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x005D5C1E, 1, local_14, &local_10);
     VP(0x005D5C1F, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x005D5C1F) = 0x0FA32C0D;
+    *reinterpret_cast<volatile std::uint32_t*>(0x005D5C1F) =
+        REL32(0x005D5C1E, &IVF_INSTALL_TARGET_10008830);
     VP(0x005D5C1F, 4, local_14, &local_10);
 
     local_8 = 0xE9;
@@ -180,7 +226,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x005D5AD1, 1, local_14, &local_10);
     VP(0x005D5AD2, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x005D5AD2) = 0x0FA32E6A;
+    *reinterpret_cast<volatile std::uint32_t*>(0x005D5AD2) =
+        REL32(0x005D5AD1, &IVF_INSTALL_TARGET_10008940);
     VP(0x005D5AD2, 4, local_14, &local_10);
 
     local_8 = 0xE9;
@@ -189,7 +236,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E198E, 1, local_14, &local_10);
     VP(0x006E198F, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E198F) = 0x0F9265FD;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E198F) =
+        REL32(0x006E198E, &IVF_INSTALL_TARGET_10007F90);
     VP(0x006E198F, 4, local_14, &local_10);
 
     local_8 = 0xE9;
@@ -198,7 +246,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E18DA, 1, local_14, &local_10);
     VP(0x006E18DB, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E18DB) = 0x0F926671;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E18DB) =
+        REL32(0x006E18DA, &IVF_INSTALL_TARGET_10007F50);
     VP(0x006E18DB, 4, local_14, &local_10);
 
     local_8 = 0xE9;
@@ -207,7 +256,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E1A2D, 1, local_14, &local_10);
     VP(0x006E1A2E, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E1A2E) = 0x0F92653E;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E1A2E) =
+        REL32(0x006E1A2D, &IVF_INSTALL_TARGET_10007F70);
     VP(0x006E1A2E, 4, local_14, &local_10);
 
     VP(0x005D5BFD, 3, 0x40, &local_14);
@@ -263,7 +313,8 @@ void __stdcall FUN_10002210(void)
             static_cast<std::uint8_t>(local_8);
         VP(0x006FDED6, 1, local_14, &local_10);
         VP(0x006FDED7, 4, 0x40, &local_14);
-        *reinterpret_cast<volatile std::uint32_t*>(0x006FDED7) = 0x0F905F65;
+        *reinterpret_cast<volatile std::uint32_t*>(0x006FDED7) =
+            REL32(0x006FDED6, &IVF_INSTALL_TARGET_10003E40);
         VP(0x006FDED7, 4, local_14, &local_10);
 
         local_8 = 0xE8;
@@ -272,7 +323,8 @@ void __stdcall FUN_10002210(void)
             static_cast<std::uint8_t>(local_8);
         VP(0x006FDF10, 1, local_14, &local_10);
         VP(0x006FDF11, 4, 0x40, &local_14);
-        *reinterpret_cast<volatile std::uint32_t*>(0x006FDF11) = 0x0F90602B;
+        *reinterpret_cast<volatile std::uint32_t*>(0x006FDF11) =
+            REL32(0x006FDF10, &IVF_INSTALL_TARGET_10003F40);
         VP(0x006FDF11, 4, local_14, &local_10);
 
         FUN_1000a560(8);
@@ -284,7 +336,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006AB350, 1, local_14, &local_10);
     VP(0x006AB351, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006AB351) = 0x0F957CDB;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006AB351) =
+        REL32(0x006AB350, &IVF_INSTALL_TARGET_10003030);
     VP(0x006AB351, 4, local_14, &local_10);
 
     VP(0x006AB355, 5, 0x40, &local_14);
@@ -300,7 +353,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006F3AED, 1, local_14, &local_10);
     VP(0x006F3AEE, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006F3AEE) = 0x0F90F56E;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006F3AEE) =
+        REL32(0x006F3AED, &IVF_INSTALL_TARGET_10003060);
     VP(0x006F3AEE, 4, local_14, &local_10);
 
     VP(0x006F3AF2, 1, 0x40, &local_14);
@@ -313,7 +367,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006F3973, 1, local_14, &local_10);
     VP(0x006F3974, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006F3974) = 0x0F90F708;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006F3974) =
+        REL32(0x006F3973, &IVF_INSTALL_TARGET_10003080);
     VP(0x006F3974, 4, local_14, &local_10);
 
     VP(0x006F3978, 7, 0x40, &local_14);
@@ -328,7 +383,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E174B, 1, local_14, &local_10);
     VP(0x006E174C, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E174C) = 0x0F921CB0;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E174C) =
+        REL32(0x006E174B, &IVF_INSTALL_TARGET_10003400);
     VP(0x006E174C, 4, local_14, &local_10);
 
     local_8 = 0xE8;
@@ -337,7 +393,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E175E, 1, local_14, &local_10);
     VP(0x006E175F, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E175F) = 0x0F921C9D;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E175F) =
+        REL32(0x006E175E, &IVF_INSTALL_TARGET_10003400);
     VP(0x006E175F, 4, local_14, &local_10);
 
     local_8 = 0xE8;
@@ -346,7 +403,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E173C, 1, local_14, &local_10);
     VP(0x006E173D, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E173D) = 0x0F921F1F;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E173D) =
+        REL32(0x006E173C, &IVF_INSTALL_TARGET_10003660);
     VP(0x006E173D, 4, local_14, &local_10);
 
     local_8 = 0xE8;
@@ -355,7 +413,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E1773, 1, local_14, &local_10);
     VP(0x006E1774, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E1774) = 0x0F921EE8;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E1774) =
+        REL32(0x006E1773, &IVF_INSTALL_TARGET_10003660);
     VP(0x006E1774, 4, local_14, &local_10);
 
     local_8 = 0xE9;
@@ -364,7 +423,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E27E6, 1, local_14, &local_10);
     VP(0x006E27E7, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E27E7) = 0x0F9209F5;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E27E7) =
+        REL32(0x006E27E6, &IVF_INSTALL_TARGET_100031E0);
     VP(0x006E27E7, 4, local_14, &local_10);
 
     if (disable_beam_shape != 0)
@@ -396,7 +456,8 @@ void __stdcall FUN_10002210(void)
         static_cast<std::uint8_t>(local_8);
     VP(0x006E0DF7, 1, local_14, &local_10);
     VP(0x006E0DF8, 4, 0x40, &local_14);
-    *reinterpret_cast<volatile std::uint32_t*>(0x006E0DF8) = 0x0F922544;
+    *reinterpret_cast<volatile std::uint32_t*>(0x006E0DF8) =
+        REL32(0x006E0DF7, &IVF_INSTALL_TARGET_10003340);
     VP(0x006E0DF8, 4, local_14, &local_10);
 
     FUN_100014c0(const_cast<char*>("Finished."));
@@ -418,4 +479,5 @@ void __stdcall FUN_10002210(void)
         "Finished (registered vehicle plugin %d)"));
 
 #undef VP
+#undef REL32
 }

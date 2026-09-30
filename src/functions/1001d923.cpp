@@ -27,10 +27,10 @@ struct _s_FuncInfo {
 static_assert(offsetof(_s_FuncInfo, nTryBlocks) == 0x0c);
 static_assert(offsetof(_s_FuncInfo, pESTypeList) == 0x1c);
 static_assert(offsetof(_s_FuncInfo, EHFlags) == 0x20);
-extern "C" void __cdecl FindHandler(
+void __cdecl FindHandler(
     EHExceptionRecord*, EHRegistrationNode*, _CONTEXT*, void*, _s_FuncInfo*,
     std::uint8_t, int, EHRegistrationNode*);
-extern "C" void __cdecl ___FrameUnwindToState(int, void*, int, int);
+void __cdecl ___FrameUnwindToState(int, std::uint32_t, int, int);
 
 extern "C" void* __cdecl __getptd(void);
 
@@ -134,7 +134,8 @@ std::uint32_t __cdecl ___InternalCxxFrameHandler(
             ___FrameUnwindToState(
                 static_cast<int>(
                     reinterpret_cast<std::uintptr_t>(param_2)),
-                param_4,
+                static_cast<std::uint32_t>(
+                    reinterpret_cast<std::uintptr_t>(param_4)),
                 static_cast<int>(
                     reinterpret_cast<std::uintptr_t>(param_5)),
                 -1);

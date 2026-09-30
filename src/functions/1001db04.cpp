@@ -40,7 +40,7 @@ extern "C" void __fastcall __security_check_cookie(
 
 extern "C" std::uint32_t DAT_10029490;
 
-int __cdecl FID_conflict___atoflt_l(
+extern "C" int __cdecl FID_conflict___atoflt_l_1001db04(
     _CRT_FLOAT* result,
     char* string,
     _locale_t locale)

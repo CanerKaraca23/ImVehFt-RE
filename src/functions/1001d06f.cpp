@@ -7,10 +7,10 @@ using byte = std::uint8_t;
 #include <cstdint>
 
 extern "C" void __cdecl __SEH_prolog4();
-extern "C" unsigned int* __cdecl __CreateFrameInfo(unsigned int*, unsigned int);
+unsigned long* __cdecl __CreateFrameInfo(unsigned long*, unsigned long);
 extern "C" void* __cdecl __getptd();
 extern "C" void* __cdecl _CallCatchBlock2(void*, void*, void*, int, unsigned long);
-extern "C" void __cdecl FrameUnwindToState_1001ce0c();
+void __cdecl ___FrameUnwindToState(int, unsigned int, int, int);
 extern "C" void __stdcall FUN_1001d195();
 extern "C" void __stdcall __SEH_epilog4();
 extern "C" void __cdecl CallCatchBlock_filter_experiment();
@@ -148,7 +148,7 @@ extern "C" __declspec(naked) void __cdecl CallCatchBlock_catch_experiment()
         push esi
         push 0
         push edi
-        call FrameUnwindToState_1001ce0c
+        call ___FrameUnwindToState
         add esp, 10h
         and dword ptr [ebp - 1Ch], 0
         and dword ptr [ebp - 4], 0

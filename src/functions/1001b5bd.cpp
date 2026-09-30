@@ -1,6 +1,5 @@
 #include <cstdint>
 
-extern "C" void __cdecl FUN_1001ca2e(void);
 extern "C" std::uint32_t DAT_1003c404;
 extern "C" unsigned char DAT_100258b0(void);
 extern "C" void DAT_10039590(void);
@@ -35,7 +34,7 @@ extern "C" __declspec(naked) std::uint32_t __cdecl FUN_1001b5bd(
     sqrt_result:
         cmp dword ptr [DAT_1003c404], 0
         jz L_sqrt_errno_ok
-        jmp FUN_1001ca2e
+        jmp L_sqrt_shared_restore
     L_sqrt_errno_ok:
         mov edx, 5
         lea ecx, dword ptr DAT_10039590
@@ -70,7 +69,7 @@ extern "C" __declspec(naked) std::uint32_t __cdecl FUN_1001b5bd(
     error_handler:
         cmp dword ptr [DAT_1003c404], 0
         jz L_sqrt_report_ok
-        jmp FUN_1001ca2e
+        jmp L_sqrt_shared_restore
     L_sqrt_report_ok:
         mov edx, 5
         lea ecx, dword ptr DAT_10039590
@@ -78,6 +77,13 @@ extern "C" __declspec(naked) std::uint32_t __cdecl FUN_1001b5bd(
         pop edx
         ret
 
+    L_sqrt_shared_restore:
+        cmp word ptr [esp], 027fh
+        jz L_sqrt_shared_restore_done
+        fldcw word ptr [esp]
+    L_sqrt_shared_restore_done:
+        pop edx
+        ret
 
     }
 }

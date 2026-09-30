@@ -19,6 +19,12 @@ static_assert(offsetof(_iobuf, _base) == 0x08);
 static_assert(offsetof(_iobuf, _flag) == 0x0c);
 static_assert(sizeof(_iobuf) == 0x20);
 extern "C" void __stdcall FUN_10013975();
+extern "C" void __stdcall __SEH_epilog4();
+extern "C" void __cdecl __SEH_prolog4(std::uint32_t, int);
+extern "C" void __cdecl __lock(int);
+extern "C" int __cdecl __mtinitlocknum(int);
+extern "C" void* __cdecl __malloc_crt(std::size_t);
+extern "C" void __cdecl _free(void*);
 
 #include <Windows.h>
 #include <cstddef>
@@ -39,14 +45,8 @@ FILE* __cdecl __getstream(void)
     extern int DAT_1003d540;
     extern CRTStreamBlock_0x38** DAT_1003c520;
 
-    extern void __cdecl __SEH_prolog4(std::uint32_t, int);
-    extern void __stdcall __SEH_epilog4();
-    extern void __cdecl __lock(int);
-    extern int __cdecl __mtinitlocknum(int);
     extern void __cdecl __lock_file2(int, void*);
     extern void __cdecl __unlock_file2(int, void*);
-    extern void* __cdecl __malloc_crt(std::size_t);
-    extern void __cdecl _free(void*);
 
     static_assert(sizeof(void*) == 4);
     static_assert(offsetof(CRTStreamBlock_0x38, critical_section) == 0x20);

@@ -1,0 +1,298 @@
+{
+  "scope": "Combined planned .xcode raw bytes only; candidate COFF body/closure relocation fields remain unapplied.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "root_payload_sha256": "2A7DD5407A58A03E22E8B9F1FF97F29E484C507003D816C3AF17DE6F96C351CB",
+  "bridge_layout_sha256": "5441C07AC001384E7A1DF5B3D8D1CC2F097751AF89A9F32B650E623286E14027",
+  "root_closure_sha256": "2F549A1F5FCE60DA84AA3743B871619ECD48ABE27D95793CD4C0383008A8FAC4",
+  "direct_layout_sha256": "7A55587B41EB0396A07C0A75AD35C10EB44283CF95BAA717B20847D3A192A3C9",
+  "cross_object_helpers_sha256": "DB77EFE74A55F7A5F9074ED8E80C5937BE257A694214B7B37A7B07E271906287",
+  "code_virtual_size": 101243,
+  "code_payload_sha256": "67748DC36A823D4FFA20DD1FC002A27A2E5883D078422F629DE44F579B2A0074",
+  "verified_chunk_count": 46,
+  "gap_bytes_zero_filled": true,
+  "coff_fixups_applied": false,
+  "chunks": [
+    {
+      "label": "421 appended root bodies",
+      "offset": 0,
+      "size": 85651,
+      "sha256": "2A7DD5407A58A03E22E8B9F1FF97F29E484C507003D816C3AF17DE6F96C351CB"
+    },
+    {
+      "label": "root-local-xcode:0x10004bb0",
+      "offset": 85651,
+      "size": 1511,
+      "sha256": "2EDA8C969C45233906D69FE961CC2AD82731D930E9A4602A5A26CA668F613A57"
+    },
+    {
+      "label": "root-local-xcode:0x10006be0",
+      "offset": 87162,
+      "size": 1251,
+      "sha256": "6460E6A0D983AA61D5CB0C139366C251DDC6436BD3A008111D22931C75B8F1E8"
+    },
+    {
+      "label": "root-local-xcode:0x10014fa7",
+      "offset": 88413,
+      "size": 9,
+      "sha256": "712835D1898714079D0D3BEB8DD06F625F08EF3B21058DAA717FE8A1BEDBC755"
+    },
+    {
+      "label": "root-local-xcode:0x100154dc",
+      "offset": 88422,
+      "size": 2572,
+      "sha256": "B14DA5CFB99B95F2F8196C343FAA28B1831257E1F14175227FE1EB1984808875"
+    },
+    {
+      "label": "root-local-xcode:0x100182c1",
+      "offset": 90994,
+      "size": 1937,
+      "sha256": "C98B9D34D39027257BCBA4B5D8518DE9E76210DAB78AEB1B15D380859B741609"
+    },
+    {
+      "label": "root-local-xcode:0x1001b693",
+      "offset": 92931,
+      "size": 86,
+      "sha256": "2187A99191979144F0D09F572AD1E3927C268FB4917556083C5E155E37434095"
+    },
+    {
+      "label": "root-local-xcode:0x1001b750",
+      "offset": 93017,
+      "size": 217,
+      "sha256": "50B9D85DAFE31D15F30DAA92C6A8207B3CAB49400F68DE8A47E761CC69CBE44E"
+    },
+    {
+      "label": "root-local-xcode:0x1001bc9e",
+      "offset": 93234,
+      "size": 373,
+      "sha256": "872E4DC07B7B1BBB3FB74547DF3A8B5CADD9CB730C9577D69B1E2F0CF4C0CD6B"
+    },
+    {
+      "label": "root-local-xcode:0x1001bee6",
+      "offset": 93607,
+      "size": 30,
+      "sha256": "655E538460B5CD5CA3725E05A45013CBB84B80A7C9F9D3B5D3E6B61632620085"
+    },
+    {
+      "label": "root-local-xcode:0x1001c25c",
+      "offset": 93637,
+      "size": 282,
+      "sha256": "B187B338AE5E891E6DB8B94C838B36F55353D43F625B08C37F57D9866A8291B1"
+    },
+    {
+      "label": "root-local-xcode:0x1001c35f",
+      "offset": 93919,
+      "size": 30,
+      "sha256": "7F43D246F213FCD56C03B96AA1BB2923B71DCA4939D18E382B73C0D78158BF25"
+    },
+    {
+      "label": "root-local-xcode:0x1001d591",
+      "offset": 93949,
+      "size": 54,
+      "sha256": "3B98E66C528AB65F5755D215A8754A90E3163F4BAAFEAB77EC3E215E76339CAA"
+    },
+    {
+      "label": "root-local-xcode:0x1001d591",
+      "offset": 94003,
+      "size": 14,
+      "sha256": "208F1E0098B7B57ED904E0A2BAB4597C2450CE36B21070776190DF5C1795143E"
+    },
+    {
+      "label": "root-local-xcode:0x1001eb27",
+      "offset": 94017,
+      "size": 2640,
+      "sha256": "E48D8B4774D82CEDBC97068326E0A91FF0FBC2FADB41B82A7AF33F0FCBF236B7"
+    },
+    {
+      "label": "21 original-IAT API thunks",
+      "offset": 96672,
+      "size": 126,
+      "sha256": "DF81C83ED4A8CD0BE6597AD9C920CB77735AD26519E492494990F05D55D831F8"
+    },
+    {
+      "label": "original CRT helper bridge",
+      "offset": 96800,
+      "size": 82,
+      "sha256": "E2EDE895538B04C721AE9E9AE7FF780D96CF6578ADF42A1C460A2DC987B982CC"
+    },
+    {
+      "label": "direct-IAT:GetModuleFileNameA",
+      "offset": 96882,
+      "size": 6,
+      "sha256": "E18177ADD7DCE9C441F4A0C4A5DAF0FE56C5E81DE69A22CAEA5D467D3183D188"
+    },
+    {
+      "label": "direct-IAT:GetModuleHandleA",
+      "offset": 96888,
+      "size": 6,
+      "sha256": "40B033FA76961F82C0405C3D6D518032F0CA0837A3DB6E7315C8710CCA879FFF"
+    },
+    {
+      "label": "direct-IAT:GetPrivateProfileIntA",
+      "offset": 96894,
+      "size": 6,
+      "sha256": "7715C8EF4599248E78203815D4AC17715303BC54C929D83223D50CDACFDAA7DC"
+    },
+    {
+      "label": "direct-IAT:MapViewOfFile",
+      "offset": 96900,
+      "size": 6,
+      "sha256": "A42D56C8750CA85F63AF6BE231D93D54ACBB1FE56F9D0CC1C5F78D57E5D531DE"
+    },
+    {
+      "label": "direct-IAT:HeapFree",
+      "offset": 96906,
+      "size": 6,
+      "sha256": "FF269B2DD9D6CD6BA7A4FC0895F80766EEECBC5C599EAACEF59E8A923427A63B"
+    },
+    {
+      "label": "direct-IAT:OpenFileMappingA",
+      "offset": 96912,
+      "size": 6,
+      "sha256": "975A827EED3D6DCA1635320F2A59D3FD1BAFAF4820ADDBE474F910F930CF1902"
+    },
+    {
+      "label": "direct-IAT:RaiseException",
+      "offset": 96918,
+      "size": 6,
+      "sha256": "827830BB93C682AB63C701DA80F6B35D1A8691FB2FE2084FF1A42C89BB30DE15"
+    },
+    {
+      "label": "direct-IAT:DeleteCriticalSection",
+      "offset": 96924,
+      "size": 6,
+      "sha256": "0A3452F7E639518EA87AFBB95E83526A3A37217CC5CDAE7A906745D4F023E847"
+    },
+    {
+      "label": "direct-IAT:TlsGetValue",
+      "offset": 96930,
+      "size": 6,
+      "sha256": "F57FD5C4806B642198B68FEE25C5546268D4405F988627DDE7A8CC270F13E880"
+    },
+    {
+      "label": "direct-IAT:TlsSetValue",
+      "offset": 96936,
+      "size": 6,
+      "sha256": "B1D711E5FEED653AFD5B9F8F2C0512F6FF3F3CDB2C3BC22834474E79397D8406"
+    },
+    {
+      "label": "direct-IAT:HeapReAlloc",
+      "offset": 96942,
+      "size": 6,
+      "sha256": "CE87ED4783DAAA59A9AA4A1B16CE843CA39FEEE2662F0AC77EBC4E692EF79CEC"
+    },
+    {
+      "label": "direct-IAT:D3DXCompileShaderFromFileA",
+      "offset": 96948,
+      "size": 6,
+      "sha256": "A23C46AFB2F41868E6F251A88BAE1BD7A8F39823D8DB62EFCA9A46D3BC74F54F"
+    },
+    {
+      "label": "direct-local-xcode:0x10004ab0",
+      "offset": 96954,
+      "size": 119,
+      "sha256": "871077E0E8E2A999041E376F319CDD09BDAA0925AD81D3C53CB35D25FA78ACC7"
+    },
+    {
+      "label": "direct-local-xcode:0x10007030",
+      "offset": 97073,
+      "size": 890,
+      "sha256": "B0D0A7C567B39DBA774508747FA71E7549B208DEBF7E65052DD2CB5E76027B35"
+    },
+    {
+      "label": "direct-local-xcode:0x100076d0",
+      "offset": 97963,
+      "size": 2171,
+      "sha256": "B9C09A3DB9AA9F47CD501EFA9B9D0C32B5F2078E51ED8BE1BA9C82519AD58930"
+    },
+    {
+      "label": "direct-local-xcode:0x1000c480",
+      "offset": 100134,
+      "size": 392,
+      "sha256": "DD04B6CC031487372E721D53A06C3AD6AEE88CF0FB68767A7B0258108D04FDF8"
+    },
+    {
+      "label": "direct-local-xcode:0x10013980",
+      "offset": 100526,
+      "size": 70,
+      "sha256": "0D40EB0232D805DAD8BF7DAFC83A68B1D0A023616AF07CDD75EBB531A38FA6A5"
+    },
+    {
+      "label": "direct-local-xcode:0x10013980",
+      "offset": 100596,
+      "size": 130,
+      "sha256": "9540BF6DE6DF1415C92C9DAA3E2568B9576314D31F0C4826E3498B2DE2DC76C0"
+    },
+    {
+      "label": "direct-local-xcode:0x100189f5",
+      "offset": 100726,
+      "size": 10,
+      "sha256": "12EB8C409EA4839E9E1E686C5F78B0604B35DD0B43F77B8959FA209EDC7C5738"
+    },
+    {
+      "label": "direct-local-xcode:0x10018ec5",
+      "offset": 100736,
+      "size": 69,
+      "sha256": "A820A7ACC44A61AD39222E0F5A88F9376BC6E0E27A9A4110CFF5167AEDC6FA55"
+    },
+    {
+      "label": "direct-local-xcode:0x10018ec5",
+      "offset": 100805,
+      "size": 132,
+      "sha256": "0A83A18C09BFBD575C3C345330AE7B40DDA74FE36AB190F3069A87FA2582402C"
+    },
+    {
+      "label": "direct-local-xcode:0x1001d06f",
+      "offset": 100937,
+      "size": 9,
+      "sha256": "663521DB24EE2586AABFAF166693CCB45A0EA3F4190A415C740925E6542A29F7"
+    },
+    {
+      "label": "direct-local-xcode:0x1001d06f",
+      "offset": 100946,
+      "size": 112,
+      "sha256": "A5471D9F1D671D7515036997A253037E6BC83249BB3C54E07B61C216993B9D6E"
+    },
+    {
+      "label": "direct-local-xcode:0x1001d06f",
+      "offset": 101058,
+      "size": 11,
+      "sha256": "45F344AFE5CB0B7A75B339C63B4429565F9BB4EE317D87CC9CAFF046B477228B"
+    },
+    {
+      "label": "direct-local-xcode:0x1001d06f",
+      "offset": 101069,
+      "size": 28,
+      "sha256": "05C96C230A62F8E609B24F19CE3B329C92983A13C06F4B7DCC7EEE7FD2497A6D"
+    },
+    {
+      "label": "direct-local-xcode:0x1001d06f",
+      "offset": 101097,
+      "size": 69,
+      "sha256": "DC867C641EEC1CB9DB17C924DE466CCB906256798C9D495858A03FAA278E7643"
+    },
+    {
+      "label": "cross-object-helper:0x10006be0:4",
+      "offset": 101166,
+      "size": 54,
+      "sha256": "AAD69CE07B8845A76363B1450B0AB61FC213DFCA249F0DF319F287273F83514F"
+    },
+    {
+      "label": "cross-object-helper:0x10009610:4",
+      "offset": 101220,
+      "size": 5,
+      "sha256": "E8EBD827D1F36D7CFA5E5220610AA6370284D1589989363F48AC40166362D449"
+    },
+    {
+      "label": "cross-object-helper:0x10010b1a:3",
+      "offset": 101225,
+      "size": 18,
+      "sha256": "1CFC432C9161C8AC51E5671C0F85CB4D061592E34B7E2367129A2CF1E96B9824"
+    }
+  ],
+  "limitations": [
+    "This is a code-section payload, not a complete PE/ASI image.",
+    "The copied object relocation fields remain at raw COFF addends.",
+    "The companion .rdata/.data payloads and in-place body/entry patches are not included.",
+    "No loader or in-game validation has been run."
+  ]
+}

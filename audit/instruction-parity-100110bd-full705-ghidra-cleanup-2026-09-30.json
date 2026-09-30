@@ -1,0 +1,11 @@
+{
+  "scope": "Normalized instruction-stream comparison; direct call destinations and absolute data addresses are intentionally not verified here.",
+  "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\100110bd.json",
+  "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-ghidra-cleanup-exact-20260930\\100110bd.obj",
+  "ghidra_sha256": "3356EC62AA249A4F8637BBE9793CF90DB0BB2D233DFEA4763ED34817C8C0EF1D",
+  "object_sha256": "5863982288DABBF2853A1BE37B68CF7ABF7B834C3938BF0A15D7944BED425192",
+  "ghidra_instruction_count": 87,
+  "coff_instruction_count": 87,
+  "normalized_instruction_stream_matches": true,
+  "differences": []
+}

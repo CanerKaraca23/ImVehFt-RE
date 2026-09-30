@@ -1,0 +1,1559 @@
+{
+  "input": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\link-probe\\entry-exact-diagnostic-20260929\\ImVehFt-entry-xcode-layout-alloca-probe8-fix-diagnostic-not-ASI.dll",
+  "file_size": 577024,
+  "image_base": 268435456,
+  "size_of_image": 602112,
+  "section_alignment": 4096,
+  "relocation_directory_rva": 585728,
+  "relocation_directory_size": 13460,
+  "sections": [
+    {
+      "name": ".entry",
+      "rva": 4096,
+      "va": 268439552,
+      "virtual_size": 132096,
+      "raw_size": 132096,
+      "raw_offset": 1024
+    },
+    {
+      "name": ".xcode",
+      "rva": 139264,
+      "va": 268574720,
+      "virtual_size": 143589,
+      "raw_size": 143872,
+      "raw_offset": 133120
+    },
+    {
+      "name": ".text",
+      "rva": 286720,
+      "va": 268722176,
+      "virtual_size": 81180,
+      "raw_size": 81408,
+      "raw_offset": 276992
+    },
+    {
+      "name": ".rdata",
+      "rva": 368640,
+      "va": 268804096,
+      "virtual_size": 60836,
+      "raw_size": 60928,
+      "raw_offset": 358400
+    },
+    {
+      "name": ".data",
+      "rva": 430080,
+      "va": 268865536,
+      "virtual_size": 147812,
+      "raw_size": 143360,
+      "raw_offset": 419328
+    },
+    {
+      "name": ".fptable",
+      "rva": 581632,
+      "va": 269017088,
+      "virtual_size": 128,
+      "raw_size": 512,
+      "raw_offset": 562688
+    },
+    {
+      "name": ".reloc",
+      "rva": 585728,
+      "va": 269021184,
+      "virtual_size": 13460,
+      "raw_size": 13824,
+      "raw_offset": 563200
+    }
+  ],
+  "relocation_count_by_type": {
+    "3": 6391
+  },
+  "relocation_site_count_by_section": {
+    ".xcode": 2859,
+    ".text": 1108,
+    ".rdata": 2104,
+    ".data": 320
+  },
+  "highlow_target_count_by_section": {
+    ".data": 2672,
+    ".rdata": 3028,
+    ".xcode": 304,
+    ".text": 377,
+    ".fptable": 7,
+    "outside": 3
+  },
+  "highlow_targets_image_base": 3,
+  "raw_dword_target_hits": 6570,
+  "raw_dword_target_hits_by_section_and_fixup": {
+    ".xcode|covered": 2859,
+    ".xcode|uncovered": 21,
+    ".text|covered": 1105,
+    ".text|uncovered": 10,
+    ".rdata|covered": 2104,
+    ".rdata|uncovered": 4,
+    ".data|covered": 320,
+    ".data|uncovered": 147
+  },
+  "uncovered_raw_dword_target_hits": [
+    {
+      "section": ".xcode",
+      "site_rva": 148661,
+      "site_va": 268584117,
+      "stored_value": 268819300,
+      "stored_target_section": ".rdata",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 166031,
+      "site_va": 268601487,
+      "stored_value": 268818705,
+      "stored_target_section": ".rdata",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 175295,
+      "site_va": 268610751,
+      "stored_value": 268814284,
+      "stored_target_section": ".rdata",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 202230,
+      "site_va": 268637686,
+      "stored_value": 268606476,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 211182,
+      "site_va": 268646638,
+      "stored_value": 268604560,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 228897,
+      "site_va": 268664353,
+      "stored_value": 268599680,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 228902,
+      "site_va": 268664358,
+      "stored_value": 268599680,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 228913,
+      "site_va": 268664369,
+      "stored_value": 268599688,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 228918,
+      "site_va": 268664374,
+      "stored_value": 268599688,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 250313,
+      "site_va": 268685769,
+      "stored_value": 268814096,
+      "stored_target_section": ".rdata",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 255968,
+      "site_va": 268691424,
+      "stored_value": 268589280,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 262184,
+      "site_va": 268697640,
+      "stored_value": 268604560,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 273008,
+      "site_va": 268708464,
+      "stored_value": 268716163,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 273511,
+      "site_va": 268708967,
+      "stored_value": 268976630,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 274753,
+      "site_va": 268710209,
+      "stored_value": 268670684,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 274771,
+      "site_va": 268710227,
+      "stored_value": 268670684,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 274789,
+      "site_va": 268710245,
+      "stored_value": 268670696,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 276069,
+      "site_va": 268711525,
+      "stored_value": 268814080,
+      "stored_target_section": ".rdata",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 278114,
+      "site_va": 268713570,
+      "stored_value": 268671456,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 278118,
+      "site_va": 268713574,
+      "stored_value": 268575312,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".xcode",
+      "site_rva": 278123,
+      "site_va": 268713579,
+      "stored_value": 268671456,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 296936,
+      "site_va": 268732392,
+      "stored_value": 268744207,
+      "stored_target_section": ".text",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 320673,
+      "site_va": 268756129,
+      "stored_value": 268769288,
+      "stored_target_section": ".text",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 320696,
+      "site_va": 268756152,
+      "stored_value": 268769288,
+      "stored_target_section": ".text",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 321923,
+      "site_va": 268757379,
+      "stored_value": 268992524,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 330409,
+      "site_va": 268765865,
+      "stored_value": 268778246,
+      "stored_target_section": ".text",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 356031,
+      "site_va": 268791487,
+      "stored_value": 268716163,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 356497,
+      "site_va": 268791953,
+      "stored_value": 268976630,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 362203,
+      "site_va": 268797659,
+      "stored_value": 268957216,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 364003,
+      "site_va": 268799459,
+      "stored_value": 268957189,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".text",
+      "site_rva": 366434,
+      "site_va": 268801890,
+      "stored_value": 268957230,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".rdata",
+      "site_rva": 403616,
+      "site_va": 268839072,
+      "stored_value": 268828846,
+      "stored_target_section": ".rdata",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".rdata",
+      "site_rva": 410198,
+      "site_va": 268845654,
+      "stored_value": 268701702,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".rdata",
+      "site_rva": 410206,
+      "site_va": 268845662,
+      "stored_value": 268898310,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".rdata",
+      "site_rva": 426870,
+      "site_va": 268862326,
+      "stored_value": 268828672,
+      "stored_target_section": ".rdata",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430132,
+      "site_va": 268865588,
+      "stored_value": 268575312,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430136,
+      "site_va": 268865592,
+      "stored_value": 268575312,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430140,
+      "site_va": 268865596,
+      "stored_value": 268575272,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430144,
+      "site_va": 268865600,
+      "stored_value": 268591592,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430148,
+      "site_va": 268865604,
+      "stored_value": 268586124,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430152,
+      "site_va": 268865608,
+      "stored_value": 268586340,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430156,
+      "site_va": 268865612,
+      "stored_value": 268586196,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430160,
+      "site_va": 268865616,
+      "stored_value": 268586436,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430164,
+      "site_va": 268865620,
+      "stored_value": 268586364,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430168,
+      "site_va": 268865624,
+      "stored_value": 268586268,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430172,
+      "site_va": 268865628,
+      "stored_value": 268586148,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430176,
+      "site_va": 268865632,
+      "stored_value": 268586412,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430180,
+      "site_va": 268865636,
+      "stored_value": 268586460,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430184,
+      "site_va": 268865640,
+      "stored_value": 268586316,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430188,
+      "site_va": 268865644,
+      "stored_value": 268586580,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430192,
+      "site_va": 268865648,
+      "stored_value": 268586292,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430196,
+      "site_va": 268865652,
+      "stored_value": 268586172,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430200,
+      "site_va": 268865656,
+      "stored_value": 268586388,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430204,
+      "site_va": 268865660,
+      "stored_value": 268586532,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430208,
+      "site_va": 268865664,
+      "stored_value": 268586556,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430212,
+      "site_va": 268865668,
+      "stored_value": 268586484,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430216,
+      "site_va": 268865672,
+      "stored_value": 268586508,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430220,
+      "site_va": 268865676,
+      "stored_value": 268586220,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430224,
+      "site_va": 268865680,
+      "stored_value": 268586244,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430228,
+      "site_va": 268865684,
+      "stored_value": 268586124,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430232,
+      "site_va": 268865688,
+      "stored_value": 268586340,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430236,
+      "site_va": 268865692,
+      "stored_value": 268586196,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430240,
+      "site_va": 268865696,
+      "stored_value": 268586436,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430244,
+      "site_va": 268865700,
+      "stored_value": 268586364,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430248,
+      "site_va": 268865704,
+      "stored_value": 268586268,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430252,
+      "site_va": 268865708,
+      "stored_value": 268586148,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430256,
+      "site_va": 268865712,
+      "stored_value": 268586412,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430260,
+      "site_va": 268865716,
+      "stored_value": 268586460,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430264,
+      "site_va": 268865720,
+      "stored_value": 268586316,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430268,
+      "site_va": 268865724,
+      "stored_value": 268586580,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430272,
+      "site_va": 268865728,
+      "stored_value": 268586292,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430276,
+      "site_va": 268865732,
+      "stored_value": 268586172,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430280,
+      "site_va": 268865736,
+      "stored_value": 268586388,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430284,
+      "site_va": 268865740,
+      "stored_value": 268586532,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430288,
+      "site_va": 268865744,
+      "stored_value": 268586556,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430292,
+      "site_va": 268865748,
+      "stored_value": 268586484,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430296,
+      "site_va": 268865752,
+      "stored_value": 268586508,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430300,
+      "site_va": 268865756,
+      "stored_value": 268586220,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 430304,
+      "site_va": 268865760,
+      "stored_value": 268586244,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 466333,
+      "site_va": 268901789,
+      "stored_value": 268965007,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 479029,
+      "site_va": 268914485,
+      "stored_value": 268952941,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 486886,
+      "site_va": 268922342,
+      "stored_value": 268946889,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513624,
+      "site_va": 268949080,
+      "stored_value": 268682560,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513636,
+      "site_va": 268949092,
+      "stored_value": 268682560,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513644,
+      "site_va": 268949100,
+      "stored_value": 268682560,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513648,
+      "site_va": 268949104,
+      "stored_value": 268682560,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513656,
+      "site_va": 268949112,
+      "stored_value": 268682560,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513712,
+      "site_va": 268949168,
+      "stored_value": 268604576,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513784,
+      "site_va": 268949240,
+      "stored_value": 268576288,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513788,
+      "site_va": 268949244,
+      "stored_value": 268576284,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513808,
+      "site_va": 268949264,
+      "stored_value": 268581416,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513812,
+      "site_va": 268949268,
+      "stored_value": 268582576,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513816,
+      "site_va": 268949272,
+      "stored_value": 268582960,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513820,
+      "site_va": 268949276,
+      "stored_value": 268605896,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513824,
+      "site_va": 268949280,
+      "stored_value": 268606256,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513872,
+      "site_va": 268949328,
+      "stored_value": 268576516,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513876,
+      "site_va": 268949332,
+      "stored_value": 268576500,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 513888,
+      "site_va": 268949344,
+      "stored_value": 268576500,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514112,
+      "site_va": 268949568,
+      "stored_value": 268607136,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514116,
+      "site_va": 268949572,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514120,
+      "site_va": 268949576,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514124,
+      "site_va": 268949580,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514128,
+      "site_va": 268949584,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514132,
+      "site_va": 268949588,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514136,
+      "site_va": 268949592,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514140,
+      "site_va": 268949596,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514144,
+      "site_va": 268949600,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514148,
+      "site_va": 268949604,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514152,
+      "site_va": 268949608,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514156,
+      "site_va": 268949612,
+      "stored_value": 268673908,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514160,
+      "site_va": 268949616,
+      "stored_value": 268607140,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514164,
+      "site_va": 268949620,
+      "stored_value": 268673912,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514168,
+      "site_va": 268949624,
+      "stored_value": 268673912,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514172,
+      "site_va": 268949628,
+      "stored_value": 268673912,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514176,
+      "site_va": 268949632,
+      "stored_value": 268673912,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514180,
+      "site_va": 268949636,
+      "stored_value": 268673912,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514184,
+      "site_va": 268949640,
+      "stored_value": 268673912,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514188,
+      "site_va": 268949644,
+      "stored_value": 268673912,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514196,
+      "site_va": 268949652,
+      "stored_value": 268575304,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514236,
+      "site_va": 268949692,
+      "stored_value": 268583820,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514240,
+      "site_va": 268949696,
+      "stored_value": 268583820,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514244,
+      "site_va": 268949700,
+      "stored_value": 268583816,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514256,
+      "site_va": 268949712,
+      "stored_value": 268586124,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514284,
+      "site_va": 268949740,
+      "stored_value": 268586148,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514296,
+      "site_va": 268949752,
+      "stored_value": 268586148,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514316,
+      "site_va": 268949772,
+      "stored_value": 268586172,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514328,
+      "site_va": 268949784,
+      "stored_value": 268586172,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514348,
+      "site_va": 268949804,
+      "stored_value": 268586196,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514360,
+      "site_va": 268949816,
+      "stored_value": 268586196,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514380,
+      "site_va": 268949836,
+      "stored_value": 268586220,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514392,
+      "site_va": 268949848,
+      "stored_value": 268586220,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514412,
+      "site_va": 268949868,
+      "stored_value": 268586244,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514424,
+      "site_va": 268949880,
+      "stored_value": 268586244,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514432,
+      "site_va": 268949888,
+      "stored_value": 268586244,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514460,
+      "site_va": 268949916,
+      "stored_value": 268586268,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514472,
+      "site_va": 268949928,
+      "stored_value": 268586268,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514480,
+      "site_va": 268949936,
+      "stored_value": 268586268,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514508,
+      "site_va": 268949964,
+      "stored_value": 268586292,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514520,
+      "site_va": 268949976,
+      "stored_value": 268586292,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514528,
+      "site_va": 268949984,
+      "stored_value": 268586292,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514556,
+      "site_va": 268950012,
+      "stored_value": 268586316,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514568,
+      "site_va": 268950024,
+      "stored_value": 268586316,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514576,
+      "site_va": 268950032,
+      "stored_value": 268586316,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514604,
+      "site_va": 268950060,
+      "stored_value": 268586340,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514616,
+      "site_va": 268950072,
+      "stored_value": 268586340,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514624,
+      "site_va": 268950080,
+      "stored_value": 268586340,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514652,
+      "site_va": 268950108,
+      "stored_value": 268586364,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514664,
+      "site_va": 268950120,
+      "stored_value": 268586364,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514684,
+      "site_va": 268950140,
+      "stored_value": 268586388,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514696,
+      "site_va": 268950152,
+      "stored_value": 268586388,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514716,
+      "site_va": 268950172,
+      "stored_value": 268586412,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514728,
+      "site_va": 268950184,
+      "stored_value": 268586412,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514748,
+      "site_va": 268950204,
+      "stored_value": 268586460,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514760,
+      "site_va": 268950216,
+      "stored_value": 268586460,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514768,
+      "site_va": 268950224,
+      "stored_value": 268586460,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514796,
+      "site_va": 268950252,
+      "stored_value": 268586484,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514808,
+      "site_va": 268950264,
+      "stored_value": 268586484,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514828,
+      "site_va": 268950284,
+      "stored_value": 268586508,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514840,
+      "site_va": 268950296,
+      "stored_value": 268586508,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514860,
+      "site_va": 268950316,
+      "stored_value": 268586532,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514872,
+      "site_va": 268950328,
+      "stored_value": 268586532,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514892,
+      "site_va": 268950348,
+      "stored_value": 268586556,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514904,
+      "site_va": 268950360,
+      "stored_value": 268586556,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514924,
+      "site_va": 268950380,
+      "stored_value": 268586580,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514936,
+      "site_va": 268950392,
+      "stored_value": 268586580,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514956,
+      "site_va": 268950412,
+      "stored_value": 268575304,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 514968,
+      "site_va": 268950424,
+      "stored_value": 268575304,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515132,
+      "site_va": 268950588,
+      "stored_value": 268591844,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515144,
+      "site_va": 268950600,
+      "stored_value": 268591844,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515156,
+      "site_va": 268950612,
+      "stored_value": 268591696,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515164,
+      "site_va": 268950620,
+      "stored_value": 268591688,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515492,
+      "site_va": 268950948,
+      "stored_value": 268578864,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515500,
+      "site_va": 268950956,
+      "stored_value": 268578776,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515504,
+      "site_va": 268950960,
+      "stored_value": 268578864,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515512,
+      "site_va": 268950968,
+      "stored_value": 268578776,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515520,
+      "site_va": 268950976,
+      "stored_value": 268673944,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 515524,
+      "site_va": 268950980,
+      "stored_value": 268674032,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 516188,
+      "site_va": 268951644,
+      "stored_value": 268599740,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 516204,
+      "site_va": 268951660,
+      "stored_value": 268600828,
+      "stored_target_section": ".xcode",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 548289,
+      "site_va": 268983745,
+      "stored_value": 268965007,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 560985,
+      "site_va": 268996441,
+      "stored_value": 268952941,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    },
+    {
+      "section": ".data",
+      "site_rva": 568842,
+      "site_va": 269004298,
+      "stored_value": 268946889,
+      "stored_target_section": ".data",
+      "has_highlow_fixup_at_exact_site": false
+    }
+  ],
+  "limitations": [
+    "A bytewise DWORD match is a candidate, not proof of a live pointer or instruction operand.",
+    "Relocation records describe loader fixups, not every numeric absolute address embedded by source code.",
+    "No image bytes are changed and this report does not prove PE or runtime validity."
+  ]
+}

@@ -1,4 +1,5 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 #include <windows.h>
 
 extern std::int32_t DAT_1003c248;
@@ -12,20 +13,17 @@ extern std::int32_t DAT_1003bc24;
 extern std::uint32_t DAT_1003bc70;
 extern std::uint32_t DAT_1003aed8;
 
-extern std::int32_t* _DAT_00b74494;
-extern std::int32_t _DAT_00b7cd98;
-extern std::uint32_t _DAT_00b7cb84;
 extern std::uint32_t _DAT_1003bc20;
 extern std::uint8_t DAT_100374bc;
-extern float _DAT_10024fc0;
+extern double _DAT_10024fc0;
 extern float _DAT_10024e90;
-extern float _DAT_10024e78;
-extern float _DAT_10024e70;
+extern "C" double DAT_10024e78;
+extern "C" double DAT_10024e70;
 extern float _DAT_10024fb8;
-extern float _DAT_10024fb0;
+extern double _DAT_10024fb0;
 extern float _DAT_10024fac;
 extern float _DAT_10024fa8;
-extern std::uintptr_t _PTR_10024e68;
+extern double DAT_10024e68;
 
 extern "C" std::int32_t __stdcall FUN_10009360();
 extern "C" long double __cdecl FUN_10010120(float, float);
@@ -40,7 +38,7 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
     const std::int32_t state =
         *reinterpret_cast<std::int32_t*>(
             *reinterpret_cast<std::int32_t*>(manager + 0x48) +
-            ((static_cast<std::int32_t>(object) - *_DAT_00b74494) / 0xa18) * 4) +
+            ((static_cast<std::int32_t>(object) - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
         base;
 
     if (*reinterpret_cast<std::int32_t*>(object + 0x460) == 0 ||
@@ -58,7 +56,8 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
         *reinterpret_cast<std::uint8_t*>(state + 0x1d) = 0;
     }
 
-    if (*reinterpret_cast<std::int32_t*>(object + 0x460) == _DAT_00b7cd98)
+    if (*reinterpret_cast<std::int32_t*>(object + 0x460) ==
+        IMVEHFT_GLOBAL_AT(std::int32_t, 0x00b7cd98))
     {
         SHORT keyState = GetKeyState(DAT_1003bc04);
 
@@ -76,12 +75,12 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
         keyState = GetKeyState(DAT_1003bc74);
 
         if (static_cast<char>(static_cast<std::uint16_t>(keyState) >> 8) == -1 &&
-            0xfa < (_DAT_00b7cb84 - _DAT_1003bc20))
+            0xfa < (IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84) - _DAT_1003bc20))
         {
             *reinterpret_cast<std::uint8_t*>(state + 0x1c) =
                 *reinterpret_cast<char*>(state + 0x1c) == '\0';
 
-            _DAT_1003bc20 = _DAT_00b7cb84;
+            _DAT_1003bc20 = IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84);
             reinterpret_cast<void(__thiscall*)(void*, std::int32_t, float, float)>(0x506ea0)(
                 reinterpret_cast<void*>(0x00b6bc90), 0x25, 0.0f, 1.0f);
         }
@@ -92,9 +91,11 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
     *reinterpret_cast<std::uint8_t*>(state + 0x20) = active != '\0';
 
     std::uint32_t elapsed =
-        _DAT_00b7cb84 - *reinterpret_cast<std::uint32_t*>(state + 0x24);
+        IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84) -
+        *reinterpret_cast<std::uint32_t*>(state + 0x24);
 
-    if (*reinterpret_cast<std::int32_t*>(object + 0x460) == _DAT_00b7cd98)
+    if (*reinterpret_cast<std::int32_t*>(object + 0x460) ==
+        IMVEHFT_GLOBAL_AT(std::int32_t, 0x00b7cd98))
     {
         SHORT keyState = GetKeyState(DAT_1003b6fc);
 
@@ -109,7 +110,8 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
         if (static_cast<char>(static_cast<std::uint16_t>(keyState) >> 8) == -1)
         {
             *reinterpret_cast<std::uint16_t*>(state + 0x1e) = 0x101;
-            *reinterpret_cast<std::uint32_t*>(state + 0x24) = _DAT_00b7cb84;
+            *reinterpret_cast<std::uint32_t*>(state + 0x24) =
+                IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84);
             return;
         }
 
@@ -118,7 +120,8 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
         if (static_cast<char>(static_cast<std::uint16_t>(keyState) >> 8) == -1)
         {
             *reinterpret_cast<std::uint16_t*>(state + 0x1e) = 1;
-            *reinterpret_cast<std::uint32_t*>(state + 0x24) = _DAT_00b7cb84;
+            *reinterpret_cast<std::uint32_t*>(state + 0x24) =
+                IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84);
             return;
         }
 
@@ -127,7 +130,8 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
         if (static_cast<char>(static_cast<std::uint16_t>(keyState) >> 8) == -1)
         {
             *reinterpret_cast<std::uint16_t*>(state + 0x1e) = 0x100;
-            *reinterpret_cast<std::uint32_t*>(state + 0x24) = _DAT_00b7cb84;
+            *reinterpret_cast<std::uint32_t*>(state + 0x24) =
+                IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84);
             return;
         }
     }
@@ -135,7 +139,8 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
     {
         if (DAT_1003bc70 < elapsed)
         {
-            *reinterpret_cast<std::uint32_t*>(state + 0x24) = _DAT_00b7cb84;
+            *reinterpret_cast<std::uint32_t*>(state + 0x24) =
+                IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84);
             return;
         }
 
@@ -258,10 +263,10 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
 
                 float first =
                     static_cast<float>(
-                        angle * static_cast<long double>(_DAT_10024e78) -
-                        static_cast<long double>(_DAT_10024e70));
+                        angle * static_cast<long double>(DAT_10024e78) -
+                        static_cast<long double>(DAT_10024e70));
 
-                const float period = static_cast<float>(_PTR_10024e68);
+                const float period = static_cast<float>(DAT_10024e68);
 
                 for (; first < 0.0f; first = first + period)
                 {
@@ -275,8 +280,8 @@ extern "C" void __cdecl FUN_10004bb0_impl(std::uintptr_t object)
 
                 float second =
                     static_cast<float>(
-                        angle * static_cast<long double>(_DAT_10024e78) -
-                        static_cast<long double>(_DAT_10024e70));
+                        angle * static_cast<long double>(DAT_10024e78) -
+                        static_cast<long double>(DAT_10024e70));
 
                 for (; second < 0.0f; second = second + period)
                 {

@@ -1,0 +1,18 @@
+{
+  "scope": "single x86 function body after COFF fixup resolution; not whole-image/runtime proof",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "entry_va": "0x1001CB37",
+  "body_size": 60,
+  "candidate_resolved_sha256": "2A0581BB25CCDAA1D02D08909945DF8226EEFDC90D768EDDBB6CB40E3A8AA194",
+  "original_body_sha256": "2A0581BB25CCDAA1D02D08909945DF8226EEFDC90D768EDDBB6CB40E3A8AA194",
+  "byte_identical": true,
+  "mismatch_offsets": [],
+  "relocations": [
+    {
+      "site_va": "0x1001CB5C",
+      "symbol": "?__87except@@YAXHPAHPAG@Z",
+      "target_va": "0x1001DEFE",
+      "type": "0x0014"
+    }
+  ]
+}

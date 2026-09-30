@@ -1,9 +1,11 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 using VoidCallback = void (__cdecl*)();
 using ResultCallback = std::uint32_t (__cdecl*)();
 
-extern "C" std::int32_t DAT_1003c39c;
+#define DAT_1003c39c IMVEHFT_GLOBAL_AT(std::int32_t, IVF_IMAGE_ADDRESS_1003C39C)
 
 std::uint32_t __stdcall FUN_1000dd60()
 {

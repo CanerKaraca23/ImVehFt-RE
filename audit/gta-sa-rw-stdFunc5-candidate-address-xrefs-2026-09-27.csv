@@ -1,0 +1,6 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+005fc4c0,".text","FUN_005fc4c0[Function,DEFAULT,primary]","005fc4c0:JNZ 0x005fc4fe","00403cb5:UNCONDITIONAL_CALL@00403caf:FUN_00403caf"
+005fc586,".text","","005fc586:MOV dword ptr [ESI + 0x5c];ECX",""
+00403cb5,".text","","00403cb5:JMP 0x005fc4c0",""
+006c4197,".text","FUN_006c4197[Function,DEFAULT,primary]","006c4197:MOV EAX;FS:[0x0]","00403caa:UNCONDITIONAL_CALL@00403c98:FUN_00403c98"
+00c97a24,".data","","00c97a24:?? 00h:type=undefined",""

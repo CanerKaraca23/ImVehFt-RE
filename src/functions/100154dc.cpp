@@ -1,14 +1,27 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <cstdio>
 #include <cwchar>
+#include <new>
 
 using errno_t = int;
 using PVOID = void*;
 
-struct localeinfo_struct {
-    std::uint8_t opaque[0x100];
+struct _LocaleUpdate {
+    void* locinfo;
+    void* mbcinfo;
+    void* ptd;
+    std::uint8_t updated;
+    std::uint8_t reserved_0d[3];
+
+    explicit _LocaleUpdate(_locale_t locale);
 };
+static_assert(offsetof(_LocaleUpdate, locinfo) == 0x00);
+static_assert(offsetof(_LocaleUpdate, mbcinfo) == 0x04);
+static_assert(offsetof(_LocaleUpdate, ptd) == 0x08);
+static_assert(offsetof(_LocaleUpdate, updated) == 0x0c);
+static_assert(sizeof(_LocaleUpdate) == 0x10);
 
 struct crt_file {
     std::uint8_t opaque_00[0x0c];
@@ -20,9 +33,8 @@ struct stream_state {
     std::uint8_t flags;
 };
 
-extern "C" void __cdecl _LocaleUpdate(void*, _locale_t);
-extern "C" int __cdecl __fileno(FILE*);
-extern "C" int __cdecl __isleadbyte_l(std::uint32_t, localeinfo_struct*);
+int __cdecl __fileno(FILE*);
+extern "C" int __cdecl __isleadbyte_l(std::uint32_t, _locale_t);
 extern "C" int* __cdecl __errno();
 extern "C" void __stdcall FUN_1001189f();
 extern "C" errno_t __cdecl _wctomb_s(int*, char*, std::size_t, wchar_t);
@@ -30,7 +42,7 @@ extern "C" std::size_t __cdecl _strlen(char*);
 extern "C" int __cdecl __get_printf_count_output();
 extern "C" void* __cdecl __malloc_crt(std::size_t);
 extern "C" void __cdecl _free(void*);
-extern "C" std::uint64_t __cdecl __aulldvrm(
+extern "C" std::uint64_t __stdcall __aulldvrm(
     std::uint32_t, std::uint32_t, std::uint32_t, std::uint32_t);
 extern "C" PVOID __stdcall DecodePointer(PVOID);
 extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
@@ -47,7 +59,30 @@ extern PVOID PTR_LAB_10029d60;
 extern PVOID PTR_LAB_10029d64;
 extern const wchar_t* PTR_s__null__10029c24;
 extern const wchar_t* PTR_u__null__10029c28;
-extern std::uint32_t extraout_ECX;
+
+static std::uint64_t __cdecl aulldvrm_with_remainder(
+    std::uint32_t dividend_low,
+    std::uint32_t dividend_high,
+    std::uint32_t divisor_low,
+    std::uint32_t divisor_high,
+    std::uint32_t* remainder_low)
+{
+    std::uint64_t quotient = 0;
+
+    __asm {
+        push divisor_high
+        push divisor_low
+        push dividend_high
+        push dividend_low
+        call __aulldvrm
+        mov dword ptr quotient, eax
+        mov dword ptr quotient + 4, edx
+        mov eax, remainder_low
+        mov dword ptr [eax], ecx
+    }
+
+    return quotient;
+}
 
 int __cdecl __output_l(
     FILE* _File,
@@ -71,7 +106,8 @@ int __cdecl __output_l(
     wchar_t* local_250 = nullptr;
     char local_254 = 0;
     int local_258 = 0;
-    localeinfo_struct local_260{};
+    alignas(_LocaleUpdate) std::uint8_t local_260_storage[sizeof(_LocaleUpdate)];
+    auto* local_260 = reinterpret_cast<_LocaleUpdate*>(local_260_storage);
     int local_264 = 0;
     std::uint32_t local_268 = 0;
     int local_270 = 0;
@@ -87,11 +123,11 @@ int __cdecl __output_l(
     int function_result = 0;
 
     const std::uint32_t local_8 =
-        *reinterpret_cast<std::uint32_t*>(0x10029490) ^
+        *reinterpret_cast<std::uint32_t*>(IVF_IMAGE_ADDRESS_10029490) ^
         static_cast<std::uint32_t>(
             reinterpret_cast<std::uintptr_t>(&local_8));
 
-    _LocaleUpdate(&local_260, _Locale);
+    ::new (static_cast<void*>(local_260)) _LocaleUpdate(_Locale);
 
     if (local_244 == nullptr)
         goto failure;
@@ -181,7 +217,9 @@ next_format:
 literal:
             local_23c = 0;
 
-            if (__isleadbyte_l(local_215, &local_260) != 0) {
+            if (__isleadbyte_l(
+                    local_215,
+                    reinterpret_cast<_locale_t>(local_260)) != 0) {
                 write_char();
                 local_240 =
                     reinterpret_cast<std::uint8_t*>(_Format + 2);
@@ -581,7 +619,7 @@ floating_conversion:
 
             using formatter_type = void(__cdecl*)(
                 void*, wchar_t*, std::uint32_t, int, int, int,
-                localeinfo_struct*);
+                _locale_t);
 
             auto formatter =
                 reinterpret_cast<formatter_type>(
@@ -602,30 +640,30 @@ floating_conversion:
                     static_cast<char>(local_215)),
                 local_21c,
                 local_270,
-                &local_260);
+                reinterpret_cast<_locale_t>(local_260));
 
             if ((local_214 & 0x80) != 0 &&
                 local_21c == 0) {
                 using trim_type =
-                    void(__cdecl*)(wchar_t*, localeinfo_struct*);
+                    void(__cdecl*)(wchar_t*, _locale_t);
 
                 auto trim =
                     reinterpret_cast<trim_type>(
                         DecodePointer(PTR_LAB_10029d64));
 
-                trim(output, &local_260);
+                trim(output, reinterpret_cast<_locale_t>(local_260));
             }
 
             if (local_215 == 'g' &&
                 (local_214 & 0x80) == 0) {
                 using trim_type =
-                    void(__cdecl*)(wchar_t*, localeinfo_struct*);
+                    void(__cdecl*)(wchar_t*, _locale_t);
 
                 auto trim =
                     reinterpret_cast<trim_type>(
                         DecodePointer(PTR_LAB_10029d60));
 
-                trim(output, &local_260);
+                trim(output, reinterpret_cast<_locale_t>(local_260));
             }
 
             local_220 = output;
@@ -743,8 +781,9 @@ integer_conversion:
 
                 local_21c = iVar9;
 
+                std::uint32_t remainder_low = 0;
                 current_value =
-                    __aulldvrm(
+                    aulldvrm_with_remainder(
                         static_cast<std::uint32_t>(
                             current_value),
                         quotient_high,
@@ -753,10 +792,11 @@ integer_conversion:
                         static_cast<std::uint32_t>(
                             static_cast<std::int32_t>(
                                 local_224) >>
-                            0x1f));
+                            0x1f),
+                        &remainder_low);
 
                 iVar9 =
-                    static_cast<int>(extraout_ECX) + 0x30;
+                    static_cast<int>(remainder_low) + 0x30;
 
                 int output_digit = iVar9;
 

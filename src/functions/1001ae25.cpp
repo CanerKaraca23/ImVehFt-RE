@@ -4,7 +4,7 @@
 
 extern "C" void __stdcall FUN_100172cd();
 
-extern "C" [[noreturn]] void __cdecl ___report_gsfailure()
+extern "C" void __cdecl ___report_gsfailure()
 {
     extern volatile std::uint32_t _DAT_1003a4b0;
     extern volatile void* _DAT_1003a4b4;
@@ -153,5 +153,4 @@ extern "C" [[noreturn]] void __cdecl ___report_gsfailure()
         FUN_100172cd();
 
     TerminateProcess(GetCurrentProcess(), 0xc0000409u);
-    __assume(0);
 }

@@ -1,0 +1,4303 @@
+{
+  "results": [
+    {
+      "symbol": "::FUN_10001010",
+      "address": "0x10001010",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001040",
+      "address": "0x10001040",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001350",
+      "address": "0x10001350",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100013e0",
+      "address": "0x100013e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001430",
+      "address": "0x10001430",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100014a0",
+      "address": "0x100014a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100014c0",
+      "address": "0x100014c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001520",
+      "address": "0x10001520",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001590",
+      "address": "0x10001590",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001630",
+      "address": "0x10001630",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001730",
+      "address": "0x10001730",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001770",
+      "address": "0x10001770",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100018a0",
+      "address": "0x100018a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001980",
+      "address": "0x10001980",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001ad0",
+      "address": "0x10001ad0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001b00",
+      "address": "0x10001b00",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001b30",
+      "address": "0x10001b30",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001b90",
+      "address": "0x10001b90",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001db0",
+      "address": "0x10001db0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001e80",
+      "address": "0x10001e80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10001fb0",
+      "address": "0x10001fb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10002210",
+      "address": "0x10002210",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003130",
+      "address": "0x10003130",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003200",
+      "address": "0x10003200",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003340",
+      "address": "0x10003340",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003400",
+      "address": "0x10003400",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003660",
+      "address": "0x10003660",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003810",
+      "address": "0x10003810",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003ba0",
+      "address": "0x10003ba0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003e60",
+      "address": "0x10003e60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003f40",
+      "address": "0x10003f40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003f80",
+      "address": "0x10003f80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003fb0",
+      "address": "0x10003fb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10003fe0",
+      "address": "0x10003fe0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10004000",
+      "address": "0x10004000",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100042c0",
+      "address": "0x100042c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10004430",
+      "address": "0x10004430",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100046f0",
+      "address": "0x100046f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10004a00",
+      "address": "0x10004a00",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10004a60",
+      "address": "0x10004a60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10004ab0",
+      "address": "0x10004ab0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10004bb0",
+      "address": "0x10004bb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100050e0",
+      "address": "0x100050e0",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `FUN_100050e0`: Ghidra lists 33 CALL instructions. The candidate's target symbol has exactly 33 CALL instructions in both Clang i686 COFF and MSVC 2022 x86 COFF disassembly. Suppress only the source-expression call-count heuristic; retain all other parity findings. This verifies call-count parity only, not byte identity or runtime behavior."
+        }
+      ]
+    },
+    {
+      "symbol": "::FUN_10005670",
+      "address": "0x10005670",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10005860",
+      "address": "0x10005860",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10005b60",
+      "address": "0x10005b60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10005d30",
+      "address": "0x10005d30",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10005ef0",
+      "address": "0x10005ef0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100060d0",
+      "address": "0x100060d0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10006360",
+      "address": "0x10006360",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10006790",
+      "address": "0x10006790",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100069e0",
+      "address": "0x100069e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10006a50",
+      "address": "0x10006a50",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10006ad0",
+      "address": "0x10006ad0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10006be0",
+      "address": "0x10006be0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10007030",
+      "address": "0x10007030",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100073f0",
+      "address": "0x100073f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100074d0",
+      "address": "0x100074d0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100076d0",
+      "address": "0x100076d0",
+      "status": "yellow",
+      "findings": [
+        {
+          "level": "yellow",
+          "reason": "[semantic:100076d0-conditional-stack-slot-initialization] Ghidra writes the vehicle-context stack slot at [EBP-8] only when DAT_1003c1fc is nonzero at entry, then re-reads DAT_1003c1fc later before consuming that slot. Across the 705 candidate sources, 100074d0 is the sole assignment site for this global; Ghidra exports containing it are 100074d0 (writer) and 100076d0 (reader). Static tracing shows the known GTA path enters the 100074d0 hook at 0x6d6617, which stores the vehicle argument before the callback path reaches the 100076d0 hook at 0x4c8415. However, 100076d0 invokes GTA/RenderWare routines whose reachable texture/raster destruction paths contain indirect object-table calls (for example 0x7f3889, 0x80875a, 0x7fb03a, and 0x7fb04e); their dynamic targets and possible re-entry were not resolved or exercised. Therefore the ordinary-path precondition is statically supported but the stack-state invariant is not proven for all paths. Keep this as a warning, not a semantic pass."
+        },
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `FUN_100076d0`: Ghidra has four indirect calls through the texture-lookup callback at `0x7a1b`, `0x7d66`, `0x7da5`, and `0x7f2c`; the exact-hash MSVC 2022 x86 `/O2` object has three, with the late `vehiclelights_dam` and generated-name lookup branches converging on one shared indirect-call block. The other indirect call sites (four texture callbacks and three palette lookups) and all direct helper/import call targets map to Ghidra. The source-level heuristic's 26-vs-21 expression count is not emitted call-site parity; optimized object control flow shows one mutually exclusive lookup tail merged by the compiler. Suppress only the call-count heuristic; retain all other parity findings. Separate state-fidelity warning: the candidate initializes `local_c` to zero unconditionally, unlike Ghidra's conditional `[EBP-8]` store. Static tracing of the ordinary GTA dispatch path shows the preceding `0x6d6617` hook enters `0x100074d0`, which stores `DAT_1003c1fc` from the vehicle argument before the callback path reaches the `0x4c8415` hook into `0x100076d0`; this supports the required nonzero-at-entry invariant for that path. Indirect/reentrant paths and runtime behavior remain untested; see `audit/candidate-correction-100076d0.md`. This manual adjudication approves call-count only and is not runtime validation."
+        }
+      ]
+    },
+    {
+      "symbol": "::FUN_10008000",
+      "address": "0x10008000",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008140",
+      "address": "0x10008140",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008b70",
+      "address": "0x10008b70",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008cb0",
+      "address": "0x10008cb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008d20",
+      "address": "0x10008d20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008da0",
+      "address": "0x10008da0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008dd0",
+      "address": "0x10008dd0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008e00",
+      "address": "0x10008e00",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008e40",
+      "address": "0x10008e40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008eb0",
+      "address": "0x10008eb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008f10",
+      "address": "0x10008f10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10008fa0",
+      "address": "0x10008fa0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009060",
+      "address": "0x10009060",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009120",
+      "address": "0x10009120",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009360",
+      "address": "0x10009360",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009430",
+      "address": "0x10009430",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100094d0",
+      "address": "0x100094d0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009580",
+      "address": "0x10009580",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100095f0",
+      "address": "0x100095f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009610",
+      "address": "0x10009610",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100096e0",
+      "address": "0x100096e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009790",
+      "address": "0x10009790",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100099e0",
+      "address": "0x100099e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100099f0",
+      "address": "0x100099f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009a80",
+      "address": "0x10009a80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009af0",
+      "address": "0x10009af0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009b50",
+      "address": "0x10009b50",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009bb0",
+      "address": "0x10009bb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009c10",
+      "address": "0x10009c10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009c70",
+      "address": "0x10009c70",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009cd0",
+      "address": "0x10009cd0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009d30",
+      "address": "0x10009d30",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009d90",
+      "address": "0x10009d90",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009df0",
+      "address": "0x10009df0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009e50",
+      "address": "0x10009e50",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009eb0",
+      "address": "0x10009eb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009f10",
+      "address": "0x10009f10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009f70",
+      "address": "0x10009f70",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10009fd0",
+      "address": "0x10009fd0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a030",
+      "address": "0x1000a030",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a090",
+      "address": "0x1000a090",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a110",
+      "address": "0x1000a110",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a170",
+      "address": "0x1000a170",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a1d0",
+      "address": "0x1000a1d0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a230",
+      "address": "0x1000a230",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a290",
+      "address": "0x1000a290",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a2f0",
+      "address": "0x1000a2f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a350",
+      "address": "0x1000a350",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a4f0",
+      "address": "0x1000a4f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a560",
+      "address": "0x1000a560",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a680",
+      "address": "0x1000a680",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a740",
+      "address": "0x1000a740",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a800",
+      "address": "0x1000a800",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a8c0",
+      "address": "0x1000a8c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000a940",
+      "address": "0x1000a940",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000aa10",
+      "address": "0x1000aa10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000aae0",
+      "address": "0x1000aae0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ab60",
+      "address": "0x1000ab60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ac20",
+      "address": "0x1000ac20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000aca0",
+      "address": "0x1000aca0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ad60",
+      "address": "0x1000ad60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ade0",
+      "address": "0x1000ade0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000aea0",
+      "address": "0x1000aea0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000af20",
+      "address": "0x1000af20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000afe0",
+      "address": "0x1000afe0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b060",
+      "address": "0x1000b060",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b120",
+      "address": "0x1000b120",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b1a0",
+      "address": "0x1000b1a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b260",
+      "address": "0x1000b260",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b2e0",
+      "address": "0x1000b2e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b3a0",
+      "address": "0x1000b3a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b460",
+      "address": "0x1000b460",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b4e0",
+      "address": "0x1000b4e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b5a0",
+      "address": "0x1000b5a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b620",
+      "address": "0x1000b620",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b6e0",
+      "address": "0x1000b6e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b760",
+      "address": "0x1000b760",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b820",
+      "address": "0x1000b820",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b8e0",
+      "address": "0x1000b8e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000b960",
+      "address": "0x1000b960",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ba20",
+      "address": "0x1000ba20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bae0",
+      "address": "0x1000bae0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bb60",
+      "address": "0x1000bb60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bbe0",
+      "address": "0x1000bbe0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bca0",
+      "address": "0x1000bca0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bd20",
+      "address": "0x1000bd20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bde0",
+      "address": "0x1000bde0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000be60",
+      "address": "0x1000be60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bf20",
+      "address": "0x1000bf20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000bfa0",
+      "address": "0x1000bfa0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c060",
+      "address": "0x1000c060",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c0e0",
+      "address": "0x1000c0e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c1a0",
+      "address": "0x1000c1a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c220",
+      "address": "0x1000c220",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c2e0",
+      "address": "0x1000c2e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c360",
+      "address": "0x1000c360",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c420",
+      "address": "0x1000c420",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000c480",
+      "address": "0x1000c480",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000cdc0",
+      "address": "0x1000cdc0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000cf80",
+      "address": "0x1000cf80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000cfe0",
+      "address": "0x1000cfe0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d030",
+      "address": "0x1000d030",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d140",
+      "address": "0x1000d140",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d250",
+      "address": "0x1000d250",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d300",
+      "address": "0x1000d300",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d380",
+      "address": "0x1000d380",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d400",
+      "address": "0x1000d400",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d460",
+      "address": "0x1000d460",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d4c0",
+      "address": "0x1000d4c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d520",
+      "address": "0x1000d520",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d580",
+      "address": "0x1000d580",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d5e0",
+      "address": "0x1000d5e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d640",
+      "address": "0x1000d640",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d6a0",
+      "address": "0x1000d6a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d700",
+      "address": "0x1000d700",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d760",
+      "address": "0x1000d760",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d7c0",
+      "address": "0x1000d7c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d820",
+      "address": "0x1000d820",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d880",
+      "address": "0x1000d880",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d8e0",
+      "address": "0x1000d8e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d940",
+      "address": "0x1000d940",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000d9a0",
+      "address": "0x1000d9a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000da00",
+      "address": "0x1000da00",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000da60",
+      "address": "0x1000da60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dac0",
+      "address": "0x1000dac0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000db20",
+      "address": "0x1000db20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000db80",
+      "address": "0x1000db80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dbe0",
+      "address": "0x1000dbe0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dc40",
+      "address": "0x1000dc40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dca0",
+      "address": "0x1000dca0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dd00",
+      "address": "0x1000dd00",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dd60",
+      "address": "0x1000dd60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ddc0",
+      "address": "0x1000ddc0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000de20",
+      "address": "0x1000de20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000de80",
+      "address": "0x1000de80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dee0",
+      "address": "0x1000dee0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000df40",
+      "address": "0x1000df40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000dfa0",
+      "address": "0x1000dfa0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e000",
+      "address": "0x1000e000",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e060",
+      "address": "0x1000e060",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e0c0",
+      "address": "0x1000e0c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e120",
+      "address": "0x1000e120",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e180",
+      "address": "0x1000e180",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e1e0",
+      "address": "0x1000e1e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e240",
+      "address": "0x1000e240",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e2a0",
+      "address": "0x1000e2a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e300",
+      "address": "0x1000e300",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e360",
+      "address": "0x1000e360",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e3c0",
+      "address": "0x1000e3c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e420",
+      "address": "0x1000e420",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e480",
+      "address": "0x1000e480",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e4e0",
+      "address": "0x1000e4e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e540",
+      "address": "0x1000e540",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e5a0",
+      "address": "0x1000e5a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e600",
+      "address": "0x1000e600",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e660",
+      "address": "0x1000e660",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e6c0",
+      "address": "0x1000e6c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e720",
+      "address": "0x1000e720",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e780",
+      "address": "0x1000e780",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e7e0",
+      "address": "0x1000e7e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e840",
+      "address": "0x1000e840",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e8a0",
+      "address": "0x1000e8a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e900",
+      "address": "0x1000e900",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e960",
+      "address": "0x1000e960",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000e9c0",
+      "address": "0x1000e9c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ea20",
+      "address": "0x1000ea20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ea80",
+      "address": "0x1000ea80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000eae0",
+      "address": "0x1000eae0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000eb40",
+      "address": "0x1000eb40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000eba0",
+      "address": "0x1000eba0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ec00",
+      "address": "0x1000ec00",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ec60",
+      "address": "0x1000ec60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ecc0",
+      "address": "0x1000ecc0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ed20",
+      "address": "0x1000ed20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ed80",
+      "address": "0x1000ed80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ede0",
+      "address": "0x1000ede0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ee40",
+      "address": "0x1000ee40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000eea0",
+      "address": "0x1000eea0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ef00",
+      "address": "0x1000ef00",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ef60",
+      "address": "0x1000ef60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000efc0",
+      "address": "0x1000efc0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f020",
+      "address": "0x1000f020",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f080",
+      "address": "0x1000f080",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f0e0",
+      "address": "0x1000f0e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f140",
+      "address": "0x1000f140",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f1a0",
+      "address": "0x1000f1a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f200",
+      "address": "0x1000f200",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f260",
+      "address": "0x1000f260",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f2c0",
+      "address": "0x1000f2c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f320",
+      "address": "0x1000f320",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f380",
+      "address": "0x1000f380",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f3e0",
+      "address": "0x1000f3e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f440",
+      "address": "0x1000f440",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f4a0",
+      "address": "0x1000f4a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f520",
+      "address": "0x1000f520",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f5a0",
+      "address": "0x1000f5a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f620",
+      "address": "0x1000f620",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f6a0",
+      "address": "0x1000f6a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f720",
+      "address": "0x1000f720",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f7a0",
+      "address": "0x1000f7a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f820",
+      "address": "0x1000f820",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f8a0",
+      "address": "0x1000f8a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f920",
+      "address": "0x1000f920",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000f9a0",
+      "address": "0x1000f9a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fa20",
+      "address": "0x1000fa20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000faa0",
+      "address": "0x1000faa0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fb20",
+      "address": "0x1000fb20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fba0",
+      "address": "0x1000fba0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fc20",
+      "address": "0x1000fc20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fca0",
+      "address": "0x1000fca0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fd20",
+      "address": "0x1000fd20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fda0",
+      "address": "0x1000fda0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fe20",
+      "address": "0x1000fe20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000fea0",
+      "address": "0x1000fea0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ff20",
+      "address": "0x1000ff20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1000ffa0",
+      "address": "0x1000ffa0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010020",
+      "address": "0x10010020",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100100a0",
+      "address": "0x100100a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010120",
+      "address": "0x10010120",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010140",
+      "address": "0x10010140",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010170",
+      "address": "0x10010170",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010180",
+      "address": "0x10010180",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100101a5",
+      "address": "0x100101a5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100101c2",
+      "address": "0x100101c2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100101f2",
+      "address": "0x100101f2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001020f",
+      "address": "0x1001020f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010230",
+      "address": "0x10010230",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001023b",
+      "address": "0x1001023b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010258",
+      "address": "0x10010258",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_Copy_str",
+      "address": "0x10010265",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_Tidy",
+      "address": "0x100102a5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::exception",
+      "address": "0x100102c3",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::operator=",
+      "address": "0x100102ea",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001031f",
+      "address": "0x1001031f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001032a",
+      "address": "0x1001032a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::exception",
+      "address": "0x10010351",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::vscan_fn",
+      "address": "0x10010376",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:_sscanf",
+      "address": "0x100103e4",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__onexit_nolock",
+      "address": "0x10010406",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__onexit",
+      "address": "0x100104ed",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010523",
+      "address": "0x10010523",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_atexit",
+      "address": "0x10010529",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_fgets",
+      "address": "0x10010540",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `_fgets`: compared Ghidra's injected SEH prolog/epilog and full control flow with the candidate and exact-hash MSVC `/O2` object. All call targets correspond (`__SEH_prolog4`, `__errno`, `FUN_1001189f`, `__lock_file`, `__fileno`, `__filbuf`, `FUN_10010670`, SEH epilog). The object has 13 static CALL instructions versus Ghidra's 10 because it duplicates `FUN_10010670` and the epilog at mutually exclusive error/normal return paths that Ghidra shares at one common exit. No extra call occurs on the same runtime path. Suppress only the source-call-count heuristic; retain all other parity findings. This is static path review, not runtime validation or proof of identity to the unavailable VS2010 build."
+        }
+      ]
+    },
+    {
+      "symbol": "::FUN_10010670",
+      "address": "0x10010670",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fsopen",
+      "address": "0x10010678",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001072a",
+      "address": "0x1001072a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_fopen",
+      "address": "0x10010734",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001074b",
+      "address": "0x1001074b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010756",
+      "address": "0x10010756",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::~type_info",
+      "address": "0x10010761",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::`scalar_deleting_destructor'",
+      "address": "0x10010771",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::operator==",
+      "address": "0x10010792",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fclose_nolock",
+      "address": "0x100107b2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_fclose",
+      "address": "0x1001081f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001088b",
+      "address": "0x1001088b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010893",
+      "address": "0x10010893",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_fputs",
+      "address": "0x10010913",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010a11",
+      "address": "0x10010a11",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strcpy_s",
+      "address": "0x10010a19",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strrchr",
+      "address": "0x10010a80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strcat_s",
+      "address": "0x10010aad",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_LocaleUpdate",
+      "address": "0x10010b1a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__strnicmp_l",
+      "address": "0x10010ba1",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__strnicmp_l`: compared the full Ghidra decompile and the current candidate body branch by branch (zero-count fast path; locale-update construction; null-argument errno/Watson handling; ASCII and locale-sensitive comparison paths; locale-state cleanup; oversized-count errno/Watson handling). The calls map to `_LocaleUpdate`, `__errno`, `FUN_1001189f`, `___ascii_strnicmp`, and `__tolower_l`. In the MSVC 2022 x86 `/O2` object, equivalent errno/cleanup paths are merged and compiler-emitted cookie checks add calls, so the raw call counts are not comparable. Suppress only the call-count heuristic; keep every other parity finding active. This is static control/data-flow review, not a runtime test or proof of identity to the unavailable VS2010 build."
+        }
+      ]
+    },
+    {
+      "symbol": "::__strnicmp",
+      "address": "0x10010c83",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strncpy_s",
+      "address": "0x10010cd6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strncmp",
+      "address": "0x10010d8b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_sprintf",
+      "address": "0x10010e4b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10010ed0",
+      "address": "0x10010ed0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__CRT_INIT@12",
+      "address": "0x10010f59",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__CRT_INIT@12`: Ghidra lists 27 CALL instructions, including one injected `__SEH_epilog4` at the shared return tail. The exact-hash MSVC 2022 x86 `/O2` object has 32 CALL instructions; its relocation table matches every non-epilog target, including `__SEH_prolog4`, CRT initialization/teardown helpers, the decoded indirect callback, `__initptd`, `GetCurrentThreadId`, and `_free`. The object has six `__SEH_epilog4` calls, each immediately before a distinct return block; Ghidra's assembly routes those mutually exclusive exits through one shared epilog at `0x100110b5`. Thus the five-call excess is epilog tail duplication by the current compiler, not five extra runtime calls. Suppress only the source-call-count heuristic; retain all other parity findings. This is a static assembly/COFF relocation review, not runtime validation or proof of byte identity to VS2010."
+        }
+      ]
+    },
+    {
+      "symbol": "::FUN_10011032",
+      "address": "0x10011032",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___DllMainCRTStartup",
+      "address": "0x100110bd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::entry",
+      "address": "0x100111b3",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:_memcpy",
+      "address": "0x100111e0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__purecall",
+      "address": "0x10011541",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__CxxThrowException@8",
+      "address": "0x1001156b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_malloc",
+      "address": "0x100115b7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strlen",
+      "address": "0x10011650",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_free",
+      "address": "0x100116db",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10011715",
+      "address": "0x10011715",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__call_reportfault",
+      "address": "0x10011724",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__invoke_watson",
+      "address": "0x1001184d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10011872",
+      "address": "0x10011872",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001189f",
+      "address": "0x1001189f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__get_errno_from_oserr",
+      "address": "0x100118af",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__errno",
+      "address": "0x100118f1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___doserrno",
+      "address": "0x10011904",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__dosmaperr",
+      "address": "0x10011917",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___check_float_string",
+      "address": "0x1001193a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__hextodec",
+      "address": "0x10011991",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__inc",
+      "address": "0x100119b1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__whiteout",
+      "address": "0x100119c7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__input_l",
+      "address": "0x100119f1",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__input_l`: Ghidra has 62 CALL instructions and the exact-hash MSVC 2022 x86 `/O2` candidate object has 66. The direct/import and indirect callback targets map; the four excess sites are accounted for by one additional compiler cookie-check call and three extra static `_isdigit` sites. Ghidra has one call site in each of three digit-scanning loops; MSVC emits each loop's first-condition test separately from its repeat/loop-back test (pairs at object offsets `0x9d6/0xa34`, `0xab9/0xb18`, and `0xbe9/0xc40`), so each pair executes as successive iterations, not as two calls per iteration. The two radix-specific digit checks and format-width check map one-to-one; both `_isleadbyte` sites also match. The candidate's two mutually exclusive exponent-digit loops converge to the same continuation, corresponding to Ghidra's shared exponent loop. Suppress only the source-expression call-count heuristic; retain all other findings. Static disassembly/control-flow review only, not semantic or runtime validation."
+        }
+      ]
+    },
+    {
+      "symbol": "::__malloc_crt",
+      "address": "0x100129f5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__calloc_crt",
+      "address": "0x10012a3a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__realloc_crt",
+      "address": "0x10012a86",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__recalloc_crt",
+      "address": "0x10012ad4",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__msize",
+      "address": "0x10012b26",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___crtCorExitProcess",
+      "address": "0x10012b59",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___crtExitProcess",
+      "address": "0x10012b84",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10012b9c",
+      "address": "0x10012b9c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10012ba5",
+      "address": "0x10012ba5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__init_pointers",
+      "address": "0x10012bae",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__initterm_e",
+      "address": "0x10012be1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cinit",
+      "address": "0x10012c05",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::doexit",
+      "address": "0x10012c9c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10012dc7",
+      "address": "0x10012dc7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__exit",
+      "address": "0x10012ddc",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cexit",
+      "address": "0x10012df2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__amsg_exit",
+      "address": "0x10012e01",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__SEH_prolog4",
+      "address": "0x10012e20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__SEH_epilog4",
+      "address": "0x10012e65",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__except_handler4",
+      "address": "0x10012e90",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001301f",
+      "address": "0x1001301f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__lock_file",
+      "address": "0x100130f6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__lock_file2",
+      "address": "0x10013137",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__unlock_file",
+      "address": "0x10013169",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__unlock_file2",
+      "address": "0x100131a5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__filbuf",
+      "address": "0x100131d4",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__ioinit",
+      "address": "0x100132f6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__ioterm",
+      "address": "0x1001353b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fileno",
+      "address": "0x1001358e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__openfile",
+      "address": "0x100135b4",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__getstream",
+      "address": "0x1001384b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10013975",
+      "address": "0x10013975",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__local_unwind4",
+      "address": "0x10013980",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__seh_longjmp_unwind4@4",
+      "address": "0x10013a56",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_EH4_CallFilterFunc",
+      "address": "0x10013a72",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_EH4_TransferToHandler",
+      "address": "0x10013a89",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_EH4_GlobalUnwind2",
+      "address": "0x10013aa2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_EH4_LocalUnwind",
+      "address": "0x10013abb",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_Type_info_dtor",
+      "address": "0x10013ad2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10013b39",
+      "address": "0x10013b39",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strcmp",
+      "address": "0x10013b50",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__close_nolock",
+      "address": "0x10013bd8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__close",
+      "address": "0x10013c74",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10013d30",
+      "address": "0x10013d30",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__freebuf",
+      "address": "0x10013d38",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__flush",
+      "address": "0x10013d69",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fflush_nolock",
+      "address": "0x10013dd1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::flsall",
+      "address": "0x10013e19",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10013ebb",
+      "address": "0x10013ebb",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10013eea",
+      "address": "0x10013eea",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__flushall",
+      "address": "0x10013ef3",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10013efc",
+      "address": "0x10013efc",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__callnewh",
+      "address": "0x10013f0b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__stbuf",
+      "address": "0x10013f33",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__ftbuf",
+      "address": "0x10013fcf",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fwrite_nolock",
+      "address": "0x10014003",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__vsnprintf_l",
+      "address": "0x1001415a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__vsnprintf",
+      "address": "0x10014206",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::CPtoLCID",
+      "address": "0x10014223",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::setSBCS",
+      "address": "0x10014252",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::setSBUpLow",
+      "address": "0x100142b6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___updatetmbcinfo",
+      "address": "0x10014446",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100144e1",
+      "address": "0x100144e1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::getSystemCP",
+      "address": "0x100144ea",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__setmbcp_nolock",
+      "address": "0x10014566",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__setmbcp",
+      "address": "0x1001474f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100148b0",
+      "address": "0x100148b0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___initmbctable",
+      "address": "0x100148e9",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___addlocaleref",
+      "address": "0x10014907",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___removelocaleref",
+      "address": "0x10014996",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___freetlocinfo",
+      "address": "0x10014a2f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__updatetlocinfoEx_nolock",
+      "address": "0x10014b7a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___updatetlocinfo",
+      "address": "0x10014bc7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10014c34",
+      "address": "0x10014c34",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10014c40",
+      "address": "0x10014c40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___set_flsgetvalue",
+      "address": "0x10014c52",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mtterm",
+      "address": "0x10014c86",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__initptd",
+      "address": "0x10014cc3",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10014d65",
+      "address": "0x10014d65",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10014d6e",
+      "address": "0x10014d6e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__getptd_noexit",
+      "address": "0x10014d77",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__getptd",
+      "address": "0x10014df0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__freefls@4",
+      "address": "0x10014e0a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10014f24",
+      "address": "0x10014f24",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10014f30",
+      "address": "0x10014f30",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__freeptd",
+      "address": "0x10014f39",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mtinit",
+      "address": "0x10014fa7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__tolower_l",
+      "address": "0x10015122",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_tolower",
+      "address": "0x10015237",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___ascii_strnicmp",
+      "address": "0x10015270",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__flsbuf",
+      "address": "0x100152d1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::write_char",
+      "address": "0x10015435",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::write_string",
+      "address": "0x10015468",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__output_l",
+      "address": "0x100154dc",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__output_l`: Ghidra has 27 CALL instructions. After removing two aggregate zero-initializers absent from the Ghidra prolog, the exact-hash MSVC 2022 x86 `/O2` object has 28. COFF relocations and indirect-call sites map the locale/stdio, lead-byte, formatting, conversion, allocation, and callback calls to the Ghidra targets; the only excess is a second `__security_check_cookie` epilogue call emitted by the modern compiler (Ghidra's VS2010 function has one injected cookie check). The removed zeroing also eliminates two unrelated `memset` calls that had no counterpart in the original prolog. Suppress only the source call-count heuristic; all other findings remain enabled. This is static path/object review, not runtime validation or proof of byte identity."
+        }
+      ]
+    },
+    {
+      "symbol": "::__read_nolock",
+      "address": "0x10016088",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__read",
+      "address": "0x1001663f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001672d",
+      "address": "0x1001672d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_memset",
+      "address": "0x10016740",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__lseek_nolock",
+      "address": "0x100167ba",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10016846",
+      "address": "0x10016846",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100168fe",
+      "address": "0x100168fe",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::parse_cmdline",
+      "address": "0x100169da",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__setargv",
+      "address": "0x10016b74",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___crtGetEnvironmentStringsA",
+      "address": "0x10016c2f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__RTC_Initialize",
+      "address": "0x10016cc6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10016cec",
+      "address": "0x10016cec",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__heap_init",
+      "address": "0x10016d12",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__heap_term",
+      "address": "0x10016d30",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__XcptFilter",
+      "address": "0x10016d44",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___CppXcptFilter",
+      "address": "0x10016e8e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___security_init_cookie",
+      "address": "0x10016eae",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10016f49",
+      "address": "0x10016f49",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_abort",
+      "address": "0x1001705c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__set_abort_behavior",
+      "address": "0x1001708f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__GET_RTERRMSG",
+      "address": "0x100170b0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__NMSG_WRITE",
+      "address": "0x100170d6",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__NMSG_WRITE`: compared the candidate branches with the Ghidra decompile and call-site disassembly. The message-box success path returns through Ghidra's shared epilogue (`10017216 -> 10017276 -> __security_check_cookie`); the candidate expresses that return directly and has the corresponding explicit cookie check, while the normal exit retains the compiler-emitted cookie check. Thus the MSVC `/O2` object's 18 static CALL instructions versus Ghidra's 17 include two mutually exclusive cookie-check sites, not an additional call on the same path. Other helper and imported API call targets correspond. Suppress only the source-level call-count heuristic; all other parity findings remain active. This is static control-flow review, not runtime validation or proof of identity to the unavailable VS2010 build."
+        }
+      ]
+    },
+    {
+      "symbol": "::__FF_MSGBANNER",
+      "address": "0x10017285",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100172be",
+      "address": "0x100172be",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100172cd",
+      "address": "0x100172cd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__security_check_cookie",
+      "address": "0x100172d5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:_memcpy",
+      "address": "0x100172f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__isdigit_l",
+      "address": "0x10017651",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_isdigit",
+      "address": "0x100176a2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__isxdigit_l",
+      "address": "0x100176d0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_isxdigit",
+      "address": "0x10017726",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__isspace_l",
+      "address": "0x10017756",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_isspace",
+      "address": "0x100177a7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__ungetc_nolock",
+      "address": "0x100177d5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mbtowc_l",
+      "address": "0x100178b8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_mbtowc",
+      "address": "0x100179ce",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__isleadbyte_l",
+      "address": "0x100179e8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_isleadbyte",
+      "address": "0x10017a20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__initp_misc_cfltcvt_tab",
+      "address": "0x10017a33",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__allmul",
+      "address": "0x10017a60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__calloc_impl",
+      "address": "0x10017a94",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_realloc",
+      "address": "0x10017b16",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__recalloc",
+      "address": "0x10017bc3",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mtinitlocks",
+      "address": "0x10017c31",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mtdeletelocks",
+      "address": "0x10017c7b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10017cd2",
+      "address": "0x10017cd2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mtinitlocknum",
+      "address": "0x10017ce9",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10017da2",
+      "address": "0x10017da2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__lock",
+      "address": "0x10017dab",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::terminate",
+      "address": "0x10017dde",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10017e17",
+      "address": "0x10017e17",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_inconsistency",
+      "address": "0x10017e2a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10017e62",
+      "address": "0x10017e62",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__initp_misc_winsig",
+      "address": "0x10017e73",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::siglookup",
+      "address": "0x10017e91",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10017ec8",
+      "address": "0x10017ec8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_raise",
+      "address": "0x10017ed5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001803c",
+      "address": "0x1001803c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10018078",
+      "address": "0x10018078",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__ValidateImageBase",
+      "address": "0x10018090",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__FindPESection",
+      "address": "0x100180d0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__IsNonwritableInCurrentImage",
+      "address": "0x10018120",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__IsNonwritableInCurrentImage`: the exact current MSVC 2022 x86 `/O2` object has exactly two CALL instructions (`__ValidateImageBase`, `__FindPESection`), matching the two Ghidra CALL sites. The four excess source-expression counts are the `static inline` FS:[0] helper calls; the optimized object implements these inline. Suppress only the call-count heuristic; retain all other parity findings. Static object/assembly evidence only, not semantic or runtime validation."
+        }
+      ]
+    },
+    {
+      "symbol": "::__fcloseall",
+      "address": "0x100181dc",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001826f",
+      "address": "0x1001826f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__getbuf",
+      "address": "0x10018278",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100182c1",
+      "address": "0x100182c1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:__sopen_helper",
+      "address": "0x100189f5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10018a8b",
+      "address": "0x10018a8b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__sopen_s",
+      "address": "0x10018ab9",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mbsnbicmp_l",
+      "address": "0x10018ad9",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mbsnbicmp",
+      "address": "0x10018cdd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mbsnbcmp_l",
+      "address": "0x10018cf7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__mbsnbcmp",
+      "address": "0x10018e43",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__global_unwind2",
+      "address": "0x10018e60",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__local_unwind2",
+      "address": "0x10018ec5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__NLG_Notify1",
+      "address": "0x10018f6c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__NLG_Notify",
+      "address": "0x10018f75",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10018f94",
+      "address": "0x10018f94",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__set_osfhnd",
+      "address": "0x10018f97",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__free_osfhnd",
+      "address": "0x10019018",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__get_osfhandle",
+      "address": "0x1001909e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___lock_fhandle",
+      "address": "0x10019107",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001919d",
+      "address": "0x1001919d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__unlock_fhandle",
+      "address": "0x100191a6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__alloc_osfhnd",
+      "address": "0x100191cd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001929f",
+      "address": "0x1001929f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001935d",
+      "address": "0x1001935d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__write_nolock",
+      "address": "0x10019366",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__write",
+      "address": "0x10019a63",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10019b2f",
+      "address": "0x10019b2f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__commit",
+      "address": "0x10019b37",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10019c08",
+      "address": "0x10019c08",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__isatty",
+      "address": "0x10019c10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__freea",
+      "address": "0x10019c66",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__crtLCMapStringA_stat",
+      "address": "0x10019c86",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___crtLCMapStringA",
+      "address": "0x10019e6d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__crtGetStringTypeA_stat",
+      "address": "0x10019eb3",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___crtGetStringTypeA",
+      "address": "0x10019f9a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___free_lc_time",
+      "address": "0x10019fda",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___free_lconv_num",
+      "address": "0x1001a351",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___free_lconv_mon",
+      "address": "0x1001a3ba",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__isctype_l",
+      "address": "0x1001a4b8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strcspn",
+      "address": "0x1001a570",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_strpbrk",
+      "address": "0x1001a5c0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__lseeki64_nolock",
+      "address": "0x1001a600",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__lseeki64",
+      "address": "0x1001a685",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001a765",
+      "address": "0x1001a765",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__get_printf_count_output",
+      "address": "0x1001a76f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__wctomb_s_l",
+      "address": "0x1001a785",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__wctomb_s_l`: Ghidra has 11 CALL sites. Review of the exact current MSVC 2022 x86 `/O2` target-symbol block found 18: five compiler cookie checks on mutually exclusive exits plus the 11 Ghidra-equivalent calls and one duplicated `__errno`/`FUN_1001189f` EINVAL pair. The duplicate pair is emitted at separate branches for C-locale small-buffer failure and `WideCharToMultiByte` insufficient-buffer failure; Ghidra joins both at `0x1001a835`. The two `_memset` calls and all other helper/API targets map. A source audit also corrected a real path mismatch: for C locale and `wchar > 0xff`, Ghidra sets/reads `EILSEQ` (`0x2a`) without the Watson reporter; the candidate now follows that common error tail. Suppress only the call-count heuristic; keep all other parity findings active. This is static Ghidra/COFF evidence, not runtime validation."
+        }
+      ]
+    },
+    {
+      "symbol": "::_wctomb_s",
+      "address": "0x1001a8da",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__aulldvrm",
+      "address": "0x1001a900",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__VEC_memzero",
+      "address": "0x1001a995",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::x_ismbbtype_l",
+      "address": "0x1001aa4f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__ismbblead",
+      "address": "0x1001aaa2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___crtMessageBoxW",
+      "address": "0x1001aaba",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_wcscat_s",
+      "address": "0x1001ac26",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_wcsncpy_s",
+      "address": "0x1001ac9b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_wcslen",
+      "address": "0x1001ad68",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_wcscpy_s",
+      "address": "0x1001ad83",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__set_error_mode",
+      "address": "0x1001ade6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___report_gsfailure",
+      "address": "0x1001ae25",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__chsize_nolock",
+      "address": "0x1001af34",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__setmode_nolock",
+      "address": "0x1001b0ea",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b1a5",
+      "address": "0x1001b1a5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__putwch_nolock",
+      "address": "0x1001b1d2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__alloca_probe",
+      "address": "0x1001b220",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__alloca_probe_16",
+      "address": "0x1001b250",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__alloca_probe_8",
+      "address": "0x1001b266",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___initconout",
+      "address": "0x1001b27c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b29b",
+      "address": "0x1001b29b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::RtlUnwind",
+      "address": "0x1001b2b2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cfltcvt_init",
+      "address": "0x1001b2b8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fpmath",
+      "address": "0x1001b318",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b380",
+      "address": "0x1001b380",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b3cf",
+      "address": "0x1001b3cf",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b3d8",
+      "address": "0x1001b3d8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b4b0",
+      "address": "0x1001b4b0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b4ff",
+      "address": "0x1001b4ff",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b508",
+      "address": "0x1001b508",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b5a0",
+      "address": "0x1001b5a0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b5bd",
+      "address": "0x1001b5bd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_JumpToContinuation",
+      "address": "0x1001b65a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:_CallMemberFunction1",
+      "address": "0x1001b68c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_UnwindNestedFrames",
+      "address": "0x1001b693",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:___CxxFrameHandler3",
+      "address": "0x1001b6e7",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::CatchGuardHandler",
+      "address": "0x1001b71d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_CallSETranslator",
+      "address": "0x1001b750",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::TranslatorGuardHandler",
+      "address": "0x1001b827",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_GetRangeOfTrysToCheck",
+      "address": "0x1001b8c6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__CreateFrameInfo",
+      "address": "0x1001b939",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__IsExceptionObjectToBeDestroyed",
+      "address": "0x1001b965",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__FindAndUnlinkFrame",
+      "address": "0x1001b98c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_CallCatchBlock2",
+      "address": "0x1001b9de",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `_CallCatchBlock2`: the exact current MSVC 2022 x86 `/O2` object has exactly one CALL instruction (`__CallSettingFrame_12@12`), matching the one Ghidra CALL site. The four excess source-expression counts are the `static inline` FS:[0] helper calls; the optimized object implements these inline. Suppress only the call-count heuristic; retain all other parity findings. Static object/assembly evidence only, not semantic or runtime validation."
+        }
+      ]
+    },
+    {
+      "symbol": "::FUN_1001ba40",
+      "address": "0x1001ba40",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__forcdecpt_l",
+      "address": "0x1001baeb",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cropzeros_l",
+      "address": "0x1001bb5f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__positive",
+      "address": "0x1001bbe1",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fassign_l",
+      "address": "0x1001bbfd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fassign",
+      "address": "0x1001bc3f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__shift",
+      "address": "0x1001bc59",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__forcdecpt",
+      "address": "0x1001bc78",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cropzeros",
+      "address": "0x1001bc8b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001bc9e",
+      "address": "0x1001bc9e",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `FUN_1001bc9e`: reviewed Ghidra entry/return assembly and the helper at `1001bc59` against the current candidate. The wrapper forwards incoming EAX as the hidden output buffer; register setup before `__shift` proves EDI is `(param_2 > 0)` and EAX is the buffer plus sign offset, matching the candidate's guarded shift. The helper body is reproduced by strlen/memcpy operations; locale construction, both errno paths, cleanup, `_strcpy_s`, final memcpy, and Watson failure path map to the candidate. Ghidra shares the common errno/cleanup tail; the candidate has mutually exclusive copies, and the ABI wrapper adds one internal call. Both Clang and MSVC x86 candidate objects have 11 CALLs versus Ghidra's 8 at the wrapper address; this reflects the wrapper/helper expansion and split mutually-exclusive tails, not an unreviewed added path. The arithmetic was changed to explicit uint32 addition to avoid signed-overflow UB while preserving the Ghidra 32-bit wrap; the pre/post MSVC `/O2` objects had identical 180-instruction text. Suppress only the call-count heuristic; this remains static analysis, not a runtime or full-link proof."
+        }
+      ]
+    },
+    {
+      "symbol": "::__cftoe_l",
+      "address": "0x1001bdff",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftoe",
+      "address": "0x1001bec6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftoa_l",
+      "address": "0x1001bee6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftof2_l",
+      "address": "0x1001c25c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftof_l",
+      "address": "0x1001c35f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftog_l",
+      "address": "0x1001c420",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cfltcvt_l",
+      "address": "0x1001c50d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cfltcvt",
+      "address": "0x1001c595",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__setdefaultprecision",
+      "address": "0x1001c5b8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001c5f0",
+      "address": "0x1001c5f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001c60e",
+      "address": "0x1001c60e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001c9a5",
+      "address": "0x1001c9a5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001c9bc",
+      "address": "0x1001c9bc",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fload_withFB",
+      "address": "0x1001c9d5",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001ca18",
+      "address": "0x1001ca18",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__math_exit",
+      "address": "0x1001ca3b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001cb20",
+      "address": "0x1001cb20",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__startOneArgErrorHandling",
+      "address": "0x1001cb37",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001cb80",
+      "address": "0x1001cb80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001cb9e",
+      "address": "0x1001cb9e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001cd37",
+      "address": "0x1001cd37",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___TypeMatch",
+      "address": "0x1001cd5e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___FrameUnwindFilter",
+      "address": "0x1001cdbd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___FrameUnwindToState",
+      "address": "0x1001ce0c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001cece",
+      "address": "0x1001cece",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___DestructExceptionObject",
+      "address": "0x1001cf2d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___AdjustPointer",
+      "address": "0x1001cf82",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::IsInExceptionSpec",
+      "address": "0x1001cfab",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001d026",
+      "address": "0x1001d026",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::Catch_All@1001d057",
+      "address": "0x1001d057",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::CallCatchBlock",
+      "address": "0x1001d06f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001d195",
+      "address": "0x1001d195",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___BuildCatchObjectHelper",
+      "address": "0x1001d20b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___BuildCatchObject",
+      "address": "0x1001d38a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::CatchIt",
+      "address": "0x1001d41c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FindHandlerForForeignException",
+      "address": "0x1001d48a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FindHandler",
+      "address": "0x1001d591",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `FindHandler`: Ghidra has 31 CALL instructions. The exact-hash MSVC 2022 x86 `/O2` object for the target `FindHandler` symbol has 32; its COFF relocations map the Ghidra exception-dispatch targets (including `__getptd`, `_ValidateRead`, `_inconsistency`, `IsInExceptionSpec`, `TypeInfoStorage::equals`, `__GetRangeOfTrysToCheck`, `__TypeMatch`, exception destruction, unwind, `FUN_1001d026`, and `FindHandlerForForeignException`) to the candidate's calls. The one additional relocation is MSVC 2022's `__security_check_cookie` epilogue call; the source-level scanner reports 35 because it counts expression-level member/helper calls rather than emitted target instructions. Suppress only this call-count heuristic; all other findings remain enabled. This is a static x86 object/relocation review, not runtime validation or proof of byte-identical VS2010 output."
+        }
+      ]
+    },
+    {
+      "symbol": "::FUN_1001d906",
+      "address": "0x1001d906",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___InternalCxxFrameHandler",
+      "address": "0x1001d923",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__CallSettingFrame@12",
+      "address": "0x1001da10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:__atoflt_l",
+      "address": "0x1001da5c",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:__atoflt_l",
+      "address": "0x1001db04",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__fptostr",
+      "address": "0x1001dbac",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___dtold",
+      "address": "0x1001dc5f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001dd12",
+      "address": "0x1001dd12",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__alldvrm",
+      "address": "0x1001dda0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__aullshr",
+      "address": "0x1001de80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__controlfp_s",
+      "address": "0x1001de9f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__87except",
+      "address": "0x1001defe",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__EH_prolog3_catch",
+      "address": "0x1001e03d",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::_ValidateRead",
+      "address": "0x1001e073",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:__ld12tod",
+      "address": "0x1001e085",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FID_conflict:__ld12tod",
+      "address": "0x1001e5d6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___strgtold12_l",
+      "address": "0x1001eb27",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::$I10_OUTPUT",
+      "address": "0x1001f203",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__hw_cw",
+      "address": "0x1001fafb",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___hw_cw_sse2",
+      "address": "0x1001fb89",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__control87",
+      "address": "0x1001fc29",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__raise_exc_ex",
+      "address": "0x1001ff3b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__raise_exc",
+      "address": "0x10020217",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__handle_exc",
+      "address": "0x1002023a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__set_errno_from_matherr",
+      "address": "0x1002041e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1002044b",
+      "address": "0x1002044b",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__statfp",
+      "address": "0x1002044e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__clrfp",
+      "address": "0x1002045e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__ctrlfp",
+      "address": "0x1002046f",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1002049a",
+      "address": "0x1002049a",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___set_fpsr_sse2",
+      "address": "0x100204f2",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::___mtold12",
+      "address": "0x10020564",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__set_exp",
+      "address": "0x10020748",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020775",
+      "address": "0x10020775",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::Unwind@10020840",
+      "address": "0x10020840",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020870",
+      "address": "0x10020870",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::thunk_FUN_100013e0",
+      "address": "0x10020a70",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::thunk_FUN_10009580",
+      "address": "0x10020a80",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020a90",
+      "address": "0x10020a90",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020af0",
+      "address": "0x10020af0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020b50",
+      "address": "0x10020b50",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020bb0",
+      "address": "0x10020bb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020c10",
+      "address": "0x10020c10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020c70",
+      "address": "0x10020c70",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020cd0",
+      "address": "0x10020cd0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020d30",
+      "address": "0x10020d30",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020d90",
+      "address": "0x10020d90",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020df0",
+      "address": "0x10020df0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020e50",
+      "address": "0x10020e50",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020eb0",
+      "address": "0x10020eb0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020f10",
+      "address": "0x10020f10",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020f70",
+      "address": "0x10020f70",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10020fd0",
+      "address": "0x10020fd0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10021030",
+      "address": "0x10021030",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10021090",
+      "address": "0x10021090",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100210f0",
+      "address": "0x100210f0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10021150",
+      "address": "0x10021150",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_100211b0",
+      "address": "0x100211b0",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10021210",
+      "address": "0x10021210",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_10021267",
+      "address": "0x10021267",
+      "status": "green",
+      "findings": []
+    }
+  ]
+}

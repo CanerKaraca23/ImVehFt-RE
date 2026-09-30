@@ -35,7 +35,7 @@ static std::uint64_t shift64(std::uint8_t shift, std::uint32_t low,
     const std::uint64_t bits = (static_cast<std::uint64_t>(high) << 32) | low;
     return shift >= 64 ? 0 : bits >> shift;
 }
-int __cdecl __cftoa_l(
+extern "C" int __cdecl __cftoa_l(
     double* param_1,
     undefined1* param_2,
     std::uint32_t param_3,
@@ -100,7 +100,6 @@ int __cdecl __cftoa_l(
         iVar14 = 0x16;
         *piVar2 = iVar14;
 
-        iVar14 = 0x1001bf29;
         FUN_1001189f();
 
         if (local_28.updated != '\0')
@@ -118,7 +117,6 @@ int __cdecl __cftoa_l(
         iVar14 = 0x22;
         *piVar2 = iVar14;
 
-        iVar14 = 0x1001bf29;
         FUN_1001189f();
 
         if (local_28.updated != '\0')

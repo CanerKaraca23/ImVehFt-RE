@@ -1,0 +1,13 @@
+target,cfg_instruction_count,body_min,body_max,body_byte_count,decompile_completed,status
+0x10004B10,40,10004b10,10004ba1,146,yes,"decompiled_bounded_body"
+0x10008780,50,10008780,1000882f,176,yes,"decompiled_bounded_body"
+0x10008830,61,10008830,1000893e,271,yes,"decompiled_bounded_body"
+0x10008940,105,10008940,10008b6a,555,yes,"decompiled_bounded_body"
+0x10007F90,25,10007f90,10007ff0,97,yes,"decompiled_bounded_body"
+0x10007F50,6,10007f50,10007f63,20,yes,"decompiled_bounded_body"
+0x10007F70,5,10007f70,10007f80,17,yes,"decompiled_bounded_body"
+0x10003E40,8,10003e40,10003e58,25,yes,"decompiled_bounded_body"
+0x10003030,13,10003030,1000305f,48,yes,"decompiled_bounded_body"
+0x10003060,8,10003060,1000307d,30,yes,"decompiled_bounded_body"
+0x10003080,10,10003080,100030a9,42,yes,"decompiled_bounded_body"
+0x100031E0,6,100031e0,100031f5,22,yes,"decompiled_bounded_body"

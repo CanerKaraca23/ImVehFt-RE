@@ -6,7 +6,7 @@ extern "C" void* __cdecl __calloc_crt(std::size_t, std::size_t);
 extern "C" std::uint32_t DAT_1003c418;
 extern "C" void* DAT_1003c420[64];
 
-int __cdecl __ioinit(void)
+extern "C" int __cdecl __ioinit(void)
 {
     void* block;
     DWORD file_type;

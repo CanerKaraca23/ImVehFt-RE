@@ -1,0 +1,28 @@
+FUNCTION FUN_00539da0 @ 00539da0
+00539da0  PUSH ESI
+00539da1  PUSH 0x538ba0
+00539da6  PUSH 0x539d90
+00539dab  PUSH 0x3c
+00539dad  MOV ESI,ECX
+00539daf  PUSH 0x28
+00539db1  PUSH ESI
+00539db2  CALL 0x00821d30
+00539db7  MOV ECX,ESI
+00539db9  CALL 0x00538bc0
+00539dbe  MOV EAX,ESI
+00539dc0  POP ESI
+00539dc1  RET
+
+DECOMPILED SOURCE
+
+void * __fastcall FUN_00539da0(void *param_1)
+
+{
+  _eh_vector_constructor_iterator_
+            (param_1,0x28,0x3c,(_func_void_void_ptr *)&LAB_00539d90,
+             (_func_void_void_ptr *)&DAT_00538ba0);
+  FUN_00538bc0();
+  return param_1;
+}
+
+

@@ -1,0 +1,52 @@
+{
+  "status": "SUPERSEDED - root-only scope; use appended-root-relocation-coverage-2026-09-30-v4.json for roots plus closure and helper sections",
+  "scope": "Raw object-site/type/addend coverage for all 421 appended root bodies against the current appended fixup plan; no PE or object fields are written.",
+  "inputs": {
+    "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+    "payload_census_sha256": "70BA4989871616A17719E5F375FD53CEB6BAB14F9352EE4E878756019D943C06",
+    "root_relocations_sha256": "065D67834ED2E526081A30663E735A3CDE978F61C9129B89B5620D222BB72874",
+    "fixup_plan_sha256": "B606142FD2680B79082C2A132A9299B95225C5CA2AAA1A4610E4317742C94F9E"
+  },
+  "counts": {
+    "appended_root_bodies": 421,
+    "raw_root_relocation_sites": 2860,
+    "root_relocations_by_type": {
+      "DIR32": 1581,
+      "REL32": 1279
+    },
+    "root_sites_joined_to_fixup_plan": 2860,
+    "missing_root_sites": 0,
+    "type_or_raw_addend_mismatches": 0,
+    "fixup_plan_total_fields": 3085,
+    "fixup_plan_unique_sites": 3085,
+    "object_hash_mismatches": 0,
+    "unresolved_or_ambiguous_target_classes_in_joined_root_sites": 0
+  },
+  "joined_root_target_classes": {
+    "callback-dispatch-original-va": 5,
+    "callback-helper-original-va": 95,
+    "candidate-entry": 1098,
+    "candidate-entry-va": 14,
+    "candidate-name-crosswalk": 85,
+    "candidate-runtime-helper-crosswalk": 4,
+    "cross-object-local-section": 29,
+    "defined-in-same-object-section": 229,
+    "exact-original-IAT-call-thunk": 57,
+    "exact-original-IAT-slot": 116,
+    "external-game-text-va": 17,
+    "original-image-encoded-address": 952,
+    "original-provider-address": 150,
+    "verified-original-crt-helper-bridge": 9
+  },
+  "missing_sites": [],
+  "field_mismatches": [],
+  "object_hash_mismatch_entries": [],
+  "all_root_sites_joined": true,
+  "all_types_and_raw_addends_match": true,
+  "all_objects_match_payload_census": true,
+  "limitations": [
+    "The joined fixup plan is not applied to a final image.",
+    "A mapped target class does not independently prove target lifetime, initialization, or ABI correctness.",
+    "No PE emission, Windows loader test, startup test, or in-game test is performed."
+  ]
+}

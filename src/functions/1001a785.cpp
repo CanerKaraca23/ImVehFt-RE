@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <cstdint>
+#include "locale_update_ctor_bridge.hpp"
 
 using errno_t = int;
 using UINT = std::uint32_t;
@@ -16,9 +17,6 @@ struct _LocaleUpdate
     std::int32_t local_c;
     char local_8;
 };
-
-using LocaleUpdateCtor = void(__thiscall*)(
-    _LocaleUpdate* _This, _locale_t _Locale);
 
 extern "C" int __stdcall
 WideCharToMultiByte(
@@ -78,8 +76,12 @@ __wctomb_s_l(
             return 0x16;
         }
 
-        // Ghidra 0x1001a7d8: ECX=&local_14, pushed _Locale, CALL 0x10010b1a.
-        reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(&local_14, _Locale);
+        // Preserve Ghidra's ECX=this / one-stack-argument __thiscall setup.
+        __asm {
+            lea ecx, local_14
+            push _Locale
+            call IVF_LocaleUpdate_ctor_relocatable
+        }
 
         if (*reinterpret_cast<std::int32_t*>(
                 reinterpret_cast<std::uintptr_t*>(local_14.local_14[0]) + 0x14 / sizeof(std::uintptr_t)) == 0)
@@ -128,18 +130,7 @@ __wctomb_s_l(
                     _memset(lpMultiByteStr, 0, _Size);
                 }
 
-                set_errno_and_report(0x22);
-
-                if (local_14.local_8 == '\0')
-                {
-                    return 0x22;
-                }
-
-                *reinterpret_cast<std::uint32_t*>(
-                    static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
-                    0xfffffffd;
-
-                return 0x22;
+                goto ILLEGAL_SEQUENCE;
             }
         }
         else
@@ -181,8 +172,11 @@ __wctomb_s_l(
 
                     return 0x22;
                 }
+
+                goto ILLEGAL_SEQUENCE;
             }
-            else if (_MbCh == nullptr)
+
+            if (_MbCh == nullptr)
             {
                 if (_SizeConverted != nullptr)
                 {
@@ -196,22 +190,27 @@ __wctomb_s_l(
                         0xfffffffd;
                 }
 
-                iVar1 = 0;
+                return 0;
             }
 
-            piVar2 = __errno();
-            *piVar2 = 0x2a;
-
-            piVar2 = __errno();
-            iVar1 = *piVar2;
-
-            if (local_14.local_8 != '\0')
-            {
-                *reinterpret_cast<std::uint32_t*>(
-                    static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
-                    0xfffffffd;
-            }
+            goto ILLEGAL_SEQUENCE;
         }
+    }
+
+    return iVar1;
+
+ILLEGAL_SEQUENCE:
+    piVar2 = __errno();
+    *piVar2 = 0x2a;
+
+    piVar2 = __errno();
+    iVar1 = *piVar2;
+
+    if (local_14.local_8 != '\0')
+    {
+        *reinterpret_cast<std::uint32_t*>(
+            static_cast<std::uintptr_t>(local_14.local_c) + 0x70) &=
+            0xfffffffd;
     }
 
     return iVar1;

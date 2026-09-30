@@ -1,0 +1,21 @@
+{
+  "scope": "Standalone serialization of the audited extended HIGHLOW site set; no PE/ASI bytes are patched.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "base_blob_sha256": "C74C4A4DCD77398DD204784E7299E19988496C9B41B12BC746E03683064CD368",
+  "direct_closure_report_sha256": "7A55587B41EB0396A07C0A75AD35C10EB44283CF95BAA717B20847D3A192A3C9",
+  "appended_relocation_report_sha256": "3F366D74823B1CBD857ACA9BFA501CBA6602C8A48279A56BE530D6EBFC3CE2B0",
+  "base_site_count": 6136,
+  "added_appended_closure_site_count": 128,
+  "added_direct_closure_site_count": 113,
+  "added_direct_api_thunk_site_count": 12,
+  "unique_site_count": 6389,
+  "serialized_bytes": 13412,
+  "sha256": "05D9F764EF725989E7F1B82EA28D6F961911CF598205249E2DAC16F14E9C41FB",
+  "roundtrip_exact": true,
+  "fits_original_reloc_raw_capacity": true,
+  "original_reloc_raw_capacity": 16384,
+  "limitations": [
+    "This is relocation metadata only, not a patched PE or loadable ASI.",
+    "It does not validate imports, startup, loader behavior, or in-game semantics."
+  ]
+}

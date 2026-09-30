@@ -23,7 +23,8 @@ extern "C" void __cdecl __invoke_watson(
     const wchar_t*, const wchar_t*, const wchar_t*, unsigned int,
     std::uintptr_t);
 
-extern "C" int __cdecl FUN_100182c1(
+extern "C" int __cdecl FUN_100182c1_impl(
+    std::uint32_t* output_handle,
     std::uint32_t* param_1,
     LPCSTR param_2,
     std::uint32_t param_3,
@@ -34,7 +35,7 @@ extern "C" int __cdecl FUN_100182c1(
     __asm mov unaff_EDI, edi
 
     std::uint8_t bVar2;
-    std::uint32_t file_handle = 0;
+    std::uint32_t& file_handle = *output_handle;
     int iVar3;
     std::uint32_t uVar4;
     unsigned long* puVar5;
@@ -565,4 +566,28 @@ LAB_100188e3:
 
 LAB_1001856e:
     return *__errno();
+}
+
+// The original routine receives its output-handle pointer in EAX, not on the
+// stack. Preserve that private ABI at the exported candidate entry and forward
+// the five stack arguments plus the captured register value to the C body.
+extern "C" __declspec(naked) int __cdecl FUN_100182c1(
+    std::uint32_t*, LPCSTR, std::uint32_t, int, std::uint8_t)
+{
+    __asm {
+        push ebp
+        mov ebp, esp
+        push eax
+        push dword ptr [ebp + 18h]
+        push dword ptr [ebp + 14h]
+        push dword ptr [ebp + 10h]
+        push dword ptr [ebp + 0Ch]
+        push dword ptr [ebp + 08h]
+        push eax
+        call FUN_100182c1_impl
+        add esp, 18h
+        mov esp, ebp
+        pop ebp
+        ret
+    }
 }

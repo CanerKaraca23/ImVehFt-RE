@@ -47,6 +47,7 @@ static_assert(offsetof(GhidraDwordOverlay, _2_2_) == 2);
 // Ghidra shows these as byte-addressed table bases; indexed records are read by
 // the decompiled routine at byte offsets derived from its 0x0c stride.
 extern "C" std::uint32_t DAT_10029490;
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
 extern "C" std::uint8_t DAT_10039698;
 extern "C" std::uint8_t DAT_100397f8;
 extern "C" [[noreturn]] void __cdecl __invoke_watson(
@@ -71,9 +72,9 @@ extern "C" [[noreturn]] void __cdecl __invoke_watson(
 
 
 
-undefined4 __cdecl
+extern "C" undefined4 __cdecl
 
-_I10_OUTPUT(int param_1,std::uint32_t param_2,std::uint16_t param_3,int param_4,std::uint8_t param_5,short *param_6)
+$I10_OUTPUT(int param_1,std::uint32_t param_2,std::uint16_t param_3,int param_4,std::uint8_t param_5,short *param_6)
 
 
 
@@ -177,9 +178,17 @@ _I10_OUTPUT(int param_1,std::uint32_t param_2,std::uint16_t param_3,int param_4,
 
   std::uint32_t local_8;
 
+  std::uint8_t ps_low;
+
+  std::uint8_t output_low;
+
+  std::uint8_t delta;
+
   
 
   local_8 = DAT_10029490 ^ reinterpret_cast<std::uint32_t>(&local_8);
+
+  std::uint32_t return_value = 1;
 
   local_64 = param_3 & 0x8000;
 
@@ -217,7 +226,7 @@ _I10_OUTPUT(int param_1,std::uint32_t param_2,std::uint16_t param_3,int param_4,
 
       *(undefined1 *)((int)param_6 + 5) = 0;
 
-      return 1;
+      goto cleanup;
 
     }
 
@@ -283,7 +292,8 @@ LAB_1001f2d4:
 
     }
 
-    return 0;
+    return_value = 0;
+    goto cleanup;
 
   }
 
@@ -1050,7 +1060,7 @@ LAB_1001f8e7:
 
     *(undefined1 *)((int)param_6 + 5) = 0;
 
-    return 1;
+    goto cleanup;
 
   }
 
@@ -1230,7 +1240,7 @@ LAB_1001f8e7:
 
       *(undefined1 *)((int)param_6 + 5) = 0;
 
-      return 1;
+      goto cleanup;
 
     }
 
@@ -1256,15 +1266,18 @@ LAB_1001f8e7:
 
   }
 
-  const std::uint8_t ps_low = static_cast<std::uint8_t>(reinterpret_cast<std::uintptr_t>(psVar15));
-  const std::uint8_t output_low = static_cast<std::uint8_t>(reinterpret_cast<std::uintptr_t>(param_6));
-  const std::uint8_t delta = static_cast<std::uint8_t>(ps_low - output_low - 3U);
+  ps_low = static_cast<std::uint8_t>(reinterpret_cast<std::uintptr_t>(psVar15));
+  output_low = static_cast<std::uint8_t>(reinterpret_cast<std::uintptr_t>(param_6));
+  delta = static_cast<std::uint8_t>(ps_low - output_low - 3U);
   cVar12 = std::bit_cast<std::int8_t>(delta);
 
   *(char *)((int)param_6 + 3) = cVar12;
 
   *(undefined1 *)(cVar12 + 4 + (int)param_6) = 0;
 
-  return 1;
+cleanup:
+  __security_check_cookie(
+      local_8 ^ reinterpret_cast<std::uint32_t>(&local_8));
+  return return_value;
 
 }

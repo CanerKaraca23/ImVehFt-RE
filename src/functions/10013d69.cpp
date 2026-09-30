@@ -26,7 +26,7 @@ using undefined1 = std::uint8_t;
 using undefined2 = std::uint16_t;
 using undefined4 = std::uint32_t;
 using undefined8 = std::uint64_t;
-extern "C" int __cdecl __fileno(FILE* _File);
+int __cdecl __fileno(FILE* _File);
 extern "C" unsigned int __cdecl __write(
     int _FileHandle,
     const char* _Buffer,

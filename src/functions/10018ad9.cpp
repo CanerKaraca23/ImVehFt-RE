@@ -28,7 +28,7 @@ extern "C" int* __cdecl __errno();
 
 extern "C" void __stdcall FUN_1001189f();
 
-int __cdecl __mbsnbicmp_l(
+extern "C" int __cdecl __mbsnbicmp_l(
     uchar* _Str1,
     uchar* _Str2,
     std::size_t _MaxCount,

@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <corecrt.h>
 #include <stdio.h>
-extern "C" void __cdecl __unlock_file2(int _Index, void* _File);
+extern "C++" void __cdecl __unlock_file2(int _Index, void* _File);
 
 extern "C" void __stdcall FUN_10013ebb()
 {

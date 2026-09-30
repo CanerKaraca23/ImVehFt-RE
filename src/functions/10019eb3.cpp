@@ -1,5 +1,8 @@
 #include <cstdint>
 
+extern "C" std::uint32_t DAT_10029490;
+extern "C" void __fastcall __security_check_cookie(std::uintptr_t);
+
 struct __crt_locale_data
 {
     int lc_codepage;
@@ -10,7 +13,7 @@ struct localeinfo_struct
     __crt_locale_data* locinfo;
 };
 
-extern "C" int __cdecl MultiByteToWideChar(
+extern "C" int __stdcall MultiByteToWideChar(
     unsigned int,
     unsigned int,
     char*,
@@ -18,7 +21,7 @@ extern "C" int __cdecl MultiByteToWideChar(
     wchar_t*,
     int);
 
-extern "C" int __cdecl GetStringTypeW(
+extern "C" int __stdcall GetStringTypeW(
     unsigned long,
     const wchar_t*,
     int,
@@ -27,12 +30,9 @@ extern "C" int __cdecl GetStringTypeW(
 extern "C" void* __cdecl _malloc(unsigned int);
 extern "C" void* __cdecl _memset(void*, int, unsigned int);
 extern "C" void __cdecl __freea(void*);
-extern "C" void __cdecl __alloca_probe_16(unsigned int);
+extern "C" void __stdcall __alloca_probe_16(void);
 
-extern "C" std::uint8_t stack0xffffffe8[];
-extern "C" std::uint8_t stack0x00000000[];
-
-int __cdecl __crtGetStringTypeA_stat(
+extern "C" int __cdecl __crtGetStringTypeA_stat(
     localeinfo_struct* param_1,
     unsigned long param_2,
     char* param_3,
@@ -44,7 +44,10 @@ int __cdecl __crtGetStringTypeA_stat(
 {
     (void)param_8;
 
-    unsigned int size;
+    std::uintptr_t stack_cookie = DAT_10029490 ^
+        reinterpret_cast<std::uintptr_t>(&stack_cookie);
+
+    unsigned int allocation_size;
     unsigned int cchWideChar;
     std::uint32_t* puVar1;
     int cchSrc;
@@ -64,29 +67,33 @@ int __cdecl __crtGetStringTypeA_stat(
             0));
 
     if (cchWideChar == 0)
-        return 0;
+        goto cleanup;
 
     if (static_cast<int>(cchWideChar) > 0 &&
         cchWideChar < 0x7ffffff1u)
     {
-        size = cchWideChar * 2u + 8u;
+        allocation_size = cchWideChar * 2u + 8u;
 
-        if (size < 0x401u)
+        if (allocation_size < 0x401u)
         {
-            __alloca_probe_16(size);
+            __asm {
+                mov eax, allocation_size
+                call __alloca_probe_16
+                mov puVar1, esp
+            }
 
-            puVar1 = reinterpret_cast<std::uint32_t*>(stack0xffffffe8);
-            lpWideCharStr = reinterpret_cast<wchar_t*>(stack0xffffffe8);
-
-            if (stack0x00000000 ==
-                reinterpret_cast<std::uint8_t*>(0x18))
+            lpWideCharStr = nullptr;
+            if (puVar1 == nullptr)
             {
                 goto LAB_10019f47;
             }
+
+            *puVar1 = 0xccccu;
+            lpWideCharStr = reinterpret_cast<wchar_t*>(puVar1 + 2);
         }
         else
         {
-            puVar1 = static_cast<std::uint32_t*>(_malloc(size));
+            puVar1 = static_cast<std::uint32_t*>(_malloc(allocation_size));
             lpWideCharStr = nullptr;
 
             if (puVar1 == nullptr)
@@ -95,12 +102,13 @@ int __cdecl __crtGetStringTypeA_stat(
             *puVar1 = 0xddddu;
         }
 
-        lpWideCharStr = reinterpret_cast<wchar_t*>(puVar1 + 2);
+        if (allocation_size >= 0x401u)
+            lpWideCharStr = reinterpret_cast<wchar_t*>(puVar1 + 2);
     }
 
 LAB_10019f47:
     if (lpWideCharStr == nullptr)
-        return 0;
+        goto cleanup;
 
     _memset(lpWideCharStr, 0, cchWideChar * 2u);
 
@@ -123,6 +131,8 @@ LAB_10019f47:
 
     __freea(lpWideCharStr);
 
-    // __security_check_cookie is compiler-generated instrumentation.
+cleanup:
+    __security_check_cookie(
+        stack_cookie ^ reinterpret_cast<std::uintptr_t>(&stack_cookie));
     return result;
 }

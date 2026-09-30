@@ -1,6 +1,8 @@
+#include "imvehft_image_aliases.hpp"
 #include <Windows.h>
 #include <cstddef>
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 struct PtdInitPrefix { DWORD _tid; DWORD _thandle; };
 static_assert(offsetof(PtdInitPrefix, _tid) == 0x00);
@@ -8,18 +10,24 @@ static_assert(offsetof(PtdInitPrefix, _thandle) == 0x04);
 using _ptiddata = PtdInitPrefix*;
 using pthreadlocinfo = void*;
 
-extern FARPROC DAT_10039a74, DAT_10039a78, DAT_10039a7c, DAT_10039a80;
-extern DWORD DAT_10029c10, DAT_10029c0c;
-extern "C" LPVOID WINAPI TlsGetValue_exref(DWORD);
-extern "C" BOOL WINAPI TlsSetValue_exref(DWORD, LPVOID);
-extern "C" BOOL WINAPI TlsFree_exref(DWORD);
-extern "C" void CALLBACK LAB_10014c49(PVOID);
+#define DAT_10039a74 IMVEHFT_GLOBAL_AT(FARPROC, IVF_IMAGE_ADDRESS_10039A74)
+#define DAT_10039a78 IMVEHFT_GLOBAL_AT(FARPROC, IVF_IMAGE_ADDRESS_10039A78)
+#define DAT_10039a7c IMVEHFT_GLOBAL_AT(FARPROC, IVF_IMAGE_ADDRESS_10039A7C)
+#define DAT_10039a80 IMVEHFT_GLOBAL_AT(FARPROC, IVF_IMAGE_ADDRESS_10039A80)
+#define DAT_10029c10 IMVEHFT_GLOBAL_AT(DWORD, IVF_IMAGE_ADDRESS_10029C10)
+#define DAT_10029c0c IMVEHFT_GLOBAL_AT(DWORD, IVF_IMAGE_ADDRESS_10029C0C)
 extern "C" void __stdcall __freefls_4(void*);
 extern "C" void __cdecl __mtterm(void);
 extern "C" void __cdecl __init_pointers(void);
 extern "C" int __cdecl __mtinitlocks(void);
 extern "C" void* __cdecl __calloc_crt(std::size_t, std::size_t);
 extern "C" void __cdecl __initptd(_ptiddata, pthreadlocinfo);
+
+extern "C" DWORD WINAPI ImVehFt_Recovered_TlsAllocShim(
+    PFLS_CALLBACK_FUNCTION)
+{
+    return TlsAlloc();
+}
 
 extern "C" int __cdecl __mtinit(void)
 {
@@ -45,10 +53,11 @@ extern "C" int __cdecl __mtinit(void)
          (DAT_10039a78 == static_cast<FARPROC>(0))) ||
         (DAT_10039a7c == static_cast<FARPROC>(0)) ||
         (DAT_10039a80 == static_cast<FARPROC>(0))) {
-        DAT_10039a78 = reinterpret_cast<FARPROC>(&TlsGetValue_exref);
-        DAT_10039a74 = reinterpret_cast<FARPROC>(&LAB_10014c49);
-        DAT_10039a7c = reinterpret_cast<FARPROC>(&TlsSetValue_exref);
-        DAT_10039a80 = reinterpret_cast<FARPROC>(&TlsFree_exref);
+        DAT_10039a78 = reinterpret_cast<FARPROC>(&TlsGetValue);
+        DAT_10039a74 = reinterpret_cast<FARPROC>(
+            &ImVehFt_Recovered_TlsAllocShim);
+        DAT_10039a7c = reinterpret_cast<FARPROC>(&TlsSetValue);
+        DAT_10039a80 = reinterpret_cast<FARPROC>(&TlsFree);
     }
 
     DAT_10029c10 = TlsAlloc();

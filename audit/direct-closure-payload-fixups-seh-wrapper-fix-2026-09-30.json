@@ -1,0 +1,1264 @@
+{
+  "scope": "Applied the 155 direct-body local-closure source fixups to copied appended .xcode/.rdata payloads.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "direct_layout_sha256": "16AB1805CBE8A3CE56B17622C855DFADA086F36C5FEC0A609A98EA8CFE914B2B",
+  "appended_fixup_report_sha256": "4EB1FB371FE183E710459C792214BEA929AFE0DB9AE06DF6BC7663C5BF697153",
+  "input_xcode_sha256": "2BFA9938884D6F4A8F480BFD41F9B6E12EB716FEC3F631F1046DC0A4527D8E4C",
+  "input_rdata_sha256": "53EE2DD72FA3A303443489EB497B41654A3EBFF87A8512A920CBF5B8AA740849",
+  "applied_unique_fields": 155,
+  "counts_by_type": {
+    "DIR32": 113,
+    "REL32": 42
+  },
+  "all_raw_addends_matched": true,
+  "all_values_rederived": true,
+  "output_xcode_sha256": "F81646539D7C8198A227B72CC032BE9CEC38102AEDB531C0B44D01D9C4263FB7",
+  "output_rdata_sha256": "D0BA973A786CC669B73C74DEFC3ABDE69013B2B4CE8422A14E70A56D97495FBF",
+  "limitations": [
+    "The 85 source fixups inside original .text are not included here.",
+    "No direct-body bytes, PE headers, or entry thunks are patched.",
+    "Outputs are section payloads, not a loadable ASI; no runtime test was run."
+  ],
+  "fixups": [
+    {
+      "site_rva": "0x5aa15",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CB54",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5aa1b",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFB59C5",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5aa62",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFA959A",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ab6f",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F08",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ab75",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F14",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ab7b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F00",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ab82",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F28",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ab94",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F10",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5abd0",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F30",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5abdc",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CB58",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5abff",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F08",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac05",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F00",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac11",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F28",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac22",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F20",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac2c",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F18",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac38",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFC0E04",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac4c",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F14",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac53",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F28",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac62",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F10",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ac9f",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024EF8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5aca5",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003BC1C",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5acb5",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C1F8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5acdd",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024EF0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ad16",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024EE0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ad23",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024ED8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ad3c",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CB60",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ad5a",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024ED0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ad7f",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CB60",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ad88",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024ED0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ada3",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFADF79",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ada9",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024EC0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5adb8",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024EC8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5adda",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAC612",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ade9",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C248",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5adf2",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C1FC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ae00",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAE55C",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ae2b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003759C",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ae4b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003AEF4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ae70",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003AACC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5aeaf",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFA70FD",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5aed6",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003BC00",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5aef1",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CB64",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5af26",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C1A8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5af2b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003BC78",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5af3d",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CB78",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5af7a",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003BBC0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5af80",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003BC78",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5af98",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CB8C",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5afd2",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003BC30",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5afd9",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CBA0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b011",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C208",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b02f",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003AEF1",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b03c",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C1FC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b068",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CBB0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b06e",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFB5D19",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b092",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CBBC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b098",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFB5CEF",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b0ae",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CBC8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b0b4",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFB5CD3",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b0d3",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003BD9C",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b0e8",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F94",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b102",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFA6EAA",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b118",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CBD4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b150",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10037594",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b161",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10037594",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b173",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10037594",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b185",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10037594",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b19e",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C1FC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b217",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003AEF0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b253",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003AEEC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b281",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F94",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b2b1",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFADB4B",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b2e1",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFADB1B",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b352",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F94",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b384",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024A14",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b3c5",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x100374C0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b3f4",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C1FC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b407",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003AEDC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b45e",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CBE4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b47a",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F94",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b49b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CBF8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b4a6",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C248",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b4ab",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFADEB1",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b4b8",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C248",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b4c1",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C1FC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b518",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFADE44",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b5ae",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024F90",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b5b6",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C250",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b5bd",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C250",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b5c9",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024E90",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b5dd",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C254",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b5e4",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C254",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b5f0",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024E90",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b626",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10024A14",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b668",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005CCCC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b679",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b686",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b68b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b693",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F6",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b699",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b69e",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFADA7E",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6aa",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD9B2",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6c3",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6d0",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6d5",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6dd",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F6",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6e3",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6e8",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFADA34",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b6f4",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD968",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b70e",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b71b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b720",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b728",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F6",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b72e",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b733",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD9E9",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b73f",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD91D",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b759",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b766",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b76b",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b773",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F6",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b779",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b77e",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD99E",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b78a",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD8D2",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b7a4",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b7b1",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F0",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b7b6",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C400",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b7be",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F6",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b7c4",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1003C3F4",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b7c9",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD953",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b7d5",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFAD887",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b802",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFBBACF",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b814",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0x00000014",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b83e",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10029490",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b852",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005B7E6",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b88f",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFBD6E2",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b894",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFBD6FC",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b8b4",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFBD1D3",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5cd3c",
+      "section": ".rdata",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005B8AE",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b8d4",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFBB9FD",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b8e5",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0x00000014",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b909",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005B8B8",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b915",
+      "section": ".xcode",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x10029490",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b960",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFBD611",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b969",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFBD627",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b985",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0x00000098",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b98e",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFB945E",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b9de",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFC142A",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5b9f1",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0x00000010",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ba01",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFC1790",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5cd68",
+      "section": ".rdata",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005B9FA",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5cd70",
+      "section": ".rdata",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005B981",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5cd74",
+      "section": ".rdata",
+      "type": "DIR32",
+      "raw_addend": 0,
+      "computed_field_value": "0x1005B98A",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ba14",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFC177D",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ba1c",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFB7445",
+      "origin": "same-object-local-section-closure"
+    },
+    {
+      "site_rva": "0x5ba53",
+      "section": ".xcode",
+      "type": "REL32",
+      "raw_addend": 0,
+      "computed_field_value": "0xFFFB9399",
+      "origin": "same-object-local-section-closure"
+    }
+  ]
+}

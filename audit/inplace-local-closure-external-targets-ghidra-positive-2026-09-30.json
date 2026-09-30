@@ -1,0 +1,1065 @@
+{
+  "scope": "Preferred-base target resolution for undefined externals in the recursive local-section closure of 284 direct candidate bodies. Source section placement and encoded fixup values are not included.",
+  "closure_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\inplace-candidate-local-section-closure-ghidra-positive-2026-09-30-v2.json",
+  "closure_report_sha256": "50DDC361CBFAC630ABF6E830C88D08D46562547C3221AB5A9BC9C5CF42F4737E",
+  "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\placement-plan-conservative-ghidra-positive-2026-09-30.json",
+  "placement_plan_sha256": "34AB2B82ADBEF08D19A335AFB349AB554DBAB6A6E6E3FF6BD03019E10980FF6F",
+  "original_image": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "original_image_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "ghidra_export_directory": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports",
+  "summary": {
+    "undefined_external_symbol_owner_groups": 69,
+    "undefined_external_relocation_occurrences": 130,
+    "occurrences_by_resolution_class": {
+      "address-encoded-in-original-image": 92,
+      "ghidra-callee-alias-to-candidate-entry": 4,
+      "unique-candidate-function-definition": 34
+    },
+    "unresolved_owner_symbol_groups": 0,
+    "unresolved_relocation_occurrences": 0
+  },
+  "limitations": [
+    "Address-encoded names establish a preferred-base address and section membership, not data type, initialization, or lifetime.",
+    "Candidate function bindings establish target entry VAs; REL32 values still depend on final section placement.",
+    "Ghidra alias adjudications prove the original call target for the listed owner, not the behavior of the reconstructed full image.",
+    "No target value is written into a PE; no ASI, loader, or GTA runtime test is performed."
+  ],
+  "resolved_targets": [
+    {
+      "symbol": "?DAT_10024a14@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10024a14",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002a14",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_100374c0@@3PAIA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x100374c0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x0000e4c0",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_10037594@@3PAHA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 4,
+      "target_va": "0x10037594",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x0000e594",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003759c@@3IA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003759c",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x0000e59c",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003aacc@@3IA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003aacc",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00011acc",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003aedc@@3PAEA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003aedc",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00011edc",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003aeec@@3DA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003aeec",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00011eec",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003aef0@@3DA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003aef0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00011ef0",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003aef1@@3DA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003aef1",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00011ef1",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003aef4@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003aef4",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00011ef4",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003bc1c@@3IA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003bc1c",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00012c1c",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003bc78@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x1003bc78",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00012c78",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003bd9c@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003bd9c",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00012d9c",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003c1f8@@3IA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003c1f8",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x000131f8",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003c1fc@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 5,
+      "target_va": "0x1003c1fc",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x000131fc",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003c248@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 3,
+      "target_va": "0x1003c248",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00013248",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003c250@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x1003c250",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00013250",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?DAT_1003c254@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x1003c254",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00013254",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024e90@@3MA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10024e90",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002e90",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024ec0@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024ec0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002ec0",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024ec8@@3IA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024ec8",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002ec8",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024ed0@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10024ed0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002ed0",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024ed8@@3MA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024ed8",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002ed8",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024ee0@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024ee0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002ee0",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024ef0@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024ef0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002ef0",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024ef8@@3MA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024ef8",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002ef8",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f00@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10024f00",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f00",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f08@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10024f08",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f08",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f10@@3MA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10024f10",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f10",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f14@@3MA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10024f14",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f14",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f18@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024f18",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f18",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f20@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024f20",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f20",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f28@@3MA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 3,
+      "target_va": "0x10024f28",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f28",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f30@@3NA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024f30",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f30",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f90@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10024f90",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f90",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_10024f94@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 4,
+      "target_va": "0x10024f94",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".rdata",
+        "original_section_offset": "0x00002f94",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003bbc0@@3PAHA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003bbc0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00012bc0",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003bc00@@3HA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003bc00",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00012c00",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003bc30@@3PAHA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003bc30",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00012c30",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003c1a8@@3PAHA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003c1a8",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x000131a8",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003c208@@3PAHA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1003c208",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00013208",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003c3f0@@3PBDB",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x1000c480",
+      "occurrences_in_source_entry": 5,
+      "target_va": "0x1003c3f0",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x000133f0",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003c3f4@@3GA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x1000c480",
+      "occurrences_in_source_entry": 5,
+      "target_va": "0x1003c3f4",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x000133f4",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003c3f6@@3GA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x1000c480",
+      "occurrences_in_source_entry": 5,
+      "target_va": "0x1003c3f6",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x000133f6",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?_DAT_1003c400@@3IA",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x1000c480",
+      "occurrences_in_source_entry": 10,
+      "target_va": "0x1003c400",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00013400",
+        "backing": "virtual-only"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "?___FrameUnwindToState@@YAXHIHH@Z",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x1001d06f",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1001ce0c",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "1001ce0c.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "@FUN_100073f0@32",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x100073f0",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "100073f0.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "@FUN_1001ba40@8",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x1001ba40",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "1001ba40.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "@__security_check_cookie@4",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10013980",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x100172d5",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "100172d5.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "@__security_check_cookie@4",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10018ec5",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x100172d5",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "100172d5.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_DAT_10029490",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10013980",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10029490",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00000490",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "_DAT_10029490",
+      "relocation_type": "DIR32",
+      "source_entry_va": "0x10018ec5",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10029490",
+      "resolution_class": "address-encoded-in-original-image",
+      "evidence": {
+        "encoding_pattern": "DAT",
+        "original_section": ".data",
+        "original_section_offset": "0x00000490",
+        "backing": "raw-backed"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "_FID_conflict__sscanf",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10004ab0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x100103e4",
+      "resolution_class": "ghidra-callee-alias-to-candidate-entry",
+      "evidence": {
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10004ab0.json",
+        "callee_name": "FID_conflict:_sscanf",
+        "ghidra_call_instruction_count": 1,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 0
+    },
+    {
+      "symbol": "_FUN_10001fb0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10001fb0",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10001fb0.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10004000@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10004ab0",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10004000",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10004000.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10008d20@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10007030",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10008d20",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10008d20.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10008e00@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10008e00",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10008e00.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10009060",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x1000c480",
+      "occurrences_in_source_entry": 5,
+      "target_va": "0x10009060",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10009060.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10009120@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x1000c480",
+      "occurrences_in_source_entry": 5,
+      "target_va": "0x10009120",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10009120.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10009360@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 3,
+      "target_va": "0x10009360",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10009360.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10018a8b@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x100189f5",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10018a8b",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10018a8b.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10018f94@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10013980",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10018f94",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10018f94.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_10018f94@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10018ec5",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10018f94",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10018f94.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_FUN_1001d195@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x1001d06f",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x1001d195",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "1001d195.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "___NLG_Notify@4",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10013980",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10018f75",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10018f75.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "___NLG_Notify@4",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x10018ec5",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10018f75",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10018f75.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "___SEH_epilog4@0",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x1001d06f",
+      "occurrences_in_source_entry": 1,
+      "target_va": "0x10012e65",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10012e65.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "___getptd",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x1001d06f",
+      "occurrences_in_source_entry": 2,
+      "target_va": "0x10014df0",
+      "resolution_class": "unique-candidate-function-definition",
+      "evidence": {
+        "provider_object": "10014df0.obj",
+        "provider_section": ".xcode",
+        "provider_symbol_value": 0,
+        "target_placement": "body-at-entry"
+      },
+      "candidate_definition_count": 1
+    },
+    {
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "source_entry_va": "0x100076d0",
+      "occurrences_in_source_entry": 3,
+      "target_va": "0x10010d8b",
+      "resolution_class": "ghidra-callee-alias-to-candidate-entry",
+      "evidence": {
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\100076d0.json",
+        "callee_name": "_strncmp",
+        "ghidra_call_instruction_count": 3,
+        "target_placement": "jmp-rel32-thunk"
+      },
+      "candidate_definition_count": 0
+    }
+  ],
+  "unresolved_targets": []
+}

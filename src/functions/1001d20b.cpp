@@ -1,9 +1,9 @@
 #include <cstdint>
 
 extern "C" void __cdecl __SEH_prolog4();
-extern "C" void __cdecl __SEH_epilog4();
+extern "C" void __stdcall __SEH_epilog4(void);
 extern "C" int __cdecl _ValidateRead(void* address, std::uint32_t size);
-extern "C" int __cdecl ___AdjustPointer(int pointer, int* displacement);
+int __cdecl ___AdjustPointer(int pointer, int* displacement);
 extern "C" void* __cdecl FID_conflict__memcpy(
     void* destination,
     void* source,

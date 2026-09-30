@@ -1,0 +1,323 @@
+{
+  "scope": "Unapplied helper bridge and nine caller REL32 fixups using byte-identical original CRT helper entries; provisional contiguous payload layout only.",
+  "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "placement_plan_sha256": "34AB2B82ADBEF08D19A335AFB349AB554DBAB6A6E6E3FF6BD03019E10980FF6F",
+  "payload_census_sha256": "70BA4989871616A17719E5F375FD53CEB6BAB14F9352EE4E878756019D943C06",
+  "local_closure_sha256": "2F549A1F5FCE60DA84AA3743B871619ECD48ABE27D95793CD4C0383008A8FAC4",
+  "bridge_object_sha256": "B805C7AD2E00DE90C0F8203BDD2A051909347F7335A3F1227437F72015CEB5D0",
+  "provisional_appended_rva": "0x00043000",
+  "preexisting_code_and_rdata_payload_bytes": 87883,
+  "local_section_closure_bytes_with_alignment": 11065,
+  "local_section_count": 16,
+  "local_section_layout": [
+    {
+      "source_entry": "0x10004bb0",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 1511,
+      "payload_offset": 87883,
+      "sha256": "2EDA8C969C45233906D69FE961CC2AD82731D930E9A4602A5A26CA668F613A57",
+      "relocation_count": 31
+    },
+    {
+      "source_entry": "0x10006be0",
+      "section_number": 5,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 1251,
+      "payload_offset": 89394,
+      "sha256": "6460E6A0D983AA61D5CB0C139366C251DDC6436BD3A008111D22931C75B8F1E8",
+      "relocation_count": 29
+    },
+    {
+      "source_entry": "0x10008140",
+      "section_number": 5,
+      "section_name": ".data",
+      "alignment": 4,
+      "size": 52,
+      "payload_offset": 90648,
+      "sha256": "7955CB2DE90DD9EFC6DF9FDBF5F5D10C114F4135A9A6B52DB1003BE749E32F7A",
+      "relocation_count": 13
+    },
+    {
+      "source_entry": "0x1000db80",
+      "section_number": 3,
+      "section_name": ".bss",
+      "alignment": 4,
+      "size": 4,
+      "payload_offset": 90700,
+      "sha256": "DF3F619804A92FDB4057192DC43DD748EA778ADC52BC498CE80524C014B81119",
+      "relocation_count": 0
+    },
+    {
+      "source_entry": "0x10014fa7",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 9,
+      "payload_offset": 90704,
+      "sha256": "712835D1898714079D0D3BEB8DD06F625F08EF3B21058DAA717FE8A1BEDBC755",
+      "relocation_count": 1
+    },
+    {
+      "source_entry": "0x100154dc",
+      "section_number": 6,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 2572,
+      "payload_offset": 90713,
+      "sha256": "B14DA5CFB99B95F2F8196C343FAA28B1831257E1F14175227FE1EB1984808875",
+      "relocation_count": 47
+    },
+    {
+      "source_entry": "0x100182c1",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 1937,
+      "payload_offset": 93285,
+      "sha256": "C98B9D34D39027257BCBA4B5D8518DE9E76210DAB78AEB1B15D380859B741609",
+      "relocation_count": 50
+    },
+    {
+      "source_entry": "0x1001b693",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 86,
+      "payload_offset": 95222,
+      "sha256": "2187A99191979144F0D09F572AD1E3927C268FB4917556083C5E155E37434095",
+      "relocation_count": 2
+    },
+    {
+      "source_entry": "0x1001b750",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 217,
+      "payload_offset": 95308,
+      "sha256": "50B9D85DAFE31D15F30DAA92C6A8207B3CAB49400F68DE8A47E761CC69CBE44E",
+      "relocation_count": 4
+    },
+    {
+      "source_entry": "0x1001bc9e",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 373,
+      "payload_offset": 95525,
+      "sha256": "872E4DC07B7B1BBB3FB74547DF3A8B5CADD9CB730C9577D69B1E2F0CF4C0CD6B",
+      "relocation_count": 11
+    },
+    {
+      "source_entry": "0x1001bee6",
+      "section_number": 5,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 30,
+      "payload_offset": 95898,
+      "sha256": "655E538460B5CD5CA3725E05A45013CBB84B80A7C9F9D3B5D3E6B61632620085",
+      "relocation_count": 1
+    },
+    {
+      "source_entry": "0x1001c25c",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 282,
+      "payload_offset": 95928,
+      "sha256": "B187B338AE5E891E6DB8B94C838B36F55353D43F625B08C37F57D9866A8291B1",
+      "relocation_count": 10
+    },
+    {
+      "source_entry": "0x1001c35f",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 30,
+      "payload_offset": 96210,
+      "sha256": "7F43D246F213FCD56C03B96AA1BB2923B71DCA4939D18E382B73C0D78158BF25",
+      "relocation_count": 1
+    },
+    {
+      "source_entry": "0x1001d591",
+      "section_number": 3,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 54,
+      "payload_offset": 96240,
+      "sha256": "3B98E66C528AB65F5755D215A8754A90E3163F4BAAFEAB77EC3E215E76339CAA",
+      "relocation_count": 1
+    },
+    {
+      "source_entry": "0x1001d591",
+      "section_number": 4,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 14,
+      "payload_offset": 96294,
+      "sha256": "208F1E0098B7B57ED904E0A2BAB4597C2450CE36B21070776190DF5C1795143E",
+      "relocation_count": 1
+    },
+    {
+      "source_entry": "0x1001eb27",
+      "section_number": 9,
+      "section_name": ".xcode",
+      "alignment": 1,
+      "size": 2640,
+      "payload_offset": 96308,
+      "sha256": "E48D8B4774D82CEDBC97068326E0A91FF0FBC2FADB41B82A7AF33F0FCBF236B7",
+      "relocation_count": 20
+    }
+  ],
+  "bridge_payload_offset": 98960,
+  "bridge_payload_va_if_layout_retained": "0x1005B290",
+  "bridge_payload_bytes": 82,
+  "bridge_payload_sha256_after_original_helper_rel32_fixups": "5F0192CF7D61D153B64DC4F5E5532D948126F51BA4C7CB11E073A59311ADE447",
+  "bridge_payload_file": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\crt-bridge-recheck-20260930\\crt64_original_helper_bridges-relocated.bin",
+  "bridge_symbols": {
+    "_ivf_crt_alldiv_from_alldvrm@16": {
+      "offset": 0,
+      "va_if_layout_retained": "0x1005B290"
+    },
+    "_ivf_crt_allrem_from_alldvrm@16": {
+      "offset": 26,
+      "va_if_layout_retained": "0x1005B2AA"
+    },
+    "_ivf_crt_aulldiv_from_aulldvrm@16": {
+      "offset": 56,
+      "va_if_layout_retained": "0x1005B2C8"
+    }
+  },
+  "bridge_helper_fixups": [
+    {
+      "site_offset_in_bridge": 18,
+      "symbol": "___alldvrm@16",
+      "original_helper_va": "0x1001DDA0",
+      "helper_kind": "signed",
+      "displacement": -251142
+    },
+    {
+      "site_offset_in_bridge": 44,
+      "symbol": "___alldvrm@16",
+      "original_helper_va": "0x1001DDA0",
+      "helper_kind": "signed",
+      "displacement": -251168
+    },
+    {
+      "site_offset_in_bridge": 74,
+      "symbol": "___aulldvrm@16",
+      "original_helper_va": "0x1001A900",
+      "helper_kind": "unsigned",
+      "displacement": -264670
+    }
+  ],
+  "candidate_caller_fixups": [
+    {
+      "source_entry": "0x10014003",
+      "source_symbol": "",
+      "site_offset_in_body": 62,
+      "target_symbol": "__aulldiv",
+      "bridge_symbol": "_ivf_crt_aulldiv_from_aulldvrm@16",
+      "source_site_va_if_layout_retained": "0x1004CA6E",
+      "bridge_target_va_if_layout_retained": "0x1005B2C8",
+      "displacement": 59478
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 821,
+      "target_symbol": "__alldiv",
+      "bridge_symbol": "_ivf_crt_alldiv_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x10053825",
+      "bridge_target_va_if_layout_retained": "0x1005B290",
+      "displacement": 31335
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 848,
+      "target_symbol": "__allrem",
+      "bridge_symbol": "_ivf_crt_allrem_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x10053840",
+      "bridge_target_va_if_layout_retained": "0x1005B2AA",
+      "displacement": 31334
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 873,
+      "target_symbol": "__alldiv",
+      "bridge_symbol": "_ivf_crt_alldiv_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x10053859",
+      "bridge_target_va_if_layout_retained": "0x1005B290",
+      "displacement": 31283
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 904,
+      "target_symbol": "__allrem",
+      "bridge_symbol": "_ivf_crt_allrem_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x10053878",
+      "bridge_target_va_if_layout_retained": "0x1005B2AA",
+      "displacement": 31278
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 931,
+      "target_symbol": "__alldiv",
+      "bridge_symbol": "_ivf_crt_alldiv_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x10053893",
+      "bridge_target_va_if_layout_retained": "0x1005B290",
+      "displacement": 31225
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 948,
+      "target_symbol": "__allrem",
+      "bridge_symbol": "_ivf_crt_allrem_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x100538A4",
+      "bridge_target_va_if_layout_retained": "0x1005B2AA",
+      "displacement": 31234
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 980,
+      "target_symbol": "__alldiv",
+      "bridge_symbol": "_ivf_crt_alldiv_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x100538C4",
+      "bridge_target_va_if_layout_retained": "0x1005B290",
+      "displacement": 31176
+    },
+    {
+      "source_entry": "0x1001BEE6",
+      "source_symbol": "",
+      "site_offset_in_body": 998,
+      "target_symbol": "__allrem",
+      "bridge_symbol": "_ivf_crt_allrem_from_alldvrm@16",
+      "source_site_va_if_layout_retained": "0x100538D6",
+      "bridge_target_va_if_layout_retained": "0x1005B2AA",
+      "displacement": 31184
+    }
+  ],
+  "call_counts": {
+    "__alldiv": 4,
+    "__allrem": 4,
+    "__aulldiv": 1
+  },
+  "helper_byte_identity_proofs": [
+    "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\1001dda0-original-body-byte-identity-2026-09-30.json",
+    "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\1001a900-original-body-byte-identity-2026-09-30.json"
+  ],
+  "limitations": [
+    "No PE/ASI bytes are patched or emitted.",
+    "The appended section's final RVA, PE section permissions, full external-symbol integration, base-relocation directory, import/startup behavior, and other payload sections are not yet finalized.",
+    "All recorded VAs/displacements are provisional and must be recomputed if any prior payload section, alignment, or order changes.",
+    "The bridge test validates its x86 ABI/results against the candidate's byte-identical helper bodies, not loader or GTA behavior."
+  ]
+}

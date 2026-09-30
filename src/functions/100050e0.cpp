@@ -1,20 +1,25 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
-extern "C" void __cdecl FUN_006d3db0();
-extern "C" char __cdecl FUN_006c2130(int);
 extern "C" char __cdecl FUN_0052cee0(int, int);
+
+using FUN_006d3db0_t = void(__cdecl*)();
+using FUN_006c2130_t = char(__cdecl*)(int);
 
 extern "C" int __stdcall FUN_10009360();
 extern "C" void __stdcall FUN_10004bb0();
 
 extern "C" int DAT_1003c248;
-extern "C" int* _DAT_00b74494;
-extern "C" int _DAT_00b7cb84;
 extern "C" int DAT_1003bc70;
 extern "C" int DAT_1003aed8;
 
 void __fastcall FUN_100050e0(int param_1)
 {
+    const auto FUN_006d3db0 = reinterpret_cast<FUN_006d3db0_t>(
+        static_cast<std::uintptr_t>(0x006d3db0));
+    const auto FUN_006c2130 = reinterpret_cast<FUN_006c2130_t>(
+        static_cast<std::uintptr_t>(0x006c2130));
+
     int iVar1;
     int iVar2;
     int iVar3;
@@ -33,7 +38,7 @@ void __fastcall FUN_100050e0(int param_1)
         *reinterpret_cast<int*>(
             *reinterpret_cast<int*>(
                 static_cast<std::uintptr_t>(iVar5) + 0x48u) +
-            ((param_1 - *_DAT_00b74494) / 0xa18) * 4) +
+            ((param_1 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
         iVar7;
 
     *reinterpret_cast<std::uint32_t*>(
@@ -69,7 +74,7 @@ void __fastcall FUN_100050e0(int param_1)
                 *reinterpret_cast<int*>(
                     *reinterpret_cast<int*>(
                         static_cast<std::uintptr_t>(iVar6) + 0x48u) +
-                    ((iVar1 - *_DAT_00b74494) / 0xa18) * 4) +
+                    ((iVar1 - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xa18) * 4) +
                 4 +
                 iVar5;
         }
@@ -185,14 +190,14 @@ void __fastcall FUN_100050e0(int param_1)
             }
         }
 
-        iVar5 = _DAT_00b7cb84 -
+        iVar5 = IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84) -
                 *reinterpret_cast<int*>(
                     static_cast<std::uintptr_t>(iVar7) + 0x24u);
 
         if (DAT_1003bc70 < iVar5) {
             *reinterpret_cast<int*>(
                 static_cast<std::uintptr_t>(iVar7) + 0x24u) =
-                _DAT_00b7cb84;
+                IMVEHFT_GLOBAL_AT(std::uint32_t, 0x00b7cb84);
         }
         else if (iVar5 < DAT_1003aed8) {
             if (*reinterpret_cast<char*>(

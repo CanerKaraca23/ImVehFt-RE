@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <corecrt.h>
@@ -95,7 +96,7 @@ int __cdecl __setmbcp(int _CodePage)
     pthreadmbcinfo ptVar8;
     int local_24;
 
-    __SEH_prolog4(0x10028390u, 0x14);
+    __SEH_prolog4(IVF_IMAGE_ADDRESS_10028390, 0x14);
 
     local_24 = -1;
     p_Var1 = __getptd();

@@ -1,0 +1,821 @@
+{
+  "scope": "original .rdata/.data bytes and COFF fixups for data-to-data HIGHLOW sites only; not a loadable image",
+  "image": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\modloader\\My Scripts\\.ImVehFt\\ImVehFt.asi",
+  "image_sha256": "409f0df7ae579841db05c3ec6dad0a9afc579194632874962e1bdee0ccf020d3",
+  "unresolved_dat_names_defined": 601,
+  "relocation_sites_by_site_and_target_section": {
+    ".data -> .data": 30,
+    ".data -> .rdata": 234,
+    ".data -> .text": 10,
+    ".rdata -> .data": 166,
+    ".rdata -> .rdata": 892,
+    ".rdata -> .text": 189
+  },
+  "data_to_data_sites_emitted_as_offset_relocations": 1322,
+  "text_target_sites_left_unresolved": 199,
+  "text_target_sites": [
+    {
+      "site_va": "0x10022158",
+      "stored_va": "0x10020870"
+    },
+    {
+      "site_va": "0x1002215C",
+      "stored_va": "0x100208D0"
+    },
+    {
+      "site_va": "0x10022160",
+      "stored_va": "0x10020910"
+    },
+    {
+      "site_va": "0x10022164",
+      "stored_va": "0x10020920"
+    },
+    {
+      "site_va": "0x10022168",
+      "stored_va": "0x10020930"
+    },
+    {
+      "site_va": "0x1002216C",
+      "stored_va": "0x10020940"
+    },
+    {
+      "site_va": "0x10022170",
+      "stored_va": "0x10020950"
+    },
+    {
+      "site_va": "0x10022174",
+      "stored_va": "0x10020960"
+    },
+    {
+      "site_va": "0x10022178",
+      "stored_va": "0x10020970"
+    },
+    {
+      "site_va": "0x1002217C",
+      "stored_va": "0x10020980"
+    },
+    {
+      "site_va": "0x10022180",
+      "stored_va": "0x10020990"
+    },
+    {
+      "site_va": "0x10022184",
+      "stored_va": "0x100209A0"
+    },
+    {
+      "site_va": "0x10022188",
+      "stored_va": "0x100209B0"
+    },
+    {
+      "site_va": "0x1002218C",
+      "stored_va": "0x100209C0"
+    },
+    {
+      "site_va": "0x10022190",
+      "stored_va": "0x100209D0"
+    },
+    {
+      "site_va": "0x10022194",
+      "stored_va": "0x100209E0"
+    },
+    {
+      "site_va": "0x10022198",
+      "stored_va": "0x100209F0"
+    },
+    {
+      "site_va": "0x1002219C",
+      "stored_va": "0x10020A10"
+    },
+    {
+      "site_va": "0x100221A0",
+      "stored_va": "0x10020A20"
+    },
+    {
+      "site_va": "0x100221A4",
+      "stored_va": "0x10020A30"
+    },
+    {
+      "site_va": "0x100221A8",
+      "stored_va": "0x10020A40"
+    },
+    {
+      "site_va": "0x100221AC",
+      "stored_va": "0x10020A50"
+    },
+    {
+      "site_va": "0x100221B0",
+      "stored_va": "0x10020A60"
+    },
+    {
+      "site_va": "0x100221BC",
+      "stored_va": "0x100104BC"
+    },
+    {
+      "site_va": "0x100221C0",
+      "stored_va": "0x10013025"
+    },
+    {
+      "site_va": "0x100221C4",
+      "stored_va": "0x100148E9"
+    },
+    {
+      "site_va": "0x100221C8",
+      "stored_va": "0x1001704C"
+    },
+    {
+      "site_va": "0x100221CC",
+      "stored_va": "0x1001C5E0"
+    },
+    {
+      "site_va": "0x100221D8",
+      "stored_va": "0x1001B29B"
+    },
+    {
+      "site_va": "0x100221DC",
+      "stored_va": "0x100130D6"
+    },
+    {
+      "site_va": "0x10022210",
+      "stored_va": "0x1001020F"
+    },
+    {
+      "site_va": "0x10022214",
+      "stored_va": "0x10010258"
+    },
+    {
+      "site_va": "0x1002221C",
+      "stored_va": "0x1001020F"
+    },
+    {
+      "site_va": "0x10022220",
+      "stored_va": "0x10010258"
+    },
+    {
+      "site_va": "0x10022228",
+      "stored_va": "0x1001032A"
+    },
+    {
+      "site_va": "0x1002222C",
+      "stored_va": "0x10010258"
+    },
+    {
+      "site_va": "0x10022248",
+      "stored_va": "0x10010771"
+    },
+    {
+      "site_va": "0x10022250",
+      "stored_va": "0x10001010"
+    },
+    {
+      "site_va": "0x10022254",
+      "stored_va": "0x10010258"
+    },
+    {
+      "site_va": "0x10024C74",
+      "stored_va": "0x1000A030"
+    },
+    {
+      "site_va": "0x10024C78",
+      "stored_va": "0x10009790"
+    },
+    {
+      "site_va": "0x10024C80",
+      "stored_va": "0x1000A030"
+    },
+    {
+      "site_va": "0x10024C84",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024C8C",
+      "stored_va": "0x10009AF0"
+    },
+    {
+      "site_va": "0x10024C90",
+      "stored_va": "0x1000A8C0"
+    },
+    {
+      "site_va": "0x10024C98",
+      "stored_va": "0x10009AF0"
+    },
+    {
+      "site_va": "0x10024C9C",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024CA4",
+      "stored_va": "0x10009B50"
+    },
+    {
+      "site_va": "0x10024CA8",
+      "stored_va": "0x1000AAE0"
+    },
+    {
+      "site_va": "0x10024CB0",
+      "stored_va": "0x10009B50"
+    },
+    {
+      "site_va": "0x10024CB4",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024CBC",
+      "stored_va": "0x10009BB0"
+    },
+    {
+      "site_va": "0x10024CC0",
+      "stored_va": "0x1000AC20"
+    },
+    {
+      "site_va": "0x10024CC8",
+      "stored_va": "0x10009BB0"
+    },
+    {
+      "site_va": "0x10024CCC",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024CD4",
+      "stored_va": "0x10009C10"
+    },
+    {
+      "site_va": "0x10024CD8",
+      "stored_va": "0x1000AD60"
+    },
+    {
+      "site_va": "0x10024CE0",
+      "stored_va": "0x10009C10"
+    },
+    {
+      "site_va": "0x10024CE4",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024CEC",
+      "stored_va": "0x10009C70"
+    },
+    {
+      "site_va": "0x10024CF0",
+      "stored_va": "0x1000AEA0"
+    },
+    {
+      "site_va": "0x10024CF8",
+      "stored_va": "0x10009C70"
+    },
+    {
+      "site_va": "0x10024CFC",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024D04",
+      "stored_va": "0x10009CD0"
+    },
+    {
+      "site_va": "0x10024D08",
+      "stored_va": "0x1000AFE0"
+    },
+    {
+      "site_va": "0x10024D10",
+      "stored_va": "0x10009CD0"
+    },
+    {
+      "site_va": "0x10024D14",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024D1C",
+      "stored_va": "0x10009D30"
+    },
+    {
+      "site_va": "0x10024D20",
+      "stored_va": "0x1000B120"
+    },
+    {
+      "site_va": "0x10024D28",
+      "stored_va": "0x10009D30"
+    },
+    {
+      "site_va": "0x10024D2C",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024D34",
+      "stored_va": "0x10009D90"
+    },
+    {
+      "site_va": "0x10024D38",
+      "stored_va": "0x1000B260"
+    },
+    {
+      "site_va": "0x10024D40",
+      "stored_va": "0x10009D90"
+    },
+    {
+      "site_va": "0x10024D44",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024D4C",
+      "stored_va": "0x10009DF0"
+    },
+    {
+      "site_va": "0x10024D50",
+      "stored_va": "0x1000B460"
+    },
+    {
+      "site_va": "0x10024D58",
+      "stored_va": "0x10009DF0"
+    },
+    {
+      "site_va": "0x10024D5C",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024D64",
+      "stored_va": "0x10009E50"
+    },
+    {
+      "site_va": "0x10024D68",
+      "stored_va": "0x1000B5A0"
+    },
+    {
+      "site_va": "0x10024D70",
+      "stored_va": "0x10009E50"
+    },
+    {
+      "site_va": "0x10024D74",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024D7C",
+      "stored_va": "0x10009EB0"
+    },
+    {
+      "site_va": "0x10024D80",
+      "stored_va": "0x1000B6E0"
+    },
+    {
+      "site_va": "0x10024D88",
+      "stored_va": "0x10009EB0"
+    },
+    {
+      "site_va": "0x10024D8C",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024D94",
+      "stored_va": "0x10009F10"
+    },
+    {
+      "site_va": "0x10024D98",
+      "stored_va": "0x1000B8E0"
+    },
+    {
+      "site_va": "0x10024DA0",
+      "stored_va": "0x10009F10"
+    },
+    {
+      "site_va": "0x10024DA4",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024DAC",
+      "stored_va": "0x10009F70"
+    },
+    {
+      "site_va": "0x10024DB0",
+      "stored_va": "0x1000BAE0"
+    },
+    {
+      "site_va": "0x10024DB8",
+      "stored_va": "0x10009F70"
+    },
+    {
+      "site_va": "0x10024DBC",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024DC4",
+      "stored_va": "0x10009FD0"
+    },
+    {
+      "site_va": "0x10024DC8",
+      "stored_va": "0x1000BB60"
+    },
+    {
+      "site_va": "0x10024DD0",
+      "stored_va": "0x10009FD0"
+    },
+    {
+      "site_va": "0x10024DD4",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024DDC",
+      "stored_va": "0x1000A110"
+    },
+    {
+      "site_va": "0x10024DE0",
+      "stored_va": "0x1000BCA0"
+    },
+    {
+      "site_va": "0x10024DE8",
+      "stored_va": "0x1000A110"
+    },
+    {
+      "site_va": "0x10024DEC",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024DF4",
+      "stored_va": "0x1000A170"
+    },
+    {
+      "site_va": "0x10024DF8",
+      "stored_va": "0x1000BDE0"
+    },
+    {
+      "site_va": "0x10024E00",
+      "stored_va": "0x1000A170"
+    },
+    {
+      "site_va": "0x10024E04",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024E0C",
+      "stored_va": "0x1000A1D0"
+    },
+    {
+      "site_va": "0x10024E10",
+      "stored_va": "0x1000BF20"
+    },
+    {
+      "site_va": "0x10024E18",
+      "stored_va": "0x1000A1D0"
+    },
+    {
+      "site_va": "0x10024E1C",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024E24",
+      "stored_va": "0x1000A230"
+    },
+    {
+      "site_va": "0x10024E28",
+      "stored_va": "0x1000C060"
+    },
+    {
+      "site_va": "0x10024E30",
+      "stored_va": "0x1000A230"
+    },
+    {
+      "site_va": "0x10024E34",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024E3C",
+      "stored_va": "0x1000A290"
+    },
+    {
+      "site_va": "0x10024E40",
+      "stored_va": "0x1000C1A0"
+    },
+    {
+      "site_va": "0x10024E48",
+      "stored_va": "0x1000A290"
+    },
+    {
+      "site_va": "0x10024E4C",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10024E54",
+      "stored_va": "0x1000A2F0"
+    },
+    {
+      "site_va": "0x10024E58",
+      "stored_va": "0x1000C2E0"
+    },
+    {
+      "site_va": "0x10024E60",
+      "stored_va": "0x1000A2F0"
+    },
+    {
+      "site_va": "0x10024E64",
+      "stored_va": "0x10011541"
+    },
+    {
+      "site_va": "0x10025004",
+      "stored_va": "0x1001B318"
+    },
+    {
+      "site_va": "0x100261E0",
+      "stored_va": "0x1001CF2D"
+    },
+    {
+      "site_va": "0x100261E8",
+      "stored_va": "0x1001CD37"
+    },
+    {
+      "site_va": "0x100261EC",
+      "stored_va": "0x10010258"
+    },
+    {
+      "site_va": "0x100281A8",
+      "stored_va": "0x100101A5"
+    },
+    {
+      "site_va": "0x100281B0",
+      "stored_va": "0x100101A0"
+    },
+    {
+      "site_va": "0x100281E4",
+      "stored_va": "0x100101F2"
+    },
+    {
+      "site_va": "0x10028200",
+      "stored_va": "0x10010523"
+    },
+    {
+      "site_va": "0x10028220",
+      "stored_va": "0x1001066D"
+    },
+    {
+      "site_va": "0x10028240",
+      "stored_va": "0x1001072A"
+    },
+    {
+      "site_va": "0x10028260",
+      "stored_va": "0x10010888"
+    },
+    {
+      "site_va": "0x10028280",
+      "stored_va": "0x10010A0E"
+    },
+    {
+      "site_va": "0x100282A0",
+      "stored_va": "0x10011030"
+    },
+    {
+      "site_va": "0x100282BC",
+      "stored_va": "0x10011190"
+    },
+    {
+      "site_va": "0x100282C0",
+      "stored_va": "0x100111A1"
+    },
+    {
+      "site_va": "0x100282E0",
+      "stored_va": "0x10012DC7"
+    },
+    {
+      "site_va": "0x10028300",
+      "stored_va": "0x10013972"
+    },
+    {
+      "site_va": "0x10028320",
+      "stored_va": "0x10013B39"
+    },
+    {
+      "site_va": "0x10028340",
+      "stored_va": "0x10013D2D"
+    },
+    {
+      "site_va": "0x10028360",
+      "stored_va": "0x10013EEA"
+    },
+    {
+      "site_va": "0x1002836C",
+      "stored_va": "0x10013EB6"
+    },
+    {
+      "site_va": "0x10028388",
+      "stored_va": "0x100144DE"
+    },
+    {
+      "site_va": "0x100283A8",
+      "stored_va": "0x100148B0"
+    },
+    {
+      "site_va": "0x100283C8",
+      "stored_va": "0x10014C34"
+    },
+    {
+      "site_va": "0x100283E8",
+      "stored_va": "0x10014D5F"
+    },
+    {
+      "site_va": "0x100283F4",
+      "stored_va": "0x10014D6E"
+    },
+    {
+      "site_va": "0x10028410",
+      "stored_va": "0x10014F21"
+    },
+    {
+      "site_va": "0x1002841C",
+      "stored_va": "0x10014F2D"
+    },
+    {
+      "site_va": "0x10028438",
+      "stored_va": "0x1001672A"
+    },
+    {
+      "site_va": "0x10028458",
+      "stored_va": "0x10017DA2"
+    },
+    {
+      "site_va": "0x10028474",
+      "stored_va": "0x10017DFE"
+    },
+    {
+      "site_va": "0x10028478",
+      "stored_va": "0x10017E02"
+    },
+    {
+      "site_va": "0x10028494",
+      "stored_va": "0x10017E4E"
+    },
+    {
+      "site_va": "0x10028498",
+      "stored_va": "0x10017E52"
+    },
+    {
+      "site_va": "0x100284B8",
+      "stored_va": "0x10018036"
+    },
+    {
+      "site_va": "0x100284D4",
+      "stored_va": "0x100181AB"
+    },
+    {
+      "site_va": "0x100284D8",
+      "stored_va": "0x100181BE"
+    },
+    {
+      "site_va": "0x100284F8",
+      "stored_va": "0x1001826F"
+    },
+    {
+      "site_va": "0x10028518",
+      "stored_va": "0x10018A86"
+    },
+    {
+      "site_va": "0x10028538",
+      "stored_va": "0x10019198"
+    },
+    {
+      "site_va": "0x10028558",
+      "stored_va": "0x1001935D"
+    },
+    {
+      "site_va": "0x10028564",
+      "stored_va": "0x10019299"
+    },
+    {
+      "site_va": "0x10028580",
+      "stored_va": "0x10019B2C"
+    },
+    {
+      "site_va": "0x100285A0",
+      "stored_va": "0x10019C05"
+    },
+    {
+      "site_va": "0x100285C0",
+      "stored_va": "0x1001A765"
+    },
+    {
+      "site_va": "0x100285DC",
+      "stored_va": "0x10010351"
+    },
+    {
+      "site_va": "0x100285F8",
+      "stored_va": "0x100014A0"
+    },
+    {
+      "site_va": "0x1002860C",
+      "stored_va": "0x10001000"
+    },
+    {
+      "site_va": "0x1002861C",
+      "stored_va": "0x10020840"
+    },
+    {
+      "site_va": "0x10028660",
+      "stored_va": "0x1001CEC8"
+    },
+    {
+      "site_va": "0x10028668",
+      "stored_va": "0x1001CE8A"
+    },
+    {
+      "site_va": "0x1002866C",
+      "stored_va": "0x1001CE94"
+    },
+    {
+      "site_va": "0x10028684",
+      "stored_va": "0x1001CF70"
+    },
+    {
+      "site_va": "0x10028688",
+      "stored_va": "0x1001CF79"
+    },
+    {
+      "site_va": "0x10028698",
+      "stored_va": "0x1001D057"
+    },
+    {
+      "site_va": "0x10028700",
+      "stored_va": "0x1001D18F"
+    },
+    {
+      "site_va": "0x10028708",
+      "stored_va": "0x1001D0FF"
+    },
+    {
+      "site_va": "0x1002870C",
+      "stored_va": "0x1001D108"
+    },
+    {
+      "site_va": "0x10028724",
+      "stored_va": "0x1001D376"
+    },
+    {
+      "site_va": "0x10028728",
+      "stored_va": "0x1001D37A"
+    },
+    {
+      "site_va": "0x10028744",
+      "stored_va": "0x1001D40F"
+    },
+    {
+      "site_va": "0x10028748",
+      "stored_va": "0x1001D413"
+    },
+    {
+      "site_va": "0x10028750",
+      "stored_va": "0x1001CD2C"
+    },
+    {
+      "site_va": "0x10028780",
+      "stored_va": "0x1001D906"
+    },
+    {
+      "site_va": "0x1002879C",
+      "stored_va": "0x1002051F"
+    },
+    {
+      "site_va": "0x100287A0",
+      "stored_va": "0x1002053B"
+    },
+    {
+      "site_va": "0x10029D40",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D44",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D48",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D4C",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D50",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D54",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D58",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D5C",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D60",
+      "stored_va": "0x1001AF2B"
+    },
+    {
+      "site_va": "0x10029D64",
+      "stored_va": "0x1001AF2B"
+    }
+  ],
+  "unique_synthetic_data_target_labels": 712,
+  "assembly_sha256": "2aac5292e5b9ce252d68339c73fd7a45288013c1c955ea852646687f6093823a",
+  "limitations": [
+    "text-target pointers stay at preferred-base values",
+    "the original .text has 3160 additional HIGHLOW relocations not represented here",
+    "section RVAs, function layout, hook shim fixups, CRT tables, and PE image layout are not reconstructed"
+  ]
+}

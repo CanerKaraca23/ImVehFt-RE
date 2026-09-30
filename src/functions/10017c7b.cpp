@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
 extern "C" void* DAT_10029d70;
@@ -25,7 +26,7 @@ extern "C" void __cdecl __mtdeletelocks(void)
 
         puVar1 += 2;
     }
-    while (reinterpret_cast<std::uintptr_t>(puVar1) < 0x10029e90u);
+    while (reinterpret_cast<std::uintptr_t>(puVar1) < IVF_IMAGE_ADDRESS_10029E90);
 
     puVar1 =
         reinterpret_cast<std::uint32_t*>(&DAT_10029d70);
@@ -43,5 +44,5 @@ extern "C" void __cdecl __mtdeletelocks(void)
 
         puVar1 += 2;
     }
-    while (reinterpret_cast<std::uintptr_t>(puVar1) < 0x10029e90u);
+    while (reinterpret_cast<std::uintptr_t>(puVar1) < IVF_IMAGE_ADDRESS_10029E90);
 }

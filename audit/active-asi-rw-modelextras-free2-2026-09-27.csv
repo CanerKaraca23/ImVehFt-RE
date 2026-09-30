@@ -1,0 +1,2 @@
+entry,cfg_instruction_count,body_min,body_max,body_byte_count,decompile_completed,status
+0x100BB9DA,24,100bb9da,100d3869,68,yes,"bounded_cfg_decompilation"

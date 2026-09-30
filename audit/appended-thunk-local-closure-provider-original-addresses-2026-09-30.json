@@ -1,0 +1,229 @@
+{
+  "scope": "Maps only diagnostic provider/runtime-data aliases to original preferred-base addresses using exact crosswalks or generated address-bearing labels, then verifies PE section membership. This does not prove type/lifetime/initialization or apply the fixups.",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "symbol_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-local-closure-symbol-delta-2026-09-30.json",
+  "symbol_report_sha256": "A1D50E9AC26D753FD28FA3357DDF216640A0AB8F4BB5409B9ACF8E5D0001BDB6",
+  "provider_symbol_count": 19,
+  "provider_occurrences": 20,
+  "mapped_symbol_count": 19,
+  "mapped_occurrences": 20,
+  "unmapped_symbol_count": 0,
+  "unmapped_occurrences": 0,
+  "mapped_targets": [
+    {
+      "symbol": "?PTR_LAB_10029d58@@3PAXA",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "current-clean-link-address-alias-provider-20260929.obj",
+      "original_target_va": "0x10029D58",
+      "original_section": ".data",
+      "section_offset": "0x00000D58",
+      "backing": "raw-backed",
+      "resolution_evidence": "exact decorated symbol/address PE alias inventory"
+    },
+    {
+      "symbol": "?PTR_LAB_10029d60@@3PAXA",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "current-clean-link-address-alias-provider-20260929.obj",
+      "original_target_va": "0x10029D60",
+      "original_section": ".data",
+      "section_offset": "0x00000D60",
+      "backing": "raw-backed",
+      "resolution_evidence": "exact decorated symbol/address PE alias inventory"
+    },
+    {
+      "symbol": "?PTR_LAB_10029d64@@3PAXA",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "current-clean-link-address-alias-provider-20260929.obj",
+      "original_target_va": "0x10029D64",
+      "original_section": ".data",
+      "section_offset": "0x00000D64",
+      "backing": "raw-backed",
+      "resolution_evidence": "exact decorated symbol/address PE alias inventory"
+    },
+    {
+      "symbol": "?PTR_s__null__10029c24@@3PB_WB",
+      "occurrences": 2,
+      "relocation_type": "DIR32",
+      "provider_module": "current-clean-link-address-alias-provider-20260929.obj",
+      "original_target_va": "0x10029C24",
+      "original_section": ".data",
+      "section_offset": "0x00000C24",
+      "backing": "raw-backed",
+      "resolution_evidence": "exact decorated symbol/address PE alias inventory"
+    },
+    {
+      "symbol": "?PTR_u__null__10029c28@@3PB_WB",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "current-clean-link-address-alias-provider-20260929.obj",
+      "original_target_va": "0x10029C28",
+      "original_section": ".data",
+      "section_offset": "0x00000C28",
+      "backing": "raw-backed",
+      "resolution_evidence": "exact decorated symbol/address PE alias inventory"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_100249A8",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x100249A8",
+      "original_section": ".rdata",
+      "section_offset": "0x000029A8",
+      "backing": "raw-backed",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_10029490",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x10029490",
+      "original_section": ".data",
+      "section_offset": "0x00000490",
+      "backing": "raw-backed",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003A6C8",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003A6C8",
+      "original_section": ".data",
+      "section_offset": "0x000116C8",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003A8C8",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003A8C8",
+      "original_section": ".data",
+      "section_offset": "0x000118C8",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003AAC8",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003AAC8",
+      "original_section": ".data",
+      "section_offset": "0x00011AC8",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003BBB4",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003BBB4",
+      "original_section": ".data",
+      "section_offset": "0x00012BB4",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003BC08",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003BC08",
+      "original_section": ".data",
+      "section_offset": "0x00012C08",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003BC1C",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003BC1C",
+      "original_section": ".data",
+      "section_offset": "0x00012C1C",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003BC7C",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003BC7C",
+      "original_section": ".data",
+      "section_offset": "0x00012C7C",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003BC80",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003BC80",
+      "original_section": ".data",
+      "section_offset": "0x00012C80",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003BD8C",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003BD8C",
+      "original_section": ".data",
+      "section_offset": "0x00012D8C",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003C1F4",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003C1F4",
+      "original_section": ".data",
+      "section_offset": "0x000131F4",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003C1F8",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003C1F8",
+      "original_section": ".data",
+      "section_offset": "0x000131F8",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    },
+    {
+      "symbol": "_IVF_RELOC_TARGET_1003C208",
+      "occurrences": 1,
+      "relocation_type": "DIR32",
+      "provider_module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj",
+      "original_target_va": "0x1003C208",
+      "original_section": ".data",
+      "section_offset": "0x00013208",
+      "backing": "virtual-only",
+      "resolution_evidence": "original preferred-base target encoded in generated relocation alias"
+    }
+  ],
+  "unmapped": [],
+  "limitations": [
+    "Mapped target addresses are not validated for C/C++ type, object lifetime, initializer order, or semantic suitability.",
+    "Virtual-only original data requires correct PE zero-fill and startup behavior.",
+    "No COFF relocation was patched and no production PE/ASI or game was tested."
+  ]
+}

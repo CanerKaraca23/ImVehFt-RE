@@ -1,0 +1,1456 @@
+{
+  "input": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\modloader\\My Scripts\\.ImVehFt\\ImVehFt.asi",
+  "file_size": 247296,
+  "image_base": "0x10000000",
+  "size_of_image": "0x43000",
+  "relocation_directory_rva": "0x3F000",
+  "relocation_directory_size": "0x2628",
+  "relocation_entry_count_including_padding": 4708,
+  "relocation_counts_by_section_and_type": [
+    {
+      "section": ".data",
+      "type": 0,
+      "count": 2
+    },
+    {
+      "section": ".data",
+      "type": 3,
+      "count": 274
+    },
+    {
+      "section": ".rdata",
+      "type": 0,
+      "count": 5
+    },
+    {
+      "section": ".rdata",
+      "type": 3,
+      "count": 1247
+    },
+    {
+      "section": ".text",
+      "type": 0,
+      "count": 20
+    },
+    {
+      "section": ".text",
+      "type": 3,
+      "count": 3160
+    }
+  ],
+  "highlow_values_pointing_inside_image_by_section": {
+    ".data": 274,
+    ".rdata": 1247,
+    ".text": 3160
+  },
+  "data_highlow_relocations": [
+    {
+      "site_va": "0x10029000",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029020",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029040",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100291D0",
+      "stored_va": "0x1003C540",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100291D8",
+      "stored_va": "0x1003C540",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100298C8",
+      "stored_va": "0x100294A0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299C8",
+      "stored_va": "0x10022620",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299CC",
+      "stored_va": "0x1002261C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299D0",
+      "stored_va": "0x10022618",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299D4",
+      "stored_va": "0x10022614",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299D8",
+      "stored_va": "0x10022610",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299DC",
+      "stored_va": "0x1002260C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299E0",
+      "stored_va": "0x10022608",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299E4",
+      "stored_va": "0x10022600",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299E8",
+      "stored_va": "0x100225F8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299EC",
+      "stored_va": "0x100225F0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299F0",
+      "stored_va": "0x100225E4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299F4",
+      "stored_va": "0x100225D8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299F8",
+      "stored_va": "0x100225D0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100299FC",
+      "stored_va": "0x100225C4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A00",
+      "stored_va": "0x100225C0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A04",
+      "stored_va": "0x100225BC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A08",
+      "stored_va": "0x100225B8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A0C",
+      "stored_va": "0x100225B4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A10",
+      "stored_va": "0x100225B0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A14",
+      "stored_va": "0x100225AC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A18",
+      "stored_va": "0x100225A8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A1C",
+      "stored_va": "0x100225A4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A20",
+      "stored_va": "0x100225A0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A24",
+      "stored_va": "0x1002259C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A28",
+      "stored_va": "0x10022598",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A2C",
+      "stored_va": "0x10022594",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A30",
+      "stored_va": "0x1002258C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A34",
+      "stored_va": "0x10022580",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A38",
+      "stored_va": "0x10022578",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A3C",
+      "stored_va": "0x10022570",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A40",
+      "stored_va": "0x100225B0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A44",
+      "stored_va": "0x10022568",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A48",
+      "stored_va": "0x10022560",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A4C",
+      "stored_va": "0x10022558",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A50",
+      "stored_va": "0x1002254C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A54",
+      "stored_va": "0x10022544",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A58",
+      "stored_va": "0x10022538",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A5C",
+      "stored_va": "0x1002252C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A60",
+      "stored_va": "0x10022528",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A64",
+      "stored_va": "0x10022524",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A68",
+      "stored_va": "0x10022518",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A6C",
+      "stored_va": "0x10022504",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A70",
+      "stored_va": "0x100224F8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A80",
+      "stored_va": "0x100224F0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A84",
+      "stored_va": "0x100224E8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A88",
+      "stored_va": "0x100224E0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A8C",
+      "stored_va": "0x100224D8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A90",
+      "stored_va": "0x100224D0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A94",
+      "stored_va": "0x100224C8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A98",
+      "stored_va": "0x100224C0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029A9C",
+      "stored_va": "0x100224B0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AA0",
+      "stored_va": "0x100224A0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AA4",
+      "stored_va": "0x10022490",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AA8",
+      "stored_va": "0x1002247C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AAC",
+      "stored_va": "0x10022468",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AB0",
+      "stored_va": "0x10022458",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AB4",
+      "stored_va": "0x10022444",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AB8",
+      "stored_va": "0x1002243C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029ABC",
+      "stored_va": "0x10022434",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AC0",
+      "stored_va": "0x1002242C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AC4",
+      "stored_va": "0x10022424",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AC8",
+      "stored_va": "0x1002241C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029ACC",
+      "stored_va": "0x10022414",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AD0",
+      "stored_va": "0x1002240C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AD4",
+      "stored_va": "0x10022404",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AD8",
+      "stored_va": "0x100223FC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029ADC",
+      "stored_va": "0x100223F4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AE0",
+      "stored_va": "0x100223EC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AE4",
+      "stored_va": "0x100223E4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AE8",
+      "stored_va": "0x100223D4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AEC",
+      "stored_va": "0x100223C0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AF0",
+      "stored_va": "0x100223B4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AF4",
+      "stored_va": "0x100223A8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AF8",
+      "stored_va": "0x1002241C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029AFC",
+      "stored_va": "0x1002239C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B00",
+      "stored_va": "0x10022390",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B04",
+      "stored_va": "0x10022380",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B08",
+      "stored_va": "0x1002236C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B0C",
+      "stored_va": "0x1002235C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B10",
+      "stored_va": "0x10022348",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B14",
+      "stored_va": "0x10022334",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B18",
+      "stored_va": "0x1002232C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B1C",
+      "stored_va": "0x10022324",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B20",
+      "stored_va": "0x10022310",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B24",
+      "stored_va": "0x100222E8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B28",
+      "stored_va": "0x100222D4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B88",
+      "stored_va": "0x100299C4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029B98",
+      "stored_va": "0x100299C4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029BA8",
+      "stored_va": "0x100299C4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029BB8",
+      "stored_va": "0x100299C4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029BC8",
+      "stored_va": "0x100299C4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029BEC",
+      "stored_va": "0x10029EA8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029BF8",
+      "stored_va": "0x10023A28",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029BFC",
+      "stored_va": "0x10023EB0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029C00",
+      "stored_va": "0x10024030",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029C04",
+      "stored_va": "0x100299C8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029C08",
+      "stored_va": "0x10029B30",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029C20",
+      "stored_va": "0x10023C2C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029C24",
+      "stored_va": "0x10022704",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029C28",
+      "stored_va": "0x100226F4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D40",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D44",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D48",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D4C",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D50",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D54",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D58",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D5C",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D60",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029D64",
+      "stored_va": "0x1001AF2B",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EA8",
+      "stored_va": "0x10029EA0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EAC",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EB0",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EB4",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EB8",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EBC",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EC0",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EC4",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EC8",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029ECC",
+      "stored_va": "0x1003A374",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029ED8",
+      "stored_va": "0x10029EA4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EDC",
+      "stored_va": "0x1003A378",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EE0",
+      "stored_va": "0x1003A378",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EE4",
+      "stored_va": "0x1003A378",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EE8",
+      "stored_va": "0x1003A378",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EEC",
+      "stored_va": "0x1003A378",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EF0",
+      "stored_va": "0x1003A378",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EF4",
+      "stored_va": "0x1003A378",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EF8",
+      "stored_va": "0x10029EA8",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029EFC",
+      "stored_va": "0x10023A28",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029F00",
+      "stored_va": "0x10023C2A",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029F14",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10029F30",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037588",
+      "stored_va": "0x1002438C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003758C",
+      "stored_va": "0x10024388",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100375A0",
+      "stored_va": "0x10024C8C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100375D8",
+      "stored_va": "0x10024CA4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037610",
+      "stored_va": "0x10024CBC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037648",
+      "stored_va": "0x10024CD4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037680",
+      "stored_va": "0x10024CEC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100376B8",
+      "stored_va": "0x10024D04",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100376F0",
+      "stored_va": "0x10024D1C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037728",
+      "stored_va": "0x10024D34",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037760",
+      "stored_va": "0x10024D4C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037798",
+      "stored_va": "0x10024D64",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100377D0",
+      "stored_va": "0x10024D7C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037808",
+      "stored_va": "0x10024D94",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037840",
+      "stored_va": "0x10024DAC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037878",
+      "stored_va": "0x10024DC4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100378B0",
+      "stored_va": "0x10024DDC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100378E8",
+      "stored_va": "0x10024DF4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037920",
+      "stored_va": "0x10024E0C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037958",
+      "stored_va": "0x10024E24",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037990",
+      "stored_va": "0x10024E3C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100379C8",
+      "stored_va": "0x10024E54",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037A00",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037A2C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037A4C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037A84",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037AC8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037B40",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037BD0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037C00",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037C78",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037D0C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037D40",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037DB8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037E4C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037E80",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037EF8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037F8C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037FBC",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10037FE8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038014",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038034",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038070",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100380B0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038128",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100381BC",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100381EC",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038210",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038268",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100382D8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038308",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038370",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100383F8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038428",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038490",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038518",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038548",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100385B0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038638",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038668",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100386D0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038758",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038788",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100387F0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038878",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100388A8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038910",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038998",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100389C4",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100389EC",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038A08",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038A40",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038AA8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038B2C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038B58",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038BC0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038C48",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038C78",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038CE8",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038D74",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038DB0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038E18",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038EA0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038ED0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038F38",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038FC0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10038FF0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039058",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100390E0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039110",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039178",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039200",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003922C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039254",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039280",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003929C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100392D0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039350",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100393F0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039440",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003946C",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039490",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100394CC",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100394F0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039544",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100395A0",
+      "stored_va": "0x10022248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100395F4",
+      "stored_va": "0x100262E4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100395FC",
+      "stored_va": "0x100262E0",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039604",
+      "stored_va": "0x100262DC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003960C",
+      "stored_va": "0x100262D4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039614",
+      "stored_va": "0x100262CC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003961C",
+      "stored_va": "0x100262C4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039624",
+      "stored_va": "0x100262BC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003962C",
+      "stored_va": "0x100262B4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039634",
+      "stored_va": "0x100262AC",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003963C",
+      "stored_va": "0x100262A4",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039644",
+      "stored_va": "0x1002629C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003964C",
+      "stored_va": "0x10026294",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039654",
+      "stored_va": "0x10026290",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003965C",
+      "stored_va": "0x1002628C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039664",
+      "stored_va": "0x10026288",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003966C",
+      "stored_va": "0x10026280",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039674",
+      "stored_va": "0x10026278",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003967C",
+      "stored_va": "0x10026270",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039684",
+      "stored_va": "0x10026268",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003968C",
+      "stored_va": "0x10026260",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x10039694",
+      "stored_va": "0x10026258",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x1003969C",
+      "stored_va": "0x10026250",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100396A4",
+      "stored_va": "0x10026248",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100396AC",
+      "stored_va": "0x10026240",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100396B4",
+      "stored_va": "0x1002623C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100396BC",
+      "stored_va": "0x10026238",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100396C4",
+      "stored_va": "0x10026234",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100396CC",
+      "stored_va": "0x1002622C",
+      "stored_value_points_inside_image": "true"
+    },
+    {
+      "site_va": "0x100396D4",
+      "stored_va": "0x10026220",
+      "stored_value_points_inside_image": "true"
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "rva": "0x00001000",
+      "virtual_size": "0x2027B",
+      "raw_size": "0x20400",
+      "zero_fill_tail": "0x0"
+    },
+    {
+      "name": ".rdata",
+      "rva": "0x00022000",
+      "virtual_size": "0x6F44",
+      "raw_size": "0x7000",
+      "zero_fill_tail": "0x0"
+    },
+    {
+      "name": ".data",
+      "rva": "0x00029000",
+      "virtual_size": "0x1455C",
+      "raw_size": "0x10A00",
+      "zero_fill_tail": "0x3B5C"
+    },
+    {
+      "name": ".rsrc",
+      "rva": "0x0003E000",
+      "virtual_size": "0x2B8",
+      "raw_size": "0x400",
+      "zero_fill_tail": "0x0"
+    },
+    {
+      "name": ".reloc",
+      "rva": "0x0003F000",
+      "virtual_size": "0x3F44",
+      "raw_size": "0x4000",
+      "zero_fill_tail": "0x0"
+    }
+  ],
+  "scope_limit": "PE relocation-table inventory only; does not verify a rebuilt image or loader behavior."
+}

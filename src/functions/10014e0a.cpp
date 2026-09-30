@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <corecrt.h>
@@ -10,14 +11,17 @@ extern "C" void __stdcall FUN_10014f30(void);
 #include <cstddef>
 #include <cstdint>
 
+using LONG = long;
+
+extern "C" LONG __stdcall InterlockedDecrement(volatile LONG*);
+extern "C" LONG* __cdecl ___removelocaleref(LONG*);
+
 extern "C" void __cdecl __SEH_prolog4(std::uint32_t, int);
 extern "C" void __stdcall __SEH_epilog4(void);
 
-void __stdcall __freefls_4(void* param_1)
+extern "C" void __stdcall __freefls_4(void* param_1)
 {
-    __SEH_prolog4(0x100283f8u, 0x08);
-
-    using LONG = long;
+    __SEH_prolog4(IVF_IMAGE_ADDRESS_100283F8, 0x08);
 
     struct __freefls_data
     {
@@ -52,13 +56,9 @@ void __stdcall __freefls_4(void* param_1)
 
     extern void __cdecl _free(void*);
     extern void __cdecl __lock(int);
-    extern LONG __stdcall InterlockedDecrement(LONG*);
-    extern LONG* __cdecl ___removelocaleref(LONG*);
     extern void __cdecl ___freetlocinfo(void*);
 
     extern unsigned char DAT_10022770;
-    extern LONG DAT_100294a0;
-    extern LONG* PTR_DAT_10029c08;
     extern LONG DAT_10029b30;
 
     if (param_1 != nullptr)
@@ -88,7 +88,8 @@ void __stdcall __freefls_4(void* param_1)
         if (pLVar1 != nullptr)
         {
             LONG LVar2 = InterlockedDecrement(pLVar1);
-            if ((LVar2 == 0) && (pLVar1 != &DAT_100294a0))
+            if ((LVar2 == 0) &&
+                (pLVar1 != reinterpret_cast<LONG*>(IVF_IMAGE_ADDRESS_100294A0)))
                 _free(pLVar1);
         }
 
@@ -100,7 +101,7 @@ void __stdcall __freefls_4(void* param_1)
         if (pLVar1 != nullptr)
         {
             ___removelocaleref(pLVar1);
-            if ((pLVar1 != PTR_DAT_10029c08) &&
+            if ((pLVar1 != *reinterpret_cast<LONG**>(IVF_IMAGE_ADDRESS_10029C08)) &&
                 (pLVar1 != &DAT_10029b30) &&
                 (*pLVar1 == 0))
             {

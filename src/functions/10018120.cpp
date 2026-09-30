@@ -1,6 +1,7 @@
+#include "imvehft_image_aliases.hpp"
 #include <Windows.h>
+#include "gta_sa_address_access.hpp"
 
-extern "C" PVOID ExceptionList;
 extern "C" BOOL __cdecl __ValidateImageBase(PBYTE pImageBase);
 extern "C" PIMAGE_SECTION_HEADER __cdecl __FindPESection(
     PBYTE pImageBase,
@@ -10,11 +11,11 @@ extern "C" void __cdecl __except_handler4();
 extern "C" BOOL __cdecl __IsNonwritableInCurrentImage(PBYTE pTarget)
 {
     void* pcStack_10 = reinterpret_cast<void*>(&__except_handler4);
-    void* local_14 = ExceptionList;
+    void* local_14 = IMVEHFT_READ_EXCEPTION_LIST();
     unsigned int local_c =
-        *reinterpret_cast<unsigned int*>(0x10029490) ^ 0x100284c0u;
+        *reinterpret_cast<unsigned int*>(IVF_IMAGE_ADDRESS_10029490) ^ IVF_IMAGE_ADDRESS_100284C0;
 
-    ExceptionList = &local_14;
+    IMVEHFT_WRITE_EXCEPTION_LIST(&local_14);
 
     unsigned int local_8 = 0;
 
@@ -34,12 +35,12 @@ extern "C" BOOL __cdecl __IsNonwritableInCurrentImage(PBYTE pTarget)
 
         if (section != nullptr)
         {
-            ExceptionList = local_14;
+            IMVEHFT_WRITE_EXCEPTION_LIST(local_14);
             return static_cast<BOOL>(
                 ~(section->Characteristics >> 0x1f) & 1u);
         }
     }
 
-    ExceptionList = local_14;
+    IMVEHFT_WRITE_EXCEPTION_LIST(local_14);
     return 0;
 }

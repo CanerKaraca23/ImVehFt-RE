@@ -22,20 +22,16 @@ static_assert(offsetof(_strflt, decpt) == 4);
 static_assert(offsetof(_strflt, mantissa) == 0x0c);
 static_assert(sizeof(_strflt) == 0x10);
 
-struct Cftof2Thiscall
-{
-    std::uint32_t __thiscall __cftof2_l(
-        std::uint32_t, std::size_t, char, localeinfo_struct*);
-};
+extern "C" std::uint32_t __cdecl __cftof2_l();
 
 extern "C" std::uint32_t DAT_10029490;
 extern "C" int* __cdecl FUN_1001dd12(
     std::uint32_t, std::uint32_t, int*, char*, std::size_t);
-extern "C" int __cdecl __fptostr(char*, std::size_t, int, _strflt*);
+int __cdecl __fptostr(char*, std::size_t, int, _strflt*);
 extern "C" int __cdecl FUN_1001bc9e(
     std::uint32_t, int, int, int*, char, localeinfo_struct*);
 
-void __cdecl __cftog_l(
+extern "C" void __cdecl __cftog_l(
     undefined4* param_1,
     undefined1* param_2,
     uint param_3,
@@ -119,11 +115,16 @@ void __cdecl __cftog_l(
                     pcVar5[-1] = '\0';
                 }
 
-                reinterpret_cast<Cftof2Thiscall*>(param_2)->__cftof2_l(
-                    param_3,
-                    param_4,
-                    '\x01',
-                    param_6);
+                __asm {
+                    push param_6
+                    lea eax, local_30
+                    push 1
+                    push param_4
+                    mov ecx, param_2
+                    push param_3
+                    call __cftof2_l
+                    add esp, 10h
+                }
             }
         }
         else

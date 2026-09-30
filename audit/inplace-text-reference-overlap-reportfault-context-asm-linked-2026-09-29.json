@@ -1,0 +1,17 @@
+{
+  "scope": "Exact-byte overlap of Ghidra-recorded non-entry .text reference destinations with heuristic moved-body intervals.",
+  "packing_report": "audit\\inplace-text-packing-reportfault-context-asm-linked-2026-09-29.json",
+  "ghidra_xrefs": "audit\\entry-thunk-slot-ghidra-xrefs-2026-09-28.csv",
+  "ghidra_nonentry_reference_records": 2346,
+  "unique_reference_target_bytes": 693,
+  "heuristic_moved_body_count": 145,
+  "overlapping_unique_target_bytes": 0,
+  "overlapping_reference_records": 0,
+  "covering_candidate_entries_with_overlap_records": 0,
+  "overlaps": [],
+  "limitations": [
+    "A destination-byte overlap is a conservative warning; it does not decide whether the original target is code, data, or safely redirectable.",
+    "Only exact recorded reference destination bytes are checked; referenced instruction/data extents and undiscovered/indirect references are not included.",
+    "No bytes, relocation fields, or project state are modified."
+  ]
+}

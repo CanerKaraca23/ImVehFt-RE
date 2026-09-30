@@ -1,0 +1,1162 @@
+{
+  "scope": "mechanical replacement of code-token literals in original .data/.rdata with address-preserving external aliases; review and tests required",
+  "inventory": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\candidate-internal-image-address-literals-v2-2026-09-27.csv",
+  "unique_alias_addresses": 120,
+  "inventory_occurrences": 147,
+  "replaced_occurrences": 147,
+  "changed_files": 52,
+  "counts_by_address": {
+    "0x10022068": 1,
+    "0x10022210": 1,
+    "0x1002221C": 2,
+    "0x10022228": 4,
+    "0x10022248": 1,
+    "0x10022250": 3,
+    "0x10022268": 1,
+    "0x100243A8": 1,
+    "0x100243B0": 1,
+    "0x100243F0": 1,
+    "0x10024408": 1,
+    "0x10024884": 1,
+    "0x1002488C": 1,
+    "0x10024894": 1,
+    "0x1002489C": 1,
+    "0x100248A4": 1,
+    "0x100248AC": 1,
+    "0x100249A8": 1,
+    "0x10024C80": 2,
+    "0x10024C98": 1,
+    "0x10024CE0": 1,
+    "0x10024DB8": 1,
+    "0x10024DE8": 1,
+    "0x10024E00": 1,
+    "0x10024E48": 1,
+    "0x10024E60": 1,
+    "0x100261E0": 1,
+    "0x100261E8": 1,
+    "0x10028308": 1,
+    "0x10028370": 1,
+    "0x10028390": 1,
+    "0x100283D0": 1,
+    "0x100283F8": 1,
+    "0x100284C0": 1,
+    "0x1002874C": 1,
+    "0x100291CF": 1,
+    "0x10029431": 1,
+    "0x10029490": 2,
+    "0x100294A0": 1,
+    "0x100299C4": 3,
+    "0x100299C8": 1,
+    "0x10029C08": 1,
+    "0x10029C0C": 1,
+    "0x10029C10": 1,
+    "0x10029E90": 2,
+    "0x10029E94": 2,
+    "0x10029E98": 2,
+    "0x10029E9C": 2,
+    "0x10029EA8": 1,
+    "0x10029EB4": 1,
+    "0x10029EB8": 1,
+    "0x10029EBC": 1,
+    "0x10029EC0": 1,
+    "0x10029EC4": 1,
+    "0x10029EC8": 1,
+    "0x10029ECC": 1,
+    "0x10029EE0": 1,
+    "0x10029EE4": 1,
+    "0x10029EE8": 1,
+    "0x10029EEC": 1,
+    "0x10029EF0": 1,
+    "0x10029EF4": 1,
+    "0x10037648": 3,
+    "0x10037660": 1,
+    "0x10037664": 1,
+    "0x10037668": 1,
+    "0x10037670": 2,
+    "0x10037674": 2,
+    "0x10037678": 2,
+    "0x100376F0": 3,
+    "0x10037718": 1,
+    "0x1003771C": 1,
+    "0x10037720": 1,
+    "0x100399F0": 1,
+    "0x10039A74": 1,
+    "0x10039A78": 1,
+    "0x10039A7C": 1,
+    "0x10039A80": 1,
+    "0x1003A6C8": 1,
+    "0x1003A8C8": 1,
+    "0x1003AAC8": 1,
+    "0x1003BBB4": 1,
+    "0x1003BC08": 1,
+    "0x1003BC1C": 1,
+    "0x1003BC7C": 1,
+    "0x1003BC80": 1,
+    "0x1003BD8C": 1,
+    "0x1003C1F4": 1,
+    "0x1003C1F8": 1,
+    "0x1003C208": 1,
+    "0x1003C328": 2,
+    "0x1003C32C": 1,
+    "0x1003C330": 1,
+    "0x1003C334": 1,
+    "0x1003C338": 1,
+    "0x1003C33C": 1,
+    "0x1003C340": 1,
+    "0x1003C344": 1,
+    "0x1003C348": 1,
+    "0x1003C34C": 1,
+    "0x1003C350": 1,
+    "0x1003C354": 1,
+    "0x1003C358": 1,
+    "0x1003C35C": 1,
+    "0x1003C360": 1,
+    "0x1003C364": 1,
+    "0x1003C368": 1,
+    "0x1003C36C": 1,
+    "0x1003C370": 1,
+    "0x1003C374": 1,
+    "0x1003C37C": 1,
+    "0x1003C380": 1,
+    "0x1003C384": 1,
+    "0x1003C39C": 1,
+    "0x1003C3A4": 1,
+    "0x1003C3B0": 6,
+    "0x1003C3F4": 1,
+    "0x1003C3F6": 1,
+    "0x1003C3F8": 1,
+    "0x1003C3F9": 1
+  },
+  "changes": [
+    {
+      "address": "0x10024884",
+      "macro": "IVF_IMAGE_ADDRESS_10024884",
+      "source": "src/functions/10004430.cpp",
+      "line": 83,
+      "literal": "0x10024884"
+    },
+    {
+      "address": "0x1002488C",
+      "macro": "IVF_IMAGE_ADDRESS_1002488C",
+      "source": "src/functions/10004430.cpp",
+      "line": 125,
+      "literal": "0x1002488c"
+    },
+    {
+      "address": "0x10024894",
+      "macro": "IVF_IMAGE_ADDRESS_10024894",
+      "source": "src/functions/10004430.cpp",
+      "line": 167,
+      "literal": "0x10024894"
+    },
+    {
+      "address": "0x1002489C",
+      "macro": "IVF_IMAGE_ADDRESS_1002489C",
+      "source": "src/functions/10004430.cpp",
+      "line": 209,
+      "literal": "0x1002489c"
+    },
+    {
+      "address": "0x100248A4",
+      "macro": "IVF_IMAGE_ADDRESS_100248A4",
+      "source": "src/functions/10004430.cpp",
+      "line": 251,
+      "literal": "0x100248a4"
+    },
+    {
+      "address": "0x100248AC",
+      "macro": "IVF_IMAGE_ADDRESS_100248AC",
+      "source": "src/functions/10004430.cpp",
+      "line": 295,
+      "literal": "0x100248ac"
+    },
+    {
+      "address": "0x1003C1F4",
+      "macro": "IVF_IMAGE_ADDRESS_1003C1F4",
+      "source": "src/functions/10008140.cpp",
+      "line": 49,
+      "literal": "0x1003c1f4"
+    },
+    {
+      "address": "0x1003A6C8",
+      "macro": "IVF_IMAGE_ADDRESS_1003A6C8",
+      "source": "src/functions/10008140.cpp",
+      "line": 50,
+      "literal": "0x1003a6c8"
+    },
+    {
+      "address": "0x1003A8C8",
+      "macro": "IVF_IMAGE_ADDRESS_1003A8C8",
+      "source": "src/functions/10008140.cpp",
+      "line": 51,
+      "literal": "0x1003a8c8"
+    },
+    {
+      "address": "0x1003BC80",
+      "macro": "IVF_IMAGE_ADDRESS_1003BC80",
+      "source": "src/functions/10008140.cpp",
+      "line": 52,
+      "literal": "0x1003bc80"
+    },
+    {
+      "address": "0x1003AAC8",
+      "macro": "IVF_IMAGE_ADDRESS_1003AAC8",
+      "source": "src/functions/10008140.cpp",
+      "line": 53,
+      "literal": "0x1003aac8"
+    },
+    {
+      "address": "0x1003C208",
+      "macro": "IVF_IMAGE_ADDRESS_1003C208",
+      "source": "src/functions/10008140.cpp",
+      "line": 54,
+      "literal": "0x1003c208"
+    },
+    {
+      "address": "0x1003BBB4",
+      "macro": "IVF_IMAGE_ADDRESS_1003BBB4",
+      "source": "src/functions/10008140.cpp",
+      "line": 55,
+      "literal": "0x1003bbb4"
+    },
+    {
+      "address": "0x1003BC7C",
+      "macro": "IVF_IMAGE_ADDRESS_1003BC7C",
+      "source": "src/functions/10008140.cpp",
+      "line": 56,
+      "literal": "0x1003bc7c"
+    },
+    {
+      "address": "0x1003BC1C",
+      "macro": "IVF_IMAGE_ADDRESS_1003BC1C",
+      "source": "src/functions/10008140.cpp",
+      "line": 57,
+      "literal": "0x1003bc1c"
+    },
+    {
+      "address": "0x1003BC08",
+      "macro": "IVF_IMAGE_ADDRESS_1003BC08",
+      "source": "src/functions/10008140.cpp",
+      "line": 58,
+      "literal": "0x1003bc08"
+    },
+    {
+      "address": "0x1003BD8C",
+      "macro": "IVF_IMAGE_ADDRESS_1003BD8C",
+      "source": "src/functions/10008140.cpp",
+      "line": 59,
+      "literal": "0x1003bd8c"
+    },
+    {
+      "address": "0x1003C1F8",
+      "macro": "IVF_IMAGE_ADDRESS_1003C1F8",
+      "source": "src/functions/10008140.cpp",
+      "line": 60,
+      "literal": "0x1003c1f8"
+    },
+    {
+      "address": "0x100249A8",
+      "macro": "IVF_IMAGE_ADDRESS_100249A8",
+      "source": "src/functions/10008140.cpp",
+      "line": 62,
+      "literal": "0x100249a8"
+    },
+    {
+      "address": "0x1003C3F4",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3F4",
+      "source": "src/functions/10009120.cpp",
+      "line": 13,
+      "literal": "0x1003c3f4"
+    },
+    {
+      "address": "0x1003C3F6",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3F6",
+      "source": "src/functions/10009120.cpp",
+      "line": 15,
+      "literal": "0x1003c3f6"
+    },
+    {
+      "address": "0x1003C3F8",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3F8",
+      "source": "src/functions/10009120.cpp",
+      "line": 17,
+      "literal": "0x1003c3f8"
+    },
+    {
+      "address": "0x1003C3F9",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3F9",
+      "source": "src/functions/10009120.cpp",
+      "line": 19,
+      "literal": "0x1003c3f9"
+    },
+    {
+      "address": "0x10024C98",
+      "macro": "IVF_IMAGE_ADDRESS_10024C98",
+      "source": "src/functions/10009af0.cpp",
+      "line": 13,
+      "literal": "0x10024c98"
+    },
+    {
+      "address": "0x10024DB8",
+      "macro": "IVF_IMAGE_ADDRESS_10024DB8",
+      "source": "src/functions/10009f70.cpp",
+      "line": 28,
+      "literal": "0x10024db8"
+    },
+    {
+      "address": "0x10024C80",
+      "macro": "IVF_IMAGE_ADDRESS_10024C80",
+      "source": "src/functions/1000a030.cpp",
+      "line": 27,
+      "literal": "0x10024c80"
+    },
+    {
+      "address": "0x1003C32C",
+      "macro": "IVF_IMAGE_ADDRESS_1003C32C",
+      "source": "src/functions/1000a090.cpp",
+      "line": 4,
+      "literal": "0x1003c32c"
+    },
+    {
+      "address": "0x1003C330",
+      "macro": "IVF_IMAGE_ADDRESS_1003C330",
+      "source": "src/functions/1000a090.cpp",
+      "line": 5,
+      "literal": "0x1003c330"
+    },
+    {
+      "address": "0x1003C334",
+      "macro": "IVF_IMAGE_ADDRESS_1003C334",
+      "source": "src/functions/1000a090.cpp",
+      "line": 6,
+      "literal": "0x1003c334"
+    },
+    {
+      "address": "0x1003C338",
+      "macro": "IVF_IMAGE_ADDRESS_1003C338",
+      "source": "src/functions/1000a090.cpp",
+      "line": 7,
+      "literal": "0x1003c338"
+    },
+    {
+      "address": "0x1003C33C",
+      "macro": "IVF_IMAGE_ADDRESS_1003C33C",
+      "source": "src/functions/1000a090.cpp",
+      "line": 8,
+      "literal": "0x1003c33c"
+    },
+    {
+      "address": "0x1003C340",
+      "macro": "IVF_IMAGE_ADDRESS_1003C340",
+      "source": "src/functions/1000a090.cpp",
+      "line": 9,
+      "literal": "0x1003c340"
+    },
+    {
+      "address": "0x1003C344",
+      "macro": "IVF_IMAGE_ADDRESS_1003C344",
+      "source": "src/functions/1000a090.cpp",
+      "line": 10,
+      "literal": "0x1003c344"
+    },
+    {
+      "address": "0x1003C348",
+      "macro": "IVF_IMAGE_ADDRESS_1003C348",
+      "source": "src/functions/1000a090.cpp",
+      "line": 11,
+      "literal": "0x1003c348"
+    },
+    {
+      "address": "0x1003C34C",
+      "macro": "IVF_IMAGE_ADDRESS_1003C34C",
+      "source": "src/functions/1000a090.cpp",
+      "line": 12,
+      "literal": "0x1003c34c"
+    },
+    {
+      "address": "0x1003C350",
+      "macro": "IVF_IMAGE_ADDRESS_1003C350",
+      "source": "src/functions/1000a090.cpp",
+      "line": 13,
+      "literal": "0x1003c350"
+    },
+    {
+      "address": "0x1003C354",
+      "macro": "IVF_IMAGE_ADDRESS_1003C354",
+      "source": "src/functions/1000a090.cpp",
+      "line": 14,
+      "literal": "0x1003c354"
+    },
+    {
+      "address": "0x1003C358",
+      "macro": "IVF_IMAGE_ADDRESS_1003C358",
+      "source": "src/functions/1000a090.cpp",
+      "line": 15,
+      "literal": "0x1003c358"
+    },
+    {
+      "address": "0x1003C35C",
+      "macro": "IVF_IMAGE_ADDRESS_1003C35C",
+      "source": "src/functions/1000a090.cpp",
+      "line": 16,
+      "literal": "0x1003c35c"
+    },
+    {
+      "address": "0x1003C360",
+      "macro": "IVF_IMAGE_ADDRESS_1003C360",
+      "source": "src/functions/1000a090.cpp",
+      "line": 17,
+      "literal": "0x1003c360"
+    },
+    {
+      "address": "0x1003C364",
+      "macro": "IVF_IMAGE_ADDRESS_1003C364",
+      "source": "src/functions/1000a090.cpp",
+      "line": 18,
+      "literal": "0x1003c364"
+    },
+    {
+      "address": "0x1003C368",
+      "macro": "IVF_IMAGE_ADDRESS_1003C368",
+      "source": "src/functions/1000a090.cpp",
+      "line": 19,
+      "literal": "0x1003c368"
+    },
+    {
+      "address": "0x1003C36C",
+      "macro": "IVF_IMAGE_ADDRESS_1003C36C",
+      "source": "src/functions/1000a090.cpp",
+      "line": 20,
+      "literal": "0x1003c36c"
+    },
+    {
+      "address": "0x1003C370",
+      "macro": "IVF_IMAGE_ADDRESS_1003C370",
+      "source": "src/functions/1000a090.cpp",
+      "line": 21,
+      "literal": "0x1003c370"
+    },
+    {
+      "address": "0x1003C374",
+      "macro": "IVF_IMAGE_ADDRESS_1003C374",
+      "source": "src/functions/1000a090.cpp",
+      "line": 22,
+      "literal": "0x1003c374"
+    },
+    {
+      "address": "0x1003C37C",
+      "macro": "IVF_IMAGE_ADDRESS_1003C37C",
+      "source": "src/functions/1000a090.cpp",
+      "line": 23,
+      "literal": "0x1003c37c"
+    },
+    {
+      "address": "0x1003C380",
+      "macro": "IVF_IMAGE_ADDRESS_1003C380",
+      "source": "src/functions/1000a090.cpp",
+      "line": 24,
+      "literal": "0x1003c380"
+    },
+    {
+      "address": "0x1003C384",
+      "macro": "IVF_IMAGE_ADDRESS_1003C384",
+      "source": "src/functions/1000a090.cpp",
+      "line": 25,
+      "literal": "0x1003c384"
+    },
+    {
+      "address": "0x1003C328",
+      "macro": "IVF_IMAGE_ADDRESS_1003C328",
+      "source": "src/functions/1000a090.cpp",
+      "line": 52,
+      "literal": "0x1003c328"
+    },
+    {
+      "address": "0x10024C80",
+      "macro": "IVF_IMAGE_ADDRESS_10024C80",
+      "source": "src/functions/1000a090.cpp",
+      "line": 52,
+      "literal": "0x10024c80"
+    },
+    {
+      "address": "0x1003C328",
+      "macro": "IVF_IMAGE_ADDRESS_1003C328",
+      "source": "src/functions/1000a090.cpp",
+      "line": 54,
+      "literal": "0x1003c328"
+    },
+    {
+      "address": "0x10024DE8",
+      "macro": "IVF_IMAGE_ADDRESS_10024DE8",
+      "source": "src/functions/1000a110.cpp",
+      "line": 29,
+      "literal": "0x10024de8"
+    },
+    {
+      "address": "0x10024E00",
+      "macro": "IVF_IMAGE_ADDRESS_10024E00",
+      "source": "src/functions/1000a170.cpp",
+      "line": 13,
+      "literal": "0x10024e00"
+    },
+    {
+      "address": "0x10024E48",
+      "macro": "IVF_IMAGE_ADDRESS_10024E48",
+      "source": "src/functions/1000a290.cpp",
+      "line": 14,
+      "literal": "0x10024e48"
+    },
+    {
+      "address": "0x10024E60",
+      "macro": "IVF_IMAGE_ADDRESS_10024E60",
+      "source": "src/functions/1000a2f0.cpp",
+      "line": 28,
+      "literal": "0x10024e60"
+    },
+    {
+      "address": "0x100243F0",
+      "macro": "IVF_IMAGE_ADDRESS_100243F0",
+      "source": "src/functions/1000a350.cpp",
+      "line": 98,
+      "literal": "0x100243F0"
+    },
+    {
+      "address": "0x100243B0",
+      "macro": "IVF_IMAGE_ADDRESS_100243B0",
+      "source": "src/functions/1000a350.cpp",
+      "line": 108,
+      "literal": "0x100243B0"
+    },
+    {
+      "address": "0x10024408",
+      "macro": "IVF_IMAGE_ADDRESS_10024408",
+      "source": "src/functions/1000a350.cpp",
+      "line": 118,
+      "literal": "0x10024408"
+    },
+    {
+      "address": "0x100243A8",
+      "macro": "IVF_IMAGE_ADDRESS_100243A8",
+      "source": "src/functions/1000a350.cpp",
+      "line": 128,
+      "literal": "0x100243A8"
+    },
+    {
+      "address": "0x1003C3A4",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3A4",
+      "source": "src/functions/1000ade0.cpp",
+      "line": 4,
+      "literal": "0x1003c3a4"
+    },
+    {
+      "address": "0x10037670",
+      "macro": "IVF_IMAGE_ADDRESS_10037670",
+      "source": "src/functions/1000ade0.cpp",
+      "line": 5,
+      "literal": "0x10037670"
+    },
+    {
+      "address": "0x10037674",
+      "macro": "IVF_IMAGE_ADDRESS_10037674",
+      "source": "src/functions/1000ade0.cpp",
+      "line": 6,
+      "literal": "0x10037674"
+    },
+    {
+      "address": "0x10037678",
+      "macro": "IVF_IMAGE_ADDRESS_10037678",
+      "source": "src/functions/1000ade0.cpp",
+      "line": 7,
+      "literal": "0x10037678"
+    },
+    {
+      "address": "0x10037648",
+      "macro": "IVF_IMAGE_ADDRESS_10037648",
+      "source": "src/functions/1000ade0.cpp",
+      "line": 22,
+      "literal": "0x10037648"
+    },
+    {
+      "address": "0x10037648",
+      "macro": "IVF_IMAGE_ADDRESS_10037648",
+      "source": "src/functions/1000ade0.cpp",
+      "line": 27,
+      "literal": "0x10037648"
+    },
+    {
+      "address": "0x1003C3B0",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3B0",
+      "source": "src/functions/1000b1a0.cpp",
+      "line": 4,
+      "literal": "0x1003c3b0"
+    },
+    {
+      "address": "0x10037718",
+      "macro": "IVF_IMAGE_ADDRESS_10037718",
+      "source": "src/functions/1000b1a0.cpp",
+      "line": 5,
+      "literal": "0x10037718"
+    },
+    {
+      "address": "0x1003771C",
+      "macro": "IVF_IMAGE_ADDRESS_1003771C",
+      "source": "src/functions/1000b1a0.cpp",
+      "line": 6,
+      "literal": "0x1003771c"
+    },
+    {
+      "address": "0x10037720",
+      "macro": "IVF_IMAGE_ADDRESS_10037720",
+      "source": "src/functions/1000b1a0.cpp",
+      "line": 7,
+      "literal": "0x10037720"
+    },
+    {
+      "address": "0x100376F0",
+      "macro": "IVF_IMAGE_ADDRESS_100376F0",
+      "source": "src/functions/1000b1a0.cpp",
+      "line": 17,
+      "literal": "0x100376f0"
+    },
+    {
+      "address": "0x100376F0",
+      "macro": "IVF_IMAGE_ADDRESS_100376F0",
+      "source": "src/functions/1000b1a0.cpp",
+      "line": 21,
+      "literal": "0x100376f0"
+    },
+    {
+      "address": "0x100376F0",
+      "macro": "IVF_IMAGE_ADDRESS_100376F0",
+      "source": "src/functions/1000b1a0.cpp",
+      "line": 23,
+      "literal": "0x100376f0"
+    },
+    {
+      "address": "0x10022250",
+      "macro": "IVF_IMAGE_ADDRESS_10022250",
+      "source": "src/functions/1000d400.cpp",
+      "line": 34,
+      "literal": "0x10022250"
+    },
+    {
+      "address": "0x1003C39C",
+      "macro": "IVF_IMAGE_ADDRESS_1003C39C",
+      "source": "src/functions/1000dd60.cpp",
+      "line": 7,
+      "literal": "0x1003c39c"
+    },
+    {
+      "address": "0x1003C3B0",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3B0",
+      "source": "src/functions/1000e5a0.cpp",
+      "line": 4,
+      "literal": "0x1003c3b0"
+    },
+    {
+      "address": "0x1003C3B0",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3B0",
+      "source": "src/functions/1000e600.cpp",
+      "line": 4,
+      "literal": "0x1003c3b0"
+    },
+    {
+      "address": "0x1003C3B0",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3B0",
+      "source": "src/functions/1000e660.cpp",
+      "line": 25,
+      "literal": "0x1003c3b0"
+    },
+    {
+      "address": "0x1003C3B0",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3B0",
+      "source": "src/functions/1000e6c0.cpp",
+      "line": 4,
+      "literal": "0x1003c3b0"
+    },
+    {
+      "address": "0x1003C3B0",
+      "macro": "IVF_IMAGE_ADDRESS_1003C3B0",
+      "source": "src/functions/1000e720.cpp",
+      "line": 7,
+      "literal": "0x1003c3b0"
+    },
+    {
+      "address": "0x10022210",
+      "macro": "IVF_IMAGE_ADDRESS_10022210",
+      "source": "src/functions/100101a5.cpp",
+      "line": 13,
+      "literal": "0x10022210"
+    },
+    {
+      "address": "0x1002221C",
+      "macro": "IVF_IMAGE_ADDRESS_1002221C",
+      "source": "src/functions/100101c2.cpp",
+      "line": 16,
+      "literal": "0x1002221c"
+    },
+    {
+      "address": "0x1002221C",
+      "macro": "IVF_IMAGE_ADDRESS_1002221C",
+      "source": "src/functions/100101f2.cpp",
+      "line": 13,
+      "literal": "0x1002221c"
+    },
+    {
+      "address": "0x10022228",
+      "macro": "IVF_IMAGE_ADDRESS_10022228",
+      "source": "src/functions/100102c3.cpp",
+      "line": 18,
+      "literal": "0x10022228"
+    },
+    {
+      "address": "0x10022228",
+      "macro": "IVF_IMAGE_ADDRESS_10022228",
+      "source": "src/functions/1001031f.cpp",
+      "line": 6,
+      "literal": "0x10022228"
+    },
+    {
+      "address": "0x10022228",
+      "macro": "IVF_IMAGE_ADDRESS_10022228",
+      "source": "src/functions/1001032a.cpp",
+      "line": 11,
+      "literal": "0x10022228"
+    },
+    {
+      "address": "0x10022228",
+      "macro": "IVF_IMAGE_ADDRESS_10022228",
+      "source": "src/functions/10010351.cpp",
+      "line": 19,
+      "literal": "0x10022228"
+    },
+    {
+      "address": "0x10022248",
+      "macro": "IVF_IMAGE_ADDRESS_10022248",
+      "source": "src/functions/10010761.cpp",
+      "line": 11,
+      "literal": "0x10022248"
+    },
+    {
+      "address": "0x10022250",
+      "macro": "IVF_IMAGE_ADDRESS_10022250",
+      "source": "src/functions/10010893.cpp",
+      "line": 48,
+      "literal": "0x10022250"
+    },
+    {
+      "address": "0x10022250",
+      "macro": "IVF_IMAGE_ADDRESS_10022250",
+      "source": "src/functions/10010893.cpp",
+      "line": 56,
+      "literal": "0x10022250"
+    },
+    {
+      "address": "0x10022068",
+      "macro": "IVF_IMAGE_ADDRESS_10022068",
+      "source": "src/functions/10010f59.cpp",
+      "line": 5,
+      "literal": "0x10022068"
+    },
+    {
+      "address": "0x100399F0",
+      "macro": "IVF_IMAGE_ADDRESS_100399F0",
+      "source": "src/functions/100110bd.cpp",
+      "line": 9,
+      "literal": "0x100399f0"
+    },
+    {
+      "address": "0x10022268",
+      "macro": "IVF_IMAGE_ADDRESS_10022268",
+      "source": "src/functions/100110bd.cpp",
+      "line": 10,
+      "literal": "0x10022268"
+    },
+    {
+      "address": "0x100261E0",
+      "macro": "IVF_IMAGE_ADDRESS_100261E0",
+      "source": "src/functions/10012e90.cpp",
+      "line": 135,
+      "literal": "0x100261e0"
+    },
+    {
+      "address": "0x100291CF",
+      "macro": "IVF_IMAGE_ADDRESS_100291CF",
+      "source": "src/functions/10013169.cpp",
+      "line": 33,
+      "literal": "0x100291cf"
+    },
+    {
+      "address": "0x10029431",
+      "macro": "IVF_IMAGE_ADDRESS_10029431",
+      "source": "src/functions/10013169.cpp",
+      "line": 34,
+      "literal": "0x10029431"
+    },
+    {
+      "address": "0x10028308",
+      "macro": "IVF_IMAGE_ADDRESS_10028308",
+      "source": "src/functions/10013ad2.cpp",
+      "line": 21,
+      "literal": "0x10028308"
+    },
+    {
+      "address": "0x10028370",
+      "macro": "IVF_IMAGE_ADDRESS_10028370",
+      "source": "src/functions/10014446.cpp",
+      "line": 40,
+      "literal": "0x10028370"
+    },
+    {
+      "address": "0x10028390",
+      "macro": "IVF_IMAGE_ADDRESS_10028390",
+      "source": "src/functions/1001474f.cpp",
+      "line": 98,
+      "literal": "0x10028390"
+    },
+    {
+      "address": "0x100299C4",
+      "macro": "IVF_IMAGE_ADDRESS_100299C4",
+      "source": "src/functions/10014907.cpp",
+      "line": 27,
+      "literal": "0x100299C4"
+    },
+    {
+      "address": "0x100299C4",
+      "macro": "IVF_IMAGE_ADDRESS_100299C4",
+      "source": "src/functions/10014996.cpp",
+      "line": 35,
+      "literal": "0x100299C4"
+    },
+    {
+      "address": "0x10029EA8",
+      "macro": "IVF_IMAGE_ADDRESS_10029EA8",
+      "source": "src/functions/10014a2f.cpp",
+      "line": 25,
+      "literal": "0x10029EA8"
+    },
+    {
+      "address": "0x100299C8",
+      "macro": "IVF_IMAGE_ADDRESS_100299C8",
+      "source": "src/functions/10014a2f.cpp",
+      "line": 79,
+      "literal": "0x100299C8"
+    },
+    {
+      "address": "0x100299C4",
+      "macro": "IVF_IMAGE_ADDRESS_100299C4",
+      "source": "src/functions/10014a2f.cpp",
+      "line": 93,
+      "literal": "0x100299C4"
+    },
+    {
+      "address": "0x100283D0",
+      "macro": "IVF_IMAGE_ADDRESS_100283D0",
+      "source": "src/functions/10014cc3.cpp",
+      "line": 48,
+      "literal": "0x100283d0"
+    },
+    {
+      "address": "0x100283F8",
+      "macro": "IVF_IMAGE_ADDRESS_100283F8",
+      "source": "src/functions/10014e0a.cpp",
+      "line": 23,
+      "literal": "0x100283f8"
+    },
+    {
+      "address": "0x100294A0",
+      "macro": "IVF_IMAGE_ADDRESS_100294A0",
+      "source": "src/functions/10014e0a.cpp",
+      "line": 91,
+      "literal": "0x100294a0"
+    },
+    {
+      "address": "0x10029C08",
+      "macro": "IVF_IMAGE_ADDRESS_10029C08",
+      "source": "src/functions/10014e0a.cpp",
+      "line": 103,
+      "literal": "0x10029c08"
+    },
+    {
+      "address": "0x10039A74",
+      "macro": "IVF_IMAGE_ADDRESS_10039A74",
+      "source": "src/functions/10014fa7.cpp",
+      "line": 12,
+      "literal": "0x10039a74"
+    },
+    {
+      "address": "0x10039A78",
+      "macro": "IVF_IMAGE_ADDRESS_10039A78",
+      "source": "src/functions/10014fa7.cpp",
+      "line": 13,
+      "literal": "0x10039a78"
+    },
+    {
+      "address": "0x10039A7C",
+      "macro": "IVF_IMAGE_ADDRESS_10039A7C",
+      "source": "src/functions/10014fa7.cpp",
+      "line": 14,
+      "literal": "0x10039a7c"
+    },
+    {
+      "address": "0x10039A80",
+      "macro": "IVF_IMAGE_ADDRESS_10039A80",
+      "source": "src/functions/10014fa7.cpp",
+      "line": 15,
+      "literal": "0x10039a80"
+    },
+    {
+      "address": "0x10029C10",
+      "macro": "IVF_IMAGE_ADDRESS_10029C10",
+      "source": "src/functions/10014fa7.cpp",
+      "line": 16,
+      "literal": "0x10029c10"
+    },
+    {
+      "address": "0x10029C0C",
+      "macro": "IVF_IMAGE_ADDRESS_10029C0C",
+      "source": "src/functions/10014fa7.cpp",
+      "line": 17,
+      "literal": "0x10029c0c"
+    },
+    {
+      "address": "0x10029490",
+      "macro": "IVF_IMAGE_ADDRESS_10029490",
+      "source": "src/functions/100154dc.cpp",
+      "line": 125,
+      "literal": "0x10029490"
+    },
+    {
+      "address": "0x10029E90",
+      "macro": "IVF_IMAGE_ADDRESS_10029E90",
+      "source": "src/functions/10017c7b.cpp",
+      "line": 28,
+      "literal": "0x10029e90"
+    },
+    {
+      "address": "0x10029E90",
+      "macro": "IVF_IMAGE_ADDRESS_10029E90",
+      "source": "src/functions/10017c7b.cpp",
+      "line": 46,
+      "literal": "0x10029e90"
+    },
+    {
+      "address": "0x10029490",
+      "macro": "IVF_IMAGE_ADDRESS_10029490",
+      "source": "src/functions/10018120.cpp",
+      "line": 15,
+      "literal": "0x10029490"
+    },
+    {
+      "address": "0x100284C0",
+      "macro": "IVF_IMAGE_ADDRESS_100284C0",
+      "source": "src/functions/10018120.cpp",
+      "line": 15,
+      "literal": "0x100284c0"
+    },
+    {
+      "address": "0x10029E98",
+      "macro": "IVF_IMAGE_ADDRESS_10029E98",
+      "source": "src/functions/10018f6c.cpp",
+      "line": 8,
+      "literal": "0x10029E98"
+    },
+    {
+      "address": "0x10029E94",
+      "macro": "IVF_IMAGE_ADDRESS_10029E94",
+      "source": "src/functions/10018f6c.cpp",
+      "line": 9,
+      "literal": "0x10029E94"
+    },
+    {
+      "address": "0x10029E9C",
+      "macro": "IVF_IMAGE_ADDRESS_10029E9C",
+      "source": "src/functions/10018f6c.cpp",
+      "line": 10,
+      "literal": "0x10029E9C"
+    },
+    {
+      "address": "0x10029E98",
+      "macro": "IVF_IMAGE_ADDRESS_10029E98",
+      "source": "src/functions/10018f75.cpp",
+      "line": 10,
+      "literal": "0x10029E98"
+    },
+    {
+      "address": "0x10029E94",
+      "macro": "IVF_IMAGE_ADDRESS_10029E94",
+      "source": "src/functions/10018f75.cpp",
+      "line": 11,
+      "literal": "0x10029E94"
+    },
+    {
+      "address": "0x10029E9C",
+      "macro": "IVF_IMAGE_ADDRESS_10029E9C",
+      "source": "src/functions/10018f75.cpp",
+      "line": 12,
+      "literal": "0x10029E9C"
+    },
+    {
+      "address": "0x10029EB4",
+      "macro": "IVF_IMAGE_ADDRESS_10029EB4",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 6,
+      "literal": "0x10029eb4"
+    },
+    {
+      "address": "0x10029EB8",
+      "macro": "IVF_IMAGE_ADDRESS_10029EB8",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 7,
+      "literal": "0x10029eb8"
+    },
+    {
+      "address": "0x10029EBC",
+      "macro": "IVF_IMAGE_ADDRESS_10029EBC",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 8,
+      "literal": "0x10029ebc"
+    },
+    {
+      "address": "0x10029EC0",
+      "macro": "IVF_IMAGE_ADDRESS_10029EC0",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 9,
+      "literal": "0x10029ec0"
+    },
+    {
+      "address": "0x10029EC4",
+      "macro": "IVF_IMAGE_ADDRESS_10029EC4",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 10,
+      "literal": "0x10029ec4"
+    },
+    {
+      "address": "0x10029EC8",
+      "macro": "IVF_IMAGE_ADDRESS_10029EC8",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 11,
+      "literal": "0x10029ec8"
+    },
+    {
+      "address": "0x10029ECC",
+      "macro": "IVF_IMAGE_ADDRESS_10029ECC",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 12,
+      "literal": "0x10029ecc"
+    },
+    {
+      "address": "0x10029EE0",
+      "macro": "IVF_IMAGE_ADDRESS_10029EE0",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 13,
+      "literal": "0x10029ee0"
+    },
+    {
+      "address": "0x10029EE4",
+      "macro": "IVF_IMAGE_ADDRESS_10029EE4",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 14,
+      "literal": "0x10029ee4"
+    },
+    {
+      "address": "0x10029EE8",
+      "macro": "IVF_IMAGE_ADDRESS_10029EE8",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 15,
+      "literal": "0x10029ee8"
+    },
+    {
+      "address": "0x10029EEC",
+      "macro": "IVF_IMAGE_ADDRESS_10029EEC",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 16,
+      "literal": "0x10029eec"
+    },
+    {
+      "address": "0x10029EF0",
+      "macro": "IVF_IMAGE_ADDRESS_10029EF0",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 17,
+      "literal": "0x10029ef0"
+    },
+    {
+      "address": "0x10029EF4",
+      "macro": "IVF_IMAGE_ADDRESS_10029EF4",
+      "source": "src/functions/1001a3ba.cpp",
+      "line": 18,
+      "literal": "0x10029ef4"
+    },
+    {
+      "address": "0x1002874C",
+      "macro": "IVF_IMAGE_ADDRESS_1002874C",
+      "source": "src/functions/1001d591.cpp",
+      "line": 282,
+      "literal": "0x1002874c"
+    },
+    {
+      "address": "0x100261E8",
+      "macro": "IVF_IMAGE_ADDRESS_100261E8",
+      "source": "src/functions/1001d906.cpp",
+      "line": 13,
+      "literal": "0x100261e8"
+    },
+    {
+      "address": "0x10037670",
+      "macro": "IVF_IMAGE_ADDRESS_10037670",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 4,
+      "literal": "0x10037670"
+    },
+    {
+      "address": "0x10037674",
+      "macro": "IVF_IMAGE_ADDRESS_10037674",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 5,
+      "literal": "0x10037674"
+    },
+    {
+      "address": "0x10037678",
+      "macro": "IVF_IMAGE_ADDRESS_10037678",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 6,
+      "literal": "0x10037678"
+    },
+    {
+      "address": "0x10037660",
+      "macro": "IVF_IMAGE_ADDRESS_10037660",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 7,
+      "literal": "0x10037660"
+    },
+    {
+      "address": "0x10037664",
+      "macro": "IVF_IMAGE_ADDRESS_10037664",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 8,
+      "literal": "0x10037664"
+    },
+    {
+      "address": "0x10037668",
+      "macro": "IVF_IMAGE_ADDRESS_10037668",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 9,
+      "literal": "0x10037668"
+    },
+    {
+      "address": "0x10037648",
+      "macro": "IVF_IMAGE_ADDRESS_10037648",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 15,
+      "literal": "0x10037648"
+    },
+    {
+      "address": "0x10024CE0",
+      "macro": "IVF_IMAGE_ADDRESS_10024CE0",
+      "source": "src/functions/10020bb0.cpp",
+      "line": 16,
+      "literal": "0x10024ce0"
+    }
+  ],
+  "applied": true
+}

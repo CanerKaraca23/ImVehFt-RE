@@ -1,0 +1,5 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+008d6228,".data","PTR_FUN_008d6228[Label,DEFAULT,primary]","008d6228:addr 0072f420:type=undefined *","00745510:DATA@00745510:FUN_00745510"
+008d622c,".data","","008d622c:addr 0072f430:type=undefined *",""
+008d6230,".data","","008d6230:addr 0072f440:type=undefined *",""
+008d6234,".data","","008d6234:addr 0072f460:type=undefined *",""

@@ -29,11 +29,11 @@ static_assert(sizeof(_iobuf) == 0x20);
 extern "C" void __cdecl __SEH_prolog4();
 extern "C" int* __cdecl __errno();
 extern "C" void __stdcall FUN_1001189f();
-extern "C" void __cdecl __lock_file(FILE* _File);
-extern "C" unsigned int __cdecl __fileno(FILE* _File);
-extern "C" unsigned int __cdecl __filbuf(FILE* _File);
+void __cdecl __lock_file(FILE* _File);
+int __cdecl __fileno(FILE* _File);
+int __cdecl __filbuf(FILE* _File);
 extern "C" void __stdcall FUN_10010670();
-extern "C" void __cdecl __SEH_epilog4();
+extern "C" void __stdcall __SEH_epilog4(void);
 
 extern unsigned char DAT_10029450;
 extern unsigned char* DAT_1003c420[];

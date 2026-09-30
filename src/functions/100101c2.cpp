@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
 extern "C" [[noreturn]] void __stdcall __CxxThrowException_8(
@@ -5,15 +6,15 @@ extern "C" [[noreturn]] void __stdcall __CxxThrowException_8(
     const void* throw_info);
 
 extern std::uint8_t DAT_100281ac;
+struct ExceptionStorage { void* __thiscall construct(char** message); };
 
 extern "C" [[noreturn]] void __stdcall FUN_100101c2(
     char* param_1)
 {
     void* local_10[3];
 
-    using ExceptionCtorFn = void* (__thiscall*)(void*, char**);
-    reinterpret_cast<ExceptionCtorFn>(static_cast<std::uintptr_t>(0x100102c3))(local_10, &param_1);
-    local_10[0] = reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x1002221c));
+    reinterpret_cast<ExceptionStorage*>(local_10)->construct(&param_1);
+    local_10[0] = reinterpret_cast<void**>(static_cast<std::uintptr_t>(IVF_IMAGE_ADDRESS_1002221C));
 
     __CxxThrowException_8(local_10, &DAT_100281ac);
 }

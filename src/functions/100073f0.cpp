@@ -1,84 +1,111 @@
 #include <cstdint>
 
+extern "C" double DAT_10024eb8;
+extern "C" double DAT_10024e70;
+extern "C" double DAT_10024eb0;
+
+extern "C" void __fastcall FUN_1001b380(void*);
+extern "C" void __fastcall FUN_1001b4b0(void*);
+
 #if !defined(_MSC_VER) || !defined(_M_IX86)
-#error "FUN_100073f0 requires the MSVC x86 target"
+#error "FUN_100073f0 requires the MSVC x86 x87 calling environment"
 #endif
 
-extern float DAT_10024EB0;
-
-extern "C" long double __fastcall FUN_1001b380(void*);
-extern "C" long double __fastcall FUN_1001b4b0(void*);
-
-using UnknownFunction_00707390 = void (__cdecl*)(
-    std::uint32_t,
+extern "C" __declspec(naked) void __fastcall FUN_100073f0(
+    void*,
     std::uint32_t,
     std::uint32_t,
     float,
     float,
-    float,
-    float,
     std::uint32_t,
     std::uint32_t,
-    void*);
-
-extern "C" void __fastcall FUN_100073f0(
-    void* param_1,
-    std::uint32_t param_2,
-    std::uint32_t param_3,
-    float param_4,
-    float param_5,
-    std::uint32_t param_6,
-    std::uint32_t param_7,
-    std::uint32_t param_8)
+    std::uint32_t)
 {
-    (void)param_6;
-    (void)param_7;
+    __asm
+    {
+        push ebp
+        mov ebp, esp
+        sub esp, 8
 
-    const std::uint32_t uVar5 = 1;
+        fld float ptr [ebp + 0x14]
+        push 1
+        fld st(0)
+        push 0
+        fld double ptr [DAT_10024eb8]
+        push ecx
+        fmul st(0), st(1)
+        fxch
+        fstp float ptr [ebp + 0x14]
+        fxch
+        fadd double ptr [DAT_10024e70]
+        fmulp st(1), st(0)
+        fstp float ptr [ebp - 4]
 
-    const long double result_1001B380_0 = FUN_1001b380(param_1);
-    void* extraout_ECX;
-    __asm mov extraout_ECX, ecx
+        fld1
+        fstp float ptr [esp]
+        fld float ptr [ebp + 0x18]
+        push 0
+        push ecx
+        fstp float ptr [esp]
+        fld float ptr [ebp + 0x14]
+        push eax
+        push ecx
+        push edx
+        push 1
+        call FUN_1001b380
+        fstp float ptr [ebp - 8]
 
-    const float fVar4 =
-        static_cast<float>(result_1001B380_0) *
-        param_4 *
-        static_cast<float>(DAT_10024EB0);
+        fld float ptr [ebp - 8]
+        push ecx
+        fmul float ptr [ebp + 0xc]
+        fmul double ptr [DAT_10024eb0]
+        fstp float ptr [ebp - 8]
+        fld float ptr [ebp - 8]
+        fstp float ptr [esp]
+        fld float ptr [ebp + 0x14]
+        call FUN_1001b4b0
+        fstp float ptr [ebp + 0x14]
 
-    const long double result_1001B4B0_0 = FUN_1001b4b0(extraout_ECX);
-    void* extraout_ECX_00;
-    __asm mov extraout_ECX_00, ecx
+        fld float ptr [ebp + 0x14]
+        push ecx
+        fmul float ptr [ebp + 0xc]
+        fmul double ptr [DAT_10024eb0]
+        fstp float ptr [ebp + 0xc]
+        fld float ptr [ebp + 0xc]
+        fstp float ptr [esp]
+        fld float ptr [ebp - 4]
+        call FUN_1001b380
+        fstp float ptr [ebp + 0xc]
 
-    const float fVar3 =
-        static_cast<float>(result_1001B4B0_0) *
-        param_4 *
-        static_cast<float>(DAT_10024EB0);
+        fld float ptr [ebp + 0xc]
+        push ecx
+        fmul float ptr [ebp + 0x10]
+        fmul double ptr [DAT_10024eb0]
+        fstp float ptr [ebp + 0xc]
+        fld float ptr [ebp + 0xc]
+        fstp float ptr [esp]
+        fld float ptr [ebp - 4]
+        call FUN_1001b4b0
+        fstp float ptr [ebp + 0xc]
 
-    const long double result_1001B380_1 = FUN_1001b380(extraout_ECX_00);
-    void* extraout_ECX_01;
-    __asm mov extraout_ECX_01, ecx
+        fld float ptr [ebp + 0xc]
+        mov eax, dword ptr [ebp + 8]
+        fmul float ptr [ebp + 0x10]
+        push ecx
+        mov ecx, dword ptr [ebp + 0x1c]
+        mov edx, 0x00707390
+        fmul double ptr [DAT_10024eb0]
+        fstp float ptr [ebp + 0xc]
+        fld float ptr [ebp + 0xc]
+        fstp float ptr [esp]
+        push eax
+        push ecx
+        push 2
+        call edx
+        add esp, 0x40
 
-    const float fVar2 =
-        static_cast<float>(result_1001B380_1) *
-        param_5 *
-        static_cast<float>(DAT_10024EB0);
-
-    const long double result_1001B4B0_1 = FUN_1001b4b0(extraout_ECX_01);
-
-    const float fVar1 =
-        static_cast<float>(result_1001B4B0_1) *
-        param_5 *
-        static_cast<float>(DAT_10024EB0);
-
-    reinterpret_cast<UnknownFunction_00707390>(0x00707390)(
-        2,
-        param_8,
-        param_3,
-        fVar1,
-        fVar2,
-        fVar3,
-        fVar4,
-        uVar5,
-        param_2,
-        param_1);
+        mov esp, ebp
+        pop ebp
+        ret
+    }
 }

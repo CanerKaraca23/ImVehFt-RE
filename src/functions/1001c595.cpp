@@ -4,7 +4,7 @@
 #include <stdio.h>
 extern "C" errno_t __cdecl __cfltcvt_l(double* arg, char* buffer, size_t sizeInBytes, int format, int precision, int caps, _locale_t plocinfo);
 
-errno_t __cdecl __cfltcvt(
+extern "C" errno_t __cdecl __cfltcvt(
     double* arg,
     char* buffer,
     size_t sizeInBytes,

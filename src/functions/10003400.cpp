@@ -1,17 +1,16 @@
 #include <cstddef>
 #include <cstdint>
-#include <cmath>
+#include "gta_sa_address_access.hpp"
 
 extern std::int32_t DAT_1003c248;
 extern std::uint32_t DAT_1003bc7c;
 extern std::uint32_t DAT_1003bbb4;
-extern std::int32_t* _DAT_00b74494;
 
 extern float _DAT_10024fc8;
-extern float _DAT_10024fd0;
-extern float _DAT_10024fd8;
-extern float _DAT_10024fe0;
-extern float _DAT_10024fe8;
+extern double _DAT_10024fd0;
+extern double _DAT_10024fd8;
+extern double _DAT_10024fe0;
+extern double _DAT_10024fe8;
 
 extern "C" float __stdcall FUN_1001b5a0();
 extern "C" std::int32_t __stdcall FUN_10009360();
@@ -91,10 +90,9 @@ void FUN_10003400_this::FUN_10003400(float* param_1, char param_2)
                 ->position;
     }
 
-    float local_14 = position[0];
-    float local_10 = position[1];
+    float local_position[3] = { position[0], position[1], 0.0f };
     const float fVar2 = param_1[5];
-    float local_c = position[2];
+    local_position[2] = position[2];
     const float fVar3 = param_1[4];
 
     long double fVar12 =
@@ -122,10 +120,15 @@ void FUN_10003400_this::FUN_10003400(float* param_1, char param_2)
 
     const std::int32_t flag_index = DAT_1003c248;
     const long double fVar14 = static_cast<long double>(local_38);
+    float absolute_local_38;
+    __asm {
+        fld     dword ptr [local_38]
+        fabs
+        fstp    dword ptr [absolute_local_38]
+    }
 
     long double fVar15 =
-        static_cast<long double>(
-            static_cast<float>(std::fabs(fVar14))) *
+        static_cast<long double>(absolute_local_38) *
         static_cast<long double>(_DAT_10024fd8);
 
     if (self->object_state_594 == 9 || effect_index == 0x1D7)
@@ -144,27 +147,28 @@ void FUN_10003400_this::FUN_10003400(float* param_1, char param_2)
         static_cast<long double>(
             static_cast<float>(fVar12 * static_cast<long double>(fVar2)));
 
-    local_c = local_c + _DAT_10024fd0;
+    local_position[2] = static_cast<float>(
+        static_cast<double>(local_position[2]) + _DAT_10024fd0);
 
     fVar12 =
         static_cast<long double>(
             static_cast<float>(static_cast<long double>(fVar3) * fVar12));
 
-    local_14 =
+    local_position[0] =
         static_cast<float>(
-            static_cast<long double>(local_14) +
+            static_cast<long double>(local_position[0]) +
             static_cast<long double>(
                 static_cast<float>(
                     static_cast<long double>(fVar4) * fVar13)) *
                 fVar14 +
             fVar12 * fVar17);
 
-    local_10 =
+    local_position[1] =
         static_cast<float>(
             static_cast<long double>(
                 static_cast<float>(
                     fVar18 * fVar17 +
-                    static_cast<long double>(local_10))) +
+                    static_cast<long double>(local_position[1]))) +
             static_cast<long double>(
                 static_cast<float>(
                     fVar13 * static_cast<long double>(fVar5))) *
@@ -176,7 +180,7 @@ void FUN_10003400_this::FUN_10003400(float* param_1, char param_2)
     const std::int32_t object_slot =
         (static_cast<std::int32_t>(
              reinterpret_cast<std::uintptr_t>(this_)) -
-         *_DAT_00b74494) /
+         IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) /
         0xA18;
 
     const auto* context =
@@ -231,7 +235,7 @@ void FUN_10003400_this::FUN_10003400(float* param_1, char param_2)
     reinterpret_cast<SubmitFunction>(0x00707390u)(
         2,
         color,
-        &local_14,
+        local_position,
         static_cast<float>(fVar12 * fVar16),
         static_cast<float>(fVar18 * fVar16),
         static_cast<float>(fVar18 * fVar15),

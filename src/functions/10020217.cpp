@@ -1,6 +1,6 @@
 #include <cstdint>
 
-extern "C" void __cdecl __raise_exc_ex(
+void __cdecl __raise_exc_ex(
     std::uint32_t*, std::uint32_t*, std::uint32_t, int,
     std::uint32_t*, std::uint32_t*, int);
 

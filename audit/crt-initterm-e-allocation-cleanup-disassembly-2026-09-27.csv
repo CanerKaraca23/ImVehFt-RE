@@ -1,0 +1,33 @@
+target_va,instruction_va,instruction_bytes,instruction,function_owner,decode_status
+10013083,10013083,"89 0C 02","MOV dword ptr [EDX + EAX*0x1],ECX","",disassembled-in-memory
+10013083,10013086,"83 C1 20","ADD ECX,0x20","",existing-instruction
+10013083,10013089,"83 C2 04","ADD EDX,0x4","",existing-instruction
+10013083,1001308c,"81 F9 50 94 02 10","CMP ECX,0x10029450","",existing-instruction
+10013083,10013092,"7C EA","JL 0x1001307e","",existing-instruction
+10013083,10013094,"6A FE","PUSH -0x2","",existing-instruction
+10013083,10013096,"5E","POP ESI","",existing-instruction
+10013083,10013097,"33 D2","XOR EDX,EDX","",existing-instruction
+10013083,10013099,"B9 E0 91 02 10","MOV ECX,0x100291e0","",existing-instruction
+10013083,1001309e,"57","PUSH EDI","",existing-instruction
+10013083,1001309f,"8B C2","MOV EAX,EDX","",existing-instruction
+10013083,100130a1,"C1 F8 05","SAR EAX,0x5","",existing-instruction
+10013083,100130a4,"8B 04 85 20 C4 03 10","MOV EAX,dword ptr [EAX*0x4 + 0x1003c420]","",existing-instruction
+10013083,100130ab,"8B FA","MOV EDI,EDX","",existing-instruction
+10013083,100130ad,"83 E7 1F","AND EDI,0x1f","",existing-instruction
+10013083,100130b0,"C1 E7 06","SHL EDI,0x6","",existing-instruction
+10013083,100130b3,"8B 04 07","MOV EAX,dword ptr [EDI + EAX*0x1]","",existing-instruction
+10013083,100130b6,"83 F8 FF","CMP EAX,-0x1","",existing-instruction
+10013083,100130b9,"74 08","JZ 0x100130c3","",existing-instruction
+10013083,100130bb,"3B C6","CMP EAX,ESI","",existing-instruction
+10013083,100130bd,"74 04","JZ 0x100130c3","",existing-instruction
+10013083,100130bf,"85 C0","TEST EAX,EAX","",existing-instruction
+10013083,100130c1,"75 02","JNZ 0x100130c5","",existing-instruction
+10013083,100130c3,"89 31","MOV dword ptr [ECX],ESI","",existing-instruction
+10013083,100130c5,"83 C1 20","ADD ECX,0x20","",existing-instruction
+10013083,100130c8,"42","INC EDX","",existing-instruction
+10013083,100130c9,"81 F9 40 92 02 10","CMP ECX,0x10029240","",existing-instruction
+10013083,100130cf,"7C CE","JL 0x1001309f","",existing-instruction
+10013083,100130d1,"5F","POP EDI","",existing-instruction
+10013083,100130d2,"33 C0","XOR EAX,EAX","",existing-instruction
+10013083,100130d4,"5E","POP ESI","",existing-instruction
+10013083,100130d5,"C3","RET","",existing-instruction

@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 #include <cstdlib>
 #include <windows.h>
@@ -95,7 +96,7 @@ mapping_ready:
     {
         character = *source;
         source[static_cast<std::int32_t>(
-            reinterpret_cast<std::uintptr_t>(object)) - 0x100243F0] = character;
+            reinterpret_cast<std::uintptr_t>(object)) - IVF_IMAGE_ADDRESS_100243F0] = character;
         source = source + 1;
     } while (character != '\0');
 
@@ -105,7 +106,7 @@ mapping_ready:
     {
         character = *source;
         source[static_cast<std::int32_t>(
-            reinterpret_cast<std::uintptr_t>(object)) - 0x100243B0] = character;
+            reinterpret_cast<std::uintptr_t>(object)) - IVF_IMAGE_ADDRESS_100243B0] = character;
         source = source + 1;
     } while (character != '\0');
 
@@ -115,7 +116,7 @@ mapping_ready:
     {
         character = *source;
         source[static_cast<std::int32_t>(
-            reinterpret_cast<std::uintptr_t>(object)) - 0x10024408] = character;
+            reinterpret_cast<std::uintptr_t>(object)) - IVF_IMAGE_ADDRESS_10024408] = character;
         source = source + 1;
     } while (character != '\0');
 
@@ -125,7 +126,7 @@ mapping_ready:
     {
         character = *source;
         source[static_cast<std::int32_t>(
-            reinterpret_cast<std::uintptr_t>(object)) - 0x100243A8] = character;
+            reinterpret_cast<std::uintptr_t>(object)) - IVF_IMAGE_ADDRESS_100243A8] = character;
         source = source + 1;
     } while (character != '\0');
 

@@ -1,0 +1,50 @@
+FUNCTION FUN_007f0dc0 @ 007f0dc0
+007f0dc0  PUSH EBX
+007f0dc1  PUSH EBP
+007f0dc2  MOV EBP,dword ptr [ESP + 0xc]
+007f0dc6  PUSH ESI
+007f0dc7  PUSH EDI
+007f0dc8  MOV EAX,dword ptr [EBP + 0x98]
+007f0dce  TEST EAX,EAX
+007f0dd0  JZ 0x007f0df1
+007f0dd2  MOV EDI,dword ptr [ESP + 0x1c]
+007f0dd6  MOV EBX,dword ptr [ESP + 0x18]
+007f0dda  MOV ESI,dword ptr [EAX + 0x9c]
+007f0de0  PUSH EDI
+007f0de1  PUSH EAX
+007f0de2  CALL EBX
+007f0de4  ADD ESP,0x8
+007f0de7  TEST EAX,EAX
+007f0de9  JZ 0x007f0df1
+007f0deb  TEST ESI,ESI
+007f0ded  MOV EAX,ESI
+007f0def  JNZ 0x007f0dda
+007f0df1  POP EDI
+007f0df2  MOV EAX,EBP
+007f0df4  POP ESI
+007f0df5  POP EBP
+007f0df6  POP EBX
+007f0df7  RET
+
+DECOMPILED SOURCE
+
+int FUN_007f0dc0(int param_1,code *param_2,undefined4 param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  
+  iVar2 = *(int *)(param_1 + 0x98);
+  do {
+    if (iVar2 == 0) {
+      return param_1;
+    }
+    iVar1 = *(int *)(iVar2 + 0x9c);
+    iVar3 = (*param_2)(iVar2,param_3);
+    iVar2 = iVar1;
+  } while (iVar3 != 0);
+  return param_1;
+}
+
+

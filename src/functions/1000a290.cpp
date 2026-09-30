@@ -1,6 +1,6 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
-extern void* BasicCallbackManager_6195212_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable[];
 extern "C" void __cdecl FUN_10010756(void* param_1);
 
 struct FUN_1000a290_this {
@@ -12,10 +12,7 @@ void* FUN_1000a290_this::FUN_1000a290(std::uint8_t param_1)
     void* self = static_cast<void*>(this);
     auto* bytes = static_cast<std::uint8_t*>(self);
 
-    *reinterpret_cast<std::uint32_t*>(bytes) =
-        static_cast<std::uint32_t>(
-            reinterpret_cast<std::uintptr_t>(
-                BasicCallbackManager_6195212_0_0_0_0_SimpleSuperManagerThiscall_PatcherCALL1_THIS_vftable));
+    *reinterpret_cast<std::uint32_t*>(bytes) = IVF_IMAGE_ADDRESS_10024E48;
 
     if (*reinterpret_cast<std::uint32_t*>(bytes + 0x28) != 0)
     {

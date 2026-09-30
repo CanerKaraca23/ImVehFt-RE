@@ -5,16 +5,16 @@
 using _onexit_t = void (__cdecl*)();
 
 extern "C" void __stdcall FUN_10012b9c();
-extern _onexit_t __cdecl __onexit_nolock(_onexit_t);
+extern void* __cdecl __onexit_nolock(void*);
 extern "C" void __stdcall FUN_10010523();
 
 _onexit_t __cdecl __onexit(_onexit_t _Func)
 {
     FUN_10012b9c();
 
-    _onexit_t p_Var1 = __onexit_nolock(_Func);
+    auto* const result = __onexit_nolock(reinterpret_cast<void*>(_Func));
 
     FUN_10010523();
 
-    return p_Var1;
+    return reinterpret_cast<_onexit_t>(result);
 }

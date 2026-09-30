@@ -1,0 +1,2122 @@
+{
+  "scope": "Executable-symbol relocations in the 284 direct-body candidate objects. Reports target evidence only; does not write PE fixups, choose final local section RVAs, or validate behavior/runtime.",
+  "inputs": {
+    "symbols": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\candidate-relocation-symbol-targets-ghidra-cleanup-exact-linkmap-2026-09-30.json",
+    "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\placement-plan-conservative-ghidra-cleanup-exact-linkmap-2026-09-30.json",
+    "api_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\current-api-callsite-rel32-fixups-ghidra-cleanup-exact-linkmap-2026-09-30-v2.json",
+    "iat_slots": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-import-slots-ghidra-positive-2026-09-30.json",
+    "installer_target_map": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\installer-target-thunks-2026-09-27.json",
+    "local_stubs": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\scripts\\reloc_local_code_stubs.py",
+    "ghidra_export_dir": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports",
+    "original_asi": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+    "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+    "game_exe": "C:\\GTASA-ImVehFt-Test-20260930\\gta_sa.exe",
+    "game_exe_sha256": "F01A00CE950FA40CA1ED59DF0E789848C6EDCF6405456274965885D0929343AC"
+  },
+  "summary": {
+    "direct_body_count": 285,
+    "executable_relocation_occurrences": 139,
+    "occurrences_by_classification": {
+      "exact-owner-and-relocation-field-API-thunk-plan": 139
+    },
+    "unresolved_occurrences": 0,
+    "known_local_symbols_awaiting_final_rva": 0,
+    "api_plan_sites_joined_exactly": 139,
+    "api_plan_sites_expected": 139,
+    "all_api_plan_sites_joined_exactly": true
+  },
+  "limitations": [
+    "An IAT target classification does not generate a REL32 thunk or patch its callsite.",
+    "A candidate entry target does not prove code or object semantics.",
+    "GTA .text section membership confirms image range, not function identity or ABI.",
+    "Same-object local executable sections still need final placement and relocation application.",
+    "No PE/ASI bytes are written; no loader or GTA runtime test is performed."
+  ],
+  "rows": [
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 148,
+      "field_va": "0x10001f14",
+      "symbol": "_MessageBoxA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A93A",
+        "iat_va": "0x10022144",
+        "thunk_symbol": "IVF_API_CALL_MessageBoxA_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 179,
+      "field_va": "0x10001f33",
+      "symbol": "_MessageBoxA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A93A",
+        "iat_va": "0x10022144",
+        "thunk_symbol": "IVF_API_CALL_MessageBoxA_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 549,
+      "field_va": "0x10002435",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 575,
+      "field_va": "0x1000244f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 604,
+      "field_va": "0x1000246c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 629,
+      "field_va": "0x10002485",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 643,
+      "field_va": "0x10002493",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 674,
+      "field_va": "0x100024b2",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 700,
+      "field_va": "0x100024cc",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 725,
+      "field_va": "0x100024e5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 739,
+      "field_va": "0x100024f3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 770,
+      "field_va": "0x10002512",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 796,
+      "field_va": "0x1000252c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 821,
+      "field_va": "0x10002545",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 835,
+      "field_va": "0x10002553",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 866,
+      "field_va": "0x10002572",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 892,
+      "field_va": "0x1000258c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 917,
+      "field_va": "0x100025a5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 931,
+      "field_va": "0x100025b3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 962,
+      "field_va": "0x100025d2",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 988,
+      "field_va": "0x100025ec",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1013,
+      "field_va": "0x10002605",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1027,
+      "field_va": "0x10002613",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1058,
+      "field_va": "0x10002632",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1092,
+      "field_va": "0x10002654",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1117,
+      "field_va": "0x1000266d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1131,
+      "field_va": "0x1000267b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1162,
+      "field_va": "0x1000269a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1188,
+      "field_va": "0x100026b4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1213,
+      "field_va": "0x100026cd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1227,
+      "field_va": "0x100026db",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1258,
+      "field_va": "0x100026fa",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1284,
+      "field_va": "0x10002714",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1309,
+      "field_va": "0x1000272d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1323,
+      "field_va": "0x1000273b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1354,
+      "field_va": "0x1000275a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1380,
+      "field_va": "0x10002774",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1405,
+      "field_va": "0x1000278d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1419,
+      "field_va": "0x1000279b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1450,
+      "field_va": "0x100027ba",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1476,
+      "field_va": "0x100027d4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1501,
+      "field_va": "0x100027ed",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1515,
+      "field_va": "0x100027fb",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1546,
+      "field_va": "0x1000281a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1572,
+      "field_va": "0x10002834",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1597,
+      "field_va": "0x1000284d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1611,
+      "field_va": "0x1000285b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1642,
+      "field_va": "0x1000287a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1661,
+      "field_va": "0x1000288d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1696,
+      "field_va": "0x100028b0",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1715,
+      "field_va": "0x100028c3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1749,
+      "field_va": "0x100028e5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1768,
+      "field_va": "0x100028f8",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1806,
+      "field_va": "0x1000291e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1825,
+      "field_va": "0x10002931",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1859,
+      "field_va": "0x10002953",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1877,
+      "field_va": "0x10002965",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1900,
+      "field_va": "0x1000297c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1919,
+      "field_va": "0x1000298f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1953,
+      "field_va": "0x100029b1",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1971,
+      "field_va": "0x100029c3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1997,
+      "field_va": "0x100029dd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2015,
+      "field_va": "0x100029ef",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2041,
+      "field_va": "0x10002a09",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2072,
+      "field_va": "0x10002a28",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2095,
+      "field_va": "0x10002a3f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2119,
+      "field_va": "0x10002a57",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2144,
+      "field_va": "0x10002a70",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2162,
+      "field_va": "0x10002a82",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2193,
+      "field_va": "0x10002aa1",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2217,
+      "field_va": "0x10002ab9",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2242,
+      "field_va": "0x10002ad2",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2260,
+      "field_va": "0x10002ae4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2291,
+      "field_va": "0x10002b03",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2325,
+      "field_va": "0x10002b25",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2350,
+      "field_va": "0x10002b3e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2364,
+      "field_va": "0x10002b4c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2398,
+      "field_va": "0x10002b6e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2412,
+      "field_va": "0x10002b7c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2446,
+      "field_va": "0x10002b9e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2480,
+      "field_va": "0x10002bc0",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2505,
+      "field_va": "0x10002bd9",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2520,
+      "field_va": "0x10002be8",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2554,
+      "field_va": "0x10002c0a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2567,
+      "field_va": "0x10002c17",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2590,
+      "field_va": "0x10002c2e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2616,
+      "field_va": "0x10002c48",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2641,
+      "field_va": "0x10002c61",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2656,
+      "field_va": "0x10002c70",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2690,
+      "field_va": "0x10002c92",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2704,
+      "field_va": "0x10002ca0",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2749,
+      "field_va": "0x10002ccd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2775,
+      "field_va": "0x10002ce7",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2800,
+      "field_va": "0x10002d00",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2817,
+      "field_va": "0x10002d11",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2850,
+      "field_va": "0x10002d32",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2874,
+      "field_va": "0x10002d4a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2899,
+      "field_va": "0x10002d63",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2918,
+      "field_va": "0x10002d76",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2947,
+      "field_va": "0x10002d93",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2971,
+      "field_va": "0x10002dab",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2996,
+      "field_va": "0x10002dc4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3013,
+      "field_va": "0x10002dd5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3046,
+      "field_va": "0x10002df6",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3072,
+      "field_va": "0x10002e10",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3097,
+      "field_va": "0x10002e29",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3112,
+      "field_va": "0x10002e38",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3141,
+      "field_va": "0x10002e55",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3167,
+      "field_va": "0x10002e6f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3192,
+      "field_va": "0x10002e88",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3207,
+      "field_va": "0x10002e97",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3239,
+      "field_va": "0x10002eb7",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3273,
+      "field_va": "0x10002ed9",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3309,
+      "field_va": "0x10002efd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3325,
+      "field_va": "0x10002f0d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3361,
+      "field_va": "0x10002f31",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3380,
+      "field_va": "0x10002f44",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3433,
+      "field_va": "0x10002f79",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3459,
+      "field_va": "0x10002f93",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3484,
+      "field_va": "0x10002fac",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3499,
+      "field_va": "0x10002fbb",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3531,
+      "field_va": "0x10002fdb",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10008e40",
+      "field_offset": 40,
+      "field_va": "0x10008e68",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10008e40",
+      "field_offset": 92,
+      "field_va": "0x10008e9c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10009120",
+      "field_offset": 305,
+      "field_va": "0x10009251",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10009120",
+      "field_offset": 337,
+      "field_va": "0x10009271",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A952",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x1000cf80",
+      "field_offset": 78,
+      "field_va": "0x1000cfce",
+      "symbol": "_HeapAlloc@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A910",
+        "iat_va": "0x10022040",
+        "thunk_symbol": "IVF_API_CALL_HeapAlloc_12"
+      }
+    },
+    {
+      "owner_entry_va": "0x100116db",
+      "field_offset": 37,
+      "field_va": "0x10011700",
+      "symbol": "_GetLastError@0",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A904",
+        "iat_va": "0x10022070",
+        "thunk_symbol": "IVF_API_CALL_GetLastError_0"
+      }
+    },
+    {
+      "owner_entry_va": "0x10011872",
+      "field_offset": 7,
+      "field_va": "0x10011879",
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A8E0",
+        "iat_va": "0x10022060",
+        "thunk_symbol": "IVF_API_CALL_DecodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10012a86",
+      "field_offset": 38,
+      "field_va": "0x10012aac",
+      "symbol": "_Sleep@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A946",
+        "iat_va": "0x10022088",
+        "thunk_symbol": "IVF_API_CALL_Sleep_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10014c40",
+      "field_offset": 3,
+      "field_va": "0x10014c43",
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A8E6",
+        "iat_va": "0x1002205C",
+        "thunk_symbol": "IVF_API_CALL_EncodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10014f39",
+      "field_offset": 70,
+      "field_va": "0x10014f7f",
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A8E0",
+        "iat_va": "0x10022060",
+        "thunk_symbol": "IVF_API_CALL_DecodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017a33",
+      "field_offset": 10,
+      "field_va": "0x10017a3d",
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A8E6",
+        "iat_va": "0x1002205C",
+        "thunk_symbol": "IVF_API_CALL_EncodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017a94",
+      "field_offset": 54,
+      "field_va": "0x10017aca",
+      "symbol": "_HeapAlloc@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A910",
+        "iat_va": "0x10022040",
+        "thunk_symbol": "IVF_API_CALL_HeapAlloc_12"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017b16",
+      "field_offset": 106,
+      "field_va": "0x10017b80",
+      "symbol": "_GetLastError@0",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A904",
+        "iat_va": "0x10022070",
+        "thunk_symbol": "IVF_API_CALL_GetLastError_0"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017ce9",
+      "field_offset": 83,
+      "field_va": "0x10017d3c",
+      "symbol": "_InitializeCriticalSectionAndSpinCount@8",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A91C",
+        "iat_va": "0x100220A8",
+        "thunk_symbol": "IVF_API_CALL_InitializeCriticalSectionAndSpinCount_8"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017dab",
+      "field_offset": 34,
+      "field_va": "0x10017dcd",
+      "symbol": "_EnterCriticalSection@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A8EC",
+        "iat_va": "0x10022098",
+        "thunk_symbol": "IVF_API_CALL_EnterCriticalSection_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017e62",
+      "field_offset": 6,
+      "field_va": "0x10017e68",
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A8E6",
+        "iat_va": "0x1002205C",
+        "thunk_symbol": "IVF_API_CALL_EncodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017ec8",
+      "field_offset": 7,
+      "field_va": "0x10017ecf",
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x1005A8E0",
+        "iat_va": "0x10022060",
+        "thunk_symbol": "IVF_API_CALL_DecodePointer_4"
+      }
+    }
+  ]
+}

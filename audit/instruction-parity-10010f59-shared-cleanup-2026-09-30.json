@@ -1,0 +1,22 @@
+{
+  "scope": "Normalized instruction-stream comparison; direct call destinations and absolute data addresses are intentionally not verified here.",
+  "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10010f59.json",
+  "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\target-10010f59-shared-ghidra-cleanup-20260930\\10010f59.obj",
+  "ghidra_sha256": "D44299FBE2B1B1B9624E73F50F952A1FFA38942142EB2C2D94F1B6A98BFE8319",
+  "object_sha256": "AF4440EBAF8D40E02924BC78220F9BF0F13661B256D4D704521A935451761C18",
+  "ghidra_instruction_count": 99,
+  "coff_instruction_count": 99,
+  "normalized_instruction_stream_matches": false,
+  "differences": [
+    {
+      "index": 77,
+      "ghidra": "push edi",
+      "coff": "push 0"
+    },
+    {
+      "index": 92,
+      "ghidra": "push edi",
+      "coff": "push 0"
+    }
+  ]
+}

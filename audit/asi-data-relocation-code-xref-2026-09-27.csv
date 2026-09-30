@@ -1,0 +1,2 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+1001af2b,".text","LAB_1001af2b[Label,DEFAULT,primary]","1001af2b:PUSH 0x2","10015c18:DATA@100154dc:__output_l|10015c65:DATA@100154dc:__output_l|10015c44:DATA@100154dc:__output_l|100121a3:DATA@100119f1:__input_l|10017a39:DATA@10017a33:__initp_misc_cfltcvt_tab|10029d5c:DATA|10029d58:DATA|10029d64:DATA|10029d60:DATA|10029d40:DATA|10029d44:DATA|10029d48:DATA|10029d4c:DATA|10029d50:DATA|10029d54:DATA"

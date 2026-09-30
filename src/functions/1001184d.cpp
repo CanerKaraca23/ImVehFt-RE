@@ -15,7 +15,7 @@ extern "C" int __stdcall TerminateProcess(
     HANDLE hProcess,
     UINT uExitCode);
 
-void __cdecl __invoke_watson(
+extern "C" void __cdecl __invoke_watson(
     wchar_t* ,
     wchar_t* ,
     wchar_t* ,

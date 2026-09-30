@@ -3,10 +3,19 @@
 #include <corecrt.h>
 #include <stdio.h>
 #pragma warning(disable:4733)
-__declspec(naked) void __cdecl __SEH_prolog4(void)
+
+extern "C" std::uint32_t __cdecl __except_handler4(
+    void*,
+    void*,
+    std::uint32_t);
+extern "C" std::uint32_t DAT_10029490;
+
+extern "C" __declspec(naked) void __cdecl __SEH_prolog4(
+    std::uint32_t,
+    int)
 {
     __asm {
-        push 10012E90h
+        push OFFSET __except_handler4
         push dword ptr fs:[0]
         mov eax, dword ptr [esp + 10h]
         mov dword ptr [esp + 10h], ebp
@@ -15,7 +24,7 @@ __declspec(naked) void __cdecl __SEH_prolog4(void)
         push ebx
         push esi
         push edi
-        mov eax, 10029490h
+        mov eax, OFFSET DAT_10029490
         mov eax, dword ptr [eax]
         xor dword ptr [ebp - 4], eax
         xor eax, ebp

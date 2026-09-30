@@ -1,0 +1,11 @@
+{
+  "scope": "Compares the root .xcode bytes, COFF relocation records, and section identity; ignores COFF container metadata.",
+  "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\entry-trampoline-feasibility-conservative-425-thunks-fclose-dual-linkage-2026-09-29.json",
+  "first_objects": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-fclose-dual-linkage-20260929",
+  "second_objects": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-finalfresh-20260929",
+  "candidate_count": 705,
+  "body_byte_mismatches": 0,
+  "relocation_mismatches": 0,
+  "section_number_mismatches": 0,
+  "mismatches": []
+}

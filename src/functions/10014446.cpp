@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 #include <windows.h>
 
@@ -31,13 +32,13 @@ extern "C" void __cdecl _free(void*);
 extern "C" void __cdecl __amsg_exit(int);
 extern "C" void __stdcall FUN_100144e1();
 
-pthreadmbcinfo __cdecl ___updatetmbcinfo(void)
+extern "C" pthreadmbcinfo __cdecl ___updatetmbcinfo(void)
 {
     _ptiddata p_Var1;
     LONG LVar2;
     pthreadmbcinfo lpAddend;
 
-    __SEH_prolog4(0x10028370u, 0x0c);
+    __SEH_prolog4(IVF_IMAGE_ADDRESS_10028370, 0x0c);
     p_Var1 = __getptd();
 
     if (((p_Var1->_ownlocale & DAT_100299c0) == 0) ||

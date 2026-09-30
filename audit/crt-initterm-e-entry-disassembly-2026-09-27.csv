@@ -1,0 +1,45 @@
+target_va,instruction_va,instruction_bytes,instruction,function_owner,decode_status
+100104bc,100104bc,"8B FF","MOV EDI,EDI","",disassembled-in-memory
+100104bc,100104be,"56","PUSH ESI","",existing-instruction
+100104bc,100104bf,"6A 04","PUSH 0x4","",existing-instruction
+100104bc,100104c1,"6A 20","PUSH 0x20","",existing-instruction
+100104bc,100104c3,"E8 72 25 00 00","CALL 0x10012a3a","",existing-instruction
+100104bc,100104c8,"59","POP ECX","",existing-instruction
+100104bc,100104c9,"59","POP ECX","",existing-instruction
+100104bc,100104ca,"8B F0","MOV ESI,EAX","",existing-instruction
+100104bc,100104cc,"56","PUSH ESI","",existing-instruction
+100104bc,100104cd,"FF 15 5C 20 02 10","CALL dword ptr [0x1002205c]","",existing-instruction
+100104bc,100104d3,"A3 4C D5 03 10","MOV [0x1003d54c],EAX","",existing-instruction
+100104bc,100104d8,"A3 48 D5 03 10","MOV [0x1003d548],EAX","",existing-instruction
+100104bc,100104dd,"85 F6","TEST ESI,ESI","",existing-instruction
+100104bc,100104df,"75 05","JNZ 0x100104e6","",existing-instruction
+100104bc,100104e1,"6A 18","PUSH 0x18","",existing-instruction
+100104bc,100104e3,"58","POP EAX","",existing-instruction
+100104bc,100104e4,"5E","POP ESI","",existing-instruction
+100104bc,100104e5,"C3","RET","",existing-instruction
+10013025,10013025,"A1 40 D5 03 10","MOV EAX,[0x1003d540]","",disassembled-in-memory
+10013025,1001302a,"56","PUSH ESI","",existing-instruction
+10013025,1001302b,"6A 14","PUSH 0x14","",existing-instruction
+10013025,1001302d,"5E","POP ESI","",existing-instruction
+10013025,1001302e,"85 C0","TEST EAX,EAX","",existing-instruction
+10013025,10013030,"75 07","JNZ 0x10013039","",existing-instruction
+10013025,10013032,"B8 00 02 00 00","MOV EAX,0x200","",existing-instruction
+10013025,10013037,"EB 06","JMP 0x1001303f","",existing-instruction
+100148e9,100148e9,"83 3D 50 D5 03 10 00","CMP dword ptr [0x1003d550],0x0","",disassembled-in-memory
+100148e9,100148f0,"75 12","JNZ 0x10014904","",existing-instruction
+100148e9,100148f2,"6A FD","PUSH -0x3","",existing-instruction
+100148e9,100148f4,"E8 56 FE FF FF","CALL 0x1001474f","",existing-instruction
+100148e9,100148f9,"59","POP ECX","",existing-instruction
+100148e9,100148fa,"C7 05 50 D5 03 10 01 00 00 00","MOV dword ptr [0x1003d550],0x1","",existing-instruction
+100148e9,10014904,"33 C0","XOR EAX,EAX","",existing-instruction
+100148e9,10014906,"C3","RET","",existing-instruction
+1001704c,1001704c,"6A 0A","PUSH 0xa","",disassembled-in-memory
+1001704c,1001704e,"FF 15 0C 21 02 10","CALL dword ptr [0x1002210c]","",existing-instruction
+1001704c,10017054,"A3 14 C4 03 10","MOV [0x1003c414],EAX","",existing-instruction
+1001704c,10017059,"33 C0","XOR EAX,EAX","",existing-instruction
+1001704c,1001705b,"C3","RET","",existing-instruction
+1001c5e0,1001c5e0,"6A 0A","PUSH 0xa","",disassembled-in-memory
+1001c5e0,1001c5e2,"FF 15 0C 21 02 10","CALL dword ptr [0x1002210c]","",existing-instruction
+1001c5e0,1001c5e8,"A3 0C C4 03 10","MOV [0x1003c40c],EAX","",existing-instruction
+1001c5e0,1001c5ed,"33 C0","XOR EAX,EAX","",existing-instruction
+1001c5e0,1001c5ef,"C3","RET","",existing-instruction

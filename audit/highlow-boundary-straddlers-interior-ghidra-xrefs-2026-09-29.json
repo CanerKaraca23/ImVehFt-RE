@@ -1,0 +1,299 @@
+{
+  "straddler_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\highlow-boundary-straddlers-disassembly-1001cb37-2026-09-29.json",
+  "ghidra_reference_csv": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\text-nonentry-reference-audit-20260929.csv",
+  "saved_ghidra_nonentry_reference_rows": 437,
+  "straddler_entry_count": 44,
+  "nonentry_references_inside_candidate_spans_after_entry_patch_window": 6,
+  "entries_with_such_references": 1,
+  "reference_type_counts": {
+    "DATA": 6
+  },
+  "limitations": [
+    "This uses the saved Ghidra reference export and its reference types; absence of a static xref does not exclude computed/runtime references.",
+    "DATA references may be jump-table/data references embedded in .text; this report does not decide runtime reachability or whether old code must remain.",
+    "No PE bytes are modified; this is not validation of a thunked full image."
+  ],
+  "entries": [
+    {
+      "entry_va": "0x10001770",
+      "candidate_body_end_exclusive": "0x1000181b",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10004bb0",
+      "candidate_body_end_exclusive": "0x10004bba",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100060d0",
+      "candidate_body_end_exclusive": "0x1000631b",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": [
+        {
+          "target_va": "10006292",
+          "source_va": "10006324",
+          "source_function_va": "",
+          "source_function": "<no-containing-function>",
+          "target_function_va": "100060d0",
+          "target_function": "FUN_100060d0",
+          "reference_type": "DATA",
+          "target_offset_from_entry": "450"
+        },
+        {
+          "target_va": "100062d8",
+          "source_va": "1000632c",
+          "source_function_va": "",
+          "source_function": "<no-containing-function>",
+          "target_function_va": "100060d0",
+          "target_function": "FUN_100060d0",
+          "reference_type": "DATA",
+          "target_offset_from_entry": "520"
+        },
+        {
+          "target_va": "100062e4",
+          "source_va": "10006328",
+          "source_function_va": "",
+          "source_function": "<no-containing-function>",
+          "target_function_va": "100060d0",
+          "target_function": "FUN_100060d0",
+          "reference_type": "DATA",
+          "target_offset_from_entry": "532"
+        },
+        {
+          "target_va": "100062e4",
+          "source_va": "10006344",
+          "source_function_va": "",
+          "source_function": "<no-containing-function>",
+          "target_function_va": "100060d0",
+          "target_function": "FUN_100060d0",
+          "reference_type": "DATA",
+          "target_offset_from_entry": "532"
+        },
+        {
+          "target_va": "100062f9",
+          "source_va": "10006330",
+          "source_function_va": "",
+          "source_function": "<no-containing-function>",
+          "target_function_va": "100060d0",
+          "target_function": "FUN_100060d0",
+          "reference_type": "DATA",
+          "target_offset_from_entry": "553"
+        },
+        {
+          "target_va": "100062f9",
+          "source_va": "10006348",
+          "source_function_va": "",
+          "source_function": "<no-containing-function>",
+          "target_function_va": "100060d0",
+          "target_function": "FUN_100060d0",
+          "reference_type": "DATA",
+          "target_offset_from_entry": "553"
+        }
+      ]
+    },
+    {
+      "entry_va": "0x1000cdc0",
+      "candidate_body_end_exclusive": "0x1000cf52",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100101c2",
+      "candidate_body_end_exclusive": "0x100101ea",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10010406",
+      "candidate_body_end_exclusive": "0x100104ad",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10011715",
+      "candidate_body_end_exclusive": "0x1001171f",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x1001184d",
+      "candidate_body_end_exclusive": "0x1001186e",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10012b84",
+      "candidate_body_end_exclusive": "0x10012b99",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100130f6",
+      "candidate_body_end_exclusive": "0x10013132",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10013137",
+      "candidate_body_end_exclusive": "0x10013164",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10013efc",
+      "candidate_body_end_exclusive": "0x10013f06",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10014bc7",
+      "candidate_body_end_exclusive": "0x10014c15",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10016cc6",
+      "candidate_body_end_exclusive": "0x10016cd1",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10016cec",
+      "candidate_body_end_exclusive": "0x10016cf7",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x1001708f",
+      "candidate_body_end_exclusive": "0x100170ad",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100172be",
+      "candidate_body_end_exclusive": "0x100172c8",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10017e2a",
+      "candidate_body_end_exclusive": "0x10017e40",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10017e73",
+      "candidate_body_end_exclusive": "0x10017e8c",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10018078",
+      "candidate_body_end_exclusive": "0x10018082",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100181dc",
+      "candidate_body_end_exclusive": "0x10018253",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100191a6",
+      "candidate_body_end_exclusive": "0x100191c9",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x1001b1a5",
+      "candidate_body_end_exclusive": "0x1001b1cb",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020a90",
+      "candidate_body_end_exclusive": "0x10020ae3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020af0",
+      "candidate_body_end_exclusive": "0x10020b43",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020b50",
+      "candidate_body_end_exclusive": "0x10020ba3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020bb0",
+      "candidate_body_end_exclusive": "0x10020c03",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020c10",
+      "candidate_body_end_exclusive": "0x10020c63",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020c70",
+      "candidate_body_end_exclusive": "0x10020cc3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020cd0",
+      "candidate_body_end_exclusive": "0x10020d23",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020d30",
+      "candidate_body_end_exclusive": "0x10020d83",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020d90",
+      "candidate_body_end_exclusive": "0x10020de3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020df0",
+      "candidate_body_end_exclusive": "0x10020e43",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020e50",
+      "candidate_body_end_exclusive": "0x10020ea3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020eb0",
+      "candidate_body_end_exclusive": "0x10020f03",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020f10",
+      "candidate_body_end_exclusive": "0x10020f63",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020f70",
+      "candidate_body_end_exclusive": "0x10020fc3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10020fd0",
+      "candidate_body_end_exclusive": "0x10021023",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10021030",
+      "candidate_body_end_exclusive": "0x10021083",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10021090",
+      "candidate_body_end_exclusive": "0x100210e3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100210f0",
+      "candidate_body_end_exclusive": "0x10021143",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10021150",
+      "candidate_body_end_exclusive": "0x100211a3",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x100211b0",
+      "candidate_body_end_exclusive": "0x10021203",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    },
+    {
+      "entry_va": "0x10021210",
+      "candidate_body_end_exclusive": "0x10021263",
+      "ghidra_nonentry_references_after_five_byte_thunk_window": []
+    }
+  ]
+}

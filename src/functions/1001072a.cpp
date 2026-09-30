@@ -1,6 +1,6 @@
 #include <cstdio>
 
-extern "C" void __cdecl __unlock_file(FILE*);
+void __cdecl __unlock_file(FILE*);
 
 extern "C" __declspec(naked) void __stdcall FUN_1001072a()
 {

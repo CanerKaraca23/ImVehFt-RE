@@ -52,7 +52,7 @@ extern "C" BOOL __cdecl ___crtGetStringTypeA(
 
 #include <cstdint>
 
-int __cdecl __isctype_l(int _C, int _Type, _locale_t _Locale)
+extern "C" int __cdecl __isctype_l(int _C, int _Type, _locale_t _Locale)
 {
     int iVar1;
     BOOL BVar2;

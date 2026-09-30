@@ -1,0 +1,14 @@
+{
+  "scope": "review inventory of unresolved decorated names whose embedded VA falls inside original .rdata/.data; not proof of ABI or runtime relocation correctness",
+  "link_log": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\link-probe\\entry-exact-nogs-o1-current-aliases-20260929\\current-alias-link.log",
+  "link_log_sha256": "3be1369c3e11c1758d017aeb520b611b7075a5c8ae8f5ce4b141883edf55942f",
+  "reference_image": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\modloader\\My Scripts\\.ImVehFt\\ImVehFt.asi",
+  "reference_image_sha256": "409f0df7ae579841db05c3ec6dad0a9afc579194632874962e1bdee0ccf020d3",
+  "unique_linker_message_tokens_scanned": 214,
+  "exact_address_bearing_data_aliases": 82,
+  "aliases_by_section": {
+    ".data": 70,
+    ".rdata": 12
+  },
+  "tokens_without_an_exact_data_alias": 132
+}

@@ -1,0 +1,342 @@
+{
+  "scope": "Normalized instruction-stream comparison; direct call destinations and absolute data addresses are intentionally not verified here.",
+  "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10010f59.json",
+  "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-seh-callsite-audit-fixes-20260930\\10010f59.obj",
+  "ghidra_sha256": "D44299FBE2B1B1B9624E73F50F952A1FFA38942142EB2C2D94F1B6A98BFE8319",
+  "object_sha256": "3661F06A1D5EFC7E19E8F8EBDB6BCA243AD07B6ED9F53360F1C74B21916AC884",
+  "ghidra_instruction_count": 99,
+  "coff_instruction_count": 103,
+  "normalized_instruction_stream_matches": false,
+  "differences": [
+    {
+      "index": 5,
+      "ghidra": "jne <bb041>",
+      "coff": "jne <bb043>"
+    },
+    {
+      "index": 10,
+      "ghidra": "jmp <bb097>",
+      "coff": "jmp <bb100>"
+    },
+    {
+      "index": 15,
+      "ghidra": "jmp <bb009>",
+      "coff": "jmp <bb100>"
+    },
+    {
+      "index": 25,
+      "ghidra": "jmp <bb014>",
+      "coff": "jmp <bb041>"
+    },
+    {
+      "index": 38,
+      "ghidra": "jmp <bb095>",
+      "coff": "jmp <bb097>"
+    },
+    {
+      "index": 40,
+      "ghidra": "jmp <bb024>",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 41,
+      "ghidra": "xor edi,edi",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 42,
+      "ghidra": "cmp eax,edi",
+      "coff": "jmp <bb100>"
+    },
+    {
+      "index": 43,
+      "ghidra": "jne <bb059>",
+      "coff": "xor edi,edi"
+    },
+    {
+      "index": 44,
+      "ghidra": "cmp [abs],edi",
+      "coff": "cmp eax,edi"
+    },
+    {
+      "index": 45,
+      "ghidra": "jle <bb009>",
+      "coff": "jne <bb061>"
+    },
+    {
+      "index": 46,
+      "ghidra": "dec [abs]",
+      "coff": "cmp [abs],edi"
+    },
+    {
+      "index": 47,
+      "ghidra": "mov [ebp-4],edi",
+      "coff": "jle <bb100>"
+    },
+    {
+      "index": 48,
+      "ghidra": "cmp [abs],edi",
+      "coff": "dec [abs]"
+    },
+    {
+      "index": 49,
+      "ghidra": "jne <bb051>",
+      "coff": "mov [ebp-4],edi"
+    },
+    {
+      "index": 50,
+      "ghidra": "call DIRECT",
+      "coff": "cmp [abs],edi"
+    },
+    {
+      "index": 51,
+      "ghidra": "cmp [ebp+16],edi",
+      "coff": "jne <bb053>"
+    },
+    {
+      "index": 52,
+      "ghidra": "jne <bb056>",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 53,
+      "ghidra": "call DIRECT",
+      "coff": "cmp [ebp+16],edi"
+    },
+    {
+      "index": 54,
+      "ghidra": "call DIRECT",
+      "coff": "jne <bb058>"
+    },
+    {
+      "index": 56,
+      "ghidra": "mov [ebp-4],285960729236",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 58,
+      "ghidra": "jmp <bb095>",
+      "coff": "mov [ebp-4],285960729236"
+    },
+    {
+      "index": 59,
+      "ghidra": "cmp eax,2",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 60,
+      "ghidra": "jne <bb090>",
+      "coff": "jmp <bb097>"
+    },
+    {
+      "index": 61,
+      "ghidra": "call DIRECT",
+      "coff": "cmp eax,2"
+    },
+    {
+      "index": 62,
+      "ghidra": "push 532",
+      "coff": "jne <bb092>"
+    },
+    {
+      "index": 63,
+      "ghidra": "push 1",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 64,
+      "ghidra": "call DIRECT",
+      "coff": "push 532"
+    },
+    {
+      "index": 65,
+      "ghidra": "pop ecx",
+      "coff": "push 1"
+    },
+    {
+      "index": 66,
+      "ghidra": "pop ecx",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 67,
+      "ghidra": "mov esi,eax",
+      "coff": "pop ecx"
+    },
+    {
+      "index": 68,
+      "ghidra": "cmp esi,edi",
+      "coff": "pop ecx"
+    },
+    {
+      "index": 69,
+      "ghidra": "je <bb009>",
+      "coff": "mov esi,eax"
+    },
+    {
+      "index": 70,
+      "ghidra": "push esi",
+      "coff": "test esi,esi"
+    },
+    {
+      "index": 71,
+      "ghidra": "push [abs]",
+      "coff": "je <bb100>"
+    },
+    {
+      "index": 72,
+      "ghidra": "push [abs]",
+      "coff": "push esi"
+    },
+    {
+      "index": 73,
+      "ghidra": "call dword ptr [abs]",
+      "coff": "push [abs]"
+    },
+    {
+      "index": 74,
+      "ghidra": "call eax",
+      "coff": "push [abs]"
+    },
+    {
+      "index": 75,
+      "ghidra": "test eax,eax",
+      "coff": "call dword ptr [abs]"
+    },
+    {
+      "index": 76,
+      "ghidra": "je <bb086>",
+      "coff": "call eax"
+    },
+    {
+      "index": 77,
+      "ghidra": "push edi",
+      "coff": "test eax,eax"
+    },
+    {
+      "index": 78,
+      "ghidra": "push esi",
+      "coff": "je <bb088>"
+    },
+    {
+      "index": 79,
+      "ghidra": "call DIRECT",
+      "coff": "push 0"
+    },
+    {
+      "index": 80,
+      "ghidra": "pop ecx",
+      "coff": "push esi"
+    },
+    {
+      "index": 81,
+      "ghidra": "pop ecx",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 82,
+      "ghidra": "call dword ptr [abs]",
+      "coff": "pop ecx"
+    },
+    {
+      "index": 83,
+      "ghidra": "mov [esi],eax",
+      "coff": "pop ecx"
+    },
+    {
+      "index": 84,
+      "ghidra": "or [esi+4],285960729237",
+      "coff": "call dword ptr [abs]"
+    },
+    {
+      "index": 85,
+      "ghidra": "jmp <bb095>",
+      "coff": "mov [esi],eax"
+    },
+    {
+      "index": 86,
+      "ghidra": "push esi",
+      "coff": "or [esi+4],285960729237"
+    },
+    {
+      "index": 87,
+      "ghidra": "call DIRECT",
+      "coff": "jmp <bb097>"
+    },
+    {
+      "index": 88,
+      "ghidra": "pop ecx",
+      "coff": "push esi"
+    },
+    {
+      "index": 89,
+      "ghidra": "jmp <bb009>",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 90,
+      "ghidra": "cmp eax,3",
+      "coff": "pop ecx"
+    },
+    {
+      "index": 91,
+      "ghidra": "jne <bb095>",
+      "coff": "jmp <bb100>"
+    },
+    {
+      "index": 92,
+      "ghidra": "push edi",
+      "coff": "cmp eax,3"
+    },
+    {
+      "index": 93,
+      "ghidra": "call DIRECT",
+      "coff": "jne <bb097>"
+    },
+    {
+      "index": 94,
+      "ghidra": "pop ecx",
+      "coff": "push 0"
+    },
+    {
+      "index": 95,
+      "ghidra": "xor eax,eax",
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 96,
+      "ghidra": "inc eax",
+      "coff": "pop ecx"
+    },
+    {
+      "index": 97,
+      "ghidra": "call DIRECT",
+      "coff": "xor eax,eax"
+    },
+    {
+      "index": 98,
+      "ghidra": "ret 12",
+      "coff": "inc eax"
+    },
+    {
+      "index": 99,
+      "ghidra": null,
+      "coff": "jmp <bb101>"
+    },
+    {
+      "index": 100,
+      "ghidra": null,
+      "coff": "xor eax,eax"
+    },
+    {
+      "index": 101,
+      "ghidra": null,
+      "coff": "call DIRECT"
+    },
+    {
+      "index": 102,
+      "ghidra": null,
+      "coff": "ret 12"
+    }
+  ]
+}

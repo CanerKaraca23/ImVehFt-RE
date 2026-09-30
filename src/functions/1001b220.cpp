@@ -5,24 +5,27 @@
 extern "C" __declspec(naked) void __stdcall __alloca_probe()
 {
     __asm {
-        mov     ecx, esp
+        push    ecx
+        lea     ecx, [esp + 4]
         sub     ecx, eax
-        sbb     edx, edx
-        not     edx
-        and     ecx, edx
+        sbb     eax, eax
+        not     eax
+        and     ecx, eax
 
-        lea     edx, [esp - 4]
-        and     edx, 0FFFFF000h
-
+        mov     eax, esp
+        and     eax, 0FFFFF000h
     probe_loop:
-        cmp     ecx, edx
-        jae     probe_done
-        sub     edx, 400h
-        jmp     probe_loop
-
-    probe_done:
-        mov     eax, [esp]
-        mov     [ecx], eax
+        cmp     ecx, eax
+        jb      probe_page
+        mov     eax, ecx
+        pop     ecx
+        xchg    esp, eax
+        mov     eax, [eax]
+        mov     [esp], eax
         ret
+    probe_page:
+        sub     eax, 1000h
+        test    dword ptr [eax], eax
+        jmp     probe_loop
     }
 }

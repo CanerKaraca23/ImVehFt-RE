@@ -1,0 +1,47 @@
+FUNCTION FUN_004c83e0 @ 004c83e0
+004c83e0  PUSH ESI
+004c83e1  MOV ESI,dword ptr [ESP + 0x8]
+004c83e5  TEST byte ptr [ESI + 0x2],0x4
+004c83e9  JZ 0x004c8423
+004c83eb  PUSH EDI
+004c83ec  PUSH ESI
+004c83ed  CALL 0x00732370
+004c83f2  MOV EDI,dword ptr [ESP + 0x14]
+004c83f6  ADD ESP,0x4
+004c83f9  TEST AH,0x10
+004c83fc  JZ 0x004c8410
+004c83fe  MOV EAX,dword ptr [ESI + 0x18]
+004c8401  PUSH EDI
+004c8402  PUSH 0x4c83b0
+004c8407  PUSH EAX
+004c8408  CALL 0x0074c790
+004c840d  ADD ESP,0xc
+004c8410  MOV ECX,dword ptr [ESI + 0x18]
+004c8413  PUSH EDI
+004c8414  PUSH 0x4c8220
+004c8419  PUSH ECX
+004c841a  CALL 0x0074c790
+004c841f  ADD ESP,0xc
+004c8422  POP EDI
+004c8423  MOV EAX,ESI
+004c8425  POP ESI
+004c8426  RET
+
+DECOMPILED SOURCE
+
+int FUN_004c83e0(int param_1,undefined4 param_2)
+
+{
+  uint uVar1;
+  
+  if ((*(byte *)(param_1 + 2) & 4) != 0) {
+    uVar1 = FUN_00732370(param_1);
+    if ((uVar1 & 0x1000) != 0) {
+      FUN_0074c790(*(undefined4 *)(param_1 + 0x18),&LAB_004c83b0,param_2);
+    }
+    FUN_0074c790(*(undefined4 *)(param_1 + 0x18),&LAB_004c8220,param_2);
+  }
+  return param_1;
+}
+
+

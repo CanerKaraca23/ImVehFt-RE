@@ -1,0 +1,8 @@
+entry,cfg_instruction_count,body_min,body_max,body_byte_count,decompile_completed,status
+0x00801D50,73,00801d50,00801df8,169,yes,"bounded_cfg_decompilation"
+0x00801E00,57,00801e00,00801e89,138,yes,"bounded_cfg_decompilation"
+0x00801E90,100,00801e90,00801f8d,254,yes,"bounded_cfg_decompilation"
+0x008020F0,106,008020f0,00802227,312,yes,"bounded_cfg_decompilation"
+0x008026E0,30,008026e0,00802736,87,yes,"bounded_cfg_decompilation"
+0x00802740,28,00802740,00802795,86,yes,"bounded_cfg_decompilation"
+0x008027A0,77,008027a0,0080285b,188,yes,"bounded_cfg_decompilation"

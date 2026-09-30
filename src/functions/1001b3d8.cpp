@@ -1,6 +1,5 @@
 #include <cstdint>
 
-extern "C" void __cdecl FUN_1001ca2e(void);
 extern "C" std::uint16_t DAT_100258e8;
 extern "C" void DAT_100258ea(void);
 extern "C" void DAT_100258b0(void);
@@ -28,7 +27,7 @@ L_sin_fsin:
 L_sin_check_errno:
         cmp dword ptr [DAT_1003c404], 0
         jz L_sin_errno_ok
-        jmp FUN_1001ca2e
+        jmp L_sin_shared_restore
     L_sin_errno_ok:
         mov edx, 01eh
         lea ecx, DAT_10039570
@@ -58,7 +57,7 @@ L_sin_zero_flag:
 L_sin_report:
         cmp dword ptr [DAT_1003c404], 0
         jz L_sin_report_ok
-        jmp FUN_1001ca2e
+        jmp L_sin_shared_restore
     L_sin_report_ok:
         mov edx, 01eh
         lea ecx, DAT_10039570
@@ -66,6 +65,13 @@ L_sin_report:
         pop edx
         ret
 
+    L_sin_shared_restore:
+        cmp word ptr [esp], 027fh
+        jz L_sin_shared_restore_done
+        fldcw word ptr [esp]
+    L_sin_shared_restore_done:
+        pop edx
+        ret
 
     }
 }

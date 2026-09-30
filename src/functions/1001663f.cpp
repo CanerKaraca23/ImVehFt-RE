@@ -1,7 +1,7 @@
 #include <cstdint>
 
 extern "C" void __cdecl __SEH_prolog4();
-extern "C" void __cdecl __SEH_epilog4();
+extern "C" void __stdcall __SEH_epilog4(void);
 
 extern "C" unsigned long* __cdecl ___doserrno();
 extern "C" int* __cdecl __errno();

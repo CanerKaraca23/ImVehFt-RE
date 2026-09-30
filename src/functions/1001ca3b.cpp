@@ -8,7 +8,12 @@ extern "C" long double __fastcall __startOneArgErrorHandling(
     std::uint32_t param_5,
     std::uint32_t param_6);
 
-extern "C" __declspec(naked) void __cdecl __math_exit()
+extern "C" __declspec(naked) void __fastcall __math_exit(
+    std::uint32_t,
+    int,
+    std::uint32_t,
+    std::uint32_t,
+    std::uint32_t)
 {
     __asm
     {

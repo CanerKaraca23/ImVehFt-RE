@@ -1,0 +1,29 @@
+FUNCTION FUN_10007c80 @ 10007c80
+10007c80  CMP byte ptr [0x10069d2c],0x0
+10007c87  JNZ 0x10007ca1
+10007c89  CMP ECX,0x746fa0
+10007c8f  JBE 0x10007ca1
+10007c91  CMP ECX,0x7bb240
+10007c97  JNC 0x10007c9d
+10007c99  LEA EAX,[ECX + -0x50]
+10007c9c  RET
+10007c9d  LEA EAX,[ECX + -0x40]
+10007ca0  RET
+10007ca1  MOV EAX,ECX
+10007ca3  RET
+
+DECOMPILED SOURCE
+
+uint __fastcall FUN_10007c80(uint param_1)
+
+{
+  if ((DAT_10069d2c == '\0') && (0x746fa0 < param_1)) {
+    if (param_1 < 0x7bb240) {
+      return param_1 - 0x50;
+    }
+    return param_1 - 0x40;
+  }
+  return param_1;
+}
+
+

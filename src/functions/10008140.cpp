@@ -1,26 +1,13 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 extern "C" {
-    extern std::int32_t DAT_1003c1f4;
-    extern char DAT_1003a6c8[0x200];
-    extern char DAT_1003a8c8[];
-    extern char DAT_1003bc80[];
-    extern std::int32_t DAT_1003aac8;
-    extern std::uint32_t DAT_1003c208[0x10];
-    extern std::uint32_t DAT_1003bbb4;
-    extern std::uint32_t DAT_1003bc7c;
-    extern std::uint32_t DAT_1003bc1c;
-    extern std::uint32_t DAT_1003bc08;
-    extern std::uint16_t DAT_1003bd8c;
-    extern std::uint32_t DAT_1003c1f8;
-
-    extern const std::uint32_t s_tyrewall_dirt_1_100249a8[4];
-
     int strcpy_s(char* destination, std::uint32_t destination_size,
                   const char* source);
     int strcat_s(char* destination, std::uint32_t destination_size,
                   const char* source);
-    int _sprintf(char* buffer, const char* format, ...);
+    int sprintf(char* buffer, const char* format, ...);
 
     extern "C" void __cdecl FUN_100014c0(const char* message);
     std::uint32_t __cdecl FUN_10001b90(const char* pattern, void* callback);
@@ -59,6 +46,21 @@ extern "C" {
     extern void* FUN_10003810;
     extern void* FUN_10001040;
 }
+
+static std::int32_t& DAT_1003c1f4 = IMVEHFT_GLOBAL_AT(std::int32_t, IVF_IMAGE_ADDRESS_1003C1F4);
+static char (&DAT_1003a6c8)[0x200] = *reinterpret_cast<char (*)[0x200]>(IVF_IMAGE_ADDRESS_1003A6C8);
+static char (&DAT_1003a8c8)[1] = *reinterpret_cast<char (*)[1]>(IVF_IMAGE_ADDRESS_1003A8C8);
+static char (&DAT_1003bc80)[1] = *reinterpret_cast<char (*)[1]>(IVF_IMAGE_ADDRESS_1003BC80);
+static std::int32_t& DAT_1003aac8 = IMVEHFT_GLOBAL_AT(std::int32_t, IVF_IMAGE_ADDRESS_1003AAC8);
+static std::uint32_t (&DAT_1003c208)[0x10] = *reinterpret_cast<std::uint32_t (*)[0x10]>(IVF_IMAGE_ADDRESS_1003C208);
+static std::uint32_t& DAT_1003bbb4 = IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003BBB4);
+static std::uint32_t& DAT_1003bc7c = IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003BC7C);
+static std::uint32_t& DAT_1003bc1c = IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003BC1C);
+static std::uint32_t& DAT_1003bc08 = IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003BC08);
+static std::uint16_t& DAT_1003bd8c = IMVEHFT_GLOBAL_AT(std::uint16_t, IVF_IMAGE_ADDRESS_1003BD8C);
+static std::uint32_t& DAT_1003c1f8 = IMVEHFT_GLOBAL_AT(std::uint32_t, IVF_IMAGE_ADDRESS_1003C1F8);
+static const std::uint32_t (&s_tyrewall_dirt_1_100249a8)[4] =
+    *reinterpret_cast<const std::uint32_t (*)[4]>(IVF_IMAGE_ADDRESS_100249A8);
 
 std::uint32_t __stdcall FUN_10008140()
 {
@@ -150,7 +152,7 @@ std::uint32_t __stdcall FUN_10008140()
                   "ImVehFt\\tyres\\tyrewall_dirt_%d.png");
 
         iVar1 = iVar2 + 1;
-        _sprintf(local_7c, DAT_1003a6c8, iVar1);
+        sprintf(local_7c, DAT_1003a6c8, iVar1);
 
         DAT_1003aac8 = DAT_1003aac8 + 1;
         pcVar7 = "_tyre";

@@ -2,7 +2,7 @@
 
 using errno_t = int;
 
-extern "C" std::uint32_t __cdecl __control87(
+std::uint32_t __cdecl __control87(
     std::uint32_t newValue,
     std::uint32_t mask);
 

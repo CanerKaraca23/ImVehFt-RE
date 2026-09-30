@@ -1,10 +1,7 @@
 #include <cstdint>
+#include "locale_update_ctor_bridge.hpp"
 
 struct localeinfo_struct;
-
-using LocaleUpdateCtor = void(__thiscall*)(
-    void* self,
-    localeinfo_struct* locale);
 
 extern "C" int __cdecl x_ismbbtype_l(
     localeinfo_struct* param_1,
@@ -16,8 +13,12 @@ extern "C" int __cdecl x_ismbbtype_l(
     std::uint32_t uVar1;
     int iVar2;
 
-    // Ghidra 0x1001aa5d: ECX=update, pushed param_1, CALL 0x10010b1a.
-    reinterpret_cast<LocaleUpdateCtor>(0x10010b1a)(update, param_1);
+    // Preserve Ghidra's ECX=this / one-stack-argument __thiscall setup.
+    __asm {
+        lea ecx, update
+        push param_1
+        call IVF_LocaleUpdate_ctor_relocatable
+    }
 
     if ((*reinterpret_cast<const std::uint8_t*>(
              static_cast<std::uintptr_t>(

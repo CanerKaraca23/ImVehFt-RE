@@ -3,7 +3,7 @@
 #include <corecrt.h>
 #include <stdio.h>
 extern "C" void __stdcall __cfltcvt_init();
-extern "C" void __cdecl __setdefaultprecision();
+extern "C" void __stdcall __setdefaultprecision();
 
 extern "C" void __cdecl __fpmath(int param_1)
 {

@@ -1,0 +1,3852 @@
+{
+  "scope": "Executable-symbol relocations in the 284 direct-body candidate objects. Reports target evidence only; does not write PE fixups, choose final local section RVAs, or validate behavior/runtime.",
+  "inputs": {
+    "symbols": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\candidate-relocation-symbol-targets-ghidra-positive-2026-09-30-v2.json",
+    "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\placement-plan-conservative-ghidra-positive-2026-09-30.json",
+    "api_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\current-api-call-rel32-patch-plan-2026-09-30.json",
+    "iat_slots": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-import-slots-ghidra-positive-2026-09-30.json",
+    "installer_target_map": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\installer-target-thunks-2026-09-27.json",
+    "local_stubs": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\scripts\\reloc_local_code_stubs.py",
+    "ghidra_export_dir": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports",
+    "original_asi": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+    "original_asi_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+    "game_exe": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\gta_sa.exe",
+    "game_exe_sha256": "F01A00CE950FA40CA1ED59DF0E789848C6EDCF6405456274965885D0929343AC"
+  },
+  "summary": {
+    "direct_body_count": 284,
+    "executable_relocation_occurrences": 250,
+    "occurrences_by_classification": {
+      "address-encoded-gta-executable-text": 17,
+      "encoded-symbol-to-candidate-entry": 6,
+      "exact-generated-local-EH-funclet-stub": 2,
+      "exact-import-name-and-dll-to-original-iat": 23,
+      "exact-owner-and-relocation-field-API-thunk-plan": 139,
+      "known-same-object-code-symbol-awaiting-section-placement": 3,
+      "owner-assembly-literal-to-exact-ghidra-function": 1,
+      "owner-specific-ghidra-callee-name-and-original-text-va": 39,
+      "preserved-installer-target-manifest": 20
+    },
+    "unresolved_occurrences": 0,
+    "known_local_symbols_awaiting_final_rva": 3,
+    "api_plan_sites_joined_exactly": 139,
+    "api_plan_sites_expected": 139,
+    "all_api_plan_sites_joined_exactly": true
+  },
+  "limitations": [
+    "An IAT target classification does not generate a REL32 thunk or patch its callsite.",
+    "A candidate entry target does not prove code or object semantics.",
+    "GTA .text section membership confirms image range, not function identity or ABI.",
+    "Same-object local executable sections still need final placement and relocation application.",
+    "No PE/ASI bytes are written; no loader or GTA runtime test is performed."
+  ],
+  "rows": [
+    {
+      "owner_entry_va": "0x10001630",
+      "field_offset": 229,
+      "field_va": "0x10001715",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10001630.json",
+        "ghidra_export_sha256": "866F4C3F414D5A03A3A41D2BEB60A59E5A0A353F874FB10A189F6D557B138B77",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 10,
+      "field_va": "0x10001e8a",
+      "symbol": "_FUN_007ee4f0",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7ee4f0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 20,
+      "field_va": "0x10001e94",
+      "symbol": "_FUN_007f0410",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f0410",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 32,
+      "field_va": "0x10001ea0",
+      "symbol": "_FUN_00804ef0",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x804ef0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 45,
+      "field_va": "0x10001ead",
+      "symbol": "_FUN_007ee3a0",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7ee3a0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 72,
+      "field_va": "0x10001ec8",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10001e80.json",
+        "ghidra_export_sha256": "BC51BC1037AB51A39853AF5F6503DC76AF7A754A1A45CD90EB142207F9ED5D6E",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 84,
+      "field_va": "0x10001ed4",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10001e80.json",
+        "ghidra_export_sha256": "BC51BC1037AB51A39853AF5F6503DC76AF7A754A1A45CD90EB142207F9ED5D6E",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 119,
+      "field_va": "0x10001ef7",
+      "symbol": "_D3DXCompileShaderFromFileA@36",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x1002214c",
+        "dll": "d3dx9_43.dll",
+        "api_name": "D3DXCompileShaderFromFileA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 148,
+      "field_va": "0x10001f14",
+      "symbol": "_MessageBoxA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587FA",
+        "iat_va": "0x10022144",
+        "thunk_symbol": "IVF_API_CALL_MessageBoxA_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10001e80",
+      "field_offset": 179,
+      "field_va": "0x10001f33",
+      "symbol": "_MessageBoxA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587FA",
+        "iat_va": "0x10022144",
+        "thunk_symbol": "IVF_API_CALL_MessageBoxA_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 48,
+      "field_va": "0x10002240",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 61,
+      "field_va": "0x1000224d",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 83,
+      "field_va": "0x10002263",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 104,
+      "field_va": "0x10002278",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 116,
+      "field_va": "0x10002284",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 137,
+      "field_va": "0x10002299",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 158,
+      "field_va": "0x100022ae",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 170,
+      "field_va": "0x100022ba",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 194,
+      "field_va": "0x100022d2",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 224,
+      "field_va": "0x100022f0",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 232,
+      "field_va": "0x100022f8",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 254,
+      "field_va": "0x1000230e",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 271,
+      "field_va": "0x1000231f",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 283,
+      "field_va": "0x1000232b",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 304,
+      "field_va": "0x10002340",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 321,
+      "field_va": "0x10002351",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 333,
+      "field_va": "0x1000235d",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 354,
+      "field_va": "0x10002372",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 371,
+      "field_va": "0x10002383",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 383,
+      "field_va": "0x1000238f",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 404,
+      "field_va": "0x100023a4",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 421,
+      "field_va": "0x100023b5",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 433,
+      "field_va": "0x100023c1",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 454,
+      "field_va": "0x100023d6",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 472,
+      "field_va": "0x100023e8",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 480,
+      "field_va": "0x100023f0",
+      "symbol": "_strcat_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010aad",
+        "ghidra_name": "_strcat_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10002210.json",
+        "ghidra_export_sha256": "E2421657BF95DEB7EA66D9E7797BED5E9292B6410B511345008C10335A12321F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 497,
+      "field_va": "0x10002401",
+      "symbol": "_GetPrivateProfileIntA@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022030",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetPrivateProfileIntA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 549,
+      "field_va": "0x10002435",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 575,
+      "field_va": "0x1000244f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 604,
+      "field_va": "0x1000246c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 629,
+      "field_va": "0x10002485",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 643,
+      "field_va": "0x10002493",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 648,
+      "field_va": "0x10002498",
+      "symbol": "_IVF_INSTALL_TARGET_100074D0",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x100074D0",
+        "target_symbol": "?FUN_100074d0@@YAHH@Z",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 674,
+      "field_va": "0x100024b2",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 700,
+      "field_va": "0x100024cc",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 725,
+      "field_va": "0x100024e5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 739,
+      "field_va": "0x100024f3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 744,
+      "field_va": "0x100024f8",
+      "symbol": "_IVF_INSTALL_TARGET_10008140",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10008140",
+        "target_symbol": "?FUN_10008140@@YGIXZ",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 770,
+      "field_va": "0x10002512",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 796,
+      "field_va": "0x1000252c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 821,
+      "field_va": "0x10002545",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 835,
+      "field_va": "0x10002553",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 840,
+      "field_va": "0x10002558",
+      "symbol": "_IVF_INSTALL_TARGET_100050E0",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x100050E0",
+        "target_symbol": "?FUN_100050e0@@YIXH@Z",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 866,
+      "field_va": "0x10002572",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 892,
+      "field_va": "0x1000258c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 917,
+      "field_va": "0x100025a5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 931,
+      "field_va": "0x100025b3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 936,
+      "field_va": "0x100025b8",
+      "symbol": "_IVF_INSTALL_TARGET_10004B10",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10004B10",
+        "target_symbol": "_ImVehFtHook_10004B10",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 962,
+      "field_va": "0x100025d2",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 988,
+      "field_va": "0x100025ec",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1013,
+      "field_va": "0x10002605",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1027,
+      "field_va": "0x10002613",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1032,
+      "field_va": "0x10002618",
+      "symbol": "_IVF_INSTALL_TARGET_100042C0",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x100042C0",
+        "target_symbol": "?FUN_100042c0@FUN_100042c0_this@@QAEXI@Z",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1058,
+      "field_va": "0x10002632",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1092,
+      "field_va": "0x10002654",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1117,
+      "field_va": "0x1000266d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1131,
+      "field_va": "0x1000267b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1136,
+      "field_va": "0x10002680",
+      "symbol": "_IVF_INSTALL_TARGET_10008780",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10008780",
+        "target_symbol": "_ImVehFtHook_10008780",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1162,
+      "field_va": "0x1000269a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1188,
+      "field_va": "0x100026b4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1213,
+      "field_va": "0x100026cd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1227,
+      "field_va": "0x100026db",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1232,
+      "field_va": "0x100026e0",
+      "symbol": "_IVF_INSTALL_TARGET_10008830",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10008830",
+        "target_symbol": "_ImVehFtHook_10008830",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1258,
+      "field_va": "0x100026fa",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1284,
+      "field_va": "0x10002714",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1309,
+      "field_va": "0x1000272d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1323,
+      "field_va": "0x1000273b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1328,
+      "field_va": "0x10002740",
+      "symbol": "_IVF_INSTALL_TARGET_10008940",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10008940",
+        "target_symbol": "_ImVehFtHook_10008940",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1354,
+      "field_va": "0x1000275a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1380,
+      "field_va": "0x10002774",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1405,
+      "field_va": "0x1000278d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1419,
+      "field_va": "0x1000279b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1424,
+      "field_va": "0x100027a0",
+      "symbol": "_IVF_INSTALL_TARGET_10007F90",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10007F90",
+        "target_symbol": "_ImVehFtHook_10007F90",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1450,
+      "field_va": "0x100027ba",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1476,
+      "field_va": "0x100027d4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1501,
+      "field_va": "0x100027ed",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1515,
+      "field_va": "0x100027fb",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1520,
+      "field_va": "0x10002800",
+      "symbol": "_IVF_INSTALL_TARGET_10007F50",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10007F50",
+        "target_symbol": "_ImVehFtHook_10007F50",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1546,
+      "field_va": "0x1000281a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1572,
+      "field_va": "0x10002834",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1597,
+      "field_va": "0x1000284d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1611,
+      "field_va": "0x1000285b",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1616,
+      "field_va": "0x10002860",
+      "symbol": "_IVF_INSTALL_TARGET_10007F70",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10007F70",
+        "target_symbol": "_ImVehFtHook_10007F70",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1642,
+      "field_va": "0x1000287a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1661,
+      "field_va": "0x1000288d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1696,
+      "field_va": "0x100028b0",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1715,
+      "field_va": "0x100028c3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1749,
+      "field_va": "0x100028e5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1768,
+      "field_va": "0x100028f8",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1806,
+      "field_va": "0x1000291e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1825,
+      "field_va": "0x10002931",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1859,
+      "field_va": "0x10002953",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1877,
+      "field_va": "0x10002965",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1900,
+      "field_va": "0x1000297c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1919,
+      "field_va": "0x1000298f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1953,
+      "field_va": "0x100029b1",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1971,
+      "field_va": "0x100029c3",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 1997,
+      "field_va": "0x100029dd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2015,
+      "field_va": "0x100029ef",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2041,
+      "field_va": "0x10002a09",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2072,
+      "field_va": "0x10002a28",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2095,
+      "field_va": "0x10002a3f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2119,
+      "field_va": "0x10002a57",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2144,
+      "field_va": "0x10002a70",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2162,
+      "field_va": "0x10002a82",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2167,
+      "field_va": "0x10002a87",
+      "symbol": "_IVF_INSTALL_TARGET_10003E40",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003E40",
+        "target_symbol": "_ImVehFtHook_10003E40",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2193,
+      "field_va": "0x10002aa1",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2217,
+      "field_va": "0x10002ab9",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2242,
+      "field_va": "0x10002ad2",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2260,
+      "field_va": "0x10002ae4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2265,
+      "field_va": "0x10002ae9",
+      "symbol": "_IVF_INSTALL_TARGET_10003F40",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003F40",
+        "target_symbol": "?FUN_10003f40@@YAXPADHIH@Z",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2291,
+      "field_va": "0x10002b03",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2325,
+      "field_va": "0x10002b25",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2350,
+      "field_va": "0x10002b3e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2364,
+      "field_va": "0x10002b4c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2369,
+      "field_va": "0x10002b51",
+      "symbol": "_IVF_INSTALL_TARGET_10003030",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003030",
+        "target_symbol": "_ImVehFtHook_10003030",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2398,
+      "field_va": "0x10002b6e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2412,
+      "field_va": "0x10002b7c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2446,
+      "field_va": "0x10002b9e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2480,
+      "field_va": "0x10002bc0",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2505,
+      "field_va": "0x10002bd9",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2520,
+      "field_va": "0x10002be8",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2525,
+      "field_va": "0x10002bed",
+      "symbol": "_IVF_INSTALL_TARGET_10003060",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003060",
+        "target_symbol": "_ImVehFtHook_10003060",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2554,
+      "field_va": "0x10002c0a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2567,
+      "field_va": "0x10002c17",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2590,
+      "field_va": "0x10002c2e",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2616,
+      "field_va": "0x10002c48",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2641,
+      "field_va": "0x10002c61",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2656,
+      "field_va": "0x10002c70",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2661,
+      "field_va": "0x10002c75",
+      "symbol": "_IVF_INSTALL_TARGET_10003080",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003080",
+        "target_symbol": "_ImVehFtHook_10003080",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2690,
+      "field_va": "0x10002c92",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2704,
+      "field_va": "0x10002ca0",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2749,
+      "field_va": "0x10002ccd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2775,
+      "field_va": "0x10002ce7",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2800,
+      "field_va": "0x10002d00",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2817,
+      "field_va": "0x10002d11",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2822,
+      "field_va": "0x10002d16",
+      "symbol": "_IVF_INSTALL_TARGET_10003400",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003400",
+        "target_symbol": "?FUN_10003400@FUN_10003400_this@@QAEXPAMD@Z",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2850,
+      "field_va": "0x10002d32",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2874,
+      "field_va": "0x10002d4a",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2899,
+      "field_va": "0x10002d63",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2918,
+      "field_va": "0x10002d76",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2947,
+      "field_va": "0x10002d93",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2971,
+      "field_va": "0x10002dab",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 2996,
+      "field_va": "0x10002dc4",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3013,
+      "field_va": "0x10002dd5",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3018,
+      "field_va": "0x10002dda",
+      "symbol": "_IVF_INSTALL_TARGET_10003660",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003660",
+        "target_symbol": "?FUN_10003660@FUN_10003660_this@@QAEXH@Z",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3046,
+      "field_va": "0x10002df6",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3072,
+      "field_va": "0x10002e10",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3097,
+      "field_va": "0x10002e29",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3112,
+      "field_va": "0x10002e38",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3141,
+      "field_va": "0x10002e55",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3167,
+      "field_va": "0x10002e6f",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3192,
+      "field_va": "0x10002e88",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3207,
+      "field_va": "0x10002e97",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3212,
+      "field_va": "0x10002e9c",
+      "symbol": "_IVF_INSTALL_TARGET_100031E0",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x100031E0",
+        "target_symbol": "_ImVehFtHook_100031E0",
+        "target_kind": "supplemental-hook-shim"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3239,
+      "field_va": "0x10002eb7",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3273,
+      "field_va": "0x10002ed9",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3309,
+      "field_va": "0x10002efd",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3325,
+      "field_va": "0x10002f0d",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3361,
+      "field_va": "0x10002f31",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3380,
+      "field_va": "0x10002f44",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3433,
+      "field_va": "0x10002f79",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3459,
+      "field_va": "0x10002f93",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3484,
+      "field_va": "0x10002fac",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3499,
+      "field_va": "0x10002fbb",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3504,
+      "field_va": "0x10002fc0",
+      "symbol": "_IVF_INSTALL_TARGET_10003340",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "preserved-installer-target-manifest",
+      "target": {
+        "preferred_va": "0x10003340",
+        "target_symbol": "?FUN_10003340@@YAXIHIIIIIMIIIIIIIIIIIII@Z",
+        "target_kind": "candidate-function"
+      }
+    },
+    {
+      "owner_entry_va": "0x10002210",
+      "field_offset": 3531,
+      "field_va": "0x10002fdb",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "field_offset": 422,
+      "field_va": "0x100045d6",
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010d8b",
+        "ghidra_name": "_strncmp",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10004430.json",
+        "ghidra_export_sha256": "97CDE22E2A941C4E6EBE168A72BCEB6627CB45D9C40BC1D4D9B2BB0D5192BAA6",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "field_offset": 488,
+      "field_va": "0x10004618",
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010d8b",
+        "ghidra_name": "_strncmp",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10004430.json",
+        "ghidra_export_sha256": "97CDE22E2A941C4E6EBE168A72BCEB6627CB45D9C40BC1D4D9B2BB0D5192BAA6",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "field_offset": 550,
+      "field_va": "0x10004656",
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010d8b",
+        "ghidra_name": "_strncmp",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10004430.json",
+        "ghidra_export_sha256": "97CDE22E2A941C4E6EBE168A72BCEB6627CB45D9C40BC1D4D9B2BB0D5192BAA6",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "field_offset": 590,
+      "field_va": "0x1000467e",
+      "symbol": "_FID_conflict__sscanf",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x100103e4",
+        "ghidra_name": "FID_conflict:_sscanf",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10004430.json",
+        "ghidra_export_sha256": "97CDE22E2A941C4E6EBE168A72BCEB6627CB45D9C40BC1D4D9B2BB0D5192BAA6",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10004430",
+      "field_offset": 616,
+      "field_va": "0x10004698",
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010d8b",
+        "ghidra_name": "_strncmp",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10004430.json",
+        "ghidra_export_sha256": "97CDE22E2A941C4E6EBE168A72BCEB6627CB45D9C40BC1D4D9B2BB0D5192BAA6",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10004ab0",
+      "field_offset": 6,
+      "field_va": "0x10004ab6",
+      "symbol": "_FUN_10004ab0_impl",
+      "relocation_type": "REL32",
+      "object_defined": true,
+      "object_section": ".xcode",
+      "classification": "encoded-symbol-to-candidate-entry",
+      "target": {
+        "preferred_va": "0x10004ab0",
+        "placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 207,
+      "field_va": "0x1000642f",
+      "symbol": "?FUN_007f18b0@@YAXHHH@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f18b0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 295,
+      "field_va": "0x10006487",
+      "symbol": "?FUN_0053cc70@@YAOII@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x53cc70",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 362,
+      "field_va": "0x100064ca",
+      "symbol": "?FUN_007f18b0@@YAXHHH@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f18b0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 403,
+      "field_va": "0x100064f3",
+      "symbol": "?FUN_0053cc70@@YAOII@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x53cc70",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 476,
+      "field_va": "0x1000653c",
+      "symbol": "?FUN_007f18b0@@YAXHHH@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f18b0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 517,
+      "field_va": "0x10006565",
+      "symbol": "?FUN_0053cc70@@YAOII@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x53cc70",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 584,
+      "field_va": "0x100065a8",
+      "symbol": "?FUN_007f18b0@@YAXHHH@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f18b0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 625,
+      "field_va": "0x100065d1",
+      "symbol": "?FUN_0053cc70@@YAOII@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x53cc70",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 698,
+      "field_va": "0x1000661a",
+      "symbol": "?FUN_007f18b0@@YAXHHH@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f18b0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 739,
+      "field_va": "0x10006643",
+      "symbol": "?FUN_0053cc70@@YAOII@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x53cc70",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 806,
+      "field_va": "0x10006686",
+      "symbol": "?FUN_007f18b0@@YAXHHH@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f18b0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 843,
+      "field_va": "0x100066ab",
+      "symbol": "?FUN_0053cc70@@YAOII@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x53cc70",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10006360",
+      "field_offset": 920,
+      "field_va": "0x100066f8",
+      "symbol": "?FUN_007f18b0@@YAXHHH@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "address-encoded-gta-executable-text",
+      "target": {
+        "preferred_va": "0x7f18b0",
+        "section": ".text"
+      }
+    },
+    {
+      "owner_entry_va": "0x10007030",
+      "field_offset": 35,
+      "field_va": "0x10007053",
+      "symbol": "?FUN_10007030_impl@@YAXHHIDIIIDDEI@Z",
+      "relocation_type": "REL32",
+      "object_defined": true,
+      "object_section": ".xcode",
+      "classification": "encoded-symbol-to-candidate-entry",
+      "target": {
+        "preferred_va": "0x10007030",
+        "placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x100076d0",
+      "field_offset": 18,
+      "field_va": "0x100076e2",
+      "symbol": "?FUN_100076d0_impl@@YAPAHPAH0PCH@Z",
+      "relocation_type": "REL32",
+      "object_defined": true,
+      "object_section": ".xcode",
+      "classification": "encoded-symbol-to-candidate-entry",
+      "target": {
+        "preferred_va": "0x100076d0",
+        "placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10008000",
+      "field_offset": 6,
+      "field_va": "0x10008006",
+      "symbol": "_IVF_EH_HANDLER_10020848",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-generated-local-EH-funclet-stub",
+      "target": {
+        "preferred_va": "0x10020848",
+        "local_stub_definition": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\scripts\\reloc_local_code_stubs.py",
+        "local_stub_script_sha256": "EB72BECEDD6C357E8E4E0DE1A638638CE2C61EEBB4333D5C8FE2EE51AB172479"
+      }
+    },
+    {
+      "owner_entry_va": "0x10008cb0",
+      "field_offset": 24,
+      "field_va": "0x10008cc8",
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010d8b",
+        "ghidra_name": "_strncmp",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10008cb0.json",
+        "ghidra_export_sha256": "E0C6A26DE98405780033660FFF4686E0AAB2E8BD3157601200CE1A94EB5F05C0",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10008cb0",
+      "field_offset": 48,
+      "field_va": "0x10008ce0",
+      "symbol": "_strncmp",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010d8b",
+        "ghidra_name": "_strncmp",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10008cb0.json",
+        "ghidra_export_sha256": "E0C6A26DE98405780033660FFF4686E0AAB2E8BD3157601200CE1A94EB5F05C0",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10008e40",
+      "field_offset": 40,
+      "field_va": "0x10008e68",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10008e40",
+      "field_offset": 92,
+      "field_va": "0x10008e9c",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10009120",
+      "field_offset": 37,
+      "field_va": "0x10009145",
+      "symbol": "_GetModuleHandleA@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022018",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetModuleHandleA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10009120",
+      "field_offset": 305,
+      "field_va": "0x10009251",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10009120",
+      "field_offset": 337,
+      "field_va": "0x10009271",
+      "symbol": "_VirtualProtect@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058812",
+        "iat_va": "0x1002201C",
+        "thunk_symbol": "IVF_API_CALL_VirtualProtect_16"
+      }
+    },
+    {
+      "owner_entry_va": "0x10009360",
+      "field_offset": 40,
+      "field_va": "0x10009388",
+      "symbol": "_atexit",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010529",
+        "ghidra_name": "_atexit",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10009360.json",
+        "ghidra_export_sha256": "56E7AF97EFE1B713F60356AAF3985227EB00F64D519BF8A81B00AE5CB13B18BA",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x1000a350",
+      "field_offset": 39,
+      "field_va": "0x1000a377",
+      "symbol": "_atexit",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010529",
+        "ghidra_name": "_atexit",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\1000a350.json",
+        "ghidra_export_sha256": "07D7AAF1D663150EC0234C8D7A14BDA3087E8C07C848AABB3C8EFA7B0CEB6FAF",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x1000c480",
+      "field_offset": 22,
+      "field_va": "0x1000c496",
+      "symbol": "_FUN_1000c480_impl",
+      "relocation_type": "REL32",
+      "object_defined": true,
+      "object_section": ".xcode",
+      "classification": "encoded-symbol-to-candidate-entry",
+      "target": {
+        "preferred_va": "0x1000c480",
+        "placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x1000cf80",
+      "field_offset": 78,
+      "field_va": "0x1000cfce",
+      "symbol": "_HeapAlloc@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587D0",
+        "iat_va": "0x10022040",
+        "thunk_symbol": "IVF_API_CALL_HeapAlloc_12"
+      }
+    },
+    {
+      "owner_entry_va": "0x1000d140",
+      "field_offset": 105,
+      "field_va": "0x1000d1a9",
+      "symbol": "_OpenFileMappingA@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022058",
+        "dll": "KERNEL32.dll",
+        "api_name": "OpenFileMappingA"
+      }
+    },
+    {
+      "owner_entry_va": "0x1000d140",
+      "field_offset": 142,
+      "field_va": "0x1000d1ce",
+      "symbol": "_MapViewOfFile@20",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022038",
+        "dll": "KERNEL32.dll",
+        "api_name": "MapViewOfFile"
+      }
+    },
+    {
+      "owner_entry_va": "0x1000d140",
+      "field_offset": 211,
+      "field_va": "0x1000d213",
+      "symbol": "_HeapFree@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022044",
+        "dll": "KERNEL32.dll",
+        "api_name": "HeapFree"
+      }
+    },
+    {
+      "owner_entry_va": "0x10010265",
+      "field_offset": 45,
+      "field_va": "0x10010292",
+      "symbol": "_strcpy_s",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010a19",
+        "ghidra_name": "_strcpy_s",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10010265.json",
+        "ghidra_export_sha256": "6CC6EFD3902BAF3661470D834300312B903CB9E6043BDC982434B34C6018C3C8",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10010c83",
+      "field_offset": 24,
+      "field_va": "0x10010c9b",
+      "symbol": "__strnicmp_l",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010ba1",
+        "ghidra_name": "__strnicmp_l",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10010c83.json",
+        "ghidra_export_sha256": "6985FADF7720D3C8552A22DD5E9DEBA2BA6A55AB3194F74ADACAB50EE71CA0FA",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x100111b3",
+      "field_offset": 26,
+      "field_va": "0x100111cd",
+      "symbol": "@___DllMainCRTStartup@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x100110bd",
+        "ghidra_name": "___DllMainCRTStartup",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\100111b3.json",
+        "ghidra_export_sha256": "9F4661FCCCDB335AE0CC3C51DDFBE74C7E6718F68288F6B8E6CC088AF00F2C3B",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x1001156b",
+      "field_offset": 65,
+      "field_va": "0x100115ac",
+      "symbol": "_RaiseException@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x1002206C",
+        "dll": "KERNEL32.dll",
+        "api_name": "RaiseException"
+      }
+    },
+    {
+      "owner_entry_va": "0x100116db",
+      "field_offset": 20,
+      "field_va": "0x100116ef",
+      "symbol": "_HeapFree@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022044",
+        "dll": "KERNEL32.dll",
+        "api_name": "HeapFree"
+      }
+    },
+    {
+      "owner_entry_va": "0x100116db",
+      "field_offset": 37,
+      "field_va": "0x10011700",
+      "symbol": "_GetLastError@0",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587C4",
+        "iat_va": "0x10022070",
+        "thunk_symbol": "IVF_API_CALL_GetLastError_0"
+      }
+    },
+    {
+      "owner_entry_va": "0x10011872",
+      "field_offset": 7,
+      "field_va": "0x10011879",
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587A0",
+        "iat_va": "0x10022060",
+        "thunk_symbol": "IVF_API_CALL_DecodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x100119f1",
+      "field_offset": 197,
+      "field_va": "0x10011ab6",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010b1a",
+        "ghidra_name": "_LocaleUpdate",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\100119f1.json",
+        "ghidra_export_sha256": "1400AD4C8EFAA4C943BFCA4B9E3C2EC1AF25F197C8AB2A1BDB18BE380F7BE79F",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10012a86",
+      "field_offset": 38,
+      "field_va": "0x10012aac",
+      "symbol": "_Sleep@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x10058806",
+        "iat_va": "0x10022088",
+        "thunk_symbol": "IVF_API_CALL_Sleep_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10013980",
+      "field_offset": 38,
+      "field_va": "0x100139a6",
+      "symbol": "?imvehft_unwind_handler4@@YAIPAX000@Z",
+      "relocation_type": "DIR32",
+      "object_defined": true,
+      "object_section": ".xcode",
+      "classification": "known-same-object-code-symbol-awaiting-section-placement",
+      "target": {
+        "coff_defined_section": ".xcode",
+        "final_va": null,
+        "final_rva_status": "pending-section-layout"
+      }
+    },
+    {
+      "owner_entry_va": "0x10014c40",
+      "field_offset": 3,
+      "field_va": "0x10014c43",
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587A6",
+        "iat_va": "0x1002205C",
+        "thunk_symbol": "IVF_API_CALL_EncodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10014f39",
+      "field_offset": 26,
+      "field_va": "0x10014f53",
+      "symbol": "_TlsGetValue@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x100220D4",
+        "dll": "KERNEL32.dll",
+        "api_name": "TlsGetValue"
+      }
+    },
+    {
+      "owner_entry_va": "0x10014f39",
+      "field_offset": 47,
+      "field_va": "0x10014f68",
+      "symbol": "_TlsGetValue@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x100220D4",
+        "dll": "KERNEL32.dll",
+        "api_name": "TlsGetValue"
+      }
+    },
+    {
+      "owner_entry_va": "0x10014f39",
+      "field_offset": 70,
+      "field_va": "0x10014f7f",
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587A0",
+        "iat_va": "0x10022060",
+        "thunk_symbol": "IVF_API_CALL_DecodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10014f39",
+      "field_offset": 103,
+      "field_va": "0x10014fa0",
+      "symbol": "_TlsSetValue@8",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x100220D8",
+        "dll": "KERNEL32.dll",
+        "api_name": "TlsSetValue"
+      }
+    },
+    {
+      "owner_entry_va": "0x10016b74",
+      "field_offset": 44,
+      "field_va": "0x10016ba0",
+      "symbol": "_GetModuleFileNameA@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022014",
+        "dll": "KERNEL32.dll",
+        "api_name": "GetModuleFileNameA"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017a33",
+      "field_offset": 10,
+      "field_va": "0x10017a3d",
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587A6",
+        "iat_va": "0x1002205C",
+        "thunk_symbol": "IVF_API_CALL_EncodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017a94",
+      "field_offset": 54,
+      "field_va": "0x10017aca",
+      "symbol": "_HeapAlloc@12",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587D0",
+        "iat_va": "0x10022040",
+        "thunk_symbol": "IVF_API_CALL_HeapAlloc_12"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017b16",
+      "field_offset": 71,
+      "field_va": "0x10017b5d",
+      "symbol": "_HeapReAlloc@16",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x10022118",
+        "dll": "KERNEL32.dll",
+        "api_name": "HeapReAlloc"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017b16",
+      "field_offset": 106,
+      "field_va": "0x10017b80",
+      "symbol": "_GetLastError@0",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587C4",
+        "iat_va": "0x10022070",
+        "thunk_symbol": "IVF_API_CALL_GetLastError_0"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017c7b",
+      "field_offset": 30,
+      "field_va": "0x10017c99",
+      "symbol": "_DeleteCriticalSection@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x100220B4",
+        "dll": "KERNEL32.dll",
+        "api_name": "DeleteCriticalSection"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017c7b",
+      "field_offset": 69,
+      "field_va": "0x10017cc0",
+      "symbol": "_DeleteCriticalSection@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-import-name-and-dll-to-original-iat",
+      "target": {
+        "iat_va": "0x100220B4",
+        "dll": "KERNEL32.dll",
+        "api_name": "DeleteCriticalSection"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017ce9",
+      "field_offset": 83,
+      "field_va": "0x10017d3c",
+      "symbol": "_InitializeCriticalSectionAndSpinCount@8",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587DC",
+        "iat_va": "0x100220A8",
+        "thunk_symbol": "IVF_API_CALL_InitializeCriticalSectionAndSpinCount_8"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017dab",
+      "field_offset": 34,
+      "field_va": "0x10017dcd",
+      "symbol": "_EnterCriticalSection@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587AC",
+        "iat_va": "0x10022098",
+        "thunk_symbol": "IVF_API_CALL_EnterCriticalSection_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017e17",
+      "field_offset": 15,
+      "field_va": "0x10017e26",
+      "symbol": "_terminate",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10017dde",
+        "ghidra_name": "terminate",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10017e17.json",
+        "ghidra_export_sha256": "26C6025373DBBC382C0A60FC9F4EDE5D37E13EF5AA58E0F94446FAEEDF534BB6",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017e62",
+      "field_offset": 1,
+      "field_va": "0x10017e63",
+      "symbol": "_terminate",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-assembly-literal-to-exact-ghidra-function",
+      "target": {
+        "preferred_va": "0x10017dde",
+        "ghidra_name": "terminate",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10017dde.json",
+        "ghidra_export_sha256": "732A9EA6B060B51185D4928E7304E31E33814D2A1907DFFB26E6FEB7CFED385F",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017e62",
+      "field_offset": 6,
+      "field_va": "0x10017e68",
+      "symbol": "_EncodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587A6",
+        "iat_va": "0x1002205C",
+        "thunk_symbol": "IVF_API_CALL_EncodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10017ec8",
+      "field_offset": 7,
+      "field_va": "0x10017ecf",
+      "symbol": "_DecodePointer@4",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-owner-and-relocation-field-API-thunk-plan",
+      "target": {
+        "preferred_va": "0x100587A0",
+        "iat_va": "0x10022060",
+        "thunk_symbol": "IVF_API_CALL_DecodePointer_4"
+      }
+    },
+    {
+      "owner_entry_va": "0x10018ec5",
+      "field_offset": 12,
+      "field_va": "0x10018ed1",
+      "symbol": "_ImVehFt_Recovered_ExceptionHandler_10018e80",
+      "relocation_type": "DIR32",
+      "object_defined": true,
+      "object_section": ".xcode",
+      "classification": "known-same-object-code-symbol-awaiting-section-placement",
+      "target": {
+        "coff_defined_section": ".xcode",
+        "final_va": null,
+        "final_rva_status": "pending-section-layout"
+      }
+    },
+    {
+      "owner_entry_va": "0x10019e6d",
+      "field_offset": 13,
+      "field_va": "0x10019e7a",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010b1a",
+        "ghidra_name": "_LocaleUpdate",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\10019e6d.json",
+        "ghidra_export_sha256": "EBD2B7BD1F4C0B79BA686CD93340794BDC65379DEEC6B59FF06B7FE831D34753",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x1001aa4f",
+      "field_offset": 13,
+      "field_va": "0x1001aa5c",
+      "symbol": "_IVF_LocaleUpdate_ctor_relocatable",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010b1a",
+        "ghidra_name": "_LocaleUpdate",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\1001aa4f.json",
+        "ghidra_export_sha256": "89179C8636A1A6EBD6EE3A5403F3AA3B54AF74C300E48EBF205910E2EE955401",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x1001c5f0",
+      "field_offset": 18,
+      "field_va": "0x1001c602",
+      "symbol": "_FUN_1001c60e",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "encoded-symbol-to-candidate-entry",
+      "target": {
+        "preferred_va": "0x1001c60e",
+        "placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x1001d026",
+      "field_offset": 3,
+      "field_va": "0x1001d029",
+      "symbol": "_IVF_EH_HANDLER_10020852",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "exact-generated-local-EH-funclet-stub",
+      "target": {
+        "preferred_va": "0x10020852",
+        "local_stub_definition": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\scripts\\reloc_local_code_stubs.py",
+        "local_stub_script_sha256": "EB72BECEDD6C357E8E4E0DE1A638638CE2C61EEBB4333D5C8FE2EE51AB172479"
+      }
+    },
+    {
+      "owner_entry_va": "0x1001d026",
+      "field_offset": 45,
+      "field_va": "0x1001d053",
+      "symbol": "_terminate",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10017dde",
+        "ghidra_name": "terminate",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\1001d026.json",
+        "ghidra_export_sha256": "B5B8D12C711A2667FE96B0563F0DDA4FE8629E440934DFBEBD6FB3283208AE0E",
+        "candidate_placement_mode": "jmp-rel32-thunk"
+      }
+    },
+    {
+      "owner_entry_va": "0x1001d06f",
+      "field_offset": 143,
+      "field_va": "0x1001d0fe",
+      "symbol": "_CallCatchBlock_normal_epilog_experiment",
+      "relocation_type": "REL32",
+      "object_defined": true,
+      "object_section": ".xcode",
+      "classification": "known-same-object-code-symbol-awaiting-section-placement",
+      "target": {
+        "coff_defined_section": ".xcode",
+        "final_va": null,
+        "final_rva_status": "pending-section-layout"
+      }
+    },
+    {
+      "owner_entry_va": "0x1001db04",
+      "field_offset": 30,
+      "field_va": "0x1001db22",
+      "symbol": "??0_LocaleUpdate@@QAE@PAU__crt_locale_pointers@@@Z",
+      "relocation_type": "REL32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "owner-specific-ghidra-callee-name-and-original-text-va",
+      "target": {
+        "preferred_va": "0x10010b1a",
+        "ghidra_name": "_LocaleUpdate",
+        "ghidra_export": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports\\1001db04.json",
+        "ghidra_export_sha256": "665523FFC971FDACD244A2AFB1F56D06DE46A52B42AC2240A2583A9A229FD527",
+        "candidate_placement_mode": "body-at-entry"
+      }
+    },
+    {
+      "owner_entry_va": "0x10020870",
+      "field_offset": 31,
+      "field_va": "0x1002088f",
+      "symbol": "_thunk_FUN_100013e0",
+      "relocation_type": "DIR32",
+      "object_defined": false,
+      "object_section": null,
+      "classification": "encoded-symbol-to-candidate-entry",
+      "target": {
+        "preferred_va": "0x100013e0",
+        "placement_mode": "jmp-rel32-thunk"
+      }
+    }
+  ]
+}

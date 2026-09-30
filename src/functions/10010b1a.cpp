@@ -1,4 +1,6 @@
 #include <cstdint>
+#include <cstddef>
+#include <corecrt.h>
 
 struct pthreadlocinfo;
 struct pthreadmbcinfo;
@@ -24,15 +26,20 @@ struct _LocaleUpdate
     _ptiddata* ptd;                 // offset 0x08
     std::uint8_t updated;           // offset 0x0C
     _LocaleUpdate(localeinfo_struct* locale);
+    _LocaleUpdate(_locale_t locale);
 };
+
+static_assert(sizeof(localeinfo_struct) == 0x08);
+static_assert(sizeof(__crt_locale_pointers) == 0x08);
+static_assert(offsetof(__crt_locale_pointers, mbcinfo) == 0x04);
 
 extern pthreadlocinfo* PTR_DAT_10029c08;
 extern pthreadmbcinfo* PTR_DAT_100298c8;
 extern std::uint32_t DAT_100299c0;
 
-extern _ptiddata* __cdecl __getptd();
-extern pthreadlocinfo* __cdecl ___updatetlocinfo();
-extern pthreadmbcinfo* __cdecl ___updatetmbcinfo();
+extern "C" _ptiddata* __cdecl __getptd();
+extern "C" pthreadlocinfo* __cdecl ___updatetlocinfo();
+extern "C" pthreadmbcinfo* __cdecl ___updatetmbcinfo();
 
 _LocaleUpdate::_LocaleUpdate(localeinfo_struct* param_1)
 {
@@ -70,4 +77,9 @@ _LocaleUpdate::_LocaleUpdate(localeinfo_struct* param_1)
         this->mbcinfo = param_1->mbcinfo;
     }
 
+}
+
+_LocaleUpdate::_LocaleUpdate(_locale_t param_1)
+    : _LocaleUpdate(reinterpret_cast<localeinfo_struct*>(param_1))
+{
 }

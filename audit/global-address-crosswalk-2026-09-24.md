@@ -10,7 +10,7 @@ The SDK entries below identify GTA San Andreas US 1.00 global addresses and thei
 
 | Address | Plugin-SDK name/type at address | Candidate usage and finding |
 |---|---|---|
-| `0x00B74494` | `CPools::ms_pVehiclePool`, pointer to vehicle pool (`CPool<CVehicle, CHeli>*`) | Ghidra for `100074d0` loads the pool pointer, then the pool's first dword; Plugin-SDK `CPool.h` identifies that first field as `m_pObjects`. That candidate now follows the evidenced two-load sequence. Other candidates still have varied `int*`, `uint8_t*`, integer, and linkage declarations; review each use independently. See [`candidate-correction-100074d0.md`](candidate-correction-100074d0.md). |
+| `0x00B74494` | `CPools::ms_pVehiclePool`, pointer to vehicle pool (`CPool<CVehicle, CHeli>*`) | Ghidra for `100074d0` and `10005670` loads the pool pointer, then the pool's first dword; Plugin-SDK `CPool.h` identifies that field as `m_pObjects`. Both candidates now follow the evidenced two-load sequence. Other candidates still have varied declarations and remain unreviewed. See [`candidate-correction-100074d0.md`](candidate-correction-100074d0.md) and [`candidate-correction-10005670.md`](candidate-correction-10005670.md). |
 | `0x00B4E47C` | `CVehicleModelInfo::ms_pRemapTexture`, `RwTexture*` global | Ghidra shows a null check and two loads from this exact slot. `100076d0.cpp` now reads the pointer from this fixed game address instead of requiring an external C++ data symbol. |
 | `0x00B4E68C` | `CVehicleModelInfo::ms_pLightsTexture`, `RwTexture*` global | Ghidra shows the pointer loaded and compared at this exact address; `100076d0.cpp` now uses a typed `RwTexture**` slot read from the fixed game address. |
 | `0x00B4E690` | `CVehicleModelInfo::ms_pLightsOnTexture`, `RwTexture*` global | Ghidra shows the pointer load at this exact address; `100076d0.cpp` now uses a typed `RwTexture**` slot read from the fixed game address. Details: [`candidate-correction-100076d0.md`](candidate-correction-100076d0.md). |
@@ -25,7 +25,7 @@ The SDK entries below identify GTA San Andreas US 1.00 global addresses and thei
 | `0x00C81300` | `CWeather::Foggyness`, `float` | Candidate reads it as a float in vehicle routines; exact address/name/type align. |
 | `0x00C8800C` | `CTxdStore::ms_pTxdPool`, pointer to TXD pool | Candidate uses an integer pointer in `100076d0.cpp` as a pool base; address and pointer-width use are plausible but not a complete semantic validation. |
 | `0x00C97B24` | `RwEngineInstance`, RenderWare engine-instance pointer | Candidate models it as a custom `StateInterface*` and calls a member at offset `0x20`. The slot address is confirmed; the custom interface layout/name is not confirmed by this mapping alone. |
-| `0x00C97C28` | `GetD3DDevice()` returns the pointer stored here (`IDirect3DDevice9*`) | Candidate uses custom `ContextInterface*`, `int**`, and integer-pointer declarations at the same address. A D3D device vtable interpretation is plausible for the vtable call, but the different declarations are a concrete type/linkage inconsistency to resolve with the original instructions. |
+| `0x00C97C28` | `GetD3DDevice()` returns the pointer stored here (`IDirect3DDevice9*`) | Candidate dispatches through the device vtable. `10001fb0` now uses a four-argument `__stdcall` call consistent with Ghidra's stack layout (device pointer included); the exact semantic name of vtable slot `+0x1B4` remains unverified. |
 
 ## Implications
 

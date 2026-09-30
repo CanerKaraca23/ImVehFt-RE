@@ -1,6 +1,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <corecrt.h>
+#pragma comment(linker, "/alternatename:?fclose@@YAHPAU_iobuf@@@Z=_fclose")
 using longlong = std::int64_t;
 using uint = std::uint32_t;
 using ulonglong = std::uint64_t;
@@ -30,7 +31,7 @@ static_assert(sizeof(_iobuf) == 0x20);
 void __cdecl __lock_file(FILE*);
 int __cdecl _fclose_nolock(FILE * _File);
 void __cdecl __unlock_file(FILE * _File);
-int __cdecl fclose(FILE* _File)
+extern "C" int __cdecl fclose(FILE* _File)
 {
     int* error_number;
     int result = -1;

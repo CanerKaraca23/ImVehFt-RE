@@ -1,35 +1,21 @@
 #include <cstdint>
 
 extern std::uint32_t DAT_10039a04;
-
 extern "C" void* __stdcall DecodePointer(void* pointer);
-
 extern "C" [[noreturn]] void __cdecl __invoke_watson(
-    wchar_t* param_1,
-    wchar_t* param_2,
-    wchar_t* param_3,
-    std::uint32_t param_4,
-    std::uintptr_t param_5);
+    wchar_t*, wchar_t*, wchar_t*, std::uint32_t, std::uintptr_t);
 
-extern "C" void __stdcall FUN_10011872(
-    wchar_t* param_1,
-    wchar_t* param_2,
-    wchar_t* param_3,
-    std::uint32_t param_4,
-    std::uintptr_t param_5)
+extern "C" __declspec(naked) void __stdcall FUN_10011872(
+    wchar_t*, wchar_t*, wchar_t*, std::uint32_t, std::uintptr_t)
 {
-    using UnrecoveredJumpTable = void (*)();
+    __asm {
+        push dword ptr [DAT_10039a04]
+        call DecodePointer
+        test eax, eax
+        jz use_watson
+        jmp eax
 
-    const auto unrecovered_jumptable =
-        reinterpret_cast<UnrecoveredJumpTable>(
-            DecodePointer(reinterpret_cast<void*>(
-                static_cast<std::uintptr_t>(DAT_10039a04))));
-
-    if (unrecovered_jumptable != nullptr)
-    {
-        unrecovered_jumptable();
-        return;
+    use_watson:
+        jmp __invoke_watson
     }
-
-    __invoke_watson(param_1, param_2, param_3, param_4, param_5);
 }

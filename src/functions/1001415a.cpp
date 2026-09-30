@@ -29,9 +29,9 @@ using undefined4 = std::uint32_t;
 using undefined8 = std::uint64_t;
 extern "C" int* __cdecl __errno(void);
 extern "C" void __stdcall FUN_1001189f(void);
-extern "C" int __cdecl __output_l(
+int __cdecl __output_l(
     FILE* _File,
-    const char* _Format,
+    char* _Format,
     _locale_t _Locale,
     va_list _ArgList);
 extern "C" int __cdecl __flsbuf(int _Character, FILE* _File);
@@ -39,7 +39,7 @@ extern "C" int __cdecl __flsbuf(int _Character, FILE* _File);
 extern "C" int __cdecl FUN_1001415a(
     char* _DstBuf,
     std::size_t _MaxCount,
-    const char* _Format,
+    char* _Format,
     _locale_t _Locale,
     va_list _ArgList)
 {

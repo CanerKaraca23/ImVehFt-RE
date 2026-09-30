@@ -1,7 +1,9 @@
 #include <cstdarg>
 #include <cstdint>
+#include <corecrt.h>
+#include <stdio.h>
 
-extern void* __input_l;
+int __cdecl __input_l(FILE* file, unsigned char* buffer, _locale_t locale, va_list arguments);
 
 extern "C" std::uint32_t __cdecl vscan_fn(
     void* param_1,
@@ -23,7 +25,7 @@ int __cdecl FID_conflict__sscanf(
 
     const int result = static_cast<int>(
         vscan_fn(
-            __input_l,
+            reinterpret_cast<void*>(reinterpret_cast<std::uintptr_t>(&__input_l)),
             static_cast<int>(
                 reinterpret_cast<std::uintptr_t>(_Format)
             ),

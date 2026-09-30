@@ -1,0 +1,82 @@
+linked_crt_symbol,linked_crt_modules,candidate_address,candidate_ghidra_name,candidate_name_status,candidate_coff_symbols,exact_coff_symbol_match,candidate_signature
+__87except,libucrt:87except.obj,1001defe,__87except,recognized-or-tool-label,?__87except@@YAXHPAHPAG@Z | ___87except,false,"undefined __cdecl __87except(int param_1, int * param_2, ushort * param_3)"
+___AdjustPointer,libvcruntime-without-exsup4:ehhelpers.obj,1001cf82,___AdjustPointer,recognized-or-tool-label,?___AdjustPointer@@YAHHPAH@Z | ____AdjustPointer,false,"int __cdecl ___AdjustPointer(int param_1, int * param_2)"
+___ascii_strnicmp,libucrt:_strnicm.obj,10015270,___ascii_strnicmp,recognized-or-tool-label,____ascii_strnicmp,false,"int __cdecl ___ascii_strnicmp(char * _Str1, char * _Str2, size_t _MaxCount)"
+___DestructExceptionObject,libvcruntime-without-exsup4:ehhelpers.obj,1001cf2d,___DestructExceptionObject,recognized-or-tool-label,?___DestructExceptionObject@@YAXPAH@Z | ____DestructExceptionObject,false,undefined __cdecl ___DestructExceptionObject(int * param_1)
+___doserrno,libucrt:errno.obj,10011904,___doserrno,recognized-or-tool-label,____doserrno,false,ulong * __cdecl ___doserrno(void)
+___FrameUnwindFilter,libvcruntime-without-exsup4:ehhelpers.obj,1001cdbd,___FrameUnwindFilter,recognized-or-tool-label,?___FrameUnwindFilter@@YAIPAI@Z,false,undefined4 __cdecl ___FrameUnwindFilter(undefined4 * param_1)
+___hw_cw_sse2,libucrt:ieee87.obj,1001fb89,___hw_cw_sse2,recognized-or-tool-label,@___hw_cw_sse2@8,false,"uint __fastcall ___hw_cw_sse2(undefined4 param_1, uint param_2)"
+___set_fpsr_sse2,libucrt:fpctrl.obj,100204f2,___set_fpsr_sse2,recognized-or-tool-label,____set_fpsr_sse2,false,undefined __cdecl ___set_fpsr_sse2(uint param_1)
+__alloc_osfhnd,libucrt:osfinfo.obj,100191cd,__alloc_osfhnd,recognized-or-tool-label,___alloc_osfhnd,false,int __cdecl __alloc_osfhnd(void)
+__callnewh,libucrt:new_handler.obj,10013f0b,__callnewh,recognized-or-tool-label,___callnewh,false,int __cdecl __callnewh(size_t _Size)
+__CallSettingFrame@12,libvcruntime-without-exsup4:lowhelpr.obj,1001da10,__CallSettingFrame@12,recognized-or-tool-label,___CallSettingFrame_12@12,false,"undefined __stdcall __CallSettingFrame@12(undefined4 param_1, undefined4 param_2, int param_3)"
+__CatchGuardHandler,libvcruntime-without-exsup4:trnsctrl.obj,1001b71d,CatchGuardHandler,recognized-or-tool-label,?CatchGuardHandler@@YAHPAUEHExceptionRecord@@PAUCatchGuardRN@@PAX2@Z,false,"_EXCEPTION_DISPOSITION __cdecl CatchGuardHandler(EHExceptionRecord * param_1, CatchGuardRN * param_2, void * param_3, void * param_4)"
+__chsize_nolock,libucrt:chsize.obj,1001af34,__chsize_nolock,recognized-or-tool-label,___chsize_nolock,false,"int __cdecl __chsize_nolock(int _FileHandle, longlong _Size)"
+__close_nolock,libucrt:close.obj,10013bd8,__close_nolock,recognized-or-tool-label,___close_nolock,false,int __cdecl __close_nolock(int _FileHandle)
+__clrfp,libucrt:fpctrl.obj,1002045e,__clrfp,recognized-or-tool-label,___clrfp@0,false,int __stdcall __clrfp(void)
+__commit,libucrt:commit.obj,10019b37,__commit,recognized-or-tool-label,___commit,false,int __cdecl __commit(int _FileHandle)
+__control87,libucrt:ieee87.obj,1001fc29,__control87,recognized-or-tool-label,?__control87@@YAIII@Z | ___control87,false,"uint __cdecl __control87(uint _NewValue, uint _Mask)"
+__controlfp_s,libucrt:contrlfp.obj,1001de9f,__controlfp_s,recognized-or-tool-label,___controlfp_s,false,"errno_t __cdecl __controlfp_s(uint * _CurrentState, uint _NewValue, uint _Mask)"
+__CreateFrameInfo,libvcruntime-without-exsup4:trnsctrl.obj,1001b939,__CreateFrameInfo,recognized-or-tool-label,?__CreateFrameInfo@@YAPAKPAKK@Z | ___CreateFrameInfo,false,"undefined4 * __cdecl __CreateFrameInfo(undefined4 * param_1, undefined4 param_2)"
+__ctrlfp,libucrt:fpctrl.obj,1002046f,__ctrlfp,recognized-or-tool-label,___ctrlfp | ___ctrlfp@0,false,int __stdcall __ctrlfp(void)
+__CxxThrowException@8,libvcruntime-without-exsup4:throw.obj,1001156b,__CxxThrowException@8,recognized-or-tool-label,?__CxxThrowException_8@@YGXPAX0@Z | ___CxxThrowException_8@8,false,"noreturn undefined __stdcall __CxxThrowException@8(undefined4 param_1, byte * param_2)"
+__errno,libucrt:errno.obj,100118f1,__errno,recognized-or-tool-label,___errno,false,int * __cdecl __errno(void)
+__except_handler4,libvcruntime-without-exsup4:chandler4.obj,10012e90,__except_handler4,recognized-or-tool-label,___except_handler4,false,"undefined4 __cdecl __except_handler4(PEXCEPTION_RECORD param_1, PVOID param_2, undefined4 param_3)"
+__exit,libucrt:exit.obj,10012ddc,__exit,recognized-or-tool-label,___exit,false,noreturn void __cdecl __exit(int _Code)
+__fflush_nolock,libucrt:fflush.obj,10013dd1,__fflush_nolock,recognized-or-tool-label,___fflush_nolock,false,int __cdecl __fflush_nolock(FILE * _File)
+__fileno,libucrt:fileno.obj,1001358e,__fileno,recognized-or-tool-label,?__fileno@@YAHPAU_iobuf@@@Z | ___fileno,false,int __cdecl __fileno(FILE * _File)
+__FindAndUnlinkFrame,libvcruntime-without-exsup4:trnsctrl.obj,1001b98c,__FindAndUnlinkFrame,recognized-or-tool-label,___FindAndUnlinkFrame,false,undefined __cdecl __FindAndUnlinkFrame(void * param_1)
+__fload_withFB,libucrt:common.obj,1001c9d5,__fload_withFB,recognized-or-tool-label,?__fload_withFB@@YIIIH@Z | @__fload_withFB@8,false,"uint __fastcall __fload_withFB(undefined4 param_1, int param_2)"
+__flushall,libucrt:fflush.obj,10013ef3,__flushall,recognized-or-tool-label,___flushall,false,int __cdecl __flushall(void)
+__free_osfhnd,libucrt:osfinfo.obj,10019018,__free_osfhnd,recognized-or-tool-label,___free_osfhnd,false,int __cdecl __free_osfhnd(int param_1)
+__get_osfhandle,libucrt:osfinfo.obj,1001909e,__get_osfhandle,recognized-or-tool-label,___get_osfhandle,false,intptr_t __cdecl __get_osfhandle(int _FileHandle)
+__get_printf_count_output,libucrt:printf_count_output.obj,1001a76f,__get_printf_count_output,recognized-or-tool-label,___get_printf_count_output,false,int __cdecl __get_printf_count_output(void)
+__handle_exc,libucrt:fpexcept.obj,1002023a,__handle_exc,recognized-or-tool-label,??$bit_cast@N_K@std@@YANAB_K@Z | ___handle_exc,false,"bool __cdecl __handle_exc(uint param_1, double * param_2, uint param_3)"
+__hw_cw,libucrt:ieee87.obj,1001fafb,__hw_cw,recognized-or-tool-label,___hw_cw@0,false,uint __stdcall __hw_cw(void)
+__invoke_watson,libucrt:invalid_parameter.obj,1001184d,__invoke_watson,recognized-or-tool-label,___invoke_watson,false,"noreturn void __cdecl __invoke_watson(wchar_t * param_1, wchar_t * param_2, wchar_t * param_3, uint param_4, uintptr_t param_5)"
+__isatty,libucrt:isatty.obj,10019c10,__isatty,recognized-or-tool-label,___isatty,false,int __cdecl __isatty(int _FileHandle)
+__IsExceptionObjectToBeDestroyed,libvcruntime-without-exsup4:ehhelpers.obj,1001b965,__IsExceptionObjectToBeDestroyed,recognized-or-tool-label,___IsExceptionObjectToBeDestroyed,false,undefined4 __cdecl __IsExceptionObjectToBeDestroyed(int param_1)
+__lock_file,libucrt:_file.obj,100130f6,__lock_file,recognized-or-tool-label,?__lock_file@@YAXPAU_iobuf@@@Z | ___lock_file,false,void __cdecl __lock_file(FILE * _File)
+__lseeki64,libucrt:lseek.obj,1001a685,__lseeki64,recognized-or-tool-label,___lseeki64,false,"longlong __cdecl __lseeki64(int _FileHandle, longlong _Offset, int _Origin)"
+__lseeki64_nolock,libucrt:lseek.obj,1001a600,__lseeki64_nolock,recognized-or-tool-label,___lseeki64_nolock,false,"longlong __cdecl __lseeki64_nolock(int _FileHandle, longlong _Offset, int _Origin)"
+__math_exit,libucrt:common.obj,1001ca3b,__math_exit,recognized-or-tool-label,@__math_exit@20 | ___math_exit,false,"undefined __fastcall __math_exit(undefined4 param_1, int param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5)"
+__msize,libucrt:msize.obj,10012b26,__msize,recognized-or-tool-label,___msize,false,size_t __cdecl __msize(void * _Memory)
+__NLG_Notify,libvcruntime-without-exsup4:exsup.obj,10018f75,__NLG_Notify,recognized-or-tool-label,___NLG_Notify@4,false,void __stdcall __NLG_Notify(ulong param_1)
+__NLG_Notify1,libvcruntime-without-exsup4:exsup.obj,10018f6c,__NLG_Notify1,recognized-or-tool-label,@__NLG_Notify1@4,false,undefined4 __fastcall __NLG_Notify1(undefined4 param_1)
+__openfile,libucrt:openfile.obj,100135b4,__openfile,recognized-or-tool-label,?__openfile@@YAPAU_iobuf@@PAD0HPAU1@@Z | ___openfile,false,"FILE * __cdecl __openfile(char * _Filename, char * _Mode, int _ShFlag, FILE * _File)"
+__putwch_nolock,libucrt:putwch.obj,1001b1d2,__putwch_nolock,recognized-or-tool-label,___putwch_nolock,false,wint_t __cdecl __putwch_nolock(wchar_t _WCh)
+__raise_exc,libucrt:fpexcept.obj,10020217,__raise_exc,recognized-or-tool-label,___raise_exc,false,"undefined __cdecl __raise_exc(uint * param_1, uint * param_2, uint param_3, int param_4, uint * param_5, uint * param_6)"
+__raise_exc_ex,libucrt:fpexcept.obj,1001ff3b,__raise_exc_ex,recognized-or-tool-label,?__raise_exc_ex@@YAXPAI0IH00H@Z | ___raise_exc_ex,false,"undefined __cdecl __raise_exc_ex(uint * param_1, uint * param_2, uint param_3, int param_4, uint * param_5, uint * param_6, int param_7)"
+__read,libucrt:read.obj,1001663f,__read,recognized-or-tool-label,___read,false,"int __cdecl __read(int _FileHandle, void * _DstBuf, uint _MaxCharCount)"
+__read_nolock,libucrt:read.obj,10016088,__read_nolock,recognized-or-tool-label,___read_nolock,false,"int __cdecl __read_nolock(int _FileHandle, void * _DstBuf, uint _MaxCharCount)"
+__recalloc,libucrt:recalloc.obj,10017bc3,__recalloc,recognized-or-tool-label,___recalloc,false,"void * __cdecl __recalloc(void * _Memory, size_t _Count, size_t _Size)"
+__set_errno_from_matherr,libucrt:fpexcept.obj,1002041e,__set_errno_from_matherr,recognized-or-tool-label,___set_errno_from_matherr,false,undefined __cdecl __set_errno_from_matherr(int param_1)
+__setmbcp_nolock,libucrt:mbctype.obj,10014566,__setmbcp_nolock,recognized-or-tool-label,___setmbcp_nolock,false,"undefined4 __cdecl __setmbcp_nolock(undefined4 param_1, int param_2)"
+__setmode_nolock,libucrt:setmode.obj,1001b0ea,__setmode_nolock,recognized-or-tool-label,___setmode_nolock,false,"int __cdecl __setmode_nolock(int _FileHandle, int _Mode)"
+__sopen_s,libucrt:open.obj,10018ab9,__sopen_s,recognized-or-tool-label,___sopen_s,false,"errno_t __cdecl __sopen_s(int * _FileHandle, char * _Filename, int _OpenFlag, int _ShareFlag, int _PermissionMode)"
+__startOneArgErrorHandling,libucrt:genexcep.obj,1001cb37,__startOneArgErrorHandling,recognized-or-tool-label,@__startOneArgErrorHandling@0 | @__startOneArgErrorHandling@24,false,"float10 __fastcall __startOneArgErrorHandling(undefined4 param_1, int param_2, ushort param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6)"
+__statfp,libucrt:fpctrl.obj,1002044e,__statfp,recognized-or-tool-label,___statfp@0,false,int __stdcall __statfp(void)
+__strnicmp,libucrt:strnicmp.obj,10010c83,__strnicmp,recognized-or-tool-label,?_strnicmp@@YAHPAD0I@Z,false,"int __cdecl __strnicmp(char * _Str1, char * _Str2, size_t _MaxCount)"
+__strnicmp_l,libucrt:strnicmp.obj,10010ba1,__strnicmp_l,recognized-or-tool-label,??2@YAPAXIPAX@Z | ?_strnicmp_l@@YAHPAD0IPAU__crt_locale_pointers@@@Z,false,"int __cdecl __strnicmp_l(char * _Str1, char * _Str2, size_t _MaxCount, _locale_t _Locale)"
+__TranslatorGuardHandler,libvcruntime-without-exsup4:trnsctrl.obj,1001b827,TranslatorGuardHandler,recognized-or-tool-label,?TranslatorGuardHandler@@YA?AW4_EXCEPTION_DISPOSITION@@PAUEHExceptionRecord@@PAUTranslatorGuardRN@@PAX2@Z,false,"_EXCEPTION_DISPOSITION __cdecl TranslatorGuardHandler(EHExceptionRecord * param_1, TranslatorGuardRN * param_2, void * param_3, void * param_4)"
+__unlock_file,libucrt:_file.obj,10013169,__unlock_file,recognized-or-tool-label,?__unlock_file@@YAXPAU_iobuf@@@Z | ___unlock_file,false,void __cdecl __unlock_file(FILE * _File)
+__updatetlocinfoEx_nolock,libucrt:locale_refcounting.obj,10014b7a,__updatetlocinfoEx_nolock,recognized-or-tool-label,___updatetlocinfoEx_nolock,false,"LONG * __cdecl __updatetlocinfoEx_nolock(undefined4 * param_1, LONG * param_2)"
+__write,libucrt:write.obj,10019a63,__write,recognized-or-tool-label,?__write@@YAIHPBXI@Z | ___write,false,"int __cdecl __write(int _FileHandle, void * _Buf, uint _MaxCharCount)"
+__write_nolock,libucrt:write.obj,10019366,__write_nolock,recognized-or-tool-label,___write_nolock,false,"int __cdecl __write_nolock(int _FileHandle, void * _Buf, uint _MaxCharCount)"
+_abort,libucrt:abort.obj,1001705c,_abort,recognized-or-tool-label,__abort,false,noreturn void __cdecl _abort(void)
+_fclose,libucrt:fclose.obj,1001081f,_fclose,recognized-or-tool-label,?fclose@@YAHPAU_iobuf@@@Z,false,int __cdecl _fclose(FILE * _File)
+_fgets,libucrt:fgets.obj,10010540,_fgets,recognized-or-tool-label,?fgets@@YAPADPADHPAU_iobuf@@@Z,false,"char * __cdecl _fgets(char * _Buf, int _MaxCount, FILE * _File)"
+_fopen,libucrt:fopen.obj,10010734,_fopen,recognized-or-tool-label,?fopen@@YAPAU_iobuf@@PAD0@Z,false,"FILE * __cdecl _fopen(char * _Filename, char * _Mode)"
+_fputs,libucrt:fputs.obj,10010913,_fputs,recognized-or-tool-label,?fputs@@YAHPADPAUFILE@@@Z,false,"int __cdecl _fputs(char * _Str, FILE * _File)"
+_free,libucrt:free.obj,100116db,_free,recognized-or-tool-label,?_free@@YAXPAX@Z | __free,false,void __cdecl _free(void * _Memory)
+_malloc,libucrt:malloc.obj,100115b7,_malloc,recognized-or-tool-label,__malloc,false,void * __cdecl _malloc(size_t _Size)
+_memset,libvcruntime-without-exsup4:memset.obj,10016740,_memset,recognized-or-tool-label,__memset,false,"void * __cdecl _memset(void * _Dst, int _Val, size_t _Size)"
+_raise,libucrt:signal.obj,10017ed5,_raise,recognized-or-tool-label,__raise,false,int __cdecl _raise(int _SigNum)
+_strcat_s,libucrt:strcat_s.obj,10010aad,_strcat_s,recognized-or-tool-label,?strcat_s@@YAHPADI0@Z,false,"errno_t __cdecl _strcat_s(char * _Dst, rsize_t _SizeInBytes, char * _Src)"
+_strcpy_s,libucrt:strcpy_s.obj,10010a19,_strcpy_s,recognized-or-tool-label,?strcpy_s@@YAHPADI0@Z,false,"errno_t __cdecl _strcpy_s(char * _Dst, rsize_t _SizeInBytes, char * _Src)"
+_strlen,libucrt:strlen.obj,10011650,_strlen,recognized-or-tool-label,__strlen,false,size_t __cdecl _strlen(char * _Str)
+_strncmp,libucrt:strncmp.obj,10010d8b,_strncmp,recognized-or-tool-label,?strncmp@@YAHPAD0I@Z,false,"int __cdecl _strncmp(char * _Str1, char * _Str2, size_t _MaxCount)"
+_strncpy_s,libucrt:strncpy_s.obj,10010cd6,_strncpy_s,recognized-or-tool-label,?strncpy_s@@YAHPADI0I@Z,false,"errno_t __cdecl _strncpy_s(char * _Dst, rsize_t _SizeInBytes, char * _Src, rsize_t _MaxCount)"
+_strpbrk,libucrt:strpbrk.obj,1001a5c0,_strpbrk,recognized-or-tool-label,__strpbrk,false,"char * __cdecl _strpbrk(char * _Str, char * _Control)"
+_strrchr,libvcruntime-without-exsup4:strrchr.obj,10010a80,_strrchr,recognized-or-tool-label,?strrchr@@YAPADPADH@Z,false,"char * __cdecl _strrchr(char * _Str, int _Ch)"
+_terminate,libucrt:terminate.obj,10017dde,terminate,recognized-or-tool-label,?terminate@@YAXXZ | _terminate_scope_filter | _terminate_scope_handler,false,noreturn void __cdecl terminate(void)

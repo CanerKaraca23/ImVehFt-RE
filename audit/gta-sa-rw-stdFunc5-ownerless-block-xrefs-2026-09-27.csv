@@ -1,0 +1,6 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+005c50f0,".text","LAB_005c50f0[Label,DEFAULT,primary]","005c50f0:MOV EAX;dword ptr [ESP + 0x1c]","005c51e4:CONDITIONAL_JUMP"
+005c5146,".text","LAB_005c5146[Label,DEFAULT,primary]","005c5146:MOV EAX;dword ptr [EBP + EDI*0x4 + 0x4c]","005c512e:CONDITIONAL_JUMP"
+005c5187,".text","","005c5187:MOV dword ptr [EBP + EBX*0x4 + 0x5c];EAX",""
+005c518b,".text","LAB_005c518b[Label,DEFAULT,primary]","005c518b:MOV EDI;dword ptr [EBP + EBX*0x4 + 0x5c]","005c5175:CONDITIONAL_JUMP"
+005c51b9,".text","LAB_005c51b9[Label,DEFAULT,primary]","005c51b9:MOV ECX;dword ptr [ESP + 0x14]","005c5198:UNCONDITIONAL_JUMP"

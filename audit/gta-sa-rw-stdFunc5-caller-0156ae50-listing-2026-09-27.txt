@@ -1,0 +1,227 @@
+FUNCTION FUN_0156ae50 @ 0156ae50
+0156ae50  PUSH EBP
+0156ae51  PUSH ESI
+0156ae52  PUSH EDI
+0156ae53  MOV EDI,dword ptr [ESP + 0x10]
+0156ae57  MOV EAX,dword ptr [EDI]
+0156ae59  MOV ESI,ECX
+0156ae5b  LEA ECX,[EDI + 0x4]
+0156ae5e  PUSH ECX
+0156ae5f  LEA ECX,[ESI + 0x4]
+0156ae62  MOV dword ptr [ESI],EAX
+0156ae64  CALL 0x0045c4b0
+0156ae69  MOV EDX,dword ptr [EDI + 0xb0]
+0156ae6f  MOV dword ptr [ESI + 0xb0],EDX
+0156ae75  MOV EAX,dword ptr [EDI + 0xb4]
+0156ae7b  MOV dword ptr [ESI + 0xb4],EAX
+0156ae81  MOV ECX,dword ptr [EDI + 0xb8]
+0156ae87  MOV dword ptr [ESI + 0xb8],ECX
+0156ae8d  MOV EDX,dword ptr [EDI + 0xbc]
+0156ae93  MOV dword ptr [ESI + 0xbc],EDX
+0156ae99  MOV EAX,dword ptr [EDI + 0xc0]
+0156ae9f  MOV dword ptr [ESI + 0xc0],EAX
+0156aea5  MOV ECX,dword ptr [EDI + 0xc4]
+0156aeab  MOV dword ptr [ESI + 0xc4],ECX
+0156aeb1  MOV EDX,dword ptr [EDI + 0xc8]
+0156aeb7  MOV dword ptr [ESI + 0xc8],EDX
+0156aebd  MOV EAX,dword ptr [EDI + 0xcc]
+0156aec3  MOV dword ptr [ESI + 0xcc],EAX
+0156aec9  MOV ECX,dword ptr [EDI + 0xd0]
+0156aecf  MOV dword ptr [ESI + 0xd0],ECX
+0156aed5  MOV DL,byte ptr [EDI + 0xd4]
+0156aedb  MOV byte ptr [ESI + 0xd4],DL
+0156aee1  MOV AL,byte ptr [EDI + 0xd5]
+0156aee7  MOV byte ptr [ESI + 0xd5],AL
+0156aeed  MOV ECX,dword ptr [EDI + 0xd8]
+0156aef3  MOV dword ptr [ESI + 0xd8],ECX
+0156aef9  MOV DL,byte ptr [EDI + 0xdc]
+0156aeff  MOV byte ptr [ESI + 0xdc],DL
+0156af05  MOV AL,byte ptr [EDI + 0xdd]
+0156af0b  MOV byte ptr [ESI + 0xdd],AL
+0156af11  MOV CL,byte ptr [EDI + 0xde]
+0156af17  MOV byte ptr [ESI + 0xde],CL
+0156af1d  MOV DL,byte ptr [EDI + 0xdf]
+0156af23  MOV byte ptr [ESI + 0xdf],DL
+0156af29  MOV EAX,dword ptr [EDI + 0xe0]
+0156af2f  MOV dword ptr [ESI + 0xe0],EAX
+0156af35  MOV ECX,dword ptr [EDI + 0xe4]
+0156af3b  MOV dword ptr [ESI + 0xe4],ECX
+0156af41  MOV EDX,dword ptr [EDI + 0xe8]
+0156af47  MOV dword ptr [ESI + 0xe8],EDX
+0156af4d  MOV EAX,dword ptr [EDI + 0xec]
+0156af53  MOV dword ptr [ESI + 0xec],EAX
+0156af59  MOV ECX,dword ptr [EDI + 0xf0]
+0156af5f  MOV dword ptr [ESI + 0xf0],ECX
+0156af65  MOV EDX,dword ptr [EDI + 0xf4]
+0156af6b  MOV dword ptr [ESI + 0xf4],EDX
+0156af71  MOV EAX,dword ptr [EDI + 0xf8]
+0156af77  MOV dword ptr [ESI + 0xf8],EAX
+0156af7d  MOV ECX,dword ptr [EDI + 0xfc]
+0156af83  MOV dword ptr [ESI + 0xfc],ECX
+0156af89  MOV EDX,dword ptr [EDI + 0x100]
+0156af8f  MOV dword ptr [ESI + 0x100],EDX
+0156af95  MOV EAX,dword ptr [EDI + 0x104]
+0156af9b  MOV dword ptr [ESI + 0x104],EAX
+0156afa1  MOV ECX,dword ptr [EDI + 0x108]
+0156afa7  MOV dword ptr [ESI + 0x108],ECX
+0156afad  MOV EDX,dword ptr [EDI + 0x10c]
+0156afb3  MOV dword ptr [ESI + 0x10c],EDX
+0156afb9  MOV EAX,dword ptr [EDI + 0x110]
+0156afbf  MOV dword ptr [ESI + 0x110],EAX
+0156afc5  MOV ECX,dword ptr [EDI + 0x114]
+0156afcb  MOV dword ptr [ESI + 0x114],ECX
+0156afd1  MOV EDX,dword ptr [EDI + 0x118]
+0156afd7  MOV dword ptr [ESI + 0x118],EDX
+0156afdd  MOV EAX,dword ptr [EDI + 0x11c]
+0156afe3  MOV dword ptr [ESI + 0x11c],EAX
+0156afe9  MOV ECX,dword ptr [EDI + 0x120]
+0156afef  MOV dword ptr [ESI + 0x120],ECX
+0156aff5  MOV EDX,dword ptr [EDI + 0x124]
+0156affb  MOV dword ptr [ESI + 0x124],EDX
+0156b001  MOV EAX,dword ptr [EDI + 0x128]
+0156b007  MOV dword ptr [ESI + 0x128],EAX
+0156b00d  MOV ECX,dword ptr [EDI + 0x12c]
+0156b013  MOV dword ptr [ESI + 0x12c],ECX
+0156b019  MOV DX,word ptr [EDI + 0x130]
+0156b020  MOV word ptr [ESI + 0x130],DX
+0156b027  MOV EAX,dword ptr [EDI + 0x134]
+0156b02d  MOV dword ptr [ESI + 0x134],EAX
+0156b033  MOV ECX,dword ptr [EDI + 0x138]
+0156b039  MOV dword ptr [ESI + 0x138],ECX
+0156b03f  MOV EDX,dword ptr [EDI + 0x13c]
+0156b045  MOV dword ptr [ESI + 0x13c],EDX
+0156b04b  MOV EAX,dword ptr [EDI + 0x140]
+0156b051  MOV dword ptr [ESI + 0x140],EAX
+0156b057  MOV CX,word ptr [EDI + 0x144]
+0156b05e  MOV word ptr [ESI + 0x144],CX
+0156b065  MOV EDX,dword ptr [EDI + 0x148]
+0156b06b  MOV dword ptr [ESI + 0x148],EDX
+0156b071  MOV AL,byte ptr [EDI + 0x14c]
+0156b077  MOV byte ptr [ESI + 0x14c],AL
+0156b07d  MOV CL,byte ptr [EDI + 0x14d]
+0156b083  MOV byte ptr [ESI + 0x14d],CL
+0156b089  MOV DL,byte ptr [EDI + 0x14e]
+0156b08f  MOV byte ptr [ESI + 0x14e],DL
+0156b095  MOV AL,byte ptr [EDI + 0x14f]
+0156b09b  MOV byte ptr [ESI + 0x14f],AL
+0156b0a1  MOV CL,byte ptr [EDI + 0x150]
+0156b0a7  MOV byte ptr [ESI + 0x150],CL
+0156b0ad  MOV DL,byte ptr [EDI + 0x151]
+0156b0b3  MOV byte ptr [ESI + 0x151],DL
+0156b0b9  MOV AL,byte ptr [EDI + 0x152]
+0156b0bf  MOV byte ptr [ESI + 0x152],AL
+0156b0c5  MOV CL,byte ptr [EDI + 0x153]
+0156b0cb  MOV byte ptr [ESI + 0x153],CL
+0156b0d1  MOV DL,byte ptr [EDI + 0x154]
+0156b0d7  MOV byte ptr [ESI + 0x154],DL
+0156b0dd  MOV AX,word ptr [EDI + 0x156]
+0156b0e4  MOV word ptr [ESI + 0x156],AX
+0156b0eb  LEA ECX,[EDI + 0x158]
+0156b0f1  MOV EAX,dword ptr [ECX]
+0156b0f3  LEA EDX,[ESI + 0x158]
+0156b0f9  MOV dword ptr [EDX],EAX
+0156b0fb  MOV EAX,dword ptr [ECX + 0x4]
+0156b0fe  MOV dword ptr [EDX + 0x4],EAX
+0156b101  MOV ECX,dword ptr [ECX + 0x8]
+0156b104  MOV dword ptr [EDX + 0x8],ECX
+0156b107  MOV ECX,EDI
+0156b109  LEA EAX,[ESI + 0x164]
+0156b10f  SUB ECX,ESI
+0156b111  MOV EBP,0x20
+0156b116  MOV DL,byte ptr [EAX + ECX*0x1]
+0156b119  MOV byte ptr [EAX],DL
+0156b11b  INC EAX
+0156b11c  DEC EBP
+0156b11d  JNZ 0x0156b116
+0156b11f  MOV EAX,dword ptr [EDI + 0x184]
+0156b125  MOV dword ptr [ESI + 0x184],EAX
+0156b12b  MOV CL,byte ptr [EDI + 0x188]
+0156b131  MOV byte ptr [ESI + 0x188],CL
+0156b137  MOV EDX,dword ptr [EDI + 0x18c]
+0156b13d  POP EDI
+0156b13e  MOV dword ptr [ESI + 0x18c],EDX
+0156b144  MOV EAX,ESI
+0156b146  POP ESI
+0156b147  POP EBP
+0156b148  RET 0x4
+
+DECOMPILED SOURCE
+
+undefined4 * __thiscall FUN_0156ae50(undefined4 *param_1,undefined4 *param_2)
+
+{
+  undefined4 *puVar1;
+  int iVar2;
+  
+  *param_1 = *param_2;
+  thunk_FUN_01561cf0(param_2 + 1);
+  param_1[0x2c] = param_2[0x2c];
+  param_1[0x2d] = param_2[0x2d];
+  param_1[0x2e] = param_2[0x2e];
+  param_1[0x2f] = param_2[0x2f];
+  param_1[0x30] = param_2[0x30];
+  param_1[0x31] = param_2[0x31];
+  param_1[0x32] = param_2[0x32];
+  param_1[0x33] = param_2[0x33];
+  param_1[0x34] = param_2[0x34];
+  *(undefined1 *)(param_1 + 0x35) = *(undefined1 *)(param_2 + 0x35);
+  *(undefined1 *)((int)param_1 + 0xd5) = *(undefined1 *)((int)param_2 + 0xd5);
+  param_1[0x36] = param_2[0x36];
+  *(undefined1 *)(param_1 + 0x37) = *(undefined1 *)(param_2 + 0x37);
+  *(undefined1 *)((int)param_1 + 0xdd) = *(undefined1 *)((int)param_2 + 0xdd);
+  *(undefined1 *)((int)param_1 + 0xde) = *(undefined1 *)((int)param_2 + 0xde);
+  *(undefined1 *)((int)param_1 + 0xdf) = *(undefined1 *)((int)param_2 + 0xdf);
+  param_1[0x38] = param_2[0x38];
+  param_1[0x39] = param_2[0x39];
+  param_1[0x3a] = param_2[0x3a];
+  param_1[0x3b] = param_2[0x3b];
+  param_1[0x3c] = param_2[0x3c];
+  param_1[0x3d] = param_2[0x3d];
+  param_1[0x3e] = param_2[0x3e];
+  param_1[0x3f] = param_2[0x3f];
+  param_1[0x40] = param_2[0x40];
+  param_1[0x41] = param_2[0x41];
+  param_1[0x42] = param_2[0x42];
+  param_1[0x43] = param_2[0x43];
+  param_1[0x44] = param_2[0x44];
+  param_1[0x45] = param_2[0x45];
+  param_1[0x46] = param_2[0x46];
+  param_1[0x47] = param_2[0x47];
+  param_1[0x48] = param_2[0x48];
+  param_1[0x49] = param_2[0x49];
+  param_1[0x4a] = param_2[0x4a];
+  param_1[0x4b] = param_2[0x4b];
+  *(undefined2 *)(param_1 + 0x4c) = *(undefined2 *)(param_2 + 0x4c);
+  param_1[0x4d] = param_2[0x4d];
+  param_1[0x4e] = param_2[0x4e];
+  param_1[0x4f] = param_2[0x4f];
+  param_1[0x50] = param_2[0x50];
+  *(undefined2 *)(param_1 + 0x51) = *(undefined2 *)(param_2 + 0x51);
+  param_1[0x52] = param_2[0x52];
+  *(undefined1 *)(param_1 + 0x53) = *(undefined1 *)(param_2 + 0x53);
+  *(undefined1 *)((int)param_1 + 0x14d) = *(undefined1 *)((int)param_2 + 0x14d);
+  *(undefined1 *)((int)param_1 + 0x14e) = *(undefined1 *)((int)param_2 + 0x14e);
+  *(undefined1 *)((int)param_1 + 0x14f) = *(undefined1 *)((int)param_2 + 0x14f);
+  *(undefined1 *)(param_1 + 0x54) = *(undefined1 *)(param_2 + 0x54);
+  *(undefined1 *)((int)param_1 + 0x151) = *(undefined1 *)((int)param_2 + 0x151);
+  *(undefined1 *)((int)param_1 + 0x152) = *(undefined1 *)((int)param_2 + 0x152);
+  *(undefined1 *)((int)param_1 + 0x153) = *(undefined1 *)((int)param_2 + 0x153);
+  *(undefined1 *)(param_1 + 0x55) = *(undefined1 *)(param_2 + 0x55);
+  *(undefined2 *)((int)param_1 + 0x156) = *(undefined2 *)((int)param_2 + 0x156);
+  param_1[0x56] = param_2[0x56];
+  param_1[0x57] = param_2[0x57];
+  param_1[0x58] = param_2[0x58];
+  puVar1 = param_1 + 0x59;
+  iVar2 = 0x20;
+  do {
+    *(undefined1 *)puVar1 = *(undefined1 *)((int)puVar1 + ((int)param_2 - (int)param_1));
+    puVar1 = (undefined4 *)((int)puVar1 + 1);
+    iVar2 = iVar2 + -1;
+  } while (iVar2 != 0);
+  param_1[0x61] = param_2[0x61];
+  *(undefined1 *)(param_1 + 0x62) = *(undefined1 *)(param_2 + 0x62);
+  param_1[99] = param_2[99];
+  return param_1;
+}
+
+

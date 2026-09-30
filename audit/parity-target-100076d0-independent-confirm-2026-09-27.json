@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "symbol": "::FUN_100076d0",
+      "address": "0x100076d0",
+      "status": "yellow",
+      "findings": [
+        {
+          "level": "yellow",
+          "reason": "[semantic:100076d0-conditional-stack-slot-initialization] Ghidra writes the vehicle-context stack slot at [EBP-8] only when DAT_1003c1fc is nonzero at entry, then re-reads DAT_1003c1fc later before consuming that slot. Across the 705 candidate sources, 100074d0 is the sole assignment site for this global; Ghidra exports containing it are 100074d0 (writer) and 100076d0 (reader). Static tracing shows the known GTA path enters the 100074d0 hook at 0x6d6617, which stores the vehicle argument before the callback path reaches the 100076d0 hook at 0x4c8415. However, 100076d0 invokes GTA/RenderWare routines whose reachable texture/raster destruction paths contain indirect object-table calls (for example 0x7f3889, 0x80875a, 0x7fb03a, and 0x7fb04e); their dynamic targets and possible re-entry were not resolved or exercised. Therefore the ordinary-path precondition is statically supported but the stack-state invariant is not proven for all paths. Keep this as a warning, not a semantic pass."
+        },
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `FUN_100076d0`: Ghidra has four indirect calls through the texture-lookup callback at `0x7a1b`, `0x7d66`, `0x7da5`, and `0x7f2c`; the exact-hash MSVC 2022 x86 `/O2` object has three, with the late `vehiclelights_dam` and generated-name lookup branches converging on one shared indirect-call block. The other indirect call sites (four texture callbacks and three palette lookups) and all direct helper/import call targets map to Ghidra. The source-level heuristic's 26-vs-21 expression count is not emitted call-site parity; optimized object control flow shows one mutually exclusive lookup tail merged by the compiler. Suppress only the call-count heuristic; retain all other parity findings. Separate state-fidelity warning: the candidate initializes `local_c` to zero unconditionally, unlike Ghidra's conditional `[EBP-8]` store. Static tracing of the ordinary GTA dispatch path shows the preceding `0x6d6617` hook enters `0x100074d0`, which stores `DAT_1003c1fc` from the vehicle argument before the callback path reaches the `0x4c8415` hook into `0x100076d0`; this supports the required nonzero-at-entry invariant for that path. Indirect/reentrant paths and runtime behavior remain untested; see `audit/candidate-correction-100076d0.md`. This manual adjudication approves call-count only and is not runtime validation."
+        }
+      ]
+    }
+  ]
+}

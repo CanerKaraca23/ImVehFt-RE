@@ -1,7 +1,7 @@
 #include <cstdint>
 
 extern void* BasicCallbackManager_7638267_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable;
-extern void __cdecl FUN_10010756(void*);
+extern "C" void __cdecl FUN_10010756(void*);
 
 struct FUN_10009c70_this {
     void* __thiscall FUN_10009c70(std::uint8_t param_1);

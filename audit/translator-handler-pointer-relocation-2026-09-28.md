@@ -1,0 +1,9 @@
+# Translator handler function-pointer relocation (2026-09-28)
+
+Replaced the fixed handler pointer `0x1001b827` in `_CallSETranslator` (`src/functions/1001b750.cpp`) with the address of candidate `TranslatorGuardHandler`.
+
+Ghidra export `ghidra_exports/1001b750.json` shows the address stored into `local_28`/the exception registration state; `ghidra_exports/1001b827.json` identifies the exact handler entry and cdecl signature. A forward declaration in the caller preserves the C++ function type, while the existing cast to the caller's generic function-pointer type preserves the stored pointer representation. The adjacent backup is `src/functions/1001b750.cpp.pre-translator-handler-pointer-20260928.bak`. The normal linker map resolves the decorated `TranslatorGuardHandler` reference to `1001b827.obj` (not the similarly named CRT handler).
+
+Fresh full-set validation after this edit: MSVC x86 `/O2 /W4 /WX /MT` 705/705 (`build/strict-all-post-translator-handler-relocation-20260928.json`), ReAgent objective 705 PASS / 0 FAIL / 0 UNKNOWN (`audit/objective-post-translator-handler-relocation-2026-09-28.json`), parity 705 GREEN / 0 YELLOW / 0 RED (`build/parity-post-translator-handler-relocation-20260928.json`), and a successful normal 705-object diagnostic link (`build/link-probe/strict-704-historical-sdk/ImVehFt-translator-handler-diagnostic-not-ASI.dll`). Both source manifests have been refreshed.
+
+The preferred-image literal inventory is now 19 occurrences / 18 unique addresses (18 `.text`, one `.rdata`), with one exact candidate-function entry and 17 remaining non-entry addresses (`audit/candidate-internal-image-address-literals-v20-2026-09-28.json`). The remaining entries include comments/assembly labels, exception handler addresses, the outstanding `.rdata` scope table, and other values requiring per-use inspection. The linked artifact is diagnostic only; it is not a game-loadable `.asi`.

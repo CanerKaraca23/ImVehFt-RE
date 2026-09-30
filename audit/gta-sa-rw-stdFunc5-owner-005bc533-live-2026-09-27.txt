@@ -1,0 +1,387 @@
+FUNCTION FUN_005bc533 @ 005bc533
+005bc533  MOV EDI,EBP
+005bc535  STOSD.REP ES:EDI
+005bc537  XOR EBX,EBX
+005bc539  MOV ECX,0xb6f028
+005bc53e  MOV dword ptr [ESI + 0x954],EBX
+005bc544  CALL 0x0050d2d0
+005bc549  LEA ECX,[ESI + 0x174]
+005bc54f  MOV byte ptr [ESI + 0x27],BL
+005bc552  MOV byte ptr [ESI + 0x3e],BL
+005bc555  MOV dword ptr [ESI + 0x140],EBX
+005bc55b  MOV byte ptr [ESI + 0x1c],BL
+005bc55e  CALL 0x0050e490
+005bc563  LEA ECX,[ESI + 0x3ac]
+005bc569  CALL 0x0050e490
+005bc56e  LEA ECX,[ESI + 0x5e4]
+005bc574  CALL 0x0050e490
+005bc579  FLD float ptr [0x0086a46c]
+005bc57f  FSUB float ptr [0x0086a468]
+005bc585  MOV EAX,0x4
+005bc58a  MOV word ptr [ESI + 0x180],AX
+005bc591  MOV word ptr [ESI + 0x3b8],AX
+005bc598  MOV EAX,[0x0086a468]
+005bc59d  FSTP float ptr [ESI + 0x274]
+005bc5a3  MOV ECX,ESI
+005bc5a5  MOV byte ptr [ESI + 0x41],BL
+005bc5a8  MOV byte ptr [ESI + 0x42],BL
+005bc5ab  MOV byte ptr [ESI + 0x43],BL
+005bc5ae  MOV byte ptr [ESI + 0x44],0x1
+005bc5b2  MOV byte ptr [ESI + 0x40],BL
+005bc5b5  MOV dword ptr [ESI + 0x270],EAX
+005bc5bb  MOV dword ptr [ESI + 0x250],0xbf0ccccd
+005bc5c5  MOV dword ptr [ESI + 0x254],0x3fc00000
+005bc5cf  MOV dword ptr [ESI + 0x258],0x40666666
+005bc5d9  MOV dword ptr [ESI + 0x25c],0x3d75c28f
+005bc5e3  MOV dword ptr [ESI + 0x260],0xbdcccccd
+005bc5ed  MOV dword ptr [ESI + 0x264],EBX
+005bc5f3  MOV dword ptr [ESI + 0x268],0xbd8f5c29
+005bc5fd  MOV dword ptr [ESI + 0x26c],0x3f668113
+005bc607  MOV byte ptr [ESI + 0x2d],BL
+005bc60a  CALL 0x0050ab10
+005bc60f  MOV byte ptr [ESI + 0x22],BL
+005bc612  MOV dword ptr [ESI + 0x390],EBX
+005bc618  MOV dword ptr [ESI + 0x5c8],EBX
+005bc61e  MOV dword ptr [ESI + 0x800],EBX
+005bc624  MOV dword ptr [ESI + 0x1c8],EBX
+005bc62a  MOV dword ptr [ESI + 0x1cc],EBX
+005bc630  MOV dword ptr [ESI + 0x400],EBX
+005bc636  MOV dword ptr [ESI + 0x404],EBX
+005bc63c  MOV byte ptr [ESI + 0x176],BL
+005bc642  MOV byte ptr [ESI + 0x3ae],BL
+005bc648  MOV byte ptr [ESI + 0x5e6],BL
+005bc64e  MOV dword ptr [ESI + 0x39c],EBX
+005bc654  MOV dword ptr [ESI + 0x5d4],EBX
+005bc65a  MOV dword ptr [ESI + 0x80c],EBX
+005bc660  MOV byte ptr [ESI + 0x3f],BL
+005bc663  MOV dword ptr [ESI + 0xc10],0x3e800000
+005bc66d  MOV dword ptr [ESI + 0xc14],0x3f400000
+005bc677  MOV dword ptr [ESI + 0xc20],0x3f59999a
+005bc681  MOV byte ptr [ESI + 0x50],BL
+005bc684  MOV dword ptr [ESI + 0x5c],EBX
+005bc687  MOV dword ptr [ESI + 0x12c],EBX
+005bc68d  MOV dword ptr [ESI + 0xc34],0x1e
+005bc697  MOV byte ptr [ESI + 0x25],BL
+005bc69a  MOV byte ptr [ESI + 0x3a],BL
+005bc69d  MOV dword ptr [ESI + 0x81c],EBX
+005bc6a3  MOV dword ptr [ESI + 0x820],EBX
+005bc6a9  MOV byte ptr [ESI + 0x26],BL
+005bc6ac  MOV byte ptr [ESI + 0x28],BL
+005bc6af  MOV dword ptr [ESI + 0x138],0x3f666666
+005bc6b9  MOV byte ptr [ESI + 0x31],BL
+005bc6bc  MOV byte ptr [ESI + 0x4f],BL
+005bc6bf  MOV byte ptr [EBP],BL
+005bc6c2  MOV EAX,0x2
+005bc6c7  PUSH EBX
+005bc6c8  LEA EDI,[ESI + 0x958]
+005bc6ce  PUSH -0x1
+005bc6d0  MOV byte ptr [ESI + 0x19],BL
+005bc6d3  MOV word ptr [ESI + 0x46],0x32
+005bc6d9  MOV word ptr [ESI + 0x48],0x31
+005bc6df  MOV word ptr [ESI + 0x4a],0x3
+005bc6e5  MOV word ptr [ESI + 0x4c],0x30
+005bc6eb  MOV byte ptr [ESI + 0x3d],BL
+005bc6ee  MOV dword ptr [ESI + 0x134],EBX
+005bc6f4  MOV byte ptr [ESI + 0x30],BL
+005bc6f7  MOV dword ptr [ESI + 0xb4],EAX
+005bc6fd  MOV dword ptr [ESI + 0xc8],EAX
+005bc703  MOV dword ptr [ESI + 0xc0],EBX
+005bc709  MOV dword ptr [ESI + 0xbc],EBX
+005bc70f  MOV dword ptr [ESI + 0xb8],EBX
+005bc715  MOV dword ptr [ESI + 0xd4],EBX
+005bc71b  MOV dword ptr [ESI + 0xd0],EBX
+005bc721  MOV dword ptr [ESI + 0xcc],EBX
+005bc727  MOV dword ptr [EDI],EBX
+005bc729  CALL 0x0056e0d0
+005bc72e  ADD ESP,0x8
+005bc731  TEST EAX,EAX
+005bc733  JNZ 0x005bc74c
+005bc735  MOVZX ECX,byte ptr [0x00b7cd74]
+005bc73c  IMUL ECX,ECX,0x190
+005bc742  MOV EDX,dword ptr [ECX + 0xb7cd98]
+005bc748  MOV dword ptr [EDI],EDX
+005bc74a  JMP 0x005bc759
+005bc74c  PUSH EBX
+005bc74d  PUSH -0x1
+005bc74f  CALL 0x0056e0d0
+005bc754  ADD ESP,0x8
+005bc757  MOV dword ptr [EDI],EAX
+005bc759  MOV ECX,dword ptr [EDI]
+005bc75b  CMP ECX,EBX
+005bc75d  JZ 0x005bc765
+005bc75f  PUSH EDI
+005bc760  CALL 0x00571b70
+005bc765  MOV EBP,0x3f800000
+005bc76a  MOV byte ptr [ESI + 0x23],BL
+005bc76d  MOV dword ptr [ESI + 0x144],EBX
+005bc773  MOV dword ptr [ESI + 0x148],EBX
+005bc779  MOV byte ptr [ESI + 0x3d],BL
+005bc77c  MOV byte ptr [ESI + 0x3c],BL
+005bc77f  MOV byte ptr [ESI + 0x56],BL
+005bc782  MOV dword ptr [ESI + 0x154],EBP
+005bc788  MOV dword ptr [ESI + 0x120],EBX
+005bc78e  CMP byte ptr [0x00ba67a5],BL
+005bc794  JNZ 0x005bc7be
+005bc796  MOV byte ptr [ESI + 0x51],BL
+005bc799  MOV byte ptr [0x00c3efab],BL
+005bc79f  MOV dword ptr [ESI + 0xbfc],EBX
+005bc7a5  MOV byte ptr [ESI + 0x52],BL
+005bc7a8  MOV dword ptr [ESI + 0xc08],EBX
+005bc7ae  MOV dword ptr [ESI + 0xc00],EBX
+005bc7b4  MOV dword ptr [0x00b6ec18],0x3ac49ba6
+005bc7be  CMP byte ptr [0x00ba67a5],0x1
+005bc7c5  JNZ 0x005bc7cd
+005bc7c7  MOV dword ptr [ESI + 0xc08],EBX
+005bc7cd  MOV EDI,0x4
+005bc7d2  PUSH EBP
+005bc7d3  LEA ECX,[ESI + 0x974]
+005bc7d9  MOV byte ptr [ESI + 0x33],BL
+005bc7dc  MOV word ptr [ESI + 0xc3c],0x1
+005bc7e5  MOV byte ptr [ESI + 0x38],BL
+005bc7e8  MOV byte ptr [ESI + 0x39],BL
+005bc7eb  MOV dword ptr [ESI + 0xd8],EBX
+005bc7f1  MOV dword ptr [ESI + 0xc4],EBX
+005bc7f7  MOV byte ptr [ESI + 0x36],BL
+005bc7fa  MOV dword ptr [ESI + 0x130],0x428c0000
+005bc804  MOV word ptr [ESI + 0xc38],DI
+005bc80b  MOV byte ptr [ESI + 0x2a],BL
+005bc80e  MOV byte ptr [ESI + 0x37],BL
+005bc811  CALL 0x0059aed0
+005bc816  MOV byte ptr [ESI + 0x34],BL
+005bc819  MOV byte ptr [ESI + 0x24],BL
+005bc81c  MOV dword ptr [ESI + 0x64],0x1388
+005bc823  MOV dword ptr [ESI + 0x6c],EBX
+005bc826  MOV byte ptr [ESI + 0x21],BL
+005bc829  PUSH EBX
+005bc82a  MOV dword ptr [ESI + 0x70],EBX
+005bc82d  MOV dword ptr [ESI + 0x74],EBX
+005bc830  PUSH EBX
+005bc831  MOV dword ptr [ESI + 0xf0],EBP
+005bc837  PUSH 0xff
+005bc83c  MOV byte ptr [ESI + 0x1a],BL
+005bc83f  MOV byte ptr [ESI + 0x1b],BL
+005bc842  PUSH 0xff
+005bc847  MOV dword ptr [ESI + 0xa0],EBX
+005bc84d  PUSH 0xff
+005bc852  MOV ECX,ESI
+005bc854  MOV byte ptr [ESI + 0x4e],BL
+005bc857  CALL 0x0050bf40
+005bc85c  MOV byte ptr [ESI + 0x1e],BL
+005bc85f  MOV byte ptr [ESI + 0x54],BL
+005bc862  MOV dword ptr [ESI + 0xa8],0x6
+005bc86c  MOV dword ptr [ESI + 0xac],EBX
+005bc872  MOV dword ptr [ESI + 0x124],EBX
+005bc878  MOV dword ptr [ESI + 0x128],EBX
+005bc87e  LEA EAX,[ESI + 0x83c]
+005bc884  MOV dword ptr [ESP + 0x10],0x0
+005bc88c  MOV ECX,dword ptr [ESP + 0x10]
+005bc890  MOV dword ptr [EAX],ECX
+005bc892  MOV dword ptr [ESP + 0x14],0x0
+005bc89a  MOV EDX,dword ptr [ESP + 0x14]
+005bc89e  MOV dword ptr [EAX + 0x4],EDX
+005bc8a1  MOV dword ptr [ESP + 0x18],0x0
+005bc8a9  MOV ECX,dword ptr [ESP + 0x18]
+005bc8ad  MOV dword ptr [EAX + 0x8],ECX
+005bc8b0  MOV dword ptr [ESI + 0x94],EDI
+005bc8b6  MOV dword ptr [ESI + 0x98],EBX
+005bc8bc  MOV byte ptr [ESI + 0x29],0x1
+005bc8c0  MOV byte ptr [ESI + 0x58],BL
+005bc8c3  MOV dword ptr [ESI + 0x78],EBX
+005bc8c6  MOV byte ptr [ESI + 0x2b],0x1
+005bc8ca  MOV byte ptr [ESI + 0x2c],BL
+005bc8cd  MOV dword ptr [0x00b6ec14],0x3f07ae14
+005bc8d7  MOV dword ptr [0x00b6ec10],0x3ecccccd
+005bc8e1  MOV dword ptr [ESI + 0x164],EBX
+005bc8e7  MOV word ptr [ESI + 0x168],BX
+005bc8ee  POP EDI
+005bc8ef  MOV byte ptr [0x008cc380],0x1
+005bc8f6  MOV byte ptr [ESI + 0x971],0x1
+005bc8fd  POP ESI
+005bc8fe  POP EBP
+005bc8ff  POP EBX
+005bc900  ADD ESP,0xc
+005bc903  RET
+
+DECOMPILED SOURCE
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_005bc533(int param_1)
+
+{
+  int *piVar1;
+  float fVar2;
+  float fVar3;
+  undefined4 in_EAX;
+  int iVar4;
+  undefined4 *unaff_EBP;
+  int unaff_ESI;
+  undefined4 *puVar5;
+  
+  puVar5 = unaff_EBP;
+  for (; param_1 != 0; param_1 = param_1 + -1) {
+    *puVar5 = in_EAX;
+    puVar5 = puVar5 + 1;
+  }
+  *(undefined4 *)(unaff_ESI + 0x954) = 0;
+  thunk_FUN_004010f8();
+  *(undefined1 *)(unaff_ESI + 0x27) = 0;
+  *(undefined1 *)(unaff_ESI + 0x3e) = 0;
+  *(undefined4 *)(unaff_ESI + 0x140) = 0;
+  *(undefined1 *)(unaff_ESI + 0x1c) = 0;
+  FUN_0050e490();
+  FUN_0050e490();
+  FUN_0050e490();
+  fVar2 = _DAT_0086a46c - DAT_0086a468;
+  *(undefined2 *)(unaff_ESI + 0x180) = 4;
+  *(undefined2 *)(unaff_ESI + 0x3b8) = 4;
+  fVar3 = DAT_0086a468;
+  *(float *)(unaff_ESI + 0x274) = fVar2;
+  *(undefined1 *)(unaff_ESI + 0x41) = 0;
+  *(undefined1 *)(unaff_ESI + 0x42) = 0;
+  *(undefined1 *)(unaff_ESI + 0x43) = 0;
+  *(undefined1 *)(unaff_ESI + 0x44) = 1;
+  *(undefined1 *)(unaff_ESI + 0x40) = 0;
+  *(float *)(unaff_ESI + 0x270) = fVar3;
+  *(undefined4 *)(unaff_ESI + 0x250) = 0xbf0ccccd;
+  *(undefined4 *)(unaff_ESI + 0x254) = 0x3fc00000;
+  *(undefined4 *)(unaff_ESI + 600) = 0x40666666;
+  *(undefined4 *)(unaff_ESI + 0x25c) = 0x3d75c28f;
+  *(undefined4 *)(unaff_ESI + 0x260) = 0xbdcccccd;
+  *(undefined4 *)(unaff_ESI + 0x264) = 0;
+  *(undefined4 *)(unaff_ESI + 0x268) = 0xbd8f5c29;
+  *(undefined4 *)(unaff_ESI + 0x26c) = 0x3f668113;
+  *(undefined1 *)(unaff_ESI + 0x2d) = 0;
+  FUN_0050ab10();
+  *(undefined1 *)(unaff_ESI + 0x22) = 0;
+  *(undefined4 *)(unaff_ESI + 0x390) = 0;
+  *(undefined4 *)(unaff_ESI + 0x5c8) = 0;
+  *(undefined4 *)(unaff_ESI + 0x800) = 0;
+  *(undefined4 *)(unaff_ESI + 0x1c8) = 0;
+  *(undefined4 *)(unaff_ESI + 0x1cc) = 0;
+  *(undefined4 *)(unaff_ESI + 0x400) = 0;
+  *(undefined4 *)(unaff_ESI + 0x404) = 0;
+  *(undefined1 *)(unaff_ESI + 0x176) = 0;
+  *(undefined1 *)(unaff_ESI + 0x3ae) = 0;
+  *(undefined1 *)(unaff_ESI + 0x5e6) = 0;
+  *(undefined4 *)(unaff_ESI + 0x39c) = 0;
+  *(undefined4 *)(unaff_ESI + 0x5d4) = 0;
+  *(undefined4 *)(unaff_ESI + 0x80c) = 0;
+  *(undefined1 *)(unaff_ESI + 0x3f) = 0;
+  *(undefined4 *)(unaff_ESI + 0xc10) = 0x3e800000;
+  *(undefined4 *)(unaff_ESI + 0xc14) = 0x3f400000;
+  *(undefined4 *)(unaff_ESI + 0xc20) = 0x3f59999a;
+  *(undefined1 *)(unaff_ESI + 0x50) = 0;
+  *(undefined4 *)(unaff_ESI + 0x5c) = 0;
+  *(undefined4 *)(unaff_ESI + 300) = 0;
+  *(undefined4 *)(unaff_ESI + 0xc34) = 0x1e;
+  *(undefined1 *)(unaff_ESI + 0x25) = 0;
+  *(undefined1 *)(unaff_ESI + 0x3a) = 0;
+  *(undefined4 *)(unaff_ESI + 0x81c) = 0;
+  *(undefined4 *)(unaff_ESI + 0x820) = 0;
+  *(undefined1 *)(unaff_ESI + 0x26) = 0;
+  *(undefined1 *)(unaff_ESI + 0x28) = 0;
+  *(undefined4 *)(unaff_ESI + 0x138) = 0x3f666666;
+  *(undefined1 *)(unaff_ESI + 0x31) = 0;
+  *(undefined1 *)(unaff_ESI + 0x4f) = 0;
+  *(undefined1 *)unaff_EBP = 0;
+  piVar1 = (int *)(unaff_ESI + 0x958);
+  *(undefined1 *)(unaff_ESI + 0x19) = 0;
+  *(undefined2 *)(unaff_ESI + 0x46) = 0x32;
+  *(undefined2 *)(unaff_ESI + 0x48) = 0x31;
+  *(undefined2 *)(unaff_ESI + 0x4a) = 3;
+  *(undefined2 *)(unaff_ESI + 0x4c) = 0x30;
+  *(undefined1 *)(unaff_ESI + 0x3d) = 0;
+  *(undefined4 *)(unaff_ESI + 0x134) = 0;
+  *(undefined1 *)(unaff_ESI + 0x30) = 0;
+  *(undefined4 *)(unaff_ESI + 0xb4) = 2;
+  *(undefined4 *)(unaff_ESI + 200) = 2;
+  *(undefined4 *)(unaff_ESI + 0xc0) = 0;
+  *(undefined4 *)(unaff_ESI + 0xbc) = 0;
+  *(undefined4 *)(unaff_ESI + 0xb8) = 0;
+  *(undefined4 *)(unaff_ESI + 0xd4) = 0;
+  *(undefined4 *)(unaff_ESI + 0xd0) = 0;
+  *(undefined4 *)(unaff_ESI + 0xcc) = 0;
+  *piVar1 = 0;
+  iVar4 = FUN_0056e0d0(0xffffffff,0);
+  if (iVar4 == 0) {
+    *piVar1 = (&DAT_00b7cd98)[(uint)DAT_00b7cd74 * 100];
+  }
+  else {
+    iVar4 = FUN_0056e0d0(0xffffffff,0);
+    *piVar1 = iVar4;
+  }
+  if (*piVar1 != 0) {
+    FUN_00571b70(piVar1);
+  }
+  *(undefined1 *)(unaff_ESI + 0x23) = 0;
+  *(undefined4 *)(unaff_ESI + 0x144) = 0;
+  *(undefined4 *)(unaff_ESI + 0x148) = 0;
+  *(undefined1 *)(unaff_ESI + 0x3d) = 0;
+  *(undefined1 *)(unaff_ESI + 0x3c) = 0;
+  *(undefined1 *)(unaff_ESI + 0x56) = 0;
+  *(undefined4 *)(unaff_ESI + 0x154) = 0x3f800000;
+  *(undefined4 *)(unaff_ESI + 0x120) = 0;
+  if (DAT_00ba67a5 == '\0') {
+    *(undefined1 *)(unaff_ESI + 0x51) = 0;
+    DAT_00c3efab = 0;
+    *(undefined4 *)(unaff_ESI + 0xbfc) = 0;
+    *(undefined1 *)(unaff_ESI + 0x52) = 0;
+    *(undefined4 *)(unaff_ESI + 0xc08) = 0;
+    *(undefined4 *)(unaff_ESI + 0xc00) = 0;
+    _DAT_00b6ec18 = 0x3ac49ba6;
+  }
+  if (DAT_00ba67a5 == '\x01') {
+    *(undefined4 *)(unaff_ESI + 0xc08) = 0;
+  }
+  *(undefined1 *)(unaff_ESI + 0x33) = 0;
+  *(undefined2 *)(unaff_ESI + 0xc3c) = 1;
+  *(undefined1 *)(unaff_ESI + 0x38) = 0;
+  *(undefined1 *)(unaff_ESI + 0x39) = 0;
+  *(undefined4 *)(unaff_ESI + 0xd8) = 0;
+  *(undefined4 *)(unaff_ESI + 0xc4) = 0;
+  *(undefined1 *)(unaff_ESI + 0x36) = 0;
+  *(undefined4 *)(unaff_ESI + 0x130) = 0x428c0000;
+  *(undefined2 *)(unaff_ESI + 0xc38) = 4;
+  *(undefined1 *)(unaff_ESI + 0x2a) = 0;
+  *(undefined1 *)(unaff_ESI + 0x37) = 0;
+  FUN_0059aed0(0x3f800000);
+  *(undefined1 *)(unaff_ESI + 0x34) = 0;
+  *(undefined1 *)(unaff_ESI + 0x24) = 0;
+  *(undefined4 *)(unaff_ESI + 100) = 5000;
+  *(undefined4 *)(unaff_ESI + 0x6c) = 0;
+  *(undefined1 *)(unaff_ESI + 0x21) = 0;
+  *(undefined4 *)(unaff_ESI + 0x70) = 0;
+  *(undefined4 *)(unaff_ESI + 0x74) = 0;
+  *(undefined4 *)(unaff_ESI + 0xf0) = 0x3f800000;
+  *(undefined1 *)(unaff_ESI + 0x1a) = 0;
+  *(undefined1 *)(unaff_ESI + 0x1b) = 0;
+  *(undefined4 *)(unaff_ESI + 0xa0) = 0;
+  *(undefined1 *)(unaff_ESI + 0x4e) = 0;
+  FUN_0050bf40(0xff,0xff,0xff,0,0);
+  *(undefined1 *)(unaff_ESI + 0x1e) = 0;
+  *(undefined1 *)(unaff_ESI + 0x54) = 0;
+  *(undefined4 *)(unaff_ESI + 0xa8) = 6;
+  *(undefined4 *)(unaff_ESI + 0xac) = 0;
+  *(undefined4 *)(unaff_ESI + 0x124) = 0;
+  *(undefined4 *)(unaff_ESI + 0x128) = 0;
+  *(undefined4 *)(unaff_ESI + 0x83c) = 0;
+  *(undefined4 *)(unaff_ESI + 0x840) = 0;
+  *(undefined4 *)(unaff_ESI + 0x844) = 0;
+  *(undefined4 *)(unaff_ESI + 0x94) = 4;
+  *(undefined4 *)(unaff_ESI + 0x98) = 0;
+  *(undefined1 *)(unaff_ESI + 0x29) = 1;
+  *(undefined1 *)(unaff_ESI + 0x58) = 0;
+  *(undefined4 *)(unaff_ESI + 0x78) = 0;
+  *(undefined1 *)(unaff_ESI + 0x2b) = 1;
+  *(undefined1 *)(unaff_ESI + 0x2c) = 0;
+  _DAT_00b6ec14 = 0x3f07ae14;
+  _DAT_00b6ec10 = 0x3ecccccd;
+  *(undefined4 *)(unaff_ESI + 0x164) = 0;
+  *(undefined2 *)(unaff_ESI + 0x168) = 0;
+  DAT_008cc380 = 1;
+  *(undefined1 *)(unaff_ESI + 0x971) = 1;
+  return;
+}
+
+

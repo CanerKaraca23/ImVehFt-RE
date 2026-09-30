@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 #include <windows.h>
 
@@ -24,7 +25,7 @@ extern "C" void __cdecl ___addlocaleref(LONG* param_1)
     for (int count = 6; count != 0; --count)
     {
         if (reinterpret_cast<void*>(entry[-2]) !=
-                reinterpret_cast<void*>(0x100299C4) &&
+                reinterpret_cast<void*>(IVF_IMAGE_ADDRESS_100299C4) &&
             entry[0] != 0)
         {
             InterlockedIncrement(reinterpret_cast<LONG*>(entry[0]));

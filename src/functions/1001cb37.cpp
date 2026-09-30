@@ -1,18 +1,24 @@
 #include <cstdint>
 
-extern "C" void __cdecl __87except();
+void __cdecl __87except(int, int*, std::uint16_t*);
 
 // This CRT helper receives its 80-bit argument in ST(0), and returns the
 // preserved value in ST(0). Ghidra's `float10` is not a source-level MSVC
 // type, so model the original x87 ABI explicitly instead of substituting
 // `long double` (which is 64-bit under the MSVC ABI).
-extern "C" __declspec(naked) void __fastcall __startOneArgErrorHandling()
+extern "C" __declspec(naked) void __fastcall __startOneArgErrorHandling(
+    std::uint32_t,
+    int,
+    std::uint16_t,
+    std::uint32_t,
+    std::uint32_t,
+    std::uint32_t)
 {
     __asm
     {
         push ebp
         mov ebp, esp
-        sub esp, 20h
+        add esp, -20h
         mov dword ptr [ebp - 20h], eax
         fstp qword ptr [ebp - 8]
         mov dword ptr [ebp - 1Ch], ecx

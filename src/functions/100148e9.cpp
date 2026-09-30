@@ -1,7 +1,7 @@
 #include <cstdint>
 
 extern "C" int DAT_1003d550;
-extern "C" int __cdecl __setmbcp(int code_page);
+int __cdecl __setmbcp(int code_page);
 
 extern "C" std::uint32_t __stdcall ___initmbctable(void)
 {

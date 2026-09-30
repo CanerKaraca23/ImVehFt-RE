@@ -18,7 +18,7 @@ static_assert(offsetof(_LocaleUpdate, locale_control) == 0x08);
 static_assert(offsetof(_LocaleUpdate, cleanup_required) == 0x0c);
 static_assert(sizeof(_LocaleUpdate) == 0x10);
 
-extern "C" int __cdecl _tolower(int);
+extern "C" int __cdecl ImVehFt_tolower_10015237(int);
 extern "C" int __cdecl _isdigit(int);
 
 extern "C" void __cdecl __forcdecpt_l(char* _Buf, _locale_t _Locale)
@@ -38,7 +38,7 @@ extern "C" void __cdecl __forcdecpt_l(char* _Buf, _locale_t _Locale)
 
     _LocaleUpdate locale_update(_Locale);
 
-    int iVar3 = _tolower(static_cast<int>(*_Buf));
+    int iVar3 = ImVehFt_tolower_10015237(static_cast<int>(*_Buf));
     bool bVar4 = iVar3 == 0x65;
 
     while (!bVar4)
@@ -49,7 +49,7 @@ extern "C" void __cdecl __forcdecpt_l(char* _Buf, _locale_t _Locale)
         bVar4 = iVar3 == 0;
     }
 
-    iVar3 = _tolower(static_cast<int>(*_Buf));
+    iVar3 = ImVehFt_tolower_10015237(static_cast<int>(*_Buf));
 
     if (iVar3 == 0x78)
         _Buf = _Buf + 2;

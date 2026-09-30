@@ -29,7 +29,7 @@ using undefined8 = std::uint64_t;
 extern int _DAT_10039a40;
 extern int DAT_10039a50;
 
-extern "C" int __cdecl __fileno(FILE* _File);
+int __cdecl __fileno(FILE* _File);
 extern "C" int __cdecl __isatty(int _FileHandle);
 extern "C" void** __stdcall FUN_1001301f();
 extern "C" void* __cdecl __malloc_crt(std::size_t _Size);

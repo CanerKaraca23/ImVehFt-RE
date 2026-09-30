@@ -1,0 +1,250 @@
+{
+  "scope": "Isolated diagnostic DLL only: verifies section-relative IAT aliases, exact indirect-JMP encoding, and loader HIGHLOW sites. It does not bind candidate calls or represent a production ImVehFt PE/ASI.",
+  "original_asi": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "probe": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\api-thunks-unique-20260929\\iat-original-section-link-probe-not-ASI.dll",
+  "probe_sha256": "06F4241533157E7A3BD0CA938DCA231AA97359CCA9CA39F1E99BBAC887FF028E",
+  "link_map": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\api-thunks-unique-20260929\\iat-original-section-link-probe-not-ASI.map",
+  "candidate_symbol_crosswalk": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-code-api-original-iat-crosswalk-2026-09-29.json",
+  "thunk_count": 21,
+  "correct_section_offset_count": 21,
+  "highlow_fixup_count": 21,
+  "results": [
+    {
+      "code_symbol_crosswalk": "_DecodePointer@4",
+      "unique_thunk_symbol": "IVF_API_CALL_DecodePointer_4",
+      "thunk_va_in_probe": "0x10001000",
+      "linked_iat_symbol": "__imp__DecodePointer@4",
+      "original_iat_va": "0x10022060",
+      "linked_iat_va_in_probe": "0x10002060",
+      "original_and_linked_rdata_offset": "0x0060",
+      "thunk_bytes": "FF 25 60 20 00 10",
+      "highlow_site_rva": "0x00001002"
+    },
+    {
+      "code_symbol_crosswalk": "_EncodePointer@4",
+      "unique_thunk_symbol": "IVF_API_CALL_EncodePointer_4",
+      "thunk_va_in_probe": "0x10001006",
+      "linked_iat_symbol": "__imp__EncodePointer@4",
+      "original_iat_va": "0x1002205C",
+      "linked_iat_va_in_probe": "0x1000205C",
+      "original_and_linked_rdata_offset": "0x005C",
+      "thunk_bytes": "FF 25 5C 20 00 10",
+      "highlow_site_rva": "0x00001008"
+    },
+    {
+      "code_symbol_crosswalk": "_EnterCriticalSection@4",
+      "unique_thunk_symbol": "IVF_API_CALL_EnterCriticalSection_4",
+      "thunk_va_in_probe": "0x1000100C",
+      "linked_iat_symbol": "__imp__EnterCriticalSection@4",
+      "original_iat_va": "0x10022098",
+      "linked_iat_va_in_probe": "0x10002098",
+      "original_and_linked_rdata_offset": "0x0098",
+      "thunk_bytes": "FF 25 98 20 00 10",
+      "highlow_site_rva": "0x0000100E"
+    },
+    {
+      "code_symbol_crosswalk": "_GetCPInfo@8",
+      "unique_thunk_symbol": "IVF_API_CALL_GetCPInfo_8",
+      "thunk_va_in_probe": "0x10001012",
+      "linked_iat_symbol": "__imp__GetCPInfo@8",
+      "original_iat_va": "0x10022000",
+      "linked_iat_va_in_probe": "0x10002000",
+      "original_and_linked_rdata_offset": "0x0000",
+      "thunk_bytes": "FF 25 00 20 00 10",
+      "highlow_site_rva": "0x00001014"
+    },
+    {
+      "code_symbol_crosswalk": "_GetCurrentProcess@0",
+      "unique_thunk_symbol": "IVF_API_CALL_GetCurrentProcess_0",
+      "thunk_va_in_probe": "0x10001018",
+      "linked_iat_symbol": "__imp__GetCurrentProcess@0",
+      "original_iat_va": "0x10022084",
+      "linked_iat_va_in_probe": "0x10002084",
+      "original_and_linked_rdata_offset": "0x0084",
+      "thunk_bytes": "FF 25 84 20 00 10",
+      "highlow_site_rva": "0x0000101A"
+    },
+    {
+      "code_symbol_crosswalk": "_GetCurrentThreadId@0",
+      "unique_thunk_symbol": "IVF_API_CALL_GetCurrentThreadId_0",
+      "thunk_va_in_probe": "0x1000101E",
+      "linked_iat_symbol": "__imp__GetCurrentThreadId@0",
+      "original_iat_va": "0x10022064",
+      "linked_iat_va_in_probe": "0x10002064",
+      "original_and_linked_rdata_offset": "0x0064",
+      "thunk_bytes": "FF 25 64 20 00 10",
+      "highlow_site_rva": "0x00001020"
+    },
+    {
+      "code_symbol_crosswalk": "_GetLastError@0",
+      "unique_thunk_symbol": "IVF_API_CALL_GetLastError_0",
+      "thunk_va_in_probe": "0x10001024",
+      "linked_iat_symbol": "__imp__GetLastError@0",
+      "original_iat_va": "0x10022070",
+      "linked_iat_va_in_probe": "0x10002070",
+      "original_and_linked_rdata_offset": "0x0070",
+      "thunk_bytes": "FF 25 70 20 00 10",
+      "highlow_site_rva": "0x00001026"
+    },
+    {
+      "code_symbol_crosswalk": "_GetStringTypeW@16",
+      "unique_thunk_symbol": "IVF_API_CALL_GetStringTypeW_16",
+      "thunk_va_in_probe": "0x1000102A",
+      "linked_iat_symbol": "__imp__GetStringTypeW@16",
+      "original_iat_va": "0x10022138",
+      "linked_iat_va_in_probe": "0x10002138",
+      "original_and_linked_rdata_offset": "0x0138",
+      "thunk_bytes": "FF 25 38 21 00 10",
+      "highlow_site_rva": "0x0000102C"
+    },
+    {
+      "code_symbol_crosswalk": "_HeapAlloc@12",
+      "unique_thunk_symbol": "IVF_API_CALL_HeapAlloc_12",
+      "thunk_va_in_probe": "0x10001030",
+      "linked_iat_symbol": "__imp__HeapAlloc@12",
+      "original_iat_va": "0x10022040",
+      "linked_iat_va_in_probe": "0x10002040",
+      "original_and_linked_rdata_offset": "0x0040",
+      "thunk_bytes": "FF 25 40 20 00 10",
+      "highlow_site_rva": "0x00001032"
+    },
+    {
+      "code_symbol_crosswalk": "_HeapSize@12",
+      "unique_thunk_symbol": "IVF_API_CALL_HeapSize_12",
+      "thunk_va_in_probe": "0x10001036",
+      "linked_iat_symbol": "__imp__HeapSize@12",
+      "original_iat_va": "0x1002208C",
+      "linked_iat_va_in_probe": "0x1000208C",
+      "original_and_linked_rdata_offset": "0x008C",
+      "thunk_bytes": "FF 25 8C 20 00 10",
+      "highlow_site_rva": "0x00001038"
+    },
+    {
+      "code_symbol_crosswalk": "_InitializeCriticalSectionAndSpinCount@8",
+      "unique_thunk_symbol": "IVF_API_CALL_InitializeCriticalSectionAndSpinCount_8",
+      "thunk_va_in_probe": "0x1000103C",
+      "linked_iat_symbol": "__imp__InitializeCriticalSectionAndSpinCount@8",
+      "original_iat_va": "0x100220A8",
+      "linked_iat_va_in_probe": "0x100020A8",
+      "original_and_linked_rdata_offset": "0x00A8",
+      "thunk_bytes": "FF 25 A8 20 00 10",
+      "highlow_site_rva": "0x0000103E"
+    },
+    {
+      "code_symbol_crosswalk": "_InterlockedDecrement@4",
+      "unique_thunk_symbol": "IVF_API_CALL_InterlockedDecrement_4",
+      "thunk_va_in_probe": "0x10001042",
+      "linked_iat_symbol": "__imp__InterlockedDecrement@4",
+      "original_iat_va": "0x100220C0",
+      "linked_iat_va_in_probe": "0x100020C0",
+      "original_and_linked_rdata_offset": "0x00C0",
+      "thunk_bytes": "FF 25 C0 20 00 10",
+      "highlow_site_rva": "0x00001044"
+    },
+    {
+      "code_symbol_crosswalk": "_IsValidCodePage@4",
+      "unique_thunk_symbol": "IVF_API_CALL_IsValidCodePage_4",
+      "thunk_va_in_probe": "0x10001048",
+      "linked_iat_symbol": "__imp__IsValidCodePage@4",
+      "original_iat_va": "0x100220CC",
+      "linked_iat_va_in_probe": "0x100020CC",
+      "original_and_linked_rdata_offset": "0x00CC",
+      "thunk_bytes": "FF 25 CC 20 00 10",
+      "highlow_site_rva": "0x0000104A"
+    },
+    {
+      "code_symbol_crosswalk": "_LCMapStringW@24",
+      "unique_thunk_symbol": "IVF_API_CALL_LCMapStringW_24",
+      "thunk_va_in_probe": "0x1000104E",
+      "linked_iat_symbol": "__imp__LCMapStringW@24",
+      "original_iat_va": "0x10022134",
+      "linked_iat_va_in_probe": "0x10002134",
+      "original_and_linked_rdata_offset": "0x0134",
+      "thunk_bytes": "FF 25 34 21 00 10",
+      "highlow_site_rva": "0x00001050"
+    },
+    {
+      "code_symbol_crosswalk": "_LeaveCriticalSection@4",
+      "unique_thunk_symbol": "IVF_API_CALL_LeaveCriticalSection_4",
+      "thunk_va_in_probe": "0x10001054",
+      "linked_iat_symbol": "__imp__LeaveCriticalSection@4",
+      "original_iat_va": "0x1002209C",
+      "linked_iat_va_in_probe": "0x1000209C",
+      "original_and_linked_rdata_offset": "0x009C",
+      "thunk_bytes": "FF 25 9C 20 00 10",
+      "highlow_site_rva": "0x00001056"
+    },
+    {
+      "code_symbol_crosswalk": "_MessageBoxA@16",
+      "unique_thunk_symbol": "IVF_API_CALL_MessageBoxA_16",
+      "thunk_va_in_probe": "0x1000105A",
+      "linked_iat_symbol": "__imp__MessageBoxA@16",
+      "original_iat_va": "0x10022144",
+      "linked_iat_va_in_probe": "0x10002144",
+      "original_and_linked_rdata_offset": "0x0144",
+      "thunk_bytes": "FF 25 44 21 00 10",
+      "highlow_site_rva": "0x0000105C"
+    },
+    {
+      "code_symbol_crosswalk": "_MultiByteToWideChar@24",
+      "unique_thunk_symbol": "IVF_API_CALL_MultiByteToWideChar_24",
+      "thunk_va_in_probe": "0x10001060",
+      "linked_iat_symbol": "__imp__MultiByteToWideChar@24",
+      "original_iat_va": "0x100220E4",
+      "linked_iat_va_in_probe": "0x100020E4",
+      "original_and_linked_rdata_offset": "0x00E4",
+      "thunk_bytes": "FF 25 E4 20 00 10",
+      "highlow_site_rva": "0x00001062"
+    },
+    {
+      "code_symbol_crosswalk": "_Sleep@4",
+      "unique_thunk_symbol": "IVF_API_CALL_Sleep_4",
+      "thunk_va_in_probe": "0x10001066",
+      "linked_iat_symbol": "__imp__Sleep@4",
+      "original_iat_va": "0x10022088",
+      "linked_iat_va_in_probe": "0x10002088",
+      "original_and_linked_rdata_offset": "0x0088",
+      "thunk_bytes": "FF 25 88 20 00 10",
+      "highlow_site_rva": "0x00001068"
+    },
+    {
+      "code_symbol_crosswalk": "_TerminateProcess@8",
+      "unique_thunk_symbol": "IVF_API_CALL_TerminateProcess_8",
+      "thunk_va_in_probe": "0x1000106C",
+      "linked_iat_symbol": "__imp__TerminateProcess@8",
+      "original_iat_va": "0x10022080",
+      "linked_iat_va_in_probe": "0x10002080",
+      "original_and_linked_rdata_offset": "0x0080",
+      "thunk_bytes": "FF 25 80 20 00 10",
+      "highlow_site_rva": "0x0000106E"
+    },
+    {
+      "code_symbol_crosswalk": "_VirtualProtect@16",
+      "unique_thunk_symbol": "IVF_API_CALL_VirtualProtect_16",
+      "thunk_va_in_probe": "0x10001072",
+      "linked_iat_symbol": "__imp__VirtualProtect@16",
+      "original_iat_va": "0x1002201C",
+      "linked_iat_va_in_probe": "0x1000201C",
+      "original_and_linked_rdata_offset": "0x001C",
+      "thunk_bytes": "FF 25 1C 20 00 10",
+      "highlow_site_rva": "0x00001074"
+    },
+    {
+      "code_symbol_crosswalk": "_WideCharToMultiByte@32",
+      "unique_thunk_symbol": "IVF_API_CALL_WideCharToMultiByte_32",
+      "thunk_va_in_probe": "0x10001078",
+      "linked_iat_symbol": "__imp__WideCharToMultiByte@32",
+      "original_iat_va": "0x100220F4",
+      "linked_iat_va_in_probe": "0x100020F4",
+      "original_and_linked_rdata_offset": "0x00F4",
+      "thunk_bytes": "FF 25 F4 20 00 10",
+      "highlow_site_rva": "0x0000107A"
+    }
+  ],
+  "limitations": [
+    "Probe .text/.rdata RVAs differ from the original ASI; only each IAT symbol's offset within .rdata is compared.",
+    "The 705 candidate call relocations are not redirected to these unique thunk symbols by the ordinary diagnostic linker.",
+    "No final PE layout, production import directory, loader execution, or GTA runtime test is produced."
+  ]
+}

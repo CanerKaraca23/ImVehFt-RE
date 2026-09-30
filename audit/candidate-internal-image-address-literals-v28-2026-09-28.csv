@@ -1,0 +1,8 @@
+address,section,exact_function_entry,source,line,literal,source_line
+0x100169E7,.text,,src/functions/100169da.cpp,42,0x100169e7,// Entry-register inputs confirmed by x86 instructions 0x100169e7 and 0x100169e9.
+0x100169E9,.text,,src/functions/100169da.cpp,42,0x100169e9,// Entry-register inputs confirmed by x86 instructions 0x100169e7 and 0x100169e9.
+0x1001C5F0,.text,FUN_1001c5f0,src/functions/1001c5f0.cpp,5,0x1001c5f0,// Ghidra 12.1.3 export: 0x1001c5f0..0x1001c607 (24 bytes).
+0x1001C607,.text,,src/functions/1001c5f0.cpp,5,0x1001c607,// Ghidra 12.1.3 export: 0x1001c5f0..0x1001c607 (24 bytes).
+0x1001F712,.text,,src/functions/1001f203.cpp,58,0x1001f712,"/* WARNING: Removing unreachable block (ram,0x1001f712) */"
+0x1001F71C,.text,,src/functions/1001f203.cpp,60,0x1001f71c,"/* WARNING: Removing unreachable block (ram,0x1001f71c) */"
+0x1001F721,.text,,src/functions/1001f203.cpp,62,0x1001f721,"/* WARNING: Removing unreachable block (ram,0x1001f721) */"

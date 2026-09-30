@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-27",
+  "ghidra_export_directory": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ghidra_exports",
+  "exported_function_count": 705,
+  "startup_initialization_and_failure_cleanup_roots": [
+    "10016d12",
+    "10014fa7",
+    "10016cc6",
+    "10016d30",
+    "10016c2f",
+    "100132f6",
+    "10016b74",
+    "100168fe",
+    "1001353b",
+    "10014c86",
+    "10012df2",
+    "10011032",
+    "10014c52",
+    "10012a3a"
+  ],
+  "reachable_exported_function_count": 99,
+  "targets": {
+    "100119f1": "__input_l",
+    "100154dc": "__output_l"
+  },
+  "resolved_callee_paths": {
+    "100119f1": null,
+    "100154dc": null
+  },
+  "unresolved_non_external_callee_addresses_in_export_set": [],
+  "scope_limit": "All callee references represented in Ghidra JSON exports are traversed, including computed-call targets Ghidra resolves. A missing path does not exclude unresolved indirect calls, callbacks, unexported functions, or runtime behavior."
+}

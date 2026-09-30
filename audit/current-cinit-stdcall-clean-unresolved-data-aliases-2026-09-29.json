@@ -1,0 +1,14 @@
+{
+  "scope": "review inventory of unresolved decorated names whose embedded VA falls inside original .rdata/.data; not proof of ABI or runtime relocation correctness",
+  "link_log": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\link-probe\\entry-exact-nogs-o1-cinit-stdcall-alias-provider-thunkfix-20260929\\link.log",
+  "link_log_sha256": "73d85f24ccc2f35b7e80bbb3f0ec7070a20af7982c3fdd660a60ba43f5335813",
+  "reference_image": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "reference_image_sha256": "409f0df7ae579841db05c3ec6dad0a9afc579194632874962e1bdee0ccf020d3",
+  "unique_linker_message_tokens_scanned": 247,
+  "exact_address_bearing_data_aliases": 46,
+  "aliases_by_section": {
+    ".rdata": 3,
+    ".data": 43
+  },
+  "tokens_without_an_exact_data_alias": 201
+}

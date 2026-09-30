@@ -32,7 +32,7 @@ extern "C" errno_t __cdecl __cftog_l(
     int caps,
     _locale_t plocinfo);
 
-errno_t __cdecl __cfltcvt_l(
+extern "C" errno_t __cdecl __cfltcvt_l(
     double* arg,
     char* buffer,
     std::size_t sizeInBytes,

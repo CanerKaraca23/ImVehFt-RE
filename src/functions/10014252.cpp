@@ -6,7 +6,7 @@ struct threadmbcinfostruct;
 extern "C" void* __cdecl _memset(void* destination, int value, std::size_t size);
 extern const std::uint8_t DAT_100294a0[];
 
-void __cdecl setSBCS(threadmbcinfostruct* param_1)
+extern "C" void __cdecl setSBCS(threadmbcinfostruct* param_1)
 {
     auto* base = reinterpret_cast<std::uint8_t*>(param_1);
 

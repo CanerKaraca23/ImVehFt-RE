@@ -1,0 +1,243 @@
+{
+  "scope": "COFF structure/bytes only; does not apply the IAT VA, construct a PE, or execute a call.",
+  "object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\api-thunks-unique-20260929\\x86_original_iat_api_thunks.obj",
+  "object_sha256": "50A9866EA46D99A9368D6D44ECFE1390DFC22E94A9E38B6DB5E39743FB2AE9A4",
+  "crosswalk": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-code-api-original-iat-crosswalk-2026-09-29.json",
+  "thunk_count": 21,
+  "code_bytes": 126,
+  "dir32_iat_relocations": 21,
+  "all_thunks_exact_ff25": true,
+  "results": [
+    {
+      "code_symbol": "_DecodePointer@4",
+      "unique_thunk_symbol": "IVF_API_CALL_DecodePointer_4",
+      "iat_import_symbol": "__imp__DecodePointer@4",
+      "iat_va": "0x10022060",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000000",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__DecodePointer@4"
+    },
+    {
+      "code_symbol": "_EncodePointer@4",
+      "unique_thunk_symbol": "IVF_API_CALL_EncodePointer_4",
+      "iat_import_symbol": "__imp__EncodePointer@4",
+      "iat_va": "0x1002205C",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000006",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__EncodePointer@4"
+    },
+    {
+      "code_symbol": "_EnterCriticalSection@4",
+      "unique_thunk_symbol": "IVF_API_CALL_EnterCriticalSection_4",
+      "iat_import_symbol": "__imp__EnterCriticalSection@4",
+      "iat_va": "0x10022098",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x0000000C",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__EnterCriticalSection@4"
+    },
+    {
+      "code_symbol": "_GetCPInfo@8",
+      "unique_thunk_symbol": "IVF_API_CALL_GetCPInfo_8",
+      "iat_import_symbol": "__imp__GetCPInfo@8",
+      "iat_va": "0x10022000",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000012",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__GetCPInfo@8"
+    },
+    {
+      "code_symbol": "_GetCurrentProcess@0",
+      "unique_thunk_symbol": "IVF_API_CALL_GetCurrentProcess_0",
+      "iat_import_symbol": "__imp__GetCurrentProcess@0",
+      "iat_va": "0x10022084",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000018",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__GetCurrentProcess@0"
+    },
+    {
+      "code_symbol": "_GetCurrentThreadId@0",
+      "unique_thunk_symbol": "IVF_API_CALL_GetCurrentThreadId_0",
+      "iat_import_symbol": "__imp__GetCurrentThreadId@0",
+      "iat_va": "0x10022064",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x0000001E",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__GetCurrentThreadId@0"
+    },
+    {
+      "code_symbol": "_GetLastError@0",
+      "unique_thunk_symbol": "IVF_API_CALL_GetLastError_0",
+      "iat_import_symbol": "__imp__GetLastError@0",
+      "iat_va": "0x10022070",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000024",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__GetLastError@0"
+    },
+    {
+      "code_symbol": "_GetStringTypeW@16",
+      "unique_thunk_symbol": "IVF_API_CALL_GetStringTypeW_16",
+      "iat_import_symbol": "__imp__GetStringTypeW@16",
+      "iat_va": "0x10022138",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x0000002A",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__GetStringTypeW@16"
+    },
+    {
+      "code_symbol": "_HeapAlloc@12",
+      "unique_thunk_symbol": "IVF_API_CALL_HeapAlloc_12",
+      "iat_import_symbol": "__imp__HeapAlloc@12",
+      "iat_va": "0x10022040",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000030",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__HeapAlloc@12"
+    },
+    {
+      "code_symbol": "_HeapSize@12",
+      "unique_thunk_symbol": "IVF_API_CALL_HeapSize_12",
+      "iat_import_symbol": "__imp__HeapSize@12",
+      "iat_va": "0x1002208C",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000036",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__HeapSize@12"
+    },
+    {
+      "code_symbol": "_InitializeCriticalSectionAndSpinCount@8",
+      "unique_thunk_symbol": "IVF_API_CALL_InitializeCriticalSectionAndSpinCount_8",
+      "iat_import_symbol": "__imp__InitializeCriticalSectionAndSpinCount@8",
+      "iat_va": "0x100220A8",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x0000003C",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__InitializeCriticalSectionAndSpinCount@8"
+    },
+    {
+      "code_symbol": "_InterlockedDecrement@4",
+      "unique_thunk_symbol": "IVF_API_CALL_InterlockedDecrement_4",
+      "iat_import_symbol": "__imp__InterlockedDecrement@4",
+      "iat_va": "0x100220C0",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000042",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__InterlockedDecrement@4"
+    },
+    {
+      "code_symbol": "_IsValidCodePage@4",
+      "unique_thunk_symbol": "IVF_API_CALL_IsValidCodePage_4",
+      "iat_import_symbol": "__imp__IsValidCodePage@4",
+      "iat_va": "0x100220CC",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000048",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__IsValidCodePage@4"
+    },
+    {
+      "code_symbol": "_LCMapStringW@24",
+      "unique_thunk_symbol": "IVF_API_CALL_LCMapStringW_24",
+      "iat_import_symbol": "__imp__LCMapStringW@24",
+      "iat_va": "0x10022134",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x0000004E",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__LCMapStringW@24"
+    },
+    {
+      "code_symbol": "_LeaveCriticalSection@4",
+      "unique_thunk_symbol": "IVF_API_CALL_LeaveCriticalSection_4",
+      "iat_import_symbol": "__imp__LeaveCriticalSection@4",
+      "iat_va": "0x1002209C",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000054",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__LeaveCriticalSection@4"
+    },
+    {
+      "code_symbol": "_MessageBoxA@16",
+      "unique_thunk_symbol": "IVF_API_CALL_MessageBoxA_16",
+      "iat_import_symbol": "__imp__MessageBoxA@16",
+      "iat_va": "0x10022144",
+      "provider_dll": "USER32.dll",
+      "code_offset": "0x0000005A",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__MessageBoxA@16"
+    },
+    {
+      "code_symbol": "_MultiByteToWideChar@24",
+      "unique_thunk_symbol": "IVF_API_CALL_MultiByteToWideChar_24",
+      "iat_import_symbol": "__imp__MultiByteToWideChar@24",
+      "iat_va": "0x100220E4",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000060",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__MultiByteToWideChar@24"
+    },
+    {
+      "code_symbol": "_Sleep@4",
+      "unique_thunk_symbol": "IVF_API_CALL_Sleep_4",
+      "iat_import_symbol": "__imp__Sleep@4",
+      "iat_va": "0x10022088",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000066",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__Sleep@4"
+    },
+    {
+      "code_symbol": "_TerminateProcess@8",
+      "unique_thunk_symbol": "IVF_API_CALL_TerminateProcess_8",
+      "iat_import_symbol": "__imp__TerminateProcess@8",
+      "iat_va": "0x10022080",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x0000006C",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__TerminateProcess@8"
+    },
+    {
+      "code_symbol": "_VirtualProtect@16",
+      "unique_thunk_symbol": "IVF_API_CALL_VirtualProtect_16",
+      "iat_import_symbol": "__imp__VirtualProtect@16",
+      "iat_va": "0x1002201C",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000072",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__VirtualProtect@16"
+    },
+    {
+      "code_symbol": "_WideCharToMultiByte@32",
+      "unique_thunk_symbol": "IVF_API_CALL_WideCharToMultiByte_32",
+      "iat_import_symbol": "__imp__WideCharToMultiByte@32",
+      "iat_va": "0x100220F4",
+      "provider_dll": "KERNEL32.dll",
+      "code_offset": "0x00000078",
+      "bytes": "FF 25 00 00 00 00",
+      "relocation": "DIR32 at thunk+2 to IAT symbol",
+      "coff_target_symbol": "__imp__WideCharToMultiByte@32"
+    }
+  ]
+}

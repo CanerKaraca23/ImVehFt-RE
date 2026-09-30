@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 #include <corecrt.h>
 #include <stdio.h>
 extern "C" int __stdcall FUN_10009360();
@@ -34,8 +35,7 @@ extern "C" void __stdcall FUN_10006a50()
     using Call_0059AFE0 = void (*)(float);
 
     extern int DAT_1003c248;
-    extern int* _DAT_00b74494;
-    extern float _DAT_10024f98;
+    extern double _DAT_10024f98;
     int unaff_EDI;
     __asm mov unaff_EDI, edi
 
@@ -46,7 +46,7 @@ extern "C" void __stdcall FUN_10006a50()
             static_cast<unsigned int>(FUN_10009360()));
 
     const int tableIndex =
-        (unaff_EDI - *_DAT_00b74494) / 0xA18;
+        (unaff_EDI - IMVEHFT_VEHICLE_OBJECTS_BASE_B74494) / 0xA18;
 
     const auto entries =
         reinterpret_cast<int32_t*>(
@@ -72,8 +72,9 @@ extern "C" void __stdcall FUN_10006a50()
     {
         reinterpret_cast<Call_0059AFE0>(
             static_cast<unsigned int>(0x59AFE0))(
-            vehicle->value_49C *
-            ediObject->value_494 *
-            _DAT_10024f98);
+            static_cast<float>(
+                static_cast<double>(vehicle->value_49C *
+                    ediObject->value_494) *
+                _DAT_10024f98));
     }
 }

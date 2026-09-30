@@ -1,4 +1,5 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 #include <windows.h>
 
 using undefined1 = std::uint8_t;
@@ -40,7 +41,7 @@ struct StateInterface
     StateFunction member_20;
 };
 
-using ContextFunction = void(__thiscall*)(void*, int, void*, int);
+using ContextFunction = HRESULT(__stdcall*)(void*, UINT, void*, UINT);
 
 struct ContextVTable
 {
@@ -62,18 +63,13 @@ struct PatchSite
 extern "C" Address DAT_1003aacc;
 extern "C" ContextObject* DAT_1003bd98;
 extern "C" Address DAT_1003bbb0;
-extern "C" StateInterface* _DAT_00c97b24;
-extern "C" ContextInterface* _DAT_00c97c28;
-extern "C" Address _DAT_00c1703c;
 
 
 extern "C" void(__cdecl* FUN_7ee180)(Address);
 extern "C" void(__cdecl* FUN_7ee190)(Address);
-extern "C" void(__cdecl* FUN_7fdcd0)(undefined4, int);
+using FUN_7fdcd0_t = void(__cdecl*)(undefined4, int);
 extern "C" void(__cdecl* FUN_7f9fb0)(int);
 extern "C" void(__cdecl* FUN_7f9ff0)(Address);
-extern "C" void(__cdecl* FUN_7170c0)(int, int, int, int);
-extern "C" void(__cdecl* FUN_4041c0)(int, int, float, float);
 extern "C" void(__cdecl* FUN_727be0)(void*, DWORD*);
 
 extern "C" undefined4* __cdecl FUN_10001fb0(undefined4* param_1)
@@ -97,21 +93,26 @@ extern "C" undefined4* __cdecl FUN_10001fb0(undefined4* param_1)
                 reinterpret_cast<Address>(in_EAX))->member_0c);
     }
 
-    _DAT_00c97b24->member_20(6, 0);
-    _DAT_00c97b24->member_20(8, 0);
+    reinterpret_cast<StateInterface*>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97b24))->member_20(6, 0);
+    reinterpret_cast<StateInterface*>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97b24))->member_20(8, 0);
 
     DAT_1003bd98->member_60 =
         reinterpret_cast<NestedObject*>(*puVar2);
     DAT_1003bd98->member_64 = 0;
 
-    FUN_7ee180(_DAT_00c1703c);
+    FUN_7ee180(IMVEHFT_GLOBAL_AT(Address, 0x00c1703c));
     FUN_7ee190(reinterpret_cast<Address>(DAT_1003bd98));
 
+    const auto FUN_7fdcd0 =
+        reinterpret_cast<FUN_7fdcd0_t>(static_cast<Address>(0x007fdcd0));
     FUN_7fdcd0(*param_1, 0);
     FUN_7fdcd0(*in_EAX, 1);
 
-    _DAT_00c97c28->vtable->member_1b4(
-        _DAT_00c97c28, 0, &local_8, 1);
+    auto* d3d_device = reinterpret_cast<ContextInterface*>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97c28));
+    d3d_device->vtable->member_1b4(d3d_device, 0, &local_8, 1);
 
     auto* patch_81d =
         reinterpret_cast<PatchSite*>(0x007fb81d);
@@ -130,9 +131,13 @@ extern "C" undefined4* __cdecl FUN_10001fb0(undefined4* param_1)
 
     FUN_7f9fb0(0);
     FUN_7f9ff0(DAT_1003bbb0);
-    FUN_7170c0(0xff, 0xff, 0xff, 0xff);
+    reinterpret_cast<void(__thiscall*)(void*, int, int, int, int)>(
+        static_cast<std::uintptr_t>(0x7170c0))(
+            &local_c, 0xff, 0xff, 0xff, 0xff);
 
-    FUN_4041c0(
+    reinterpret_cast<void(__thiscall*)(void*, float, float, float, float)>(
+        static_cast<std::uintptr_t>(0x4041c0))(
+        local_1c,
         0,
         0,
         static_cast<float>(DAT_1003bd98->member_60->member_0c),
@@ -180,13 +185,15 @@ extern "C" undefined4* __cdecl FUN_10001fb0(undefined4* param_1)
 
     FUN_7f9ff0(0);
     FUN_7ee180(reinterpret_cast<Address>(DAT_1003bd98));
-    FUN_7ee190(_DAT_00c1703c);
+    FUN_7ee190(IMVEHFT_GLOBAL_AT(Address, 0x00c1703c));
 
     reinterpret_cast<InputObject*>(puVar2)->member_50 =
         reinterpret_cast<InputObject*>(param_1)->member_50;
 
-    _DAT_00c97b24->member_20(6, 1);
-    _DAT_00c97b24->member_20(8, 1);
+    reinterpret_cast<StateInterface*>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97b24))->member_20(6, 1);
+    reinterpret_cast<StateInterface*>(
+        IMVEHFT_GLOBAL_AT(void*, 0x00c97b24))->member_20(8, 1);
 
     return puVar2;
 }

@@ -1,7 +1,7 @@
 #include <cstdint>
 
-// MSVC's inline assembler cannot encode FLD m80fp at an absolute address
-// without adding a segment prefix. Emit the original DB /5 absolute forms.
+extern "C" std::uint32_t DAT_100396d8;
+
 extern "C" __declspec(naked) void __cdecl FUN_1002049a(std::uint32_t)
 {
     __asm {
@@ -14,12 +14,7 @@ extern "C" __declspec(naked) void __cdecl FUN_1002049a(std::uint32_t)
 
         test cl, 01h
         jz skip_integer_rounding
-        _emit 0DBh
-        _emit 02Dh
-        _emit 0DCh
-        _emit 096h
-        _emit 003h
-        _emit 010h
+        fld tbyte ptr [DAT_100396d8 + 4]
         fistp dword ptr [ebp + 8]
         wait
 
@@ -27,12 +22,7 @@ extern "C" __declspec(naked) void __cdecl FUN_1002049a(std::uint32_t)
         test cl, 08h
         jz skip_status_capture
         fstsw ax
-        _emit 0DBh
-        _emit 02Dh
-        _emit 0DCh
-        _emit 096h
-        _emit 003h
-        _emit 010h
+        fld tbyte ptr [DAT_100396d8 + 4]
         fstp qword ptr [ebp - 8]
         wait
         fstsw ax
@@ -40,12 +30,7 @@ extern "C" __declspec(naked) void __cdecl FUN_1002049a(std::uint32_t)
     skip_status_capture:
         test cl, 10h
         jz skip_secondary_constant
-        _emit 0DBh
-        _emit 02Dh
-        _emit 0E8h
-        _emit 096h
-        _emit 003h
-        _emit 010h
+        fld tbyte ptr [DAT_100396d8 + 10h]
         fstp qword ptr [ebp - 8]
         wait
 

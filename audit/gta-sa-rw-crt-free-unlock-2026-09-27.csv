@@ -1,0 +1,3 @@
+address,function_entry,function_name,body_min,body_max,incoming_ref_from,ref_type
+00824192,00824192,"FUN_00824192",00824192,0082419a,00824182,UNCONDITIONAL_CALL
+00824172,0082413f,"_free",0082413f,008241af,,NO_INCOMING_REFERENCE

@@ -1,0 +1,393 @@
+{
+  "scope": "Normalized names and IAT VAs from an exact unique-name crosswalk; no thunk code is verified here.",
+  "source_crosswalk": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\direct-unresolved-rel32-original-iat-crosswalk-exact-285-v2-2026-09-30.json",
+  "source_crosswalk_sha256": "B9CCD17861938342E6D2AEDE449E4BFCF00A4D22E7CE9DB7BE5EF3D8803D5E76",
+  "api_references": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\candidate-original-iat-api-rel32-references-exact-285-v2-2026-09-30.json",
+  "candidate_direct_api_symbol_count": 32,
+  "imports": [
+    {
+      "coff_code_symbol": "_D3DXCompileShaderFromFileA@36",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x1002214C",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "d3dx9_43.dll",
+          "name": "D3DXCompileShaderFromFileA",
+          "iat_va": "0x1002214C"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_DecodePointer@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022060",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "DecodePointer",
+          "iat_va": "0x10022060"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_DeleteCriticalSection@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220B4",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "DeleteCriticalSection",
+          "iat_va": "0x100220B4"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_EncodePointer@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x1002205C",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "EncodePointer",
+          "iat_va": "0x1002205C"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_EnterCriticalSection@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022098",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "EnterCriticalSection",
+          "iat_va": "0x10022098"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_GetCPInfo@8",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022000",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetCPInfo",
+          "iat_va": "0x10022000"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_GetCurrentProcess@0",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022084",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetCurrentProcess",
+          "iat_va": "0x10022084"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_GetLastError@0",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022070",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetLastError",
+          "iat_va": "0x10022070"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_GetModuleFileNameA@12",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022014",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetModuleFileNameA",
+          "iat_va": "0x10022014"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_GetModuleHandleA@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022018",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetModuleHandleA",
+          "iat_va": "0x10022018"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_GetPrivateProfileIntA@16",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022030",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetPrivateProfileIntA",
+          "iat_va": "0x10022030"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_GetStringTypeW@16",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022138",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "GetStringTypeW",
+          "iat_va": "0x10022138"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_HeapAlloc@12",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022040",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "HeapAlloc",
+          "iat_va": "0x10022040"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_HeapFree@12",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022044",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "HeapFree",
+          "iat_va": "0x10022044"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_HeapReAlloc@16",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022118",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "HeapReAlloc",
+          "iat_va": "0x10022118"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_HeapSize@12",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x1002208C",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "HeapSize",
+          "iat_va": "0x1002208C"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_InitializeCriticalSectionAndSpinCount@8",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220A8",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "InitializeCriticalSectionAndSpinCount",
+          "iat_va": "0x100220A8"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_InterlockedDecrement@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220C0",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "InterlockedDecrement",
+          "iat_va": "0x100220C0"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_IsValidCodePage@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220CC",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "IsValidCodePage",
+          "iat_va": "0x100220CC"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_LCMapStringW@24",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022134",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "LCMapStringW",
+          "iat_va": "0x10022134"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_LeaveCriticalSection@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x1002209C",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "LeaveCriticalSection",
+          "iat_va": "0x1002209C"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_MapViewOfFile@20",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022038",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "MapViewOfFile",
+          "iat_va": "0x10022038"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_MessageBoxA@16",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022144",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "USER32.dll",
+          "name": "MessageBoxA",
+          "iat_va": "0x10022144"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_MultiByteToWideChar@24",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220E4",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "MultiByteToWideChar",
+          "iat_va": "0x100220E4"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_OpenFileMappingA@12",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022058",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "OpenFileMappingA",
+          "iat_va": "0x10022058"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_RaiseException@16",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x1002206C",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "RaiseException",
+          "iat_va": "0x1002206C"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_Sleep@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022088",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "Sleep",
+          "iat_va": "0x10022088"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_TerminateProcess@8",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x10022080",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TerminateProcess",
+          "iat_va": "0x10022080"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_TlsGetValue@4",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220D4",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsGetValue",
+          "iat_va": "0x100220D4"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_TlsSetValue@8",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220D8",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "TlsSetValue",
+          "iat_va": "0x100220D8"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_VirtualProtect@16",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x1002201C",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "VirtualProtect",
+          "iat_va": "0x1002201C"
+        }
+      ]
+    },
+    {
+      "coff_code_symbol": "_WideCharToMultiByte@32",
+      "status": "exact-original-iat-match",
+      "iat_va": "0x100220F4",
+      "original_iat_matches_by_name_and_dll": [
+        {
+          "dll": "KERNEL32.dll",
+          "name": "WideCharToMultiByte",
+          "iat_va": "0x100220F4"
+        }
+      ]
+    }
+  ]
+}

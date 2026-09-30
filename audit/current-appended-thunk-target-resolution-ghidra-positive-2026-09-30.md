@@ -1,0 +1,22 @@
+# Current appended-thunk fixup coverage — 2026-09-30
+
+This refresh uses the current 705-object set and conservative 421-thunk placement. It combines 1,504 undefined COFF fixup occurrences from appended root bodies with 196 undefined occurrences from the 16 same-object local sections they reference: **1,700 total occurrences**.
+
+| Target evidence class | Root bodies | Local-section closure | Total |
+| --- | ---: | ---: | ---: |
+| Original-VA encoded data targets; all addresses fall inside original PE sections | 952 | 70 | 1,022 |
+| Provider/runtime-data aliases crosswalked to original preferred-base sections | 150 | 20 | 170 |
+| Direct imported-function IAT slots matched by exact name and DLL | 116 | 11 | 127 |
+| Code-target occurrences classified | 286 | 95 | 381 |
+| **Total classified occurrences** | **1,504** | **196** | **1,700** |
+
+Of the 381 code-target occurrences, **372** map to candidate entry/runtime addresses, preserved callback/helper addresses, external GTA text, or original IAT call thunks. The initial symbol join flags **nine static CRT arithmetic-helper calls** in the root bodies: `__alldiv` ×4, `__allrem` ×4, and `__aulldiv` ×1. A later evidence-backed follow-up now plans these through 82 bytes of bridges to the byte-identical original `__alldvrm`/`__aulldvrm` entries; the bridge is differentially tested, but its placement and nine call fixups are still unapplied. See [`crt-original-helper-bridge-2026-09-30.md`](crt-original-helper-bridge-2026-09-30.md).
+
+The exact-name diagnostic linker join also resolves all 1,700 occurrences in a non-production diagnostic image. That is bookkeeping evidence only; its symbol VAs are not accepted as production/original VAs. The original-VA and IAT crosswalks above provide the stronger target-specific evidence but do not prove target object types, initialization/lifetime, complete section placement, CRT startup, loader compatibility, or game behavior. No production PE/ASI has been emitted or loaded.
+
+Inputs and target-specific audits:
+
+- Root/local closure inventories: [`appended-thunk-relocation-targets-ghidra-positive-2026-09-30.json`](appended-thunk-relocation-targets-ghidra-positive-2026-09-30.json), [`appended-thunk-local-section-closure-ghidra-positive-2026-09-30.json`](appended-thunk-local-section-closure-ghidra-positive-2026-09-30.json), [`appended-thunk-local-closure-symbol-delta-ghidra-positive-2026-09-30.json`](appended-thunk-local-closure-symbol-delta-ghidra-positive-2026-09-30.json)
+- Original PE data/provider targets: [`appended-thunk-address-encoded-original-pe-ghidra-positive-2026-09-30.json`](appended-thunk-address-encoded-original-pe-ghidra-positive-2026-09-30.json), [`appended-thunk-local-closure-address-encoded-original-pe-ghidra-positive-2026-09-30.json`](appended-thunk-local-closure-address-encoded-original-pe-ghidra-positive-2026-09-30.json), [`appended-thunk-provider-original-addresses-ghidra-positive-2026-09-30b.json`](appended-thunk-provider-original-addresses-ghidra-positive-2026-09-30b.json), [`appended-thunk-local-closure-provider-original-addresses-ghidra-positive-2026-09-30b.json`](appended-thunk-local-closure-provider-original-addresses-ghidra-positive-2026-09-30b.json)
+- IAT/code target classes: [`appended-thunk-import-slots-ghidra-positive-2026-09-30.json`](appended-thunk-import-slots-ghidra-positive-2026-09-30.json), [`appended-thunk-original-iat-crosswalk-ghidra-positive-2026-09-30.json`](appended-thunk-original-iat-crosswalk-ghidra-positive-2026-09-30.json), [`appended-thunk-code-target-classes-ghidra-positive-2026-09-30.json`](appended-thunk-code-target-classes-ghidra-positive-2026-09-30.json), [`appended-thunk-local-closure-import-slots-ghidra-positive-2026-09-30.json`](appended-thunk-local-closure-import-slots-ghidra-positive-2026-09-30.json), [`appended-thunk-local-closure-original-iat-crosswalk-ghidra-positive-2026-09-30.json`](appended-thunk-local-closure-original-iat-crosswalk-ghidra-positive-2026-09-30.json), [`appended-thunk-local-closure-code-target-classes-ghidra-positive-2026-09-30.json`](appended-thunk-local-closure-code-target-classes-ghidra-positive-2026-09-30.json)
+- Diagnostic-only symbol joins: [`appended-thunk-root-diagnostic-link-map-ghidra-positive-2026-09-30.json`](appended-thunk-root-diagnostic-link-map-ghidra-positive-2026-09-30.json), [`appended-thunk-full-closure-diagnostic-link-map-ghidra-positive-2026-09-30.json`](appended-thunk-full-closure-diagnostic-link-map-ghidra-positive-2026-09-30.json)

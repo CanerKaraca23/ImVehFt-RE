@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <exception>
@@ -29,6 +30,18 @@ static_assert(offsetof(_s_FuncInfo, pTryBlockMap) == 0x10);
 static_assert(sizeof(_s_FuncInfo) == 0x20);
 
 struct TypeDescriptor { void* pVFTable; void* spare; };
+struct TypeInfoStorage
+{
+    bool __thiscall equals(const TypeInfoStorage* other) const;
+    void** vtable;
+};
+struct ExceptionStorage
+{
+    void* __thiscall construct(char** param);
+    void** vtable;
+    char* what;
+    std::uint8_t do_free;
+};
 struct _s_HandlerType
 {
     std::uint32_t adjectives;
@@ -85,32 +98,22 @@ struct _tiddata { std::uint8_t reserved_00_7f[0x80]; void* _translator; };
 extern "C" _ptiddata* __cdecl __getptd(void);
 extern "C" void __cdecl _inconsistency(void);
 extern "C" int __cdecl _ValidateRead(void*, std::uint32_t);
-extern "C" int __cdecl IsInExceptionSpec(EHExceptionRecord*, _s_ESTypeList*);
-extern "C" int __cdecl FUN_10010792(void*, void*);
-extern "C" void __cdecl ___DestructExceptionObject(int*);
-extern "C" void __cdecl FUN_100102c3();
-static __declspec(naked) void __cdecl CallExceptionCtorAbi(std::exception*, char**)
+std::uint8_t __cdecl IsInExceptionSpec(EHExceptionRecord*, const _s_ESTypeList*);
+void __cdecl ___DestructExceptionObject(int*);
+static std::exception* __cdecl CallExceptionCtorAbi(
+    std::exception* object, char** text)
 {
-    __asm {
-        push ebp
-        mov ebp, esp
-        mov ecx, dword ptr [ebp + 08h]
-        push dword ptr [ebp + 0ch]
-        call FUN_100102c3
-        add esp, 4
-        mov esp, ebp
-        pop ebp
-        ret
-    }
+    auto* const storage = reinterpret_cast<ExceptionStorage*>(object);
+    return reinterpret_cast<std::exception*>(storage->construct(text));
 }
 extern "C" __declspec(noreturn) void __stdcall __CxxThrowException_8(void*, void*);
-extern "C" _s_TryBlockMapEntry* __cdecl _GetRangeOfTrysToCheck(
+_s_TryBlockMapEntry* __cdecl _GetRangeOfTrysToCheck(
     _s_FuncInfo*, int, int, std::uint32_t*, std::uint32_t*);
-extern "C" int __cdecl ___TypeMatch(std::uint8_t*, std::uint8_t*, std::uint32_t*);
+std::uint32_t __cdecl ___TypeMatch(std::uint8_t*, std::uint8_t*, std::uint32_t*);
 extern "C" void __stdcall _UnwindNestedFrames(EHRegistrationNode*, EHExceptionRecord*);
-extern "C" void __cdecl ___FrameUnwindToState(int, void*, int, int);
+void __cdecl ___FrameUnwindToState(int, std::uint32_t, int, int);
 extern "C" void __stdcall FUN_1001d026(void);
-extern "C" void __cdecl FindHandlerForForeignException(
+void __cdecl FindHandlerForForeignException(
     EHExceptionRecord*, EHRegistrationNode*, _CONTEXT*, void*, _s_FuncInfo*,
     int, int, EHRegistrationNode*);
 
@@ -253,9 +256,9 @@ void __cdecl FindHandler(
                                             exceptionSpec[1])) +
                                     4 + index * 0x10);
 
-                            if (FUN_10010792(
-                                    type,
-                                    &s_bad_exception_100261f0))
+                            if (reinterpret_cast<TypeInfoStorage*>(type)->equals(
+                                    reinterpret_cast<const TypeInfoStorage*>(
+                                        &s_bad_exception_100261f0)))
                             {
                                 ___DestructExceptionObject(
                                     reinterpret_cast<int*>(param_1));
@@ -279,7 +282,7 @@ void __cdecl FindHandler(
                                 __CxxThrowException_8(
                                     exceptionObject,
                                     reinterpret_cast<void*>(
-                                        0x1002874c));
+                                        IVF_IMAGE_ADDRESS_1002874C));
                             }
 
                             ++index;
@@ -433,7 +436,8 @@ void __cdecl FindHandler(
             ___FrameUnwindToState(
                 static_cast<std::int32_t>(
                     reinterpret_cast<std::uintptr_t>(param_2)),
-                param_4,
+                static_cast<std::uint32_t>(
+                    reinterpret_cast<std::uintptr_t>(param_4)),
                 static_cast<std::int32_t>(
                     reinterpret_cast<std::uintptr_t>(param_5)),
                 -1);

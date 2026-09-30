@@ -43,11 +43,21 @@ void FUN_1000c1a0_this::FUN_1000c1a0(std::uint32_t param_1, int param_2, int par
 
         struct FUN_1000c480_PatchPair { std::uint32_t patch; std::uint32_t target; };
     static_assert(sizeof(FUN_1000c480_PatchPair) == 8);
-    FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000cd20u};
-    FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000cd30u};
-    FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000cd40u};
-    FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000cd50u};
-    FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000cd60u};
+    FUN_1000c480_PatchPair pair_1{
+        static_cast<std::uint32_t>(param_1),
+        static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000cd20))};
+    FUN_1000c480_PatchPair pair_2{
+        static_cast<std::uint32_t>(param_2),
+        static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000cd30))};
+    FUN_1000c480_PatchPair pair_3{
+        static_cast<std::uint32_t>(param_3),
+        static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000cd40))};
+    FUN_1000c480_PatchPair pair_4{
+        static_cast<std::uint32_t>(param_4),
+        static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000cd50))};
+    FUN_1000c480_PatchPair pair_5{
+        static_cast<std::uint32_t>(param_5),
+        static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000cd60))};
     FUN_1000c480_usercall(
         reinterpret_cast<std::int32_t*>(&pair_1),
         reinterpret_cast<int*>(

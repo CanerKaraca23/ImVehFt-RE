@@ -17,7 +17,7 @@ extern "C" _tiddata* __cdecl __getptd(void);
 extern "C" void* __stdcall FUN_10014c40(void);
 extern "C" void __cdecl _inconsistency(void);
 extern "C" int __cdecl _CallSETranslator(EHExceptionRecord*, EHRegistrationNode*, _CONTEXT*, void*, _s_FuncInfo*, int, EHRegistrationNode*);
-extern "C" _s_TryBlockMapEntry* __cdecl _GetRangeOfTrysToCheck(_s_FuncInfo*, int, int, unsigned int*, unsigned int*);
+_s_TryBlockMapEntry* __cdecl _GetRangeOfTrysToCheck(_s_FuncInfo*, int, int, unsigned int*, unsigned int*);
 extern "C" void __cdecl CatchIt(void);
 void __cdecl FindHandlerForForeignException(
     EHExceptionRecord* param_1,

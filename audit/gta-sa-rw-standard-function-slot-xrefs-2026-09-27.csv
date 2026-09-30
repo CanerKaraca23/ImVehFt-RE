@@ -1,0 +1,4 @@
+address,memory_block,symbols,data_or_code_unit,incoming_references
+00c97a24,".data","","00c97a24:?? 00h:type=undefined",""
+00c97b0c,".data","DAT_00c97b0c[Label,DEFAULT,primary]","00c97b0c:?? 00h:type=undefined","007f3188:WRITE@007f3170:FUN_007f3170|007f319f:WRITE@007f3170:FUN_007f3170"
+00c97b10,".data","DAT_00c97b10[Label,DEFAULT,primary]","00c97b10:?? 00h:type=undefined","007f3192:WRITE@007f3170:FUN_007f3170|007f31a9:WRITE@007f3170:FUN_007f3170"

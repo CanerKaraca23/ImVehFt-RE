@@ -30,8 +30,8 @@ static_assert(offsetof(_iobuf, _flag) == 0x0c);
 static_assert(sizeof(_iobuf) == 0x20);
 int* __cdecl __errno();
 extern "C" void __stdcall FUN_1001189f();
-int __cdecl __output_l(FILE*, char*, _locale_t, va_list*);
-int __cdecl __flsbuf(int, FILE*);
+int __cdecl __output_l(FILE*, char*, _locale_t, va_list);
+extern "C" int __cdecl __flsbuf(int, FILE*);
 
 int __cdecl _sprintf(char* _Dest, char* _Format, ...)
 {
@@ -65,7 +65,7 @@ int __cdecl _sprintf(char* _Dest, char* _Format, ...)
         local_24._flag = 0x42;
 
         va_start(argList, _Format);
-        iVar2 = __output_l(&local_24, _Format, (_locale_t)0x0, &argList);
+        iVar2 = __output_l(&local_24, _Format, (_locale_t)0x0, argList);
         va_end(argList);
 
         local_24._cnt = local_24._cnt + -1;

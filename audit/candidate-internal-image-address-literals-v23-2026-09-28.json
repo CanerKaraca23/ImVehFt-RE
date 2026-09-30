@@ -1,0 +1,17 @@
+{
+  "scope": "literal original-image VAs present in the 705 candidate source files, located against original PE virtual sections; not a semantic adjudication",
+  "image": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\modloader\\My Scripts\\.ImVehFt\\ImVehFt.asi",
+  "candidate_translation_units": 705,
+  "occurrences": 16,
+  "unique_addresses": 15,
+  "unique_exact_candidate_function_entries": 1,
+  "occurrences_by_section": {
+    ".text": 16
+  },
+  "addresses_without_exact_candidate_entry": 14,
+  "csv": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\candidate-internal-image-address-literals-v23-2026-09-28.csv",
+  "limitations": [
+    "address literals may be function pointers, interior code labels, globals, tables, or intentional preferred-base references; each use requires instruction/data-flow review",
+    "the inventory does not prove a literal is incorrect and does not modify candidate sources"
+  ]
+}

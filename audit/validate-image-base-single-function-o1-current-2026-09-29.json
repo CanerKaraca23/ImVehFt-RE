@@ -1,0 +1,33 @@
+{
+  "scope": "One-function in-place patch mechanism probe only; output is not a production ASI and was not loaded.",
+  "reference_pe": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\ImVehFt.asi",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "candidate_object": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\recheck\\strict-xcode-nogs-o1-fopen-linkage-alias-final-20260929\\10018090.obj",
+  "candidate": {
+    "object_sha256": "D4555A27985E481715BF4CD2E6F9ED619E8888A32A376227AD6AFD55FFEA43CA",
+    "symbol": "___ValidateImageBase",
+    "symbol_type": 32,
+    "comdat_section_number": 3,
+    "comdat_section": ".xcode",
+    "comdat_size": 47,
+    "coff_relocation_count": 0
+  },
+  "entry_va": "0x10018090",
+  "candidate_size": 47,
+  "next_mapped_entry_gap": 64,
+  "original_highlow_overlap_count": 0,
+  "ghidra_function_body_end": "0x100180c4",
+  "ghidra_incoming_interior_refs_outside_replaced_bytes": 0,
+  "original_entry_bytes_sha256": "FE7772322577E474D48D144EF301EE83733C118EA92CD70AC95286EB766B7D5D",
+  "candidate_bytes_sha256": "D9A3AEDC1753F2E87DD3CD07E0EF6E125F45D461371DA2E6AB65075000FC3133",
+  "changed_file_byte_count": 45,
+  "changed_file_offset_start": "0x17491",
+  "changed_file_offset_end_exclusive": "0x174bf",
+  "output": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\pe-layout-probe\\validate-image-base-single-function-o1-current-20260929-not-asi.bin",
+  "output_sha256": "1D6677757D50714ED2DD26514F694471827D9E12A30EADB36ECCE1C2DDA6948A",
+  "limitations": [
+    "This exercises only one known zero-relocation CRT function in its original VA; it does not validate the other 704 candidates.",
+    "Ghidra decompilation/xrefs and bounded placement checks are not proof of semantic equivalence.",
+    "The probe was not loaded as a DLL/ASI, is not a game test, and does not validate initialization or whole-image behavior."
+  ]
+}

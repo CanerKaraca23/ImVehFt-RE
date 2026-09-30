@@ -1,0 +1,96 @@
+FUNCTION FUN_10007d70 @ 10007d70
+10007d70  PUSH EBP
+10007d71  MOV EBP,ESP
+10007d73  PUSH -0x1
+10007d75  PUSH 0x10050b28
+10007d7a  MOV EAX,FS:[0x0]
+10007d80  PUSH EAX
+10007d81  SUB ESP,0x60
+10007d84  MOV EAX,[0x10068014]
+10007d89  XOR EAX,EBP
+10007d8b  MOV dword ptr [EBP + -0x10],EAX
+10007d8e  PUSH ESI
+10007d8f  PUSH EDI
+10007d90  PUSH EAX
+10007d91  LEA EAX,[EBP + -0xc]
+10007d94  MOV FS:[0x0],EAX
+10007d9a  MOV ESI,ECX
+10007d9c  PUSH 0x58
+10007d9e  LEA EAX,[EBP + -0x68]
+10007da1  PUSH 0x0
+10007da3  PUSH EAX
+10007da4  CALL 0x10036070
+10007da9  ADD ESP,0xc
+10007dac  LEA ECX,[EBP + -0x68]
+10007daf  PUSH dword ptr [ESI + 0x4]
+10007db2  PUSH dword ptr [ESI]
+10007db4  CALL 0x100083f0
+10007db9  PUSH 0x1
+10007dbb  LEA ECX,[EBP + -0x68]
+10007dbe  MOV dword ptr [EBP + -0x4],0x0
+10007dc5  CALL 0x10006ea0
+10007dca  PUSH -0x1
+10007dcc  LEA ECX,[EBP + -0x68]
+10007dcf  CALL 0x10006ea0
+10007dd4  MOV EAX,dword ptr [EBP + -0x2c]
+10007dd7  SUB EAX,dword ptr [EBP + -0x30]
+10007dda  AND EAX,0xfffffffc
+10007ddd  CMP EAX,0x4
+10007de0  JNZ 0x10007df8
+10007de2  MOV ESI,dword ptr [ESI + 0x8]
+10007de5  LEA ECX,[EBP + -0x68]
+10007de8  PUSH 0x1
+10007dea  CALL 0x10006ea0
+10007def  MOV EAX,dword ptr [EBP + -0x30]
+10007df2  MOV EDI,dword ptr [EAX]
+10007df4  ADD EDI,ESI
+10007df6  JMP 0x10007dfa
+10007df8  XOR EDI,EDI
+10007dfa  LEA ECX,[EBP + -0x68]
+10007dfd  CALL 0x100082c0
+10007e02  MOV EAX,EDI
+10007e04  MOV ECX,dword ptr [EBP + -0xc]
+10007e07  MOV dword ptr FS:[0x0],ECX
+10007e0e  POP ECX
+10007e0f  POP EDI
+10007e10  POP ESI
+10007e11  MOV ECX,dword ptr [EBP + -0x10]
+10007e14  XOR ECX,EBP
+10007e16  CALL 0x10033f5d
+10007e1b  MOV ESP,EBP
+10007e1d  POP EBP
+10007e1e  RET
+
+DECOMPILED SOURCE
+
+void __fastcall FUN_10007d70(undefined4 *param_1)
+
+{
+  int local_6c [14];
+  int local_34;
+  int local_30;
+  uint local_14;
+  void *local_10;
+  undefined1 *puStack_c;
+  undefined4 local_8;
+  
+  local_8 = 0xffffffff;
+  puStack_c = &LAB_10050b28;
+  local_10 = ExceptionList;
+  local_14 = DAT_10068014 ^ (uint)&stack0xfffffffc;
+  ExceptionList = &local_10;
+  _memset(local_6c,0,0x58);
+  FUN_100083f0(local_6c,(char *)*param_1,param_1[1]);
+  local_8 = 0;
+  FUN_10006ea0(local_6c,1);
+  FUN_10006ea0(local_6c,-1);
+  if ((local_30 - local_34 & 0xfffffffcU) == 4) {
+    FUN_10006ea0(local_6c,1);
+  }
+  FUN_100082c0(local_6c);
+  ExceptionList = local_10;
+  __security_check_cookie(local_14 ^ (uint)&stack0xfffffffc);
+  return;
+}
+
+

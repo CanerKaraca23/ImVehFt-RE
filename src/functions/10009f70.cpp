@@ -1,7 +1,9 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 #include <corecrt.h>
 #include <stdio.h>
+extern "C" void __cdecl FUN_10010756(void*);
 struct FUN_10009f70_this {
     void* __thiscall FUN_10009f70(unsigned char param_1);
 };
@@ -22,14 +24,9 @@ void* FUN_10009f70_this::FUN_10009f70(unsigned char param_1)
         unsigned int field_30;
     };
 
-    extern unsigned int
-        BasicCallbackManager_5499603_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable[];
-    extern void __cdecl FUN_10010756(void*);
-
     Object* object = static_cast<Object*>(self);
 
-    object->vftable = reinterpret_cast<unsigned int>(
-        &BasicCallbackManager_5499603_0_0_0_0_SimpleSuperManager_PatcherCALL1_vftable);
+    object->vftable = IVF_IMAGE_ADDRESS_10024DB8;
 
     if (object->field_28 != 0)
     {

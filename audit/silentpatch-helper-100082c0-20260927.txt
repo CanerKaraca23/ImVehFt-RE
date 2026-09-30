@@ -1,0 +1,152 @@
+FUNCTION FUN_100082c0 @ 100082c0
+100082c0  PUSH ESI
+100082c1  MOV ESI,ECX
+100082c3  MOV EAX,dword ptr [ESI + 0x44]
+100082c6  TEST EAX,EAX
+100082c8  JZ 0x1000830f
+100082ca  MOV ECX,dword ptr [ESI + 0x4c]
+100082cd  SUB ECX,EAX
+100082cf  AND ECX,0xfffffff8
+100082d2  CMP ECX,0x1000
+100082d8  JC 0x100082f0
+100082da  MOV EDX,dword ptr [EAX + -0x4]
+100082dd  ADD ECX,0x23
+100082e0  SUB EAX,EDX
+100082e2  ADD EAX,-0x4
+100082e5  CMP EAX,0x1f
+100082e8  JA 0x100083df
+100082ee  MOV EAX,EDX
+100082f0  PUSH ECX
+100082f1  PUSH EAX
+100082f2  CALL 0x10033fa3
+100082f7  MOV dword ptr [ESI + 0x44],0x0
+100082fe  ADD ESP,0x8
+10008301  MOV dword ptr [ESI + 0x48],0x0
+10008308  MOV dword ptr [ESI + 0x4c],0x0
+1000830f  MOV EAX,dword ptr [ESI + 0x38]
+10008312  TEST EAX,EAX
+10008314  JZ 0x1000835b
+10008316  MOV ECX,dword ptr [ESI + 0x40]
+10008319  SUB ECX,EAX
+1000831b  AND ECX,0xfffffffc
+1000831e  CMP ECX,0x1000
+10008324  JC 0x1000833c
+10008326  MOV EDX,dword ptr [EAX + -0x4]
+10008329  ADD ECX,0x23
+1000832c  SUB EAX,EDX
+1000832e  ADD EAX,-0x4
+10008331  CMP EAX,0x1f
+10008334  JA 0x100083df
+1000833a  MOV EAX,EDX
+1000833c  PUSH ECX
+1000833d  PUSH EAX
+1000833e  CALL 0x10033fa3
+10008343  MOV dword ptr [ESI + 0x38],0x0
+1000834a  ADD ESP,0x8
+1000834d  MOV dword ptr [ESI + 0x3c],0x0
+10008354  MOV dword ptr [ESI + 0x40],0x0
+1000835b  MOV ECX,dword ptr [ESI + 0x2c]
+1000835e  CMP ECX,0x10
+10008361  JC 0x1000838b
+10008363  MOV EAX,dword ptr [ESI + 0x18]
+10008366  INC ECX
+10008367  CMP ECX,0x1000
+1000836d  JC 0x10008381
+1000836f  MOV EDX,dword ptr [EAX + -0x4]
+10008372  ADD ECX,0x23
+10008375  SUB EAX,EDX
+10008377  ADD EAX,-0x4
+1000837a  CMP EAX,0x1f
+1000837d  JA 0x100083df
+1000837f  MOV EAX,EDX
+10008381  PUSH ECX
+10008382  PUSH EAX
+10008383  CALL 0x10033fa3
+10008388  ADD ESP,0x8
+1000838b  MOV dword ptr [ESI + 0x28],0x0
+10008392  MOV dword ptr [ESI + 0x2c],0xf
+10008399  MOV byte ptr [ESI + 0x18],0x0
+1000839d  MOV ECX,dword ptr [ESI + 0x14]
+100083a0  CMP ECX,0x10
+100083a3  JC 0x100083cc
+100083a5  MOV EAX,dword ptr [ESI]
+100083a7  INC ECX
+100083a8  CMP ECX,0x1000
+100083ae  JC 0x100083c2
+100083b0  MOV EDX,dword ptr [EAX + -0x4]
+100083b3  ADD ECX,0x23
+100083b6  SUB EAX,EDX
+100083b8  ADD EAX,-0x4
+100083bb  CMP EAX,0x1f
+100083be  JA 0x100083df
+100083c0  MOV EAX,EDX
+100083c2  PUSH ECX
+100083c3  PUSH EAX
+100083c4  CALL 0x10033fa3
+100083c9  ADD ESP,0x8
+100083cc  MOV dword ptr [ESI + 0x10],0x0
+100083d3  MOV dword ptr [ESI + 0x14],0xf
+100083da  MOV byte ptr [ESI],0x0
+100083dd  POP ESI
+100083de  RET
+100083df  CALL 0x10038389
+
+DECOMPILED SOURCE
+
+void __fastcall FUN_100082c0(int *param_1)
+
+{
+  void *pvVar1;
+  void *pvVar2;
+  
+  pvVar1 = (void *)param_1[0x11];
+  if (pvVar1 != (void *)0x0) {
+    pvVar2 = pvVar1;
+    if ((0xfff < (param_1[0x13] - (int)pvVar1 & 0xfffffff8U)) &&
+       (pvVar2 = *(void **)((int)pvVar1 + -4), 0x1f < (uint)((int)pvVar1 + (-4 - (int)pvVar2))))
+    goto LAB_100083df;
+    FUN_10033fa3(pvVar2);
+    param_1[0x11] = 0;
+    param_1[0x12] = 0;
+    param_1[0x13] = 0;
+  }
+  pvVar1 = (void *)param_1[0xe];
+  if (pvVar1 != (void *)0x0) {
+    pvVar2 = pvVar1;
+    if ((0xfff < (param_1[0x10] - (int)pvVar1 & 0xfffffffcU)) &&
+       (pvVar2 = *(void **)((int)pvVar1 + -4), 0x1f < (uint)((int)pvVar1 + (-4 - (int)pvVar2))))
+    goto LAB_100083df;
+    FUN_10033fa3(pvVar2);
+    param_1[0xe] = 0;
+    param_1[0xf] = 0;
+    param_1[0x10] = 0;
+  }
+  if (0xf < (uint)param_1[0xb]) {
+    pvVar1 = (void *)param_1[6];
+    pvVar2 = pvVar1;
+    if ((0xfff < param_1[0xb] + 1U) &&
+       (pvVar2 = *(void **)((int)pvVar1 + -4), 0x1f < (uint)((int)pvVar1 + (-4 - (int)pvVar2))))
+    goto LAB_100083df;
+    FUN_10033fa3(pvVar2);
+  }
+  param_1[10] = 0;
+  param_1[0xb] = 0xf;
+  *(undefined1 *)(param_1 + 6) = 0;
+  if (0xf < (uint)param_1[5]) {
+    pvVar1 = (void *)*param_1;
+    pvVar2 = pvVar1;
+    if ((0xfff < param_1[5] + 1U) &&
+       (pvVar2 = *(void **)((int)pvVar1 + -4), 0x1f < (uint)((int)pvVar1 + (-4 - (int)pvVar2)))) {
+LAB_100083df:
+                    /* WARNING: Subroutine does not return */
+      FUN_10038389();
+    }
+    FUN_10033fa3(pvVar2);
+  }
+  param_1[4] = 0;
+  param_1[5] = 0xf;
+  *(undefined1 *)param_1 = 0;
+  return;
+}
+
+

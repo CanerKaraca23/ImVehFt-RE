@@ -1,0 +1,57 @@
+FUNCTION FUN_100014a0 @ 100014a0
+100014a0  PUSH EBP
+100014a1  MOV EBP,ESP
+100014a3  AND ESP,0xfffffff8
+100014a6  SUB ESP,0x30
+100014a9  MOV EAX,dword ptr [ESP + 0x4]
+100014ad  SUB ESP,0x10
+100014b0  MOV ECX,ESP
+100014b2  MOV byte ptr [ESP + 0x1c],0x0
+100014b7  SUB ESP,0x10
+100014ba  MOV byte ptr [ESP + 0x3c],0x0
+100014bf  MOV byte ptr [ESP + 0x4c],0x0
+100014c4  MOV dword ptr [ECX],0x4d2ce0
+100014ca  MOV dword ptr [ECX + 0x4],EAX
+100014cd  MOV EAX,dword ptr [ESP + 0x28]
+100014d1  MOV dword ptr [ECX + 0x8],EAX
+100014d4  MOV EAX,dword ptr [ESP + 0x2c]
+100014d8  MOV dword ptr [ECX + 0xc],EAX
+100014db  MOV ECX,ESP
+100014dd  MOV EAX,dword ptr [ESP + 0x34]
+100014e1  SUB ESP,0x10
+100014e4  MOV dword ptr [ECX],0x4c8460
+100014ea  MOV dword ptr [ECX + 0x4],EAX
+100014ed  MOV EAX,dword ptr [ESP + 0x48]
+100014f1  MOV dword ptr [ECX + 0x8],EAX
+100014f4  MOV EAX,dword ptr [ESP + 0x4c]
+100014f8  MOV dword ptr [ECX + 0xc],EAX
+100014fb  MOV ECX,ESP
+100014fd  MOV EAX,dword ptr [ESP + 0x54]
+10001501  SUB ESP,0xc
+10001504  MOV dword ptr [ECX],0x4c83e0
+1000150a  MOV dword ptr [ECX + 0x4],EAX
+1000150d  MOV EAX,dword ptr [ESP + 0x64]
+10001511  MOV dword ptr [ECX + 0x8],EAX
+10001514  MOV EAX,dword ptr [ESP + 0x68]
+10001518  MOV dword ptr [ECX + 0xc],EAX
+1000151b  MOV EAX,ESP
+1000151d  MOV dword ptr [EAX],0x0
+10001523  MOV dword ptr [EAX + 0x4],0x0
+1000152a  MOV dword ptr [EAX + 0x8],0x0
+10001531  CALL 0x10007e20
+10001536  ADD ESP,0x3c
+10001539  MOV [0x10069734],EAX
+1000153e  MOV ESP,EBP
+10001540  POP EBP
+10001541  RET
+
+DECOMPILED SOURCE
+
+void FUN_100014a0(void)
+
+{
+  DAT_10069734 = FUN_10007e20(0,0);
+  return;
+}
+
+

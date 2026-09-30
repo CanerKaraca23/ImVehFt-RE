@@ -1,0 +1,852 @@
+{
+  "scope": "200 .text HIGHLOW sites whose source instruction has no containing Ghidra function",
+  "site_count": 200,
+  "cluster_gap_heuristic_bytes": 64,
+  "cluster_count": 20,
+  "clusters": [
+    {
+      "cluster": 1,
+      "first_instruction": "0x10001000",
+      "last_instruction": "0x10001000",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".rdata": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x10001002"
+      ]
+    },
+    {
+      "cluster": 2,
+      "first_instruction": "0x10001859",
+      "last_instruction": "0x10001886",
+      "site_count": 6,
+      "instruction_count": 6,
+      "target_section_counts": {
+        ".data": 1,
+        ".rdata": 2,
+        ".text": 3
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x1000185A",
+        "0x10001864",
+        "0x10001869",
+        "0x1000186E",
+        "0x10001882",
+        "0x10001887"
+      ]
+    },
+    {
+      "cluster": 3,
+      "first_instruction": "0x10003030",
+      "last_instruction": "0x10003110",
+      "site_count": 13,
+      "instruction_count": 13,
+      "target_section_counts": {
+        ".data": 11,
+        ".rdata": 2
+      },
+      "hook_cfg_targets": [
+        "0x10003030",
+        "0x10003060",
+        "0x10003080"
+      ],
+      "shim_fixup_site_count": 6,
+      "sites": [
+        "0x10003032",
+        "0x10003063",
+        "0x10003068",
+        "0x10003083",
+        "0x10003088",
+        "0x1000309D",
+        "0x100030B2",
+        "0x100030C5",
+        "0x100030CD",
+        "0x100030DC",
+        "0x100030ED",
+        "0x10003104",
+        "0x10003111"
+      ]
+    },
+    {
+      "cluster": 4,
+      "first_instruction": "0x100031E0",
+      "last_instruction": "0x100031E0",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".data": 1
+      },
+      "hook_cfg_targets": [
+        "0x100031E0"
+      ],
+      "shim_fixup_site_count": 1,
+      "sites": [
+        "0x100031E2"
+      ]
+    },
+    {
+      "cluster": 5,
+      "first_instruction": "0x10004B10",
+      "last_instruction": "0x10004B29",
+      "site_count": 3,
+      "instruction_count": 3,
+      "target_section_counts": {
+        ".data": 3
+      },
+      "hook_cfg_targets": [
+        "0x10004B10"
+      ],
+      "shim_fixup_site_count": 3,
+      "sites": [
+        "0x10004B12",
+        "0x10004B18",
+        "0x10004B2B"
+      ]
+    },
+    {
+      "cluster": 6,
+      "first_instruction": "0x10004B6C",
+      "last_instruction": "0x10004B9A",
+      "site_count": 4,
+      "instruction_count": 4,
+      "target_section_counts": {
+        ".data": 4
+      },
+      "hook_cfg_targets": [
+        "0x10004B10"
+      ],
+      "shim_fixup_site_count": 4,
+      "sites": [
+        "0x10004B6E",
+        "0x10004B76",
+        "0x10004B95",
+        "0x10004B9D"
+      ]
+    },
+    {
+      "cluster": 7,
+      "first_instruction": "0x10007F50",
+      "last_instruction": "0x10007FCD",
+      "site_count": 8,
+      "instruction_count": 8,
+      "target_section_counts": {
+        ".data": 7,
+        ".rdata": 1
+      },
+      "hook_cfg_targets": [
+        "0x10007F50",
+        "0x10007F90"
+      ],
+      "shim_fixup_site_count": 8,
+      "sites": [
+        "0x10007F52",
+        "0x10007F92",
+        "0x10007F98",
+        "0x10007FA2",
+        "0x10007FA7",
+        "0x10007FB3",
+        "0x10007FC0",
+        "0x10007FCF"
+      ]
+    },
+    {
+      "cluster": 8,
+      "first_instruction": "0x10008781",
+      "last_instruction": "0x10008B5A",
+      "site_count": 106,
+      "instruction_count": 106,
+      "target_section_counts": {
+        ".data": 91,
+        ".rdata": 15
+      },
+      "hook_cfg_targets": [
+        "0x10008780",
+        "0x10008830",
+        "0x10008940"
+      ],
+      "shim_fixup_site_count": 106,
+      "sites": [
+        "0x10008782",
+        "0x10008791",
+        "0x10008796",
+        "0x1000879B",
+        "0x100087A0",
+        "0x100087A5",
+        "0x100087AD",
+        "0x100087BD",
+        "0x100087C4",
+        "0x100087CB",
+        "0x100087D1",
+        "0x100087E1",
+        "0x100087E7",
+        "0x100087ED",
+        "0x100087FE",
+        "0x1000880F",
+        "0x1000881F",
+        "0x10008825",
+        "0x10008831",
+        "0x10008837",
+        "0x1000883E",
+        "0x10008846",
+        "0x1000884F",
+        "0x10008857",
+        "0x10008860",
+        "0x10008869",
+        "0x10008872",
+        "0x1000887B",
+        "0x10008880",
+        "0x10008887",
+        "0x10008892",
+        "0x1000889B",
+        "0x100088A4",
+        "0x100088AB",
+        "0x100088B4",
+        "0x100088BC",
+        "0x100088C5",
+        "0x100088CD",
+        "0x100088D3",
+        "0x100088DA",
+        "0x100088E2",
+        "0x100088EB",
+        "0x100088F3",
+        "0x100088FB",
+        "0x10008903",
+        "0x1000890C",
+        "0x10008914",
+        "0x1000891D",
+        "0x10008923",
+        "0x1000892A",
+        "0x10008934",
+        "0x10008942",
+        "0x1000894D",
+        "0x10008955",
+        "0x1000895B",
+        "0x10008968",
+        "0x1000896F",
+        "0x10008978",
+        "0x1000897F",
+        "0x10008990",
+        "0x10008997",
+        "0x1000899F",
+        "0x100089A6",
+        "0x100089B6",
+        "0x100089BD",
+        "0x100089C6",
+        "0x100089CD",
+        "0x100089DE",
+        "0x100089E5",
+        "0x100089EE",
+        "0x100089F5",
+        "0x100089FF",
+        "0x10008A06",
+        "0x10008A10",
+        "0x10008A17",
+        "0x10008A21",
+        "0x10008A28",
+        "0x10008A31",
+        "0x10008A38",
+        "0x10008A47",
+        "0x10008A50",
+        "0x10008A5B",
+        "0x10008A64",
+        "0x10008A6F",
+        "0x10008A78",
+        "0x10008A83",
+        "0x10008A8C",
+        "0x10008A97",
+        "0x10008AA0",
+        "0x10008AAB",
+        "0x10008AB4",
+        "0x10008ABF",
+        "0x10008AC9",
+        "0x10008AD3",
+        "0x10008ADD",
+        "0x10008AE7",
+        "0x10008AF1",
+        "0x10008AFB",
+        "0x10008B04",
+        "0x10008B15",
+        "0x10008B1D",
+        "0x10008B2E",
+        "0x10008B37",
+        "0x10008B48",
+        "0x10008B52",
+        "0x10008B5C"
+      ]
+    },
+    {
+      "cluster": 9,
+      "first_instruction": "0x1000CAA1",
+      "last_instruction": "0x1000CAA1",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".data": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x1000CAA3"
+      ]
+    },
+    {
+      "cluster": 10,
+      "first_instruction": "0x1000CAF1",
+      "last_instruction": "0x1000CAF1",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".data": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x1000CAF3"
+      ]
+    },
+    {
+      "cluster": 11,
+      "first_instruction": "0x1000CB41",
+      "last_instruction": "0x1000CB41",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".data": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x1000CB43"
+      ]
+    },
+    {
+      "cluster": 12,
+      "first_instruction": "0x1000CB91",
+      "last_instruction": "0x1000CB91",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".data": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x1000CB93"
+      ]
+    },
+    {
+      "cluster": 13,
+      "first_instruction": "0x1000CBE1",
+      "last_instruction": "0x1000CBE1",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".data": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x1000CBE3"
+      ]
+    },
+    {
+      "cluster": 14,
+      "first_instruction": "0x100104CD",
+      "last_instruction": "0x100104D8",
+      "site_count": 3,
+      "instruction_count": 3,
+      "target_section_counts": {
+        ".data": 2,
+        ".rdata": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x100104CF",
+        "0x100104D4",
+        "0x100104D9"
+      ]
+    },
+    {
+      "cluster": 15,
+      "first_instruction": "0x10013025",
+      "last_instruction": "0x100130E9",
+      "site_count": 13,
+      "instruction_count": 13,
+      "target_section_counts": {
+        ".data": 13
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x10013026",
+        "0x10013040",
+        "0x1001304F",
+        "0x1001305C",
+        "0x10013068",
+        "0x10013078",
+        "0x1001307F",
+        "0x1001308E",
+        "0x1001309A",
+        "0x100130A7",
+        "0x100130CB",
+        "0x100130DD",
+        "0x100130EB"
+      ]
+    },
+    {
+      "cluster": 16,
+      "first_instruction": "0x10014C49",
+      "last_instruction": "0x10014C49",
+      "site_count": 1,
+      "instruction_count": 1,
+      "target_section_counts": {
+        ".rdata": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x10014C4B"
+      ]
+    },
+    {
+      "cluster": 17,
+      "first_instruction": "0x1001704E",
+      "last_instruction": "0x10017054",
+      "site_count": 2,
+      "instruction_count": 2,
+      "target_section_counts": {
+        ".data": 1,
+        ".rdata": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x10017050",
+        "0x10017055"
+      ]
+    },
+    {
+      "cluster": 18,
+      "first_instruction": "0x1001C5E2",
+      "last_instruction": "0x1001C5E8",
+      "site_count": 2,
+      "instruction_count": 2,
+      "target_section_counts": {
+        ".data": 1,
+        ".rdata": 1
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x1001C5E4",
+        "0x1001C5E9"
+      ]
+    },
+    {
+      "cluster": 19,
+      "first_instruction": "0x10020848",
+      "last_instruction": "0x10020863",
+      "site_count": 2,
+      "instruction_count": 2,
+      "target_section_counts": {
+        ".rdata": 2
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x10020849",
+        "0x10020864"
+      ]
+    },
+    {
+      "cluster": 20,
+      "first_instruction": "0x100208D5",
+      "last_instruction": "0x10020A60",
+      "site_count": 30,
+      "instruction_count": 28,
+      "target_section_counts": {
+        ".data": 7,
+        ".rdata": 1,
+        ".text": 22
+      },
+      "hook_cfg_targets": [],
+      "shim_fixup_site_count": 0,
+      "sites": [
+        "0x100208D7",
+        "0x100208DF",
+        "0x100208E6",
+        "0x100208EB",
+        "0x100208F0",
+        "0x100208FE",
+        "0x10020902",
+        "0x10020911",
+        "0x10020921",
+        "0x10020931",
+        "0x10020941",
+        "0x10020951",
+        "0x10020961",
+        "0x10020971",
+        "0x10020981",
+        "0x10020991",
+        "0x100209A1",
+        "0x100209B1",
+        "0x100209C1",
+        "0x100209D1",
+        "0x100209E1",
+        "0x100209F6",
+        "0x100209FC",
+        "0x10020A00",
+        "0x10020A11",
+        "0x10020A21",
+        "0x10020A31",
+        "0x10020A41",
+        "0x10020A51",
+        "0x10020A61"
+      ]
+    }
+  ],
+  "sites_matching_audited_hook_target_cfg": 128,
+  "sites_matching_audited_shim_relocation_fixups_exact_site_and_field": 128,
+  "sites_not_matching_audited_shim_relocation_fixups": 72,
+  "matched_hook_shims": {
+    "0x10003030": {
+      "ownerless_relocation_site_count": 1,
+      "instruction_addresses": [
+        "0x10003030"
+      ],
+      "site_addresses": [
+        "0x10003032"
+      ]
+    },
+    "0x10003060": {
+      "ownerless_relocation_site_count": 2,
+      "instruction_addresses": [
+        "0x10003061",
+        "0x10003067"
+      ],
+      "site_addresses": [
+        "0x10003063",
+        "0x10003068"
+      ]
+    },
+    "0x10003080": {
+      "ownerless_relocation_site_count": 3,
+      "instruction_addresses": [
+        "0x10003081",
+        "0x10003087",
+        "0x1000309C"
+      ],
+      "site_addresses": [
+        "0x10003083",
+        "0x10003088",
+        "0x1000309D"
+      ]
+    },
+    "0x100031E0": {
+      "ownerless_relocation_site_count": 1,
+      "instruction_addresses": [
+        "0x100031E0"
+      ],
+      "site_addresses": [
+        "0x100031E2"
+      ]
+    },
+    "0x10004B10": {
+      "ownerless_relocation_site_count": 7,
+      "instruction_addresses": [
+        "0x10004B10",
+        "0x10004B16",
+        "0x10004B29",
+        "0x10004B6C",
+        "0x10004B73",
+        "0x10004B93",
+        "0x10004B9A"
+      ],
+      "site_addresses": [
+        "0x10004B12",
+        "0x10004B18",
+        "0x10004B2B",
+        "0x10004B6E",
+        "0x10004B76",
+        "0x10004B95",
+        "0x10004B9D"
+      ]
+    },
+    "0x10007F50": {
+      "ownerless_relocation_site_count": 1,
+      "instruction_addresses": [
+        "0x10007F50"
+      ],
+      "site_addresses": [
+        "0x10007F52"
+      ]
+    },
+    "0x10007F90": {
+      "ownerless_relocation_site_count": 7,
+      "instruction_addresses": [
+        "0x10007F90",
+        "0x10007F97",
+        "0x10007FA1",
+        "0x10007FA6",
+        "0x10007FB1",
+        "0x10007FBE",
+        "0x10007FCD"
+      ],
+      "site_addresses": [
+        "0x10007F92",
+        "0x10007F98",
+        "0x10007FA2",
+        "0x10007FA7",
+        "0x10007FB3",
+        "0x10007FC0",
+        "0x10007FCF"
+      ]
+    },
+    "0x10008780": {
+      "ownerless_relocation_site_count": 18,
+      "instruction_addresses": [
+        "0x10008781",
+        "0x10008790",
+        "0x10008795",
+        "0x1000879A",
+        "0x1000879F",
+        "0x100087A4",
+        "0x100087AB",
+        "0x100087BC",
+        "0x100087C2",
+        "0x100087C9",
+        "0x100087D0",
+        "0x100087E0",
+        "0x100087E5",
+        "0x100087EC",
+        "0x100087FC",
+        "0x1000880D",
+        "0x1000881E",
+        "0x10008824"
+      ],
+      "site_addresses": [
+        "0x10008782",
+        "0x10008791",
+        "0x10008796",
+        "0x1000879B",
+        "0x100087A0",
+        "0x100087A5",
+        "0x100087AD",
+        "0x100087BD",
+        "0x100087C4",
+        "0x100087CB",
+        "0x100087D1",
+        "0x100087E1",
+        "0x100087E7",
+        "0x100087ED",
+        "0x100087FE",
+        "0x1000880F",
+        "0x1000881F",
+        "0x10008825"
+      ]
+    },
+    "0x10008830": {
+      "ownerless_relocation_site_count": 33,
+      "instruction_addresses": [
+        "0x10008830",
+        "0x10008835",
+        "0x1000883C",
+        "0x10008845",
+        "0x1000884D",
+        "0x10008855",
+        "0x1000885E",
+        "0x10008867",
+        "0x10008870",
+        "0x10008879",
+        "0x1000887F",
+        "0x10008884",
+        "0x10008890",
+        "0x10008899",
+        "0x100088A2",
+        "0x100088AA",
+        "0x100088B2",
+        "0x100088BB",
+        "0x100088C3",
+        "0x100088CC",
+        "0x100088D1",
+        "0x100088D7",
+        "0x100088E0",
+        "0x100088E9",
+        "0x100088F2",
+        "0x100088F9",
+        "0x10008902",
+        "0x1000890A",
+        "0x10008913",
+        "0x1000891B",
+        "0x10008921",
+        "0x10008927",
+        "0x10008932"
+      ],
+      "site_addresses": [
+        "0x10008831",
+        "0x10008837",
+        "0x1000883E",
+        "0x10008846",
+        "0x1000884F",
+        "0x10008857",
+        "0x10008860",
+        "0x10008869",
+        "0x10008872",
+        "0x1000887B",
+        "0x10008880",
+        "0x10008887",
+        "0x10008892",
+        "0x1000889B",
+        "0x100088A4",
+        "0x100088AB",
+        "0x100088B4",
+        "0x100088BC",
+        "0x100088C5",
+        "0x100088CD",
+        "0x100088D3",
+        "0x100088DA",
+        "0x100088E2",
+        "0x100088EB",
+        "0x100088F3",
+        "0x100088FB",
+        "0x10008903",
+        "0x1000890C",
+        "0x10008914",
+        "0x1000891D",
+        "0x10008923",
+        "0x1000892A",
+        "0x10008934"
+      ]
+    },
+    "0x10008940": {
+      "ownerless_relocation_site_count": 55,
+      "instruction_addresses": [
+        "0x10008940",
+        "0x1000894C",
+        "0x10008954",
+        "0x10008959",
+        "0x10008966",
+        "0x1000896C",
+        "0x10008976",
+        "0x1000897C",
+        "0x1000898E",
+        "0x10008994",
+        "0x1000899E",
+        "0x100089A3",
+        "0x100089B5",
+        "0x100089BA",
+        "0x100089C4",
+        "0x100089CA",
+        "0x100089DC",
+        "0x100089E2",
+        "0x100089EC",
+        "0x100089F2",
+        "0x100089FE",
+        "0x10008A03",
+        "0x10008A0E",
+        "0x10008A14",
+        "0x10008A1F",
+        "0x10008A25",
+        "0x10008A30",
+        "0x10008A35",
+        "0x10008A45",
+        "0x10008A4E",
+        "0x10008A59",
+        "0x10008A62",
+        "0x10008A6D",
+        "0x10008A76",
+        "0x10008A81",
+        "0x10008A8A",
+        "0x10008A95",
+        "0x10008A9E",
+        "0x10008AA9",
+        "0x10008AB2",
+        "0x10008ABD",
+        "0x10008AC7",
+        "0x10008AD1",
+        "0x10008ADB",
+        "0x10008AE5",
+        "0x10008AEF",
+        "0x10008AF9",
+        "0x10008B02",
+        "0x10008B13",
+        "0x10008B1C",
+        "0x10008B2C",
+        "0x10008B35",
+        "0x10008B46",
+        "0x10008B50",
+        "0x10008B5A"
+      ],
+      "site_addresses": [
+        "0x10008942",
+        "0x1000894D",
+        "0x10008955",
+        "0x1000895B",
+        "0x10008968",
+        "0x1000896F",
+        "0x10008978",
+        "0x1000897F",
+        "0x10008990",
+        "0x10008997",
+        "0x1000899F",
+        "0x100089A6",
+        "0x100089B6",
+        "0x100089BD",
+        "0x100089C6",
+        "0x100089CD",
+        "0x100089DE",
+        "0x100089E5",
+        "0x100089EE",
+        "0x100089F5",
+        "0x100089FF",
+        "0x10008A06",
+        "0x10008A10",
+        "0x10008A17",
+        "0x10008A21",
+        "0x10008A28",
+        "0x10008A31",
+        "0x10008A38",
+        "0x10008A47",
+        "0x10008A50",
+        "0x10008A5B",
+        "0x10008A64",
+        "0x10008A6F",
+        "0x10008A78",
+        "0x10008A83",
+        "0x10008A8C",
+        "0x10008A97",
+        "0x10008AA0",
+        "0x10008AAB",
+        "0x10008AB4",
+        "0x10008ABF",
+        "0x10008AC9",
+        "0x10008AD3",
+        "0x10008ADD",
+        "0x10008AE7",
+        "0x10008AF1",
+        "0x10008AFB",
+        "0x10008B04",
+        "0x10008B15",
+        "0x10008B1D",
+        "0x10008B2E",
+        "0x10008B37",
+        "0x10008B48",
+        "0x10008B52",
+        "0x10008B5C"
+      ]
+    }
+  },
+  "limits": [
+    "Address proximity is only a triage heuristic and is not a function boundary.",
+    "A hook-CFG match identifies an instruction visited by the bounded hook audit; it does not prove the replacement shim/link layout or runtime behavior.",
+    "A relocation site's containing Ghidra instruction is evidence for original bytes only; all sites still need correct new-image fixups or exact table reconstruction."
+  ],
+  "csv": "audit/asi-text-highlow-ownerless-instruction-sites-2026-09-27.csv"
+}

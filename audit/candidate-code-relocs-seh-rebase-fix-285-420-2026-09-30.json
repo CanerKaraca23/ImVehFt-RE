@@ -1,0 +1,34 @@
+{
+  "scope": "HIGHLOW site inventory for 285 in-place bodies, 420 appended bodies/local rdata, and 32 absolute-IAT API thunks when a layout report is supplied; standalone table only, no PE patch emitted.",
+  "original_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "placement_plan": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\placement-plan-conservative-ghidra-cleanup-exact-linkmap-2026-09-30.json",
+  "placement_plan_sha256": "87BC6178C2E5CB7DB5FB303CA82C0D9DF40FFADD3123EBC41E94B2CF9F6D03A9",
+  "inplace_reconciliation": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\inplace-base-relocation-reconciliation-ghidra-cleanup-exact-linkmap-2026-09-30.json",
+  "appended_payload": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-payload-census-seh-rebase-fix-285-420-2026-09-30.json",
+  "appended_layout_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\crt-original-helper-bridge-expanded-api-layout-exact-285-v1-2026-09-30.json",
+  "original_highlow_sites": 4681,
+  "modified_original_ranges": {
+    "inplace_candidate_bodies": 285,
+    "thunk_entry_windows": 420
+  },
+  "original_highlow_sites_removed_in_modified_ranges": 954,
+  "inplace_candidate_dir32_sites_added": 805,
+  "appended_code_and_rdata_dir32_sites_added": 1585,
+  "absolute_iat_api_thunk_highlow_sites_added": 32,
+  "candidate_highlow_sites_added_total": 2422,
+  "final_highlow_sites": 6149,
+  "encoded_directory_bytes": 12908,
+  "encoded_directory_sha256": "D77615A0BD69896B85E6D7534A61E585CA63CD58C5A2BDC7E370730E374EC7BC",
+  "directory_roundtrip_exact": true,
+  "original_reloc_directory_rva": "0x0003f000",
+  "original_reloc_directory_size": 9768,
+  "original_reloc_section_virtual_size": 16196,
+  "original_reloc_section_raw_size": 16384,
+  "directory_fits_original_reloc_section": true,
+  "limitations": [
+    "Candidate COFF DIR32 target values must still be applied/resolved at the final addresses; this audit records fixup sites only.",
+    "The candidate .data/.rdata providers, import table, entry hooks/startup, PE headers, and final code/data bytes are not emitted or validated here.",
+    "The placement plan checks instruction-boundary safety, not full behavioral semantics or every dynamic reference.",
+    "No original PE bytes are changed; this is not a loadable ASI and no GTA runtime test was run."
+  ]
+}

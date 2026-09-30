@@ -27,11 +27,11 @@ static_assert(offsetof(_iobuf, _cnt) == 0x04);
 static_assert(offsetof(_iobuf, _base) == 0x08);
 static_assert(offsetof(_iobuf, _flag) == 0x0c);
 static_assert(sizeof(_iobuf) == 0x20);
-int __cdecl __flush(FILE*);
-void __cdecl __freebuf(FILE * _File);
+extern "C" int __cdecl __flush(FILE*);
+extern "C" void __cdecl __freebuf(FILE * _File);
 int __cdecl __fileno(FILE * _File);
-int __cdecl __close(int _FileHandle);
-void __cdecl _free(void * _Memory);
+extern "C" int __cdecl __close(int _FileHandle);
+extern "C" void __cdecl _free(void * _Memory);
 int __cdecl _fclose_nolock(FILE* _File)
 {
     int result = -1;

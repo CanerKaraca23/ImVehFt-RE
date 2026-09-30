@@ -6,7 +6,7 @@ struct _s_ESTypeList;
 extern "C" void __cdecl _inconsistency();
 extern "C" [[noreturn]] void __cdecl terminate();
 
-extern "C" std::uint32_t __cdecl ___TypeMatch(
+std::uint32_t __cdecl ___TypeMatch(
     std::uint8_t*,
     std::uint8_t*,
     std::uint32_t*);

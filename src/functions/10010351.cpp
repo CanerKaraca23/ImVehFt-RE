@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
 
@@ -16,11 +17,10 @@ static_assert(offsetof(ExceptionStorage, do_free) == 8);
 ExceptionStorage* ExceptionStorage::copy_construct(ExceptionStorage* other)
 {
     this->what = nullptr;
-    this->vtable = reinterpret_cast<void**>(static_cast<std::uintptr_t>(0x10022228));
+    this->vtable = reinterpret_cast<void**>(static_cast<std::uintptr_t>(IVF_IMAGE_ADDRESS_10022228));
     this->do_free = 0;
 
-    using AssignFn = ExceptionStorage* (__thiscall*)(void*, ExceptionStorage*);
-    reinterpret_cast<AssignFn>(static_cast<std::uintptr_t>(0x100102ea))(this, other);
+    this->assign(other);
 
     return this;
 }

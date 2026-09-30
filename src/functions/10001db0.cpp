@@ -12,7 +12,10 @@ extern "C" std::uint8_t __fastcall FUN_1000a560(std::int32_t param_1);
 
 extern "C" int __cdecl fclose(FILE* file);
 
-extern "C" std::uint32_t __stdcall FUN_10001db0(std::uint32_t, std::int32_t param_2)
+extern "C" std::uint32_t __stdcall FUN_10001db0(
+    std::uint32_t,
+    std::int32_t param_2,
+    std::uint32_t)
 {
     HMODULE hModule;
     char* pcVar1;

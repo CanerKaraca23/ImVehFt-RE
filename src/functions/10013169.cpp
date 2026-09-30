@@ -1,3 +1,4 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstdint>
 
 #include <cstddef>
@@ -30,8 +31,8 @@ extern "C" void __stdcall LeaveCriticalSection(void* critical_section);
 
 void __cdecl __unlock_file(FILE* _File)
 {
-    if ((reinterpret_cast<FILE*>(0x100291cf) < _File) &&
-        (_File < reinterpret_cast<FILE*>(0x10029431)))
+    if ((reinterpret_cast<FILE*>(IVF_IMAGE_ADDRESS_100291CF) < _File) &&
+        (_File < reinterpret_cast<FILE*>(IVF_IMAGE_ADDRESS_10029431)))
     {
         _File->_flag = _File->_flag & 0xffff7fff;
 

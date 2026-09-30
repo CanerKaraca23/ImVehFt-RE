@@ -6,6 +6,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <windows.h>
+#include "gta_sa_address_access.hpp"
 extern "C" void __cdecl FUN_100014c0(char*);
 #include <cstddef>
 #include <cstdint>
@@ -39,7 +40,8 @@ extern "C" int __stdcall FUN_10001630(void)
     using FUN_007f37c0_t =
         int(__cdecl *)(std::uint32_t);
 
-    extern unsigned char DAT_007cf9ca;
+    std::uint8_t& DAT_007cf9ca =
+        IMVEHFT_GLOBAL_AT(std::uint8_t, 0x007cf9ca);
     extern int DAT_1003aac8;
 
 

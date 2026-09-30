@@ -1,74 +1,115 @@
+#include <cstddef>
 #include <cstdint>
 
+using EH4Funclet = void (__cdecl*)();
 using errno_t = int;
 
-extern "C" unsigned char DAT_10028500;
-
-extern "C" void __cdecl __SEH_prolog4();
-extern "C" void __cdecl __SEH_epilog4();
-extern "C" int* __cdecl __errno();
-extern "C" void __stdcall FUN_1001189f();
-
-extern "C" errno_t __cdecl FUN_100182c1(
-    std::uint32_t* param_1,
-    char* param_2,
-    std::uint32_t param_3,
-    int param_4,
-    std::uint8_t param_5);
-
-extern "C" void __stdcall FUN_10018a8b();
-
-extern "C" errno_t __cdecl FID_conflict___sopen_helper(
-    char* _Filename,
-    int _OFlag,
-    int _ShFlag,
-    int _PMode,
-    int* _PFileHandle,
-    int _BSecure)
+struct EH4ScopeRecord
 {
-    __SEH_prolog4();
+    std::int32_t enclosing_level;
+    EH4Funclet filter;
+    EH4Funclet handler;
+};
 
-    std::uint32_t local_20[5];
-    std::uint32_t uStack_c;
-    void* local_8;
+struct EH4ScopeTable
+{
+    std::int32_t gs_cookie_offset;
+    std::int32_t gs_cookie_xor_offset;
+    std::int32_t eh_cookie_offset;
+    std::int32_t eh_cookie_xor_offset;
+    EH4ScopeRecord record;
+};
 
-    local_8 = &DAT_10028500;
-    uStack_c = 0x10018a01u;
-    local_20[0] = 0;
+static_assert(sizeof(void*) == 4);
+static_assert(sizeof(EH4ScopeRecord) == 12);
+static_assert(offsetof(EH4ScopeTable, record) == 0x10);
+static_assert(sizeof(EH4ScopeTable) == 0x1c);
 
-    errno_t eVar2;
+extern "C" void __stdcall sopen_scope_cleanup_handler();
+extern "C" void __stdcall FUN_10018a8b();
+extern "C" int __cdecl __errno();
+extern "C" void __stdcall FUN_1001189f();
+extern "C" void __cdecl FUN_100182c1(
+    std::uint32_t*, char*, std::uint32_t, int, std::uint8_t);
+extern "C" void __stdcall __SEH_epilog4();
+extern "C" void __cdecl __SEH_prolog4(std::uint32_t scope_table, int frame_size);
 
-    if (((_PFileHandle == nullptr) ||
-         (*_PFileHandle = -1, _Filename == nullptr)) ||
-        ((_BSecure != 0) && ((_PMode & 0xFFFFFE7F) != 0)))
-    {
-        int* piVar1 = __errno();
-        eVar2 = 0x16;
-        *piVar1 = 0x16;
-        FUN_1001189f();
+static const EH4ScopeTable sopen_scope_table = {
+    -2, 0, -52, 0,
+    { -2, nullptr, reinterpret_cast<EH4Funclet>(&sopen_scope_cleanup_handler) },
+};
+
+extern "C" __declspec(naked) void __stdcall sopen_scope_cleanup_handler()
+{
+    __asm {
+        xor edi, edi
+        mov esi, dword ptr [ebp+18h]
+        jmp FUN_10018a8b
     }
-    else
-    {
-        local_8 = nullptr;
+}
 
-        eVar2 = FUN_100182c1(
-            local_20,
-            _Filename,
-            static_cast<std::uint32_t>(_OFlag),
-            _ShFlag,
-            static_cast<std::uint8_t>(_PMode));
+extern "C" __declspec(naked) errno_t __cdecl FID_conflict___sopen_helper(
+    char*, int, int, int, int*, int)
+{
+    __asm {
+        push 14h
+        push OFFSET sopen_scope_table
+        call __SEH_prolog4
+        xor edi, edi
+        mov dword ptr [ebp-1Ch], edi
+        xor eax, eax
+        mov esi, dword ptr [ebp+18h]
+        cmp esi, edi
+        setnz al
+        cmp eax, edi
+        jnz sopen_filehandle_ready
 
-        local_8 = reinterpret_cast<void*>(
-            static_cast<std::uintptr_t>(0xFFFFFFFEu));
+    sopen_invalid:
+        call __errno
+        push 16h
+        pop esi
+        mov dword ptr [eax], esi
+        call FUN_1001189f
+        mov eax, esi
+        jmp sopen_epilog
 
-        FUN_10018a8b();
+    sopen_filehandle_ready:
+        or dword ptr [esi], 0FFFFFFFFh
+        xor eax, eax
+        cmp dword ptr [ebp+8], edi
+        setnz al
+        cmp eax, edi
+        jz sopen_invalid
+        cmp dword ptr [ebp+1Ch], edi
+        jz sopen_attempt
+        mov eax, dword ptr [ebp+14h]
+        and eax, 0FFFFFE7Fh
+        neg eax
+        sbb eax, eax
+        inc eax
+        jz sopen_invalid
 
-        if (eVar2 != 0)
-        {
-            *_PFileHandle = -1;
-        }
+    sopen_attempt:
+        mov dword ptr [ebp-4], edi
+        push dword ptr [ebp+14h]
+        push dword ptr [ebp+10h]
+        push dword ptr [ebp+0Ch]
+        push dword ptr [ebp+8]
+        lea eax, [ebp-1Ch]
+        push eax
+        mov eax, esi
+        call FUN_100182c1
+        add esp, 14h
+        mov dword ptr [ebp-20h], eax
+        mov dword ptr [ebp-4], 0FFFFFFFEh
+        call FUN_10018a8b
+        mov eax, dword ptr [ebp-20h]
+        cmp eax, edi
+        jz sopen_epilog
+        or dword ptr [esi], 0FFFFFFFFh
+
+    sopen_epilog:
+        call __SEH_epilog4
+        ret
     }
-
-    __SEH_epilog4();
-    return eVar2;
 }

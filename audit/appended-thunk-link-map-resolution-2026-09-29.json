@@ -1,0 +1,6268 @@
+{
+  "scope": "Exact-name join between undefined symbols in appended-body COFF relocations and the successful diagnostic map. Diagnostic addresses are not treated as final production addresses.",
+  "relocation_report": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\audit\\appended-thunk-relocation-targets-v2-2026-09-29.json",
+  "relocation_report_sha256": "1D6B1D103E575B29EA99107213978BF0F3E67B9F54D652EB231E132C92C6E6BB",
+  "link_map": "C:\\Users\\caner\\OneDrive\\Documents\\ImVehFt\\_repo_update\\ImVehFt-RE-publish2\\build\\link-probe\\entry-current-1001c5b8-1001cb37-20260929\\ImVehFt-current-boundary-check-not-ASI.map",
+  "link_map_sha256": "1A16650778E71782232BCD8FA664EEA5AAD9519DFA54E2500E745046EBFEC0D7",
+  "unique_undefined_symbol_type_pairs": 367,
+  "undefined_relocation_occurrences": 668,
+  "occurrences_by_map_class": {
+    "diagnostic-code-symbol": 175,
+    "diagnostic-import-slot": 81,
+    "diagnostic-map-displaces-address-encoded-in-symbol": 384,
+    "diagnostic-provider-or-runtime-data": 28
+  },
+  "unique_symbols_by_map_class": {
+    "diagnostic-code-symbol": 134,
+    "diagnostic-import-slot": 51,
+    "diagnostic-map-displaces-address-encoded-in-symbol": 173,
+    "diagnostic-provider-or-runtime-data": 9
+  },
+  "limitations": [
+    "This proves only diagnostic-link symbol resolution, not correct placement/addressing in the original ImVehFt image.",
+    "Names encoding original VAs are compared to those values; a displaced diagnostic provider does not prove the final VA fixup is correct.",
+    "Import names are not crosswalked to original PE IAT slot RVAs in this report.",
+    "No bytes are modified and no PE/ASI is produced."
+  ],
+  "symbols": [
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100243dc@@3GA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100243DC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100351FC",
+          "segment": "0003",
+          "segment_offset": "0x000031FC",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024e80@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024E80",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CA0",
+          "segment": "0003",
+          "segment_offset": "0x00003CA0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024e90@@3MA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024E90",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CB0",
+          "segment": "0003",
+          "segment_offset": "0x00003CB0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024e98@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024E98",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CB8",
+          "segment": "0003",
+          "segment_offset": "0x00003CB8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024ea0@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024EA0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CC0",
+          "segment": "0003",
+          "segment_offset": "0x00003CC0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024eb0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EB0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CD0",
+          "segment": "0003",
+          "segment_offset": "0x00003CD0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024ec8@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EC8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CE8",
+          "segment": "0003",
+          "segment_offset": "0x00003CE8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024ed8@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024ED8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CF8",
+          "segment": "0003",
+          "segment_offset": "0x00003CF8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024ee0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EE0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D00",
+          "segment": "0003",
+          "segment_offset": "0x00003D00",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024f28@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F28",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D48",
+          "segment": "0003",
+          "segment_offset": "0x00003D48",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024f3c@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F3C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D5C",
+          "segment": "0003",
+          "segment_offset": "0x00003D5C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024f40@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F40",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D60",
+          "segment": "0003",
+          "segment_offset": "0x00003D60",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024f48@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F48",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D68",
+          "segment": "0003",
+          "segment_offset": "0x00003D68",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024f50@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F50",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D70",
+          "segment": "0003",
+          "segment_offset": "0x00003D70",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10024f58@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F58",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D78",
+          "segment": "0003",
+          "segment_offset": "0x00003D78",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10028608@@3EA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10028608",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10039428",
+          "segment": "0003",
+          "segment_offset": "0x00007428",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10029490@@3IA",
+      "occurrences": 5,
+      "address_encoded_in_symbol": "0x10029490",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100564C4",
+          "segment": "0004",
+          "segment_offset": "0x000004C4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100294a0@@3JA",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x100294A0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100564D4",
+          "segment": "0004",
+          "segment_offset": "0x000004D4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100296c0@@3EA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100296C0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100566F4",
+          "segment": "0004",
+          "segment_offset": "0x000006F4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100297c8@@3EA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100297C8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100567FC",
+          "segment": "0004",
+          "segment_offset": "0x000007FC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100298cc@@3PAEA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100298CC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056900",
+          "segment": "0004",
+          "segment_offset": "0x00000900",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100298d0@@3PAIA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100298D0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056904",
+          "segment": "0004",
+          "segment_offset": "0x00000904",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100298e0@@3PAEA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100298E0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056914",
+          "segment": "0004",
+          "segment_offset": "0x00000914",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100299c0@@3JA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100299C0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100569F4",
+          "segment": "0004",
+          "segment_offset": "0x000009F4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10029c0c@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10029C0C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056C40",
+          "segment": "0004",
+          "segment_offset": "0x00000C40",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10029c0c@@3KA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10029C0C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056C40",
+          "segment": "0004",
+          "segment_offset": "0x00000C40",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003759c@@3IA",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x1003759C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100645D0",
+          "segment": "0004",
+          "segment_offset": "0x0000E5D0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395c0@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395C0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100665F4",
+          "segment": "0004",
+          "segment_offset": "0x000105F4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395c4@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395C4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100665F8",
+          "segment": "0004",
+          "segment_offset": "0x000105F8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395c8@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395C8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100665FC",
+          "segment": "0004",
+          "segment_offset": "0x000105FC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395cc@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395CC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066600",
+          "segment": "0004",
+          "segment_offset": "0x00010600",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395d0@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395D0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066604",
+          "segment": "0004",
+          "segment_offset": "0x00010604",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395d4@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100395D4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066608",
+          "segment": "0004",
+          "segment_offset": "0x00010608",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395d8@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395D8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006660C",
+          "segment": "0004",
+          "segment_offset": "0x0001060C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395dc@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395DC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066610",
+          "segment": "0004",
+          "segment_offset": "0x00010610",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395e0@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395E0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066614",
+          "segment": "0004",
+          "segment_offset": "0x00010614",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395e4@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395E4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066618",
+          "segment": "0004",
+          "segment_offset": "0x00010618",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395e8@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100395E8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006661C",
+          "segment": "0004",
+          "segment_offset": "0x0001061C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100395ec@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100395EC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066620",
+          "segment": "0004",
+          "segment_offset": "0x00010620",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100399e0@@3UBadAllocStorage@@A",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100399E0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A14",
+          "segment": "0004",
+          "segment_offset": "0x00010A14",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100399f0@@3HA",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x100399F0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A24",
+          "segment": "0004",
+          "segment_offset": "0x00010A24",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_100399f4@@3PADA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100399F4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A28",
+          "segment": "0004",
+          "segment_offset": "0x00010A28",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10039a38@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A38",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A6C",
+          "segment": "0004",
+          "segment_offset": "0x00010A6C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10039a58@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A58",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A8C",
+          "segment": "0004",
+          "segment_offset": "0x00010A8C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10039a5c@@3GA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A5C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A90",
+          "segment": "0004",
+          "segment_offset": "0x00010A90",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_10039a7c@@3PAXA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10039A7C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066AB0",
+          "segment": "0004",
+          "segment_offset": "0x00010AB0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aedc@@3IC",
+      "occurrences": 21,
+      "address_encoded_in_symbol": "0x1003AEDC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F10",
+          "segment": "0004",
+          "segment_offset": "0x00011F10",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aee0@@3IC",
+      "occurrences": 13,
+      "address_encoded_in_symbol": "0x1003AEE0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F14",
+          "segment": "0004",
+          "segment_offset": "0x00011F14",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aee4@@3IC",
+      "occurrences": 11,
+      "address_encoded_in_symbol": "0x1003AEE4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F18",
+          "segment": "0004",
+          "segment_offset": "0x00011F18",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aee8@@3IC",
+      "occurrences": 7,
+      "address_encoded_in_symbol": "0x1003AEE8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F1C",
+          "segment": "0004",
+          "segment_offset": "0x00011F1C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aeec@@3IC",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003AEEC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F20",
+          "segment": "0004",
+          "segment_offset": "0x00011F20",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aef0@@3EC",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003AEF0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F24",
+          "segment": "0004",
+          "segment_offset": "0x00011F24",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003aef4@@3HC",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003AEF4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067F28",
+          "segment": "0004",
+          "segment_offset": "0x00011F28",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bbb4@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003BBB4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068BE8",
+          "segment": "0004",
+          "segment_offset": "0x00012BE8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc18@@3HA",
+      "occurrences": 12,
+      "address_encoded_in_symbol": "0x1003BC18",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068C4C",
+          "segment": "0004",
+          "segment_offset": "0x00012C4C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc1c@@3IA",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x1003BC1C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068C50",
+          "segment": "0004",
+          "segment_offset": "0x00012C50",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc78@@3IC",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BC78",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068CAC",
+          "segment": "0004",
+          "segment_offset": "0x00012CAC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003bc7c@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003BC7C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068CB0",
+          "segment": "0004",
+          "segment_offset": "0x00012CB0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003c1ec@@3IC",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C1EC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069220",
+          "segment": "0004",
+          "segment_offset": "0x00013220",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003c1fc@@3HC",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C1FC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069230",
+          "segment": "0004",
+          "segment_offset": "0x00013230",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003c248@@3HA",
+      "occurrences": 5,
+      "address_encoded_in_symbol": "0x1003C248",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006927C",
+          "segment": "0004",
+          "segment_offset": "0x0001327C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003c248@@3HC",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C248",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006927C",
+          "segment": "0004",
+          "segment_offset": "0x0001327C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?DAT_1003d558@@3PADA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003D558",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006A58C",
+          "segment": "0004",
+          "segment_offset": "0x0001458C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?PTR_DAT_100298c8@@3PAXA",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x100298C8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10078380",
+          "segment": "0004",
+          "segment_offset": "0x00022380",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024e88@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024E88",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CA8",
+          "segment": "0003",
+          "segment_offset": "0x00003CA8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ea8@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EA8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CC8",
+          "segment": "0003",
+          "segment_offset": "0x00003CC8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024eb0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024EB0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CD0",
+          "segment": "0003",
+          "segment_offset": "0x00003CD0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ec8@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024EC8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CE8",
+          "segment": "0003",
+          "segment_offset": "0x00003CE8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ed8@@3MA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024ED8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035CF8",
+          "segment": "0003",
+          "segment_offset": "0x00003CF8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ee0@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024EE0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D00",
+          "segment": "0003",
+          "segment_offset": "0x00003D00",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f28@@3MA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024F28",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D48",
+          "segment": "0003",
+          "segment_offset": "0x00003D48",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f3c@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F3C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D5C",
+          "segment": "0003",
+          "segment_offset": "0x00003D5C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f40@@3MA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024F40",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D60",
+          "segment": "0003",
+          "segment_offset": "0x00003D60",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f48@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024F48",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D68",
+          "segment": "0003",
+          "segment_offset": "0x00003D68",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f50@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F50",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D70",
+          "segment": "0003",
+          "segment_offset": "0x00003D70",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f58@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024F58",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D78",
+          "segment": "0003",
+          "segment_offset": "0x00003D78",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f60@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F60",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D80",
+          "segment": "0003",
+          "segment_offset": "0x00003D80",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f68@@3MA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F68",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035D88",
+          "segment": "0003",
+          "segment_offset": "0x00003D88",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024f88@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024F88",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DA8",
+          "segment": "0003",
+          "segment_offset": "0x00003DA8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fc8@@3MA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024FC8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DE8",
+          "segment": "0003",
+          "segment_offset": "0x00003DE8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fd0@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024FD0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DF0",
+          "segment": "0003",
+          "segment_offset": "0x00003DF0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fd8@@3NA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024FD8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035DF8",
+          "segment": "0003",
+          "segment_offset": "0x00003DF8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fe0@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024FE0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035E00",
+          "segment": "0003",
+          "segment_offset": "0x00003E00",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024fe8@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024FE8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035E08",
+          "segment": "0003",
+          "segment_offset": "0x00003E08",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ff0@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024FF0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035E10",
+          "segment": "0003",
+          "segment_offset": "0x00003E10",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10024ff8@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10024FF8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035E18",
+          "segment": "0003",
+          "segment_offset": "0x00003E18",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_100399b8@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100399B8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100669EC",
+          "segment": "0004",
+          "segment_offset": "0x000109EC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_100399c8@@3NA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100399C8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100669FC",
+          "segment": "0004",
+          "segment_offset": "0x000109FC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_100399ec@@3IA",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100399EC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A20",
+          "segment": "0004",
+          "segment_offset": "0x00010A20",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10039a68@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A68",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A9C",
+          "segment": "0004",
+          "segment_offset": "0x00010A9C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10039a6c@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A6C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066AA0",
+          "segment": "0004",
+          "segment_offset": "0x00010AA0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_10039a70@@3IA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A70",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066AA4",
+          "segment": "0004",
+          "segment_offset": "0x00010AA4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?_DAT_1003c24c@@3HA",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C24C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069280",
+          "segment": "0004",
+          "segment_offset": "0x00013280",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "?s_bad_exception_100261f0@@3UEHExceptionRecord@@A",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003E010",
+          "segment": "0003",
+          "segment_offset": "0x0000C010",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100220c4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100220C4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10032EE4",
+          "segment": "0003",
+          "segment_offset": "0x00000EE4",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100220c8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100220C8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10032EE8",
+          "segment": "0003",
+          "segment_offset": "0x00000EE8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100221d4",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100221D4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10032FF4",
+          "segment": "0003",
+          "segment_offset": "0x00000FF4",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100221e4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x100221E4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10033004",
+          "segment": "0003",
+          "segment_offset": "0x00001004",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10022800",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10022800",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10033620",
+          "segment": "0003",
+          "segment_offset": "0x00001620",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10022804",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10022804",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10033624",
+          "segment": "0003",
+          "segment_offset": "0x00001624",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10024650",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024650",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10035470",
+          "segment": "0003",
+          "segment_offset": "0x00003470",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100258b0",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x100258B0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100366D0",
+          "segment": "0003",
+          "segment_offset": "0x000046D0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100258e8",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100258E8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10036708",
+          "segment": "0003",
+          "segment_offset": "0x00004708",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100258ea",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100258EA",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1003670A",
+          "segment": "0003",
+          "segment_offset": "0x0000470A",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10029450",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10029450",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056484",
+          "segment": "0004",
+          "segment_offset": "0x00000484",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10029490",
+      "occurrences": 17,
+      "address_encoded_in_symbol": "0x10029490",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100564C4",
+          "segment": "0004",
+          "segment_offset": "0x000004C4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10029494",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10029494",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100564C8",
+          "segment": "0004",
+          "segment_offset": "0x000004C8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10029c0c",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10029C0C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056C40",
+          "segment": "0004",
+          "segment_offset": "0x00000C40",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10029c10",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10029C10",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056C44",
+          "segment": "0004",
+          "segment_offset": "0x00000C44",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10029c30",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10029C30",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10056C64",
+          "segment": "0004",
+          "segment_offset": "0x00000C64",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039570",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10039570",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100665A4",
+          "segment": "0004",
+          "segment_offset": "0x000105A4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039580",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10039580",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100665B4",
+          "segment": "0004",
+          "segment_offset": "0x000105B4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039590",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10039590",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100665C4",
+          "segment": "0004",
+          "segment_offset": "0x000105C4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039698",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10039698",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100666CC",
+          "segment": "0004",
+          "segment_offset": "0x000106CC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100397f8",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x100397F8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006682C",
+          "segment": "0004",
+          "segment_offset": "0x0001082C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_100399f4",
+      "occurrences": 4,
+      "address_encoded_in_symbol": "0x100399F4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A28",
+          "segment": "0004",
+          "segment_offset": "0x00010A28",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a00",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A00",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A34",
+          "segment": "0004",
+          "segment_offset": "0x00010A34",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a1c",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x10039A1C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A50",
+          "segment": "0004",
+          "segment_offset": "0x00010A50",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a34",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A34",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A68",
+          "segment": "0004",
+          "segment_offset": "0x00010A68",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a38",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A38",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A6C",
+          "segment": "0004",
+          "segment_offset": "0x00010A6C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a3c",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10039A3C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A70",
+          "segment": "0004",
+          "segment_offset": "0x00010A70",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a58",
+      "occurrences": 4,
+      "address_encoded_in_symbol": "0x10039A58",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066A8C",
+          "segment": "0004",
+          "segment_offset": "0x00010A8C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039a80",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039A80",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066AB4",
+          "segment": "0004",
+          "segment_offset": "0x00010AB4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039b54",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039B54",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066B88",
+          "segment": "0004",
+          "segment_offset": "0x00010B88",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039b90",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x10039B90",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066BC4",
+          "segment": "0004",
+          "segment_offset": "0x00010BC4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039b98",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039B98",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066BCC",
+          "segment": "0004",
+          "segment_offset": "0x00010BCC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_10039bca",
+      "occurrences": 4,
+      "address_encoded_in_symbol": "0x10039BCA",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10066BFE",
+          "segment": "0004",
+          "segment_offset": "0x00010BFE",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a31c",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A31C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067350",
+          "segment": "0004",
+          "segment_offset": "0x00011350",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a320",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A320",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067354",
+          "segment": "0004",
+          "segment_offset": "0x00011354",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a324",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A324",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067358",
+          "segment": "0004",
+          "segment_offset": "0x00011358",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a328",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A328",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006735C",
+          "segment": "0004",
+          "segment_offset": "0x0001135C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a380",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x1003A380",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100673B4",
+          "segment": "0004",
+          "segment_offset": "0x000113B4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a384",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A384",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100673B8",
+          "segment": "0004",
+          "segment_offset": "0x000113B8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a388",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A388",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100673BC",
+          "segment": "0004",
+          "segment_offset": "0x000113BC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a38c",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A38C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100673C0",
+          "segment": "0004",
+          "segment_offset": "0x000113C0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a390",
+      "occurrences": 3,
+      "address_encoded_in_symbol": "0x1003A390",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100673C4",
+          "segment": "0004",
+          "segment_offset": "0x000113C4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a3e8",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003A3E8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006741C",
+          "segment": "0004",
+          "segment_offset": "0x0001141C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003a4a8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A4A8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100674DC",
+          "segment": "0004",
+          "segment_offset": "0x000114DC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003aacc",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003AACC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10067B00",
+          "segment": "0004",
+          "segment_offset": "0x00011B00",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003b700",
+      "occurrences": 6,
+      "address_encoded_in_symbol": "0x1003B700",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068734",
+          "segment": "0004",
+          "segment_offset": "0x00012734",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003bbb0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003BBB0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068BE4",
+          "segment": "0004",
+          "segment_offset": "0x00012BE4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003bd8c",
+      "occurrences": 6,
+      "address_encoded_in_symbol": "0x1003BD8C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068DC0",
+          "segment": "0004",
+          "segment_offset": "0x00012DC0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003bd98",
+      "occurrences": 5,
+      "address_encoded_in_symbol": "0x1003BD98",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10068DCC",
+          "segment": "0004",
+          "segment_offset": "0x00012DCC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c404",
+      "occurrences": 6,
+      "address_encoded_in_symbol": "0x1003C404",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069438",
+          "segment": "0004",
+          "segment_offset": "0x00013438",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c40c",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C40C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069440",
+          "segment": "0004",
+          "segment_offset": "0x00013440",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c410",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003C410",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069444",
+          "segment": "0004",
+          "segment_offset": "0x00013444",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c414",
+      "occurrences": 4,
+      "address_encoded_in_symbol": "0x1003C414",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069448",
+          "segment": "0004",
+          "segment_offset": "0x00013448",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c418",
+      "occurrences": 9,
+      "address_encoded_in_symbol": "0x1003C418",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006944C",
+          "segment": "0004",
+          "segment_offset": "0x0001344C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003c420",
+      "occurrences": 19,
+      "address_encoded_in_symbol": "0x1003C420",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x10069454",
+          "segment": "0004",
+          "segment_offset": "0x00013454",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003d548",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003D548",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006A57C",
+          "segment": "0004",
+          "segment_offset": "0x0001457C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003d54c",
+      "occurrences": 2,
+      "address_encoded_in_symbol": "0x1003D54C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006A580",
+          "segment": "0004",
+          "segment_offset": "0x00014580",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_DAT_1003d550",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003D550",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1006A584",
+          "segment": "0004",
+          "segment_offset": "0x00014584",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_FUN_727be0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020100",
+          "segment": "0002",
+          "segment_offset": "0x00000100",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "renderware_address_providers.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_FUN_7ee180",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020110",
+          "segment": "0002",
+          "segment_offset": "0x00000110",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "renderware_address_providers.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_FUN_7ee190",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020120",
+          "segment": "0002",
+          "segment_offset": "0x00000120",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "renderware_address_providers.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_FUN_7f9fb0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020130",
+          "segment": "0002",
+          "segment_offset": "0x00000130",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "renderware_address_providers.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_FUN_7f9ff0",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020140",
+          "segment": "0002",
+          "segment_offset": "0x00000140",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "renderware_address_providers.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAA0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002064A",
+          "segment": "0002",
+          "segment_offset": "0x0000064A",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CAF0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020695",
+          "segment": "0002",
+          "segment_offset": "0x00000695",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB40",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100206E0",
+          "segment": "0002",
+          "segment_offset": "0x000006E0",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CB90",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002072B",
+          "segment": "0002",
+          "segment_offset": "0x0000072B",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_PLUGIN_CALLBACK_DISPATCH_1000CBE0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020776",
+          "segment": "0002",
+          "segment_offset": "0x00000776",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "reloc-aware-dat-provider-ia32-x87-final-20260928.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10022068",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032E88",
+          "segment": "0003",
+          "segment_offset": "0x00000E88",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10022250",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10033070",
+          "segment": "0003",
+          "segment_offset": "0x00001070",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_100261E0",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10037000",
+          "segment": "0003",
+          "segment_offset": "0x00005000",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10028390",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100391B0",
+          "segment": "0003",
+          "segment_offset": "0x000071B0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_1002874C",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003956C",
+          "segment": "0003",
+          "segment_offset": "0x0000756C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10029C0C",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10056C40",
+          "segment": "0004",
+          "segment_offset": "0x00000C40",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10029C10",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10056C44",
+          "segment": "0004",
+          "segment_offset": "0x00000C44",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10029E94",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10056EC8",
+          "segment": "0004",
+          "segment_offset": "0x00000EC8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10029E98",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10056ECC",
+          "segment": "0004",
+          "segment_offset": "0x00000ECC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10029E9C",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10056ED0",
+          "segment": "0004",
+          "segment_offset": "0x00000ED0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10039A74",
+      "occurrences": 6,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10066AA8",
+          "segment": "0004",
+          "segment_offset": "0x00010AA8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10039A78",
+      "occurrences": 6,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10066AAC",
+          "segment": "0004",
+          "segment_offset": "0x00010AAC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10039A7C",
+      "occurrences": 6,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10066AB0",
+          "segment": "0004",
+          "segment_offset": "0x00010AB0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_IVF_RELOC_TARGET_10039A80",
+      "occurrences": 4,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-provider-or-runtime-data",
+      "map_matches": [
+        {
+          "va": "0x10066AB4",
+          "segment": "0004",
+          "segment_offset": "0x00010AB4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c640",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FC4",
+          "segment": "0002",
+          "segment_offset": "0x00000FC4",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c650",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FC9",
+          "segment": "0002",
+          "segment_offset": "0x00000FC9",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c660",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FCE",
+          "segment": "0002",
+          "segment_offset": "0x00000FCE",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c670",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FD3",
+          "segment": "0002",
+          "segment_offset": "0x00000FD3",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c680",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FD8",
+          "segment": "0002",
+          "segment_offset": "0x00000FD8",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c690",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FDD",
+          "segment": "0002",
+          "segment_offset": "0x00000FDD",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c6a0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FE2",
+          "segment": "0002",
+          "segment_offset": "0x00000FE2",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c6b0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FE7",
+          "segment": "0002",
+          "segment_offset": "0x00000FE7",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c6c0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FEC",
+          "segment": "0002",
+          "segment_offset": "0x00000FEC",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c6d0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FF1",
+          "segment": "0002",
+          "segment_offset": "0x00000FF1",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c6e0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FF6",
+          "segment": "0002",
+          "segment_offset": "0x00000FF6",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c6f0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FFB",
+          "segment": "0002",
+          "segment_offset": "0x00000FFB",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c700",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021000",
+          "segment": "0002",
+          "segment_offset": "0x00001000",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c710",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021005",
+          "segment": "0002",
+          "segment_offset": "0x00001005",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c720",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002100A",
+          "segment": "0002",
+          "segment_offset": "0x0000100A",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c730",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002100F",
+          "segment": "0002",
+          "segment_offset": "0x0000100F",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c740",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021014",
+          "segment": "0002",
+          "segment_offset": "0x00001014",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c750",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021019",
+          "segment": "0002",
+          "segment_offset": "0x00001019",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c760",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002101E",
+          "segment": "0002",
+          "segment_offset": "0x0000101E",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c770",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021023",
+          "segment": "0002",
+          "segment_offset": "0x00001023",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c780",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021028",
+          "segment": "0002",
+          "segment_offset": "0x00001028",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c790",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002102D",
+          "segment": "0002",
+          "segment_offset": "0x0000102D",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c7a0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021032",
+          "segment": "0002",
+          "segment_offset": "0x00001032",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c7b0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021037",
+          "segment": "0002",
+          "segment_offset": "0x00001037",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c7c0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002103C",
+          "segment": "0002",
+          "segment_offset": "0x0000103C",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c7d0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021041",
+          "segment": "0002",
+          "segment_offset": "0x00001041",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c7e0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021046",
+          "segment": "0002",
+          "segment_offset": "0x00001046",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c7f0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002104B",
+          "segment": "0002",
+          "segment_offset": "0x0000104B",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c800",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021050",
+          "segment": "0002",
+          "segment_offset": "0x00001050",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c810",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021055",
+          "segment": "0002",
+          "segment_offset": "0x00001055",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c820",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002105A",
+          "segment": "0002",
+          "segment_offset": "0x0000105A",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c830",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002105F",
+          "segment": "0002",
+          "segment_offset": "0x0000105F",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c840",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021064",
+          "segment": "0002",
+          "segment_offset": "0x00001064",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c850",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021069",
+          "segment": "0002",
+          "segment_offset": "0x00001069",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c860",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002106E",
+          "segment": "0002",
+          "segment_offset": "0x0000106E",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c870",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021073",
+          "segment": "0002",
+          "segment_offset": "0x00001073",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c880",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021078",
+          "segment": "0002",
+          "segment_offset": "0x00001078",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c890",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002107D",
+          "segment": "0002",
+          "segment_offset": "0x0000107D",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c8a0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021082",
+          "segment": "0002",
+          "segment_offset": "0x00001082",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c8b0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021087",
+          "segment": "0002",
+          "segment_offset": "0x00001087",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c8c0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002108C",
+          "segment": "0002",
+          "segment_offset": "0x0000108C",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c8d0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021091",
+          "segment": "0002",
+          "segment_offset": "0x00001091",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c8e0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021096",
+          "segment": "0002",
+          "segment_offset": "0x00001096",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c8f0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002109B",
+          "segment": "0002",
+          "segment_offset": "0x0000109B",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c900",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210A0",
+          "segment": "0002",
+          "segment_offset": "0x000010A0",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c910",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210A5",
+          "segment": "0002",
+          "segment_offset": "0x000010A5",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c920",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210AA",
+          "segment": "0002",
+          "segment_offset": "0x000010AA",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c930",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210AF",
+          "segment": "0002",
+          "segment_offset": "0x000010AF",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c940",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210B4",
+          "segment": "0002",
+          "segment_offset": "0x000010B4",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c950",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210B9",
+          "segment": "0002",
+          "segment_offset": "0x000010B9",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c960",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210BE",
+          "segment": "0002",
+          "segment_offset": "0x000010BE",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c970",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210C3",
+          "segment": "0002",
+          "segment_offset": "0x000010C3",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c980",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210C8",
+          "segment": "0002",
+          "segment_offset": "0x000010C8",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c990",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210CD",
+          "segment": "0002",
+          "segment_offset": "0x000010CD",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c9a0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210D2",
+          "segment": "0002",
+          "segment_offset": "0x000010D2",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c9b0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210D7",
+          "segment": "0002",
+          "segment_offset": "0x000010D7",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c9c0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210DC",
+          "segment": "0002",
+          "segment_offset": "0x000010DC",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c9d0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210E1",
+          "segment": "0002",
+          "segment_offset": "0x000010E1",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c9e0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210E6",
+          "segment": "0002",
+          "segment_offset": "0x000010E6",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000c9f0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210EB",
+          "segment": "0002",
+          "segment_offset": "0x000010EB",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca00",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210F0",
+          "segment": "0002",
+          "segment_offset": "0x000010F0",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca10",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210F5",
+          "segment": "0002",
+          "segment_offset": "0x000010F5",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca20",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210FA",
+          "segment": "0002",
+          "segment_offset": "0x000010FA",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca30",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100210FF",
+          "segment": "0002",
+          "segment_offset": "0x000010FF",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca40",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021104",
+          "segment": "0002",
+          "segment_offset": "0x00001104",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca50",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021109",
+          "segment": "0002",
+          "segment_offset": "0x00001109",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca60",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002110E",
+          "segment": "0002",
+          "segment_offset": "0x0000110E",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca70",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021113",
+          "segment": "0002",
+          "segment_offset": "0x00001113",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca80",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021118",
+          "segment": "0002",
+          "segment_offset": "0x00001118",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ca90",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002111D",
+          "segment": "0002",
+          "segment_offset": "0x0000111D",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cc30",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F5A",
+          "segment": "0002",
+          "segment_offset": "0x00000F5A",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cc40",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F61",
+          "segment": "0002",
+          "segment_offset": "0x00000F61",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cc50",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F68",
+          "segment": "0002",
+          "segment_offset": "0x00000F68",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cc60",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F6F",
+          "segment": "0002",
+          "segment_offset": "0x00000F6F",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cc70",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F76",
+          "segment": "0002",
+          "segment_offset": "0x00000F76",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cc80",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F7D",
+          "segment": "0002",
+          "segment_offset": "0x00000F7D",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cc90",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F84",
+          "segment": "0002",
+          "segment_offset": "0x00000F84",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cca0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F8B",
+          "segment": "0002",
+          "segment_offset": "0x00000F8B",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ccb0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F92",
+          "segment": "0002",
+          "segment_offset": "0x00000F92",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ccc0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F99",
+          "segment": "0002",
+          "segment_offset": "0x00000F99",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ccd0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FA0",
+          "segment": "0002",
+          "segment_offset": "0x00000FA0",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cce0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FA7",
+          "segment": "0002",
+          "segment_offset": "0x00000FA7",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000ccf0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FAE",
+          "segment": "0002",
+          "segment_offset": "0x00000FAE",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd00",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FB5",
+          "segment": "0002",
+          "segment_offset": "0x00000FB5",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd10",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020FBC",
+          "segment": "0002",
+          "segment_offset": "0x00000FBC",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd20",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F14",
+          "segment": "0002",
+          "segment_offset": "0x00000F14",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd30",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F1B",
+          "segment": "0002",
+          "segment_offset": "0x00000F1B",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd40",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F22",
+          "segment": "0002",
+          "segment_offset": "0x00000F22",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd50",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F29",
+          "segment": "0002",
+          "segment_offset": "0x00000F29",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd60",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F30",
+          "segment": "0002",
+          "segment_offset": "0x00000F30",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd70",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F37",
+          "segment": "0002",
+          "segment_offset": "0x00000F37",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd80",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F3E",
+          "segment": "0002",
+          "segment_offset": "0x00000F3E",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cd90",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F45",
+          "segment": "0002",
+          "segment_offset": "0x00000F45",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cda0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F4C",
+          "segment": "0002",
+          "segment_offset": "0x00000F4C",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_LAB_1000cdb0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10020F53",
+          "segment": "0002",
+          "segment_offset": "0x00000F53",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "_PTR_DAT_10024208",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10024208",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x1004A028",
+          "segment": "0003",
+          "segment_offset": "0x00018028",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_10039dd2",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x10039DD2",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1342",
+          "segment": "0004",
+          "segment_offset": "0x0005B342",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a398",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A398",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1908",
+          "segment": "0004",
+          "segment_offset": "0x0005B908",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a39c",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A39C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B190C",
+          "segment": "0004",
+          "segment_offset": "0x0005B90C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a3a4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A3A4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1914",
+          "segment": "0004",
+          "segment_offset": "0x0005B914",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a3f0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A3F0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1960",
+          "segment": "0004",
+          "segment_offset": "0x0005B960",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a47c",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A47C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B19EC",
+          "segment": "0004",
+          "segment_offset": "0x0005B9EC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a480",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A480",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B19F0",
+          "segment": "0004",
+          "segment_offset": "0x0005B9F0",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a484",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A484",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B19F4",
+          "segment": "0004",
+          "segment_offset": "0x0005B9F4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a488",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A488",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B19F8",
+          "segment": "0004",
+          "segment_offset": "0x0005B9F8",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a48c",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A48C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B19FC",
+          "segment": "0004",
+          "segment_offset": "0x0005B9FC",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a490",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A490",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A00",
+          "segment": "0004",
+          "segment_offset": "0x0005BA00",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a494",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A494",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A04",
+          "segment": "0004",
+          "segment_offset": "0x0005BA04",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a498",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A498",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A08",
+          "segment": "0004",
+          "segment_offset": "0x0005BA08",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a49c",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A49C",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A0C",
+          "segment": "0004",
+          "segment_offset": "0x0005BA0C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a4a0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A4A0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A10",
+          "segment": "0004",
+          "segment_offset": "0x0005BA10",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a4a4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A4A4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A14",
+          "segment": "0004",
+          "segment_offset": "0x0005BA14",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a4ac",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A4AC",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A1C",
+          "segment": "0004",
+          "segment_offset": "0x0005BA1C",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a4b0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A4B0",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A20",
+          "segment": "0004",
+          "segment_offset": "0x0005BA20",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a4b4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A4B4",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A24",
+          "segment": "0004",
+          "segment_offset": "0x0005BA24",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003a4b8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003A4B8",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B1A28",
+          "segment": "0004",
+          "segment_offset": "0x0005BA28",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__DAT_1003d544",
+      "occurrences": 1,
+      "address_encoded_in_symbol": "0x1003D544",
+      "classification": "diagnostic-map-displaces-address-encoded-in-symbol",
+      "map_matches": [
+        {
+          "va": "0x100B4AB4",
+          "segment": "0004",
+          "segment_offset": "0x0005EAB4",
+          "section": ".bss",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__DecodePointer@4",
+      "occurrences": 5,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003204C",
+          "segment": "0003",
+          "segment_offset": "0x0000004C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__DeleteCriticalSection@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032094",
+          "segment": "0003",
+          "segment_offset": "0x00000094",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__EncodePointer@4",
+      "occurrences": 6,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032050",
+          "segment": "0003",
+          "segment_offset": "0x00000050",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__EnterCriticalSection@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032078",
+          "segment": "0003",
+          "segment_offset": "0x00000078",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__FindClose@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032008",
+          "segment": "0003",
+          "segment_offset": "0x00000008",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__FindFirstFileA@8",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003200C",
+          "segment": "0003",
+          "segment_offset": "0x0000000C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__FindNextFileA@8",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032010",
+          "segment": "0003",
+          "segment_offset": "0x00000010",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetCPInfo@8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032098",
+          "segment": "0003",
+          "segment_offset": "0x00000098",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetCurrentProcess@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032060",
+          "segment": "0003",
+          "segment_offset": "0x00000060",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetCurrentProcessId@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320D4",
+          "segment": "0003",
+          "segment_offset": "0x000000D4",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetCurrentThreadId@0",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032054",
+          "segment": "0003",
+          "segment_offset": "0x00000054",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetFileType@4",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032084",
+          "segment": "0003",
+          "segment_offset": "0x00000084",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetFullPathNameA@16",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032014",
+          "segment": "0003",
+          "segment_offset": "0x00000014",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetLastError@0",
+      "occurrences": 6,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003205C",
+          "segment": "0003",
+          "segment_offset": "0x0000005C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetModuleFileNameW@12",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320E0",
+          "segment": "0003",
+          "segment_offset": "0x000000E0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetModuleHandleW@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032070",
+          "segment": "0003",
+          "segment_offset": "0x00000070",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetProcAddress@8",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032074",
+          "segment": "0003",
+          "segment_offset": "0x00000074",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetProcessHeap@0",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032118",
+          "segment": "0003",
+          "segment_offset": "0x00000118",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetStartupInfoW@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003208C",
+          "segment": "0003",
+          "segment_offset": "0x0000008C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetStdHandle@4",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032080",
+          "segment": "0003",
+          "segment_offset": "0x00000080",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetSystemTimeAsFileTime@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320D8",
+          "segment": "0003",
+          "segment_offset": "0x000000D8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__GetTickCount@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320DC",
+          "segment": "0003",
+          "segment_offset": "0x000000DC",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__HeapAlloc@12",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032030",
+          "segment": "0003",
+          "segment_offset": "0x00000030",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__HeapDestroy@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003203C",
+          "segment": "0003",
+          "segment_offset": "0x0000003C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__HeapFree@12",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032048",
+          "segment": "0003",
+          "segment_offset": "0x00000048",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__InitializeCriticalSectionAndSpinCount@8",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032088",
+          "segment": "0003",
+          "segment_offset": "0x00000088",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__IsDebuggerPresent@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032108",
+          "segment": "0003",
+          "segment_offset": "0x00000108",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__LeaveCriticalSection@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003207C",
+          "segment": "0003",
+          "segment_offset": "0x0000007C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__LoadLibraryW@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032104",
+          "segment": "0003",
+          "segment_offset": "0x00000104",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__MultiByteToWideChar@24",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320BC",
+          "segment": "0003",
+          "segment_offset": "0x000000BC",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__QueryPerformanceCounter@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320D0",
+          "segment": "0003",
+          "segment_offset": "0x000000D0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__RaiseException@16",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032058",
+          "segment": "0003",
+          "segment_offset": "0x00000058",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__ReadFile@20",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320B8",
+          "segment": "0003",
+          "segment_offset": "0x000000B8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__SetEndOfFile@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032114",
+          "segment": "0003",
+          "segment_offset": "0x00000114",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__SetHandleCount@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032090",
+          "segment": "0003",
+          "segment_offset": "0x00000090",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__SetLastError@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320AC",
+          "segment": "0003",
+          "segment_offset": "0x000000AC",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__SetUnhandledExceptionFilter@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032110",
+          "segment": "0003",
+          "segment_offset": "0x00000110",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__TerminateProcess@8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032064",
+          "segment": "0003",
+          "segment_offset": "0x00000064",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__TlsAlloc@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320B4",
+          "segment": "0003",
+          "segment_offset": "0x000000B4",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__TlsFree@4",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320A8",
+          "segment": "0003",
+          "segment_offset": "0x000000A8",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__TlsGetValue@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320A0",
+          "segment": "0003",
+          "segment_offset": "0x000000A0",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__TlsSetValue@8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x100320A4",
+          "segment": "0003",
+          "segment_offset": "0x000000A4",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__UnhandledExceptionFilter@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x1003210C",
+          "segment": "0003",
+          "segment_offset": "0x0000010C",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__VirtualProtect@16",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032004",
+          "segment": "0003",
+          "segment_offset": "0x00000004",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "DIR32",
+      "symbol": "__imp__WriteFile@20",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-import-slot",
+      "map_matches": [
+        {
+          "va": "0x10032000",
+          "segment": "0003",
+          "segment_offset": "0x00000000",
+          "section": ".idata$6",
+          "section_class": "DATA",
+          "module": ""
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "?FID_conflict__memcpy@@YAXPAXPBXI@Z",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000E02C",
+          "segment": "0001",
+          "segment_offset": "0x0000D02C",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100111e0.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_DecodePointer@4",
+      "occurrences": 7,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F941",
+          "segment": "0002",
+          "segment_offset": "0x0000F941",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_FID_conflict__sscanf",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000D554",
+          "segment": "0001",
+          "segment_offset": "0x0000C554",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "100103e4.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_GetCPInfo@8",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F98F",
+          "segment": "0002",
+          "segment_offset": "0x0000F98F",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_GetCurrentThreadId@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F94D",
+          "segment": "0002",
+          "segment_offset": "0x0000F94D",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_GetLastError@0",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F959",
+          "segment": "0002",
+          "segment_offset": "0x0000F959",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_GetStringTypeW@16",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F9C5",
+          "segment": "0002",
+          "segment_offset": "0x0000F9C5",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_IVF_LocaleUpdate_ctor_relocatable",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1000DAA2",
+          "segment": "0001",
+          "segment_offset": "0x0000CAA2",
+          "section": ".xcode",
+          "section_class": "CODE",
+          "module": "10010b1a.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_IsValidCodePage@4",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F995",
+          "segment": "0002",
+          "segment_offset": "0x0000F995",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_LCMapStringW@24",
+      "occurrences": 3,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F9BF",
+          "segment": "0002",
+          "segment_offset": "0x0000F9BF",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_MultiByteToWideChar@24",
+      "occurrences": 6,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F9AD",
+          "segment": "0002",
+          "segment_offset": "0x0000F9AD",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_WideCharToMultiByte@32",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002F9B3",
+          "segment": "0002",
+          "segment_offset": "0x0000F9B3",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "kernel32:KERNEL32.dll"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__alldiv",
+      "occurrences": 4,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021BD0",
+          "segment": "0002",
+          "segment_offset": "0x00001BD0",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libcmt:lldiv.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__alloca_probe_16",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021B20",
+          "segment": "0002",
+          "segment_offset": "0x00001B20",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libcmt:alloca16.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__allrem",
+      "occurrences": 4,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021C80",
+          "segment": "0002",
+          "segment_offset": "0x00001C80",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libcmt:llrem.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__aulldiv",
+      "occurrences": 5,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021A80",
+          "segment": "0002",
+          "segment_offset": "0x00001A80",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libcmt:ulldiv.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__aullrem",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021B50",
+          "segment": "0002",
+          "segment_offset": "0x00001B50",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libcmt:ullrem.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__ftol2_sse",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100219B0",
+          "segment": "0002",
+          "segment_offset": "0x000019B0",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libcmt:ftol2.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "__strnicmp",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10022370",
+          "segment": "0002",
+          "segment_offset": "0x00002370",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:strnicmp.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_fabs",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10022630",
+          "segment": "0002",
+          "segment_offset": "0x00002630",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:fabs.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_fclose",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021FC4",
+          "segment": "0002",
+          "segment_offset": "0x00001FC4",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:fclose.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_fgets",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002214D",
+          "segment": "0002",
+          "segment_offset": "0x0000214D",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:fgets.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_memcpy",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021190",
+          "segment": "0002",
+          "segment_offset": "0x00001190",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libvcruntime-without-exsup4:memcpy.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_memset",
+      "occurrences": 4,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021710",
+          "segment": "0002",
+          "segment_offset": "0x00001710",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libvcruntime-without-exsup4:memset.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_roundf",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x100226D0",
+          "segment": "0002",
+          "segment_offset": "0x000026D0",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:roundf.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_strcpy_s",
+      "occurrences": 4,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10022160",
+          "segment": "0002",
+          "segment_offset": "0x00002160",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:strcpy_s.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_strncmp",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10022650",
+          "segment": "0002",
+          "segment_offset": "0x00002650",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:strncmp.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_strrchr",
+      "occurrences": 1,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x10021870",
+          "segment": "0002",
+          "segment_offset": "0x00001870",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libvcruntime-without-exsup4:strrchr.obj"
+        }
+      ]
+    },
+    {
+      "relocation_type": "REL32",
+      "symbol": "_terminate",
+      "occurrences": 2,
+      "address_encoded_in_symbol": null,
+      "classification": "diagnostic-code-symbol",
+      "map_matches": [
+        {
+          "va": "0x1002274B",
+          "segment": "0002",
+          "segment_offset": "0x0000274B",
+          "section": ".text$x",
+          "section_class": "CODE",
+          "module": "libucrt:terminate.obj"
+        }
+      ]
+    }
+  ]
+}

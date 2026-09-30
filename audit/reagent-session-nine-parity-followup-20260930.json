@@ -1,0 +1,63 @@
+{
+  "results": [
+    {
+      "symbol": "::__input_l",
+      "address": "0x100119f1",
+      "status": "green",
+      "findings": [
+        {
+          "level": "info",
+          "reason": "Scoped manual check: scope=call-count-only; `__input_l`: Ghidra has 62 CALL instructions and the exact-hash MSVC 2022 x86 `/O2` candidate object has 66. The direct/import and indirect callback targets map; the four excess sites are accounted for by one additional compiler cookie-check call and three extra static `_isdigit` sites. Ghidra has one call site in each of three digit-scanning loops; MSVC emits each loop's first-condition test separately from its repeat/loop-back test (pairs at object offsets `0x9d6/0xa34`, `0xab9/0xb18`, and `0xbe9/0xc40`), so each pair executes as successive iterations, not as two calls per iteration. The two radix-specific digit checks and format-width check map one-to-one; both `_isleadbyte` sites also match. The candidate's two mutually exclusive exponent-digit loops converge to the same continuation, corresponding to Ghidra's shared exponent loop. Suppress only the source-expression call-count heuristic; retain all other findings. Static disassembly/control-flow review only, not semantic or runtime validation."
+        }
+      ]
+    },
+    {
+      "symbol": "::__write_nolock",
+      "address": "0x10019366",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b3cf",
+      "address": "0x1001b3cf",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b3d8",
+      "address": "0x1001b3d8",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b508",
+      "address": "0x1001b508",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001b5bd",
+      "address": "0x1001b5bd",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::__cftoa_l",
+      "address": "0x1001bee6",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::FUN_1001c60e",
+      "address": "0x1001c60e",
+      "status": "green",
+      "findings": []
+    },
+    {
+      "symbol": "::CallCatchBlock",
+      "address": "0x1001d06f",
+      "status": "green",
+      "findings": []
+    }
+  ]
+}

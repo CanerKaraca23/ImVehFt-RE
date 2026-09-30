@@ -1,0 +1,32 @@
+{
+  "scope": "initialized original PE section bytes and DAT_* COFF aliases only; not a relocated or runtime-valid image",
+  "input_image": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\modloader\\My Scripts\\.ImVehFt\\ImVehFt.asi",
+  "input_image_sha256": "409f0df7ae579841db05c3ec6dad0a9afc579194632874962e1bdee0ccf020d3",
+  "image_base": "0x10000000",
+  "unresolved_decorated_name_count": 601,
+  "raw_backed_addresses_cross_checked": 266,
+  "sections": {
+    ".rdata": {
+      "segment": ".const",
+      "rva": "0x00022000",
+      "raw_size": 28672,
+      "virtual_size": 28484,
+      "emitted_size": 28672,
+      "preferred_base_content_sha256": "2671de75754c158351a9ff467c23d0b0a332204c28d5317b7f08af00849bd321"
+    },
+    ".data": {
+      "segment": ".data",
+      "rva": "0x00029000",
+      "raw_size": 68096,
+      "virtual_size": 83292,
+      "emitted_size": 83292,
+      "preferred_base_content_sha256": "00eb75abd25e57a354b70487bb8c425e8dffd4a82634d29cbf596edc4812e25c"
+    }
+  },
+  "omitted": [
+    "base relocation entries are not expressed as COFF relocations",
+    "pointers to moved code/data are left at their original preferred-base values",
+    "section RVAs, hook targets, entrypoint, and function layout are not reconstructed"
+  ],
+  "assembly_sha256": "1542dd9c86bbbe023b72aad53dcb645bdc58a7fed9a748d5a6a7b9448f0e18cd"
+}

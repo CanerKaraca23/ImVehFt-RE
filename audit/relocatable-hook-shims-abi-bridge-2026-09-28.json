@@ -1,0 +1,1127 @@
+{
+  "scope": "Ghidra CFG shim instruction streams with image-internal operands converted to COFF relocations; does not install hooks or build a plugin",
+  "shim_count": 12,
+  "instruction_count": 337,
+  "fixup_count": 139,
+  "distinct_candidate_call_targets": {
+    "0x10001730": "_FUN_10001730@0",
+    "0x10003130": "_FUN_10003130",
+    "0x10003200": "_FUN_10003200",
+    "0x10004A60": "?FUN_10004a60@@YAPAIH@Z",
+    "0x10008E00": "_FUN_10008e00@0"
+  },
+  "fixups": [
+    {
+      "shim": "0x10003030",
+      "instruction_va": "0x10003030",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC2C",
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003030",
+      "instruction_va": "0x1000303B",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "?FUN_10004a60@@YAPAIH@Z",
+      "original_target": "0x10004A60"
+    },
+    {
+      "shim": "0x10003060",
+      "instruction_va": "0x10003061",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC2C",
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003060",
+      "instruction_va": "0x10003067",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC2C",
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003080",
+      "instruction_va": "0x10003081",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC2C",
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003080",
+      "instruction_va": "0x10003087",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC2C",
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x10003080",
+      "instruction_va": "0x1000309C",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC2C",
+      "original_target": "0x1003BC2C"
+    },
+    {
+      "shim": "0x100031E0",
+      "instruction_va": "0x100031E0",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC14",
+      "original_target": "0x1003BC14"
+    },
+    {
+      "shim": "0x100031E0",
+      "instruction_va": "0x100031E7",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10003130",
+      "original_target": "0x10003130"
+    },
+    {
+      "shim": "0x10004B10",
+      "instruction_va": "0x10004B10",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10037508",
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10004B10",
+      "instruction_va": "0x10004B16",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003A6C6",
+      "original_target": "0x1003A6C6"
+    },
+    {
+      "shim": "0x10004B10",
+      "instruction_va": "0x10004B29",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10037508",
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10004B10",
+      "instruction_va": "0x10004B6C",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003A6C6",
+      "original_target": "0x1003A6C6"
+    },
+    {
+      "shim": "0x10004B10",
+      "instruction_va": "0x10004B73",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10037508",
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10004B10",
+      "instruction_va": "0x10004B93",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003A6C6",
+      "original_target": "0x1003A6C6"
+    },
+    {
+      "shim": "0x10004B10",
+      "instruction_va": "0x10004B9A",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10037508",
+      "original_target": "0x10037508"
+    },
+    {
+      "shim": "0x10007F50",
+      "instruction_va": "0x10007F50",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C258",
+      "original_target": "0x1003C258"
+    },
+    {
+      "shim": "0x10007F70",
+      "instruction_va": "0x10007F75",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10003200",
+      "original_target": "0x10003200"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007F90",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD88",
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007F97",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD88",
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007F9C",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10008e00@0",
+      "original_target": "0x10008E00"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007FA1",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD84",
+      "original_target": "0x1003BD84"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007FA6",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD88",
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007FB1",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024F88",
+      "original_target": "0x10024F88"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007FBE",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD88",
+      "original_target": "0x1003BD88"
+    },
+    {
+      "shim": "0x10007F90",
+      "instruction_va": "0x10007FCD",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD84",
+      "original_target": "0x1003BD84"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008781",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC80",
+      "original_target": "0x1003BC80"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008790",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C200",
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008795",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC10",
+      "original_target": "0x1003BC10"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000879A",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC28",
+      "original_target": "0x1003BC28"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000879F",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C204",
+      "original_target": "0x1003C204"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087A4",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBB8",
+      "original_target": "0x1003BBB8"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087AB",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C200",
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087BC",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC10",
+      "original_target": "0x1003BC10"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087C2",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC28",
+      "original_target": "0x1003BC28"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087C9",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C204",
+      "original_target": "0x1003C204"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087D0",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBB8",
+      "original_target": "0x1003BBB8"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087E0",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD94",
+      "original_target": "0x1003BD94"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087E5",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C200",
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087EC",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD94",
+      "original_target": "0x1003BD94"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x100087FC",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C200",
+      "original_target": "0x1003C200"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000880D",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD94",
+      "original_target": "0x1003BD94"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x1000881E",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008780",
+      "instruction_va": "0x10008824",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008830",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008835",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000883C",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F4",
+      "original_target": "0x1003C1F4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008845",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000884D",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1002496C",
+      "original_target": "0x1002496C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008855",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024970",
+      "original_target": "0x10024970"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000885E",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024974",
+      "original_target": "0x10024974"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008867",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024978",
+      "original_target": "0x10024978"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008870",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1002497C",
+      "original_target": "0x1002497C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008879",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000887F",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008884",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1A8",
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008890",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F4",
+      "original_target": "0x1003C1F4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008899",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088A2",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024980",
+      "original_target": "0x10024980"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088AA",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024984",
+      "original_target": "0x10024984"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088B2",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024988",
+      "original_target": "0x10024988"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088BB",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1002498C",
+      "original_target": "0x1002498C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088C3",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024990",
+      "original_target": "0x10024990"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088CC",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088D1",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088D7",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBC0",
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088E0",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F4",
+      "original_target": "0x1003C1F4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088E9",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088F2",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024994",
+      "original_target": "0x10024994"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x100088F9",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_10024998",
+      "original_target": "0x10024998"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008902",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1002499C",
+      "original_target": "0x1002499C"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000890A",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_100249A0",
+      "original_target": "0x100249A0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008913",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_100249A4",
+      "original_target": "0x100249A4"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x1000891B",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008921",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008927",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC30",
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008830",
+      "instruction_va": "0x10008932",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F0",
+      "original_target": "0x1003C1F0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008940",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000894C",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008954",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008959",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008966",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000896C",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1A8",
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008976",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000897C",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1A8",
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000898E",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008994",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBC0",
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x1000899E",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089A3",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBC0",
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089B5",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089BA",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC30",
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089C4",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089CA",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC30",
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089DC",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089E2",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C208",
+      "original_target": "0x1003C208"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089EC",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089F2",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C208",
+      "original_target": "0x1003C208"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089F9",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10001730@0",
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x100089FE",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A03",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1A8",
+      "original_target": "0x1003C1A8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A0E",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A14",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBC0",
+      "original_target": "0x1003BBC0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A1F",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A25",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC30",
+      "original_target": "0x1003BC30"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A30",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC18",
+      "original_target": "0x1003BC18"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A35",
+      "field_offset": 3,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C208",
+      "original_target": "0x1003C208"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A45",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD90",
+      "original_target": "0x1003BD90"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A4E",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD90",
+      "original_target": "0x1003BD90"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A54",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10001730@0",
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A59",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBB4",
+      "original_target": "0x1003BBB4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A62",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBB4",
+      "original_target": "0x1003BBB4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A68",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10001730@0",
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A6D",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC7C",
+      "original_target": "0x1003BC7C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A76",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC7C",
+      "original_target": "0x1003BC7C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A7C",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10001730@0",
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A81",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC1C",
+      "original_target": "0x1003BC1C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A8A",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC1C",
+      "original_target": "0x1003BC1C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A90",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10001730@0",
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A95",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC08",
+      "original_target": "0x1003BC08"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008A9E",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC08",
+      "original_target": "0x1003BC08"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AA4",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10001730@0",
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AA9",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F8",
+      "original_target": "0x1003C1F8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AB2",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F8",
+      "original_target": "0x1003C1F8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AB8",
+      "field_offset": 1,
+      "kind": "REL32",
+      "target_symbol": "_FUN_10001730@0",
+      "original_target": "0x10001730"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008ABD",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD90",
+      "original_target": "0x1003BD90"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AC7",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BBB4",
+      "original_target": "0x1003BBB4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AD1",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC7C",
+      "original_target": "0x1003BC7C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008ADB",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC1C",
+      "original_target": "0x1003BC1C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AE5",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BC08",
+      "original_target": "0x1003BC08"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AEF",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003C1F8",
+      "original_target": "0x1003C1F8"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008AF9",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD9C",
+      "original_target": "0x1003BD9C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B02",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD9C",
+      "original_target": "0x1003BD9C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B13",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BDA0",
+      "original_target": "0x1003BDA0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B1C",
+      "field_offset": 1,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BDA0",
+      "original_target": "0x1003BDA0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B2C",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BDA4",
+      "original_target": "0x1003BDA4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B35",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BDA4",
+      "original_target": "0x1003BDA4"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B46",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BD9C",
+      "original_target": "0x1003BD9C"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B50",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BDA0",
+      "original_target": "0x1003BDA0"
+    },
+    {
+      "shim": "0x10008940",
+      "instruction_va": "0x10008B5A",
+      "field_offset": 2,
+      "kind": "DIR32",
+      "target_symbol": "IVF_RELOC_TARGET_1003BDA4",
+      "original_target": "0x1003BDA4"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ static constexpr std::uint32_t CONCAT31(int3 high24, std::uint8_t low)
    
    Library: Visual Studio 2010 Release */
 
-int __cdecl ___ascii_strnicmp(char *_Str1,char *_Str2,size_t _MaxCount)
+extern "C" int __cdecl ___ascii_strnicmp(char *_Str1,char *_Str2,size_t _MaxCount)
 
 {
   char cVar1;

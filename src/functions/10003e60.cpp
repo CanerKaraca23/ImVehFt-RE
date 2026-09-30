@@ -1,8 +1,8 @@
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 
 using Address32 = std::uint32_t;
 
-extern std::uint8_t* _DAT_00c3ef78;
 
 std::uint32_t __cdecl FUN_10003e60(
     std::uint32_t param_1,
@@ -33,7 +33,7 @@ std::uint32_t __cdecl FUN_10003e60(
         reinterpret_cast<std::uintptr_t>(rasterPixels));
 
     if ((rasterPixels != nullptr) &&
-        (_DAT_00c3ef78 != nullptr) &&
+        (IMVEHFT_GLOBAL_AT(std::uint8_t*, 0x00c3ef78) != nullptr) &&
         ((iStack_8 =
               *reinterpret_cast<std::int32_t*>(
                   static_cast<std::uintptr_t>(
@@ -69,7 +69,8 @@ std::uint32_t __cdecl FUN_10003e60(
             iVar2 =
                 (iStack_10 * 0x100 + iStack_c) * 0x80 +
                 static_cast<std::int32_t>(
-                    reinterpret_cast<std::uintptr_t>(_DAT_00c3ef78));
+                    reinterpret_cast<std::uintptr_t>(
+                        IMVEHFT_GLOBAL_AT(std::uint8_t*, 0x00c3ef78)));
 
             iVar7 = 0x40;
             uVar6 = uVar1;

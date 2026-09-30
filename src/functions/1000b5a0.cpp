@@ -1,10 +1,10 @@
 #include <cstdint>
 
-extern std::uint8_t LAB_1000c950[];
-extern std::uint8_t LAB_1000c940[];
-extern std::uint8_t LAB_1000c930[];
-extern std::uint8_t LAB_1000c920[];
-extern std::uint8_t LAB_1000c910[];
+extern "C" std::uint8_t LAB_1000c950[];
+extern "C" std::uint8_t LAB_1000c940[];
+extern "C" std::uint8_t LAB_1000c930[];
+extern "C" std::uint8_t LAB_1000c920[];
+extern "C" std::uint8_t LAB_1000c910[];
 
 extern "C" void __stdcall FUN_1000c480(
     std::int32_t*, std::int32_t*, std::int32_t*, std::int32_t*, std::int32_t*);
@@ -39,11 +39,11 @@ void FUN_1000b5a0_this::FUN_1000b5a0(std::uint32_t param_1, int param_2, int par
 
         struct FUN_1000c480_PatchPair { std::uint32_t patch; std::uint32_t target; };
     static_assert(sizeof(FUN_1000c480_PatchPair) == 8);
-    FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), 0x1000c910u};
-    FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), 0x1000c920u};
-    FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), 0x1000c930u};
-    FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), 0x1000c940u};
-    FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), 0x1000c950u};
+    FUN_1000c480_PatchPair pair_1{static_cast<std::uint32_t>(param_1), static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000c910))};
+    FUN_1000c480_PatchPair pair_2{static_cast<std::uint32_t>(param_2), static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000c920))};
+    FUN_1000c480_PatchPair pair_3{static_cast<std::uint32_t>(param_3), static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000c930))};
+    FUN_1000c480_PatchPair pair_4{static_cast<std::uint32_t>(param_4), static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000c940))};
+    FUN_1000c480_PatchPair pair_5{static_cast<std::uint32_t>(param_5), static_cast<std::uint32_t>(reinterpret_cast<std::uintptr_t>(&LAB_1000c950))};
     FUN_1000c480_usercall(
         reinterpret_cast<std::int32_t*>(&pair_1),
         reinterpret_cast<std::int32_t*>(

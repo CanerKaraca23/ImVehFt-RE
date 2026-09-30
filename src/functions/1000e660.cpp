@@ -1,5 +1,7 @@
+#include "imvehft_image_aliases.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "gta_sa_address_access.hpp"
 #include <corecrt.h>
 #include <stdio.h>
 std::uint32_t __stdcall FUN_1000e660()
@@ -19,10 +21,9 @@ std::uint32_t __stdcall FUN_1000e660()
         Callback* callbacks2_end;
     };
 
-    extern std::int32_t DAT_1003c3b0;
-
     const auto* context = reinterpret_cast<const Context*>(
-        static_cast<std::uintptr_t>(DAT_1003c3b0));
+        static_cast<std::uintptr_t>(
+            IMVEHFT_GLOBAL_AT(std::int32_t, IVF_IMAGE_ADDRESS_1003C3B0)));
 
     for (auto* current = context->callbacks_begin;
          current != context->callbacks_end;

@@ -1,0 +1,65 @@
+{
+  "scope": "single-function COFF relocation resolution and exact in-place byte comparison; not runtime or gameplay proof",
+  "reference_sha256": "409F0DF7AE579841DB05C3EC6DAD0A9AFC579194632874962E1BDEE0CCF020D3",
+  "entry_va": "0x10011724",
+  "body_size": 297,
+  "candidate_resolved_sha256": "1DA1397A616A7BEBF8A9B02610A1A3732DD4964E05619F5DFFFAE91C81198719",
+  "original_body_sha256": "7ABFB163CCB5A4321E81011A83AD4B22A7ABE24C3C032F97B9E7C4DB42EFD6A2",
+  "byte_identical": false,
+  "relocations": [
+    {
+      "site_va": "0x10011730",
+      "symbol": "_DAT_10029490",
+      "target_va": "0x10029490",
+      "type": "0x0006"
+    },
+    {
+      "site_va": "0x10011745",
+      "symbol": "_FUN_100172cd@0",
+      "target_va": "0x100172CD",
+      "type": "0x0014"
+    },
+    {
+      "site_va": "0x1001175D",
+      "symbol": "__memset",
+      "target_va": "0x10016740",
+      "type": "0x0014"
+    },
+    {
+      "site_va": "0x10011810",
+      "symbol": "_DAT_1002207C",
+      "target_va": "0x1002207C",
+      "type": "0x0006"
+    },
+    {
+      "site_va": "0x1001181A",
+      "symbol": "_DAT_10022078",
+      "target_va": "0x10022078",
+      "type": "0x0006"
+    },
+    {
+      "site_va": "0x10011827",
+      "symbol": "_DAT_10022074",
+      "target_va": "0x10022074",
+      "type": "0x0006"
+    },
+    {
+      "site_va": "0x1001183A",
+      "symbol": "_FUN_100172cd@0",
+      "target_va": "0x100172CD",
+      "type": "0x0014"
+    },
+    {
+      "site_va": "0x10011847",
+      "symbol": "@__security_check_cookie@4",
+      "target_va": "0x100172D5",
+      "type": "0x0014"
+    }
+  ],
+  "original_highlow_sites": [
+    "0x10011730",
+    "0x10011810",
+    "0x1001181A",
+    "0x10011827"
+  ]
+}

@@ -1,5 +1,4 @@
 #include <cstdint>
-extern "C" void FUN_10010b1a(void);
 extern "C" std::uint32_t DAT_10039a58;
 extern "C" std::uint32_t DAT_100220c8;
 extern "C" std::uint32_t DAT_100220c4;
@@ -15,7 +14,8 @@ extern "C" __declspec(naked) int __cdecl getSystemCP(int )
         xor ebx, ebx
         push ebx
         lea ecx, [ebp - 10h]
-        call FUN_10010b1a
+        mov eax, 10010b1ah
+        call eax
         mov dword ptr [DAT_10039a58], ebx
         cmp esi, -2
         jnz L_14527

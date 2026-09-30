@@ -1,0 +1,36 @@
+{
+  "scope": "original .rdata/.data bytes, data-to-data fixups, exact candidate-function fixups, 22 CRT initializer thunks, CRT fallback helper, 18 byte-template local code stubs for 21 pointer targets, context shim and CRT cleanup callback, and four _initterm_e stubs; not a loadable image",
+  "image": "C:\\Users\\caner\\OneDrive\\Documents\\GTA San Andreas\\modloader\\My Scripts\\.ImVehFt\\ImVehFt.asi",
+  "image_sha256": "409f0df7ae579841db05c3ec6dad0a9afc579194632874962e1bdee0ccf020d3",
+  "unresolved_dat_names_defined": 601,
+  "relocation_sites_by_site_and_target_section": {
+    ".data -> .data": 30,
+    ".data -> .rdata": 234,
+    ".data -> .text": 10,
+    ".rdata -> .data": 166,
+    ".rdata -> .rdata": 892,
+    ".rdata -> .text": 189
+  },
+  "data_to_data_sites_emitted_as_offset_relocations": 1322,
+  "code_target_sites_emitted_as_offset_relocations": 199,
+  "unique_candidate_function_external_symbols": 119,
+  "crt_initializer_registration_thunks_reconstructed": 22,
+  "crt_fallback_helper_stubs_reconstructed": 1,
+  "crt_cleanup_stubs_reconstructed": 1,
+  "context_shims_reconstructed": 1,
+  "simple_local_code_stubs_reconstructed": 40,
+  "initterm_e_stubs_reconstructed": 4,
+  "initterm_e_processor_feature_stubs_reconstructed": 2,
+  "initterm_e_allocation_stub_reconstructed": true,
+  "initterm_e_state_table_stub_reconstructed": true,
+  "text_target_sites_left_unresolved": 0,
+  "text_target_sites": [],
+  "unique_synthetic_data_target_labels": 712,
+  "assembly_sha256": "a2b9167e004f92c62899b4520adb0d71f0030a35d201a9303e1621e6e6db2372",
+  "limitations": [
+    "noncandidate text-target pointers stay at preferred-base values",
+    "the original .text contains a Ghidra-verified state-table stub, but reconstructed code/data remain diagnostic and are not loader-integrated",
+    "the original .text has 3160 additional HIGHLOW relocations not represented here",
+    "section RVAs, function layout, hook shim fixups, CRT tables, and PE image layout are not reconstructed"
+  ]
+}
