@@ -29,7 +29,7 @@ jobs:
           msbuild ImVehFt.vcxproj /p:Configuration=Release /p:Platform=Win32 /m /verbosity:minimal
 
       - name: Upload ImVehFt.asi Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ImVehFt.asi
           path: bin/ImVehFt.asi
