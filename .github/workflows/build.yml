@@ -1,0 +1,36 @@
+name: Build ImVehFt-RE
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (x86 Release)
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSVC (x86)
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x86
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build ImVehFt.asi
+        run: |
+          msbuild ImVehFt.vcxproj /p:Configuration=Release /p:Platform=Win32 /m /verbosity:minimal
+
+      - name: Upload ImVehFt.asi Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ImVehFt.asi
+          path: bin/ImVehFt.asi
+          if-no-files-found: error
