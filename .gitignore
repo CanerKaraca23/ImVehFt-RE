@@ -1,0 +1,44 @@
+# Build output & binaries
+bin/
+obj/
+*.obj
+*.asi
+*.dll
+*.lib
+!dxsdk/*.lib
+*.exp
+*.pdb
+*.ilk
+
+# Visual Studio files & caches
+.vs/
+*.tlog
+*.lastbuildstate
+*.idb
+*.suo
+*.user
+*.userosv
+*.sln.docstates
+
+# IDA Pro & Disassembly dumps
+*.i64
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+*.log
+hexrays_decompiled/
+scratch/
+scratch_all_hooks/
+scratch_functions/
+plugin-sdk/
+events_detail.txt
+events_xrefs.txt
+vtable_out.txt
+disasm_events.py
+export_hexrays.py
+find_events.py
+read_vtable.py
+ImVehFt.asi
+ImVehFt.asi.i64

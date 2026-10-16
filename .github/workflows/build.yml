@@ -1,0 +1,30 @@
+name: Build ImVehFt-RE
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (x86 Release)
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v3
+
+      - name: Build ImVehFt.asi
+        run: |
+          msbuild ImVehFt.vcxproj /p:Configuration=Release /p:Platform=Win32 /m /verbosity:minimal
+
+      - name: Upload ImVehFt.asi Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ImVehFt.asi
+          path: bin/ImVehFt.asi
